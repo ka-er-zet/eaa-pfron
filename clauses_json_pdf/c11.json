@@ -1,0 +1,2538 @@
+{
+  "id": "c11",
+  "title": "Audyt Klauzuli 11: Oprogramowanie",
+  "content": [
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.11.0 Postanowienia ogólne"
+    },
+    {
+      "type": "informative",
+      "text": "Klauzula 11.0 ma charakter wyłącznie doradczy i nie zawiera wymagań do testowania.\n"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.11.1 Postrzegalność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.1.1 Alternatywy tekstowe"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.1.1 Treść nietekstowa"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.1.1.1 Treść nietekstowa (obsługiwany odczyt ekranu, funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.1.1 Treść nietekstowa."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.1.1.1 Treści nietekstowe (funkcjonalność otwarta)",
+        "noteId": "notes-c11-1-1-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.1.1.2 Treść nietekstowa (funkcjonalność zamknięta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
+        "3. Treść nietekstowa jest prezentowana użytkownikom za pomocą sygnału mowy."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
+        "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.",
+        "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
+        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w kryterium sukcesu WCAG 2.1 dla wytycznej 1.1.1 Treść nietekstowa."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> (Sprawdzenia 1, 2, 3 i 4 są prawdziwe) LUB (1 i 2 są fałszywe) LUB (1 i 3 są fałszywe)."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> (1 jest prawdziwe i 2 fałszywe) LUB (1 jest prawdziwe i 3 fałszywe) LUB (1, 2, i 3 są prawdziwe, a 4 jest fałszywe)."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.1.1.2 Treści nietekstowe (funkcjonalność zamknięta)",
+        "noteId": "notes-c11-1-1-1-2"
+      },
+      "evaluationType": "Testing"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.1.2 Multimedia"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.2.1 Tylko audio lub tylko wideo (nagranie)"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.2.1.1 Tylko audio lub tylko wideo (nagranie – funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, który udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu.",
+        "3. Aby umożliwić korzystanie z funkcjonalności zamkniętych TIK , nie jest konieczne wcześniejsze przygotowanie nagrań informacji dźwiękowej."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.2.1.1 Tylko audio i tylko wideo (nagrane - funkcjonalność otwarta)",
+        "noteId": "notes-c11-1-2-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.2.1.2.1 Nagrane tylko audio (funkcjonalność zamknięta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
+        "3. Aby umożliwić korzystanie z funkcjonalności zamkniętych TIK , konieczne jest wcześniejsze przygotowanie nagrań informacji dźwiękowej."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy informacje wizualne odpowiadają nagraniom sygnału dźwiękowego."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.2.1.2.1 Tylko audio (nagrane - funkcjonalność zamknięta)",
+        "noteId": "notes-c11-1-2-1-2-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.2.1.2.2 Nagrane tylko wideo (funkcjonalność zamknięta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
+        "3. Nagrane materiały wideo są niezbędne, aby umożliwić korzystanie z zamkniętych funkcji TIK .",
+        "4. Jako dostęp niewizualny do treści nietekstowej w funkcjonalności zamkniętej jest zapewniane wyjście mowy."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy wyjście mowy zawiera informacje zgodne z napisami do nagranej treści wideo."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2, 3 lub 4 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.2.1.2.2 Tylko wideo (nagrane - funkcjonalność zamknięta)",
+        "noteId": "notes-c11-1-2-1-2-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.2.2 Napisy rozszerzone (nagranie)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.2.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.2.2 Napisy (nagrane)",
+        "noteId": "notes-c11-1-2-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.2.3.1 Audiodeskrypcja lub alternatywa tekstowa dla mediów",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.2.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.2.3.1 Audiodeskrypcja lub alternatywa dla mediów (nagrane - funkcjonalność otwarta)",
+        "noteId": "notes-c11-1-2-3-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.2.3.2 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie – funkcjonalność",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
+        "3. Jako dostęp niewizualny do treści nietekstowej w funkcjonalności zamkniętej jest zapewniane wyjście mowy."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy wyjście mowy zawiera informacje zgodne z napisami do nagranej treści wideo."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.2.3.2 Audiodeskrypcja lub alternatywa dla mediów (nagrane - funkcjonalność zamknięta)",
+        "noteId": "notes-c11-1-2-3-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.2.4 Napisy rozszerzone (na żywo)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.2.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.2.4 Napisy (na żywo)",
+        "noteId": "notes-c11-1-2-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.2.5 Audiodeskrypcja (nagranie)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.2.5."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.2.5 Audiodeskrypcja (nagrana)",
+        "noteId": "notes-c11-1-2-5"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.1.3 Możliwość adaptacji"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.3.1 Informacje i relacje"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.3.1.1 Informacje i relacje (funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.1 Informacje i relacje."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.3.1.1 Informacje i relacje (funkcjonalność otwarta)",
+        "noteId": "notes-c11-1-3-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.3.1.2 Informacje i relacje (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "informative",
+      "text": "Klauzula 11.1.3.1.2 ma charakter wyłącznie doradczy i nie zawiera wymagań do testowania.\n"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.3.2 Zrozumiała kolejność"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.3.2.1 Zrozumiała kolejność (funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.2 Zrozumiała kolejność."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.3.2.1 Zrozumiała kolejność (funkcjonalność otwarta)",
+        "noteId": "notes-c11-1-3-2-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.3.2.2 Zrozumiała kolejność (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "informative",
+      "text": "Klauzula 11.1.3.2.2 ma charakter wyłącznie doradczy i nie zawiera wymagań do testowania.\n"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.3.3 Właściwości zmysłowe",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.3.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.3.3 Charakterystyka zmysłowa",
+        "noteId": "notes-c11-1-3-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.3.4 Orientacja",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.3.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.3.4 Orientacja",
+        "noteId": "notes-c11-1-3-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.3.5 Określenie pożądanej wartości"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.3.5.1 Określenie pożądanej wartości (funkcjonalność otwarta)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.3.5."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.3.5.1 Określenie przeznaczenia pól (funkcjonalność otwarta)",
+        "noteId": "notes-c11-1-3-5-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.3.5.2 Określenie pożądanej wartości (funkcjonalność zamknięta)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie nie zapewnia wsparcia dla technologii wspomagających odczyt ekranu.",
+        "3. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu zawartego w TIK lub dostarczanego wraz z nią.",
+        "2. Sprawdź, czy sygnał dźwiękowy jest dostarczany za pomocą osobistego zestawu słuchawkowego, który można podłączyć poprzez gniazdo audio 3,5 mm lub standardowe połączenie branżowe, bez konieczności korzystania ze wzroku.",
+        "3. Sprawdź, czy sygnał dźwiękowy obejmuje elementy z sekcji Przeznaczenie pól danych w komponentach interfejsu użytkowników."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> (Sprawdzenie 1 lub 2 jest prawdziwe) ORAZ sprawdzenie 3 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> (Sprawdzenia 1 i 2 są fałszywe) LUB sprawdzenie 3 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.3.5.2 Określenie przeznaczenia pól (funkcjonalność zamknięta)",
+        "noteId": "notes-c11-1-3-5-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.1.4 Rozróżnialność"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.4.1 Użycie koloru",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.1 Użycie koloru",
+        "noteId": "notes-c11-1-4-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.4.2 Kontrola odtwarzania dźwięku",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.1"
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.2 Kontrola dźwięku",
+        "noteId": "notes-c11-1-4-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.4.3 Kontrast (minimum)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.3 Kontrast (minimalny)",
+        "noteId": "notes-c11-1-4-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.4.4 Zmiana rozmiaru tekstu"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.4.4.1 Zmiana rozmiaru tekstu (funkcjonalność otwarta)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia obsługę funkcji powiększania dostępnych na platformie lub technologii wspomagającej."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.4.1 Zmiana rozmiaru tekstu (funkcjonalność otwarta)",
+        "noteId": "notes-c11-1-4-4-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.4.4.2 Zmiana rozmiaru tekstu (funkcjonalność zamknięta)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Interfejs użytkownika jest zamknięty dla funkcji powiększania dostępnych na platformie lub technologii wspomagającej.",
+        "3. Odległość widzenia jest określana przez dostawcę."
+      ],
+      "procedure": [
+        "1. Zmierzyć wysokość wielkiej litery H.",
+        "2. Sprawdź, czy odpowiada ona kątowi co najmniej 0,7 stopnia przy określonej odległości widzenia."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 2 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.4.2 Zmiana rozmiaru tekstu (funkcjonalność zamknięta)",
+        "noteId": "notes-c11-1-4-4-2"
+      },
+      "evaluationType": "Inspection and measurement"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.4.5 Obrazy tekstu"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.4.5.1 Obrazy tekstu (funkcjonalność otwarta)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.5."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.5.1 Obrazy tekstu (funkcjonalność otwarta)",
+        "noteId": "notes-c11-1-4-5-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.1.4.5.2 Obrazy tekstu (funkcjonalność zamknięta)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
+        "3. Treść nietekstowa jest prezentowana użytkownikom za pomocą sygnału mowy."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
+        "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.",
+        "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
+        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w kryterium sukcesu WCAG 2.1 dla wytycznej 1.1.1 Treść nietekstowa."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> (Sprawdzenia 1, 2, 3 i 4 są prawdziwe) LUB (1 i 2 są fałszywe) LUB (1 i 3 są fałszywe)."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> (1 jest prawdziwe i 2 fałszywe) LUB (1 jest prawdziwe i 3 fałszywe) LUB (1, 2, i 3 są prawdziwe, a 4 jest fałszywe)."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.5.2 Obrazy tekstu (funkcjonalność zamknięta)",
+        "noteId": "notes-c11-1-4-5-2"
+      },
+      "evaluationType": "Testing"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.4.10 Dopasowanie do ekranu",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.2."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.10 Zawijanie tekstu (Reflow)",
+        "noteId": "notes-c11-1-4-10"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.4.11 Kontrast elementów nietekstowych",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.11."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.11 Kontrast elementów nietekstowych",
+        "noteId": "notes-c11-1-4-11"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.4.12 Odstępy w tekście",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym , które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.12."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.12 Odstępy w tekście",
+        "noteId": "notes-c11-1-4-12"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.1.4.13 Treść spod kursora lub fokusu",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.13."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.1.4.13 Treść spod wskaźnika lub fokusu",
+        "noteId": "notes-c11-1-4-13"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.11.2 Funkcjonalność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.2.1 Dostępność z klawiatury"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.1.1 Klawiatura"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.2.1.1.1 Klawiatura (funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia obsługę klawiatur lub interfejs klawiatury."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.1.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.1.1.1 Klawiatura (funkcjonalność otwarta)",
+        "noteId": "notes-c11-2-1-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.2.1.1.2 Klawiatura (funkcjonalność zamknięta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym. Które udostępnia interfejs użytkownika.",
+        "2. Interfejs użytkownika jest zamknięty dla klawiatur i interfejsów klawiatury."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy wszystkie funkcjonalności interfejsu użytkownika można obsługiwać bez użycia wzroku."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.1.1.2 Klawiatura (funkcjonalność zamknięta)",
+        "noteId": "notes-c11-2-1-1-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.2.1.2 Bez pułapki na klawiaturę",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.3."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.1.2 Brak pułapki na klawiaturę",
+        "noteId": "notes-c11-2-1-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.1.4 Jednoznakowe skróty klawiaturowe"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.2.1.4.1 Jednoznakowe skróty klawiaturowe (funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia obsługę przynajmniej jednej technologii wspomagającej."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiszowe."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.1.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.1.4.1 Skróty klawiszowe (funkcjonalność otwarta)",
+        "noteId": "notes-c11-2-1-4-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.2.1.4.2 Jednoznakowe skróty klawiaturowe (funkcjonalność zamknięta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Funkcjonalność TIK jest zamknięta dla klawiatur i interfejsów klawiatury."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy wszystkie funkcjonalności można obsługiwać bez użycia wzroku."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.1.4.2 Skróty klawiszowe (funkcjonalność zamknięta)",
+        "noteId": "notes-c11-2-1-4-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.2.2 Wystarczający czas"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.2.1 Dostosowanie czasu",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.4."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.2.1 Regulacja czasu",
+        "noteId": "notes-c11-2-2-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.2.2 Pauza, zatrzymanie, ukrycie",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.5."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.2.2 Pauza, zatrzymanie, ukrycie",
+        "noteId": "notes-c11-2-2-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.2.3 Ataki padaczki"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.3.1 Trzy błyski lub wartości poniżej progu",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.6."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.3.1 Trzy błyski lub poniżej progu",
+        "noteId": "notes-c11-2-3-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.2.4 Możliwość nawigacji"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.4.3 Kolejność fokusu",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.7."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.4.3 Kolejność fokusu",
+        "noteId": "notes-c11-2-4-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.4.4 Cel łącza (w kontekście)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.4.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.4.4 Cel odnośnika (w kontekście)",
+        "noteId": "notes-c11-2-4-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.4.6 Nagłówki i etykiety",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.4.6."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.4.6 Nagłówki i etykiety",
+        "noteId": "notes-c11-2-4-6"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.4.7 Widoczny fokus",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.4.7."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.4.7 Widoczny fokus",
+        "noteId": "notes-c11-2-4-7"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.2.5 Metody obsługi"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.5.1 Gesty dotykowe",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.8."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.5.1 Gesty wskazujące",
+        "noteId": "notes-c11-2-5-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.5.2 Rezygnacja ze wskazania",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym. Które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.9."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.5.2 Anulowanie wskazania",
+        "noteId": "notes-c11-2-5-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.2.5.3 Etykieta w nazwie"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.2.5.3.1 Etykieta w nazwie (funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.5.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.5.3.1 Etykieta w nazwie (funkcjonalność otwarta)",
+        "noteId": "notes-c11-2-5-3-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.2.5.3.2 Etykieta w nazwie (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "informative",
+      "text": "Klauzula 11.2.5.3.2 ma charakter wyłącznie informacyjny i nie zawiera wymagań do testowania.\n"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.2.5.4 Aktywowanie ruchem",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowy, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.5.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.2.5.4 Uruchamianie przez ruch",
+        "noteId": "notes-c11-2-5-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.11.3 Zrozumiałość"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.3.1 Możliwość odczytania"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.3.1.1 Język oprogramowania"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.3.1.1.1 Język oprogramowania (funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.10."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.3.1.1.1 Język oprogramowania (funkcjonalność otwarta)",
+        "noteId": "notes-c11-3-1-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.3.1.1.2 Język oprogramowania (funkcjonalność zamknięta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym z interfejsem użytkownika.",
+        "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
+        "3. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        "4. Sygnałem mowy nie są nazwy własne, terminy techniczne, słowa w nieokreślonym języku ani słowa lub zwroty, które stały się częścią żargonu bezpośrednio otaczającego tekstu.",
+        "5. Treść nie jest generowana zewnętrznie i jest kontrolowana przez dostawcę TIK .",
+        "6. Wyświetlane języki można wybrać z zastosowaniem dostępu niewizualny.",
+        "7. Użytkownik nie wybrał języka mowy, który jest inny niż język wyświetlanej treści."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy wyjście mowy występuje w tym samym języku co dostarczona wyświetlana treść."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.3.1.1.2 Język oprogramowania (funkcjonalność zamknięta)",
+        "noteId": "notes-c11-3-1-1-2"
+      },
+      "evaluationType": "Testing"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.3.2 Przewidywalność"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.3.2.1 Po otrzymaniu fokusu",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.3.2.1 Przy fokusie",
+        "noteId": "notes-c11-3-2-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.3.2.2 Podczas wprowadzania danych",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.3.2.2 Przy wprowadzaniu danych",
+        "noteId": "notes-c11-3-2-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.3.3 Pomoc przy wprowadzaniu informacji"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.3.3.1 Identyfikacja błędu"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.3.3.1.1 Identyfikacja błędu (funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 3.3.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.3.3.1.1 Identyfikacja błędu (funkcjonalność otwarta)",
+        "noteId": "notes-c11-3-3-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.3.3.1.2 Identyfikacja błędu (funkcjonalność zamknięta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
+        "3. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        "4. Błąd na wejściu jest wykrywany automatycznie."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy wyjście mowy wykrywa, że element jest błędny.",
+        "2. Sprawdź, czy wyjście mowy opisuje element, który jest błędny."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2, 3 lub 4 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.3.3.1.2 Identyfikacja błędu (funkcjonalność zamknięta)",
+        "noteId": "notes-c11-3-3-1-2"
+      },
+      "evaluationType": "Testing"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.3.3.2 Etykiety lub instrukcje",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 3.3.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.3.3.2 Etykiety lub instrukcje",
+        "noteId": "notes-c11-3-3-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.3.3.3 Sugestie korekty błędów",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 3.3.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.3.3.3 Sugestie dotyczące błędów",
+        "noteId": "notes-c11-3-3-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.11."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.3.3.4 Zapobieganie błędom (prawne, finansowe, dane)",
+        "noteId": "notes-c11-3-3-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.11.4 Solidność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.4.1 Kompatybilność"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.4.1.1 Poprawność kodu"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.4.1.1.1 Poprawność kodu (funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.12."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.4.1.1.1 Parsowanie (funkcjonalność otwarta)",
+        "noteId": "notes-c11-4-1-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.4.1.1.2 Poprawność kodu (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "informative",
+      "text": "Klauzula 11.4.1.1.2 nie zawiera wymagań do testowania.\n"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.4.1.2 Nazwa, rola, wartość"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.4.1.2.1 Nazwa, rola, wartość (funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.13."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.4.1.2.1 Nazwa, rola, wartość (funkcjonalność otwarta)",
+        "noteId": "notes-c11-4-1-2-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.4.1.2.2 Nazwa, rola, wartość (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "informative",
+      "text": "Klauzula 11.4.1.2.2 nie zawiera wymagań do testowania.\n"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.4.1.3 Komunikaty o stanie"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.4.1.3.1 Komunikaty o stanie (funkcjonalność otwarta)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 4.1.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.4.1.3.1 Komunikaty o stanie (funkcjonalność otwarta)",
+        "noteId": "notes-c11-4-1-3-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.11.4.1.3.2 Komunikaty o stanie (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "informative",
+      "text": "Klauzula 11.4.1.3.2 nie zawiera wymagań do testowania.\n"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.11.5 Współdziałanie z technologią wspomagającą"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.5.1 Funkcjonalność zamknięta"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. W oprogramowaniu występuje funkcjonalność zamknięta."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy funkcjonalność zamknięta jest zgodna z Rozdziałem 5.1."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zgodne (przechodzi do 11.5.2)</strong>"
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezgodne</strong>"
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.1 Funkcjonalność zamknięta",
+        "noteId": "notes-c11-5-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.5.2 Usługi dostępności"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.1 Platformowa usługa wsparcia dostępności dla oprogramowania, która"
+    },
+    {
+      "type": "informative",
+      "text": "Testy C.11.5.2.1, C.11.5.2.2, C.11.5.2.3 i C.11.5.2.4 dotyczą dokumentacji platformy i tego, jak oprogramowanie (w tym AT) z niej korzysta. Wymagają inspekcji dokumentacji i kodu.\n"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.5 Informacje o obiekcie"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane jest oprogramowanie z interfejsem użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy rola elementu interfejsu użytkownika jest możliwa do określenia programowo za pomocą technologii wspomagających.",
+        "2. Sprawdź, czy stan elementu interfejsu użytkownika jest możliwy do określenia programowo za pomocą technologii wspomagających.",
+        "3. Sprawdź, czy ograniczenie elementu interfejsu użytkownika jest możliwe do określenia programowo za pomocą technologii wspomagających.",
+        "4. Sprawdź, czy nazwę elementu interfejsu użytkownika jest możliwe do określenia programowo za pomocą technologii wspomagających.",
+        "5. Sprawdź, czy opis elementu interfejsu użytkownika jest możliwy do określenia programowo za pomocą technologii wspomagających."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Wszystkie sprawdzenia (1-5) są prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Którekolwiek ze sprawdzeń (1-5) jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.5 Informacje o obiekcie",
+        "noteId": "notes-c11-5-2-5"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.6 Wiersz, kolumna i nagłówki"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane jest oprogramowanie z interfejsem użytkownika.",
+        "2. W interfejsie użytkownika znajdują się tabele danych."
+      ],
+      "procedure": [
+        "1. Wybrać tabelę danych, na której należy wykonać testy.",
+        "2. Sprawdź, czy każdy wiersz komórek jest możliwy do określenia programowo za pomocą technologii wspomagających.",
+        "3. Sprawdź, czy każda kolumna komórek, jest możliwa do określenia programowo za pomocą technologii wspomagających.",
+        "4. Sprawdź, czy każdy nagłówek wiersza, jest możliwy do określenia programowo za pomocą technologii wspomagających.",
+        "5. Sprawdź, czy każdy nagłówek kolumny, jest możliwy do określenia programowo za pomocą technologii wspomagających."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Wszystkie sprawdzenia (2-5) są prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Którekolwiek ze sprawdzeń (2-5) jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.6 Wiersz, kolumna i nagłówki",
+        "noteId": "notes-c11-5-2-6"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.11.6 Udokumentowane używanie funkcji dostępności"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.6.1 Kontrola funkcji dostępności przez użytkownika"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Istnieją funkcje platformy, które są zdefiniowane w dokumentacji platformy jako funkcje dostępności przeznaczone dla użytkowników."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy istnieją odpowiednie tryby pracy, w których możliwa jest kontrola użytkowników nad funkcjami platformy zdefiniowanymi w dokumentacji platformy jako funkcje dostępności przeznaczone dla użytkowników."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.6.1 Kontrola użytkownika nad funkcjami dostępności",
+        "noteId": "notes-c11-6-1"
+      },
+      "evaluationType": "Testing"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.6.2 Nieprzerwane działanie funkcji dostępności"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Istnieją funkcje platformy, które są zdefiniowane w dokumentacji platformy jako funkcje dostępności."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie z interfejsem użytkownika przerywa normalne działanie funkcji dostępności platformy.",
+        "2. Sprawdź, czy to przerwanie zostało wywołane lub zatwierdzone przez użytkownika."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest fałszywe LUB oba sprawdzenia są prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest prawdziwe, a 2 fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.6.2 Brak zakłócania funkcji dostępności",
+        "noteId": "notes-c11-6-2"
+      },
+      "evaluationType": "Testing"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.11.7 Preferencje użytkownika"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oprogramowanie posiada interfejs użytkownika.",
+        "2. Oprogramowanie zapewnia ustawienia języka, koloru, kontrastu, typu i rozmiaru czcionki oraz kursora fokusu, które odpowiadają ustawieniom platformy.",
+        "3. Oprogramowanie nie jest przeznaczone do odizolowania od platform, na których jest oparte."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie zapewnia tryb pracy zgodny z ustawieniami platformy."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.7 Preferencje użytkownika",
+        "noteId": "notes-c11-7"
+      },
+      "evaluationType": "Inspection and Testing"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.11.8 Narzędzia do tworzenia treści"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.8.2 Tworzenie dostępnej treści"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oprogramowanie jest narzędziem do tworzenia treści."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy narzędzie do tworzenia treści ma cechy, które umożliwiają i wspomagają produkcję treści zgodnych z Rozdziałami 9 (Internet) i 10 (Dokumenty nieinternetowe)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.8.2 Tworzenie dostępnych treści",
+        "noteId": "notes-c11-8-2"
+      },
+      "evaluationType": "Inspection and Testing"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.8.3 Zachowanie informacji o dostępności podczas transformacji"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oprogramowanie jest narzędziem do tworzenia treści.",
+        "2. Narzędzie do tworzenia treści zapewnia transformacje restrukturyzacyjne lub ponownie kodujące."
+      ],
+      "procedure": [
+        "1. W przypadku transformacji restrukturyzacyjnej sprawdzić, czy w danych wyjściowych są zachowane informacje o dostępności.",
+        "2. W przypadku transformacji restrukturyzacyjnej sprawdzić, czy technologia treści obsługuje informacje o dostępności dla restrukturyzowanej formy informacji.",
+        "3. W przypadku transformacji ponownie kodujących sprawdzić, czy w danych wyjściowych są zachowane informacje o dostępności.",
+        "4. W przypadku transformacji ponownie kodujących sprawdzić, czy informacje o dostępności są obsługiwane przez technologię ponownie zakodowanych danych wyjściowych."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe LUB (1 i 2 są fałszywe) LUB sprawdzenie 3 jest prawdziwe LUB (3 i 4 są fałszywe)."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe, a 2 jest prawdziwe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.8.3 Zachowanie informacji o dostępności przy transformacjach",
+        "noteId": "notes-c11-8-3"
+      },
+      "evaluationType": "Inspection and Testing"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.8.4 Wspomaganie naprawy"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oprogramowanie jest narzędziem do tworzenia treści.",
+        "2. Funkcjonalność sprawdzania dostępności narzędzia do tworzenia treści może wykryć, że zawartość nie spełnia wymagań określonych w Rozdziałach 9 (Internet) lub 10 (Dokumenty nieinternetowe), w zależności od przypadku."
+      ],
+      "procedure": [
+        "1. Narzędzie do tworzenia treści proponuje sposób naprawy, jeśli zawartość nie spełnia wymagań Rozdziałów 9 lub 10 (w zależności od przypadku)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.8.4 Pomoc w naprawie",
+        "noteId": "notes-c11-8-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.8.5 Szablony"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oprogramowanie jest narzędziem do tworzenia treści.",
+        "2. Narzędzie do tworzenia treści udostępnia szablony."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy narzędzie do tworzenia treści udostępnia co najmniej jeden szablon, który wspiera tworzenie treści zgodnych z wymaganiami Rozdziałów 9 (Internet) lub 10 (Dokumenty nieinternetowe), w zależności od przypadku.",
+        "2. Sprawdź, czy dostępny jest co najmniej jeden szablon określony w kroku 1 i czy jest on zgodny z Rozdziałami 9 lub 10 (w zależności od przypadku)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.8.5 Szablony",
+        "noteId": "notes-c11-8-5"
+      },
+      "evaluationType": "Inspection"
+    }
+  ]
+}

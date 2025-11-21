@@ -1,0 +1,222 @@
+{
+  "id": "c7",
+  "title": "ICT z funkcjami wideo",
+  "nodes": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "ICT z funkcjami wideo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-7-1",
+      "title": "Technologia przetwarzania napisów",
+      "text": "Technologia przetwarzania napisów",
+      "html": "Technologia przetwarzania napisów"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-7-1-1",
+      "title": "Odtwarzanie napisów",
+      "text": ". Sprawdzić, czy istnieje mechanizm wyświetlania napisów",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT wyświetla lub przetwarza wideo z synchronizowanym dźwiękiem",
+        ". Napisy są umieszczane na nagraniu wideo"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje mechanizm wyświetlania napisów",
+        ". Sprawdzić, czy istnieje mechanizm wyboru wyświetlania napisów"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ],
+      "html": "Odtwarzanie napisów\nWarunki wstępne\n1. ICT wyświetla lub przetwarza wideo z synchronizowanym dźwiękiem.\n2. Napisy są umieszczane na nagraniu wideo.\n1. Sprawdzić, czy istnieje mechanizm wyświetlania napisów.\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\n nr 2\nWarunki wstępne\n1. ICT wyświetla lub przetwarza wideo z synchronizowanym dźwiękiem.\n2. Napisy zamknięte są udostępniane jako oddzielna treść.\n1. Sprawdzić, czy istnieje mechanizm wyboru wyświetlania napisów.\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-7-1-2",
+      "title": "Synchronizacja napisów",
+      "text": ". Sprawdzić, czy mechanizm wyświetlania napisów zachowuje synchronizację między dźwiękiem a odpowiednimi napisami w ciągu jednej dziesiątej sekundy od sygnatury czasowej napisu lub czy zapewnia dostępność napisu dla odtwarzacza w przypadku napisów na żywo",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT udostępnia mechanizm wyświetlania napisów"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy mechanizm wyświetlania napisów zachowuje synchronizację między dźwiękiem a odpowiednimi napisami w ciągu jednej dziesiątej sekundy od sygnatury czasowej napisu lub czy zapewnia dostępność napisu dla odtwarzacza w przypadku napisów na żywo"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ],
+      "html": "Synchronizacja napisów\nWarunki wstępne\n1. ICT udostępnia mechanizm wyświetlania napisów.\n1. Sprawdzić, czy mechanizm wyświetlania napisów zachowuje synchronizację\nmiędzy dźwiękiem a odpowiednimi napisami w ciągu jednej dziesiątej sekundy\nod sygnatury czasowej napisu lub czy zapewnia dostępność napisu dla odtwarzacza\nw przypadku napisów na żywo.\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-7-1-3",
+      "title": "Zachowanie zasad tworzenia napisów",
+      "text": ". Sprawdzić, czy ICT zachowuje dane dotyczące napisów w taki sposób, aby można je było wyświetlić zgodnie z Rozdziałami 7.1.1 i 7.1.2",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT konwertuje lub rejestruje wideo z synchronizowanym obrazem"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy ICT zachowuje dane dotyczące napisów w taki sposób, aby można je było wyświetlić zgodnie z Rozdziałami 7.1.1 i 7.1.2"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ],
+      "html": "Zachowanie zasad tworzenia napisów\nWarunki wstępne\n1. ICT konwertuje lub rejestruje wideo z synchronizowanym obrazem.\n1. Sprawdzić, czy ICT zachowuje dane dotyczące napisów w taki sposób, aby można\nje było wyświetlić zgodnie z Rozdziałami 7.1.1 i 7.1.2.\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-7-1-4",
+      "title": "Cechy napisów",
+      "text": ". Sprawdzić, czy ICT zapewnia użytkownikowi możliwość dostosowania wyświetlanych cech napisów do indywidualnych wymagań",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT wyświetla napisy",
+        ". Testowane napisy są wyświetlane w postaci modyfikowalnych znaków"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy ICT zapewnia użytkownikowi możliwość dostosowania wyświetlanych cech napisów do indywidualnych wymagań"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ],
+      "html": "Cechy napisów\nWarunki wstępne\n1. ICT wyświetla napisy.\n2. Testowane napisy są wyświetlane w postaci modyfikowalnych znaków.\n1. Sprawdzić, czy ICT zapewnia użytkownikowi możliwość dostosowania\nwyświetlanych cech napisów do indywidualnych wymagań.\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-7-1-5",
+      "title": "Odczytywane napisy",
+      "text": ". Sprawdzić, czy istnieje tryb pracy zapewniający przedstawianie dostępnych napisów w formie mówionej",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT wyświetla obraz wideo zsynchronizowany z dźwiękiem",
+        ". Treść testowanych napisów możliwa do określenia programowo"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje tryb pracy zapewniający przedstawianie dostępnych napisów w formie mówionej"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ],
+      "html": "Odczytywane napisy\nWarunki wstępne\n1. ICT wyświetla obraz wideo zsynchronizowany z dźwiękiem.\n2. Treść testowanych napisów możliwa do określenia programowo.\n1. Sprawdzić, czy istnieje tryb pracy zapewniający przedstawianie dostępnych\nnapisów w formie mówionej.\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-7-2",
+      "title": "Technologia audiodeskrypcji",
+      "text": "Technologia audiodeskrypcji",
+      "html": "Technologia audiodeskrypcji"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-7-2-1",
+      "title": "Odtwarzanie audiodeskrypcji",
+      "text": ". Sprawdzić, czy istnieje wyraźny i oddzielny mechanizm opisu dźwiękowego",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT wyświetla obraz wideo zsynchronizowany z dźwiękiem"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje wyraźny i oddzielny mechanizm opisu dźwiękowego",
+        ". Sprawdzić, czy istnieje mechanizm wyboru i odtwarzania audiodeskrypcji na domyślnym kanale audio",
+        ". Sprawdzić, czy ICT umożliwia użytkownikowi wybór i odtwarzanie kilku ścieżek dźwiękowych"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ],
+      "html": "Odtwarzanie audiodeskrypcji\nWarunki wstępne\n1. ICT wyświetla obraz wideo zsynchronizowany z dźwiękiem.\n1. Sprawdzić, czy istnieje wyraźny i oddzielny mechanizm opisu dźwiękowego.\n2. Sprawdzić, czy istnieje mechanizm wyboru i odtwarzania audiodeskrypcji\nna domyślnym kanale audio.\n3. Sprawdzić, czy ICT umożliwia użytkownikowi wybór i odtwarzanie kilku ścieżek\ndźwiękowych.\nPozytywny: Kryterium 1 i 2: prawda lub 1: fałsz i 3: prawda\nNegatywny: Kryterium 1: prawda i 2: fałsz lub 1: fałsz i 3: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-7-2-2",
+      "title": "Synchronizacja audiodeskrypcji",
+      "text": ". Sprawdzić, czy synchronizacja między treścią audio i wideo a odpowiadającą jej audiodeskrypcją jest zachowana",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Jeśli ICT zawiera mechanizm odtwarzania audiodeskrypcji"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy synchronizacja między treścią audio i wideo a odpowiadającą jej audiodeskrypcją jest zachowana"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ],
+      "html": "Synchronizacja audiodeskrypcji\nWarunki wstępne\n1. Jeśli ICT zawiera mechanizm odtwarzania audiodeskrypcji.\n1. Sprawdzić, czy synchronizacja między treścią audio i wideo a odpowiadającą jej\naudiodeskrypcją jest zachowana.\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-7-2-3",
+      "title": "Zachowywanie audiodeskrypcji",
+      "text": ". Sprawdzić, czy ICT zachowuje dane audiodeskrypcji w taki sposób, aby można je było odtwarzać zgodnie z Rozdziałami 7.2.1 i 7.2.2",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT konwertuje lub rejestruje wideo z synchronizowanym obrazem"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy ICT zachowuje dane audiodeskrypcji w taki sposób, aby można je było odtwarzać zgodnie z Rozdziałami 7.2.1 i 7.2.2"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ],
+      "html": "Zachowywanie audiodeskrypcji\nWarunki wstępne\n1. ICT konwertuje lub rejestruje wideo z synchronizowanym obrazem.\n1. Sprawdzić, czy ICT zachowuje dane audiodeskrypcji w taki sposób, aby można\nje było odtwarzać zgodnie z Rozdziałami 7.2.1 i 7.2.2.\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1"
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-7-3",
+      "title": "Sterowanie napisami i audiodeskrypcją",
+      "text": ". Sprawdzić, czy elementy sterujące do aktywacji napisów i audiodeskrypcji są dostępne dla użytkownika na tym samym poziomie interakcji co elementy sterujące głównymi multimediami",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT służy przede wszystkim wyświetla materiały wideo i towarzyszący dźwięk"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy elementy sterujące do aktywacji napisów i audiodeskrypcji są dostępne dla użytkownika na tym samym poziomie interakcji co elementy sterujące głównymi multimediami"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ],
+      "html": "Sterowanie napisami i audiodeskrypcją\nWarunki wstępne\n1. ICT służy przede wszystkim wyświetla materiały wideo i towarzyszący dźwięk.\n1. Sprawdzić, czy elementy sterujące do aktywacji napisów i audiodeskrypcji\nsą dostępne dla użytkownika na tym samym poziomie interakcji co elementy\nsterujące głównymi multimediami.\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1"
+    }
+  ]
+}

@@ -1,0 +1,830 @@
+{
+  "id": "c5",
+  "title": "Wymagania ogólne",
+  "nodes": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Wymagania ogólne"
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-5-1",
+      "title": "Funkcjonalność zamknięta",
+      "text": "Funkcjonalność zamknięta",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Funkcjonalność zamknięta"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Wprowadzenie"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-5-1-2",
+      "title": "Postanowienia ogólne",
+      "text": "Postanowienia ogólne",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Postanowienia ogólne"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-2-1",
+      "title": "Funkcjonalność zamknięta",
+      "text": "Patrz Rozdziały od C.5.2 do C.13, jeśli mają zastosowanie. Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+      "assessmentType": "Inspection",
+      "preconditions": [
+        ""
+      ],
+      "procedure": [],
+      "results": [],
+      "html": "Funkcjonalność zamknięta\nPatrz Rozdziały od C.5.2 do C.13, jeśli mają zastosowanie.\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n143"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-2-2",
+      "title": "Technologia wspomagająca",
+      "text": ". Określić w ICT funkcjonalności zamknięte.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". W ICT występują funkcjonalności zamknięte."
+      ],
+      "procedure": [
+        ". Określić w ICT funkcjonalności zamknięte.",
+        ". Sprawdzić, czy testy od C.5.1.3 do C.5.1.6 można przeprowadzić bez mocowania lub instalowania jakiejkolwiek technologii wspomagającej z wyjątkiem osobistych zestawów słuchawkowych lub pętli indukcyjnych."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Technologia wspomagająca\nRodzaj oceny\nTest\nWarunki wstępne\n1. W ICT występują funkcjonalności zamknięte.\nProcedura\n1. Określić w ICT funkcjonalności zamknięte.\n2. Sprawdzić, czy testy od C.5.1.3 do C.5.1.6 można przeprowadzić bez mocowania\nlub instalowania jakiejkolwiek technologii wspomagającej z wyjątkiem osobistych\nzestawów słuchawkowych lub pętli indukcyjnych.\nWynik\nPozytywny: Kryterium 2: prawda\nNegatywny: Kryterium 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-5-1-3",
+      "title": "Dostęp niewizualny",
+      "text": "Dostęp niewizualny",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Dostęp niewizualny"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-1",
+      "title": "Wyjście audio informacji wizualnych",
+      "text": ". Określić w ICT funkcjonalności zamknięte na odczyt z ekranu.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". Informacje wizualne są wymagane, aby umożliwić korzystanie z tych funkcji ICT, które są zamknięte dla technologii wspomagających odczyt z ekranu."
+      ],
+      "procedure": [
+        ". Określić w ICT funkcjonalności zamknięte na odczyt z ekranu.",
+        ". Sprawdzić, czy można je wykonać, korzystając z dostępu do wyjścia audio."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Wyjście audio informacji wizualnych\nRodzaj oceny\nTest\nWarunki wstępne\n1. Informacje wizualne są wymagane, aby umożliwić korzystanie z tych funkcji ICT,\nktóre są zamknięte dla technologii wspomagających odczyt z ekranu.\nProcedura\n1. Określić w ICT funkcjonalności zamknięte na odczyt z ekranu.\n2. Sprawdzić, czy można je wykonać, korzystając z dostępu do wyjścia audio.\nWynik\nPozytywny: Kryterium 2: prawda\nNegatywny: Kryterium 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-2",
+      "title": "Wyjściowy sygnał dźwiękowy zawierający mowę",
+      "text": ". Sprawdzić, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu zawartego w ICT lub dostarczanego wraz z nią.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu zawartego w ICT lub dostarczanego wraz z nią.",
+        ". Sprawdzić, czy sygnał dźwiękowy jest dostarczany za pomocą osobistego zestawu słuchawkowego, który można podłączyć poprzez gniazdo audio 3,5 mm lub standardowe połączenie branżowe, bez konieczności korzystania ze wzroku."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Wyjściowy sygnał dźwiękowy zawierający mowę\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.\nProcedura\n1. Sprawdzić, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu\nzawartego w ICT lub dostarczanego wraz z nią.\n2. Sprawdzić, czy sygnał dźwiękowy jest dostarczany za pomocą osobistego zestawu\nsłuchawkowego, który można podłączyć poprzez gniazdo audio 3,5 mm lub\nstandardowe połączenie branżowe, bez konieczności korzystania ze wzroku.\nWynik\nPozytywny: Kryterium 1 lub 2: prawda\nNegatywny: Kryteria 1 i 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-3",
+      "title": "Korelacja wyjściowych sygnałów dźwiękowych",
+      "text": "Rozdział 5.1.3.3 ma charakter wyłącznie informacyjny i nie zawiera wymagań, które należałoby przete- stować. Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+      "assessmentType": "Inspection",
+      "preconditions": [
+        " ETSI CEN CENELEC"
+      ],
+      "procedure": [],
+      "results": [],
+      "html": "Korelacja wyjściowych sygnałów dźwiękowych\nRozdział 5.1.3.3 ma charakter wyłącznie informacyjny i nie zawiera wymagań, które należałoby przete-\nstować.\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n144\nETSI CEN CENELEC"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-4",
+      "title": "Sterowanie przez użytkownika wyjściem mowy",
+      "text": ". Sprawdzić, czy wyjście mowy można przerwać na żądanie użytkownika.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy można przerwać na żądanie użytkownika.",
+        ". Sprawdzić, czy wyjście mowy można powtórzyć na żądanie użytkownika."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Sterowanie przez użytkownika wyjściem mowy\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.\nProcedura\n1. Sprawdzić, czy wyjście mowy można przerwać na żądanie użytkownika.\n2. Sprawdzić, czy wyjście mowy można powtórzyć na żądanie użytkownika.\nWynik\nPozytywny: Wszystkie kryteria: prawda\nNegatywny: Dowolne kryterium: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-5",
+      "title": "Automatyczne przerwanie wyjścia mowy",
+      "text": ". Określić w ICT funkcjonalności zamknięte.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych."
+      ],
+      "procedure": [
+        ". Określić w ICT funkcjonalności zamknięte.",
+        ". Sprawdzić, czy wyjście mowy dla każdej pojedynczej funkcji jest przerywany na skutek działania użytkownika.",
+        ". Sprawdzić, czy wyjście ł mowy dla każdej pojedynczej funkcji jest przerywany, gdy rozpoczyna się nowe wyjście mowy."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Automatyczne przerwanie wyjścia mowy\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.\nProcedura\n1. Określić w ICT funkcjonalności zamknięte.\n2. Sprawdzić, czy wyjście mowy dla każdej pojedynczej funkcji jest przerywany\nna skutek działania użytkownika.\n3. Sprawdzić, czy wyjście ł mowy dla każdej pojedynczej funkcji jest przerywany,\ngdy rozpoczyna się nowe wyjście mowy.\nWynik\nPozytywny: kryteria 2 i 3: prawda\nNegatywny: Kryterium 2 lub 3: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-6",
+      "title": "Wyjście mowy dla treści nietekstowej",
+      "text": ". Sprawdzić, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". Treść nietekstowa jest prezentowana użytkownikom za pomocą sygnału mowy.",
+        ""
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
+        ". Sprawdzić, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.",
+        ". Sprawdzić, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
+        ". Sprawdzić, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanymi w kryterium sukcesu WCAG 2.1 dla wytycznej 1.1.1."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1. Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Wyjście mowy dla treści nietekstowej\nRodzaj oceny\nTest\nWarunki wstępne\n1. Treść nietekstowa jest prezentowana użytkownikom za pomocą sygnału mowy.\nProcedura\n1. Sprawdzić, czy wyjście mowy jest zapewniane jako alternatywa dla treści\nnietekstowej.\n2. Sprawdzić, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.\n3. Sprawdzić, czy treść nietekstowa nie jest wyłącznie używana do formatowania\nwizualnego.\n4. Sprawdzić, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu\nalternatywnego” opisanymi w kryterium sukcesu WCAG 2.1 dla wytycznej 1.1.1.\nWynik\nPozytywny: Kryteria 1, 2, 3 i 4: prawda; lub 1 i 2: fałsz; lub 1 i 3: fałsz\nNegatywny: Kryteria 1: prawda i 2: fałsz; lub 1: prawda i 3: fałsz; lub 1, 2 i 3: prawda\noraz 4: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1.\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n145"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-7",
+      "title": "Wyjście mowy dla informacji wideo",
+      "text": ". Sprawdzić, czy wyjście mowy prezentuje informacje zgodne z napisami do nagranej treści wideo.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". Nagrane materiały wideo są niezbędne, aby umożliwić korzystanie z zamkniętych funkcji ICT.",
+        ". Wyjście mowy zapewnia niewizualny dostęp do treści nietekstowej w funkcjonalności zamkniętej."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy prezentuje informacje zgodne z napisami do nagranej treści wideo."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Wyjście mowy dla informacji wideo\nRodzaj oceny\nTest\nWarunki wstępne\n1. Nagrane materiały wideo są niezbędne, aby umożliwić korzystanie z zamkniętych\nfunkcji ICT.\n2. Wyjście mowy zapewnia niewizualny dostęp do treści nietekstowej\nw funkcjonalności zamkniętej.\nProcedura\n1. Sprawdzić, czy wyjście mowy prezentuje informacje zgodne z napisami do nagranej\ntreści wideo.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-8",
+      "title": "Wejście maskowane",
+      "text": ". Sprawdzić, czy sygnał dźwiękowy nie jest mówioną wersją wprowadzonych znaków.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        ". Wyświetlane są znaki maskowane.",
+        ". Nie aktywowano żadnej opcji umożliwiającej korzystanie z nieprywatnego sygnału dźwiękowego."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy sygnał dźwiękowy nie jest mówioną wersją wprowadzonych znaków.",
+        ". Sprawdzić, czy sygnał dźwiękowy jest dostępny tylko do mechanizmu do indywidualnego słuchania."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Wejście maskowane\nRodzaj oceny\nTest\nWarunki wstępne\n1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.\n2. Wyświetlane są znaki maskowane.\n3. Nie aktywowano żadnej opcji umożliwiającej korzystanie z nieprywatnego\nsygnału dźwiękowego.\nProcedura\n1. Sprawdzić, czy sygnał dźwiękowy nie jest mówioną wersją wprowadzonych\nznaków.\n2. Sprawdzić, czy sygnał dźwiękowy jest dostępny tylko do mechanizmu\ndo indywidualnego słuchania.\nWynik\nPozytywny: Dowolne kryterium: prawda\nNegatywny: Wszystkie kryteria: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-9",
+      "title": "Prywatny dostęp do danych osobowych",
+      "text": ". Sprawdzić, czy sygnał dźwiękowy jest dostępny tylko do mechanizmu do indywidulnego słuchania.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        ". Wyjście zawiera dane.",
+        ". Istnieje odpowiednia polityka prywatności, która uznaje te dane za prywatne.",
+        " ETSI CEN CENELEC"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy sygnał dźwiękowy jest dostępny tylko do mechanizmu do indywidulnego słuchania.",
+        ". Sprawdzić, czy mechanizm do indywidualnego słuchania można podłączyć bez konieczności używania wzroku.",
+        ". Sprawdzić, czy sygnał dźwiękowy jest dostarczany przez dowolny inny mechanizm, który użytkownik może wybrać."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 3 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Prywatny dostęp do danych osobowych\nRodzaj oceny\nTest\nWarunki wstępne\n1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.\n2. Wyjście zawiera dane.\n3. Istnieje odpowiednia polityka prywatności, która uznaje te dane za prywatne.\nProcedura\n1. Sprawdzić, czy sygnał dźwiękowy jest dostępny tylko do mechanizmu\ndo indywidulnego słuchania.\n2. Sprawdzić, czy mechanizm do indywidualnego słuchania można podłączyć bez\nkonieczności używania wzroku.\n3. Sprawdzić, czy sygnał dźwiękowy jest dostarczany przez dowolny inny mechanizm,\nktóry użytkownik może wybrać.\nWynik\nPozytywny: Kryteria 1 i 2 lub 3: prawda\nNegatywny: Kryteria 1 lub 2 i 3: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 3\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n146\nETSI CEN CENELEC"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-10",
+      "title": "Wyjście audio bez zakłóceń",
+      "text": ". Sprawdzić, czy zakłócające wyjście dźwiękowe jest odtwarzane nie dłużej niż 3 sekundy.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        ". ICT automatycznie odtwarza zakłócające wyjście dźwiękowe."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy zakłócające wyjście dźwiękowe jest odtwarzane nie dłużej niż 3 sekundy."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Wyjście audio bez zakłóceń\nRodzaj oceny\nTest\nWarunki wstępne\n1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.\n2. ICT automatycznie odtwarza zakłócające wyjście dźwiękowe.\nProcedura\n1. Sprawdzić, czy zakłócające wyjście dźwiękowe jest odtwarzane nie dłużej\nniż 3 sekundy.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-11",
+      "title": "Głośność odsłuchiwania treści prywatnych",
+      "text": ". Sprawdzić, czy istnieje przynajmniej jeden niewizualny tryb działania do kontroli głosu.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        ". Sygnał dźwiękowy jest dostępny tylko do mechanizmu do indywidualnego słuchania."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje przynajmniej jeden niewizualny tryb działania do kontroli głosu."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Głośność odsłuchiwania treści prywatnych\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.\n2. Sygnał dźwiękowy jest dostępny tylko do mechanizmu do indywidualnego\nsłuchania.\nProcedura\n1. Sprawdzić, czy istnieje przynajmniej jeden niewizualny tryb działania do kontroli\ngłosu.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-12",
+      "title": "Głośność głośnika",
+      "text": ". Sprawdzić, czy jest dostępna niewizualna kontrola zwiększania głośności.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        ". Sygnał dźwiękowy jest dostarczany przez głośniki."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy jest dostępna niewizualna kontrola zwiększania głośności.",
+        ". Sprawdzić, czy jest możliwe wzmocnienie do poziomu przynajmniej 65 dBA (–29 dBPaA)."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Głośność głośnika\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.\n2. Sygnał dźwiękowy jest dostarczany przez głośniki.\nProcedura\n1. Sprawdzić, czy jest dostępna niewizualna kontrola zwiększania głośności.\n2. Sprawdzić, czy jest możliwe wzmocnienie do poziomu przynajmniej 65 dBA\n(–29 dBPaA).\nWynik\nPozytywny: Kryterium 1 i 2: prawda\nNegatywny: Kryterium 1 lub 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-13",
+      "title": "Przywracanie głośności",
+      "text": ". Sprawdzić, czy funkcja do automatycznego resetowania głośności do poziomu",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        ". ICT nie jest dedykowana dla pojedynczego użytkownika.",
+        ""
+      ],
+      "procedure": [
+        ". Sprawdzić, czy funkcja do automatycznego resetowania głośności do poziomu",
+        "dBA lub niższego jest wywoływana po każdym użyciu."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Przywracanie głośności\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.\n2. ICT nie jest dedykowana dla pojedynczego użytkownika.\nProcedura\n1. Sprawdzić, czy funkcja do automatycznego resetowania głośności do poziomu\n65 dBA lub niższego jest wywoływana po każdym użyciu.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n147"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-14",
+      "title": "Języki mówione",
+      "text": ". Sprawdzić, czy wyjście mowy jest w tym samym języku co dostarczona wyświetlana treść.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        ". Sygnałem mowy nie są nazwy własne, terminy techniczne, słowa w nieokreślonym języku ani słowa lub zwroty, które stały się częścią żargonu bezpośrednio otaczającego tekstu.",
+        ". Treść nie jest generowana zewnętrznie i jest kontrolowana przez dostawcę ICT.",
+        ". Wyświetlane języki można wybrać z zastosowaniem dostępu niewizualny.",
+        ". Gdy użytkownik nie wybrał języka mowy, który jest inny niż język wyświetlanej treści."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy jest w tym samym języku co dostarczona wyświetlana treść."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 3",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Języki mówione\nRodzaj oceny\nTest\nWarunki wstępne\n1. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.\n2. Sygnałem mowy nie są nazwy własne, terminy techniczne, słowa w nieokreślonym\njęzyku ani słowa lub zwroty, które stały się częścią żargonu bezpośrednio otaczającego\ntekstu.\n3. Treść nie jest generowana zewnętrznie i jest kontrolowana przez dostawcę ICT.\n4. Wyświetlane języki można wybrać z zastosowaniem dostępu niewizualny.\n5. Gdy użytkownik nie wybrał języka mowy, który jest inny niż język wyświetlanej\ntreści.\nProcedura\n1. Sprawdzić, czy wyjście mowy jest w tym samym języku co dostarczona\nwyświetlana treść.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 3"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-15",
+      "title": "Niewizualna identyfikacja błędu",
+      "text": ". Sprawdzić, czy wyjście mowy wykrywa, że element jest błędny.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        ". Błąd na wejściu jest wykrywany automatycznie."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy wykrywa, że element jest błędny.",
+        ". Sprawdzić, czy wyjście mowy opisuje element, który jest błędny."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Niewizualna identyfikacja błędu\nRodzaj oceny\nTest\nWarunki wstępne\n1. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.\n2. Błąd na wejściu jest wykrywany automatycznie.\nProcedura\n1. Sprawdzić, czy wyjście mowy wykrywa, że element jest błędny.\n2. Sprawdzić, czy wyjście mowy opisuje element, który jest błędny.\nWynik\nPozytywny: Kryterium 1 i 2: prawda\nNegatywny: Kryterium 1 lub 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-3-16",
+      "title": "Pokwitowania, bilety i dane wyjściowe transakcji",
+      "text": ". Sprawdzić, czy dostarczany wyjście mowy zawiera wszystkie informacje niezbędne do zakończenia lub zweryfikowania transakcji.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". ICT jest zamknięta dla dostępu wizualnego.",
+        ". ICT dostarcza jako wynik transakcji samoobsługowej pokwitowania, bilety lub inne dane wyjściowe.",
+        ". Sprawdzane informacje nie są drukowanymi kopiami tras i map.",
+        " ETSI CEN CENELEC"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy dostarczany wyjście mowy zawiera wszystkie informacje niezbędne do zakończenia lub zweryfikowania transakcji."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub 3 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Pokwitowania, bilety i dane wyjściowe transakcji\nRodzaj oceny\nTest\nWarunki wstępne\n1. ICT jest zamknięta dla dostępu wizualnego.\n2. ICT dostarcza jako wynik transakcji samoobsługowej pokwitowania, bilety lub\ninne dane wyjściowe.\n3. Sprawdzane informacje nie są drukowanymi kopiami tras i map.\nProcedura\n1. Sprawdzić, czy dostarczany wyjście mowy zawiera wszystkie informacje\nniezbędne do zakończenia lub zweryfikowania transakcji.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2 lub 3\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n148\nETSI CEN CENELEC"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-5-1-4",
+      "title": "Funkcjonalności uniemożliwiające powiększanie tekstu",
+      "text": ". Zmierzyć wysokość wielkiej litery H.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". Funkcjonalność ICT jest zamknięta dla funkcji powiększania dostępnych na platformie oraz dla technologii wspomagającej.",
+        ". Odległość widzenia jest określana przez dostawcę."
+      ],
+      "procedure": [
+        ". Zmierzyć wysokość wielkiej litery H.",
+        ". Sprawdzić, czy odpowiada ona kątowi co najmniej 0,7 stopnia przy określonej odległości widzenia."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Funkcjonalności uniemożliwiające powiększanie tekstu\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. Funkcjonalność ICT jest zamknięta dla funkcji powiększania dostępnych\nna platformie oraz dla technologii wspomagającej.\n2. Odległość widzenia jest określana przez dostawcę.\nProcedura\n1. Zmierzyć wysokość wielkiej litery H.\n2. Sprawdzić, czy odpowiada ona kątowi co najmniej 0,7 stopnia przy określonej\nodległości widzenia.\nWynik\nPozytywny: Kryterium 2: prawda\nNegatywny: Kryterium 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-5-1-5",
+      "title": "Wyjście wizualne dla informacji dźwiękowych",
+      "text": ". Sprawdzić, czy informacje wizualne odpowiadają nagraniom sygnału dźwiękowego.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Aby umożliwić korzystanie z funkcjonalności zamkniętych ICT, konieczne jest wcześniejsze przygotowanie nagrań sygnału dźwiękowego."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy informacje wizualne odpowiadają nagraniom sygnału dźwiękowego."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Wyjście wizualne dla informacji dźwiękowych\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. Aby umożliwić korzystanie z funkcjonalności zamkniętych ICT, konieczne jest\nwcześniejsze przygotowanie nagrań sygnału dźwiękowego.\nProcedura\n1. Sprawdzić, czy informacje wizualne odpowiadają nagraniom sygnału dźwiękowego.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-5-1-6",
+      "title": "Działanie bez korzystania z klawiatury",
+      "text": "Działanie bez korzystania z klawiatury",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Działanie bez korzystania z klawiatury"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-6-1",
+      "title": "Funkcjonalność zamknięta",
+      "text": ". Sprawdzić, czy wszystkie funkcjonalności można obsługiwać bez użycia wzroku.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Funkcjonalność ICT jest zamknięta dla klawiatur i interfejsów klawiatury."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wszystkie funkcjonalności można obsługiwać bez użycia wzroku."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Funkcjonalność zamknięta\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. Funkcjonalność ICT jest zamknięta dla klawiatur i interfejsów klawiatury.\nProcedura\n1. Sprawdzić, czy wszystkie funkcjonalności można obsługiwać bez użycia wzroku.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-5-1-6-2",
+      "title": "Fokus",
+      "text": ". Sprawdzić, czy istnieje możliwość usunięcia fokusu z elementu za pomocą tego samego mechanizmu.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Funkcjonalność ICT jest zamknięta dla klawiatur i interfejsów klawiatury.",
+        ". Fokus może być przeniesiony na element interfejsu użytkownika.",
+        ""
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje możliwość usunięcia fokusu z elementu za pomocą tego samego mechanizmu."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Fokus\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. Funkcjonalność ICT jest zamknięta dla klawiatur i interfejsów klawiatury.\n2. Fokus może być przeniesiony na element interfejsu użytkownika.\nProcedura\n1. Sprawdzić, czy istnieje możliwość usunięcia fokusu z elementu za pomocą tego\nsamego mechanizmu.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n149"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-5-1-7",
+      "title": "Dostęp bez użycia mowy",
+      "text": ". Sprawdzić, czy zamknięte funkcje można aktywować za pomocą alternatywnego mechanizmu wprowadzania, który nie wymaga posługiwania się mową.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Aby umożliwić korzystanie z funkcjonalności zamkniętych ICT, konieczna jest mowa."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy zamknięte funkcje można aktywować za pomocą alternatywnego mechanizmu wprowadzania, który nie wymaga posługiwania się mową."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Dostęp bez użycia mowy\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. Aby umożliwić korzystanie z funkcjonalności zamkniętych ICT, konieczna jest\nmowa.\nProcedura\n1. Sprawdzić, czy zamknięte funkcje można aktywować za pomocą alternatywnego\nmechanizmu wprowadzania, który nie wymaga posługiwania się mową.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-5-2",
+      "title": "Aktywacja funkcji dostępności",
+      "text": ". Sprawdzić, czy można aktywować te funkcje dostępności, nie korzystając z metody, która nie uwzględnia tych potrzeb.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT zapewnia udokumentowane funkcje dostępności uwzględniające konkretne potrzeby."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy można aktywować te funkcje dostępności, nie korzystając z metody, która nie uwzględnia tych potrzeb."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Aktywacja funkcji dostępności\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. ICT zapewnia udokumentowane funkcje dostępności uwzględniające konkretne\npotrzeby.\nProcedura\n1. Sprawdzić, czy można aktywować te funkcje dostępności, nie korzystając\nz metody, która nie uwzględnia tych potrzeb.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-5-3",
+      "title": "Biometria",
+      "text": ". Sprawdzić, czy identyfikację użytkownika można przeprowadzić za pomocą więcej niż jednej metody.",
+      "assessmentType": "Test nr 1",
+      "preconditions": [
+        ". Do identyfikacji użytkownika ICT wykorzystuje charakterystyki biologiczne.",
+        " ETSI CEN CENELEC"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy identyfikację użytkownika można przeprowadzić za pomocą więcej niż jednej metody.",
+        ". ICT wykorzystuje charakterystyki biologiczne do sterowania funkcjami ICT."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1. Warunki wstępne Test nr 2",
+          "type": "Nie dotyczy"
+        },
+        {
+          "label": "Nie spełniono warunku wstępnego 1. Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Biometria\nRodzaj oceny\nTest nr 1\nWarunki wstępne\n1. Do identyfikacji użytkownika ICT wykorzystuje charakterystyki biologiczne.\nProcedura\n1. Sprawdzić, czy identyfikację użytkownika można przeprowadzić za pomocą\nwięcej niż jednej metody.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1.\nWarunki wstępne\nTest nr 2\nProcedura\n1. ICT wykorzystuje charakterystyki biologiczne do sterowania funkcjami ICT.\nWynik\n1. Sprawdzić, czy funkcjami ICT można sterować za pomocą więcej niż jednej metody.\nWarunki wstępne\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1.\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n150\nETSI CEN CENELEC"
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-5-4",
+      "title": "Zachowanie informacji o dostępności podczas konwersji",
+      "text": ". Sprawdzić, czy niezastrzeżone informacje dotyczące dostępności są zachowane po konwersji w ICT informacji lub komunikacji.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Niezastrzeżone informacje dotyczące dostępności są udokumentowane.",
+        ". ICT konwertuje informacje lub komunikację.",
+        ". Niezastrzeżone informacje dotyczące dostępności mogą być zawarte w formacie docelowym.",
+        ". Niezastrzeżone informacje dotyczące dostępności mogą być obsługiwane przez format docelowy."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy niezastrzeżone informacje dotyczące dostępności są zachowane po konwersji w ICT informacji lub komunikacji."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2, 3 lub 4",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Zachowanie informacji o dostępności podczas konwersji\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. Niezastrzeżone informacje dotyczące dostępności są udokumentowane.\n2. ICT konwertuje informacje lub komunikację.\n3. Niezastrzeżone informacje dotyczące dostępności mogą być zawarte w formacie\ndocelowym.\n4. Niezastrzeżone informacje dotyczące dostępności mogą być obsługiwane przez\nformat docelowy.\nProcedura\n1. Sprawdzić, czy niezastrzeżone informacje dotyczące dostępności są zachowane\npo konwersji w ICT informacji lub komunikacji.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2, 3 lub 4"
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-5-5",
+      "title": "Części obsługiwane",
+      "text": "Części obsługiwane",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Części obsługiwane"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-5-5-1",
+      "title": "Środki obsługi",
+      "text": ". Sprawdzić, czy istnieje dostępny alternatywny sposób, który nie wymaga zastosowania takich działań.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". ICT zawiera części obsługiwane, które wymagają chwytania, ściskania lub skręcania nadgarstka."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje dostępny alternatywny sposób, który nie wymaga zastosowania takich działań."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Środki obsługi\nRodzaj oceny\nTest\nWarunki wstępne\n1. ICT zawiera części obsługiwane, które wymagają chwytania, ściskania lub skręcania\nnadgarstka.\nProcedura\n1. Sprawdzić, czy istnieje dostępny alternatywny sposób, który nie wymaga\nzastosowania takich działań.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-5-5-2",
+      "title": "Rozpoznawalność części obsługiwanych",
+      "text": ". Określić, czy istnieje sposób na rozpoznanie każdej części, którą można obsługiwać w sposób niewizualny.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". ICT zawiera części obsługiwane.",
+        ""
+      ],
+      "procedure": [
+        ". Określić, czy istnieje sposób na rozpoznanie każdej części, którą można obsługiwać w sposób niewizualny.",
+        ". Sprawdzić, czy działanie związane z częścią obsługiwaną nie zostało wykonane z użyciem środków do rozpoznania każdej części obsługiwanej w kroku 1."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1. Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Rozpoznawalność części obsługiwanych\nRodzaj oceny\nTest\nWarunki wstępne\n1. ICT zawiera części obsługiwane.\nProcedura\n1. Określić, czy istnieje sposób na rozpoznanie każdej części, którą można obsługiwać\nw sposób niewizualny.\n2. Sprawdzić, czy działanie związane z częścią obsługiwaną nie zostało wykonane\nz użyciem środków do rozpoznania każdej części obsługiwanej w kroku 1.\nWynik\nPozytywny: Kryterium 1 i 2: prawda\nNegatywny: Kryteria 1 lub 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1.\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n151"
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-5-6",
+      "title": "Elementy blokujące lub przełączające",
+      "text": "Elementy blokujące lub przełączające",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Elementy blokujące lub przełączające"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-5-6-1",
+      "title": "Status dotyku lub dźwięku",
+      "text": ". Sprawdzić, czy istnieje przynajmniej jeden tryb działania, w którym stan wszystkich elementów sterujących blokujących lub przełączających można określić dotykowo, bez aktywowania elementu sterującego.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT ma element sterujący blokujący lub przełączający.",
+        ". Elementy sterujące blokujące lub przełączające są widoczne dla użytkownika."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje przynajmniej jeden tryb działania, w którym stan wszystkich elementów sterujących blokujących lub przełączających można określić dotykowo, bez aktywowania elementu sterującego.",
+        ". Sprawdzić, czy istnieje przynajmniej jeden tryb działania, w którym stan wszystkich elementów sterujących blokujących lub przełączających można określić dźwiękiem, bez aktywowania elementu sterującego."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Status dotyku lub dźwięku\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. ICT ma element sterujący blokujący lub przełączający.\n2. Elementy sterujące blokujące lub przełączające są widoczne dla użytkownika.\nProcedura\n1. Sprawdzić, czy istnieje przynajmniej jeden tryb działania, w którym stan wszystkich\nelementów sterujących blokujących lub przełączających można określić dotykowo,\nbez aktywowania elementu sterującego.\n2. Sprawdzić, czy istnieje przynajmniej jeden tryb działania, w którym stan wszystkich\nelementów sterujących blokujących lub przełączających można określić dźwiękiem,\nbez aktywowania elementu sterującego.\nWynik\nPozytywny: Kryterium 1 lub 2: prawda\nNegatywny: Kryteria 1 i 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-5-6-2",
+      "title": "Status wizualny",
+      "text": ". Sprawdzić, czy opóźnienie między ponownymi wciśnięciami klawisza można ustawić co najmniej na 2 sekundy.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT ma element sterujący blokujący lub przełączający.",
+        ". Elementy sterujące blokujące lub przełączające są dostępne dla użytkownika."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy opóźnienie między ponownymi wciśnięciami klawisza można ustawić co najmniej na 2 sekundy.",
+        ". Sprawdzić, czy częstotliwość ponownego wciśnięcia klawiszy może zostać ustawiona na poziomie 2 sekund na znak."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Status wizualny\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. ICT ma element sterujący blokujący lub przełączający.\n2. Elementy sterujące blokujące lub przełączające są dostępne dla użytkownika.\nProcedura\n1. Sprawdzić, czy opóźnienie między ponownymi wciśnięciami klawisza można\nustawić co najmniej na 2 sekundy.\n2. Sprawdzić, czy częstotliwość ponownego wciśnięcia klawiszy może zostać\nustawiona na poziomie 2 sekund na znak.\nWynik\nPozytywny: Kryterium 1 i 2: prawda\nNegatywny: Kryterium 1 lub 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-5-7",
+      "title": "Ponowne wciśnięcie klawisza",
+      "text": ". Sprawdzić, czy opóźnienie między ponownymi wciśnięciami klawisza można ustawić co najmniej na 2 sekundy.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". ICT obsługuje funkcję ponownego wciśnięcia klawisza oraz dostarcza klawiaturę, na której jest ona dostępna.",
+        ". Funkcji ponownego wciśnięcia klawisza nie można wyłączyć.",
+        " ETSI CEN CENELEC"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy opóźnienie między ponownymi wciśnięciami klawisza można ustawić co najmniej na 2 sekundy.",
+        ". Sprawdzić, czy częstotliwość ponownego wciśnięcia klawiszy może zostać ustawiona na poziomie 2 sekund na znak."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Ponowne wciśnięcie klawisza\nRodzaj oceny\nTest\nWarunki wstępne\n1. ICT obsługuje funkcję ponownego wciśnięcia klawisza oraz dostarcza klawiaturę,\nna której jest ona dostępna.\n2. Funkcji ponownego wciśnięcia klawisza nie można wyłączyć.\nProcedura\n1. Sprawdzić, czy opóźnienie między ponownymi wciśnięciami klawisza można\nustawić co najmniej na 2 sekundy.\n2. Sprawdzić, czy częstotliwość ponownego wciśnięcia klawiszy może zostać\nustawiona na poziomie 2 sekund na znak.\nWynik\nPozytywny: Kryterium 1 i 2: prawda\nNegatywny: Kryterium 1 lub 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n152\nETSI CEN CENELEC"
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-5-8",
+      "title": "Akceptacja dwukrotnego kliknięcia klawisza",
+      "text": ". Sprawdzić, czy istnieje mechanizm umożliwiający regulację opóźnienia po każdym naciśnięciu klawisza, podczas którego dodatkowe naciśnięcie klawisza nie zostanie zaakceptowane, jeśli jest ono identyczne z poprzednim naciśnięciem klawisza.",
+      "assessmentType": "Test",
+      "preconditions": [
+        ". ICT jest wyposażona w klawiaturę lub klawiaturę pomocniczą."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje mechanizm umożliwiający regulację opóźnienia po każdym naciśnięciu klawisza, podczas którego dodatkowe naciśnięcie klawisza nie zostanie zaakceptowane, jeśli jest ono identyczne z poprzednim naciśnięciem klawisza.",
+        ". Ustawić mechanizm na maksymalną wartość.",
+        ". Nacisnąć dowolny klawisz.",
+        ". Po 0,5 s nacisnąć ten sam klawisz co w kroku 3.",
+        ". Sprawdzić, czy naciśnięcie w kroku 4 zostało zaakceptowane."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Akceptacja dwukrotnego kliknięcia klawisza\nRodzaj oceny\nTest\nWarunki wstępne\n1. ICT jest wyposażona w klawiaturę lub klawiaturę pomocniczą.\nProcedura\n1. Sprawdzić, czy istnieje mechanizm umożliwiający regulację opóźnienia\npo każdym naciśnięciu klawisza, podczas którego dodatkowe naciśnięcie klawisza\nnie zostanie zaakceptowane, jeśli jest ono identyczne z poprzednim naciśnięciem\nklawisza.\n2. Ustawić mechanizm na maksymalną wartość.\n3. Nacisnąć dowolny klawisz.\n4. Po 0,5 s nacisnąć ten sam klawisz co w kroku 3.\n5. Sprawdzić, czy naciśnięcie w kroku 4 zostało zaakceptowane.\nWynik\nPozytywny: Kryterium 1: prawda oraz kryterium 5: fałsz\nNegatywny: Kryterium 1: fałsz lub kryterium 5: prawda\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-5-9",
+      "title": "Jednoczesne czynności użytkownika",
+      "text": ". Sprawdzić, czy istnieje tryb pracy, który nie wymaga jednoczesnych czynności użytkownika.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT posiada tryb pracy wymagający jednoczesnych czynności użytkownika."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje tryb pracy, który nie wymaga jednoczesnych czynności użytkownika.",
+        ". Określić w ICT wszystkie funkcje sterowane przez użytkowników.",
+        ". Sprawdzić, czy każda funkcja, którą można sterować, może być obsługiwana za pomocą pojedynczego działania użytkownika."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Jednoczesne czynności użytkownika\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. ICT posiada tryb pracy wymagający jednoczesnych czynności użytkownika.\nProcedura\n1. Sprawdzić, czy istnieje tryb pracy, który nie wymaga jednoczesnych czynności\nużytkownika.\n2. Określić w ICT wszystkie funkcje sterowane przez użytkowników.\n3. Sprawdzić, czy każda funkcja, którą można sterować, może być obsługiwana\nza pomocą pojedynczego działania użytkownika.\nWynik\nPozytywny: Kryterium 3: prawda\nNegatywny: Kryterium 3: fałsz dla wszystkich trybów pracy\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    }
+  ]
+}

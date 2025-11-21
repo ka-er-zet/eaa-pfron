@@ -1,0 +1,218 @@
+====================================================================================================
+DETAILED VALIDATION REPORT - POTENTIAL ERRORS ONLY
+====================================================================================================
+
+SECTION 1: DUPLICATE CLAUSE IDs WITHIN SAME FILE
+====================================================================================================
+These are likely parsing errors where the same clause appears multiple times.
+
+FILE: c6.json
+  - C.6.2.3: appears 5 times
+
+
+SECTION 2: DUPLICATE PROCEDURES ACROSS DIFFERENT CLAUSES
+====================================================================================================
+These may indicate copy-paste errors or legitimate reuse of test procedures.
+
+1. DUPLICATE PROCEDURE found in 2 places:
+   - c10.json: C.10.4.1.3
+   - c11.json: C.11.4.1.3.1
+   Preview: 1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie....
+
+2. DUPLICATE PROCEDURE found in 2 places:
+   - c11.json: C.11.1.1.1.2
+   - c11.json: C.11.1.4.5.2
+   Preview: 1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.
+2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i p...
+
+3. DUPLICATE PROCEDURE found in 2 places:
+   - c11.json: C.11.1.2.1.2.1
+   - c5.json: C.5.1.5
+   Preview: 1. Sprawdź, czy informacje wizualne odpowiadają nagraniom sygnału dźwiękowego....
+
+4. DUPLICATE PROCEDURE found in 2 places:
+   - c11.json: C.11.1.2.1.2.2
+   - c11.json: C.11.1.2.3.2
+   Preview: 1. Sprawdź, czy wyjście mowy zawiera informacje zgodne z napisami do nagranej treści wideo....
+
+5. DUPLICATE PROCEDURE found in 2 places:
+   - c11.json: C.11.1.4.4.2
+   - c5.json: C.5.1.4
+   Preview: 1. Zmierzyć wysokość wielkiej litery H.
+2. Sprawdź, czy odpowiada ona kątowi co najmniej 0,7 stopnia przy określonej odległości widzenia....
+
+6. DUPLICATE PROCEDURE found in 2 places:
+   - c11.json: C.11.2.1.4.2
+   - c5.json: C.5.1.6.1
+   Preview: 1. Sprawdź, czy wszystkie funkcjonalności można obsługiwać bez użycia wzroku....
+
+7. DUPLICATE PROCEDURE found in 2 places:
+   - c11.json: C.11.3.3.1.2
+   - c5.json: C.5.1.3.15
+   Preview: 1. Sprawdź, czy wyjście mowy wykrywa, że element jest błędny.
+2. Sprawdź, czy wyjście mowy opisuje element, który jest błędny....
+
+8. DUPLICATE PROCEDURE found in 2 places:
+   - c5.json: C.5.3
+   - c5.json: C.5.3
+   Preview: 1. Sprawdź, czy identyfikację użytkownika można przeprowadzić za pomocą więcej niż jednej metody.
+1. TIK wykorzystuje charakterystyki biologiczne do s...
+
+9. DUPLICATE PROCEDURE found in 2 places:
+   - c5.json: C.5.5.1
+   - c8.json: C.8.4.2.1
+   Preview: 1. Sprawdź, czy istnieje dostępny alternatywny sposób, który nie wymaga zastosowania takich działań....
+
+10. DUPLICATE PROCEDURE found in 2 places:
+   - c5.json: C.5.6.2
+   - c5.json: C.5.7
+   Preview: 1. Sprawdź, czy opóźnienie między ponownymi wciśnięciami klawisza można ustawić co najmniej na 2 sekundy.
+2. Sprawdź, czy częstotliwość ponownego wciś...
+
+11. DUPLICATE PROCEDURE found in 2 places:
+   - c7.json: C.7.1.1
+   - c7.json: C.7.1.1
+   Preview: 1. Sprawdź, czy istnieje mechanizm wyświetlania napisów.
+1. Sprawdź, czy istnieje mechanizm wyboru wyświetlania napisów....
+
+
+SECTION 3: DUPLICATE RESULTS/FORMS ACROSS DIFFERENT CLAUSES
+====================================================================================================
+These may indicate copy-paste errors or legitimate reuse of result criteria.
+
+1. DUPLICATE FORM found in 36 places:
+   - c10.json: C.10.1.4.10
+   - c10.json: C.10.1.4.2
+   - c10.json: C.10.2.1.2
+   - c10.json: C.10.2.2.1
+   - c10.json: C.10.2.4.2
+   - c10.json: C.10.2.4.3
+   - c10.json: C.10.2.5.1
+   - c10.json: C.10.2.5.2
+   - c10.json: C.10.3.1.1
+   - c10.json: C.10.3.1.2
+   - c10.json: C.10.3.3.4
+   - c10.json: C.10.4.1.1
+   - c11.json: C.11.1.4.10
+   - c11.json: C.11.2.2.1
+   - c11.json: C.11.2.3.1
+   - c11.json: C.11.2.4.3
+   - c11.json: C.11.3.3.4
+   - c11.json: C.11.6.1
+   - c12.json: C.12.1.1
+   - c12.json: C.12.2.2
+   - c13.json: C.13.1.2
+   - c13.json: C.13.1.3
+   - c13.json: C.13.1.5
+   - c13.json: C.13.1.6
+   - c5.json: C.5.1.5
+   - c5.json: C.5.1.6.1
+   - c5.json: C.5.1.7
+   - c5.json: C.5.2
+   - c5.json: C.5.5.1
+   - c7.json: C.7.1.2
+   - c7.json: C.7.2.2
+   - c7.json: C.7.2.3
+   - c8.json: C.8.1.3
+   - c8.json: C.8.4.1
+   - c8.json: C.8.4.2.2
+   - c8.json: C.8.4.3
+
+2. DUPLICATE FORM found in 10 places:
+   - c10.json: C.10.2.3.1
+   - c10.json: C.10.4.1.2
+   - c11.json: C.11.1.4.2
+   - c11.json: C.11.2.2.2
+   - c11.json: C.11.8.2
+   - c12.json: C.12.1.2
+   - c13.json: C.13.1.4
+   - c6.json: C.6.1
+   - c7.json: C.7.1.3
+   - c8.json: C.8.4.2.1
+
+3. DUPLICATE FORM found in 10 places:
+   - c5.json: C.5.1.3.10
+   - c5.json: C.5.1.3.11
+   - c5.json: C.5.1.3.7
+   - c6.json: C.6.5.2
+   - c6.json: C.6.5.3
+   - c7.json: C.7.1.4
+   - c7.json: C.7.1.5
+   - c8.json: C.8.3.2.1
+   - c8.json: C.8.3.3.2
+   - c8.json: C.8.3.4.2
+
+4. DUPLICATE FORM found in 9 places:
+   - c11.json: C.11.1.3.1.1
+   - c11.json: C.11.2.1.1.2
+   - c11.json: C.11.2.1.2
+   - c11.json: C.11.2.1.4.2
+   - c11.json: C.11.2.5.2
+   - c11.json: C.11.3.1.1.1
+   - c11.json: C.11.4.1.1.1
+   - c11.json: C.11.4.1.2.1
+   - c13.json: C.13.2
+
+5. DUPLICATE FORM found in 7 places:
+   - c5.json: C.5.1.3.13
+   - c5.json: C.5.1.6.2
+   - c6.json: C.6.2.1.2
+   - c6.json: C.6.5.4
+   - c8.json: C.8.3.2.2
+   - c8.json: C.8.3.3.1
+   - c8.json: C.8.3.5
+
+6. DUPLICATE FORM found in 4 places:
+   - c11.json: C.11.1.1.1.1
+   - c11.json: C.11.1.3.2.1
+   - c11.json: C.11.2.5.1
+   - c11.json: C.11.8.4
+
+7. DUPLICATE FORM found in 4 places:
+   - c6.json: C.6.2.3
+   - c6.json: C.6.2.3
+   - c6.json: C.6.2.3
+   - c6.json: C.6.2.3
+
+8. DUPLICATE FORM found in 3 places:
+   - c11.json: C.11.1.2.1.2.1
+   - c11.json: C.11.1.2.3.2
+   - c11.json: C.11.7
+
+9. DUPLICATE FORM found in 3 places:
+   - c5.json: C.5.1.3.12
+   - c5.json: C.5.1.3.15
+   - c5.json: C.5.6.2
+
+10. DUPLICATE FORM found in 3 places:
+   - c5.json: C.5.1.4
+   - c6.json: C.6.5.6
+   - c8.json: C.8.2.1.2
+
+11. DUPLICATE FORM found in 2 places:
+   - c11.json: C.11.1.1.1.2
+   - c11.json: C.11.1.4.5.2
+
+12. DUPLICATE FORM found in 2 places:
+   - c5.json: C.5.1.2.2
+   - c5.json: C.5.1.3.1
+
+13. DUPLICATE FORM found in 2 places:
+   - c5.json: C.5.1.3.2
+   - c8.json: C.8.3.1
+
+14. DUPLICATE FORM found in 2 places:
+   - c5.json: C.5.3
+   - c5.json: C.5.3
+
+15. DUPLICATE FORM found in 2 places:
+   - c5.json: C.5.7
+   - c6.json: C.6.4
+
+16. DUPLICATE FORM found in 2 places:
+   - c7.json: C.7.1.1
+   - c7.json: C.7.1.1
+
+====================================================================================================
+END OF REPORT
+====================================================================================================

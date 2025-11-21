@@ -1,0 +1,190 @@
+{
+  "id": "c12",
+  "title": "Audyt Klauzuli 12: Dokumentacja i usługi wsparcia",
+  "content": [
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.12.1 Dokumentacja produktu"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.12.1.1 Funkcje dostępności i zgodności"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Dokumentacja produktu jest dostarczana razem z TIK ."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy w dokumentacji produktu dostarczonej razem z TIK znajduje się wykaz funkcji dostępności i kompatybilności TIK oraz objaśnienia dotyczące sposobu korzystania z nich."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.12.1.1 Funkcje dostępności i kompatybilności",
+        "noteId": "notes-c12-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.12.1.2 Dostępność dokumentacji"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Dokumentacja produktu w formacie elektronicznym jest dostarczana razem z TIK ."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy dokumentacja produktu w formacie elektronicznym dostarczona wraz z TIK jest odpowiednio zgodna z wymaganiami Rozdziałów 9 lub 10."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.12.1.2 Dostępna dokumentacja",
+        "noteId": "notes-c12-1-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.12.2 Wsparcie techniczne"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.12.2.1 Postanowienia ogólne"
+    },
+    {
+      "type": "informative",
+      "text": "Klauzula 12.2.1 ma charakter wyłącznie informacyjny i nie zawiera wymagań do testowania.\n"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.12.2.2 Informacje o funkcjach dostępności i zgodności"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Świadczone są usługi wsparcia w zakresie TIK ."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy usługi wsparcia w zakresie TIK dostarczają informacje o funkcjach dostępności i zgodności dostarczanych razem z dokumentacją produktu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.12.2.2 Informacje o funkcjach dostępności i kompatybilności",
+        "noteId": "notes-c12-2-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.12.2.3 Efektywna komunikacja"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Świadczone są usługi wsparcia w zakresie TIK ."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy usługi wsparcia w zakresie TIK zaspokajają potrzeby komunikacyjne poszczególnych osób z niepełnosprawnościami w sposób bezpośredni lub poprzez punkt pośredni."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.12.2.3 Skuteczna komunikacja",
+        "noteId": "notes-c12-2-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.12.2.4 Dostępność dokumentacji"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Dokumentacja jest dostarczana przez serwis obsługi TIK ."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy dokumentacja produktu w formie elektronicznej dostarczona przez serwis obsługi TIK jest zgodna z wymaganiami odpowiednio Rozdziałów 9 lub 10."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.12.2.4 Dostępna dokumentacja",
+        "noteId": "notes-c12-2-4"
+      },
+      "evaluationType": "Inspection"
+    }
+  ]
+}

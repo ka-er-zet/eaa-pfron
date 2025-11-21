@@ -1,0 +1,923 @@
+{
+  "id": "c8",
+  "title": "Sprzęt",
+  "nodes": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Sprzęt"
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-8-1",
+      "title": "Postanowienia ogólne",
+      "text": "Postanowienia ogólne",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Postanowienia ogólne"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-1-1",
+      "title": "Wymagania ogólne",
+      "text": "Rozdział 8.1.1 ma charakter wyłącznie pomocniczy i nie zawiera wymagań, które należałoby przetestować. Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+      "assessmentType": "Inspection",
+      "preconditions": [
+        " ETSI CEN CENELEC"
+      ],
+      "procedure": [],
+      "results": [],
+      "html": "Wymagania ogólne\nRozdział 8.1.1 ma charakter wyłącznie pomocniczy i nie zawiera wymagań, które należałoby przetestować.\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n164\nETSI CEN CENELEC"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-1-2",
+      "title": "Standardowe połączenia",
+      "text": ". Sprawdzić, czy jeden typ połączenia jest zgodny z niezastrzeżonym standardem branżowym.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT zapewnia punkty podłączania urządzeń wejściowych i wyjściowych użytkownika."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy jeden typ połączenia jest zgodny z niezastrzeżonym standardem branżowym.",
+        ". Sprawdzić, czy jeden typ połączenia jest zgodny z niezastrzeżonym standardem branżowym po zastosowaniu adapterów dostępnych na rynku."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1. UWAGA: Połączenia mogą być przewodowe lub bezprzewodowe.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Standardowe połączenia\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. ICT zapewnia punkty podłączania urządzeń wejściowych i wyjściowych\nużytkownika.\nProcedura\n1. Sprawdzić, czy jeden typ połączenia jest zgodny z niezastrzeżonym standardem\nbranżowym.\n2. Sprawdzić, czy jeden typ połączenia jest zgodny z niezastrzeżonym standardem\nbranżowym po zastosowaniu adapterów dostępnych na rynku.\nWynik\nPozytywny: Kryterium 1 lub 2: prawda\nNegatywny: Kryteria 1 i 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1.\nUWAGA:\nPołączenia mogą być przewodowe lub bezprzewodowe."
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-1-3",
+      "title": "Kolor",
+      "text": ". Sprawdzić, czy jest dostępna alternatywna forma kodowania wizualnego.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". Elementy sprzętowe ICT przekazują informacje wizualne za pomocą kodowania kolorami jako środka wskazującego działanie, prośby o odpowiedź lub w celu wyróżnienia elementu wizualnego."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy jest dostępna alternatywna forma kodowania wizualnego."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Kolor\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. Elementy sprzętowe ICT przekazują informacje wizualne za pomocą kodowania\nkolorami jako środka wskazującego działanie, prośby o odpowiedź lub w celu\nwyróżnienia elementu wizualnego.\nProcedura\n1. Sprawdzić, czy jest dostępna alternatywna forma kodowania wizualnego.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-8-2",
+      "title": "Produkty sprzętowe z wyjściem mowy",
+      "text": "Produkty sprzętowe z wyjściem mowy",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Produkty sprzętowe z wyjściem mowy"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-2-1",
+      "title": "Wzmocnienie głośności mowy",
+      "text": "Wzmocnienie głośności mowy",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Wzmocnienie głośności mowy"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-2-1-1",
+      "title": "Zakres głośności mowy",
+      "text": ". Sprawdzić, czy ICT ma certyfikat zgodności z ANSI/TIA-4965 [i.2].",
+      "assessmentType": "Kontrola oparta na danych pomiarowych",
+      "preconditions": [
+        ". Sprzęt ICT ma wyjście mowy.",
+        ""
+      ],
+      "procedure": [
+        ". Sprawdzić, czy ICT ma certyfikat zgodności z ANSI/TIA-4965 [i.2].",
+        ". Zmierzyć poziom głośności (w dB) sygnału mowy przy najniższym ustawieniu głośności.",
+        ". Zmierzyć poziom głośności (w dB) sygnału mowy przy najwyższym ustawieniu głośności.",
+        ". Sprawdzić, czy zakres między wartościami 1 i 2 jest równy 18 dB lub większy."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1. Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Zakres głośności mowy\nRodzaj oceny\nKontrola oparta na danych pomiarowych\nWarunki wstępne\n1. Sprzęt ICT ma wyjście mowy.\nProcedura\n1. Sprawdzić, czy ICT ma certyfikat zgodności z ANSI/TIA-4965 [i.2].\n2. Zmierzyć poziom głośności (w dB) sygnału mowy przy najniższym ustawieniu\ngłośności.\n3. Zmierzyć poziom głośności (w dB) sygnału mowy przy najwyższym ustawieniu\ngłośności.\n4. Sprawdzić, czy zakres między wartościami 1 i 2 jest równy 18 dB lub większy.\nWynik\nPozytywny: Kryterium 1 lub 4: prawda\nNegatywny: Kryteria 1 i 4: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1.\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n165"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-2-1-2",
+      "title": "Stopniowa regulacja głośności",
+      "text": ". Zmierzyć poziom głośności (w dB) sygnału mowy przy najniższym ustawieniu głośności.",
+      "assessmentType": "Kontrola oparta na danych pomiarowych",
+      "preconditions": [
+        ". Sprzęt ICT ma wyjście mowy.",
+        ". Sterowanie głośnością jest stopniowe."
+      ],
+      "procedure": [
+        ". Zmierzyć poziom głośności (w dB) sygnału mowy przy najniższym ustawieniu głośności.",
+        ". Sprawdzić, czy jeden krok pośredni zapewnia poziom o 12 dB wyższy od najniższego poziomu głośności zmierzonego w kroku 1."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Stopniowa regulacja głośności\nRodzaj oceny\nKontrola oparta na danych pomiarowych\nWarunki wstępne\n1. Sprzęt ICT ma wyjście mowy.\n2. Sterowanie głośnością jest stopniowe.\nProcedura\n1. Zmierzyć poziom głośności (w dB) sygnału mowy przy najniższym ustawieniu\ngłośności.\n2. Sprawdzić, czy jeden krok pośredni zapewnia poziom o 12 dB wyższy\nod najniższego poziomu głośności zmierzonego w kroku 1.\nWynik\nPozytywny: Kryterium 2: prawda\nNegatywny: Kryterium 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-2-2",
+      "title": "Sprzężenie magnetyczne",
+      "text": "Sprzężenie magnetyczne",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Sprzężenie magnetyczne"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-2-2-1",
+      "title": "Urządzenia stacjonarne",
+      "text": ". Sprawdzić, czy ICT ma certyfikat zgodności z TIA-1083-A [i.24].",
+      "assessmentType": "Kontrola oparta na danych pomiarowych",
+      "preconditions": [
+        ". Sprzęt ICT to stacjonarne urządzenie komunikacyjne z wyjściem dźwięku, które zazwyczaj jest trzymane przy uchu."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy ICT ma certyfikat zgodności z TIA-1083-A [i.24].",
+        ". Wykonanie pomiarów zgodnie z ETSI ES 200 381-1 [2] , zapewni spełnienie wymagań zdefiniowanych w tej normie.",
+        ". Oznaczyć ICT symbolem „T” określonym w ETSI ETS 300 381 [1]."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Urządzenia stacjonarne\nRodzaj oceny\nKontrola oparta na danych pomiarowych\nWarunki wstępne\n1. Sprzęt ICT to stacjonarne urządzenie komunikacyjne z wyjściem dźwięku, które\nzazwyczaj jest trzymane przy uchu.\nProcedura\n1. Sprawdzić, czy ICT ma certyfikat zgodności z TIA-1083-A [i.24].\n2. Wykonanie pomiarów zgodnie z ETSI ES 200 381-1 [2] , zapewni spełnienie\nwymagań zdefiniowanych w tej normie.\n3. Oznaczyć ICT symbolem „T” określonym w ETSI ETS 300 381 [1].\nWynik\nPozytywny: Kryterium 1 lub 2: prawda i kryterium 3: prawda\nNegatywny: Kryteria 1 i 2: fałsz lub kryterium 3: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-2-2-2",
+      "title": "Urządzenia do komunikacji bezprzewodowej",
+      "text": ". Sprawdzić, czy ICT ma certyfikat zgodności z ANSI/IEEE C63.19 [i.1].",
+      "assessmentType": "Kontrola oparta na danych pomiarowych",
+      "preconditions": [
+        ". Sprzęt ICT to bezprzewodowe urządzenie komunikacyjne, które zazwyczaj jest umieszczane w uchu.",
+        " ETSI CEN CENELEC"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy ICT ma certyfikat zgodności z ANSI/IEEE C63.19 [i.1].",
+        ". Sprawdzić, czy ICT zapewniają środki sprzężenia magnetycznego z technologiami wspomagającymi słyszenie, co zapewni spełnienie wymagań ETSI ES 200 381-2 [3]."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1. Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Urządzenia do komunikacji bezprzewodowej\nRodzaj oceny\nKontrola oparta na danych pomiarowych\nWarunki wstępne\n1. Sprzęt ICT to bezprzewodowe urządzenie komunikacyjne, które zazwyczaj jest\numieszczane w uchu.\nProcedura\n1. Sprawdzić, czy ICT ma certyfikat zgodności z ANSI/IEEE C63.19 [i.1].\n2. Sprawdzić, czy ICT zapewniają środki sprzężenia magnetycznego z technologiami\nwspomagającymi słyszenie, co zapewni spełnienie wymagań ETSI ES 200 381-2 [3].\nWynik\nPozytywny: Kryterium 1 lub 2: prawda\nNegatywny: Kryteria 1 i 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1.\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n166\nETSI CEN CENELEC"
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-8-3",
+      "title": "Stacjonarna ICT",
+      "text": "Stacjonarna ICT",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Stacjonarna ICT"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Postanowienia ogólne"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-3-1",
+      "title": "Dostęp z przodu lub z boku",
+      "text": ". Sprawdzić, czy ICT spełnia wymagania Rozdziału 8.3.2.2.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy ICT spełnia wymagania Rozdziału 8.3.2.2.",
+        ". Sprawdzić, czy ICT spełnia wymagania Rozdziału 8.3.2.3."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Dostęp z przodu lub z boku\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\nProcedura\n1. Sprawdzić, czy ICT spełnia wymagania Rozdziału 8.3.2.2.\n2. Sprawdzić, czy ICT spełnia wymagania Rozdziału 8.3.2.3.\nWynik\nPozytywny: Kryterium 1 lub 2: prawda\nNegatywny: Kryteria 1 i 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-3-2",
+      "title": "Dostęp z przodu",
+      "text": "Dostęp z przodu",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Dostęp z przodu"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-2-1",
+      "title": "Nieograniczony dostęp z przodu, od góry",
+      "text": ". Sprawdzić, czy co najmniej jedna z każdego rodzaju części obsługiwanych jest umieszczona nie wyżej niż 1 200 mm (48 cali) nad podłogą w przestrzeni dostępu.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        "ICT jest urządzeniem stacjonarnym.",
+        ". Żadna część stacjonarnej ICT nie utrudnia dostępu z przodu."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy co najmniej jedna z każdego rodzaju części obsługiwanych jest umieszczona nie wyżej niż 1 200 mm (48 cali) nad podłogą w przestrzeni dostępu."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Nieograniczony dostęp z przodu, od góry\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1 ICT jest urządzeniem stacjonarnym.\n2. Żadna część stacjonarnej ICT nie utrudnia dostępu z przodu.\nProcedura\n1. Sprawdzić, czy co najmniej jedna z każdego rodzaju części obsługiwanych jest\numieszczona nie wyżej niż 1 200 mm (48 cali) nad podłogą w przestrzeni dostępu.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-2-2",
+      "title": "Nieograniczony dostęp z przodu, od dołu",
+      "text": ". Sprawdzić, czy co najmniej jedna z każdego rodzaju części obsługiwanych jest umieszczona nie niżej niż 380 mm (15 cali) nad podłogą w przestrzeni dostępu.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Żadna część stacjonarnej ICT nie utrudnia dostępu z przodu.",
+        ""
+      ],
+      "procedure": [
+        ". Sprawdzić, czy co najmniej jedna z każdego rodzaju części obsługiwanych jest umieszczona nie niżej niż 380 mm (15 cali) nad podłogą w przestrzeni dostępu."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Nieograniczony dostęp z przodu, od dołu\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Żadna część stacjonarnej ICT nie utrudnia dostępu z przodu.\nProcedura\n1. Sprawdzić, czy co najmniej jedna z każdego rodzaju części obsługiwanych jest\numieszczona nie niżej niż 380 mm (15 cali) nad podłogą w przestrzeni dostępu.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n167"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-2-3",
+      "title": "Ograniczony dostęp z przodu",
+      "text": "Ograniczony dostęp z przodu",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Ograniczony dostęp z przodu"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-8-3-2-3-1",
+      "title": "Wolna powierzchnia podłogi",
+      "text": ". Sprawdzić czy ICT zapewnia wolną powierzchnię podłogi, która rozciąga się pod elementem utrudniającym dostęp na odległość nie mniejszą niż wymagana głębokość zasięgu nad przeszkodą.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Dostęp do części obsługiwanych jest ograniczony przeszkodą zintegrowaną z urządzeniem."
+      ],
+      "procedure": [
+        ". Sprawdzić czy ICT zapewnia wolną powierzchnię podłogi, która rozciąga się pod elementem utrudniającym dostęp na odległość nie mniejszą niż wymagana głębokość zasięgu nad przeszkodą."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Wolna powierzchnia podłogi\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Dostęp do części obsługiwanych jest ograniczony przeszkodą zintegrowaną\nz urządzeniem.\nProcedura\n1. Sprawdzić czy ICT zapewnia wolną powierzchnię podłogi, która rozciąga się\npod elementem utrudniającym dostęp na odległość nie mniejszą niż wymagana\ngłębokość zasięgu nad przeszkodą.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-8-3-2-3-2",
+      "title": "Ograniczony (< 510 mm) dostęp z przodu",
+      "text": ". Sprawdzić, czy dostęp z przodu do wszystkich podstawowych części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad powierzchnią kontaktu z ICT.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Integralna część stacjonarnej ICT tworzy przeszkodę o głębokości mniejszej niż 510 mm (20 cali)."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy dostęp z przodu do wszystkich podstawowych części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad powierzchnią kontaktu z ICT."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Ograniczony (< 510 mm) dostęp z przodu\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Integralna część stacjonarnej ICT tworzy przeszkodę o głębokości mniejszej\nniż 510 mm (20 cali).\nProcedura\n1. Sprawdzić, czy dostęp z przodu do wszystkich podstawowych części obsługiwanych\nnie znajduje się wyżej niż 1 220 mm (48 cali) nad powierzchnią kontaktu z ICT.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-8-3-2-3-3",
+      "title": "Ograniczony (< 635 mm) dostęp z przodu",
+      "text": ". Sprawdzić, czy dostęp z przodu do wszystkich podstawowych części obsługiwanych nie znajduje się wyżej niż 1 120 mm (44 cali) nad powierzchnią kontaktu z ICT.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Integralna część stacjonarnej ICT tworzy przeszkodę o głębokości mniejszej niż 510 mm (20 cali), ale nie większej niż 635 mm (25 cali).",
+        " ETSI CEN CENELEC"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy dostęp z przodu do wszystkich podstawowych części obsługiwanych nie znajduje się wyżej niż 1 120 mm (44 cali) nad powierzchnią kontaktu z ICT."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Ograniczony (< 635 mm) dostęp z przodu\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Integralna część stacjonarnej ICT tworzy przeszkodę o głębokości mniejszej\nniż 510 mm (20 cali), ale nie większej niż 635 mm (25 cali).\nProcedura\n1. Sprawdzić, czy dostęp z przodu do wszystkich podstawowych części\nobsługiwanych nie znajduje się wyżej niż 1 120 mm (44 cali) nad powierzchnią\nkontaktu z ICT.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n168\nETSI CEN CENELEC"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-2-4",
+      "title": "Szerokość przestrzeni na kolana i stopy",
+      "text": ". Sprawdzić, czy szerokość przestrzeni na kolana jest większa niż 760 mm (30 cali).",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Przestrzeń pod przeszkodą zintegrowaną z ICT jest częścią przestrzeni dostępu."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy szerokość przestrzeni na kolana jest większa niż 760 mm (30 cali).",
+        ". Sprawdzić, czy szerokość przestrzeni na stopy jest większa niż 760 mm (30 cali)."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Szerokość przestrzeni na kolana i stopy\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Przestrzeń pod przeszkodą zintegrowaną z ICT jest częścią przestrzeni dostępu.\nProcedura\n1. Sprawdzić, czy szerokość przestrzeni na kolana jest większa niż 760 mm (30 cali).\n2. Sprawdzić, czy szerokość przestrzeni na stopy jest większa niż 760 mm (30 cali).\nWynik\nPozytywny: Kryterium 1 i 2: prawda\nNegatywny: Kryteria 1 lub 2: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-2-5",
+      "title": "Przestrzeń na stopy",
+      "text": ". Sprawdzić, czy przestrzeń na stopy nie znajduje się niżej niż 635 mm (25 cali) pod przeszkodą.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Występuje przeszkoda zintegrowana z urządzeniem ICT.",
+        ". Pod jakąkolwiek przeszkodą zintegrowaną z urządzeniem ICT znajduje się przestrzeń, która jest mniejsza niż 230 mm (9 cali) nad podłogą.",
+        "c) Warunki wstępne",
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Występuje przeszkoda zintegrowana z urządzeniem ICT.",
+        ". Pod jakąkolwiek przeszkodą zintegrowaną z urządzeniem ICT znajduje się przestrzeń, która jest mniejsza niż 230 mm (9 cali) nad podłogą."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy przestrzeń na stopy nie znajduje się niżej niż 635 mm (25 cali) pod przeszkodą.",
+        ". Sprawdzić, czy przestrzeń na stopy znajduje się niżej niż 430 (17 cali) mm pod przeszkodą i 230 mm (9 cali) nad podłogą.",
+        ". Sprawdzić, czy przestrzeń na stopy nie wykracza więcej niż 150 mm (6 cali) poza wszelkie przeszkody znajdujące się na wysokości 230 mm (9 cali) nad podłogą."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub 3 b) Rodzaj oceny Kontrola i pomiary Warunki wstępne 1. ICT jest urządzeniem stacjonarnym. 2. Występuje przeszkoda zintegrowana z urządzeniem ICT. 3. Pod jakąkolwiek przeszkodą zintegrowaną z urządzeniem ICT znajduje się przestrzeń, która jest mniejsza niż 230 mm (9 cali) nad podłogą.",
+          "type": "Nie dotyczy"
+        },
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub 3 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+          "type": "Nie dotyczy"
+        },
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub 3",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Przestrzeń na stopy\na)\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Występuje przeszkoda zintegrowana z urządzeniem ICT.\n3. Pod jakąkolwiek przeszkodą zintegrowaną z urządzeniem ICT znajduje się\nprzestrzeń, która jest mniejsza niż 230 mm (9 cali) nad podłogą.\nProcedura\n1. Sprawdzić, czy przestrzeń na stopy nie znajduje się niżej niż 635 mm (25 cali)\npod przeszkodą.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2 lub 3\nb)\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Występuje przeszkoda zintegrowana z urządzeniem ICT.\n3. Pod jakąkolwiek przeszkodą zintegrowaną z urządzeniem ICT znajduje się\nprzestrzeń, która jest mniejsza niż 230 mm (9 cali) nad podłogą.\nProcedura\n1. Sprawdzić, czy przestrzeń na stopy znajduje się niżej niż 430 (17 cali) mm pod\nprzeszkodą i 230 mm (9 cali) nad podłogą.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2 lub 3\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n169\nc)\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Występuje przeszkoda zintegrowana z urządzeniem ICT.\n3. Pod jakąkolwiek przeszkodą zintegrowaną z urządzeniem ICT znajduje się\nprzestrzeń, która jest mniejsza niż 230 mm (9 cali) nad podłogą.\nProcedura\n1. Sprawdzić, czy przestrzeń na stopy nie wykracza więcej niż 150 mm (6 cali) poza\nwszelkie przeszkody znajdujące się na wysokości 230 mm (9 cali) nad podłogą.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2 lub 3"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-2-6",
+      "title": "Przestrzeń na kolana",
+      "text": "a) Warunki wstępne (9 cali) do 685 mm (25 cali) nad podłogą. (9 cali) do 685 mm (25 cali) nad podłogą.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Występuje przeszkoda zintegrowana z urządzeniem ICT.",
+        ". Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm",
+        "ETSI CEN CENELEC c) Warunki wstępne",
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Występuje przeszkoda zintegrowana z urządzeniem ICT.",
+        ". Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy zapewniona jest przestrzeń na kolana, która sięga co najmniej",
+        "mm (25 cali) pod przeszkodą na wysokości 230 mm (9 cali) nad podłogą.",
+        ". Sprawdzić, czy zapewniona jest przestrzeń na kolana, która sięga co najmniej",
+        "mm (11 cali) pod przeszkodą na wysokości 230 mm (9 cali) nad podłogą.",
+        ". Sprawdzić, czy zapewniona jest przestrzeń na kolana, która sięga co najmniej",
+        "mm (9 cali) pod przeszkodą na wysokości 685 mm (25 cali) nad podłogą.",
+        ". Sprawdzić, czy redukcja głębokości przestrzeni jest nie większa niż 25 mm (1 cal) na każde 150 mm (6 cali) wysokości."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub 3 b) Rodzaj oceny Kontrola i pomiary Warunki wstępne 1. ICT jest urządzeniem stacjonarnym. 2. Występuje przeszkoda zintegrowana z urządzeniem ICT. 3. Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm (9 cali) do 685 mm (25 cali) nad podłogą.",
+          "type": "Nie dotyczy"
+        },
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub 3 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+          "type": "Nie dotyczy"
+        },
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub 3 d) Rodzaj oceny Kontrola i pomiary Warunki wstępne 1. ICT jest urządzeniem stacjonarnym. 2. Występuje przeszkoda zintegrowana z urządzeniem ICT. 3. Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm (9 cali) do 685 mm (25 cali) nad podłogą.",
+          "type": "Nie dotyczy"
+        },
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub 3",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Przestrzeń na kolana\na)\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Występuje przeszkoda zintegrowana z urządzeniem ICT.\n3. Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm\n(9 cali) do 685 mm (25 cali) nad podłogą.\nProcedura\n1. Sprawdzić, czy zapewniona jest przestrzeń na kolana, która sięga co najmniej\n635 mm (25 cali) pod przeszkodą na wysokości 230 mm (9 cali) nad podłogą.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2 lub 3\nb)\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Występuje przeszkoda zintegrowana z urządzeniem ICT.\n3. Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm\n(9 cali) do 685 mm (25 cali) nad podłogą.\nProcedura\n1. Sprawdzić, czy zapewniona jest przestrzeń na kolana, która sięga co najmniej\n280 mm (11 cali) pod przeszkodą na wysokości 230 mm (9 cali) nad podłogą.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2 lub 3\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n170\nETSI CEN CENELEC\nc)\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Występuje przeszkoda zintegrowana z urządzeniem ICT.\n3. Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm\n(9 cali) do 685 mm (25 cali) nad podłogą.\nProcedura\n1. Sprawdzić, czy zapewniona jest przestrzeń na kolana, która sięga co najmniej\n205 mm (9 cali) pod przeszkodą na wysokości 685 mm (25 cali) nad podłogą.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2 lub 3\nd)\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Występuje przeszkoda zintegrowana z urządzeniem ICT.\n3. Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm\n(9 cali) do 685 mm (25 cali) nad podłogą.\nProcedura\n1. Sprawdzić, czy redukcja głębokości przestrzeni jest nie większa niż 25 mm (1 cal)\nna każde 150 mm (6 cali) wysokości.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2 lub 3"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-3-3",
+      "title": "Dostęp z boku",
+      "text": "Dostęp z boku",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Dostęp z boku"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-3-1",
+      "title": "Nieograniczony dostęp z boku, od góry",
+      "text": ". Sprawdzić, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą w przestrzeni dostępu.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Dostęp z boku jest nieograniczony lub ograniczony przez element będący integralną częścią stacjonarnej ICT o szerokości mniejszej niż 510 mm (20 cali).",
+        ""
+      ],
+      "procedure": [
+        ". Sprawdzić, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą w przestrzeni dostępu."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Nieograniczony dostęp z boku, od góry\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Dostęp z boku jest nieograniczony lub ograniczony przez element będący\nintegralną częścią stacjonarnej ICT o szerokości mniejszej niż 510 mm (20 cali).\nProcedura\n1. Sprawdzić, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju\nczęści obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą\nw przestrzeni dostępu.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n171"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-3-2",
+      "title": "Nieograniczony dostęp z boku, od dołu",
+      "text": ". Sprawdzić, czy dostęp z boku, od dołu do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 380 mm (15 cali) nad podłogą w przestrzeni dostępu.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Dostęp z boku jest nieograniczony lub ograniczony przez element będący integralną częścią stacjonarnej ICT o szerokości mniejszej niż 510 mm (20 cali)."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy dostęp z boku, od dołu do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 380 mm (15 cali) nad podłogą w przestrzeni dostępu."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Nieograniczony dostęp z boku, od dołu\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Dostęp z boku jest nieograniczony lub ograniczony przez element będący\nintegralną częścią stacjonarnej ICT o szerokości mniejszej niż 510 mm (20 cali).\nProcedura\n1. Sprawdzić, czy dostęp z boku, od dołu do co najmniej jednego z każdego rodzaju\nczęści obsługiwanych nie znajduje się wyżej niż 380 mm (15 cali) nad podłogą\nw przestrzeni dostępu.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-3-3",
+      "title": "Ograniczony dostęp z boku",
+      "text": "Ograniczony dostęp z boku",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Ograniczony dostęp z boku"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-8-3-3-3-1",
+      "title": "Ograniczony (< 255 mm) dostęp z boku",
+      "text": ". Sprawdzić, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą w przestrzeni dostępu.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Występuje przeszkoda o głębokości mniejszej lub równej 255 mm (10 cali), która stanowi integralną część ITC."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą w przestrzeni dostępu."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Ograniczony (< 255 mm) dostęp z boku\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Występuje przeszkoda o głębokości mniejszej lub równej 255 mm (10 cali), która\nstanowi integralną część ITC.\nProcedura\n1. Sprawdzić, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju\nczęści obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą\nw przestrzeni dostępu.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-8-3-3-3-2",
+      "title": "Ograniczony (< 610 mm) dostęp z boku",
+      "text": ". Sprawdzić, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 170 mm (46 cali) nad podłogą w przestrzeni dostępu.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Występuje przeszkoda większa niż 255 mm (10 cali) i o głębokości nie większej niż 610 mm (24 cale), stanowiąca integralną część ITC.",
+        " ETSI CEN CENELEC"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 170 mm (46 cali) nad podłogą w przestrzeni dostępu."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Ograniczony (< 610 mm) dostęp z boku\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Występuje przeszkoda większa niż 255 mm (10 cali) i o głębokości nie większej\nniż 610 mm (24 cale), stanowiąca integralną część ITC.\nProcedura\n1. Sprawdzić, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju\nczęści obsługiwanych nie znajduje się wyżej niż 1 170 mm (46 cali) nad podłogą\nw przestrzeni dostępu.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n172\nETSI CEN CENELEC"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-3-4",
+      "title": "Pusta podłoga lub powierzchnia podłoża",
+      "text": "Pusta podłoga lub powierzchnia podłoża",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Pusta podłoga lub powierzchnia podłoża"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-4-1",
+      "title": "Zmiana poziomu",
+      "text": "Warunki wstępne 2N2). Poziom podłogi się zmienia.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". ICT obejmuje swoim obszarem podłogę."
+      ],
+      "procedure": [
+        ". Jeżeli zmiana poziomu jest spowodowana podjazdem, sprawdzić, czy nachylenie jest mniejsze niż 1:48.",
+        ". Jeśli występuje pionowa zmiana poziomu podłogi, sprawdzić, czy jest ona równa",
+        ",4 mm lub mniejsza.",
+        ". Jeśli występuje pionowa lub nachylona zmiana poziomu podłogi, sprawdzić, czy nachylenie nie jest większe niż 1:2."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 lub 3",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Zmiana poziomu\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. ICT obejmuje swoim obszarem podłogę.\n2N2). Poziom podłogi się zmienia.\nProcedura\n1. Jeżeli zmiana poziomu jest spowodowana podjazdem, sprawdzić, czy nachylenie\njest mniejsze niż 1:48.\n2. Jeśli występuje pionowa zmiana poziomu podłogi, sprawdzić, czy jest ona równa\n6,4 mm lub mniejsza.\n3. Jeśli występuje pionowa lub nachylona zmiana poziomu podłogi, sprawdzić, czy\nnachylenie nie jest większe niż 1:2.\nWynik\nPozytywny: Kryterium 1 lub 2 lub 3: prawda\nNegatywny: Kryteria 1 i 2 i 3: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2 lub 3"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-4-2",
+      "title": "Pusta podłoga lub powierzchnia podłoża",
+      "text": ". Sprawdzić, czy powierzchnia podłogi ma wymiary wynoszące co najmniej 760 mm wzdłuż jednej krawędzi i 1 220 mm wzdłuż drugiej.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Obszar działania jest integralną częścią ICT"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy powierzchnia podłogi ma wymiary wynoszące co najmniej 760 mm wzdłuż jednej krawędzi i 1 220 mm wzdłuż drugiej."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Pusta podłoga lub powierzchnia podłoża\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Obszar działania jest integralną częścią ICT\nProcedura\n1. Sprawdzić, czy powierzchnia podłogi ma wymiary wynoszące co najmniej 760 mm\nwzdłuż jednej krawędzi i 1 220 mm wzdłuż drugiej.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-3-4-3",
+      "title": "Podejście",
+      "text": "Podejście",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Podejście"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-8-3-4-3-1",
+      "title": "Postanowienia ogólne",
+      "text": ". Sprawdzić, czy jedna pełna strona przestrzeni jest wolna od przeszkód.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Przestrzeń dostępu jest integralną częścią ICT.",
+        ""
+      ],
+      "procedure": [
+        ". Sprawdzić, czy jedna pełna strona przestrzeni jest wolna od przeszkód."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 N2) Odsyłacz krajowy: Błąd w oryginale EN, zamiast „2” powinno być „3”. Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Postanowienia ogólne\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Przestrzeń dostępu jest integralną częścią ICT.\nProcedura\n1. Sprawdzić, czy jedna pełna strona przestrzeni jest wolna od przeszkód.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2\nN2) Odsyłacz krajowy: Błąd w oryginale EN, zamiast „2” powinno być „3”.\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n173"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-8-3-4-3-2",
+      "title": "Podejście z przodu",
+      "text": ". Sprawdzić, czy szerokość niszy jest większa niż 915 mm.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym, którego integralną część stanowi nisza.",
+        ". Obszar działania znajduje się wewnątrz niszy.",
+        ". Głębokość niszy jest większa niż 610 mm.",
+        ". Dostęp z przodu jest niezbędny."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy szerokość niszy jest większa niż 915 mm."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2, 3 lub 4",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Podejście z przodu\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym, którego integralną część stanowi nisza.\n2. Obszar działania znajduje się wewnątrz niszy.\n3. Głębokość niszy jest większa niż 610 mm.\n4. Dostęp z przodu jest niezbędny.\nProcedura\n1. Sprawdzić, czy szerokość niszy jest większa niż 915 mm.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2, 3 lub 4"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-8-3-4-3-3",
+      "title": "Dostęp równoległy",
+      "text": ". Sprawdzić, czy szerokość przestrzeni dostępu jest większa niż 1 525 mm.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym, którego integralną część stanowi nisza.",
+        ". Obszar działania znajduje się wewnątrz niszy.",
+        ". Głębokość niszy jest większa niż 380 mm.",
+        ". Dostęp równoległy jest możliwy."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy szerokość przestrzeni dostępu jest większa niż 1 525 mm."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1, 2, 3 lub 4",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Dostęp równoległy\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym, którego integralną część stanowi nisza.\n2. Obszar działania znajduje się wewnątrz niszy.\n3. Głębokość niszy jest większa niż 380 mm.\n4. Dostęp równoległy jest możliwy.\nProcedura\n1. Sprawdzić, czy szerokość przestrzeni dostępu jest większa niż 1 525 mm.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1, 2, 3 lub 4"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-3-5",
+      "title": "Widoczność",
+      "text": ". Sprawdzić, czy co najmniej jeden wyświetlacz każdego typu jest umieszczony w taki sposób, aby informacje na nim były czytelne z punktu znajdującego się 1 015 mm (40 cali) nad środkiem podłogi w obszarze roboczym.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym.",
+        ". Do dyspozycji jest co najmniej jeden wyświetlacz.",
+        " ETSI CEN CENELEC"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy co najmniej jeden wyświetlacz każdego typu jest umieszczony w taki sposób, aby informacje na nim były czytelne z punktu znajdującego się 1 015 mm (40 cali) nad środkiem podłogi w obszarze roboczym."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03)",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Widoczność\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\n2. Do dyspozycji jest co najmniej jeden wyświetlacz.\nProcedura\n1. Sprawdzić, czy co najmniej jeden wyświetlacz każdego typu jest umieszczony\nw taki sposób, aby informacje na nim były czytelne z punktu znajdującego się 1 015 mm\n(40 cali) nad środkiem podłogi w obszarze roboczym.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n174\nETSI CEN CENELEC"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-3-6",
+      "title": "Instrukcja montażu",
+      "text": ". Sprawdzić, czy dostępna jest instrukcja montażu.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT jest urządzeniem stacjonarnym."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy dostępna jest instrukcja montażu.",
+        ". Sprawdzić, czy w instrukcji podano wskazówki dotyczące sposobu montażu ICT w sposób zapewniający zgodność wymiarów z wymaganiami zawartymi w Rozdziałach od 8.3.2 do 8.3.4.",
+        ". Sprawdzić, czy w instrukcji podano, że zaleca się aby osoby zajmujące się montażem również brały pod uwagę obowiązujące wymagania dotyczące dostępności środowiska zbudowanego, które mają zastosowanie podczas montażu ICT."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Instrukcja montażu\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT jest urządzeniem stacjonarnym.\nProcedura\n1. Sprawdzić, czy dostępna jest instrukcja montażu.\n2. Sprawdzić, czy w instrukcji podano wskazówki dotyczące sposobu montażu ICT\nw sposób zapewniający zgodność wymiarów z wymaganiami zawartymi w Rozdziałach\nod 8.3.2 do 8.3.4.\n3. Sprawdzić, czy w instrukcji podano, że zaleca się aby osoby zajmujące się montażem\nrównież brały pod uwagę obowiązujące wymagania dotyczące dostępności\nśrodowiska zbudowanego, które mają zastosowanie podczas montażu ICT.\nWynik\nPozytywny: Kryteria 1, 2 i 3: prawda\nNegatywny: Kryteria 1 lub 2 lub 3: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-8-4",
+      "title": "Części obsługiwane mechanicznie",
+      "text": "Części obsługiwane mechanicznie",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Części obsługiwane mechanicznie"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-4-1",
+      "title": "Klawisze numeryczne",
+      "text": ". Sprawdzić, czy klawisz z cyfrą 5 różni się w dotyku od pozostałych klawiszy.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT ma fizyczne klawisze numeryczne rozmieszczone w 12-przyciskowym układzie klawiatury telefonicznej."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy klawisz z cyfrą 5 różni się w dotyku od pozostałych klawiszy."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Klawisze numeryczne\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. ICT ma fizyczne klawisze numeryczne rozmieszczone w 12-przyciskowym\nukładzie klawiatury telefonicznej.\nProcedura\n1. Sprawdzić, czy klawisz z cyfrą 5 różni się w dotyku od pozostałych klawiszy.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-4-2",
+      "title": "Obsługa części mechanicznych",
+      "text": "Obsługa części mechanicznych",
+      "assessmentType": "Inspection",
+      "preconditions": [],
+      "procedure": [],
+      "results": [],
+      "html": "Obsługa części mechanicznych"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-4-2-1",
+      "title": "Środki obsługi części mechanicznych",
+      "text": ". Sprawdzić, czy istnieje dostępny alternatywny sposób, który nie wymaga zastosowania takich działań.",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        ". ICT zawiera części obsługiwane, które do działania wymagają chwytania, ściskania lub skręcania nadgarstka.",
+        ""
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje dostępny alternatywny sposób, który nie wymaga zastosowania takich działań."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1. Licencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży EN 301 549 V3.2.1 (2021-03) ETSI CEN CENELEC",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Środki obsługi części mechanicznych\nRodzaj oceny\nKontrola\nWarunki wstępne\n1. ICT zawiera części obsługiwane, które do działania wymagają chwytania,\nściskania lub skręcania nadgarstka.\nProcedura\n1. Sprawdzić, czy istnieje dostępny alternatywny sposób, który nie wymaga\nzastosowania takich działań.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1.\nLicencja Polskiego Komitetu Normalizacyjnego dla INSTYTUT BADAWCZY IPC SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ (2025-11-12). Bez prawa odsprzedaży\nEN 301 549 V3.2.1 (2021-03)\n\nETSI CEN CENELEC\n175"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-8-4-2-2",
+      "title": "Siła wymagana do obsługi części mechanicznych",
+      "text": ". Sprawdzić, czy istnieje alternatywny sposób sterowania wymagający użycia siły mniejszej niż 22,2 N.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT zawiera części obsługiwane, które wymagają użycia siły większej niż 22,2 N."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieje alternatywny sposób sterowania wymagający użycia siły mniejszej niż 22,2 N."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Siła wymagana do obsługi części mechanicznych\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT zawiera części obsługiwane, które wymagają użycia siły większej niż 22,2 N.\nProcedura\n1. Sprawdzić, czy istnieje alternatywny sposób sterowania wymagający użycia siły\nmniejszej niż 22,2 N.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-8-4-3",
+      "title": "Klucze, bilety i karty taryfowe",
+      "text": ". Sprawdzić, czy orientację kluczy, biletów lub kart taryfowych można wyczuć dotykiem.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT dostarcza klucze, bilety lub karty taryfowe, a ich orientacja jest ważna dla dalszego wykorzystania."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy orientację kluczy, biletów lub kart taryfowych można wyczuć dotykiem."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Klucze, bilety i karty taryfowe\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT dostarcza klucze, bilety lub karty taryfowe, a ich orientacja jest ważna dla\ndalszego wykorzystania.\nProcedura\n1. Sprawdzić, czy orientację kluczy, biletów lub kart taryfowych można wyczuć\ndotykiem.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1."
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-8-5",
+      "title": "Oznaczenia dotykowe w trybie mowy",
+      "text": ". Sprawdzić, czy jest dostępne wyczuwalne w dotyku wskazanie sposobu rozpoczęcia pracy w trybie mowy.",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        ". ICT została zaprojektowane do wspólnego użytkowania.",
+        ". Jest dostępne wyjście mowy."
+      ],
+      "procedure": [
+        ". Sprawdzić, czy jest dostępne wyczuwalne w dotyku wskazanie sposobu rozpoczęcia pracy w trybie mowy."
+      ],
+      "results": [
+        {
+          "label": "Nie spełniono warunku wstępnego 1 lub 2.",
+          "type": "Nie dotyczy"
+        }
+      ],
+      "html": "Oznaczenia dotykowe w trybie mowy\nRodzaj oceny\nKontrola i pomiary\nWarunki wstępne\n1. ICT została zaprojektowane do wspólnego użytkowania.\n2. Jest dostępne wyjście mowy.\nProcedura\n1. Sprawdzić, czy jest dostępne wyczuwalne w dotyku wskazanie sposobu rozpoczęcia\npracy w trybie mowy.\nWynik\nPozytywny: Kryterium 1: prawda\nNegatywny: Kryterium 1: fałsz\nNie dotyczy: Nie spełniono warunku wstępnego 1 lub 2."
+    }
+  ]
+}

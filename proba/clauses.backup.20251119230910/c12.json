@@ -1,0 +1,130 @@
+{
+  "id": "c12",
+  "title": "Dokumentacja i wsparcie techniczne",
+  "nodes": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Dokumentacja i wsparcie techniczne"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-12-1",
+      "title": "Dokumentacja produktu",
+      "text": "Dokumentacja produktu"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-12-1-1",
+      "title": "Funkcje dostępności i zgodności",
+      "text": "Sprawdzić, czy w dokumentacji produktu dostarczonej razem z ICT znajduje się wykaz funkcji dostępności i kompatybilności ICT oraz objaśnienia dotyczące sposobu korzystania z nich",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Dokumentacja produktu jest dostarczana razem z ICT"
+      ],
+      "procedure": [
+        "Sprawdzić, czy w dokumentacji produktu dostarczonej razem z ICT znajduje się wykaz funkcji dostępności i kompatybilności ICT oraz objaśnienia dotyczące sposobu korzystania z nich"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-12-1-2",
+      "title": "Dostępność dokumentacji",
+      "text": "Sprawdzić, czy dokumentacja produktu w formacie elektronicznym dostarczona wraz z ICT jest odpowiednio zgodna z wymaganiami Rozdziałów 9 lub",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Dokumentacja produktu w formacie elektronicznym jest dostarczana razem z ICT"
+      ],
+      "procedure": [
+        "Sprawdzić, czy dokumentacja produktu w formacie elektronicznym dostarczona wraz z ICT jest odpowiednio zgodna z wymaganiami Rozdziałów 9 lub"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-12-2",
+      "title": "Wsparcie techniczne",
+      "text": "Wsparcie techniczne"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Postanowienia ogólne"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-12-2-2",
+      "title": "Informacje o funkcjach dostępności i zgodności",
+      "text": "Sprawdzić, czy usługi wsparcia w zakresie ICT dostarczają informacje o funkcjach dostępności i zgodności dostarczanych razem z dokumentacją produktu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Świadczone są usługi wsparcia w zakresie ICT"
+      ],
+      "procedure": [
+        "Sprawdzić, czy usługi wsparcia w zakresie ICT dostarczają informacje o funkcjach dostępności i zgodności dostarczanych razem z dokumentacją produktu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-12-2-3",
+      "title": "Efektywna komunikacja",
+      "text": "Sprawdzić, czy usługi wsparcia w zakresie ICT zaspokajają potrzeby komunikacyjne poszczególnych osób z niepełnosprawnościami w sposób bezpośredni lub poprzez punkt pośredni",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Świadczone są usługi wsparcia w zakresie ICT"
+      ],
+      "procedure": [
+        "Sprawdzić, czy usługi wsparcia w zakresie ICT zaspokajają potrzeby komunikacyjne poszczególnych osób z niepełnosprawnościami w sposób bezpośredni lub poprzez punkt pośredni"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1. UWAGA: Zapewnienie na dowolnym poziomie wsparcia dla potrzeb komunikacyjnych osób niepełnosprawnych stanowi podstawę tego wymagania. Dostawcy mogą chcieć dostarczyć dalsze informacje na temat poziomu wsparcia, który jest zapewniany, aby umożliwić ocenę adekwatności i jakości wsparcia"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-12-2-4",
+      "title": "Dostępność dokumentacji",
+      "text": "Sprawdzić, czy dokumentacja produktu w formie elektronicznej dostarczona przez serwis obsługi ICT jest zgodna z wymaganiami odpowiednio Rozdziałów 9 lub",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Dokumentacja jest dostarczana przez serwis obsługi ICT"
+      ],
+      "procedure": [
+        "Sprawdzić, czy dokumentacja produktu w formie elektronicznej dostarczona przez serwis obsługi ICT jest zgodna z wymaganiami odpowiednio Rozdziałów 9 lub"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    }
+  ]
+}

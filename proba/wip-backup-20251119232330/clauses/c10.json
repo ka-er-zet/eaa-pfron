@@ -1,0 +1,1128 @@
+{
+  "id": "c10",
+  "title": "Dokumenty nieinternetowe",
+  "nodes": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Dokumenty nieinternetowe"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Postanowienia ogólne (informacyjne)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-10-1",
+      "title": "Postrzegalność",
+      "text": "Postrzegalność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-1-1",
+      "title": "Alternatywy tekstowe",
+      "text": "Alternatywy tekstowe"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-1-1",
+      "title": "Treść nietekstowa",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.1.1 Treść nietekstowa",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.1.1 Treść nietekstowa"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.1.1 Treści nietekstowe"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-1-2",
+      "title": "Multimedia",
+      "text": "Multimedia"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-2-1",
+      "title": "Tylko audio lub tylko wideo (nagranie)",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-2-2",
+      "title": "Napisy rozszerzone (nagranie)",
+      "text": "11. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "11. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie)"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-2-3",
+      "title": "Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-2-4",
+      "title": "Napisy rozszerzone (na żywo)",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo)"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-2-5",
+      "title": "Audiodeskrypcja (nagranie)",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-1-3",
+      "title": "Możliwość adaptacji",
+      "text": "Możliwość adaptacji"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-3-1",
+      "title": "Informacje i relacje",
+      "text": "11. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.3.1 Informacje i relacje",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "11. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.3.1 Informacje i relacje"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.3.1 Informacje i relacje"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-3-2",
+      "title": "Zrozumiała kolejność",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.3.2 Zrozumiała kolejność",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.3.2 Zrozumiała kolejność"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.3.2 Zrozumiała kolejność"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-3-3",
+      "title": "Właściwości zmysłowe",
+      "text": "11. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "11. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.3.3 Właściwości zmysłowe"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-3-4",
+      "title": "Orientacja",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-3-5",
+      "title": "Określenie pożądanej wartości",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-1-4",
+      "title": "Rozróżnialność",
+      "text": "Rozróżnialność"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-4-1",
+      "title": "Użycie koloru",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.1 Użycie koloru"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-4-2",
+      "title": "Kontrola odtwarzania dźwięku",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.1",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.1"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-4-3",
+      "title": "Kontrast (minimum)",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.3 Kontrast (minimum)"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-4-4",
+      "title": "Zmiana rozmiaru tekstu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-4-5",
+      "title": "Obrazy tekstu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.5 Obrazy tekstu"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-10-1-4-6",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-10-1-4-7",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-10-1-4-8",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-10-1-4-9",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-4-10",
+      "title": "Dopasowanie do ekranu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.2",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.2"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-4-11",
+      "title": "Kontrast elementów nietekstowych",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest dokumentem nieinternetowym, który nie ma stałego rozmiaru powierzchni układu treści, co jest niezbędne do przekazywania informacji"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.11 Kontrast elementów nietekstowych"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-4-12",
+      "title": "Odstępy w tekście",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.12 Odstępy w tekście"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-1-4-13",
+      "title": "Treść spod kursora lub fokusu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.13 Treść spod kursora lub fokusu"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-10-2",
+      "title": "Funkcjonalność",
+      "text": "Funkcjonalność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-2-1",
+      "title": "Dostępność z klawiatury",
+      "text": "Dostępność z klawiatury"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-1-1",
+      "title": "Klawiatura",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.1.1 Klawiatura"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-1-2",
+      "title": "Bez pułapki na klawiaturę",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.3",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.3"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-10-2-1-3",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-1-4",
+      "title": "Jednoznakowe skróty klawiaturowe",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiszowe",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiszowe"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.1.4 Jednoznakowe skróty klawiaturowe"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-2-2",
+      "title": "Wystarczający czas",
+      "text": "Wystarczający czas"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-2-1",
+      "title": "Dostosowanie czasu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.4",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.4"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-2-2",
+      "title": "Pauza, zatrzymanie, ukrycie",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.5",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.5"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-2-3",
+      "title": "Ataki padaczki",
+      "text": "Ataki padaczki"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-3-1",
+      "title": "Trzy błyski lub wartości poniżej progu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.6",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.6"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-2-4",
+      "title": "Możliwość nawigacji",
+      "text": "Możliwość nawigacji"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-10-2-4-1",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-4-2",
+      "title": "Tytuł dokumentu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.7",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.7"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-4-3",
+      "title": "Kolejność fokusu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.8",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.8"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-4-4",
+      "title": "Cel łącza (w kontekście)",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.4.4 Cel łącza (w kontekście)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-10-2-4-5",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-4-6",
+      "title": "Nagłówki i etykiety",
+      "text": "11. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "11. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.4.6 Nagłówki i etykiety"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-4-7",
+      "title": "Widoczny fokus",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.4.7 Widoczny fokus"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-2-5",
+      "title": "Metody obsługi",
+      "text": "Metody obsługi"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-5-1",
+      "title": "Gesty dotykowe",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.9",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.9"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-5-2",
+      "title": "Rezygnacja ze wskazania",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.10",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.10"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-5-3",
+      "title": "Etykieta w nazwie",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.5.3 Etykieta w nazwie"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-2-5-4",
+      "title": "Aktywowanie ruchem",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.5.4 Aktywowanie ruchem"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-10-3",
+      "title": "Zrozumiałość",
+      "text": "Zrozumiałość"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-3-1",
+      "title": "Możliwość odczytania",
+      "text": "Możliwość odczytania"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-3-1-1",
+      "title": "Język dokumentu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.11",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.11"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-3-1-2",
+      "title": "Język części",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.12",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.12"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-3-2",
+      "title": "Przewidywalność",
+      "text": "Przewidywalność"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-3-2-1",
+      "title": "Po otrzymaniu fokusu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-3-2-2",
+      "title": "Podczas wprowadzania danych",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.2.2 Podczas wprowadzania danych"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-10-3-2-3",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-10-3-2-4",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-3-3",
+      "title": "Pomoc przy wprowadzaniu informacji",
+      "text": "Pomoc przy wprowadzaniu informacji"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-3-3-1",
+      "title": "Identyfikacja błędu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.1 Identyfikacja błędu"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-3-3-2",
+      "title": "Etykiety lub instrukcje",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.2 Etykiety lub instrukcje"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-3-3-3",
+      "title": "Sugestie korekty błędów",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.3 Sugestie korekty błędów"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-3-3-4",
+      "title": "Zapobieganie błędom (prawnym, finansowym, w danych)",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.13",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.13"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-10-4",
+      "title": "Solidność",
+      "text": "Solidność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-10-4-1",
+      "title": "Kompatybilność",
+      "text": "Kompatybilność"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-4-1-1",
+      "title": "Poprawność kodu",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.14",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.14"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-4-1-2",
+      "title": "Nazwa, rola, wartość",
+      "text": "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.15",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.15"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-10-4-1-3",
+      "title": "Komunikaty o stanie",
+      "text": "1. Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT nie jest stroną internetową"
+      ],
+      "procedure": [
+        "1. Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 4.1.3 Komunikaty o stanie"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Pozycja napisów"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Synchronizacja audiodeskrypcji"
+    }
+  ]
+}

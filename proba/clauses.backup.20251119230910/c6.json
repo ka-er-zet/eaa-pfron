@@ -1,0 +1,478 @@
+{
+  "id": "c6",
+  "title": "ICT z dwukierunkową komunikacją głosową",
+  "nodes": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "ICT z dwukierunkową komunikacją głosową"
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-6-1",
+      "title": "Szerokość pasma sygnału mowy",
+      "text": "Sprawdzić, czy ICT może kodować i dekodować dźwięk w zakresie częstotliwości z górną granicą co najmniej 7 000 Hz",
+      "assessmentType": "Pomiar",
+      "preconditions": [
+        "Testowana ICT udostępnia dwukierunkową komunikację głosową"
+      ],
+      "procedure": [
+        "Sprawdzić, czy ICT może kodować i dekodować dźwięk w zakresie częstotliwości z górną granicą co najmniej 7 000 Hz"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-6-2",
+      "title": "Funkcjonalność tekstu w czasie rzeczywistym (RTT)",
+      "text": "Funkcjonalność tekstu w czasie rzeczywistym (RTT)"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-6-2-1",
+      "title": "Zapewnienie RTT",
+      "text": "Zapewnienie RTT"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-6-2-1-1",
+      "title": "Komunikacja RTT",
+      "text": "Sprawdzić, czy system ICT umożliwia użytkownikowi komunikację RTT z innym „referencyjnym” ICT",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Testowany system ICT udostępnia dwukierunkową komunikację głosową",
+        "ICT pracuje w trybie umożliwiającym dwukierunkową komunikację głosową",
+        "Dostępny jest „referencyjny terminal obsługujący komunikację RTT”"
+      ],
+      "procedure": [
+        "Sprawdzić, czy system ICT umożliwia użytkownikowi komunikację RTT z innym „referencyjnym” ICT"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 Nie do sprawdzenia: Nie spełniono warunku wstępnego 3 UWAGA: „Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-6-2-1-2",
+      "title": "Równoczesna komunikacja głosowa i tekstowa",
+      "text": "Sprawdzić, czy ICT umożliwia jednoczesne korzystanie z połączeń głosowych i RTT przez połączenie jednego użytkownika",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT obsługuje dwukierunkową komunikację głosową",
+        "ICT obsługuje dwukierunkową komunikację za pomocą RTT"
+      ],
+      "procedure": [
+        "Sprawdzić, czy ICT umożliwia jednoczesne korzystanie z połączeń głosowych i RTT przez połączenie jednego użytkownika"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-6-2-2",
+      "title": "Wyświetlanie RTT",
+      "text": "Wyświetlanie RTT"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-6-2-2-1",
+      "title": "Wyświetlacz umożliwiający rozróżnianie tekstu",
+      "text": "Testowana ICT jest podłączona do „referencyjnego terminala obsługującego RTT”",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Testowana ICT zapewnia możliwość wysyłania i odbierania komunikacji RTT",
+        "ICT obsługuje mechanizmy RTT",
+        "Dostępny jest „referencyjny terminal obsługujący komunikację RTT”"
+      ],
+      "procedure": [
+        "Testowana ICT jest podłączona do „referencyjnego terminala obsługującego RTT”",
+        "Różne elementy ICT są w stanie działania (połączenie jest aktywne, a terminale we właściwym trybie RTT) i dwa terminale komunikują się ze sobą",
+        "Testowany system ICT wysyła krótki tekst",
+        "„Terminal referencyjny RTT” wysyła krótki tekst",
+        "Sprawdzić na testowanej ICT, czy wyświetlany nadawany tekst wizualnie różni się od otrzymanego tekstu i jest od niego oddzielony"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Nie do sprawdzenia: Nie spełniono warunku wstępnego 3 UWAGA: „Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-6-2-2-2",
+      "title": "Możliwe do określenia programowo kierunku nadawania i odbioru",
+      "text": "Testowana ICT jest podłączona do „referencyjnego terminala obsługującego RTT”",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT zapewnia możliwość wysyłania i odbierania komunikacji RTT",
+        "RTT jest funkcjonalnością otwartą",
+        "Dostępny jest „referencyjny terminal obsługujący komunikację RTT”"
+      ],
+      "procedure": [
+        "Testowana ICT jest podłączona do „referencyjnego terminala obsługującego RTT”",
+        "Różne elementy ICT są w stanie działania (połączenie jest aktywne, a terminale we właściwym trybie RTT) i dwa terminale komunikują się ze sobą",
+        "Testowany system ICT wysyła krótki tekst",
+        "„Terminal referencyjny RTT” wysyła krótki tekst",
+        "Sprawdzić, czy kierunek nadawania/odbioru przesyłanego tekstu jest możliwy do określenia programowo"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Nie do sprawdzenia: Nie spełniono warunku wstępnego 3 UWAGA: „Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-6-2-2-3",
+      "title": "Identyfikacja mówcy",
+      "text": "Testowana ICT jest podłączona do „referencyjnego terminala obsługującego RTT”",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT obsługuje RTT",
+        "ICT zapewnia identyfikację mówcy w przypadku komunikacji głosowej",
+        "Dostępny jest „referencyjny terminal obsługujący komunikację RTT”"
+      ],
+      "procedure": [
+        "Testowana ICT jest podłączona do „referencyjnego terminala obsługującego RTT”",
+        "RTT jest wysyłana z „referencyjnego terminala”",
+        "Sprawdzić na podstawie obserwacji, czy testowana ICT umożliwia identyfikację mówcy dla tekstu przychodzącego w trybie RTT"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Nie do sprawdzenia: Nie spełniono warunku wstępnego 3 UWAGA: „Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-6-2-2-4",
+      "title": "Wizualny wskaźnik audio połączonego z RTT",
+      "text": "Testowana ICT jest połączona z inną ICT zapewniającą dwukierunkową komunikację głosową, która jest zgodna z komunikacją głosową w testowanej ICT",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT zapewnia dwukierunkową komunikację głosową",
+        "ICT obsługuje RTT"
+      ],
+      "procedure": [
+        "Testowana ICT jest połączona z inną ICT zapewniającą dwukierunkową komunikację głosową, która jest zgodna z komunikacją głosową w testowanej ICT",
+        "Osoba mówi do drugiej ICT",
+        "Sprawdzić na podstawie obserwacji, czy istnieje wizualny wskaźnik aktywności audio w czasie rzeczywistym"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 UWAGA: Zaleca się by wskaźnik migał w czasie rzeczywistym w sposób odzwierciedlający aktywność audio"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-6-2-3",
+      "title": ".a  Interoperacyjność (a)",
+      "text": "Sprawdzić, czy ICT współpracuje z publiczną komutowaną siecią telefoniczną (PSTN), z terminalem referencyjnym V.18 podłączonym do PSTN zgodnie z zaleceniem ITU-T V.18 [i.23] lub którymkolwiek z jego załączników dla sygnałów telefonii tekstowej na interfejsie PSTN",
+      "assessmentType": "Test",
+      "preconditions": [
+        "ICT obsługuje dwukierunkową komunikację głosową za pośrednictwem publicznej komutowanej sieci telefonicznej (PSTN)",
+        "ICT obsługuje dwukierunkową komunikację za pomocą RTT",
+        "Dostępny jest „referencyjny terminal V.18”"
+      ],
+      "procedure": [
+        "Sprawdzić, czy ICT współpracuje z publiczną komutowaną siecią telefoniczną (PSTN), z terminalem referencyjnym V.18 podłączonym do PSTN zgodnie z zaleceniem ITU-T V.18 [i.23] lub którymkolwiek z jego załączników dla sygnałów telefonii tekstowej na interfejsie PSTN"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Nie do sprawdzenia: Nie spełniono warunku wstępnego 3 UWAGA: „Referencyjny terminal V.18” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących V.18 w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym referencyjnym terminalu"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-6-2-3",
+      "title": ".b  Interoperacyjność (b)",
+      "text": "Sprawdzić, czy ICT współdziała z „referencyjnym terminalem obsługującym komunikację RTT” z wykorzystaniem protokołu VOIP z protokołem inicjowania sesji (SIP) oraz z wykorzystaniem RTT zgodnej z dokumentem IETF RFC 4103 [i.13]",
+      "assessmentType": "Test",
+      "preconditions": [
+        "ICT obsługuje dwukierunkową komunikację głosową z wykorzystaniem protokołu VOIP z protokołem inicjowania sesji (SIP)",
+        "ICT obsługuje dwukierunkową komunikację za pomocą RTT",
+        "Dostępny jest „referencyjny terminal obsługujący komunikację RTT”"
+      ],
+      "procedure": [
+        "Sprawdzić, czy ICT współdziała z „referencyjnym terminalem obsługującym komunikację RTT” z wykorzystaniem protokołu VOIP z protokołem inicjowania sesji (SIP) oraz z wykorzystaniem RTT zgodnej z dokumentem IETF RFC 4103 [i.13]",
+        "Jeśli ICT współpracuje z innymi ICT wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP, należy sprawdzić, czy przestrzega on"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Nie do sprawdzenia: Nie spełniono warunku wstępnego 3 UWAGA: „Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-6-2-3",
+      "title": ".c  Interoperacyjność (c)",
+      "text": "Sprawdzić, czy ICT współdziała z „referencyjnym terminalem obsługującym komunikację RTT” z użyciem odpowiedniej i mającej zastosowanie wspólnej specyfikacji wymiany RTT, która została opublikowana i jest dostępna dla środowiska, w którym będzie działać ICT",
+      "assessmentType": "Test",
+      "preconditions": [
+        "ICT umożliwia dwukierunkową komunikację głosową z wykorzystaniem technologii innych niż PSTN lub protokół VOIP z protokołem inicjowania sesji (SIP)",
+        "ICT obsługuje dwukierunkową komunikację za pomocą RTT",
+        "Dostępny jest „referencyjny terminal obsługujący komunikację RTT” dla danego sposobu komunikacji RTT"
+      ],
+      "procedure": [
+        "Sprawdzić, czy ICT współdziała z „referencyjnym terminalem obsługującym komunikację RTT” z użyciem odpowiedniej i mającej zastosowanie wspólnej specyfikacji wymiany RTT, która została opublikowana i jest dostępna dla środowiska, w którym będzie działać ICT",
+        "Sprawdzić, czy wspólna specyfikacja podana w kryterium 1 obejmuje metodę informowania o utracie lub uszkodzeniu znaków"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Nie do sprawdzenia: Nie spełniono warunku wstępnego 3 UWAGA: „Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-6-2-3",
+      "title": ".d  Interoperacyjność (d)",
+      "text": "Sprawdzić, czy testowana ICT współdziała z „referencyjnym terminalem obsługującym komunikację RTT” dla nowego standardu RTT, który został wprowadzony do użytku",
+      "assessmentType": "Test",
+      "preconditions": [
+        "ICT obsługuje dwukierunkową komunikację głosową",
+        "ICT obsługuje dwukierunkową komunikację za pomocą RTT",
+        "Dostępny jest „referencyjny terminal obsługujący komunikację RTT” korzystający z nowego standardu RTT"
+      ],
+      "procedure": [
+        "Sprawdzić, czy testowana ICT współdziała z „referencyjnym terminalem obsługującym komunikację RTT” dla nowego standardu RTT, który został wprowadzony do użytku",
+        "Sprawdzić, czy nowy standard RTT jest obsługiwany przez wszystkie inne aktywne ICT, które obsługują komunikację głosową i RTT w tym samym środowisku"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 Nie do sprawdzenia: Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-6-2-4",
+      "title": "Reakcja RTT",
+      "text": "Wprowadzić pojedyncze znaki do testowanego terminalu",
+      "assessmentType": "Kontrola danych pomiarowych lub test",
+      "preconditions": [
+        "Testowana ICT obsługuje dane wejściowe RTT",
+        "Testowana ICT jest podłączona do urządzenia lub oprogramowania, które może określić, kiedy przesyłane są przez nią znaki"
+      ],
+      "procedure": [
+        "Wprowadzić pojedyncze znaki do testowanego terminalu",
+        "Sprawdzić czas, w którym wprowadzono dane (tzn. na ekranie lokalnym pojawiły się znaki)",
+        "Sprawdzić przedział czasu pomiędzy wprowadzeniem tekstu do testowanej ICT a jego przesłaniem do sieci lub platformy ICT"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1. Nie do sprawdzenia: Nie spełniono warunku wstępnego 2. UWAGA: Jak opisano w uwagach do Rozdziału 6.2.4, identyfikacja momentu wprowadzenia danych może się różnić w zależności od typu testowanego systemu RTT"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-6-3",
+      "title": "ID dzwoniącego",
+      "text": "Sprawdzić, czy informacje dostarczane przez każdą funkcję są dostępne w formie tekstowej",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT udostępnia identyfikację dzwoniącego lub podobne funkcje"
+      ],
+      "procedure": [
+        "Sprawdzić, czy informacje dostarczane przez każdą funkcję są dostępne w formie tekstowej",
+        "Sprawdzić, czy informacje dostarczane przez każdą funkcję są możliwe do określenia programowo"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-6-4",
+      "title": "Alternatywy dla usług głosowych",
+      "text": "Sprawdzić, czy ICT zapewnia użytkownikom środki dostępu do informacji bez używania słuchu czy mowy",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT zapewnia komunikację głosową w czasie rzeczywistym",
+        "ICT udostępnia pocztę głosową, automatyczną sekretarkę lub urządzenie udzielające interaktywnych odpowiedzi głosowych"
+      ],
+      "procedure": [
+        "Sprawdzić, czy ICT zapewnia użytkownikom środki dostępu do informacji bez używania słuchu czy mowy",
+        "Sprawdzić, czy użytkownik może wykonać zadania dostępne w systemie bez używania słuchu czy mowy"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-6-5",
+      "title": "Komunikacja wideo",
+      "text": "Komunikacja wideo"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Postanowienia ogólne"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-6-5-2",
+      "title": "Rozdzielczość",
+      "text": "Sprawdzić, czy rozdzielczość komunikacji wideo jest rozdzielczością QVGA lub lepszą",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT udostępnia dwukierunkową komunikację głosową",
+        "ICT udostępnia funkcjonalność wideo w czasie rzeczywistym"
+      ],
+      "procedure": [
+        "Sprawdzić, czy rozdzielczość komunikacji wideo jest rozdzielczością QVGA lub lepszą"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-6-5-3",
+      "title": "Częstotliwość wyświetlania klatek",
+      "text": "Sprawdzić, czy częstotliwość odświeżania obrazu komunikacji wideo wynosi co najmniej 20 klatek na sekundę",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT udostępnia dwukierunkową komunikację głosową",
+        "ICT udostępnia funkcjonalność wideo w czasie rzeczywistym"
+      ],
+      "procedure": [
+        "Sprawdzić, czy częstotliwość odświeżania obrazu komunikacji wideo wynosi co najmniej 20 klatek na sekundę"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-6-5-4",
+      "title": "Synchronizacja dźwięku i obrazu",
+      "text": "Sprawdzić, czy różnica w czasie między prezentacją mowy i obrazu wideo dla użytkownika jest nie większa niż 100 ms",
+      "assessmentType": "Pomiar",
+      "preconditions": [
+        "ICT udostępnia dwukierunkową komunikację głosową",
+        "ICT udostępnia funkcjonalność wideo w czasie rzeczywistym"
+      ],
+      "procedure": [
+        "Sprawdzić, czy różnica w czasie między prezentacją mowy i obrazu wideo dla użytkownika jest nie większa niż 100 ms"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-6-5-5",
+      "title": "Wizualny wskaźnik audio połączonego z wideo",
+      "text": "Testowana ICT jest połączona z inną ICT zapewniającą dwukierunkową komunikację głosową, która jest zgodna z komunikacją głosową w testowanej ICT",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT zapewnia dwukierunkową komunikację głosową",
+        "ICT udostępnia funkcjonalność wideo w czasie rzeczywistym"
+      ],
+      "procedure": [
+        "Testowana ICT jest połączona z inną ICT zapewniającą dwukierunkową komunikację głosową, która jest zgodna z komunikacją głosową w testowanej ICT",
+        "Osoba mówi do drugiej ICT",
+        "Sprawdzić na podstawie obserwacji, czy istnieje wizualny wskaźnik aktywności audio w czasie rzeczywistym"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 UWAGA: Zaleca się, by wskaźnik migał w czasie rzeczywistym w sposób odzwierciedlający aktywność audio"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-6-5-6",
+      "title": "Identyfikacja mówcy podczas komunikacji za pomocą wideo",
+      "text": "(języka migowego) Warunki wstępne",
+      "assessmentType": "Pomiar",
+      "preconditions": [
+        "ICT udostępnia dwukierunkową komunikację głosową",
+        "ICT obsługuje wideo w czasie rzeczywistym"
+      ],
+      "procedure": [
+        "Testowana ICT jest podłączona do kompatybilnej ICT obsługującej wideo, a osoba komunikuje się w języku migowym",
+        "Sprawdzić na podstawie obserwacji, czy testowana ICT umożliwia użytkownikom języka migowego identyfikację mówcy"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-6-6",
+      "title": "Alternatywy dla usług wideo",
+      "text": "Alternatywy dla usług wideo"
+    }
+  ]
+}

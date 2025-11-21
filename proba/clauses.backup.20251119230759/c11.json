@@ -1,0 +1,2135 @@
+{
+  "id": "c11",
+  "title": "Oprogramowanie",
+  "nodes": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Oprogramowanie"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Postanowienia ogólne"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-11-1",
+      "title": "Postrzegalność",
+      "text": "Postrzegalność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-1-1",
+      "title": "Alternatywy tekstowe",
+      "text": "Alternatywy tekstowe"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-1-1",
+      "title": "Treść nietekstowa",
+      "text": "Treść nietekstowa"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-1-1-1",
+      "title": "Treść nietekstowa (obsługiwany odczyt ekranu, funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.1.1 Treść nietekstowa",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.1.1 Treść nietekstowa"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-1-1-2",
+      "title": "Treść nietekstowa (funkcjonalność zamknięta)",
+      "text": ". Sprawdzić, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej",
+      "assessmentType": "Test",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu",
+        "Treść nietekstowa jest prezentowana użytkownikom za pomocą sygnału mowy"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej",
+        ". Sprawdzić, czy treść nietekstowa jest rzeczywiście istotna i potrzebna",
+        ". Sprawdzić, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego",
+        ". Sprawdzić, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w kryterium sukcesu WCAG 2.1 dla wytycznej 1.1.1 Treść nietekstowa"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-1-2",
+      "title": "Multimedia",
+      "text": "Multimedia"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-2-1",
+      "title": "Tylko audio lub tylko wideo (nagranie)",
+      "text": "Tylko audio lub tylko wideo (nagranie)"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-2-1-1",
+      "title": "Tylko audio lub tylko wideo (nagranie – funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, który udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu",
+        "Aby umożliwić korzystanie z funkcjonalności zamkniętych ICT, nie jest konieczne wcześniejsze przygotowanie nagrań informacji dźwiękowej"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "id": "res-c-11-1-2-1-2",
+      "title": "Tylko audio lub tylko wideo (nagranie – funkcjonalność zamknięta)",
+      "text": "Tylko audio lub tylko wideo (nagranie – funkcjonalność zamknięta)"
+    },
+    {
+      "type": "test",
+      "level": 7,
+      "id": "res-c-11-1-2-1-2-1",
+      "title": "Nagrane tylko audio (funkcjonalność zamknięta)",
+      "text": ". Sprawdzić, czy informacje wizualne odpowiadają nagraniom sygnału dźwiękowego",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu",
+        "Aby umożliwić korzystanie z funkcjonalności zamkniętych ICT, konieczne jest wcześniejsze przygotowanie nagrań informacji dźwiękowej"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy informacje wizualne odpowiadają nagraniom sygnału dźwiękowego"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 7,
+      "id": "res-c-11-1-2-1-2-2",
+      "title": "Nagrane tylko wideo (funkcjonalność zamknięta)",
+      "text": ". Sprawdzić, czy wyjście mowy zawiera informacje zgodne z napisami do nagranej treści wideo",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu",
+        "Nagrane materiały wideo są niezbędne, aby umożliwić korzystanie z zamkniętych funkcji ICT",
+        "Jako dostęp niewizualny do treści nietekstowej w funkcjonalności zamkniętej jest zapewniane wyjście mowy"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy zawiera informacje zgodne z napisami do nagranej treści wideo"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2, 3 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-2-2",
+      "title": "Napisy rozszerzone (nagranie)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-2-3",
+      "title": "Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)",
+      "text": "Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-2-3-1",
+      "title": "Audiodeskrypcja lub alternatywa tekstowa dla mediów",
+      "text": "(nagranie – funkcjonalność otwarta) Warunki wstępne",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-2-3-2",
+      "title": "Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie – funkcjonalność",
+      "text": ". Sprawdzić, czy wyjście mowy zawiera informacje zgodne z napisami do nagranej treści wideo",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu",
+        "Jako dostęp niewizualny do treści nietekstowej w funkcjonalności zamkniętej jest zapewniane wyjście mowy"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy zawiera informacje zgodne z napisami do nagranej treści wideo"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-2-4",
+      "title": "Napisy rozszerzone (na żywo)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-2-5",
+      "title": "Audiodeskrypcja (nagranie)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-1-3",
+      "title": "Możliwość adaptacji",
+      "text": "Możliwość adaptacji"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-3-1",
+      "title": "Informacje i relacje",
+      "text": "Informacje i relacje"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-3-1-1",
+      "title": "Informacje i relacje (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.1 Informacje i relacje",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.1 Informacje i relacje"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Informacje i relacje (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-3-2",
+      "title": "Zrozumiała kolejność",
+      "text": "Zrozumiała kolejność"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-3-2-1",
+      "title": "Zrozumiała kolejność (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.2 Zrozumiała kolejność",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.2 Zrozumiała kolejność"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Zrozumiała kolejność (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-3-3",
+      "title": "Właściwości zmysłowe",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-3-4",
+      "title": "Orientacja",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-3-5",
+      "title": "Określenie pożądanej wartości",
+      "text": "Określenie pożądanej wartości"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-3-5-1",
+      "title": "Określenie pożądanej wartości (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-3-5-2",
+      "title": "Określenie pożądanej wartości (funkcjonalność zamknięta)",
+      "text": ". Sprawdzić, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu zawartego w ICT lub dostarczanego wraz z nią",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie nie zapewnia wsparcia dla technologii wspomagających odczyt ekranu",
+        "Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu zawartego w ICT lub dostarczanego wraz z nią",
+        ". Sprawdzić, czy sygnał dźwiękowy jest dostarczany za pomocą osobistego zestawu słuchawkowego, który można podłączyć poprzez gniazdo audio 3,5 mm lub standardowe połączenie branżowe, bez konieczności korzystania ze wzroku",
+        ". Sprawdzić, czy sygnał dźwiękowy obejmuje elementy z sekcji Przeznaczenie pól danych w komponentach interfejsu użytkowników"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-1-4",
+      "title": "Rozróżnialność",
+      "text": "Rozróżnialność"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-4-1",
+      "title": "Użycie koloru",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-4-2",
+      "title": "Kontrola odtwarzania dźwięku",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.1",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.1"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-4-3",
+      "title": "Kontrast (minimum)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-4-4",
+      "title": "Zmiana rozmiaru tekstu",
+      "text": "Zmiana rozmiaru tekstu"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-4-4-1",
+      "title": "Zmiana rozmiaru tekstu (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia obsługę funkcji powiększania dostępnych na platformie lub technologii wspomagającej"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-4-4-2",
+      "title": "Zmiana rozmiaru tekstu (funkcjonalność zamknięta)",
+      "text": ". Zmierzyć wysokość wielkiej litery H",
+      "assessmentType": "Kontrola i pomiary",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Interfejs użytkownika jest zamknięty dla funkcji powiększania dostępnych na platformie lub technologii wspomagającej",
+        "Odległość widzenia jest określana przez dostawcę"
+      ],
+      "procedure": [
+        ". Zmierzyć wysokość wielkiej litery H",
+        ". Sprawdzić, czy odpowiada ona kątowi co najmniej 0,7 stopnia przy określonej odległości widzenia"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-4-5",
+      "title": "Obrazy tekstu",
+      "text": "Obrazy tekstu"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-4-5-1",
+      "title": "Obrazy tekstu (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-1-4-5-2",
+      "title": "Obrazy tekstu (funkcjonalność zamknięta)",
+      "text": ". Sprawdzić, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej",
+      "assessmentType": "Test",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu",
+        "Treść nietekstowa jest prezentowana użytkownikom za pomocą sygnału mowy"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej",
+        ". Sprawdzić, czy treść nietekstowa jest rzeczywiście istotna i potrzebna",
+        ". Sprawdzić, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego",
+        ". Sprawdzić, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w kryterium sukcesu WCAG 2.1 dla wytycznej 1.1.1 Treść nietekstowa"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-4-6",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-4-7",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-4-8",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-1-4-9",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-4-10",
+      "title": "Dopasowanie do ekranu",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.2",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.2"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-4-11",
+      "title": "Kontrast elementów nietekstowych",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-4-12",
+      "title": "Odstępy w tekście",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym , które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-1-4-13",
+      "title": "Treść spod kursora lub fokusu",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-11-2",
+      "title": "Funkcjonalność",
+      "text": "Funkcjonalność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-2-1",
+      "title": "Dostępność z klawiatury",
+      "text": "Dostępność z klawiatury"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-2-1-1",
+      "title": "Klawiatura",
+      "text": "Klawiatura"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-2-1-1-1",
+      "title": "Klawiatura (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia obsługę klawiatur lub interfejs klawiatury"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-2-1-1-2",
+      "title": "Klawiatura (funkcjonalność zamknięta)",
+      "text": ". Sprawdzić, czy wszystkie funkcjonalności interfejsu użytkownika można obsługiwać bez użycia wzroku",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym. Które udostępnia interfejs użytkownika",
+        "Interfejs użytkownika jest zamknięty dla klawiatur i interfejsów klawiatury"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wszystkie funkcjonalności interfejsu użytkownika można obsługiwać bez użycia wzroku"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-1-2",
+      "title": "Bez pułapki na klawiaturę",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.3",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.3"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-2-1-3",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-2-1-4",
+      "title": "Jednoznakowe skróty klawiaturowe",
+      "text": "Jednoznakowe skróty klawiaturowe"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-2-1-4-1",
+      "title": "Jednoznakowe skróty klawiaturowe (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiszowe",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia obsługę przynajmniej jednej technologii wspomagającej"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiszowe"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiaturowe"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-2-1-4-2",
+      "title": "Jednoznakowe skróty klawiaturowe (funkcjonalność zamknięta)",
+      "text": ". Sprawdzić, czy wszystkie funkcjonalności można obsługiwać bez użycia wzroku",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Funkcjonalność ICT jest zamknięta dla klawiatur i interfejsów klawiatury"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wszystkie funkcjonalności można obsługiwać bez użycia wzroku"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-2-2",
+      "title": "Wystarczający czas",
+      "text": "Wystarczający czas"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-2-1",
+      "title": "Dostosowanie czasu",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.4",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.4"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-2-2",
+      "title": "Pauza, zatrzymanie, ukrycie",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.5",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.5"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-2-3",
+      "title": "Ataki padaczki",
+      "text": "Ataki padaczki"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-3-1",
+      "title": "Trzy błyski lub wartości poniżej progu",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.6",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.6"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-2-4",
+      "title": "Możliwość nawigacji",
+      "text": "Możliwość nawigacji"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-2-4-1",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-2-4-2",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-4-3",
+      "title": "Kolejność fokusu",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.7",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.7"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-4-4",
+      "title": "Cel łącza (w kontekście)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-2-4-5",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-4-6",
+      "title": "Nagłówki i etykiety",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-4-7",
+      "title": "Widoczny fokus",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-2-5",
+      "title": "Metody obsługi",
+      "text": "Metody obsługi"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-5-1",
+      "title": "Gesty dotykowe",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.8",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.8"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-5-2",
+      "title": "Rezygnacja ze wskazania",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.9",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym. Które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.9"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-2-5-3",
+      "title": "Etykieta w nazwie",
+      "text": "Etykieta w nazwie"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-2-5-3-1",
+      "title": "Etykieta w nazwie (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Etykieta w nazwie (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-2-5-4",
+      "title": "Aktywowanie ruchem",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowy, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-11-3",
+      "title": "Zrozumiałość",
+      "text": "Zrozumiałość"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-3-1",
+      "title": "Możliwość odczytania",
+      "text": "Możliwość odczytania"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-3-1-1",
+      "title": "Język oprogramowania",
+      "text": "Język oprogramowania"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-3-1-1-1",
+      "title": "Język oprogramowania (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.10",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.10"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-3-1-1-2",
+      "title": "Język oprogramowania (funkcjonalność zamknięta)",
+      "text": ". Sprawdzić, czy wyjście mowy występuje w tym samym języku co dostarczona wyświetlana treść",
+      "assessmentType": "Test",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym z interfejsem użytkownika",
+        "Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu",
+        "Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych",
+        "Sygnałem mowy nie są nazwy własne, terminy techniczne, słowa w nieokreślonym języku ani słowa lub zwroty, które stały się częścią żargonu bezpośrednio otaczającego tekstu",
+        "Treść nie jest generowana zewnętrznie i jest kontrolowana przez dostawcę ICT",
+        "Wyświetlane języki można wybrać z zastosowaniem dostępu niewizualny",
+        "Użytkownik nie wybrał języka mowy, który jest inny niż język wyświetlanej treści"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy występuje w tym samym języku co dostarczona wyświetlana treść"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2, 3, 4, 5, 6, lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-3-1-2",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-3-2",
+      "title": "Przewidywalność",
+      "text": "Przewidywalność"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-3-2-1",
+      "title": "Po otrzymaniu fokusu",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-3-2-2",
+      "title": "Podczas wprowadzania danych",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-3-2-3",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-3-2-4",
+      "title": "Unieważniono",
+      "text": "Unieważniono"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-3-3",
+      "title": "Pomoc przy wprowadzaniu informacji",
+      "text": "Pomoc przy wprowadzaniu informacji"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-3-3-1",
+      "title": "Identyfikacja błędu",
+      "text": "Identyfikacja błędu"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-3-3-1-1",
+      "title": "Identyfikacja błędu (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-3-3-1-2",
+      "title": "Identyfikacja błędu (funkcjonalność zamknięta)",
+      "text": ". Sprawdzić, czy wyjście mowy wykrywa, że element jest błędny",
+      "assessmentType": "Test",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu",
+        "Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych",
+        "Błąd na wejściu jest wykrywany automatycznie"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wyjście mowy wykrywa, że element jest błędny",
+        ". Sprawdzić, czy wyjście mowy opisuje element, który jest błędny"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2, 3 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-3-3-2",
+      "title": "Etykiety lub instrukcje",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-3-3-3",
+      "title": "Sugestie korekty błędów",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-3-3-4",
+      "title": "Zapobieganie błędom (prawnym, finansowym, w danych)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.11",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.11"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-11-4",
+      "title": "Solidność",
+      "text": "Solidność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-4-1",
+      "title": "Kompatybilność",
+      "text": "Kompatybilność"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-4-1-1",
+      "title": "Poprawność kodu",
+      "text": "Poprawność kodu"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-4-1-1-1",
+      "title": "Poprawność kodu (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.12",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.12"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "id": "res-c-11-4-1-1-2",
+      "title": "Poprawność kodu (funkcjonalność zamknięta)",
+      "text": "Poprawność kodu (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-4-1-2",
+      "title": "Nazwa, rola, wartość",
+      "text": "Nazwa, rola, wartość"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-4-1-2-1",
+      "title": "Nazwa, rola, wartość (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.13",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.13"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "id": "res-c-11-4-1-2-2",
+      "title": "Nazwa, rola, wartość (funkcjonalność zamknięta)",
+      "text": "Nazwa, rola, wartość (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "id": "res-c-11-4-1-3",
+      "title": "Komunikaty o stanie",
+      "text": "Komunikaty o stanie"
+    },
+    {
+      "type": "test",
+      "level": 6,
+      "id": "res-c-11-4-1-3-1",
+      "title": "Komunikaty o stanie (funkcjonalność otwarta)",
+      "text": ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika",
+        "Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "id": "res-c-11-4-1-3-2",
+      "title": "Komunikaty o stanie (funkcjonalność zamknięta)",
+      "text": "Komunikaty o stanie (funkcjonalność zamknięta)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-11-5",
+      "title": "Współdziałanie z technologią wspomagającą",
+      "text": "Współdziałanie z technologią wspomagającą"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-11-5-1",
+      "title": "Funkcjonalność zamknięta",
+      "text": ". Sprawdzić, czy funkcjonalność zamknięta jest zgodna z Rozdziałem 5.1",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "W oprogramowaniu występuje funkcjonalność zamknięta"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy funkcjonalność zamknięta jest zgodna z Rozdziałem 5.1"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "id": "res-c-11-5-2",
+      "title": "Usługi dostępności",
+      "text": "Usługi dostępności"
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-1",
+      "title": "Platformowa usługa wsparcia dostępności dla oprogramowania, która",
+      "text": "udostępnia interfejs użytkownika Warunki wstępne",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Ocenianym oprogramowaniem jest oprogramowanie platformy"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy dokumentacja oprogramowania platformy zawiera informacje o usługach platformy, które mogą być wykorzystywane przez oprogramowanie zapewniające interfejs użytkownika do współpracy z technologią wspomagającą"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-2",
+      "title": "Obsługa usług dostępności platformy dla technologii wspomagających",
+      "text": ". Sprawdzić, czy dokumentacja oprogramowania platformy zawiera informacje o usługach dostępności, które umożliwiają współpracę technologii wspomagającej z oprogramowaniem zapewniającym interfejs użytkownika działający na platformie",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Ocenianym oprogramowaniem jest oprogramowanie platformy"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy dokumentacja oprogramowania platformy zawiera informacje o usługach dostępności, które umożliwiają współpracę technologii wspomagającej z oprogramowaniem zapewniającym interfejs użytkownika działający na platformie"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-3",
+      "title": "Stosowanie usług dostępności",
+      "text": ". Sprawdzić, czy oprogramowanie korzysta z odpowiednich udokumentowanych usług platformy w zakresie dostępności",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie korzysta z odpowiednich udokumentowanych usług platformy w zakresie dostępności",
+        ". Sprawdzić, czy oprogramowanie może spełnić odpowiednie wymagania od 11.5.2.5 do 11.5.2.17 podczas korzystania z udokumentowanych usług platformy w zakresie dostępności",
+        ". Sprawdzić, czy oprogramowanie może spełnić wymagania od 11.5.2.5 do 11.5.2.17 podczas korzystania z udokumentowanych usług platformy w zakresie dostępności"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-4",
+      "title": "Technologia wspomagająca",
+      "text": ". Sprawdzić, czy technologia wspomagająca korzysta z udokumentowanych usług platformy w zakresie dostępności",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "ICT jest technologią wspomagającą"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy technologia wspomagająca korzysta z udokumentowanych usług platformy w zakresie dostępności"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-5",
+      "title": "Informacje o obiekcie",
+      "text": ". Sprawdzić, czy rola elementu interfejsu użytkownika jest możliwa do określenia programowo za pomocą technologii wspomagających",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy rola elementu interfejsu użytkownika jest możliwa do określenia programowo za pomocą technologii wspomagających",
+        ". Sprawdzić, czy stan elementu interfejsu użytkownika jest możliwy do określenia programowo za pomocą technologii wspomagających",
+        ". Sprawdzić, czy ograniczenie elementu interfejsu użytkownika jest możliwe do określenia programowo za pomocą technologii wspomagających",
+        ". Sprawdzić, czy nazwę elementu interfejsu użytkownika jest możliwe do określenia programowo za pomocą technologii wspomagających",
+        ". Sprawdzić, czy opis elementu interfejsu użytkownika jest możliwy do określenia programowo za pomocą technologii wspomagających"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-6",
+      "title": "Wiersz, kolumna i nagłówki",
+      "text": ". Wybrać tabelę danych, na której należy wykonać testy",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "W interfejsie użytkownika znajdują się tabele danych"
+      ],
+      "procedure": [
+        ". Wybrać tabelę danych, na której należy wykonać testy",
+        ". Sprawdzić, czy każdy wiersz komórek jest możliwy do określenia programowo za pomocą technologii wspomagających",
+        ". Sprawdzić, czy każda kolumna komórek, jest możliwa do określenia programowo za pomocą technologii wspomagających",
+        ". Sprawdzić, czy każdy nagłówek wiersza, jest możliwy do określenia programowo za pomocą technologii wspomagających",
+        ". Sprawdzić, czy każdy nagłówek kolumny, jest możliwy do określenia programowo za pomocą technologii wspomagających"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-7",
+      "title": "Wartości",
+      "text": ". Wybrać element interfejsu użytkownika, który może mieć wartość",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "Istnieją elementy interfejsu użytkownika, które mogą mieć wartości"
+      ],
+      "procedure": [
+        ". Wybrać element interfejsu użytkownika, który może mieć wartość",
+        ". Sprawdzić, czy bieżącą wartość jest możliwy do określenia programowo za pomocą technologii wspomagających",
+        ". Jeśli element interfejsu użytkownika zawiera informacje o zakresie wartości, należy sprawdzić, czy minimalna wartość jest możliwa do określenia programowo za pomocą technologii wspomagających",
+        ". Jeśli element interfejsu użytkownika zawiera informacje o zakresie wartości, należy sprawdzić, czy maksymalna wartość jest możliwa do określenia programowo za pomocą technologii wspomagających"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-8",
+      "title": "Zależności między etykietami",
+      "text": ". Uzyskać informacje o każdym elemencie interfejsu użytkownika",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "Istnieją elementy interfejsu użytkownika, które są etykietami innych elementów użytkownika"
+      ],
+      "procedure": [
+        ". Uzyskać informacje o każdym elemencie interfejsu użytkownika",
+        ". Sprawdzić, czy informacje o elemencie interfejsu użytkownika obejmują związek z elementem interfejsu użytkownika, który jest jego etykietą, jeżeli obecny element interfejsu użytkownika ma etykietę, oraz czy związek ten jest możliwy do określenia programowo za pomocą technologii pomocniczych",
+        ". Sprawdzić, czy informacje o elemencie interfejsu użytkownika obejmują związek z elementem interfejsu użytkownika, który jest jego etykietą, jeżeli obecny element interfejsu użytkownika ma etykietę, oraz czy związek ten jest możliwy do określenia programowo za pomocą technologii pomocniczych"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-9",
+      "title": "Relacje nadrzędny-podrzędny",
+      "text": ". W przypadku elementów interfejsu użytkownika, które mają element nadrzędny, sprawdzić, czy informacje o elemencie interfejsu użytkownika określają powiązanie z elementem nadrzędnym",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "Istnieją elementy interfejsu użytkownika, które są elementami nadrzędnymi innych elementów użytkownika w strukturze hierarchicznej"
+      ],
+      "procedure": [
+        ". W przypadku elementów interfejsu użytkownika, które mają element nadrzędny, sprawdzić, czy informacje o elemencie interfejsu użytkownika określają powiązanie z elementem nadrzędnym",
+        ". Sprawdzić, czy elementy interfejsu użytkownika, które są elementami nadrzędnymi elementu interfejsu użytkownika wybranego wg kryterium 1, zawierają informacje o powiązaniu z elementami interfejsu użytkownika, które są ich elementami podrzędnymi, oraz czy to powiązanie jest możliwe do określenia programowo przez technologie wspomagające",
+        ". W przypadku elementów interfejsu użytkownika, które są elementami nadrzędnymi w stosunku do innych elementów interfejsu użytkownika, należy sprawdzić, czy informacje o elemencie interfejsu użytkownika zawierają powiązanie z elementami interfejsu użytkownika, które są jego podrzędnymi, oraz czy powiązanie to jest możliwe do określenia programowo przez technologie wspomagające",
+        ". Sprawdzić, czy elementy interfejsu użytkownika, które są elementami podrzędnymi elementu interfejsu użytkownika wybranego wg kryterium 3, zawierają informacje o powiązaniu z elementami interfejsu użytkownika, które są ich elementami nadrzędnymi, oraz czy powiązanie to jest możliwe do określenia programowo przez technologie wspomagające"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2. UWAGA: W przypadku tego wymagania wystarczy, że będzie możliwy do określenia programowo jeden z dwóch kierunków powiązania: element nadrzędny-podrzędny lub podrzędny-nadrzędny. To dlatego wymagania sprawdzane są w parach i uznaje się, że są spełnione, jeśli jeden element każdej pary jest prawdziwy"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-10",
+      "title": "Tekst",
+      "text": ". W przypadku wyświetlania tekstu na ekranie sprawdzić, czy informacje tekstowe zawierają swoją treść tekstową i czy informacje są możliwe do określenia programowo za pomocą technologii wspomagających",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "Istnieje tekst renderowany na ekranie"
+      ],
+      "procedure": [
+        ". W przypadku wyświetlania tekstu na ekranie sprawdzić, czy informacje tekstowe zawierają swoją treść tekstową i czy informacje są możliwe do określenia programowo za pomocą technologii wspomagających",
+        ". W przypadku wyświetlania tekstu na ekranie sprawdzić, czy informacje tekstowe zawierają swoje atrybuty i czy informacje te są możliwe do określenia programowo za pomocą technologii wspomagających",
+        ". W przypadku wyświetlania tekstu na ekranie sprawdzić, czy informacje tekstowe zawierają swoje ograniczenia i czy informacje te są możliwe do określenia programowo za pomocą technologii wspomagających"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-11",
+      "title": "Lista dostępnych działań",
+      "text": ". Sprawdzić, czy informacje o elementach interfejsu użytkownika zawierają listę działań, które można wykonać",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "Istnieją elementy interfejsu użytkownika zawierające działania, które może wykonać użytkownik"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy informacje o elementach interfejsu użytkownika zawierają listę działań, które można wykonać",
+        ". Sprawdzić, czy ta lista jest możliwa do określenia programowo za pomocą technologii wspomagających"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-12",
+      "title": "Wykonanie dostępnych działań",
+      "text": ". Sprawdzić, czy informacje o elementach interfejsu użytkownika zawierają listę działań, które można wykonać za pomocą technologii wspomagających zgodnie z Rozdziałem 11.5.2.11",
+      "assessmentType": "Kontrola i testowanie",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "Istnieją elementy interfejsu użytkownika zawierające działania, które może wykonać użytkownik",
+        "Wymagania bezpieczeństwa umożliwiają technologii wspomagającej programowe wykonywanie działań użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy informacje o elementach interfejsu użytkownika zawierają listę działań, które można wykonać za pomocą technologii wspomagających zgodnie z Rozdziałem 11.5.2.11",
+        ". Sprawdzić, czy wszystkie działania z listy można pomyślnie wykonać z użyciem technologii wspomagających"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-13",
+      "title": "Śledzenie elementów aktywnych i atrybutów wyboru",
+      "text": ". Sprawdzić, czy informacje o elementach interfejsu użytkownika zawierają mechanizmy śledzenia elementów aktywnych, punkt wprowadzania tekstu i atrybuty wyboru",
+      "assessmentType": "Kontrola i testowanie",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "Istnieją elementy interfejsu użytkownika, które umożliwiają edycję tekstu"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy informacje o elementach interfejsu użytkownika zawierają mechanizmy śledzenia elementów aktywnych, punkt wprowadzania tekstu i atrybuty wyboru",
+        ". Sprawdzić, czy te informacje są możliwe do określenia programowo za pomocą technologii wspomagających",
+        ". Aktywować te mechanizmy śledzenia",
+        ". Jako użytkownik użyć funkcjonalności edycji tekstu w ocenianym oprogramowaniu",
+        ". Sprawdzić, czy śledzenie elementów aktywnych, punkt wprowadzania tekstu i atrybuty wyboru działają poprawnie"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-14",
+      "title": "Modyfikowanie elementów aktywnych i atrybutów wyboru",
+      "text": ". W przypadku elementów interfejsu użytkownika, które mogą być elementami aktywnymi i dla których sposób oznaczania aktywności może być modyfikowany przez użytkownika bez użycia technologii wspomagającej, należy sprawdzić, czy element aktywny może być programowo modyfikowany przez technologie wspomagające",
+      "assessmentType": "Test",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "Istnieją elementy interfejsu użytkownika, które mogą być aktywne lub umożliwiają edycję tekstu",
+        "Wymagania bezpieczeństwa pozwalają oprogramowaniu platformy na programową modyfikację elementu aktywnego, punktu wstawiania tekstu oraz atrybutów wyboru elementów interfejsu użytkownika"
+      ],
+      "procedure": [
+        ". W przypadku elementów interfejsu użytkownika, które mogą być elementami aktywnymi i dla których sposób oznaczania aktywności może być modyfikowany przez użytkownika bez użycia technologii wspomagającej, należy sprawdzić, czy element aktywny może być programowo modyfikowany przez technologie wspomagające",
+        ". W przypadku elementów interfejsu użytkownika, które umożliwiają użytkownikowi edycję tekstu bez użycia technologii wspomagającej, należy sprawdzić, czy położenie punktu wstawiania tekstu może być programowo zmieniane z użyciem technologii wspomagających",
+        ". W przypadku elementów interfejsu użytkownika, które umożliwiają edycję tekstu, należy sprawdzić, czy atrybuty wyboru mogą być programowo modyfikowane za pomocą technologii wspomagających, gdzie mogą być modyfikowane przez użytkownika bez użycia technologii wspomagającej"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-15",
+      "title": "Powiadamianie o zmianach",
+      "text": ". Aktywować powiadomienia o zmianach w elementach interfejsu użytkownika",
+      "assessmentType": "Kontrola i testowanie",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika"
+      ],
+      "procedure": [
+        ". Aktywować powiadomienia o zmianach w elementach interfejsu użytkownika",
+        ". Sprawdzić, czy powiadomienia o zmianach informacji o obiektach (rola, stan, granica, nazwa i opis) są wysyłane do technologii pomocniczych, jeśli informacje te zmienią się w interfejsie użytkownika oprogramowania",
+        ". Sprawdzić, czy powiadomienia o zmianach w wierszach, kolumnach i nagłówkach tablic danych są wysyłane do technologii pomocniczych, jeśli informacje te zmienią się w oprogramowaniu",
+        ". Sprawdzić, czy powiadomienia o zmianach wartości (wartość bieżąca, wartość minimalna, wartość maksymalna) są wysyłane, jeśli informacje te zmienią się w oprogramowaniu",
+        ". Sprawdzić, czy powiadomienia o zmianach w zależnościach między etykietami są wysyłane do technologii pomocniczych, jeśli informacje te zmienią się w oprogramowaniu",
+        ". Sprawdzić, czy powiadomienia o zmianach w powiązaniach nadrzędny-podrzędny są wysyłane do technologii pomocniczych, jeśli informacje te zmienią się w oprogramowaniu",
+        ". Sprawdzić, czy powiadomienia o zmianach w tekście (zawartość tekstu, atrybuty tekstu i granica tekstu renderowanego na ekranie) są wysyłane do technologii pomocniczych, jeśli informacje te zmienią się w oprogramowaniu",
+        ". Sprawdzić, czy powiadomienia o zmianach w liście dostępnych działań są wysyłane do technologii pomocniczych, jeśli informacje te zmienią się w oprogramowaniu",
+        ". Sprawdzić, czy powiadomienia o zmianach atrybutów elementu aktywnego, punktu wprowadzania tekstu i wyboru są wysyłane do technologii pomocniczych, jeśli informacje te zmienią się w oprogramowaniu"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-16",
+      "title": "Modyfikacje stanów i właściwości",
+      "text": ". Sprawdzić, czy stan elementów interfejsu użytkownika, których stan użytkownik może zmieniać bez użycia technologii wspomagających, może być modyfikowany programowo za pomocą technologii wspomagających",
+      "assessmentType": "Test",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "Istnieją elementy interfejsu użytkownika, których stan lub właściwości użytkownik może modyfikować bez użycia technologii wspomagającej",
+        "Wymagania bezpieczeństwa dopuszczają modyfikowanie za pomocą technologii wspomagającej, stanów i właściwości elementów interfejsu użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy stan elementów interfejsu użytkownika, których stan użytkownik może zmieniać bez użycia technologii wspomagających, może być modyfikowany programowo za pomocą technologii wspomagających",
+        ". Sprawdzić, czy właściwości elementów interfejsu użytkownika, których właściwości użytkownik może zmieniać bez użycia technologii wspomagających, mogą być modyfikowane programowo za pomocą technologii wspomagających"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 5,
+      "id": "res-c-11-5-2-17",
+      "title": "Modyfikacje wartości i tekstu",
+      "text": ". Sprawdzić, czy wartości elementów interfejsu użytkownika, których wartości użytkownik może zmieniać bez użycia technologii wspomagających, mogą być modyfikowane za pomocą technologii wspomagających z użyciem metod wprowadzania danej platformy",
+      "assessmentType": "Test",
+      "preconditions": [
+        "Oceniane jest oprogramowanie z interfejsem użytkownika",
+        "Istnieją elementy interfejsu użytkownika, których wartości lub tekst użytkownik może modyfikować bez użycia technologii wspomagającej",
+        "Wymagania bezpieczeństwa dopuszczają modyfikowanie za pomocą technologii wspomagającej, wartości i tekstu elementów interfejsu użytkownika"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy wartości elementów interfejsu użytkownika, których wartości użytkownik może zmieniać bez użycia technologii wspomagających, mogą być modyfikowane za pomocą technologii wspomagających z użyciem metod wprowadzania danej platformy",
+        ". Sprawdzić, czy tekst elementów interfejsu użytkownika, których tekst użytkownik może zmieniać bez użycia technologii wspomagających, może być modyfikowany za pomocą technologii wspomagających z użyciem metod wprowadzania danej platformy"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-11-6",
+      "title": "Udokumentowane używanie funkcji dostępności",
+      "text": "Udokumentowane używanie funkcji dostępności"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-11-6-1",
+      "title": "Kontrola funkcji dostępności przez użytkownika",
+      "text": ". Sprawdzić, czy istnieją odpowiednie tryby pracy, w których możliwa jest  użytkowników nad funkcjami platformy zdefiniowanymi w dokumentacji platformy jako funkcje dostępności przeznaczone dla użytkowników",
+      "assessmentType": "Test",
+      "preconditions": [
+        "Istnieją funkcje platformy, które są zdefiniowane w dokumentacji platformy jako funkcje dostępności przeznaczone dla użytkowników"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy istnieją odpowiednie tryby pracy, w których możliwa jest  użytkowników nad funkcjami platformy zdefiniowanymi w dokumentacji platformy jako funkcje dostępności przeznaczone dla użytkowników"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-11-6-2",
+      "title": "Nieprzerwane działanie funkcji dostępności",
+      "text": ". Sprawdzić, czy oprogramowanie z interfejsem użytkownika przerywa normalne działanie funkcji dostępności platformy",
+      "assessmentType": "Test",
+      "preconditions": [
+        "Istnieją funkcje platformy, które są zdefiniowane w dokumentacji platformy jako funkcje dostępności"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie z interfejsem użytkownika przerywa normalne działanie funkcji dostępności platformy",
+        ". Sprawdzić, czy to przerwanie zostało wywołane lub zatwierdzone przez użytkownika"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 3,
+      "id": "res-c-11-7",
+      "title": "Preferencje użytkownika",
+      "text": ". Sprawdzić, czy oprogramowanie zapewnia tryb pracy zgodny z ustawieniami platformy",
+      "assessmentType": "Kontrola i testowanie",
+      "preconditions": [
+        "Oprogramowanie posiada interfejs użytkownika",
+        "Oprogramowanie zapewnia ustawienia języka, koloru, kontrastu, typu i rozmiaru czcionki oraz kursora fokusu, które odpowiadają ustawieniom platformy",
+        "Oprogramowanie nie jest przeznaczone do odizolowania od platform, na których jest oparte"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy oprogramowanie zapewnia tryb pracy zgodny z ustawieniami platformy"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1, 2 lub"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "id": "res-c-11-8",
+      "title": "Narzędzia do tworzenia treści",
+      "text": "Narzędzia do tworzenia treści"
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-11-8-1",
+      "title": "Technologia treści",
+      "text": ". Sprawdzić, czy narzędzie do tworzenia treści jest zgodne z Rozdziałami od 11.8.2 do 11.8.5 w zakresie, w jakim informacje wymagane ze względu na dostępność są obsługiwane przez format stosowany dla danych wyjściowych narzędzia do tworzenia treści",
+      "assessmentType": "Kontrola i testowanie",
+      "preconditions": [
+        "Oprogramowanie jest narzędziem autorskim",
+        "Format wyjściowy narzędzia do tworzenia treści obsługuje informacje wymagane przez funkcje dostępności"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy narzędzie do tworzenia treści jest zgodne z Rozdziałami od 11.8.2 do 11.8.5 w zakresie, w jakim informacje wymagane ze względu na dostępność są obsługiwane przez format stosowany dla danych wyjściowych narzędzia do tworzenia treści"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2 UWAGA: Jeśli format wyjściowy narzędzia do tworzenia treści nie obsługuje pewnych rodzajów informacji wymaganych dla dostępności, nie jest wymagana zgodność z wymaganiami odnoszącymi się do tego rodzaju informacji"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-11-8-2",
+      "title": "Tworzenie dostępnej treści",
+      "text": ". Sprawdzić, czy narzędzie do tworzenia treści ma cechy, które umożliwiają i wspomagają produkcję treści zgodnych z Rozdziałami 9 (Internet) i 10 (Dokumenty nieinternetowe)",
+      "assessmentType": "Kontrola i testowanie",
+      "preconditions": [
+        "Oprogramowanie jest narzędziem do tworzenia treści"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy narzędzie do tworzenia treści ma cechy, które umożliwiają i wspomagają produkcję treści zgodnych z Rozdziałami 9 (Internet) i 10 (Dokumenty nieinternetowe)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-11-8-3",
+      "title": "Zachowanie informacji o dostępności podczas transformacji",
+      "text": ". W przypadku transformacji restrukturyzacyjnej sprawdzić, czy w danych wyjściowych są zachowane informacje o dostępności",
+      "assessmentType": "Kontrola i testowanie",
+      "preconditions": [
+        "Oprogramowanie jest narzędziem do tworzenia treści",
+        "Narzędzie do tworzenia treści zapewnia transformacje restrukturyzacyjne lub ponownie kodujące"
+      ],
+      "procedure": [
+        ". W przypadku transformacji restrukturyzacyjnej sprawdzić, czy w danych wyjściowych są zachowane informacje o dostępności",
+        ". W przypadku transformacji restrukturyzacyjnej sprawdzić, czy technologia treści obsługuje informacje o dostępności dla restrukturyzowanej formy informacji",
+        ". W przypadku transformacji ponownie kodujących sprawdzić, czy w danych wyjściowych są zachowane informacje o dostępności",
+        ". W przypadku transformacji ponownie kodujących sprawdzić, czy informacje o dostępności są obsługiwane przez technologię ponownie zakodowanych danych wyjściowych"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-11-8-4",
+      "title": "Wspomaganie naprawy",
+      "text": ". Narzędzie do tworzenia treści proponuje sposób naprawy, jeśli zawartość nie spełnia wymagań Rozdziałów 9 lub 10 (w zależności od przypadku)",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Oprogramowanie jest narzędziem do tworzenia treści",
+        "Funkcjonalność sprawdzania dostępności narzędzia do tworzenia treści może wykryć, że zawartość nie spełnia wymagań określonych w Rozdziałach 9 (Internet) lub 10 (Dokumenty nieinternetowe), w zależności od przypadku"
+      ],
+      "procedure": [
+        ". Narzędzie do tworzenia treści proponuje sposób naprawy, jeśli zawartość nie spełnia wymagań Rozdziałów 9 lub 10 (w zależności od przypadku)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub"
+        }
+      ]
+    },
+    {
+      "type": "test",
+      "level": 4,
+      "id": "res-c-11-8-5",
+      "title": "Szablony",
+      "text": ". Sprawdzić, czy narzędzie do tworzenia treści udostępnia co najmniej jeden szablon, który wspiera tworzenie treści zgodnych z wymaganiami Rozdziałów 9 (Internet) lub 10 (Dokumenty nieinternetowe), w zależności od przypadku",
+      "assessmentType": "Kontrola",
+      "preconditions": [
+        "Oprogramowanie jest narzędziem do tworzenia treści",
+        "Narzędzie do tworzenia treści udostępnia szablony"
+      ],
+      "procedure": [
+        ". Sprawdzić, czy narzędzie do tworzenia treści udostępnia co najmniej jeden szablon, który wspiera tworzenie treści zgodnych z wymaganiami Rozdziałów 9 (Internet) lub 10 (Dokumenty nieinternetowe), w zależności od przypadku",
+        ". Sprawdzić, czy dostępny jest co najmniej jeden szablon określony w kroku 1 i czy jest on zgodny z Rozdziałami 9 lub 10 (w zależności od przypadku)"
+      ],
+      "results": [
+        {
+          "type": "Nie dotyczy",
+          "label": "Nie spełniono warunku wstępnego 1 lub 2. UWAGA: Identyfikacja zgodna z wymaganiami Rozdziałów 9 lub 10 (odpowiednio) opisanymi w kryterium 2 może być opisana słowami „Zgodna z WCAG 2.1”. Jeśli podczas identyfikacji nie można wyraźnie stwierdzić, że wszystkie wymagania określone w Rozdziałach 9 lub 10 (w zależności od przypadku) są spełnione, może być konieczne wykorzystanie szablonu do stworzenia strony internetowej lub dokumentu, a następnie przetestowanie tej strony internetowej lub dokumentu zgodnie z wymaganiami Rozdziałów 9 lub 10 w celu uzyskania całkowitej pewności, że szablon zachowuje się tak, jak jest to wymagane"
+        }
+      ]
+    }
+  ]
+}

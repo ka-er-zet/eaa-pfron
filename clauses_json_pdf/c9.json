@@ -1,0 +1,1837 @@
+{
+  "id": "c9",
+  "title": "Audyt Klauzuli 9: Strony internetowe (Web)",
+  "content": [
+    {
+      "type": "informative",
+      "text": "Audyt Klauzuli 9: Strony internetowe (Web)\nKlauzula 9.0 jest informacyjna i nie zawiera wymagań do testowania.\n"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.9.1 Postrzegalność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.1.1 Alternatywy tekstowe"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.1.1 Treść nietekstowa",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.1.1 Treść nietekstowa."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.1.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.1.1 Treści nietekstowe",
+        "noteId": "notes-c9-1-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.1.2 Multimedia"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.2.1 Tylko audio lub tylko wideo (nagranie)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.2.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.2.1 Tylko audio i tylko wideo (nagrane)",
+        "noteId": "notes-c9-1-2-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.2.2 Napisy rozszerzone (nagranie)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "11. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.2.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.2.2 Napisy (nagrane)",
+        "noteId": "notes-c9-1-2-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.2.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.2.3 Audiodeskrypcja lub alternatywa dla mediów (nagrane)",
+        "noteId": "notes-c9-1-2-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.2.4 Napisy rozszerzone (na żywo)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.2.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.2.4 Napisy (na żywo)",
+        "noteId": "notes-c9-1-2-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.2.5 Audiodeskrypcja (nagranie)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.2.5."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.2.5 Audiodeskrypcja (nagrana)",
+        "noteId": "notes-c9-1-2-5"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.1.3 Możliwość adaptacji"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.3.1 Informacje i relacje",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.3.1 Informacje i relacje."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.3.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.3.1 Informacje i relacje",
+        "noteId": "notes-c9-1-3-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.3.2 Zrozumiała kolejność",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.3.2 Zrozumiała kolejność."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.3.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.3.2 Zrozumiała kolejność",
+        "noteId": "notes-c9-1-3-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.3.3 Właściwości zmysłowe",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.3.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.3.3 Charakterystyka zmysłowa",
+        "noteId": "notes-c9-1-3-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.3.4 Orientacja",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.3.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.3.4 Orientacja",
+        "noteId": "notes-c9-1-3-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.3.5 Określenie pożądanej wartości",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.3.5."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.3.5 Określenie przeznaczenia pól",
+        "noteId": "notes-c9-1-3-5"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.1.4 Rozróżnialność"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.4.1 Użycie koloru",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.4.1 Użycie koloru",
+        "noteId": "notes-c9-1-4-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.4.2 Kontrola odtwarzania dźwięku",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.4.2 Kontrola odtwarzania dźwięku."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.4.2 Kontrola dźwięku",
+        "noteId": "notes-c9-1-4-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.4.3 Kontrast (minimum)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.4.3 Kontrast (minimalny)",
+        "noteId": "notes-c9-1-4-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.4.4 Zmiana rozmiaru tekstu",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. TIK jest stroną internetową.",
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.4.4 Zmiana rozmiaru tekstu",
+        "noteId": "notes-c9-1-4-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.4.5 Obrazy tekstu",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.5."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.4.5 Obrazy tekstu",
+        "noteId": "notes-c9-1-4-5"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.4.10 Dopasowanie do ekranu",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.4.10 Dopasowanie do ekranu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.10."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.4.10 Zawijanie tekstu (Reflow)",
+        "noteId": "notes-c9-1-4-10"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.4.11 Kontrast elementów nietekstowych",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.11."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.4.11 Kontrast elementów nietekstowych",
+        "noteId": "notes-c9-1-4-11"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.4.12 Odstępy w tekście",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.12."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.4.12 Odstępy w tekście",
+        "noteId": "notes-c9-1-4-12"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.1.4.13 Treść spod kursora lub fokusu",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.13."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.1.4.13 Treść spod wskaźnika lub fokusu",
+        "noteId": "notes-c9-1-4-13"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.9.2 Funkcjonalność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.2.1 Dostępność z klawiatury"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.1.1 Klawiatura",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.1.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.1.1 Klawiatura",
+        "noteId": "notes-c9-2-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.1.2 Bez pułapki na klawiaturę",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.1.2 Bez pułapki na klawiaturę."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.1.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.1.2 Brak pułapki na klawiaturę",
+        "noteId": "notes-c9-2-1-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.1.4 Jednoznakowe skróty klawiaturowe",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiaturowe."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.1.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.1.4 Skróty klawiszowe",
+        "noteId": "notes-c9-2-1-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.2.2 Wystarczający czas"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.2.1 Dostosowanie czasu",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.2.1 Dostosowanie czasu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.2.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.2.1 Możliwość regulacji czasu",
+        "noteId": "notes-c9-2-2-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.2.2 Pauza, zatrzymanie, ukrycie",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.2.2 Pauza, zatrzymanie, ukrycie."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.2.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.2.2 Pauza, zatrzymanie, ukrycie",
+        "noteId": "notes-c9-2-2-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.2.3 Ataki padaczki"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.3.1 Trzy błyski lub wartości poniżej progu",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.3.1 Trzy błyski lub wartości poniżej progu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.3.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.3.1 Trzy błyski lub mniej",
+        "noteId": "notes-c9-2-3-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.2.4 Możliwość nawigacji"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.4.1 Możliwość pominięcia bloków",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.4.1 Możliwość pominięcia boków."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.4.1 Możliwość pominięcia bloków",
+        "noteId": "notes-c9-2-4-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.4.2 Tytuł strony",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.4.2 Tytuł strony."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.4.2 Tytuły stron",
+        "noteId": "notes-c9-2-4-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.4.3 Kolejność fokusu",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.4.3 Kolejność fokusu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.4.3 Kolejność fokusu",
+        "noteId": "notes-c9-2-4-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.4.4 Cel łącza (w kontekście)",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.4.4 Cel odnośnika (w kontekście)",
+        "noteId": "notes-c9-2-4-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.4.5 Wiele dróg",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.4.5 Wiele dróg."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.5."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.4.5 Wiele dróg",
+        "noteId": "notes-c9-2-4-5"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.4.6 Nagłówki i etykiety",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.6."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.4.6 Nagłówki i etykiety",
+        "noteId": "notes-c9-2-4-6"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.4.7 Widoczny fokus",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.7."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.4.7 Widoczny fokus",
+        "noteId": "notes-c9-2-4-7"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.2.5 Metody obsługi"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.5.1 Gesty dotykowe",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.5.1 Gesty dotykowe."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.5.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.5.1 Gesty wskazujące",
+        "noteId": "notes-c9-2-5-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.5.2 Rezygnacja ze wskazania",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.5.2 Rezygnacja ze wskazania."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.5.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.5.2 Anulowanie zdarzenia wskaźnika",
+        "noteId": "notes-c9-2-5-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.5.3 Etykieta w nazwie",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.5.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.5.3 Etykieta w nazwie",
+        "noteId": "notes-c9-2-5-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.2.5.4 Aktywowanie ruchem",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.5.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.2.5.4 Uruchamianie przez ruch",
+        "noteId": "notes-c9-2-5-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.9.3 Zrozumiałość"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.3.1 Możliwość odczytania"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.3.1.1 Język strony",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 3.1.1 Język strony."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.1.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.3.1.1 Język strony",
+        "noteId": "notes-c9-3-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.3.1.2 Język części",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 3.1.2 Język części."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.1.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.3.1.2 Język części",
+        "noteId": "notes-c9-3-1-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.3.2 Przewidywalność"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.3.2.1 Po otrzymaniu fokusu",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.2.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.3.2.1 Przy fokusie",
+        "noteId": "notes-c9-3-2-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.3.2.2 Podczas wprowadzania danych",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.2.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.3.2.2 Przy wprowadzaniu danych",
+        "noteId": "notes-c9-3-2-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.3.2.3 Spójna nawigacja",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 3.2.3 Spójna nawigacja."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.2.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.3.2.3 Spójna nawigacja",
+        "noteId": "notes-c9-3-2-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.3.2.4 Spójna identyfikacja",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 3.2.4 Spójna identyfikacja."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.2.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.3.2.4 Spójna identyfikacja",
+        "noteId": "notes-c9-3-2-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.3.3 Pomoc przy wprowadzaniu informacji"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.3.3.1 Identyfikacja błędu",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.3.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.3.3.1 Identyfikacja błędu",
+        "noteId": "notes-c9-3-3-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.3.3.2 Etykiety lub instrukcje",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.3.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.3.3.2 Etykiety lub instrukcje",
+        "noteId": "notes-c9-3-3-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.3.3.3 Sugestie korekty błędów",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.3.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.3.3.3 Sugestie (błędy)",
+        "noteId": "notes-c9-3-3-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.3.4."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.3.3.4 Zapobieganie błędom (prawne, finansowe, dane)",
+        "noteId": "notes-c9-3-3-4"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.9.4 Solidność"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.9.4.1 Kompatybilność"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.4.1.1 Poprawność kodu",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 4.1.1 Poprawność kodu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 4.1.1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.4.1.1 Parsowanie",
+        "noteId": "notes-c9-4-1-1"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.4.1.2 Nazwa, rola, wartość",
+      "wcag_level": "A"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 4.1.2 Nazwa, rola, wartość."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 4.1.2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.4.1.2 Nazwa, rola, wartość",
+        "noteId": "notes-c9-4-1-2"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.9.4.1.3 Komunikaty o stanie",
+      "wcag_level": "AA"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 4.1.3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.4.1.3 Komunikaty o stanie",
+        "noteId": "notes-c9-4-1-3"
+      },
+      "evaluationType": "Inspection"
+    },
+    {
+      "type": "informative",
+      "text": "Uwagi:\nKlauzula 9.5 jest informacyjna i nie zawiera wymagań do testowania.\n"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "C.9.6 Wymagania zgodności WCAG 2.1"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest stroną internetową."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy strona internetowa spełnia wymaganie zgodności wg WCAG 2.1 [5] „1: Poziom zgodności” na poziomie AA.",
+        "2. Sprawdź, czy strona internetowa spełnia wymaganie zgodności wg WCAG 2.1 [5] „2: Całe strony” .",
+        "3. Sprawdź, czy strona internetowa spełnia wymaganie zgodności wg WCAG 2.1 [5] „3: Całe procesy” .",
+        "4. Sprawdź, czy strona internetowa spełnia wymaganie zgodności wg WCAG 2.1 [5] „4: Użycie technologii obsługujących dostępność” .",
+        "5. Sprawdź, czy strona internetowa spełnia wymaganie zgodności wg WCAG 2.1 [5] „5: Bez zakłóceń” ."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Wszystkie sprawdzenia są prawdziwe."
+          },
+          {
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Którekolwiek sprawdzenie jest fałszywe."
+          },
+          {
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.9.6 Wymagania zgodności WCAG 2.1",
+        "noteId": "notes-c9-6"
+      },
+      "evaluationType": "Inspection"
+    }
+  ]
+}
