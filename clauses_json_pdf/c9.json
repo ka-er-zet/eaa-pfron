@@ -9,17 +9,17 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.9.1 Postrzegalność"
+      "text": "C.9.1 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.1.1 Alternatywy tekstowe"
+      "text": "C.9.1.1 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.1.1 Treść nietekstowa",
+      "text": "C.9.1.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -34,31 +34,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.1.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.1.1 Treść nietekstowa."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.1.1 Treści nietekstowe",
-        "noteId": "notes-c9-1-1-1"
+        "legend": "Wybierz wynik dla C.9.1.1.1 None",
+        "noteId": "notes-c-9-1-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.1.2 Multimedia"
+      "text": "C.9.1.2 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.2.1 Tylko audio lub tylko wideo (nagranie)",
+      "text": "C.9.1.2.1 None",
       "wcag_level": "A"
     },
     {
@@ -73,26 +73,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.2.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.2.1 Tylko audio i tylko wideo (nagrane)",
-        "noteId": "notes-c9-1-2-1"
+        "legend": "Wybierz wynik dla C.9.1.2.1 None",
+        "noteId": "notes-c-9-1-2-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.2.2 Napisy rozszerzone (nagranie)",
+      "text": "C.9.1.2.2 None",
       "wcag_level": "A"
     },
     {
@@ -107,26 +107,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.2.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie). EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.2.2 Napisy (nagrane)",
-        "noteId": "notes-c9-1-2-2"
+        "legend": "Wybierz wynik dla C.9.1.2.2 None",
+        "noteId": "notes-c-9-1-2-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)",
+      "text": "C.9.1.2.3 None",
       "wcag_level": "A"
     },
     {
@@ -141,26 +141,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.2.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.2.3 Audiodeskrypcja lub alternatywa dla mediów (nagrane)",
-        "noteId": "notes-c9-1-2-3"
+        "legend": "Wybierz wynik dla C.9.1.2.3 None",
+        "noteId": "notes-c-9-1-2-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.2.4 Napisy rozszerzone (na żywo)",
+      "text": "C.9.1.2.4 None",
       "wcag_level": "AA"
     },
     {
@@ -175,26 +175,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.2.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.2.4 Napisy (na żywo)",
-        "noteId": "notes-c9-1-2-4"
+        "legend": "Wybierz wynik dla C.9.1.2.4 None",
+        "noteId": "notes-c-9-1-2-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.2.5 Audiodeskrypcja (nagranie)",
+      "text": "C.9.1.2.5 None",
       "wcag_level": "AA"
     },
     {
@@ -209,31 +209,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.2.5."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie). EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.2.5 Audiodeskrypcja (nagrana)",
-        "noteId": "notes-c9-1-2-5"
+        "legend": "Wybierz wynik dla C.9.1.2.5 None",
+        "noteId": "notes-c-9-1-2-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.1.3 Możliwość adaptacji"
+      "text": "C.9.1.3 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.3.1 Informacje i relacje",
+      "text": "C.9.1.3.1 None",
       "wcag_level": "A"
     },
     {
@@ -248,26 +248,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.3.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.1 Informacje i relacje."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.3.1 Informacje i relacje",
-        "noteId": "notes-c9-1-3-1"
+        "legend": "Wybierz wynik dla C.9.1.3.1 None",
+        "noteId": "notes-c-9-1-3-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.3.2 Zrozumiała kolejność",
+      "text": "C.9.1.3.2 None",
       "wcag_level": "A"
     },
     {
@@ -282,26 +282,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.3.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.2 Zrozumiała kolejność."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.3.2 Zrozumiała kolejność",
-        "noteId": "notes-c9-1-3-2"
+        "legend": "Wybierz wynik dla C.9.1.3.2 None",
+        "noteId": "notes-c-9-1-3-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.3.3 Właściwości zmysłowe",
+      "text": "C.9.1.3.3 None",
       "wcag_level": "A"
     },
     {
@@ -316,26 +316,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.3.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.3.3 Charakterystyka zmysłowa",
-        "noteId": "notes-c9-1-3-3"
+        "legend": "Wybierz wynik dla C.9.1.3.3 None",
+        "noteId": "notes-c-9-1-3-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.3.4 Orientacja",
+      "text": "C.9.1.3.4 None",
       "wcag_level": "AA"
     },
     {
@@ -350,26 +350,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.3.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.3.4 Orientacja",
-        "noteId": "notes-c9-1-3-4"
+        "legend": "Wybierz wynik dla C.9.1.3.4 None",
+        "noteId": "notes-c-9-1-3-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.3.5 Określenie pożądanej wartości",
+      "text": "C.9.1.3.5 None",
       "wcag_level": "AA"
     },
     {
@@ -384,31 +384,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.3.5."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.3.5 Określenie przeznaczenia pól",
-        "noteId": "notes-c9-1-3-5"
+        "legend": "Wybierz wynik dla C.9.1.3.5 None",
+        "noteId": "notes-c-9-1-3-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.1.4 Rozróżnialność"
+      "text": "C.9.1.4 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.4.1 Użycie koloru",
+      "text": "C.9.1.4.1 None",
       "wcag_level": "A"
     },
     {
@@ -423,26 +423,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.4.1 Użycie koloru",
-        "noteId": "notes-c9-1-4-1"
+        "legend": "Wybierz wynik dla C.9.1.4.1 None",
+        "noteId": "notes-c-9-1-4-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.4.2 Kontrola odtwarzania dźwięku",
+      "text": "C.9.1.4.2 None",
       "wcag_level": "A"
     },
     {
@@ -457,26 +457,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.2 Kontrola odtwarzania dźwięku. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.4.2 Kontrola dźwięku",
-        "noteId": "notes-c9-1-4-2"
+        "legend": "Wybierz wynik dla C.9.1.4.2 None",
+        "noteId": "notes-c-9-1-4-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.4.3 Kontrast (minimum)",
+      "text": "C.9.1.4.3 None",
       "wcag_level": "AA"
     },
     {
@@ -491,26 +491,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.4.3 Kontrast (minimalny)",
-        "noteId": "notes-c9-1-4-3"
+        "legend": "Wybierz wynik dla C.9.1.4.3 None",
+        "noteId": "notes-c-9-1-4-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.4.4 Zmiana rozmiaru tekstu",
+      "text": "C.9.1.4.4 None",
       "wcag_level": "AA"
     },
     {
@@ -526,26 +526,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.4.4 Zmiana rozmiaru tekstu",
-        "noteId": "notes-c9-1-4-4"
+        "legend": "Wybierz wynik dla C.9.1.4.4 None",
+        "noteId": "notes-c-9-1-4-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.4.5 Obrazy tekstu",
+      "text": "C.9.1.4.5 None",
       "wcag_level": "AA"
     },
     {
@@ -560,26 +560,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.5."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.4.5 Obrazy tekstu",
-        "noteId": "notes-c9-1-4-5"
+        "legend": "Wybierz wynik dla C.9.1.4.5 None",
+        "noteId": "notes-c-9-1-4-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.4.10 Dopasowanie do ekranu",
+      "text": "C.9.1.4.10 None",
       "wcag_level": "AA"
     },
     {
@@ -594,26 +594,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.10."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.10 Dopasowanie do ekranu."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.4.10 Zawijanie tekstu (Reflow)",
-        "noteId": "notes-c9-1-4-10"
+        "legend": "Wybierz wynik dla C.9.1.4.10 None",
+        "noteId": "notes-c-9-1-4-10"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.4.11 Kontrast elementów nietekstowych",
+      "text": "C.9.1.4.11 None",
       "wcag_level": "AA"
     },
     {
@@ -628,26 +628,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.11."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.4.11 Kontrast elementów nietekstowych",
-        "noteId": "notes-c9-1-4-11"
+        "legend": "Wybierz wynik dla C.9.1.4.11 None",
+        "noteId": "notes-c-9-1-4-11"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.4.12 Odstępy w tekście",
+      "text": "C.9.1.4.12 None",
       "wcag_level": "AA"
     },
     {
@@ -662,26 +662,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.12."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.4.12 Odstępy w tekście",
-        "noteId": "notes-c9-1-4-12"
+        "legend": "Wybierz wynik dla C.9.1.4.12 None",
+        "noteId": "notes-c-9-1-4-12"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.4.13 Treść spod kursora lub fokusu",
+      "text": "C.9.1.4.13 None",
       "wcag_level": "AA"
     },
     {
@@ -696,36 +696,36 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 1.4.13."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.4.13 Treść spod wskaźnika lub fokusu",
-        "noteId": "notes-c9-1-4-13"
+        "legend": "Wybierz wynik dla C.9.1.4.13 None",
+        "noteId": "notes-c-9-1-4-13"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.9.2 Funkcjonalność"
+      "text": "C.9.2 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.2.1 Dostępność z klawiatury"
+      "text": "C.9.2.1 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.1.1 Klawiatura",
+      "text": "C.9.2.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -740,26 +740,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.1.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.1.1 Klawiatura",
-        "noteId": "notes-c9-2-1-1"
+        "legend": "Wybierz wynik dla C.9.2.1.1 None",
+        "noteId": "notes-c-9-2-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.1.2 Bez pułapki na klawiaturę",
+      "text": "C.9.2.1.2 None",
       "wcag_level": "A"
     },
     {
@@ -774,26 +774,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.1.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.2 Bez pułapki na klawiaturę."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.1.2 Brak pułapki na klawiaturę",
-        "noteId": "notes-c9-2-1-2"
+        "legend": "Wybierz wynik dla C.9.2.1.2 None",
+        "noteId": "notes-c-9-2-1-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.1.4 Jednoznakowe skróty klawiaturowe",
+      "text": "C.9.2.1.4 None",
       "wcag_level": "A"
     },
     {
@@ -808,31 +808,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.1.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiaturowe. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.1.4 Skróty klawiszowe",
-        "noteId": "notes-c9-2-1-4"
+        "legend": "Wybierz wynik dla C.9.2.1.4 None",
+        "noteId": "notes-c-9-2-1-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.2.2 Wystarczający czas"
+      "text": "C.9.2.2 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.2.1 Dostosowanie czasu",
+      "text": "C.9.2.2.1 None",
       "wcag_level": "A"
     },
     {
@@ -847,26 +847,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.2.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.2.1 Dostosowanie czasu."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.2.1 Możliwość regulacji czasu",
-        "noteId": "notes-c9-2-2-1"
+        "legend": "Wybierz wynik dla C.9.2.2.1 None",
+        "noteId": "notes-c-9-2-2-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.2.2 Pauza, zatrzymanie, ukrycie",
+      "text": "C.9.2.2.2 None",
       "wcag_level": "A"
     },
     {
@@ -881,31 +881,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.2.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.2.2 Pauza, zatrzymanie, ukrycie."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.2.2 Pauza, zatrzymanie, ukrycie",
-        "noteId": "notes-c9-2-2-2"
+        "legend": "Wybierz wynik dla C.9.2.2.2 None",
+        "noteId": "notes-c-9-2-2-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.2.3 Ataki padaczki"
+      "text": "C.9.2.3 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.3.1 Trzy błyski lub wartości poniżej progu",
+      "text": "C.9.2.3.1 None",
       "wcag_level": "A"
     },
     {
@@ -920,31 +920,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.3.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.3.1 Trzy błyski lub wartości poniżej progu. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.3.1 Trzy błyski lub mniej",
-        "noteId": "notes-c9-2-3-1"
+        "legend": "Wybierz wynik dla C.9.2.3.1 None",
+        "noteId": "notes-c-9-2-3-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.2.4 Możliwość nawigacji"
+      "text": "C.9.2.4 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.4.1 Możliwość pominięcia bloków",
+      "text": "C.9.2.4.1 None",
       "wcag_level": "A"
     },
     {
@@ -959,26 +959,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.1 Możliwość pominięcia bloków."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.4.1 Możliwość pominięcia bloków",
-        "noteId": "notes-c9-2-4-1"
+        "legend": "Wybierz wynik dla C.9.2.4.1 None",
+        "noteId": "notes-c-9-2-4-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.4.2 Tytuł strony",
+      "text": "C.9.2.4.2 None",
       "wcag_level": "A"
     },
     {
@@ -993,26 +993,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.2 Tytuł strony."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.4.2 Tytuły stron",
-        "noteId": "notes-c9-2-4-2"
+        "legend": "Wybierz wynik dla C.9.2.4.2 None",
+        "noteId": "notes-c-9-2-4-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.4.3 Kolejność fokusu",
+      "text": "C.9.2.4.3 None",
       "wcag_level": "A"
     },
     {
@@ -1027,26 +1027,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.3 Kolejność fokusu."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.4.3 Kolejność fokusu",
-        "noteId": "notes-c9-2-4-3"
+        "legend": "Wybierz wynik dla C.9.2.4.3 None",
+        "noteId": "notes-c-9-2-4-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.4.4 Cel łącza (w kontekście)",
+      "text": "C.9.2.4.4 None",
       "wcag_level": "A"
     },
     {
@@ -1061,26 +1061,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście). EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.4.4 Cel odnośnika (w kontekście)",
-        "noteId": "notes-c9-2-4-4"
+        "legend": "Wybierz wynik dla C.9.2.4.4 None",
+        "noteId": "notes-c-9-2-4-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.4.5 Wiele dróg",
+      "text": "C.9.2.4.5 None",
       "wcag_level": "AA"
     },
     {
@@ -1095,26 +1095,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.5."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.5 Wiele dróg."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.4.5 Wiele dróg",
-        "noteId": "notes-c9-2-4-5"
+        "legend": "Wybierz wynik dla C.9.2.4.5 None",
+        "noteId": "notes-c-9-2-4-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.4.6 Nagłówki i etykiety",
+      "text": "C.9.2.4.6 None",
       "wcag_level": "AA"
     },
     {
@@ -1129,26 +1129,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.6."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.4.6 Nagłówki i etykiety",
-        "noteId": "notes-c9-2-4-6"
+        "legend": "Wybierz wynik dla C.9.2.4.6 None",
+        "noteId": "notes-c-9-2-4-6"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.4.7 Widoczny fokus",
+      "text": "C.9.2.4.7 None",
       "wcag_level": "AA"
     },
     {
@@ -1163,31 +1163,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.4.7."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.4.7 Widoczny fokus",
-        "noteId": "notes-c9-2-4-7"
+        "legend": "Wybierz wynik dla C.9.2.4.7 None",
+        "noteId": "notes-c-9-2-4-7"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.2.5 Metody obsługi"
+      "text": "C.9.2.5 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.5.1 Gesty dotykowe",
+      "text": "C.9.2.5.1 None",
       "wcag_level": "A"
     },
     {
@@ -1202,26 +1202,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.5.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.1 Gesty dotykowe. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.5.1 Gesty wskazujące",
-        "noteId": "notes-c9-2-5-1"
+        "legend": "Wybierz wynik dla C.9.2.5.1 None",
+        "noteId": "notes-c-9-2-5-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.5.2 Rezygnacja ze wskazania",
+      "text": "C.9.2.5.2 None",
       "wcag_level": "A"
     },
     {
@@ -1236,26 +1236,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.5.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.2 Rezygnacja ze wskazania."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.5.2 Anulowanie zdarzenia wskaźnika",
-        "noteId": "notes-c9-2-5-2"
+        "legend": "Wybierz wynik dla C.9.2.5.2 None",
+        "noteId": "notes-c-9-2-5-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.5.3 Etykieta w nazwie",
+      "text": "C.9.2.5.3 None",
       "wcag_level": "A"
     },
     {
@@ -1270,26 +1270,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.5.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.5.3 Etykieta w nazwie",
-        "noteId": "notes-c9-2-5-3"
+        "legend": "Wybierz wynik dla C.9.2.5.3 None",
+        "noteId": "notes-c-9-2-5-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.5.4 Aktywowanie ruchem",
+      "text": "C.9.2.5.4 None",
       "wcag_level": "A"
     },
     {
@@ -1304,36 +1304,36 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 2.5.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.5.4 Uruchamianie przez ruch",
-        "noteId": "notes-c9-2-5-4"
+        "legend": "Wybierz wynik dla C.9.2.5.4 None",
+        "noteId": "notes-c-9-2-5-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.9.3 Zrozumiałość"
+      "text": "C.9.3 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.3.1 Możliwość odczytania"
+      "text": "C.9.3.1 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.1.1 Język strony",
+      "text": "C.9.3.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -1348,26 +1348,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.1.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.1.1 Język strony."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.1.1 Język strony",
-        "noteId": "notes-c9-3-1-1"
+        "legend": "Wybierz wynik dla C.9.3.1.1 None",
+        "noteId": "notes-c-9-3-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.1.2 Język części",
+      "text": "C.9.3.1.2 None",
       "wcag_level": "AA"
     },
     {
@@ -1382,31 +1382,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.1.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.1.2 Język części."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.1.2 Język części",
-        "noteId": "notes-c9-3-1-2"
+        "legend": "Wybierz wynik dla C.9.3.1.2 None",
+        "noteId": "notes-c-9-3-1-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.3.2 Przewidywalność"
+      "text": "C.9.3.2 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.2.1 Po otrzymaniu fokusu",
+      "text": "C.9.3.2.1 None",
       "wcag_level": "A"
     },
     {
@@ -1421,26 +1421,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.2.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.2.1 Przy fokusie",
-        "noteId": "notes-c9-3-2-1"
+        "legend": "Wybierz wynik dla C.9.3.2.1 None",
+        "noteId": "notes-c-9-3-2-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.2.2 Podczas wprowadzania danych",
+      "text": "C.9.3.2.2 None",
       "wcag_level": "A"
     },
     {
@@ -1455,26 +1455,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.2.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.2.2 Przy wprowadzaniu danych",
-        "noteId": "notes-c9-3-2-2"
+        "legend": "Wybierz wynik dla C.9.3.2.2 None",
+        "noteId": "notes-c-9-3-2-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.2.3 Spójna nawigacja",
+      "text": "C.9.3.2.3 None",
       "wcag_level": "AA"
     },
     {
@@ -1489,26 +1489,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.2.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.3 Spójna nawigacja."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.2.3 Spójna nawigacja",
-        "noteId": "notes-c9-3-2-3"
+        "legend": "Wybierz wynik dla C.9.3.2.3 None",
+        "noteId": "notes-c-9-3-2-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.2.4 Spójna identyfikacja",
+      "text": "C.9.3.2.4 None",
       "wcag_level": "AA"
     },
     {
@@ -1523,31 +1523,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.2.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.4 Spójna identyfikacja."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.2.4 Spójna identyfikacja",
-        "noteId": "notes-c9-3-2-4"
+        "legend": "Wybierz wynik dla C.9.3.2.4 None",
+        "noteId": "notes-c-9-3-2-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.3.3 Pomoc przy wprowadzaniu informacji"
+      "text": "C.9.3.3 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.3.1 Identyfikacja błędu",
+      "text": "C.9.3.3.1 None",
       "wcag_level": "A"
     },
     {
@@ -1562,26 +1562,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.3.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.3.1 Identyfikacja błędu",
-        "noteId": "notes-c9-3-3-1"
+        "legend": "Wybierz wynik dla C.9.3.3.1 None",
+        "noteId": "notes-c-9-3-3-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.3.2 Etykiety lub instrukcje",
+      "text": "C.9.3.3.2 None",
       "wcag_level": "A"
     },
     {
@@ -1596,26 +1596,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.3.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.3.2 Etykiety lub instrukcje",
-        "noteId": "notes-c9-3-3-2"
+        "legend": "Wybierz wynik dla C.9.3.3.2 None",
+        "noteId": "notes-c-9-3-3-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.3.3 Sugestie korekty błędów",
+      "text": "C.9.3.3.3 None",
       "wcag_level": "AA"
     },
     {
@@ -1630,26 +1630,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.3.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.3.3 Sugestie (błędy)",
-        "noteId": "notes-c9-3-3-3"
+        "legend": "Wybierz wynik dla C.9.3.3.3 None",
+        "noteId": "notes-c-9-3-3-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
+      "text": "C.9.3.3.4 None",
       "wcag_level": "AA"
     },
     {
@@ -1664,36 +1664,36 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 3.3.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych). EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.3.4 Zapobieganie błędom (prawne, finansowe, dane)",
-        "noteId": "notes-c9-3-3-4"
+        "legend": "Wybierz wynik dla C.9.3.3.4 None",
+        "noteId": "notes-c-9-3-3-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.9.4 Solidność"
+      "text": "C.9.4 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.4.1 Kompatybilność"
+      "text": "C.9.4.1 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.4.1.1 Poprawność kodu",
+      "text": "C.9.4.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -1708,26 +1708,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 4.1.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.1 Poprawność kodu."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.4.1.1 Parsowanie",
-        "noteId": "notes-c9-4-1-1"
+        "legend": "Wybierz wynik dla C.9.4.1.1 None",
+        "noteId": "notes-c-9-4-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.4.1.2 Nazwa, rola, wartość",
+      "text": "C.9.4.1.2 None",
       "wcag_level": "A"
     },
     {
@@ -1742,26 +1742,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 4.1.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.2 Nazwa, rola, wartość."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.4.1.2 Nazwa, rola, wartość",
-        "noteId": "notes-c9-4-1-2"
+        "legend": "Wybierz wynik dla C.9.4.1.2 None",
+        "noteId": "notes-c-9-4-1-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.4.1.3 Komunikaty o stanie",
+      "text": "C.9.4.1.3 None",
       "wcag_level": "AA"
     },
     {
@@ -1776,19 +1776,19 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub strona nie zawiera treści istotnych dla KS WCAG 2.1 4.1.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.4.1.3 Komunikaty o stanie",
-        "noteId": "notes-c9-4-1-3"
+        "legend": "Wybierz wynik dla C.9.4.1.3 None",
+        "noteId": "notes-c-9-4-1-3"
       },
       "evaluationType": "Inspection"
     },
@@ -1799,7 +1799,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.9.6 Wymagania zgodności WCAG 2.1"
+      "text": "C.9.6 None"
     },
     {
       "type": "test",
@@ -1817,19 +1817,19 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Wszystkie sprawdzenia są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Wszystkie kryteria: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Którekolwiek sprawdzenie jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Dowolne kryterium: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. C.10 Dokumenty nieinternetowe"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.6 Wymagania zgodności WCAG 2.1",
-        "noteId": "notes-c9-6"
+        "legend": "Wybierz wynik dla C.9.6 None",
+        "noteId": "notes-c-9-6"
       },
       "evaluationType": "Inspection"
     }

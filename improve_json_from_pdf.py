@@ -39,8 +39,8 @@ def parse_pdf_text(text):
     """
     clauses = {}
     
-    # Regex to find clause headings like C.5.1.2.1
-    clause_pattern = re.compile(r"(C\.\d+(\.\d+)+)\s+(.+)")
+    # Regex to find clause headings like C.5.1.2.1 or C.6.2.3.a
+    clause_pattern = re.compile(r"(C\.\d+(\.\d+)+(\.[a-z])?)\s+(.+)")
     
     # Regex to detect "Test nr X" markers
     test_marker_pattern = re.compile(r"Test\s+nr\s+(\d+)", re.IGNORECASE)
@@ -66,7 +66,8 @@ def parse_pdf_text(text):
                 'title': match.group(3),
                 'preconditions': [],
                 'procedure': [],
-                'results': []
+                'results': [],
+                'notes': []
             }
             current_section = None
             continue
@@ -85,8 +86,10 @@ def parse_pdf_text(text):
                             'title': clauses[current_clause_id]['title'],
                             'preconditions': [],
                             'procedure': [],
-                            'results': []
+                            'results': [],
+                            'notes': []
                         }
+                    current_section = None
                 continue
             
             # Determine which clause entry to update
@@ -120,6 +123,14 @@ def parse_pdf_text(text):
                      if cleaned.strip():
                          clauses[active_key][current_section].append(cleaned.strip())
                 continue
+            elif "uwaga" in lower_line:
+                current_section = 'notes'
+                # Check if there is content after the header
+                if len(line) > 6:
+                     cleaned = re.sub(r"Uwaga:?\s*", "", line, flags=re.IGNORECASE)
+                     if cleaned.strip():
+                         clauses[active_key][current_section].append(cleaned.strip())
+                continue
                 
             # Capture content
             if current_section:
@@ -128,6 +139,15 @@ def parse_pdf_text(text):
                     continue
                 if "Licencja Polskiego Komitetu Normalizacyjnego" in line:
                     continue
+                
+                # Heuristic: If we are in preconditions/procedure, and we see result keywords, it's likely leakage from previous test results
+                if current_section in ['preconditions', 'procedure']:
+                    if line.startswith("Pozytywny") or line.startswith("Negatywny") or line.startswith("Nie dotyczy") or line.startswith("Nie do sprawdzenia"):
+                        continue
+                    if "Kryterium" in line and ("prawda" in line or "fałsz" in line):
+                        continue
+                    if "EN 301 549" in line:
+                        continue
                     
                 clauses[active_key][current_section].append(line)
 
@@ -201,10 +221,11 @@ def generate_form_from_results(results_lines, clause_id, title):
     # Join all lines into one text block
     full_text = " ".join(results_lines)
     
-    # Split by the three keywords
+    # Split by the four keywords
     pass_label = None
     fail_label = None
     na_label = None
+    nt_label = None
     
     # Extract Pozytywny section
     if "Pozytywny:" in full_text:
@@ -229,7 +250,17 @@ def generate_form_from_results(results_lines, clause_id, title):
     # Extract Nie dotyczy section
     if "Nie dotyczy:" in full_text:
         start = full_text.find("Nie dotyczy:") + len("Nie dotyczy:")
-        na_label = full_text[start:].strip()
+        # Find where Nie do sprawdzenia starts
+        end = full_text.find("Nie do sprawdzenia:", start)
+        if end != -1:
+            na_label = full_text[start:end].strip()
+        else:
+            na_label = full_text[start:].strip()
+
+    # Extract Nie do sprawdzenia section
+    if "Nie do sprawdzenia:" in full_text:
+        start = full_text.find("Nie do sprawdzenia:") + len("Nie do sprawdzenia:")
+        nt_label = full_text[start:].strip()
     
     if pass_label:
         form["inputs"].append({
@@ -247,6 +278,12 @@ def generate_form_from_results(results_lines, clause_id, title):
         form["inputs"].append({
             "value": "na",
             "label": f"<strong>Nie dotyczy:</strong> {na_label}"
+        })
+
+    if nt_label:
+        form["inputs"].append({
+            "value": "nt",
+            "label": f"<strong>Nie do sprawdzenia:</strong> {nt_label}"
         })
     
     return form if form["inputs"] else None
@@ -344,6 +381,105 @@ def process_clauses(pdf_data):
     for filename in os.listdir(JSON_DIR):
         if not filename.endswith(".json"):
             continue
+            
+        json_path = os.path.join(JSON_DIR, filename)
+        with open(json_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        # Traverse content to find tests
+        last_seen_clause_id = None
+        test_counter_for_clause = {}  # Track which test number we're on for each clause
+        last_preconditions_for_clause = {}
+        last_procedure_for_clause = {}
+        
+        for item in data.get('content', []):
+            if item.get('type') == 'heading':
+                heading_text = item.get('text', '')
+                match = re.match(r"(C\.\d+(\.\d+)+(\.[a-z])?)", heading_text)
+                if match:
+                    last_seen_clause_id = match.group(1)
+                    if last_seen_clause_id not in test_counter_for_clause:
+                        test_counter_for_clause[last_seen_clause_id] = 0
+                    # Reset stored previous data for new clause
+                    last_preconditions_for_clause[last_seen_clause_id] = []
+                    last_procedure_for_clause[last_seen_clause_id] = []
+                    
+                    # Update heading text if available
+                    if last_seen_clause_id in pdf_data:
+                        new_title = pdf_data[last_seen_clause_id]['title']
+                        new_heading_text = f"{last_seen_clause_id} {new_title}"
+                        if item['text'] != new_heading_text:
+                            item['text'] = new_heading_text
+            
+            if item.get('type') == 'test':
+                if last_seen_clause_id:
+                    # Increment test counter for this clause
+                    test_counter_for_clause[last_seen_clause_id] += 1
+                    current_test_num = test_counter_for_clause[last_seen_clause_id]
+                    
+                    # Determine which PDF data key to use
+                    if current_test_num == 1:
+                        pdf_key = last_seen_clause_id
+                    else:
+                        pdf_key = f"{last_seen_clause_id}#{current_test_num}"
+                    
+                    if pdf_key in pdf_data:
+                        pdf_clause = pdf_data[pdf_key]
+                        
+                        # Update Preconditions (inherit if empty)
+                        pdf_preconditions = clean_extracted_list(pdf_clause['preconditions'])
+                        if pdf_preconditions:
+                            # Transfer links from old preconditions
+                            old_preconditions = item.get('preconditions', [])
+                            pdf_preconditions = transfer_links(old_preconditions, pdf_preconditions)
+                            
+                            item['preconditions'] = pdf_preconditions
+                            last_preconditions_for_clause[last_seen_clause_id] = pdf_preconditions
+                        else:
+                            # inherit from previous test if available
+                            if last_preconditions_for_clause.get(last_seen_clause_id):
+                                item['preconditions'] = last_preconditions_for_clause[last_seen_clause_id]
+                        
+                        # Update Procedure (inherit if empty)
+                        pdf_procedure = clean_extracted_list(pdf_clause['procedure'])
+                        if pdf_procedure:
+                            # Transfer links from old procedure
+                            old_procedure = item.get('procedure', [])
+                            pdf_procedure = transfer_links(old_procedure, pdf_procedure)
+                            
+                            # print(f"Updating {pdf_key} procedure")
+                            item['procedure'] = pdf_procedure
+                            last_procedure_for_clause[last_seen_clause_id] = pdf_procedure
+                        else:
+                            if last_procedure_for_clause.get(last_seen_clause_id):
+                                item['procedure'] = last_procedure_for_clause[last_seen_clause_id]
+                        
+                        # Update Form from Results
+                        pdf_results = clean_extracted_list(pdf_clause.get('results', []))
+                        if pdf_results:
+                            pdf_title = pdf_clause.get('title', '')
+                            display_id = pdf_key.split('#')[0]
+                            generated_form = generate_form_from_results(pdf_results, display_id, pdf_title)
+                            if generated_form:
+                                # print(f"Updating {pdf_key} form")
+                                item['form'] = generated_form
+                        
+                        # Update Notes
+                        pdf_notes = clean_extracted_list(pdf_clause.get('notes', []))
+                        if pdf_notes:
+                            print(f"Updating {pdf_key} notes")
+                            item['notes'] = pdf_notes
+                        
+        # Save to new directory
+        output_path = os.path.join(OUTPUT_DIR, filename)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+        print(f"Generated {output_path}")
+
+def main():
+    print("Extracting text from PDF...")
+    text = extract_text_from_pdf(PDF_PATH)
+    
     print("Parsing PDF structure...")
     
     # Debug: Dump raw text to see what's going on

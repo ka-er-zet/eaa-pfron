@@ -5,7 +5,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.11.0 Postanowienia ogólne"
+      "text": "C.11.0 None"
     },
     {
       "type": "informative",
@@ -14,22 +14,22 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.11.1 Postrzegalność"
+      "text": "C.11.1 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.1.1 Alternatywy tekstowe"
+      "text": "C.11.1.1 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.1.1 Treść nietekstowa"
+      "text": "C.11.1.1.1 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.1.1.1 Treść nietekstowa (obsługiwany odczyt ekranu, funkcjonalność otwarta)",
+      "text": "C.11.1.1.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -45,26 +45,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.1.1.1 Treści nietekstowe (funkcjonalność otwarta)",
-        "noteId": "notes-c11-1-1-1-1"
+        "legend": "Wybierz wynik dla C.11.1.1.1.1 None",
+        "noteId": "notes-c-11-1-1-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.1.1.2 Treść nietekstowa (funkcjonalność zamknięta)",
+      "text": "C.11.1.1.1.2 None",
       "wcag_level": "A"
     },
     {
@@ -84,36 +84,36 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> (Sprawdzenia 1, 2, 3 i 4 są prawdziwe) LUB (1 i 2 są fałszywe) LUB (1 i 3 są fałszywe)."
+            "label": "<strong>Zaliczone:</strong> Kryteria (1, 2, 3 i 4: prawda); lub (1 i 2: fałsz); lub (1 i 3: fałsz)"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> (1 jest prawdziwe i 2 fałszywe) LUB (1 jest prawdziwe i 3 fałszywe) LUB (1, 2, i 3 są prawdziwe, a 4 jest fałszywe)."
+            "label": "<strong>Niezaliczone:</strong> Kryteria (1: prawda i 2: fałsz); lub (1: prawda i 3: fałsz); lub (1, 2 i 3: prawda oraz 4: fałsz)"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.1.1.2 Treści nietekstowe (funkcjonalność zamknięta)",
-        "noteId": "notes-c11-1-1-1-2"
+        "legend": "Wybierz wynik dla C.11.1.1.1.2 None",
+        "noteId": "notes-c-11-1-1-1-2"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.1.2 Multimedia"
+      "text": "C.11.1.2 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.2.1 Tylko audio lub tylko wideo (nagranie)"
+      "text": "C.11.1.2.1 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.2.1.1 Tylko audio lub tylko wideo (nagranie – funkcjonalność otwarta)",
+      "text": "C.11.1.2.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -130,26 +130,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.2.1.1 Tylko audio i tylko wideo (nagrane - funkcjonalność otwarta)",
-        "noteId": "notes-c11-1-2-1-1"
+        "legend": "Wybierz wynik dla C.11.1.2.1.1 None",
+        "noteId": "notes-c-11-1-2-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.2.1.2.1 Nagrane tylko audio (funkcjonalność zamknięta)",
+      "text": "C.11.1.2.1.2.1 None",
       "wcag_level": "A"
     },
     {
@@ -166,26 +166,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.2.1.2.1 Tylko audio (nagrane - funkcjonalność zamknięta)",
-        "noteId": "notes-c11-1-2-1-2-1"
+        "legend": "Wybierz wynik dla C.11.1.2.1.2.1 None",
+        "noteId": "notes-c-11-1-2-1-2-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.2.1.2.2 Nagrane tylko wideo (funkcjonalność zamknięta)",
+      "text": "C.11.1.2.1.2.2 None",
       "wcag_level": "A"
     },
     {
@@ -203,26 +203,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2, 3 lub 4 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2, 3 lub 4."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.2.1.2.2 Tylko wideo (nagrane - funkcjonalność zamknięta)",
-        "noteId": "notes-c11-1-2-1-2-2"
+        "legend": "Wybierz wynik dla C.11.1.2.1.2.2 None",
+        "noteId": "notes-c-11-1-2-1-2-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.2.2 Napisy rozszerzone (nagranie)",
+      "text": "C.11.1.2.2 None",
       "wcag_level": "A"
     },
     {
@@ -237,31 +237,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.2.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie). EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.2.2 Napisy (nagrane)",
-        "noteId": "notes-c11-1-2-2"
+        "legend": "Wybierz wynik dla C.11.1.2.2 None",
+        "noteId": "notes-c-11-1-2-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)"
+      "text": "C.11.1.2.3 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.2.3.1 Audiodeskrypcja lub alternatywa tekstowa dla mediów",
+      "text": "C.11.1.2.3.1 None",
       "wcag_level": "A"
     },
     {
@@ -277,26 +277,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.2.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.2.3.1 Audiodeskrypcja lub alternatywa dla mediów (nagrane - funkcjonalność otwarta)",
-        "noteId": "notes-c11-1-2-3-1"
+        "legend": "Wybierz wynik dla C.11.1.2.3.1 None",
+        "noteId": "notes-c-11-1-2-3-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.2.3.2 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie – funkcjonalność",
+      "text": "C.11.1.2.3.2 None",
       "wcag_level": "A"
     },
     {
@@ -313,26 +313,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.2.3.2 Audiodeskrypcja lub alternatywa dla mediów (nagrane - funkcjonalność zamknięta)",
-        "noteId": "notes-c11-1-2-3-2"
+        "legend": "Wybierz wynik dla C.11.1.2.3.2 None",
+        "noteId": "notes-c-11-1-2-3-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.2.4 Napisy rozszerzone (na żywo)",
+      "text": "C.11.1.2.4 None",
       "wcag_level": "AA"
     },
     {
@@ -347,26 +347,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.2.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo). EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.2.4 Napisy (na żywo)",
-        "noteId": "notes-c11-1-2-4"
+        "legend": "Wybierz wynik dla C.11.1.2.4 None",
+        "noteId": "notes-c-11-1-2-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.2.5 Audiodeskrypcja (nagranie)",
+      "text": "C.11.1.2.5 None",
       "wcag_level": "AA"
     },
     {
@@ -381,36 +381,36 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.2.5."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.2.5 Audiodeskrypcja (nagrana)",
-        "noteId": "notes-c11-1-2-5"
+        "legend": "Wybierz wynik dla C.11.1.2.5 None",
+        "noteId": "notes-c-11-1-2-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.1.3 Możliwość adaptacji"
+      "text": "C.11.1.3 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.3.1 Informacje i relacje"
+      "text": "C.11.1.3.1 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.3.1.1 Informacje i relacje (funkcjonalność otwarta)",
+      "text": "C.11.1.3.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -426,26 +426,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.3.1.1 Informacje i relacje (funkcjonalność otwarta)",
-        "noteId": "notes-c11-1-3-1-1"
+        "legend": "Wybierz wynik dla C.11.1.3.1.1 None",
+        "noteId": "notes-c-11-1-3-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.3.1.2 Informacje i relacje (funkcjonalność zamknięta)"
+      "text": "C.11.1.3.1.2 None"
     },
     {
       "type": "informative",
@@ -454,12 +454,12 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.3.2 Zrozumiała kolejność"
+      "text": "C.11.1.3.2 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.3.2.1 Zrozumiała kolejność (funkcjonalność otwarta)",
+      "text": "C.11.1.3.2.1 None",
       "wcag_level": "A"
     },
     {
@@ -475,26 +475,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.3.2.1 Zrozumiała kolejność (funkcjonalność otwarta)",
-        "noteId": "notes-c11-1-3-2-1"
+        "legend": "Wybierz wynik dla C.11.1.3.2.1 None",
+        "noteId": "notes-c-11-1-3-2-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.3.2.2 Zrozumiała kolejność (funkcjonalność zamknięta)"
+      "text": "C.11.1.3.2.2 None"
     },
     {
       "type": "informative",
@@ -503,7 +503,7 @@
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.3.3 Właściwości zmysłowe",
+      "text": "C.11.1.3.3 None",
       "wcag_level": "A"
     },
     {
@@ -518,26 +518,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.3.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.3.3 Charakterystyka zmysłowa",
-        "noteId": "notes-c11-1-3-3"
+        "legend": "Wybierz wynik dla C.11.1.3.3 None",
+        "noteId": "notes-c-11-1-3-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.3.4 Orientacja",
+      "text": "C.11.1.3.4 None",
       "wcag_level": "AA"
     },
     {
@@ -552,31 +552,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.3.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.3.4 Orientacja",
-        "noteId": "notes-c11-1-3-4"
+        "legend": "Wybierz wynik dla C.11.1.3.4 None",
+        "noteId": "notes-c-11-1-3-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.3.5 Określenie pożądanej wartości"
+      "text": "C.11.1.3.5 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.3.5.1 Określenie pożądanej wartości (funkcjonalność otwarta)",
+      "text": "C.11.1.3.5.1 None",
       "wcag_level": "AA"
     },
     {
@@ -592,26 +592,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.3.5."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.3.5.1 Określenie przeznaczenia pól (funkcjonalność otwarta)",
-        "noteId": "notes-c11-1-3-5-1"
+        "legend": "Wybierz wynik dla C.11.1.3.5.1 None",
+        "noteId": "notes-c-11-1-3-5-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.3.5.2 Określenie pożądanej wartości (funkcjonalność zamknięta)",
+      "text": "C.11.1.3.5.2 None",
       "wcag_level": "AA"
     },
     {
@@ -630,31 +630,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> (Sprawdzenie 1 lub 2 jest prawdziwe) ORAZ sprawdzenie 3 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium (1 lub 2): prawda i kryterium 3: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> (Sprawdzenia 1 i 2 są fałszywe) LUB sprawdzenie 3 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria (1 i 2): fałsz lub kryterium 3: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.3.5.2 Określenie przeznaczenia pól (funkcjonalność zamknięta)",
-        "noteId": "notes-c11-1-3-5-2"
+        "legend": "Wybierz wynik dla C.11.1.3.5.2 None",
+        "noteId": "notes-c-11-1-3-5-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.1.4 Rozróżnialność"
+      "text": "C.11.1.4 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.4.1 Użycie koloru",
+      "text": "C.11.1.4.1 None",
       "wcag_level": "A"
     },
     {
@@ -669,26 +669,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.1 Użycie koloru",
-        "noteId": "notes-c11-1-4-1"
+        "legend": "Wybierz wynik dla C.11.1.4.1 None",
+        "noteId": "notes-c-11-1-4-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.4.2 Kontrola odtwarzania dźwięku",
+      "text": "C.11.1.4.2 None",
       "wcag_level": "A"
     },
     {
@@ -703,26 +703,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.2 Kontrola dźwięku",
-        "noteId": "notes-c11-1-4-2"
+        "legend": "Wybierz wynik dla C.11.1.4.2 None",
+        "noteId": "notes-c-11-1-4-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.4.3 Kontrast (minimum)",
+      "text": "C.11.1.4.3 None",
       "wcag_level": "AA"
     },
     {
@@ -737,31 +737,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.3 Kontrast (minimalny)",
-        "noteId": "notes-c11-1-4-3"
+        "legend": "Wybierz wynik dla C.11.1.4.3 None",
+        "noteId": "notes-c-11-1-4-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.4.4 Zmiana rozmiaru tekstu"
+      "text": "C.11.1.4.4 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.4.4.1 Zmiana rozmiaru tekstu (funkcjonalność otwarta)",
+      "text": "C.11.1.4.4.1 None",
       "wcag_level": "AA"
     },
     {
@@ -777,26 +777,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.4.1 Zmiana rozmiaru tekstu (funkcjonalność otwarta)",
-        "noteId": "notes-c11-1-4-4-1"
+        "legend": "Wybierz wynik dla C.11.1.4.4.1 None",
+        "noteId": "notes-c-11-1-4-4-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.4.4.2 Zmiana rozmiaru tekstu (funkcjonalność zamknięta)",
+      "text": "C.11.1.4.4.2 None",
       "wcag_level": "AA"
     },
     {
@@ -814,31 +814,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.4.2 Zmiana rozmiaru tekstu (funkcjonalność zamknięta)",
-        "noteId": "notes-c11-1-4-4-2"
+        "legend": "Wybierz wynik dla C.11.1.4.4.2 None",
+        "noteId": "notes-c-11-1-4-4-2"
       },
       "evaluationType": "Inspection and measurement"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.4.5 Obrazy tekstu"
+      "text": "C.11.1.4.5 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.4.5.1 Obrazy tekstu (funkcjonalność otwarta)",
+      "text": "C.11.1.4.5.1 None",
       "wcag_level": "AA"
     },
     {
@@ -854,26 +854,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.5."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.5.1 Obrazy tekstu (funkcjonalność otwarta)",
-        "noteId": "notes-c11-1-4-5-1"
+        "legend": "Wybierz wynik dla C.11.1.4.5.1 None",
+        "noteId": "notes-c-11-1-4-5-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.4.5.2 Obrazy tekstu (funkcjonalność zamknięta)",
+      "text": "C.11.1.4.5.2 None",
       "wcag_level": "AA"
     },
     {
@@ -893,26 +893,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> (Sprawdzenia 1, 2, 3 i 4 są prawdziwe) LUB (1 i 2 są fałszywe) LUB (1 i 3 są fałszywe)."
+            "label": "<strong>Zaliczone:</strong> Kryteria (1, 2, 3 i 4: prawda); lub (1 i 2: fałsz); lub (1 i 3: fałsz)"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> (1 jest prawdziwe i 2 fałszywe) LUB (1 jest prawdziwe i 3 fałszywe) LUB (1, 2, i 3 są prawdziwe, a 4 jest fałszywe)."
+            "label": "<strong>Niezaliczone:</strong> Kryteria (1: prawda i 2: fałsz); lub (1: prawda i 3: fałsz); lub (1, 2 i 3: prawda oraz 4: fałsz)"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.5.2 Obrazy tekstu (funkcjonalność zamknięta)",
-        "noteId": "notes-c11-1-4-5-2"
+        "legend": "Wybierz wynik dla C.11.1.4.5.2 None",
+        "noteId": "notes-c-11-1-4-5-2"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.4.10 Dopasowanie do ekranu",
+      "text": "C.11.1.4.10 None",
       "wcag_level": "AA"
     },
     {
@@ -927,26 +927,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.10 Zawijanie tekstu (Reflow)",
-        "noteId": "notes-c11-1-4-10"
+        "legend": "Wybierz wynik dla C.11.1.4.10 None",
+        "noteId": "notes-c-11-1-4-10"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.4.11 Kontrast elementów nietekstowych",
+      "text": "C.11.1.4.11 None",
       "wcag_level": "AA"
     },
     {
@@ -961,26 +961,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.11."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.11 Kontrast elementów nietekstowych",
-        "noteId": "notes-c11-1-4-11"
+        "legend": "Wybierz wynik dla C.11.1.4.11 None",
+        "noteId": "notes-c-11-1-4-11"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.4.12 Odstępy w tekście",
+      "text": "C.11.1.4.12 None",
       "wcag_level": "AA"
     },
     {
@@ -995,26 +995,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.12."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.12 Odstępy w tekście",
-        "noteId": "notes-c11-1-4-12"
+        "legend": "Wybierz wynik dla C.11.1.4.12 None",
+        "noteId": "notes-c-11-1-4-12"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.4.13 Treść spod kursora lub fokusu",
+      "text": "C.11.1.4.13 None",
       "wcag_level": "AA"
     },
     {
@@ -1029,41 +1029,41 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 1.4.13."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.13 Treść spod wskaźnika lub fokusu",
-        "noteId": "notes-c11-1-4-13"
+        "legend": "Wybierz wynik dla C.11.1.4.13 None",
+        "noteId": "notes-c-11-1-4-13"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.11.2 Funkcjonalność"
+      "text": "C.11.2 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.2.1 Dostępność z klawiatury"
+      "text": "C.11.2.1 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.1.1 Klawiatura"
+      "text": "C.11.2.1.1 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.2.1.1.1 Klawiatura (funkcjonalność otwarta)",
+      "text": "C.11.2.1.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -1079,26 +1079,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.1.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.1.1.1 Klawiatura (funkcjonalność otwarta)",
-        "noteId": "notes-c11-2-1-1-1"
+        "legend": "Wybierz wynik dla C.11.2.1.1.1 None",
+        "noteId": "notes-c-11-2-1-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.2.1.1.2 Klawiatura (funkcjonalność zamknięta)",
+      "text": "C.11.2.1.1.2 None",
       "wcag_level": "A"
     },
     {
@@ -1114,26 +1114,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.1.1.2 Klawiatura (funkcjonalność zamknięta)",
-        "noteId": "notes-c11-2-1-1-2"
+        "legend": "Wybierz wynik dla C.11.2.1.1.2 None",
+        "noteId": "notes-c-11-2-1-1-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.2.1.2 Bez pułapki na klawiaturę",
+      "text": "C.11.2.1.2 None",
       "wcag_level": "A"
     },
     {
@@ -1148,31 +1148,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.1.2 Brak pułapki na klawiaturę",
-        "noteId": "notes-c11-2-1-2"
+        "legend": "Wybierz wynik dla C.11.2.1.2 None",
+        "noteId": "notes-c-11-2-1-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.1.4 Jednoznakowe skróty klawiaturowe"
+      "text": "C.11.2.1.4 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.2.1.4.1 Jednoznakowe skróty klawiaturowe (funkcjonalność otwarta)",
+      "text": "C.11.2.1.4.1 None",
       "wcag_level": "A"
     },
     {
@@ -1188,26 +1188,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.1.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiaturowe."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.1.4.1 Skróty klawiszowe (funkcjonalność otwarta)",
-        "noteId": "notes-c11-2-1-4-1"
+        "legend": "Wybierz wynik dla C.11.2.1.4.1 None",
+        "noteId": "notes-c-11-2-1-4-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.2.1.4.2 Jednoznakowe skróty klawiaturowe (funkcjonalność zamknięta)",
+      "text": "C.11.2.1.4.2 None",
       "wcag_level": "A"
     },
     {
@@ -1223,31 +1223,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.1.4.2 Skróty klawiszowe (funkcjonalność zamknięta)",
-        "noteId": "notes-c11-2-1-4-2"
+        "legend": "Wybierz wynik dla C.11.2.1.4.2 None",
+        "noteId": "notes-c-11-2-1-4-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.2.2 Wystarczający czas"
+      "text": "C.11.2.2 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.2.1 Dostosowanie czasu",
+      "text": "C.11.2.2.1 None",
       "wcag_level": "A"
     },
     {
@@ -1262,26 +1262,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.2.1 Regulacja czasu",
-        "noteId": "notes-c11-2-2-1"
+        "legend": "Wybierz wynik dla C.11.2.2.1 None",
+        "noteId": "notes-c-11-2-2-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.2.2 Pauza, zatrzymanie, ukrycie",
+      "text": "C.11.2.2.2 None",
       "wcag_level": "A"
     },
     {
@@ -1296,31 +1296,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.2.2 Pauza, zatrzymanie, ukrycie",
-        "noteId": "notes-c11-2-2-2"
+        "legend": "Wybierz wynik dla C.11.2.2.2 None",
+        "noteId": "notes-c-11-2-2-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.2.3 Ataki padaczki"
+      "text": "C.11.2.3 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.3.1 Trzy błyski lub wartości poniżej progu",
+      "text": "C.11.2.3.1 None",
       "wcag_level": "A"
     },
     {
@@ -1335,31 +1335,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.3.1 Trzy błyski lub poniżej progu",
-        "noteId": "notes-c11-2-3-1"
+        "legend": "Wybierz wynik dla C.11.2.3.1 None",
+        "noteId": "notes-c-11-2-3-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.2.4 Możliwość nawigacji"
+      "text": "C.11.2.4 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.4.3 Kolejność fokusu",
+      "text": "C.11.2.4.3 None",
       "wcag_level": "A"
     },
     {
@@ -1374,26 +1374,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.4.3 Kolejność fokusu",
-        "noteId": "notes-c11-2-4-3"
+        "legend": "Wybierz wynik dla C.11.2.4.3 None",
+        "noteId": "notes-c-11-2-4-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.4.4 Cel łącza (w kontekście)",
+      "text": "C.11.2.4.4 None",
       "wcag_level": "A"
     },
     {
@@ -1408,26 +1408,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.4.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.4.4 Cel odnośnika (w kontekście)",
-        "noteId": "notes-c11-2-4-4"
+        "legend": "Wybierz wynik dla C.11.2.4.4 None",
+        "noteId": "notes-c-11-2-4-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.4.6 Nagłówki i etykiety",
+      "text": "C.11.2.4.6 None",
       "wcag_level": "AA"
     },
     {
@@ -1442,26 +1442,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.4.6."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.4.6 Nagłówki i etykiety",
-        "noteId": "notes-c11-2-4-6"
+        "legend": "Wybierz wynik dla C.11.2.4.6 None",
+        "noteId": "notes-c-11-2-4-6"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.4.7 Widoczny fokus",
+      "text": "C.11.2.4.7 None",
       "wcag_level": "AA"
     },
     {
@@ -1476,31 +1476,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.4.7."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.4.7 Widoczny fokus",
-        "noteId": "notes-c11-2-4-7"
+        "legend": "Wybierz wynik dla C.11.2.4.7 None",
+        "noteId": "notes-c-11-2-4-7"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.2.5 Metody obsługi"
+      "text": "C.11.2.5 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.5.1 Gesty dotykowe",
+      "text": "C.11.2.5.1 None",
       "wcag_level": "A"
     },
     {
@@ -1516,26 +1516,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.5.1 Gesty wskazujące",
-        "noteId": "notes-c11-2-5-1"
+        "legend": "Wybierz wynik dla C.11.2.5.1 None",
+        "noteId": "notes-c-11-2-5-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.5.2 Rezygnacja ze wskazania",
+      "text": "C.11.2.5.2 None",
       "wcag_level": "A"
     },
     {
@@ -1551,31 +1551,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.5.2 Anulowanie wskazania",
-        "noteId": "notes-c11-2-5-2"
+        "legend": "Wybierz wynik dla C.11.2.5.2 None",
+        "noteId": "notes-c-11-2-5-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.5.3 Etykieta w nazwie"
+      "text": "C.11.2.5.3 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.2.5.3.1 Etykieta w nazwie (funkcjonalność otwarta)",
+      "text": "C.11.2.5.3.1 None",
       "wcag_level": "A"
     },
     {
@@ -1591,26 +1591,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.5.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.5.3.1 Etykieta w nazwie (funkcjonalność otwarta)",
-        "noteId": "notes-c11-2-5-3-1"
+        "legend": "Wybierz wynik dla C.11.2.5.3.1 None",
+        "noteId": "notes-c-11-2-5-3-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.2.5.3.2 Etykieta w nazwie (funkcjonalność zamknięta)"
+      "text": "C.11.2.5.3.2 None"
     },
     {
       "type": "informative",
@@ -1619,7 +1619,7 @@
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.2.5.4 Aktywowanie ruchem",
+      "text": "C.11.2.5.4 None",
       "wcag_level": "A"
     },
     {
@@ -1635,41 +1635,41 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 2.5.4."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.5.4 Uruchamianie przez ruch",
-        "noteId": "notes-c11-2-5-4"
+        "legend": "Wybierz wynik dla C.11.2.5.4 None",
+        "noteId": "notes-c-11-2-5-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.11.3 Zrozumiałość"
+      "text": "C.11.3 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.3.1 Możliwość odczytania"
+      "text": "C.11.3.1 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.3.1.1 Język oprogramowania"
+      "text": "C.11.3.1.1 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.3.1.1.1 Język oprogramowania (funkcjonalność otwarta)",
+      "text": "C.11.3.1.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -1685,26 +1685,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.3.1.1.1 Język oprogramowania (funkcjonalność otwarta)",
-        "noteId": "notes-c11-3-1-1-1"
+        "legend": "Wybierz wynik dla C.11.3.1.1.1 None",
+        "noteId": "notes-c-11-3-1-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.3.1.1.2 Język oprogramowania (funkcjonalność zamknięta)",
+      "text": "C.11.3.1.1.2 None",
       "wcag_level": "A"
     },
     {
@@ -1725,31 +1725,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2, 3, 4, 5, 6, lub 7."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.3.1.1.2 Język oprogramowania (funkcjonalność zamknięta)",
-        "noteId": "notes-c11-3-1-1-2"
+        "legend": "Wybierz wynik dla C.11.3.1.1.2 None",
+        "noteId": "notes-c-11-3-1-1-2"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.3.2 Przewidywalność"
+      "text": "C.11.3.2 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.3.2.1 Po otrzymaniu fokusu",
+      "text": "C.11.3.2.1 None",
       "wcag_level": "A"
     },
     {
@@ -1764,26 +1764,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.3.2.1 Przy fokusie",
-        "noteId": "notes-c11-3-2-1"
+        "legend": "Wybierz wynik dla C.11.3.2.1 None",
+        "noteId": "notes-c-11-3-2-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.3.2.2 Podczas wprowadzania danych",
+      "text": "C.11.3.2.2 None",
       "wcag_level": "A"
     },
     {
@@ -1798,36 +1798,36 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.3.2.2 Przy wprowadzaniu danych",
-        "noteId": "notes-c11-3-2-2"
+        "legend": "Wybierz wynik dla C.11.3.2.2 None",
+        "noteId": "notes-c-11-3-2-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.3.3 Pomoc przy wprowadzaniu informacji"
+      "text": "C.11.3.3 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.3.3.1 Identyfikacja błędu"
+      "text": "C.11.3.3.1 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.3.3.1.1 Identyfikacja błędu (funkcjonalność otwarta)",
+      "text": "C.11.3.3.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -1843,26 +1843,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 3.3.1."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.3.3.1.1 Identyfikacja błędu (funkcjonalność otwarta)",
-        "noteId": "notes-c11-3-3-1-1"
+        "legend": "Wybierz wynik dla C.11.3.3.1.1 None",
+        "noteId": "notes-c-11-3-3-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.3.3.1.2 Identyfikacja błędu (funkcjonalność zamknięta)",
+      "text": "C.11.3.3.1.2 None",
       "wcag_level": "A"
     },
     {
@@ -1881,26 +1881,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2, 3 lub 4 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2, 3 lub 4."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.3.3.1.2 Identyfikacja błędu (funkcjonalność zamknięta)",
-        "noteId": "notes-c11-3-3-1-2"
+        "legend": "Wybierz wynik dla C.11.3.3.1.2 None",
+        "noteId": "notes-c-11-3-3-1-2"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.3.3.2 Etykiety lub instrukcje",
+      "text": "C.11.3.3.2 None",
       "wcag_level": "A"
     },
     {
@@ -1915,26 +1915,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 3.3.2."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.3.3.2 Etykiety lub instrukcje",
-        "noteId": "notes-c11-3-3-2"
+        "legend": "Wybierz wynik dla C.11.3.3.2 None",
+        "noteId": "notes-c-11-3-3-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.3.3.3 Sugestie korekty błędów",
+      "text": "C.11.3.3.3 None",
       "wcag_level": "AA"
     },
     {
@@ -1949,26 +1949,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 3.3.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.3.3.3 Sugestie dotyczące błędów",
-        "noteId": "notes-c11-3-3-3"
+        "legend": "Wybierz wynik dla C.11.3.3.3 None",
+        "noteId": "notes-c-11-3-3-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
+      "text": "C.11.3.3.4 None",
       "wcag_level": "AA"
     },
     {
@@ -1983,41 +1983,41 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.3.3.4 Zapobieganie błędom (prawne, finansowe, dane)",
-        "noteId": "notes-c11-3-3-4"
+        "legend": "Wybierz wynik dla C.11.3.3.4 None",
+        "noteId": "notes-c-11-3-3-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.11.4 Solidność"
+      "text": "C.11.4 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.4.1 Kompatybilność"
+      "text": "C.11.4.1 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.4.1.1 Poprawność kodu"
+      "text": "C.11.4.1.1 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.4.1.1.1 Poprawność kodu (funkcjonalność otwarta)",
+      "text": "C.11.4.1.1.1 None",
       "wcag_level": "A"
     },
     {
@@ -2033,26 +2033,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.4.1.1.1 Parsowanie (funkcjonalność otwarta)",
-        "noteId": "notes-c11-4-1-1-1"
+        "legend": "Wybierz wynik dla C.11.4.1.1.1 None",
+        "noteId": "notes-c-11-4-1-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.4.1.1.2 Poprawność kodu (funkcjonalność zamknięta)"
+      "text": "C.11.4.1.1.2 None"
     },
     {
       "type": "informative",
@@ -2061,12 +2061,12 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.4.1.2 Nazwa, rola, wartość"
+      "text": "C.11.4.1.2 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.4.1.2.1 Nazwa, rola, wartość (funkcjonalność otwarta)",
+      "text": "C.11.4.1.2.1 None",
       "wcag_level": "A"
     },
     {
@@ -2082,26 +2082,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.4.1.2.1 Nazwa, rola, wartość (funkcjonalność otwarta)",
-        "noteId": "notes-c11-4-1-2-1"
+        "legend": "Wybierz wynik dla C.11.4.1.2.1 None",
+        "noteId": "notes-c-11-4-1-2-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.4.1.2.2 Nazwa, rola, wartość (funkcjonalność zamknięta)"
+      "text": "C.11.4.1.2.2 None"
     },
     {
       "type": "informative",
@@ -2110,12 +2110,12 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.4.1.3 Komunikaty o stanie"
+      "text": "C.11.4.1.3 None"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.4.1.3.1 Komunikaty o stanie (funkcjonalność otwarta)",
+      "text": "C.11.4.1.3.1 None",
       "wcag_level": "A"
     },
     {
@@ -2131,26 +2131,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony, lub oprogramowanie nie zawiera treści istotnych dla KS WCAG 2.1 4.1.3."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.4.1.3.1 Komunikaty o stanie (funkcjonalność otwarta)",
-        "noteId": "notes-c11-4-1-3-1"
+        "legend": "Wybierz wynik dla C.11.4.1.3.1 None",
+        "noteId": "notes-c-11-4-1-3-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.4.1.3.2 Komunikaty o stanie (funkcjonalność zamknięta)"
+      "text": "C.11.4.1.3.2 None"
     },
     {
       "type": "informative",
@@ -2159,12 +2159,12 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.11.5 Współdziałanie z technologią wspomagającą"
+      "text": "C.11.5 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.5.1 Funkcjonalność zamknięta"
+      "text": "C.11.5.1 None"
     },
     {
       "type": "test",
@@ -2177,32 +2177,24 @@
       "form": {
         "inputs": [
           {
-            "value": "pass",
-            "label": "<strong>Zgodne (przechodzi do 11.5.2)</strong>"
-          },
-          {
-            "value": "fail",
-            "label": "<strong>Niezgodne</strong>"
-          },
-          {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.5.1 Funkcjonalność zamknięta",
-        "noteId": "notes-c11-5-1"
+        "legend": "Wybierz wynik dla C.11.5.1 None",
+        "noteId": "notes-c-11-5-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.5.2 Usługi dostępności"
+      "text": "C.11.5.2 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.5.2.1 Platformowa usługa wsparcia dostępności dla oprogramowania, która"
+      "text": "C.11.5.2.1 None"
     },
     {
       "type": "informative",
@@ -2211,7 +2203,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.5.2.5 Informacje o obiekcie"
+      "text": "C.11.5.2.5 None"
     },
     {
       "type": "test",
@@ -2229,26 +2221,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Wszystkie sprawdzenia (1-5) są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryteria 1, 2, 3, 4 i 5: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Którekolwiek ze sprawdzeń (1-5) jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2 lub 3 lub 4 lub 5: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.5.2.5 Informacje o obiekcie",
-        "noteId": "notes-c11-5-2-5"
+        "legend": "Wybierz wynik dla C.11.5.2.5 None",
+        "noteId": "notes-c-11-5-2-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.5.2.6 Wiersz, kolumna i nagłówki"
+      "text": "C.11.5.2.6 None"
     },
     {
       "type": "test",
@@ -2267,31 +2259,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Wszystkie sprawdzenia (2-5) są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryteria 2, 3, 4 i 5: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Którekolwiek ze sprawdzeń (2-5) jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2 lub 3 lub 4 lub 5: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.5.2.6 Wiersz, kolumna i nagłówki",
-        "noteId": "notes-c11-5-2-6"
+        "legend": "Wybierz wynik dla C.11.5.2.6 None",
+        "noteId": "notes-c-11-5-2-6"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.11.6 Udokumentowane używanie funkcji dostępności"
+      "text": "C.11.6 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.6.1 Kontrola funkcji dostępności przez użytkownika"
+      "text": "C.11.6.1 None"
     },
     {
       "type": "test",
@@ -2305,26 +2297,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.6.1 Kontrola użytkownika nad funkcjami dostępności",
-        "noteId": "notes-c11-6-1"
+        "legend": "Wybierz wynik dla C.11.6.1 None",
+        "noteId": "notes-c-11-6-1"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.6.2 Nieprzerwane działanie funkcji dostępności"
+      "text": "C.11.6.2 None"
     },
     {
       "type": "test",
@@ -2339,26 +2331,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest fałszywe LUB oba sprawdzenia są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: fałsz lub obydwa kryteria: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest prawdziwe, a 2 fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: prawda oraz kryterium 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.6.2 Brak zakłócania funkcji dostępności",
-        "noteId": "notes-c11-6-2"
+        "legend": "Wybierz wynik dla C.11.6.2 None",
+        "noteId": "notes-c-11-6-2"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.11.7 Preferencje użytkownika"
+      "text": "C.11.7 None"
     },
     {
       "type": "test",
@@ -2374,31 +2366,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.7 Preferencje użytkownika",
-        "noteId": "notes-c11-7"
+        "legend": "Wybierz wynik dla C.11.7 None",
+        "noteId": "notes-c-11-7"
       },
       "evaluationType": "Inspection and Testing"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.11.8 Narzędzia do tworzenia treści"
+      "text": "C.11.8 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.8.2 Tworzenie dostępnej treści"
+      "text": "C.11.8.2 None"
     },
     {
       "type": "test",
@@ -2412,26 +2404,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.8.2 Tworzenie dostępnych treści",
-        "noteId": "notes-c11-8-2"
+        "legend": "Wybierz wynik dla C.11.8.2 None",
+        "noteId": "notes-c-11-8-2"
       },
       "evaluationType": "Inspection and Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.8.3 Zachowanie informacji o dostępności podczas transformacji"
+      "text": "C.11.8.3 None"
     },
     {
       "type": "test",
@@ -2449,26 +2441,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe LUB (1 i 2 są fałszywe) LUB sprawdzenie 3 jest prawdziwe LUB (3 i 4 są fałszywe)."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda lub kryteria 1 i 2: fałsz lub kryterium 3: prawda lub kryteria 3 i 4: fałsz"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe, a 2 jest prawdziwe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz oraz kryterium 2: prawda"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.8.3 Zachowanie informacji o dostępności przy transformacjach",
-        "noteId": "notes-c11-8-3"
+        "legend": "Wybierz wynik dla C.11.8.3 None",
+        "noteId": "notes-c-11-8-3"
       },
       "evaluationType": "Inspection and Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.8.4 Wspomaganie naprawy"
+      "text": "C.11.8.4 None"
     },
     {
       "type": "test",
@@ -2483,26 +2475,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.8.4 Pomoc w naprawie",
-        "noteId": "notes-c11-8-4"
+        "legend": "Wybierz wynik dla C.11.8.4 None",
+        "noteId": "notes-c-11-8-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.8.5 Szablony"
+      "text": "C.11.8.5 None"
     },
     {
       "type": "test",
@@ -2518,21 +2510,24 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.8.5 Szablony",
-        "noteId": "notes-c11-8-5"
+        "legend": "Wybierz wynik dla C.11.8.5 None",
+        "noteId": "notes-c-11-8-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspection",
+      "notes": [
+        "Identyfikacja zgodna z wymaganiami Rozdziałów 9 lub 10 (odpowiednio) opisanymi w kryterium 2 może być opisana słowami „Zgodna z WCAG 2.1” . Jeśli podczas identyfikacji nie można wyraźnie stwierdzić, że wszystkie wymagania określone w Rozdziałach 9 lub 10 (w zależności od przypadku) są spełnione, może być konieczne wykorzystanie szablonu do stworzenia strony internetowej lub dokumentu, a na- stępnie przetestowanie tej strony internetowej lub dokumentu zgodnie z wymaganiami Rozdziałów 9 lub 10 w celu uzyskania całkowitej pewności, że szablon zachowuje się tak, jak jest to wymagane. C.12 Dokumentacja i wsparcie techniczne"
+      ]
     }
   ]
 }

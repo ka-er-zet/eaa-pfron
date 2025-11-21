@@ -5,12 +5,12 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.12.1 Dokumentacja produktu"
+      "text": "C.12.1 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.1.1 Funkcje dostępności i zgodności"
+      "text": "C.12.1.1 None"
     },
     {
       "type": "test",
@@ -24,26 +24,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.1.1 Funkcje dostępności i kompatybilności",
-        "noteId": "notes-c12-1-1"
+        "legend": "Wybierz wynik dla C.12.1.1 None",
+        "noteId": "notes-c-12-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.1.2 Dostępność dokumentacji"
+      "text": "C.12.1.2 None"
     },
     {
       "type": "test",
@@ -57,31 +57,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.12.1.2 Dostępna dokumentacja",
-        "noteId": "notes-c12-1-2"
+        "legend": "Wybierz wynik dla C.12.1.2 None",
+        "noteId": "notes-c-12-1-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.12.2 Wsparcie techniczne"
+      "text": "C.12.2 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.1 Postanowienia ogólne"
+      "text": "C.12.2.1 None"
     },
     {
       "type": "informative",
@@ -90,7 +90,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.2 Informacje o funkcjach dostępności i zgodności"
+      "text": "C.12.2.2 None"
     },
     {
       "type": "test",
@@ -104,26 +104,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.2.2 Informacje o funkcjach dostępności i kompatybilności",
-        "noteId": "notes-c12-2-2"
+        "legend": "Wybierz wynik dla C.12.2.2 None",
+        "noteId": "notes-c-12-2-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.3 Efektywna komunikacja"
+      "text": "C.12.2.3 None"
     },
     {
       "type": "test",
@@ -137,26 +137,29 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.2.3 Skuteczna komunikacja",
-        "noteId": "notes-c12-2-3"
+        "legend": "Wybierz wynik dla C.12.2.3 None",
+        "noteId": "notes-c-12-2-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspection",
+      "notes": [
+        "Zapewnienie na dowolnym poziomie wsparcia dla potrzeb komunikacyjnych osób niepełnosprawnych stanowi podstawę tego wymagania. Dostawcy mogą chcieć dostarczyć dalsze informacje na temat pozio- mu wsparcia, który jest zapewniany, aby umożliwić ocenę adekwatności i jakości wsparcia."
+      ]
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.4 Dostępność dokumentacji"
+      "text": "C.12.2.4 None"
     },
     {
       "type": "test",
@@ -170,19 +173,19 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03) C.13 TIK umożliwiająca dostęp do usługi przekazu informacji lub awaryjnego przekazu informacji"
           }
         ],
-        "legend": "Wybierz wynik dla C.12.2.4 Dostępna dokumentacja",
-        "noteId": "notes-c12-2-4"
+        "legend": "Wybierz wynik dla C.12.2.4 None",
+        "noteId": "notes-c-12-2-4"
       },
       "evaluationType": "Inspection"
     }

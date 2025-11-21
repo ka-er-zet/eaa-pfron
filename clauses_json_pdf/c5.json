@@ -5,7 +5,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.1 Funkcjonalność zamknięta"
+      "text": "C.5.1 None"
     },
     {
       "type": "informative",
@@ -14,7 +14,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.2 Postanowienia ogólne"
+      "text": "C.5.1.2 None"
     },
     {
       "type": "informative",
@@ -23,7 +23,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.2.2 Technologia wspomagająca"
+      "text": "C.5.1.2.2 None"
     },
     {
       "type": "test",
@@ -38,31 +38,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.2.2 Technologia asystująca:",
-        "noteId": "notes-c5-1-2-2"
+        "legend": "Wybierz wynik dla C.5.1.2.2 None",
+        "noteId": "notes-c-5-1-2-2"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.3 Dostęp niewizualny"
+      "text": "C.5.1.3 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.1 Wyjście audio informacji wizualnych"
+      "text": "C.5.1.3.1 None"
     },
     {
       "type": "test",
@@ -77,26 +77,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.1 Wyjście audio informacji wizualnych:",
-        "noteId": "notes-c5-1-3-1"
+        "legend": "Wybierz wynik dla C.5.1.3.1 None",
+        "noteId": "notes-c-5-1-3-1"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.2 Wyjściowy sygnał dźwiękowy zawierający mowę"
+      "text": "C.5.1.3.2 None"
     },
     {
       "type": "test",
@@ -111,19 +111,19 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 lub 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 lub 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenia 1 i 2 są fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 i 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.2 Dostarczanie wyjścia słuchowego, w tym mowy:",
-        "noteId": "notes-c5-1-3-2"
+        "legend": "Wybierz wynik dla C.5.1.3.2 None",
+        "noteId": "notes-c-5-1-3-2"
       },
       "evaluationType": "Inspection"
     },
@@ -134,7 +134,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.4 Sterowanie przez użytkownika wyjściem mowy"
+      "text": "C.5.1.3.4 None"
     },
     {
       "type": "test",
@@ -149,26 +149,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Wszystkie sprawdzenia są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Wszystkie kryteria: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Którekolwiek sprawdzenie jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Dowolne kryterium: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.4 Kontrola użytkownika nad wyjściem mowy:",
-        "noteId": "notes-c5-1-3-4"
+        "legend": "Wybierz wynik dla C.5.1.3.4 None",
+        "noteId": "notes-c-5-1-3-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.5 Automatyczne przerwanie wyjścia mowy"
+      "text": "C.5.1.3.5 None"
     },
     {
       "type": "test",
@@ -184,26 +184,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 2 i 3 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> kryteria 2 i 3: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 lub 3 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2 lub 3: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.5 Automatyczne przerywanie wyjścia mowy:",
-        "noteId": "notes-c5-1-3-5"
+        "legend": "Wybierz wynik dla C.5.1.3.5 None",
+        "noteId": "notes-c-5-1-3-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.6 Wyjście mowy dla treści nietekstowej"
+      "text": "C.5.1.3.6 None"
     },
     {
       "type": "test",
@@ -220,26 +220,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1, 2, 3 i 4 są prawdziwe; LUB 1 i 2 są fałszywe; LUB 1 i 3 są fałszywe."
+            "label": "<strong>Zaliczone:</strong> Kryteria 1, 2, 3 i 4: prawda; lub 1 i 2: fałsz; lub 1 i 3: fałsz"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> 1 jest prawdziwe i 2 fałszywe; LUB 1 jest prawdziwe i 3 fałszywe; LUB 1, 2 i 3 są prawdziwe, a 4 fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1: prawda i 2: fałsz; lub 1: prawda i 3: fałsz; lub 1, 2 i 3: prawda oraz 4: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.6 Wyjście mowy dla treści nietekstowych:",
-        "noteId": "notes-c5-1-3-6"
+        "legend": "Wybierz wynik dla C.5.1.3.6 None",
+        "noteId": "notes-c-5-1-3-6"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.7 Wyjście mowy dla informacji wideo"
+      "text": "C.5.1.3.7 None"
     },
     {
       "type": "test",
@@ -254,26 +254,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.7 Wyjście mowy dla informacji wideo:",
-        "noteId": "notes-c5-1-3-7"
+        "legend": "Wybierz wynik dla C.5.1.3.7 None",
+        "noteId": "notes-c-5-1-3-7"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.8 Wejście maskowane"
+      "text": "C.5.1.3.8 None"
     },
     {
       "type": "test",
@@ -290,26 +290,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Którekolwiek sprawdzenie jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Dowolne kryterium: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Wszystkie sprawdzenia są fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Wszystkie kryteria: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.8 Wprowadzanie zamaskowane:",
-        "noteId": "notes-c5-1-3-8"
+        "legend": "Wybierz wynik dla C.5.1.3.8 None",
+        "noteId": "notes-c-5-1-3-8"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.9 Prywatny dostęp do danych osobowych"
+      "text": "C.5.1.3.9 None"
     },
     {
       "type": "test",
@@ -327,26 +327,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe LUB 3 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryteria 1 i 2 lub 3: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenia 1 lub 2 są fałszywe ORAZ 3 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 lub 2 i 3: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 3 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.9 Prywatny dostęp do danych osobowych:",
-        "noteId": "notes-c5-1-3-9"
+        "legend": "Wybierz wynik dla C.5.1.3.9 None",
+        "noteId": "notes-c-5-1-3-9"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.10 Wyjście audio bez zakłóceń"
+      "text": "C.5.1.3.10 None"
     },
     {
       "type": "test",
@@ -361,26 +361,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.10 Nieprzeszkadzające wyjście audio:",
-        "noteId": "notes-c5-1-3-10"
+        "legend": "Wybierz wynik dla C.5.1.3.10 None",
+        "noteId": "notes-c-5-1-3-10"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.11 Głośność odsłuchiwania treści prywatnych"
+      "text": "C.5.1.3.11 None"
     },
     {
       "type": "test",
@@ -395,26 +395,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.11 Głośność prywatnego odsłuchu:",
-        "noteId": "notes-c5-1-3-11"
+        "legend": "Wybierz wynik dla C.5.1.3.11 None",
+        "noteId": "notes-c-5-1-3-11"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.12 Głośność głośnika"
+      "text": "C.5.1.3.12 None"
     },
     {
       "type": "test",
@@ -430,26 +430,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.12 Głośność głośnika:",
-        "noteId": "notes-c5-1-3-12"
+        "legend": "Wybierz wynik dla C.5.1.3.12 None",
+        "noteId": "notes-c-5-1-3-12"
       },
       "evaluationType": "Inspection and measurement"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.13 Przywracanie głośności"
+      "text": "C.5.1.3.13 None"
     },
     {
       "type": "test",
@@ -464,26 +464,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.13 Resetowanie głośności:",
-        "noteId": "notes-c5-1-3-13"
+        "legend": "Wybierz wynik dla C.5.1.3.13 None",
+        "noteId": "notes-c-5-1-3-13"
       },
       "evaluationType": "Inspection and measurement"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.14 Języki mówione"
+      "text": "C.5.1.3.14 None"
     },
     {
       "type": "test",
@@ -501,26 +501,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.14 Języki mówione:",
-        "noteId": "notes-c5-1-3-14"
+        "legend": "Wybierz wynik dla C.5.1.3.14 None",
+        "noteId": "notes-c-5-1-3-14"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.15 Niewizualna identyfikacja błędu"
+      "text": "C.5.1.3.15 None"
     },
     {
       "type": "test",
@@ -536,26 +536,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.15 Niewizualna identyfikacja błędów:",
-        "noteId": "notes-c5-1-3-15"
+        "legend": "Wybierz wynik dla C.5.1.3.15 None",
+        "noteId": "notes-c-5-1-3-15"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.16 Pokwitowania, bilety i dane wyjściowe transakcji"
+      "text": "C.5.1.3.16 None"
     },
     {
       "type": "test",
@@ -569,26 +569,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.16 Paragony, bilety i wydruki transakcyjne:",
-        "noteId": "notes-c5-1-3-16"
+        "legend": "Wybierz wynik dla C.5.1.3.16 None",
+        "noteId": "notes-c-5-1-3-16"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.4 Funkcjonalności uniemożliwiające powiększanie tekstu"
+      "text": "C.5.1.4 None"
     },
     {
       "type": "test",
@@ -604,26 +604,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.4 Funkcjonalność zamknięta dla powiększania tekstu:",
-        "noteId": "notes-c5-1-4"
+        "legend": "Wybierz wynik dla C.5.1.4 None",
+        "noteId": "notes-c-5-1-4"
       },
       "evaluationType": "Inspection and measurement"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.5 Wyjście wizualne dla informacji dźwiękowych"
+      "text": "C.5.1.5 None"
     },
     {
       "type": "test",
@@ -637,31 +637,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.5 Wyjście wizualne dla informacji słuchowych:",
-        "noteId": "notes-c5-1-5"
+        "legend": "Wybierz wynik dla C.5.1.5 None",
+        "noteId": "notes-c-5-1-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.6 Działanie bez korzystania z klawiatury"
+      "text": "C.5.1.6 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.6.1 Funkcjonalność zamknięta"
+      "text": "C.5.1.6.1 None"
     },
     {
       "type": "test",
@@ -675,26 +675,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.6.1 Funkcjonalność zamknięta:",
-        "noteId": "notes-c5-1-6-1"
+        "legend": "Wybierz wynik dla C.5.1.6.1 None",
+        "noteId": "notes-c-5-1-6-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.6.2 Fokus"
+      "text": "C.5.1.6.2 None"
     },
     {
       "type": "test",
@@ -709,26 +709,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.6.2 Fokus wejścia:",
-        "noteId": "notes-c5-1-6-2"
+        "legend": "Wybierz wynik dla C.5.1.6.2 None",
+        "noteId": "notes-c-5-1-6-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.7 Dostęp bez użycia mowy"
+      "text": "C.5.1.7 None"
     },
     {
       "type": "test",
@@ -742,26 +742,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.7 Dostęp bez mowy:",
-        "noteId": "notes-c5-1-7"
+        "legend": "Wybierz wynik dla C.5.1.7 None",
+        "noteId": "notes-c-5-1-7"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.2 Aktywacja funkcji dostępności"
+      "text": "C.5.2 None"
     },
     {
       "type": "test",
@@ -775,26 +775,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.2 Aktywacja funkcji dostępności:",
-        "noteId": "notes-c5-2"
+        "legend": "Wybierz wynik dla C.5.2 None",
+        "noteId": "notes-c-5-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.3 Biometria"
+      "text": "C.5.3 None"
     },
     {
       "type": "test",
@@ -808,26 +808,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla Test 1 - Identyfikacja:",
-        "noteId": "notes-c5-3-1"
+        "legend": "Wybierz wynik dla C.5.3 None",
+        "noteId": "notes-c-5-3"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) używają cech biologicznych do kontroli technologii informacyjno-komunikacyjnych (TIK)."
+        "Pozytywny: Kryterium 1: prawda"
       ],
       "procedure": [
         "1. TIK wykorzystuje charakterystyki biologiczne do sterowania funkcjami TIK ."
@@ -855,7 +855,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.4 Zachowanie informacji o dostępności podczas konwersji"
+      "text": "C.5.4 None"
     },
     {
       "type": "test",
@@ -872,31 +872,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2, 3 lub 4 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2, 3 lub 4"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.4 Zachowanie informacji o dostępności podczas konwersji:",
-        "noteId": "notes-c5-4"
+        "legend": "Wybierz wynik dla C.5.4 None",
+        "noteId": "notes-c-5-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.5 Części obsługiwane"
+      "text": "C.5.5 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.5.1 Środki obsługi"
+      "text": "C.5.5.1 None"
     },
     {
       "type": "test",
@@ -910,26 +910,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.5.1 Sposób obsługi:",
-        "noteId": "notes-c5-5-1"
+        "legend": "Wybierz wynik dla C.5.5.1 None",
+        "noteId": "notes-c-5-5-1"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.5.2 Rozpoznawalność części obsługiwanych"
+      "text": "C.5.5.2 None"
     },
     {
       "type": "test",
@@ -944,31 +944,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.5.2 Rozróżnialność części obsługiwalnych:",
-        "noteId": "notes-c5-5-2"
+        "legend": "Wybierz wynik dla C.5.5.2 None",
+        "noteId": "notes-c-5-5-2"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.6 Elementy blokujące lub przełączające"
+      "text": "C.5.6 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.6.1 Status dotyku lub dźwięku"
+      "text": "C.5.6.1 None"
     },
     {
       "type": "test",
@@ -984,26 +984,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 lub 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 lub 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenia 1 i 2 są fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 i 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.6.1 Status dotykowy lub słuchowy:",
-        "noteId": "notes-c5-6-1"
+        "legend": "Wybierz wynik dla C.5.6.1 None",
+        "noteId": "notes-c-5-6-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.6.2 Status wizualny"
+      "text": "C.5.6.2 None"
     },
     {
       "type": "test",
@@ -1019,26 +1019,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.6.2 Status wizualny:",
-        "noteId": "notes-c5-6-2"
+        "legend": "Wybierz wynik dla C.5.6.2 None",
+        "noteId": "notes-c-5-6-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.7 Ponowne wciśnięcie klawisza"
+      "text": "C.5.7 None"
     },
     {
       "type": "test",
@@ -1054,26 +1054,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.7 Powtarzanie klawiszy:",
-        "noteId": "notes-c5-7"
+        "legend": "Wybierz wynik dla C.5.7 None",
+        "noteId": "notes-c-5-7"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.8 Akceptacja dwukrotnego kliknięcia klawisza"
+      "text": "C.5.8 None"
     },
     {
       "type": "test",
@@ -1091,26 +1091,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe, a sprawdzenie 5 jest fałszywe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda oraz kryterium 5: fałsz"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe lub sprawdzenie 5 jest prawdziwe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz lub kryterium 5: prawda"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.8 Akceptacja podwójnego naciśnięcia klawisza:",
-        "noteId": "notes-c5-8"
+        "legend": "Wybierz wynik dla C.5.8 None",
+        "noteId": "notes-c-5-8"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.9 Jednoczesne czynności użytkownika"
+      "text": "C.5.9 None"
     },
     {
       "type": "test",
@@ -1126,19 +1126,19 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 3 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 3: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 3 jest fałszywe dla wszystkich trybów działania."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 3: fałsz dla wszystkich trybów pracy"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. C.6 TIK z dwukierunkową komunikacją głosową"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.9 Jednoczesne działania użytkownika:",
-        "noteId": "notes-c5-9"
+        "legend": "Wybierz wynik dla C.5.9 None",
+        "noteId": "notes-c-5-9"
       },
       "evaluationType": "Inspection"
     }

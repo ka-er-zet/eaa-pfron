@@ -5,12 +5,12 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.7.1 Technologia przetwarzania napisów"
+      "text": "C.7.1 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.7.1.1 Odtwarzanie napisów"
+      "text": "C.7.1.1 None"
     },
     {
       "type": "test",
@@ -25,19 +25,15 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
-          },
-          {
-            "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           }
         ],
-        "legend": "Wybierz wynik dla C.7.1.1 Test 1:",
-        "noteId": "notes-c7-1-1-t1"
+        "legend": "Wybierz wynik dla C.7.1.1 None",
+        "noteId": "notes-c-7-1-1"
       },
       "evaluationType": "Inspection"
     },
@@ -54,26 +50,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.7.1.1 Test 2:",
-        "noteId": "notes-c7-1-1-t2"
+        "legend": "Wybierz wynik dla C.7.1.1 None",
+        "noteId": "notes-c-7-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.7.1.2 Synchronizacja napisów"
+      "text": "C.7.1.2 None"
     },
     {
       "type": "test",
@@ -87,26 +83,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.7.1.2 Synchronizacja napisów:",
-        "noteId": "notes-c7-1-2"
+        "legend": "Wybierz wynik dla C.7.1.2 None",
+        "noteId": "notes-c-7-1-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.7.1.3 Zachowanie zasad tworzenia napisów"
+      "text": "C.7.1.3 None"
     },
     {
       "type": "test",
@@ -120,26 +116,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.7.1.3 Zachowanie napisów:",
-        "noteId": "notes-c7-1-3"
+        "legend": "Wybierz wynik dla C.7.1.3 None",
+        "noteId": "notes-c-7-1-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.7.1.4 Cechy napisów"
+      "text": "C.7.1.4 None"
     },
     {
       "type": "test",
@@ -154,26 +150,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.7.1.4 Charakterystyka napisów:",
-        "noteId": "notes-c7-1-4"
+        "legend": "Wybierz wynik dla C.7.1.4 None",
+        "noteId": "notes-c-7-1-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.7.1.5 Odczytywane napisy"
+      "text": "C.7.1.5 None"
     },
     {
       "type": "test",
@@ -188,31 +184,31 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.7.1.5 Mówione napisy:",
-        "noteId": "notes-c7-1-5"
+        "legend": "Wybierz wynik dla C.7.1.5 None",
+        "noteId": "notes-c-7-1-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.7.2 Technologia audiodeskrypcji"
+      "text": "C.7.2 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.7.2.1 Odtwarzanie audiodeskrypcji"
+      "text": "C.7.2.1 None"
     },
     {
       "type": "test",
@@ -228,26 +224,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe LUB 1 jest fałszywe i 3 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda lub 1: fałsz i 3: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> 1 jest prawdziwe i 2 jest fałszywe LUB 1 jest fałszywe i 3 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: prawda i 2: fałsz lub 1: fałsz i 3: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.7.2.1 Odtwarzanie audiodeskrypcji:",
-        "noteId": "notes-c7-2-1"
+        "legend": "Wybierz wynik dla C.7.2.1 None",
+        "noteId": "notes-c-7-2-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.7.2.2 Synchronizacja audiodeskrypcji"
+      "text": "C.7.2.2 None"
     },
     {
       "type": "test",
@@ -261,26 +257,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.7.2.2 Synchronizacja audiodeskrypcji:",
-        "noteId": "notes-c7-2-2"
+        "legend": "Wybierz wynik dla C.7.2.2 None",
+        "noteId": "notes-c-7-2-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.7.2.3 Zachowywanie audiodeskrypcji"
+      "text": "C.7.2.3 None"
     },
     {
       "type": "test",
@@ -294,26 +290,26 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.7.2.3 Zachowanie audiodeskrypcji:",
-        "noteId": "notes-c7-2-3"
+        "legend": "Wybierz wynik dla C.7.2.3 None",
+        "noteId": "notes-c-7-2-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.7.3 Sterowanie napisami i audiodeskrypcją"
+      "text": "C.7.3 None"
     },
     {
       "type": "test",
@@ -327,19 +323,19 @@
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. C.8 Sprzęt"
           }
         ],
-        "legend": "Wybierz wynik dla C.7.3 Kontrolki użytkownika dla napisów i audiodeskrypcji:",
-        "noteId": "notes-c7-3"
+        "legend": "Wybierz wynik dla C.7.3 None",
+        "noteId": "notes-c-7-3"
       },
       "evaluationType": "Inspection"
     }
