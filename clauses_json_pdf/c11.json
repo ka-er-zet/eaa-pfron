@@ -39,7 +39,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.1.1 Treść nietekstowa."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.1.1</a> Treść nietekstowa."
       ],
       "form": {
         "inputs": [
@@ -78,7 +78,7 @@
         "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
         "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.",
         "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
-        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w kryterium sukcesu WCAG 2.1 dla wytycznej 1.1.1 Treść nietekstowa."
+        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w kryterium sukcesu WCAG 2.1 dla wytycznej <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html\" target=\"_blank\" rel=\"noopener noreferrer\">1.1.1</a> Treść nietekstowa."
       ],
       "form": {
         "inputs": [
@@ -124,7 +124,7 @@
         "3. Aby umożliwić korzystanie z funkcjonalności zamkniętych TIK , nie jest konieczne wcześniejsze przygotowanie nagrań informacji dźwiękowej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.1</a> Tylko audio lub tylko wideo (nagranie)."
       ],
       "form": {
         "inputs": [
@@ -231,7 +231,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.2</a> Napisy rozszerzone (nagranie)."
       ],
       "form": {
         "inputs": [
@@ -271,7 +271,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.3</a> Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
       ],
       "form": {
         "inputs": [
@@ -341,7 +341,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/captions-live.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.4</a> Napisy rozszerzone (na żywo)."
       ],
       "form": {
         "inputs": [
@@ -375,7 +375,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.5</a> Audiodeskrypcja (nagranie)."
       ],
       "form": {
         "inputs": [
@@ -420,7 +420,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.1 Informacje i relacje."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1</a> Informacje i relacje."
       ],
       "form": {
         "inputs": [
@@ -469,7 +469,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.2 Zrozumiała kolejność."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.2</a> Zrozumiała kolejność."
       ],
       "form": {
         "inputs": [
@@ -512,7 +512,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.3</a> Właściwości zmysłowe."
       ],
       "form": {
         "inputs": [
@@ -546,7 +546,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/orientation.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.4</a> Orientacja."
       ],
       "form": {
         "inputs": [
@@ -586,7 +586,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.5</a> Określenie pożądanej wartości."
       ],
       "form": {
         "inputs": [
@@ -663,7 +663,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.1</a> Użycie koloru."
       ],
       "form": {
         "inputs": [
@@ -731,7 +731,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.3</a> Kontrast (minimum)."
       ],
       "form": {
         "inputs": [
@@ -771,7 +771,7 @@
         "2. Oprogramowanie zapewnia obsługę funkcji powiększania dostępnych na platformie lub technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.4</a> Zmiana rozmiaru tekstu."
       ],
       "form": {
         "inputs": [
@@ -848,7 +848,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.5</a> Obrazy tekstu."
       ],
       "form": {
         "inputs": [
@@ -887,7 +887,7 @@
         "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
         "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.",
         "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
-        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w kryterium sukcesu WCAG 2.1 dla wytycznej 1.1.1 Treść nietekstowa."
+        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w kryterium sukcesu WCAG 2.1 dla wytycznej <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html\" target=\"_blank\" rel=\"noopener noreferrer\">1.1.1</a> Treść nietekstowa."
       ],
       "form": {
         "inputs": [
@@ -955,7 +955,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.11</a> Kontrast elementów nietekstowych."
       ],
       "form": {
         "inputs": [
@@ -989,7 +989,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym , które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12</a> Odstępy w tekście."
       ],
       "form": {
         "inputs": [
@@ -1023,7 +1023,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.13</a> Treść spod kursora lub fokusu."
       ],
       "form": {
         "inputs": [
@@ -1073,7 +1073,7 @@
         "2. Oprogramowanie zapewnia obsługę klawiatur lub interfejs klawiatury."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.1.1</a> Klawiatura."
       ],
       "form": {
         "inputs": [
@@ -1182,7 +1182,7 @@
         "2. Oprogramowanie zapewnia obsługę przynajmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiszowe."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.1.4</a> Jednoznakowe skróty klawiszowe."
       ],
       "form": {
         "inputs": [
@@ -1402,7 +1402,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.4</a> Cel łącza (w kontekście)."
       ],
       "form": {
         "inputs": [
@@ -1436,7 +1436,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6</a> Nagłówki i etykiety."
       ],
       "form": {
         "inputs": [
@@ -1470,7 +1470,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.7</a> Widoczny fokus."
       ],
       "form": {
         "inputs": [
@@ -1585,7 +1585,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3</a> Etykieta w nazwie."
       ],
       "form": {
         "inputs": [
@@ -1629,7 +1629,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.4</a> Aktywowanie ruchem."
       ],
       "form": {
         "inputs": [
@@ -1758,7 +1758,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.2.1</a> Po otrzymaniu fokusu."
       ],
       "form": {
         "inputs": [
@@ -1792,7 +1792,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/on-input.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.2.2</a> Podczas wprowadzania danych."
       ],
       "form": {
         "inputs": [
@@ -1837,7 +1837,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.1</a> Identyfikacja błędu."
       ],
       "form": {
         "inputs": [
@@ -1909,7 +1909,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.2</a> Etykiety lub instrukcje."
       ],
       "form": {
         "inputs": [
@@ -1943,7 +1943,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.3</a> Sugestie korekty błędów."
       ],
       "form": {
         "inputs": [
@@ -2125,7 +2125,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3</a> Komunikaty o stanie."
       ],
       "form": {
         "inputs": [
