@@ -5,7 +5,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.1 Funkcjonalność zamknięta"
+      "text": "C.5.1 None"
     },
     {
       "type": "informative",
@@ -14,7 +14,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.2 Ogólne"
+      "text": "C.5.1.2 None"
     },
     {
       "type": "informative",
@@ -23,107 +23,107 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.2.2 Technologia asystująca"
+      "text": "C.5.1.2.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) mają zamkniętą funkcjonalność."
+        "1. W TIK występują funkcjonalności zamknięte."
       ],
       "procedure": [
-        "1. Określ zamknięte funkcje TIK.",
-        "2. Sprawdź, czy testy od C.5.1.3 do C.5.1.6 mogą być przeprowadzone bez podłączania lub instalowania jakiejkolwiek technologii asystującej, z wyjątkiem osobistych słuchawek lub pętli indukcyjnych."
+        "1. Określ w TIK funkcjonalności zamknięte.",
+        "2. Sprawdź, czy testy od C.5.1.3 do C.5.1.6 można przeprowadzić bez mocowania lub instalowania jakiejkolwiek technologii wspomagającej z wyjątkiem osobistych zestawów słuchawkowych lub pętli indukcyjnych."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.2.2 Technologia asystująca:",
-        "noteId": "notes-c5-1-2-2"
+        "legend": "Wybierz wynik dla C.5.1.2.2 None",
+        "noteId": "notes-c-5-1-2-2"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.3 Dostęp niewizualny"
+      "text": "C.5.1.3 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.1 Wyjście audio informacji wizualnych"
+      "text": "C.5.1.3.1 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Informacja wizualna jest potrzebna do użycia funkcji technologii informacyjno-komunikacyjnych (TIK), które są zamknięte dla technologii asystujących do odczytu ekranu."
+        "1. Informacje wizualne są wymagane, aby umożliwić korzystanie z tych funkcji TIK , które są zamknięte dla technologii wspomagających odczyt z ekranu."
       ],
       "procedure": [
-        "1. Określ funkcje TIK zamknięte dla odczytu ekranu.",
-        "2. Sprawdź, czy wszystkie są obsługiwalne przy użyciu dostępu przez wyjście audio."
+        "1. Określ w TIK funkcjonalności zamknięte na odczyt z ekranu.",
+        "2. Sprawdź, czy można je wykonać, korzystając z dostępu do wyjścia audio."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.1 Wyjście audio informacji wizualnych:",
-        "noteId": "notes-c5-1-3-1"
+        "legend": "Wybierz wynik dla C.5.1.3.1 None",
+        "noteId": "notes-c-5-1-3-1"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.2 Dostarczanie wyjścia słuchowego, w tym mowy"
+      "text": "C.5.1.3.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście słuchowe jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK)."
+        "1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście słuchowe jest dostarczane przez mechanizm zawarty w TIK lub dostarczony z nim.",
-        "2. Sprawdź, czy wyjście słuchowe jest dostarczane przez osobiste słuchawki, które można podłączyć przez gniazdo audio 3,5 mm lub standardowe złącze branżowe bez konieczności użycia wzroku."
+        "1. Sprawdź, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu zawartego w TIK lub dostarczanego wraz z nią.",
+        "2. Sprawdź, czy sygnał dźwiękowy jest dostarczany za pomocą osobistego zestawu słuchawkowego, który można podłączyć poprzez gniazdo audio 3,5 mm lub standardowe połączenie branżowe, bez konieczności korzystania ze wzroku."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 lub 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 lub 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenia 1 i 2 są fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 i 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.2 Dostarczanie wyjścia słuchowego, w tym mowy:",
-        "noteId": "notes-c5-1-3-2"
+        "legend": "Wybierz wynik dla C.5.1.3.2 None",
+        "noteId": "notes-c-5-1-3-2"
       },
       "evaluationType": "Inspection"
     },
@@ -134,705 +134,703 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.4 Kontrola użytkownika nad wyjściem mowy"
+      "text": "C.5.1.3.4 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście mowy jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK)."
+        "1. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście mowy może być przerwane na żądanie użytkownika.",
-        "2. Sprawdź, czy wyjście mowy może być powtórzone na żądanie użytkownika."
+        "1. Sprawdź, czy wyjście mowy można przerwać na żądanie użytkownika.",
+        "2. Sprawdź, czy wyjście mowy można powtórzyć na żądanie użytkownika."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Wszystkie sprawdzenia są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Wszystkie kryteria: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Którekolwiek sprawdzenie jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Dowolne kryterium: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.4 Kontrola użytkownika nad wyjściem mowy:",
-        "noteId": "notes-c5-1-3-4"
+        "legend": "Wybierz wynik dla C.5.1.3.4 None",
+        "noteId": "notes-c-5-1-3-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.5 Automatyczne przerywanie wyjścia mowy"
+      "text": "C.5.1.3.5 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście mowy jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK)."
+        "1. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych."
       ],
       "procedure": [
-        "1. Określ zamknięte funkcje TIK.",
-        "2. Sprawdź, czy wyjście mowy dla każdej pojedynczej funkcji jest przerywane przez akcję użytkownika.",
-        "3. Sprawdź, czy wyjście mowy dla każdej pojedynczej funkcji jest przerywane, gdy rozpoczyna się nowe wyjście mowy."
+        "1. Określ w TIK funkcjonalności zamknięte.",
+        "2. Sprawdź, czy wyjście mowy dla każdej pojedynczej funkcji jest przerywany na skutek działania użytkownika.",
+        "3. Sprawdź, czy wyjście ł mowy dla każdej pojedynczej funkcji jest przerywany, gdy rozpoczyna się nowe wyjście mowy."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 2 i 3 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> kryteria 2 i 3: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 lub 3 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2 lub 3: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.5 Automatyczne przerywanie wyjścia mowy:",
-        "noteId": "notes-c5-1-3-5"
+        "legend": "Wybierz wynik dla C.5.1.3.5 None",
+        "noteId": "notes-c-5-1-3-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.6 Wyjście mowy dla treści nietekstowych"
+      "text": "C.5.1.3.6 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Treści nietekstowe są prezentowane użytkownikom za pomocą wyjścia mowy w technologii informacyjno-komunikacyjnej (TIK)."
+        "1. Treść nietekstowa jest prezentowana użytkownikom za pomocą sygnału mowy."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście mowy jest zapewnione jako alternatywa dla treści nietekstowych.",
-        "2. Sprawdź, czy treść nietekstowa nie jest czystą dekoracją.",
-        "3. Sprawdź, czy treść nietekstowa nie jest używana tylko do formatowania wizualnego.",
-        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dla \"alternatywy tekstowej\" opisanymi w WCAG 2.1 SC 1.1.1."
+        "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
+        "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.",
+        "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
+        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanymi w kryterium sukcesu WCAG 2.1 dla wytycznej 1.1.1."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1, 2, 3 i 4 są prawdziwe; LUB 1 i 2 są fałszywe; LUB 1 i 3 są fałszywe."
+            "label": "<strong>Zaliczone:</strong> Kryteria 1, 2, 3 i 4: prawda; lub 1 i 2: fałsz; lub 1 i 3: fałsz"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> 1 jest prawdziwe i 2 fałszywe; LUB 1 jest prawdziwe i 3 fałszywe; LUB 1, 2 i 3 są prawdziwe, a 4 fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1: prawda i 2: fałsz; lub 1: prawda i 3: fałsz; lub 1, 2 i 3: prawda oraz 4: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.6 Wyjście mowy dla treści nietekstowych:",
-        "noteId": "notes-c5-1-3-6"
+        "legend": "Wybierz wynik dla C.5.1.3.6 None",
+        "noteId": "notes-c-5-1-3-6"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.7 Wyjście mowy dla informacji wideo"
+      "text": "C.5.1.3.7 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Nagrana treść wideo jest potrzebna do użycia zamkniętych funkcji technologii informacyjno-komunikacyjnych (TIK).",
-        "2. Wyjście mowy jest zapewnione jako niewizualny dostęp do treści nietekstowych wyświetlanych w zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK)."
+        "1. Nagrane materiały wideo są niezbędne, aby umożliwić korzystanie z zamkniętych funkcji TIK .",
+        "2. Wyjście mowy zapewnia niewizualny dostęp do treści nietekstowej w funkcjonalności zamkniętej."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście mowy prezentuje równoważne informacje dla nagranej treści wideo."
+        "1. Sprawdź, czy wyjście mowy prezentuje informacje zgodne z napisami do nagranej treści wideo."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.7 Wyjście mowy dla informacji wideo:",
-        "noteId": "notes-c5-1-3-7"
+        "legend": "Wybierz wynik dla C.5.1.3.7 None",
+        "noteId": "notes-c-5-1-3-7"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.8 Wprowadzanie zamaskowane"
+      "text": "C.5.1.3.8 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście słuchowe jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK).",
-        "2. Wyświetlane znaki są znakami maskującymi.",
-        "3. Jakakolwiek opcja pozwalająca na nieprywatne wyjście słuchowe nie została aktywowana."
+        "1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        "2. Wyświetlane są znaki maskowane.",
+        "3. Nie aktywowano żadnej opcji umożliwiającej korzystanie z nieprywatnego sygnału dźwiękowego."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście słuchowe nie jest mówioną wersją wprowadzonych znaków.",
-        "2. Sprawdź, czy wyjście słuchowe jest dostarczane tylko do mechanizmu prywatnego odsłuchu."
+        "1. Sprawdź, czy sygnał dźwiękowy nie jest mówioną wersją wprowadzonych znaków.",
+        "2. Sprawdź, czy sygnał dźwiękowy jest dostępny tylko do mechanizmu do indywidualnego słuchania."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Którekolwiek sprawdzenie jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Dowolne kryterium: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Wszystkie sprawdzenia są fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Wszystkie kryteria: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.8 Wprowadzanie zamaskowane:",
-        "noteId": "notes-c5-1-3-8"
+        "legend": "Wybierz wynik dla C.5.1.3.8 None",
+        "noteId": "notes-c-5-1-3-8"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.9 Prywatny dostęp do danych osobowych"
+      "text": "C.5.1.3.9 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście słuchowe jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK).",
+        "1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
         "2. Wyjście zawiera dane.",
-        "3. Istnieje obowiązująca polityka prywatności, która uznaje te dane za prywatne."
+        "3. Istnieje odpowiednia polityka prywatności, która uznaje te dane za prywatne."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście słuchowe jest dostarczane tylko przez mechanizm prywatnego odsłuchu.",
-        "2. Sprawdź, czy mechanizm prywatnego odsłuchu można podłączyć bez użycia wzroku.",
-        "3. Sprawdź, czy wyjście słuchowe jest dostarczane przez wszystkie mechanizmy do wyboru przez użytkownika."
+        "1. Sprawdź, czy sygnał dźwiękowy jest dostępny tylko do mechanizmu do indywidulnego słuchania.",
+        "2. Sprawdź, czy mechanizm do indywidualnego słuchania można podłączyć bez konieczności używania wzroku.",
+        "3. Sprawdź, czy sygnał dźwiękowy jest dostarczany przez dowolny inny mechanizm, który użytkownik może wybrać."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe LUB 3 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryteria 1 i 2 lub 3: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenia 1 lub 2 są fałszywe ORAZ 3 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 lub 2 i 3: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 3 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.9 Prywatny dostęp do danych osobowych:",
-        "noteId": "notes-c5-1-3-9"
+        "legend": "Wybierz wynik dla C.5.1.3.9 None",
+        "noteId": "notes-c-5-1-3-9"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.10 Nieprzeszkadzające wyjście audio"
+      "text": "C.5.1.3.10 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście słuchowe jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK).",
-        "2. Technologie informacyjno-komunikacyjne (TIK) automatycznie odtwarzają przeszkadzające wyjście dźwiękowe."
+        "1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        "2. TIK automatycznie odtwarza zakłócające wyjście dźwiękowe."
       ],
       "procedure": [
-        "1. Sprawdź, czy przeszkadzające wyjście dźwiękowe trwa nie dłużej niż trzy sekundy."
+        "1. Sprawdź, czy zakłócające wyjście dźwiękowe jest odtwarzane nie dłużej niż 3 sekundy."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.10 Nieprzeszkadzające wyjście audio:",
-        "noteId": "notes-c5-1-3-10"
+        "legend": "Wybierz wynik dla C.5.1.3.10 None",
+        "noteId": "notes-c-5-1-3-10"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.11 Głośność prywatnego odsłuchu"
+      "text": "C.5.1.3.11 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście słuchowe jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK).",
-        "2. Wyjście słuchowe jest dostarczane przez mechanizm prywatnego odsłuchu."
+        "1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        "2. Sygnał dźwiękowy jest dostępny tylko do mechanizmu do indywidualnego słuchania."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje co najmniej jeden niewizualny tryb obsługi do kontrolowania głośności."
+        "1. Sprawdź, czy istnieje przynajmniej jeden niewizualny tryb działania do kontroli głosu."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.11 Głośność prywatnego odsłuchu:",
-        "noteId": "notes-c5-1-3-11"
+        "legend": "Wybierz wynik dla C.5.1.3.11 None",
+        "noteId": "notes-c-5-1-3-11"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.12 Głośność głośnika"
+      "text": "C.5.1.3.12 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście słuchowe jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK).",
-        "2. Wyjście słuchowe jest dostarczane przez głośniki."
+        "1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        "2. Sygnał dźwiękowy jest dostarczany przez głośniki."
       ],
       "procedure": [
-        "1. Sprawdź, czy zapewniona jest niewizualna, przyrostowa kontrola głośności.",
-        "2. Sprawdź, czy dostępne jest wzmocnienie wyjścia do poziomu co najmniej 65 dBA (-29 dBPaA)."
+        "1. Sprawdź, czy jest dostępna niewizualna kontrola zwiększania głośności.",
+        "2. Sprawdź, czy jest możliwe wzmocnienie do poziomu przynajmniej 65 dBA (–29 dBPaA)."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.12 Głośność głośnika:",
-        "noteId": "notes-c5-1-3-12"
+        "legend": "Wybierz wynik dla C.5.1.3.12 None",
+        "noteId": "notes-c-5-1-3-12"
       },
       "evaluationType": "Inspection and measurement"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.13 Resetowanie głośności"
+      "text": "C.5.1.3.13 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście słuchowe jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK).",
-        "2. Technologie informacyjno-komunikacyjne (TIK) nie są dedykowane jednemu użytkownikowi."
+        "1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        "2. TIK nie jest dedykowana dla pojedynczego użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy zapewniona jest funkcja automatycznego resetowania głośności do poziomu 65 dBA lub niższego po każdym użyciu."
+        "1. Sprawdź, czy funkcja do automatycznego resetowania głośności do poziomu 65 dBA lub niższego jest wywoływana po każdym użyciu."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.13 Resetowanie głośności:",
-        "noteId": "notes-c5-1-3-13"
+        "legend": "Wybierz wynik dla C.5.1.3.13 None",
+        "noteId": "notes-c-5-1-3-13"
       },
       "evaluationType": "Inspection and measurement"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.14 Języki mówione"
+      "text": "C.5.1.3.14 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście mowy jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK).",
-        "2. Wyjście mowy nie jest nazwami własnymi, terminami technicznymi, słowami o nieokreślonym języku ani słowami lub frazami, które stały się częścią języka potocznego otaczającego tekstu.",
-        "3. Treść nie jest generowana zewnętrznie i jest pod kontrolą dostawcy technologii informacyjno-komunikacyjnych (TIK).",
-        "4. Wyświetlane języki można wybrać za pomocą dostępu niewizualnego.",
-        "5. Użytkownik nie wybrał języka mowy innego niż język wyświetlanej treści."
+        "1. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        "2. Sygnałem mowy nie są nazwy własne, terminy techniczne, słowa w nieokreślonym języku ani słowa lub zwroty, które stały się częścią żargonu bezpośrednio otaczającego tekstu.",
+        "3. Treść nie jest generowana zewnętrznie i jest kontrolowana przez dostawcę TIK .",
+        "4. Wyświetlane języki można wybrać z zastosowaniem dostępu niewizualny.",
+        "5. Gdy użytkownik nie wybrał języka mowy, który jest inny niż język wyświetlanej treści."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście mowy jest w tym samym języku ludzkim, co wyświetlana treść."
+        "1. Sprawdź, czy wyjście mowy jest w tym samym języku co dostarczona wyświetlana treść."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.14 Języki mówione:",
-        "noteId": "notes-c5-1-3-14"
+        "legend": "Wybierz wynik dla C.5.1.3.14 None",
+        "noteId": "notes-c-5-1-3-14"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.15 Niewizualna identyfikacja błędów"
+      "text": "C.5.1.3.15 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Wyjście mowy jest zapewnione jako niewizualny dostęp do zamkniętej funkcjonalności technologii informacyjno-komunikacyjnych (TIK).",
-        "2. Błąd wprowadzania jest automatycznie wykrywany."
+        "1. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
+        "2. Błąd na wejściu jest wykrywany automatycznie."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście mowy identyfikuje element, który jest błędny.",
+        "1. Sprawdź, czy wyjście mowy wykrywa, że element jest błędny.",
         "2. Sprawdź, czy wyjście mowy opisuje element, który jest błędny."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.15 Niewizualna identyfikacja błędów:",
-        "noteId": "notes-c5-1-3-15"
+        "legend": "Wybierz wynik dla C.5.1.3.15 None",
+        "noteId": "notes-c-5-1-3-15"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.16 Paragony, bilety i wydruki transakcyjne"
+      "text": "C.5.1.3.16 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) są zamknięte dla dostępu wizualnego.",
-        "2. Technologie informacyjno-komunikacyjne (TIK) dostarczają paragony, bilety lub inne wydruki w wyniku transakcji samoobsługowej.",
-        "3. Sprawdzane informacje nie są wydrukowanymi kopiami planów podróży i map."
+        "1. TIK jest zamknięta dla dostępu wizualnego."
       ],
       "procedure": [
-        "1. Sprawdź, czy zapewnione jest wyjście mowy, które zawiera wszystkie informacje niezbędne do zakończenia lub zweryfikowania transakcji."
+        "1. Sprawdź, czy dostarczany wyjście mowy zawiera wszystkie informacje niezbędne do zakończenia lub zweryfikowania transakcji."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2 lub 3 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.16 Paragony, bilety i wydruki transakcyjne:",
-        "noteId": "notes-c5-1-3-16"
+        "legend": "Wybierz wynik dla C.5.1.3.16 None",
+        "noteId": "notes-c-5-1-3-16"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.4 Funkcjonalność zamknięta dla powiększania tekstu"
+      "text": "C.5.1.4 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Funkcjonalność technologii informacyjno-komunikacyjnych (TIK) jest zamknięta dla funkcji powiększania platformy lub technologii asystującej.",
-        "2. Odległość oglądania jest określona przez dostawcę."
+        "1. Funkcjonalność TIK jest zamknięta dla funkcji powiększania dostępnych na platformie oraz dla technologii wspomagającej.",
+        "2. Odległość widzenia jest określana przez dostawcę."
       ],
       "procedure": [
-        "1. Zmierz wysokość wielkiej litery H.",
-        "2. Sprawdź, czy tworzy ona kąt co najmniej 0,7 stopnia przy określonej odległości oglądania."
+        "1. Zmierzyć wysokość wielkiej litery H.",
+        "2. Sprawdź, czy odpowiada ona kątowi co najmniej 0,7 stopnia przy określonej odległości widzenia."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.4 Funkcjonalność zamknięta dla powiększania tekstu:",
-        "noteId": "notes-c5-1-4"
+        "legend": "Wybierz wynik dla C.5.1.4 None",
+        "noteId": "notes-c-5-1-4"
       },
       "evaluationType": "Inspection and measurement"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.5 Wyjście wizualne dla informacji słuchowych"
+      "text": "C.5.1.5 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Nagrana informacja słuchowa jest potrzebna do użycia zamkniętych funkcji technologii informacyjno-komunikacyjnych (TIK)."
+        "1. Aby umożliwić korzystanie z funkcjonalności zamkniętych TIK , konieczne jest wcześniejsze przygotowanie nagrań sygnału dźwiękowego."
       ],
       "procedure": [
-        "1. Sprawdź, czy informacja wizualna jest równoważna nagranemu wyjściu słuchowemu."
+        "1. Sprawdź, czy informacje wizualne odpowiadają nagraniom sygnału dźwiękowego."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.5 Wyjście wizualne dla informacji słuchowych:",
-        "noteId": "notes-c5-1-5"
+        "legend": "Wybierz wynik dla C.5.1.5 None",
+        "noteId": "notes-c-5-1-5"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.6 Obsługa bez interfejsu klawiatury"
+      "text": "C.5.1.6 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.6.1 Funkcjonalność zamknięta"
+      "text": "C.5.1.6.1 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Funkcjonalność technologii informacyjno-komunikacyjnych (TIK) jest zamknięta dla klawiatur lub interfejsów klawiaturowych."
+        "1. Funkcjonalność TIK jest zamknięta dla klawiatur i interfejsów klawiatury."
       ],
       "procedure": [
-        "1. Sprawdź, czy cała funkcjonalność jest obsługiwalna bez wzroku."
+        "1. Sprawdź, czy wszystkie funkcjonalności można obsługiwać bez użycia wzroku."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.6.1 Funkcjonalność zamknięta:",
-        "noteId": "notes-c5-1-6-1"
+        "legend": "Wybierz wynik dla C.5.1.6.1 None",
+        "noteId": "notes-c-5-1-6-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.6.2 Fokus wejścia"
+      "text": "C.5.1.6.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Funkcjonalność technologii informacyjno-komunikacyjnych (TIK) jest zamknięta dla klawiatur lub interfejsów klawiaturowych.",
-        "2. Fokus wejścia można przenieść na element interfejsu użytkownika."
+        "1. Funkcjonalność TIK jest zamknięta dla klawiatur i interfejsów klawiatury.",
+        "2. Fokus może być przeniesiony na element interfejsu użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy możliwe jest przeniesienie fokusu wejścia z tego elementu za pomocą tego samego mechanizmu."
+        "1. Sprawdź, czy istnieje możliwość usunięcia fokusu z elementu za pomocą tego samego mechanizmu."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.6.2 Fokus wejścia:",
-        "noteId": "notes-c5-1-6-2"
+        "legend": "Wybierz wynik dla C.5.1.6.2 None",
+        "noteId": "notes-c-5-1-6-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.7 Dostęp bez mowy"
+      "text": "C.5.1.7 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Mowa jest potrzebna do użycia zamkniętych funkcji technologii informacyjno-komunikacyjnych (TIK)."
+        "1. Aby umożliwić korzystanie z funkcjonalności zamkniętych TIK , konieczna jest mowa."
       ],
       "procedure": [
-        "1. Sprawdź, czy zamknięte funkcje można włączyć za pomocą alternatywnego mechanizmu wejściowego, który nie wymaga mowy."
+        "1. Sprawdź, czy zamknięte funkcje można aktywować za pomocą alternatywnego mechanizmu wprowadzania, który nie wymaga posługiwania się mową."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.7 Dostęp bez mowy:",
-        "noteId": "notes-c5-1-7"
+        "legend": "Wybierz wynik dla C.5.1.7 None",
+        "noteId": "notes-c-5-1-7"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.2 Aktywacja funkcji dostępności"
+      "text": "C.5.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) mają udokumentowane funkcje dostępności, aby zaspokoić określoną potrzebę."
+        "1. TIK zapewnia udokumentowane funkcje dostępności uwzględniające konkretne potrzeby."
       ],
       "procedure": [
-        "1. Sprawdź, czy możliwe jest aktywowanie tych funkcji dostępności bez polegania na metodzie, która nie wspiera tej potrzeby."
+        "1. Sprawdź, czy można aktywować te funkcje dostępności, nie korzystając z metody, która nie uwzględnia tych potrzeb."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.2 Aktywacja funkcji dostępności:",
-        "noteId": "notes-c5-2"
+        "legend": "Wybierz wynik dla C.5.2 None",
+        "noteId": "notes-c-5-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.3 Biometria"
+      "text": "C.5.3 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) używają cech biologicznych do identyfikacji użytkownika."
+        "1. Do identyfikacji użytkownika TIK wykorzystuje charakterystyki biologiczne."
       ],
       "procedure": [
-        "1. Sprawdź, czy można użyć więcej niż jednego sposobu identyfikacji użytkownika."
+        "1. Sprawdź, czy identyfikację użytkownika można przeprowadzić za pomocą więcej niż jednej metody."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla Test 1 - Identyfikacja:",
-        "noteId": "notes-c5-3-1"
+        "legend": "Wybierz wynik dla C.5.3 None",
+        "noteId": "notes-c-5-3"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) używają cech biologicznych do kontroli technologii informacyjno-komunikacyjnych (TIK)."
+        "Pozytywny: Kryterium 1: prawda"
       ],
       "procedure": [
-        "1. Sprawdź, czy można użyć więcej niż jednego sposobu kontroli TIK."
+        "1. TIK wykorzystuje charakterystyki biologiczne do sterowania funkcjami TIK ."
       ],
       "form": {
         "inputs": [
@@ -857,289 +855,290 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.4 Zachowanie informacji o dostępności podczas konwersji"
+      "text": "C.5.4 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Niewłasnościowa informacja dostarczona dla dostępności jest udokumentowana.",
-        "2. Technologie informacyjno-komunikacyjne (TIK) konwertują informacje lub komunikację.",
-        "3. Niewłasnościowa informacja dostarczona dla dostępności może być zawarta w formacie docelowym.",
-        "4. Niewłasnościowa informacja dostarczona dla dostępności może być obsługiwana przez format docelowy."
+        "1. Niezastrzeżone informacje dotyczące dostępności są udokumentowane.",
+        "2. TIK konwertuje informacje lub komunikację.",
+        "3. Niezastrzeżone informacje dotyczące dostępności mogą być zawarte w formacie docelowym.",
+        "4. Niezastrzeżone informacje dotyczące dostępności mogą być obsługiwane przez format docelowy."
       ],
       "procedure": [
-        "1. Sprawdź, czy niewłasnościowa informacja dostarczona dla dostępności jest zachowywana, gdy TIK konwertuje informacje lub komunikację."
+        "1. Sprawdź, czy niezastrzeżone informacje dotyczące dostępności są zachowane po konwersji w TIK informacji lub komunikacji."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1, 2, 3 lub 4 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2, 3 lub 4"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.4 Zachowanie informacji o dostępności podczas konwersji:",
-        "noteId": "notes-c5-4"
+        "legend": "Wybierz wynik dla C.5.4 None",
+        "noteId": "notes-c-5-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.5 Części obsługiwalne"
+      "text": "C.5.5 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.5.1 Sposób obsługi"
+      "text": "C.5.5.1 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) mają części obsługiwalne, które wymagają chwytania, szczypania lub skręcania nadgarstka do obsługi."
+        "1. TIK zawiera części obsługiwane, które wymagają chwytania, ściskania lub skręcania nadgarstka."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje alternatywny, dostępny sposób obsługi, który nie wymaga tych działań."
+        "1. Sprawdź, czy istnieje dostępny alternatywny sposób, który nie wymaga zastosowania takich działań."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.5.1 Sposób obsługi:",
-        "noteId": "notes-c5-5-1"
+        "legend": "Wybierz wynik dla C.5.5.1 None",
+        "noteId": "notes-c-5-5-1"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.5.2 Rozróżnialność części obsługiwalnych"
+      "text": "C.5.5.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) mają części obsługiwalne."
+        "1. TIK zawiera części obsługiwane."
       ],
       "procedure": [
-        "1. Zidentyfikuj, czy istnieje sposób na rozróżnienie każdej części obsługiwalnej bez wzroku.",
-        "2. Sprawdź, czy akcja związana z częścią obsługiwalną nie została wykonana podczas używania sposobu na rozróżnienie każdej części obsługiwalnej z kroku 1."
+        "1. Określ, czy istnieje sposób na rozpoznanie każdej części, którą można obsługiwać w sposób niewizualny.",
+        "2. Sprawdź, czy działanie związane z częścią obsługiwaną nie zostało wykonane z użyciem środków do rozpoznania każdej części obsługiwanej w kroku 1."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.5.2 Rozróżnialność części obsługiwalnych:",
-        "noteId": "notes-c5-5-2"
+        "legend": "Wybierz wynik dla C.5.5.2 None",
+        "noteId": "notes-c-5-5-2"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.6 Kontrolki blokujące lub przełączające"
+      "text": "C.5.6 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.6.1 Status dotykowy lub słuchowy"
+      "text": "C.5.6.1 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) mają kontrolkę blokującą lub przełączającą.",
-        "2. Kontrolka blokująca lub przełączająca jest prezentowana wizualnie użytkownikowi."
+        "1. TIK ma element sterujący blokujący lub przełączający.",
+        "2. Elementy sterujące blokujące lub przełączające są widoczne dla użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje co najmniej jeden tryb działania, w którym status wszystkich kontrolek blokujących lub przełączających można określić dotykiem bez ich obsługi.",
-        "2. Sprawdź, czy istnieje co najmniej jeden tryb działania, w którym status wszystkich kontrolek blokujących lub przełączających można określić dźwiękiem bez ich obsługi."
+        "1. Sprawdź, czy istnieje przynajmniej jeden tryb działania, w którym stan wszystkich elementów sterujących blokujących lub przełączających można określić dotykowo, bez aktywowania elementu sterującego.",
+        "2. Sprawdź, czy istnieje przynajmniej jeden tryb działania, w którym stan wszystkich elementów sterujących blokujących lub przełączających można określić dźwiękiem, bez aktywowania elementu sterującego."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 lub 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 lub 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenia 1 i 2 są fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 i 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.6.1 Status dotykowy lub słuchowy:",
-        "noteId": "notes-c5-6-1"
+        "legend": "Wybierz wynik dla C.5.6.1 None",
+        "noteId": "notes-c-5-6-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.6.2 Status wizualny"
+      "text": "C.5.6.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) mają kontrolkę blokującą lub przełączającą.",
-        "2. Kontrolka blokująca lub przełączająca jest prezentowana użytkownikowi."
+        "1. TIK ma element sterujący blokujący lub przełączający.",
+        "2. Elementy sterujące blokujące lub przełączające są dostępne dla użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje co najmniej jeden tryb działania, w którym status wszystkich kontrolek blokujących lub przełączających można wizualnie określić, gdy kontrolka jest prezentowana."
+        "1. Sprawdź, czy opóźnienie między ponownymi wciśnięciami klawisza można ustawić co najmniej na 2 sekundy.",
+        "2. Sprawdź, czy częstotliwość ponownego wciśnięcia klawiszy może zostać ustawiona na poziomie 2 sekund na znak."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.6.2 Status wizualny:",
-        "noteId": "notes-c5-6-2"
+        "legend": "Wybierz wynik dla C.5.6.2 None",
+        "noteId": "notes-c-5-6-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.7 Powtarzanie klawiszy"
+      "text": "C.5.7 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) mają funkcję powtarzania klawiszy lub dostarczono klawiaturę z powtarzaniem klawiszy.",
-        "2. Powtarzania klawiszy nie można wyłączyć."
+        "1. TIK obsługuje funkcję ponownego wciśnięcia klawisza oraz dostarcza klawiaturę, na której jest ona dostępna.",
+        "2. Funkcji ponownego wciśnięcia klawisza nie można wyłączyć."
       ],
       "procedure": [
-        "1. Sprawdź, czy opóźnienie przed powtórzeniem klawisza można dostosować do co najmniej 2 sekund.",
-        "2. Sprawdź, czy szybkość powtarzania klawiszy można dostosować do 2 sekund na znak."
+        "1. Sprawdź, czy opóźnienie między ponownymi wciśnięciami klawisza można ustawić co najmniej na 2 sekundy.",
+        "2. Sprawdź, czy częstotliwość ponownego wciśnięcia klawiszy może zostać ustawiona na poziomie 2 sekund na znak."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenia 1 i 2 są prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 lub 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.7 Powtarzanie klawiszy:",
-        "noteId": "notes-c5-7"
+        "legend": "Wybierz wynik dla C.5.7 None",
+        "noteId": "notes-c-5-7"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.8 Akceptacja podwójnego naciśnięcia klawisza"
+      "text": "C.5.8 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Technologie informacyjno-komunikacyjne (TIK) mają klawiaturę."
+        "1. TIK jest wyposażona w klawiaturę lub klawiaturę pomocniczą."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje mechanizm pozwalający na dostosowanie opóźnienia po każdym naciśnięciu klawisza, podczas którego dodatkowe naciśnięcie nie zostanie zaakceptowane, jeśli jest identyczne z poprzednim.",
-        "2. Dostosuj ten mechanizm do maksymalnego ustawienia.",
-        "3. Naciśnij dowolny klawisz.",
-        "4. Po opóźnieniu 0,5 sekundy naciśnij ten sam klawisz co w kroku 3.",
-        "5. Sprawdź, czy naciśnięcie klawisza z kroku 4 zostało zaakceptowane."
+        "1. Sprawdź, czy istnieje mechanizm umożliwiający regulację opóźnienia po każdym naciśnięciu klawisza, podczas którego dodatkowe naciśnięcie klawisza nie zostanie zaakceptowane, jeśli jest ono identyczne z poprzednim naciśnięciem klawisza.",
+        "2. Ustawić mechanizm na maksymalną wartość.",
+        "3. Nacisnąć dowolny klawisz.",
+        "4. Po 0,5 s nacisnąć ten sam klawisz co w kroku 3.",
+        "5. Sprawdź, czy naciśnięcie w kroku 4 zostało zaakceptowane."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe, a sprawdzenie 5 jest fałszywe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda oraz kryterium 5: fałsz"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe lub sprawdzenie 5 jest prawdziwe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz lub kryterium 5: prawda"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.5.8 Akceptacja podwójnego naciśnięcia klawisza:",
-        "noteId": "notes-c5-8"
+        "legend": "Wybierz wynik dla C.5.8 None",
+        "noteId": "notes-c-5-8"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.9 Jednoczesne działania użytkownika"
+      "text": "C.5.9 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK ma tryb działania wymagający jednoczesnych działań użytkownika."
+        "1. TIK posiada tryb pracy wymagający jednoczesnych czynności użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje tryb działania, który nie wymaga jednoczesnych działań użytkownika.",
-        "2. Określ wszystkie funkcje TIK kontrolowane przez użytkownika.",
-        "3. Sprawdź, czy każda funkcja kontrolowana przez użytkownika może być obsługiwana pojedynczym działaniem użytkownika."
+        "1. Sprawdź, czy istnieje tryb pracy, który nie wymaga jednoczesnych czynności użytkownika.",
+        "2. Określ w TIK wszystkie funkcje sterowane przez użytkowników.",
+        "3. Sprawdź, czy każda funkcja, którą można sterować, może być obsługiwana za pomocą pojedynczego działania użytkownika."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 3 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 3: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 3 jest fałszywe dla wszystkich trybów działania."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 3: fałsz dla wszystkich trybów pracy"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. C.6 TIK z dwukierunkową komunikacją głosową"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.9 Jednoczesne działania użytkownika:",
-        "noteId": "notes-c5-9"
+        "legend": "Wybierz wynik dla C.5.9 None",
+        "noteId": "notes-c-5-9"
       },
       "evaluationType": "Inspection"
     }

@@ -5,286 +5,301 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.1 Pasmo przenoszenia audio dla mowy"
+      "text": "C.6.1 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Testowany TIK zapewnia dwukierunkową komunikację głosową."
+        "1. Testowana TIK udostępnia dwukierunkową komunikację głosową."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK może kodować i dekodować audio w zakresie częstotliwości z górną granicą co najmniej 7 000 Hz."
+        "1. Sprawdź, czy TIK może kodować i dekodować dźwięk w zakresie częstotliwości z górną granicą co najmniej 7 000 Hz."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.1 Pasmo przenoszenia audio dla mowy:",
-        "noteId": "notes-c6-1"
+        "legend": "Wybierz wynik dla C.6.1 None",
+        "noteId": "notes-c-6-1"
       },
       "evaluationType": "Measurement (Pomiar)"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.2 Funkcjonalność Tekstu w Czasie Rzeczywistym (RTT)"
+      "text": "C.6.2 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.2.1 Zapewnienie RTT"
+      "text": "C.6.2.1 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.1.1 Komunikacja RTT"
+      "text": "C.6.2.1.1 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Testowany TIK posiada tryb zapewniający dwukierunkową komunikację głosową.",
-        "2. TIK jest w trybie zapewniającym dwukierunkową komunikację głosową.",
-        "3. Dostępny jest \"terminal referencyjny RTT\"."
+        "1. Testowany system TIK udostępnia dwukierunkową komunikację głosową.",
+        "2. TIK pracuje w trybie umożliwiającym dwukierunkową komunikację głosową.",
+        "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT” ."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK pozwala na dwukierunkową komunikację RTT z \"referencyjnym\" TIK."
+        "1. Sprawdź, czy system TIK umożliwia użytkownikowi komunikację RTT z innym „referencyjnym” TIK ."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1"
           },
           {
             "value": "nt",
-            "label": "<strong>Nietestowalne:</strong> Warunek wstępny 3 nie jest spełniony."
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.1.1 Komunikacja RTT:",
-        "noteId": "notes-c6-2-1-1"
+        "legend": "Wybierz wynik dla C.6.2.1.1 None",
+        "noteId": "notes-c-6-2-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspection",
+      "notes": [
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testo - wania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i inte- roperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu ob- sługującym komunikację RTT” ."
+      ]
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.1.2 Równoczesna mowa i tekst"
+      "text": "C.6.2.1.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia środek do dwukierunkowej komunikacji głosowej.",
-        "2. TIK zapewnia środek do dwukierunkowej komunikacji RTT."
+        "1. TIK obsługuje dwukierunkową komunikację głosową.",
+        "2. TIK obsługuje dwukierunkową komunikację za pomocą RTT ."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK pozwala na równoczesne użycie głosu i RTT przez jedno połączenie użytkownika."
+        "1. Sprawdź, czy TIK umożliwia jednoczesne korzystanie z połączeń głosowych i RTT przez połączenie jednego użytkownika."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.1.2 Równoczesna mowa i tekst:",
-        "noteId": "notes-c6-2-1-2"
+        "legend": "Wybierz wynik dla C.6.2.1.2 None",
+        "noteId": "notes-c-6-2-1-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.2.2 Wyświetlanie RTT"
+      "text": "C.6.2.2 None"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.2.1 Wizualnie rozróżnialny wyświetlacz"
+      "text": "C.6.2.2.1 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Testowany TIK ma możliwości wysyłania i odbierania RTT.",
-        "2. TIK obsługuje mechanizm(y) RTT.",
-        "3. Dostępny jest \"terminal referencyjny RTT\"."
+        "1. Testowana TIK zapewnia możliwość wysyłania i odbierania komunikacji RTT .",
+        "2. TIK obsługuje mechanizmy RTT .",
+        "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT” ."
       ],
       "procedure": [
-        "1. Testowany TIK jest połączony z \"terminalem referencyjnym RTT\".",
-        "2. Różne elementy TIK są w stanie operacyjnym (połączenie jest aktywne, a terminale są w odpowiednim trybie RTT) i oba terminale komunikują się ze sobą.",
-        "3. Krótka sekwencja tekstu jest wysyłana przez testowany TIK.",
-        "4. Krótka sekwencja tekstu jest wysyłana przez \"terminal referencyjny RTT\".",
-        "5. Sprawdź, na testowanym TIK, czy wyświetlany wysłany tekst jest wizualnie zróżnicowany i oddzielony od odebranego tekstu."
+        "1. Testowana TIK jest podłączona do „referencyjnego terminala obsługującego RTT” .",
+        "2. Różne elementy TIK są w stanie działania (połączenie jest aktywne, a terminale we właściwym trybie RTT) i dwa terminale komunikują się ze sobą.",
+        "3. Testowany system TIK wysyła krótki tekst.",
+        "4. „Terminal referencyjny RTT” wysyła krótki tekst.",
+        "5. Sprawdź na testowanej TIK , czy wyświetlany nadawany tekst wizualnie różni się od otrzymanego tekstu i jest od niego oddzielony."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 5 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 5: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 5 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 5: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "<strong>Nietestowalne:</strong> Warunek wstępny 3 nie jest spełniony."
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.2.1 Wizualnie rozróżnialny wyświetlacz:",
-        "noteId": "notes-c6-2-2-1"
+        "legend": "Wybierz wynik dla C.6.2.2.1 None",
+        "noteId": "notes-c-6-2-2-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspection",
+      "notes": [
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testo - wania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i inte- roperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu ob- sługującym komunikację RTT” ."
+      ]
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.2.2 Programowo określany kierunek wysyłania i odbierania"
+      "text": "C.6.2.2.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK ma możliwości wysyłania i odbierania RTT.",
+        "1. TIK zapewnia możliwość wysyłania i odbierania komunikacji RTT .",
         "2. RTT jest funkcjonalnością otwartą.",
-        "3. Dostępny jest \"terminal referencyjny RTT\"."
+        "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT” ."
       ],
       "procedure": [
-        "1. Testowany TIK jest połączony z \"terminalem referencyjnym RTT\".",
-        "2. Różne elementy TIK są w stanie operacyjnym (połączenie jest aktywne, a terminale są w odpowiednim trybie RTT) i oba terminale komunikują się ze sobą.",
-        "3. Krótka sekwencja tekstu jest wysyłana przez testowany TIK.",
-        "4. Krótka sekwencja tekstu jest wysyłana przez \"terminal referencyjny RTT\".",
-        "5. Sprawdź, czy kierunek tekstu (wysłany/odebrany) może być określony programowo."
+        "1. Testowana TIK jest podłączona do „referencyjnego terminala obsługującego RTT” .",
+        "2. Różne elementy TIK są w stanie działania (połączenie jest aktywne, a terminale we właściwym trybie RTT) i dwa terminale komunikują się ze sobą.",
+        "3. Testowany system TIK wysyła krótki tekst.",
+        "4. „Terminal referencyjny RTT” wysyła krótki tekst.",
+        "5. Sprawdź, czy kierunek nadawania/odbioru przesyłanego tekstu jest możliwy do określenia programowo."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 5 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 5: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 5 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 5: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "<strong>Nietestowalne:</strong> Warunek wstępny 3 nie jest spełniony."
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.2.2 Programowo określany kierunek wysyłania i odbierania:",
-        "noteId": "notes-c6-2-2-2"
+        "legend": "Wybierz wynik dla C.6.2.2.2 None",
+        "noteId": "notes-c-6-2-2-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspection",
+      "notes": [
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testo - wania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i inte- roperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu ob- sługującym komunikację RTT” . EN 301 549 V3.2.1 (2021-03)"
+      ]
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.2.3 Identyfikacja mówcy"
+      "text": "C.6.2.2.3 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK ma możliwości RTT.",
-        "2. TIK zapewnia identyfikację mówcy dla głosu.",
-        "3. Dostępny jest \"terminal referencyjny RTT\"."
+        "1. TIK obsługuje RTT .",
+        "2. TIK zapewnia identyfikację mówcy w przypadku komunikacji głosowej.",
+        "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT” ."
       ],
       "procedure": [
-        "1. Testowany TIK jest połączony z \"terminalem referencyjnym RTT\".",
-        "2. RTT jest wysyłane z \"terminala referencyjnego RTT\".",
-        "3. Sprawdź przez obserwację, czy testowany TIK zapewnia identyfikację mówcy dla przychodzącego tekstu RTT."
+        "1. Testowana TIK jest podłączona do „referencyjnego terminala obsługującego RTT” .",
+        "2. RTT jest wysyłana z „referencyjnego terminala” .",
+        "3. Sprawdź na podstawie obserwacji, czy testowana TIK umożliwia identyfikację mówcy dla tekstu przychodzącego w trybie RTT ."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 3 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 3 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "<strong>Nietestowalne:</strong> Warunek wstępny 3 nie jest spełniony."
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.2.3 Identyfikacja mówcy:",
-        "noteId": "notes-c6-2-2-3"
+        "legend": "Wybierz wynik dla C.6.2.2.3 None",
+        "noteId": "notes-c-6-2-2-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspection",
+      "notes": [
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testo - wania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i inte- roperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu ob- sługującym komunikację RTT” ."
+      ]
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.2.4 Wizualny wskaźnik audio z RTT"
+      "text": "C.6.2.2.4 None"
     },
     {
       "type": "test",
       "preconditions": [
         "1. TIK zapewnia dwukierunkową komunikację głosową.",
-        "2. TIK ma możliwości RTT."
+        "2. TIK obsługuje RTT ."
       ],
       "procedure": [
-        "1. Testowany TIK jest połączony z innym TIK zapewniającym dwukierunkową komunikację głosową, kompatybilną z komunikacją głosową na testowanym TIK.",
-        "2. Osoba mówi do drugiego TIK.",
-        "3. Sprawdź przez obserwację, czy istnieje wizualny wskaźnik aktywności audio w czasie rzeczywistym."
+        "1. Testowana TIK jest połączona z inną TIK zapewniającą dwukierunkową komunikację głosową, która jest zgodna z komunikacją głosową w testowanej TIK .",
+        "2. Osoba mówi do drugiej TIK .",
+        "3. Sprawdź na podstawie obserwacji, czy istnieje wizualny wskaźnik aktywności audio w czasie rzeczywistym."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 3 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 3: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 3 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 3: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.2.4 Wizualny wskaźnik audio z RTT:",
-        "noteId": "notes-c6-2-2-4"
+        "legend": "Wybierz wynik dla C.6.2.2.4 None",
+        "noteId": "notes-c-6-2-2-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspection",
+      "notes": [
+        "Zaleca się by wskaźnik migał w czasie rzeczywistym w sposób odzwierciedlający aktywność audio. EN 301 549 V3.2.1 (2021-03)"
+      ]
     },
     {
       "type": "heading",
@@ -294,231 +309,244 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.3.a Interoperacyjność (a)"
+      "text": "C.6.2.3.a .a"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia środek do dwukierunkowej komunikacji głosowej przez Publiczną Komutowaną Sieć Telefoniczną (PSTN).",
-        "2. TIK zapewnia środek do dwukierunkowej komunikacji RTT.",
-        "3. Dostępny jest \"terminal referencyjny V.18\"."
+        "1. TIK obsługuje dwukierunkową komunikację głosową za pośrednictwem publicznej komutowanej sieci telefonicznej (PSTN).",
+        "2. TIK obsługuje dwukierunkową komunikację za pomocą RTT .",
+        "3. Dostępny jest „referencyjny terminal V.18” ."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK interoperuje przez PSTN z terminalem referencyjnym V.18 podłączonym do PSTN, zgodnie z zaleceniem ITU-T V.18 [i.23]."
+        "1. Sprawdź, czy TIK współpracuje z publiczną komutowaną siecią telefoniczną (PSTN), z terminalem referencyjnym V.18 podłączonym do PSTN zgodnie z zaleceniem ITU-T V.18 [i.23] lub którymkolwiek z jego załączników dla sygnałów telefonii tekstowej na interfejsie PSTN."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "<strong>Nietestowalne:</strong> Warunek wstępny 3 nie jest spełniony."
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.3.a Interoperacyjność (a):",
-        "noteId": "notes-c6-2-3-a"
+        "legend": "Wybierz wynik dla C.6.2.3.a .a",
+        "noteId": "notes-c-6-2-3-a"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "notes": [
+        "„Referencyjny terminal V.18” to terminal specjalnie zaprojektowany do testowania urządzeń obsługują - cych V.18 w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym referencyjnym terminalu."
+      ]
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.3.b Interoperacyjność (b)"
+      "text": "C.6.2.3.b .b"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia środek do dwukierunkowej komunikacji głosowej przez sieć IP.",
-        "2. TIK zapewnia środek do dwukierunkowej komunikacji RTT.",
-        "3. Dostępny jest \"terminal referencyjny RTT\"."
+        "1. TIK obsługuje dwukierunkową komunikację głosową z wykorzystaniem protokołu VOIP z protokołem inicjowania sesji (SIP).",
+        "2. TIK obsługuje dwukierunkową komunikację za pomocą RTT .",
+        "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT” ."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK interoperuje z terminalem referencyjnym RTT zgodnie z RFC 4103 [i.7] dla bramy SIP."
+        "1. Sprawdź, czy TIK współdziała z „referencyjnym terminalem obsługującym komunikację RTT” z wykorzystaniem protokołu VOIP z protokołem inicjowania sesji (SIP) oraz z wykorzystaniem RTT zgodnej z dokumentem IETF RFC 4103 [i.13].",
+        "2. Jeśli TIK współpracuje z innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , należy sprawdzić, czy przestrzega on"
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda, a jeśli TIK współpracuje z innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , kryterium 2: prawda."
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz lub, jeśli TIK współpracuje z innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , kryterium 2: fałsz."
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "<strong>Nietestowalne:</strong> Warunek wstępny 3 nie jest spełniony."
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.3.b Interoperacyjność (b):",
-        "noteId": "notes-c6-2-3-b"
+        "legend": "Wybierz wynik dla C.6.2.3.b .b",
+        "noteId": "notes-c-6-2-3-b"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "notes": [
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testo - wania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i inte- roperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu ob- sługującym komunikację RTT” . EN 301 549 V3.2.1 (2021-03)"
+      ]
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.3.c Interoperacyjność (c)"
+      "text": "C.6.2.3.c .c"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia środek do dwukierunkowej komunikacji głosowej przez sieć IP.",
-        "2. TIK zapewnia środek do dwukierunkowej komunikacji RTT.",
-        "3. Dostępny jest \"terminal referencyjny RTT\"."
+        "1. TIK umożliwia dwukierunkową komunikację głosową z wykorzystaniem technologii innych niż PSTN lub protokół VOIP z protokołem inicjowania sesji (SIP).",
+        "2. TIK obsługuje dwukierunkową komunikację za pomocą RTT .",
+        "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT” dla danego sposobu komunikacji RTT ."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK interoperuje z terminalem referencyjnym RTT zgodnie z zaleceniem ITU-T H.248.88 [i.24] dla bramy H.248."
+        "1. Sprawdź, czy TIK współdziała z „referencyjnym terminalem obsługującym komunikację RTT” z użyciem odpowiedniej i mającej zastosowanie wspólnej specyfikacji wymiany RTT , która została opublikowana i jest dostępna dla środowiska, w którym będzie działać TIK .",
+        "2. Sprawdź, czy wspólna specyfikacja podana w kryterium 1 obejmuje metodę informowania o utracie lub uszkodzeniu znaków."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "<strong>Nietestowalne:</strong> Warunek wstępny 3 nie jest spełniony."
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.3.c Interoperacyjność (c):",
-        "noteId": "notes-c6-2-3-c"
+        "legend": "Wybierz wynik dla C.6.2.3.c .c",
+        "noteId": "notes-c-6-2-3-c"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "notes": [
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testo - wania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i inte- roperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu ob- sługującym komunikację RTT” ."
+      ]
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.3.d Interoperacyjność (d)"
+      "text": "C.6.2.3.d .d"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia środek do dwukierunkowej komunikacji głosowej przez sieć IP.",
-        "2. TIK zapewnia środek do dwukierunkowej komunikacji RTT.",
-        "3. Dostępny jest \"terminal referencyjny RTT\"."
+        "1. TIK obsługuje dwukierunkową komunikację głosową.",
+        "2. TIK obsługuje dwukierunkową komunikację za pomocą RTT .",
+        "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT” korzystający z nowego standardu RTT ."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK interoperuje z terminalem referencyjnym RTT zgodnie z ETSI TS 126 114 [i.10] i ETSI TS 124 229 [i.9] dla IMS."
+        "1. Sprawdź, czy testowana TIK współdziała z „referencyjnym terminalem obsługującym komunikację RTT” dla nowego standardu RTT , który został wprowadzony do użytku.",
+        "2. Sprawdź, czy nowy standard RTT jest obsługiwany przez wszystkie inne aktywne TIK , które obsługują komunikację głosową i RTT w tym samym środowisku."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "<strong>Nietestowalne:</strong> Warunek wstępny 3 nie jest spełniony."
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.3.d Interoperacyjność (d):",
-        "noteId": "notes-c6-2-3-d"
+        "legend": "Wybierz wynik dla C.6.2.3.d .d",
+        "noteId": "notes-c-6-2-3-d"
       },
       "evaluationType": "Test"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.3 Identyfikacja dzwoniącego"
+      "text": "C.6.3 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia dwukierunkową komunikację głosową.",
-        "2. TIK ma funkcję identyfikacji dzwoniącego."
+        "1. TIK udostępnia identyfikację dzwoniącego lub podobne funkcje."
       ],
       "procedure": [
-        "1. Sprawdź, czy informacja o identyfikacji dzwoniącego jest dostępna programowo dla technologii asystujących."
+        "1. Sprawdź, czy informacje dostarczane przez każdą funkcję są dostępne w formie tekstowej.",
+        "2. Sprawdź, czy informacje dostarczane przez każdą funkcję są możliwe do określenia programowo"
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda i albo kryterium 2: prawda, albo funkcjonalność jest zamknięta"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz lub kryterium 2: fałsz, gdy funkcjonalność nie jest zamknięta"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.6.3 Identyfikacja dzwoniącego:",
-        "noteId": "notes-c6-3"
+        "legend": "Wybierz wynik dla C.6.3 None",
+        "noteId": "notes-c-6-3"
       },
       "evaluationType": "Testing"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.4 Alternatywy dla funkcji głosowych"
+      "text": "C.6.4 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia dwukierunkową komunikację głosową.",
-        "2. TIK ma funkcje sterowane głosem."
+        "1. TIK zapewnia komunikację głosową w czasie rzeczywistym.",
+        "2. TIK udostępnia pocztę głosową, automatyczną sekretarkę lub urządzenie udzielające interaktywnych odpowiedzi głosowych."
       ],
       "procedure": [
-        "1. Sprawdź, czy funkcje sterowane głosem można obsługiwać za pomocą alternatywnych mechanizmów."
+        "1. Sprawdź, czy TIK zapewnia użytkownikom środki dostępu do informacji bez używania słuchu czy mowy.",
+        "2. Sprawdź, czy użytkownik może wykonać zadania dostępne w systemie bez używania słuchu czy mowy."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.4 Alternatywy dla funkcji głosowych:",
-        "noteId": "notes-c6-4"
+        "legend": "Wybierz wynik dla C.6.4 None",
+        "noteId": "notes-c-6-4"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.5 Komunikacja wideo"
+      "text": "C.6.5 None"
     },
     {
       "type": "informative",
@@ -527,180 +555,183 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.2 Rozdzielczość"
+      "text": "C.6.5.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia dwukierunkową komunikację głosową.",
-        "2. TIK zawiera funkcjonalność wideo w czasie rzeczywistym."
+        "1. TIK udostępnia dwukierunkową komunikację głosową.",
+        "2. TIK udostępnia funkcjonalność wideo w czasie rzeczywistym."
       ],
       "procedure": [
-        "1. Sprawdź, czy rozdzielczość komunikacji wideo wynosi QVGA lub więcej."
+        "1. Sprawdź, czy rozdzielczość komunikacji wideo jest rozdzielczością QVGA lub lepszą."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.2 Rozdzielczość:",
-        "noteId": "notes-c6-5-2"
+        "legend": "Wybierz wynik dla C.6.5.2 None",
+        "noteId": "notes-c-6-5-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.3 Szybkość klatek"
+      "text": "C.6.5.3 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia dwukierunkową komunikację głosową.",
-        "2. TIK zawiera funkcjonalność wideo w czasie rzeczywistym."
+        "1. TIK udostępnia dwukierunkową komunikację głosową.",
+        "2. TIK udostępnia funkcjonalność wideo w czasie rzeczywistym."
       ],
       "procedure": [
-        "1. Sprawdź, czy szybkość klatek komunikacji wideo jest równa lub wyższa niż 20 klatek na sekundę."
+        "1. Sprawdź, czy częstotliwość odświeżania obrazu komunikacji wideo wynosi co najmniej 20 klatek na sekundę."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.3 Szybkość klatek:",
-        "noteId": "notes-c6-5-3"
+        "legend": "Wybierz wynik dla C.6.5.3 None",
+        "noteId": "notes-c-6-5-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.4 Synchronizacja między audio i wideo"
+      "text": "C.6.5.4 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia dwukierunkową komunikację głosową.",
-        "2. TIK zawiera funkcjonalność wideo w czasie rzeczywistym."
+        "1. TIK udostępnia dwukierunkową komunikację głosową.",
+        "2. TIK udostępnia funkcjonalność wideo w czasie rzeczywistym."
       ],
       "procedure": [
-        "1. Sprawdź, czy różnica czasu między mową a wideo prezentowanym użytkownikowi jest równa lub mniejsza niż 100 ms."
+        "1. Sprawdź, czy różnica w czasie między prezentacją mowy i obrazu wideo dla użytkownika jest nie większa niż 100 ms."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.4 Synchronizacja między audio i wideo:",
-        "noteId": "notes-c6-5-4"
+        "legend": "Wybierz wynik dla C.6.5.4 None",
+        "noteId": "notes-c-6-5-4"
       },
       "evaluationType": "Measurement"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.5 Wizualny wskaźnik audio z wideo"
+      "text": "C.6.5.5 None"
     },
     {
       "type": "test",
       "preconditions": [
         "1. TIK zapewnia dwukierunkową komunikację głosową.",
-        "2. TIK ma możliwości wideo w czasie rzeczywistym."
+        "2. TIK udostępnia funkcjonalność wideo w czasie rzeczywistym."
       ],
       "procedure": [
-        "1. Testowany TIK jest połączony z innym TIK zapewniającym dwukierunkową komunikację głosową, kompatybilną z komunikacją głosową na testowanym TIK.",
-        "2. Osoba mówi do drugiego TIK.",
-        "3. Sprawdź przez obserwację, czy istnieje wizualny wskaźnik aktywności audio w czasie rzeczywistym."
+        "1. Testowana TIK jest połączona z inną TIK zapewniającą dwukierunkową komunikację głosową, która jest zgodna z komunikacją głosową w testowanej TIK .",
+        "2. Osoba mówi do drugiej TIK .",
+        "3. Sprawdź na podstawie obserwacji, czy istnieje wizualny wskaźnik aktywności audio w czasie rzeczywistym."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 3 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 3: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 3 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 3: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.5 Wizualny wskaźnik audio z wideo:",
-        "noteId": "notes-c6-5-5"
+        "legend": "Wybierz wynik dla C.6.5.5 None",
+        "noteId": "notes-c-6-5-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspection",
+      "notes": [
+        "Zaleca się, by wskaźnik migał w czasie rzeczywistym w sposób odzwierciedlający aktywność audio."
+      ]
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.6 Identyfikacja mówcy w komunikacji wideo (język migowy)"
+      "text": "C.6.5.6 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia dwukierunkową komunikację głosową.",
-        "2. TIK zawiera wideo w czasie rzeczywistym."
+        "1. TIK udostępnia dwukierunkową komunikację głosową.",
+        "2. TIK obsługuje wideo w czasie rzeczywistym."
       ],
       "procedure": [
-        "1. Testowany TIK jest połączony z kompatybilnym TIK, który obsługuje wideo, a osoba komunikuje się w języku migowym.",
-        "2. Sprawdź przez obserwację, czy testowany TIK zapewnia środek do identyfikacji mówcy dla użytkowników języka migowego."
+        "1. Testowana TIK jest podłączona do kompatybilnej TIK obsługującej wideo, a osoba komunikuje się w języku migowym.",
+        "2. Sprawdź na podstawie obserwacji, czy testowana TIK umożliwia użytkownikom języka migowego identyfikację mówcy."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 2 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 2 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 lub 2 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.6 Identyfikacja mówcy w komunikacji wideo (język migowy):",
-        "noteId": "notes-c6-5-6"
+        "legend": "Wybierz wynik dla C.6.5.6 None",
+        "noteId": "notes-c-6-5-6"
       },
       "evaluationType": "Measurement"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.6 Alternatywy dla usług opartych na wideo"
+      "text": "C.6.6 None"
     },
     {
       "type": "informative",

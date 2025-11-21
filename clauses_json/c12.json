@@ -5,83 +5,83 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.12.1 Dokumentacja produktu"
+      "text": "C.12.1 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.1.1 Funkcje dostępności i kompatybilności"
+      "text": "C.12.1.1 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Dokumentacja produktu jest dostarczana z TIK."
+        "1. Dokumentacja produktu jest dostarczana razem z TIK ."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokumentacja produktu dostarczona z TIK wymienia i wyjaśnia, jak używać funkcji dostępności i kompatybilności TIK."
+        "1. Sprawdź, czy w dokumentacji produktu dostarczonej razem z TIK znajduje się wykaz funkcji dostępności i kompatybilności TIK oraz objaśnienia dotyczące sposobu korzystania z nich."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.1.1 Funkcje dostępności i kompatybilności",
-        "noteId": "notes-c12-1-1"
+        "legend": "Wybierz wynik dla C.12.1.1 None",
+        "noteId": "notes-c-12-1-1"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.1.2 Dostępna dokumentacja"
+      "text": "C.12.1.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Dokumentacja produktu w formacie elektronicznym jest dostarczana z TIK."
+        "1. Dokumentacja produktu w formacie elektronicznym jest dostarczana razem z TIK ."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokumentacja produktu w formacie elektronicznym dostarczona z TIK jest zgodna z wymaganiami klauzul 9 lub 10, w zależności od przypadku."
+        "1. Sprawdź, czy dokumentacja produktu w formacie elektronicznym dostarczona wraz z TIK jest odpowiednio zgodna z wymaganiami Rozdziałów 9 lub 10."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.12.1.2 Dostępna dokumentacja",
-        "noteId": "notes-c12-1-2"
+        "legend": "Wybierz wynik dla C.12.1.2 None",
+        "noteId": "notes-c-12-1-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.12.2 Usługi wsparcia"
+      "text": "C.12.2 None"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.1 Ogólne"
+      "text": "C.12.2.1 None"
     },
     {
       "type": "informative",
@@ -90,99 +90,102 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.2 Informacje o funkcjach dostępności i kompatybilności"
+      "text": "C.12.2.2 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Świadczone są usługi wsparcia TIK."
+        "1. Świadczone są usługi wsparcia w zakresie TIK ."
       ],
       "procedure": [
-        "1. Sprawdź, czy usługi wsparcia TIK dostarczają informacji o funkcjach dostępności i kompatybilności, które są zawarte w dokumentacji produktu."
+        "1. Sprawdź, czy usługi wsparcia w zakresie TIK dostarczają informacje o funkcjach dostępności i zgodności dostarczanych razem z dokumentacją produktu."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.2.2 Informacje o funkcjach dostępności i kompatybilności",
-        "noteId": "notes-c12-2-2"
+        "legend": "Wybierz wynik dla C.12.2.2 None",
+        "noteId": "notes-c-12-2-2"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.3 Skuteczna komunikacja"
+      "text": "C.12.2.3 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Świadczone są usługi wsparcia TIK."
+        "1. Świadczone są usługi wsparcia w zakresie TIK ."
       ],
       "procedure": [
-        "1. Sprawdź, czy usługi wsparcia TIK uwzględniają potrzeby komunikacyjne osób z niepełnosprawnościami, bezpośrednio lub poprzez punkt referencyjny."
+        "1. Sprawdź, czy usługi wsparcia w zakresie TIK zaspokajają potrzeby komunikacyjne poszczególnych osób z niepełnosprawnościami w sposób bezpośredni lub poprzez punkt pośredni."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.2.3 Skuteczna komunikacja",
-        "noteId": "notes-c12-2-3"
+        "legend": "Wybierz wynik dla C.12.2.3 None",
+        "noteId": "notes-c-12-2-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspection",
+      "notes": [
+        "Zapewnienie na dowolnym poziomie wsparcia dla potrzeb komunikacyjnych osób niepełnosprawnych stanowi podstawę tego wymagania. Dostawcy mogą chcieć dostarczyć dalsze informacje na temat pozio- mu wsparcia, który jest zapewniany, aby umożliwić ocenę adekwatności i jakości wsparcia."
+      ]
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.4 Dostępna dokumentacja"
+      "text": "C.12.2.4 None"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Dokumentacja jest dostarczana przez usługi wsparcia TIK."
+        "1. Dokumentacja jest dostarczana przez serwis obsługi TIK ."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokumentacja w formacie elektronicznym dostarczona przez usługi wsparcia TIK jest zgodna z wymaganiami klauzul 9 lub 10, w zależności od przypadku."
+        "1. Sprawdź, czy dokumentacja produktu w formie elektronicznej dostarczona przez serwis obsługi TIK jest zgodna z wymaganiami odpowiednio Rozdziałów 9 lub 10."
       ],
       "form": {
         "inputs": [
           {
             "value": "pass",
-            "label": "<strong>Zaliczone:</strong> Sprawdzenie 1 jest prawdziwe."
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
             "value": "fail",
-            "label": "<strong>Niezaliczone:</strong> Sprawdzenie 1 jest fałszywe."
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
             "value": "na",
-            "label": "<strong>Nie dotyczy:</strong> Warunek wstępny 1 nie jest spełniony."
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03) C.13 TIK umożliwiająca dostęp do usługi przekazu informacji lub awaryjnego przekazu informacji"
           }
         ],
-        "legend": "Wybierz wynik dla C.12.2.4 Dostępna dokumentacja",
-        "noteId": "notes-c12-2-4"
+        "legend": "Wybierz wynik dla C.12.2.4 None",
+        "noteId": "notes-c-12-2-4"
       },
       "evaluationType": "Inspection"
     }

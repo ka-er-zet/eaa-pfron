@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
     const auditContainer = document.getElementById('audit-container');
-    const form = document.getElementById('selection-form'); // Użyj ID dla pewności
-    const exportOptions = document.getElementById('export-options'); // Nowa linia
+    const form = document.getElementById('selection-form');
+    const exportOptions = document.getElementById('export-options');
 
     // Dodaj atrybut, aby ogłaszać zmiany
     auditContainer.setAttribute('aria-live', 'polite');
@@ -17,23 +17,28 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        let content = '';
+        auditContainer.innerHTML = ''; // Clear loading message
+        const definition = '<p class="info">We wszystkich poniższych klauzulach skrót <strong>TIK</strong> oznacza <strong>Technologie informacyjno-komunikacyjne</strong>.</p>';
+        auditContainer.innerHTML = definition;
+
         for (const clause of selectedClauses) {
             try {
-                const response = await fetch(`clauses/${clause}.html`);
+                const response = await fetch(`clauses_json/${clause}.json`);
                 if (response.ok) {
-                    content += await response.text();
+                    const clauseData = await response.json();
+                    const clauseHtml = renderClauseFromJson(clauseData);
+                    const section = document.createElement('div');
+                    section.className = 'audit-section';
+                    section.innerHTML = clauseHtml;
+                    auditContainer.appendChild(section);
                 } else {
-                    content += `<p>Błąd ładowania klauzuli ${clause}.</p>`;
+                    auditContainer.innerHTML += `<p>Błąd ładowania klauzuli ${clause}.</p>`;
                 }
             } catch (error) {
                 console.error('Błąd ładowania pliku klauzuli:', error);
-                content += `<p>Błąd ładowania klauzuli ${clause}.</p>`;
+                auditContainer.innerHTML += `<p>Błąd ładowania klauzuli ${clause}.</p>`;
             }
         }
-
-        const definition = '<p class="info">We wszystkich poniższych klauzulach skrót <strong>TIK</strong> oznacza <strong>Technologie informacyjno-komunikacyjne</strong>.</p>';
-        auditContainer.innerHTML = definition + content;
 
         // Po załadowaniu treści, znajdź pierwszy nagłówek i przenieś na niego fokus
         const firstHeading = auditContainer.querySelector('h2');
@@ -43,8 +48,67 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         exportOptions.style.display = 'block';
 
-        afterAuditGenerated(); // Dodane wywołanie
+        afterAuditGenerated();
     });
+
+    function renderClauseFromJson(data) {
+        let html = '';
+
+        data.content.forEach((item, index) => {
+            if (item.type === 'heading') {
+                const level = item.level || 2;
+                let badge = '';
+                if (item.wcag_level) {
+                    const levelClass = item.wcag_level === 'AA' ? 'poziom-aa' : 'poziom-a';
+                    badge = ` <span class="poziom ${levelClass}">Poziom ${item.wcag_level}</span>`;
+                }
+                html += `<h${level}>${item.text}${badge}</h${level}>`;
+            } else if (item.type === 'informative') {
+                html += `<div class="informative info"><p>${item.text.replace(/\n/g, '<br>')}</p></div>`;
+            } else if (item.type === 'test') {
+                html += `<div class="audit-item">`;
+
+                // Preconditions
+                if (item.preconditions && item.preconditions.length > 0) {
+                    html += `<div class="test-details"><h4>Warunki wstępne</h4><ul>`;
+                    item.preconditions.forEach(p => html += `<li>${p}</li>`);
+                    html += `</ul></div>`;
+                }
+
+                // Procedure
+                if (item.procedure && item.procedure.length > 0) {
+                    html += `<div class="test-details"><h4>Procedura</h4><ol>`;
+                    item.procedure.forEach(p => html += `<li>${p}</li>`);
+                    html += `</ol></div>`;
+                }
+
+                // Form
+                if (item.form) {
+                    const uniqueName = `result-${Math.random().toString(36).substr(2, 9)}`;
+                    html += `<fieldset class="test-result-user">`;
+                    html += `<legend>${item.form.legend}</legend>`;
+
+                    item.form.inputs.forEach(input => {
+                        html += `<label><input type="radio" name="${uniqueName}" value="${input.value}"> ${input.label}</label><br>`;
+                    });
+                    html += `</fieldset>`;
+                }
+
+                // Notes from JSON (Standard notes)
+                if (item.notes && item.notes.length > 0) {
+                    html += `<div class="info" style="margin-top: 10px; background-color: #fff3cd; border-color: #ffeeba;"><strong>UWAGA:</strong><ul>`;
+                    item.notes.forEach(note => html += `<li>${note}</li>`);
+                    html += `</ul></div>`;
+                }
+
+                // User Notes
+                html += `<div class="test-notes"><label>Uwagi:<textarea placeholder="Wpisz swoje uwagi tutaj..."></textarea></label></div>`;
+
+                html += `</div>`; // end audit-item
+            }
+        });
+        return html;
+    }
 
     document.body.addEventListener('click', (event) => {
         if (event.target.id === 'export-json-btn') {
