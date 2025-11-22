@@ -5,7 +5,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.1 None"
+      "text": "C.6.1 Szerokość pasma sygnału mowy"
     },
     {
       "type": "test",
@@ -30,7 +30,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.1 None",
+        "legend": "Wybierz wynik dla C.6.1 Szerokość pasma sygnału mowy",
         "noteId": "notes-c-6-1"
       },
       "evaluationType": "Measurement (Pomiar)"
@@ -38,17 +38,17 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.2 None"
+      "text": "C.6.2 Funkcjonalność tekstu w czasie rzeczywistym (RTT)"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.2.1 None"
+      "text": "C.6.2.1 Zapewnienie RTT"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.1.1 None"
+      "text": "C.6.2.1.1 Komunikacja RTT"
     },
     {
       "type": "test",
@@ -79,7 +79,7 @@
             "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.1.1 None",
+        "legend": "Wybierz wynik dla C.6.2.1.1 Komunikacja RTT",
         "noteId": "notes-c-6-2-1-1"
       },
       "evaluationType": "Inspection",
@@ -90,7 +90,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.1.2 None"
+      "text": "C.6.2.1.2 Równoczesna komunikacja głosowa i tekstowa"
     },
     {
       "type": "test",
@@ -116,7 +116,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.1.2 None",
+        "legend": "Wybierz wynik dla C.6.2.1.2 Równoczesna komunikacja głosowa i tekstowa",
         "noteId": "notes-c-6-2-1-2"
       },
       "evaluationType": "Inspection"
@@ -124,12 +124,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.2.2 None"
+      "text": "C.6.2.2 Wyświetlanie RTT"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.2.1 None"
+      "text": "C.6.2.2.1 Wyświetlacz umożliwiający rozróżnianie tekstu"
     },
     {
       "type": "test",
@@ -164,7 +164,7 @@
             "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.2.1 None",
+        "legend": "Wybierz wynik dla C.6.2.2.1 Wyświetlacz umożliwiający rozróżnianie tekstu",
         "noteId": "notes-c-6-2-2-1"
       },
       "evaluationType": "Inspection",
@@ -175,7 +175,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.2.2 None"
+      "text": "C.6.2.2.2 Możliwe do określenia programowo kierunku nadawania i odbioru"
     },
     {
       "type": "test",
@@ -210,7 +210,7 @@
             "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.2.2 None",
+        "legend": "Wybierz wynik dla C.6.2.2.2 Możliwe do określenia programowo kierunku nadawania i odbioru",
         "noteId": "notes-c-6-2-2-2"
       },
       "evaluationType": "Inspection",
@@ -221,7 +221,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.2.3 None"
+      "text": "C.6.2.2.3 Identyfikacja mówcy"
     },
     {
       "type": "test",
@@ -254,7 +254,7 @@
             "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.2.3 None",
+        "legend": "Wybierz wynik dla C.6.2.2.3 Identyfikacja mówcy",
         "noteId": "notes-c-6-2-2-3"
       },
       "evaluationType": "Inspection",
@@ -265,7 +265,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.2.4 None"
+      "text": "C.6.2.2.4 Wizualny wskaźnik audio połączonego z RTT"
     },
     {
       "type": "test",
@@ -293,7 +293,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.2.4 None",
+        "legend": "Wybierz wynik dla C.6.2.2.4 Wizualny wskaźnik audio połączonego z RTT",
         "noteId": "notes-c-6-2-2-4"
       },
       "evaluationType": "Inspection",
@@ -309,7 +309,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.3.a .a"
+      "text": "C.6.2.3.a Interoperacyjność (a)"
     },
     {
       "type": "test",
@@ -340,7 +340,7 @@
             "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.3.a .a",
+        "legend": "Wybierz wynik dla C.6.2.3.a Interoperacyjność (a)",
         "noteId": "notes-c-6-2-3-a"
       },
       "evaluationType": "Test",
@@ -351,7 +351,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.3.b .b"
+      "text": "C.6.2.3.b Interoperacyjność (b)"
     },
     {
       "type": "test",
@@ -383,7 +383,7 @@
             "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.3.b .b",
+        "legend": "Wybierz wynik dla C.6.2.3.b Interoperacyjność (b)",
         "noteId": "notes-c-6-2-3-b"
       },
       "evaluationType": "Test",
@@ -394,7 +394,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.3.c .c"
+      "text": "C.6.2.3.c Interoperacyjność (c)"
     },
     {
       "type": "test",
@@ -426,7 +426,7 @@
             "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.3.c .c",
+        "legend": "Wybierz wynik dla C.6.2.3.c Interoperacyjność (c)",
         "noteId": "notes-c-6-2-3-c"
       },
       "evaluationType": "Test",
@@ -437,7 +437,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.3.d .d"
+      "text": "C.6.2.3.d Interoperacyjność (d)"
     },
     {
       "type": "test",
@@ -469,7 +469,7 @@
             "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.3.d .d",
+        "legend": "Wybierz wynik dla C.6.2.3.d Interoperacyjność (d)",
         "noteId": "notes-c-6-2-3-d"
       },
       "evaluationType": "Test"
@@ -477,7 +477,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.3 None"
+      "text": "C.6.3 ID dzwoniącego"
     },
     {
       "type": "test",
@@ -503,7 +503,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.6.3 None",
+        "legend": "Wybierz wynik dla C.6.3 ID dzwoniącego",
         "noteId": "notes-c-6-3"
       },
       "evaluationType": "Testing"
@@ -511,7 +511,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.4 None"
+      "text": "C.6.4 Alternatywy dla usług głosowych"
     },
     {
       "type": "test",
@@ -538,7 +538,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.4 None",
+        "legend": "Wybierz wynik dla C.6.4 Alternatywy dla usług głosowych",
         "noteId": "notes-c-6-4"
       },
       "evaluationType": "Inspection"
@@ -546,7 +546,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.5 None"
+      "text": "C.6.5 Komunikacja wideo"
     },
     {
       "type": "informative",
@@ -555,7 +555,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.2 None"
+      "text": "C.6.5.2 Rozdzielczość"
     },
     {
       "type": "test",
@@ -581,7 +581,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.2 None",
+        "legend": "Wybierz wynik dla C.6.5.2 Rozdzielczość",
         "noteId": "notes-c-6-5-2"
       },
       "evaluationType": "Inspection"
@@ -589,7 +589,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.3 None"
+      "text": "C.6.5.3 Częstotliwość wyświetlania klatek"
     },
     {
       "type": "test",
@@ -615,7 +615,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.3 None",
+        "legend": "Wybierz wynik dla C.6.5.3 Częstotliwość wyświetlania klatek",
         "noteId": "notes-c-6-5-3"
       },
       "evaluationType": "Inspection"
@@ -623,7 +623,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.4 None"
+      "text": "C.6.5.4 Synchronizacja dźwięku i obrazu"
     },
     {
       "type": "test",
@@ -649,7 +649,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.4 None",
+        "legend": "Wybierz wynik dla C.6.5.4 Synchronizacja dźwięku i obrazu",
         "noteId": "notes-c-6-5-4"
       },
       "evaluationType": "Measurement"
@@ -657,7 +657,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.5 None"
+      "text": "C.6.5.5 Wizualny wskaźnik audio połączonego z wideo"
     },
     {
       "type": "test",
@@ -685,7 +685,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.5 None",
+        "legend": "Wybierz wynik dla C.6.5.5 Wizualny wskaźnik audio połączonego z wideo",
         "noteId": "notes-c-6-5-5"
       },
       "evaluationType": "Inspection",
@@ -696,7 +696,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.6 None"
+      "text": "C.6.5.6 Identyfikacja mówcy podczas komunikacji za pomocą wideo"
     },
     {
       "type": "test",
@@ -723,7 +723,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.6 None",
+        "legend": "Wybierz wynik dla C.6.5.6 Identyfikacja mówcy podczas komunikacji za pomocą wideo",
         "noteId": "notes-c-6-5-6"
       },
       "evaluationType": "Measurement"
@@ -731,7 +731,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.6 None"
+      "text": "C.6.6 Alternatywy dla usług wideo"
     },
     {
       "type": "informative",

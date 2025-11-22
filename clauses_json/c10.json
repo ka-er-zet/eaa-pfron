@@ -9,17 +9,17 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.10.1 None"
+      "text": "C.10.1 Postrzegalność"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.1.1 None"
+      "text": "C.10.1.1 Alternatywy tekstowe"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.1.1 None",
+      "text": "C.10.1.1.1 Treść nietekstowa",
       "wcag_level": "A"
     },
     {
@@ -45,7 +45,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.1.1 Treści nietekstowe. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.1.1 None",
+        "legend": "Wybierz wynik dla C.10.1.1.1 Treść nietekstowa",
         "noteId": "notes-c-10-1-1-1"
       },
       "evaluationType": "Inspection"
@@ -53,12 +53,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.1.2 None"
+      "text": "C.10.1.2 Multimedia"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.2.1 None",
+      "text": "C.10.1.2.1 Tylko audio lub tylko wideo (nagranie)",
       "wcag_level": "A"
     },
     {
@@ -84,7 +84,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.2.1 None",
+        "legend": "Wybierz wynik dla C.10.1.2.1 Tylko audio lub tylko wideo (nagranie)",
         "noteId": "notes-c-10-1-2-1"
       },
       "evaluationType": "Inspection"
@@ -92,7 +92,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.2.2 None",
+      "text": "C.10.1.2.2 Napisy rozszerzone (nagranie)",
       "wcag_level": "A"
     },
     {
@@ -118,7 +118,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie)."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.2.2 None",
+        "legend": "Wybierz wynik dla C.10.1.2.2 Napisy rozszerzone (nagranie)",
         "noteId": "notes-c-10-1-2-2"
       },
       "evaluationType": "Inspection"
@@ -126,7 +126,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.2.3 None",
+      "text": "C.10.1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)",
       "wcag_level": "A"
     },
     {
@@ -152,7 +152,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie). EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.2.3 None",
+        "legend": "Wybierz wynik dla C.10.1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)",
         "noteId": "notes-c-10-1-2-3"
       },
       "evaluationType": "Inspection"
@@ -160,7 +160,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.2.4 None",
+      "text": "C.10.1.2.4 Napisy rozszerzone (na żywo)",
       "wcag_level": "AA"
     },
     {
@@ -186,7 +186,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo)."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.2.4 None",
+        "legend": "Wybierz wynik dla C.10.1.2.4 Napisy rozszerzone (na żywo)",
         "noteId": "notes-c-10-1-2-4"
       },
       "evaluationType": "Inspection"
@@ -194,7 +194,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.2.5 None",
+      "text": "C.10.1.2.5 Audiodeskrypcja (nagranie)",
       "wcag_level": "AA"
     },
     {
@@ -220,7 +220,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie)."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.2.5 None",
+        "legend": "Wybierz wynik dla C.10.1.2.5 Audiodeskrypcja (nagranie)",
         "noteId": "notes-c-10-1-2-5"
       },
       "evaluationType": "Inspection"
@@ -228,12 +228,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.1.3 None"
+      "text": "C.10.1.3 Możliwość adaptacji"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.3.1 None",
+      "text": "C.10.1.3.1 Informacje i relacje",
       "wcag_level": "A"
     },
     {
@@ -259,7 +259,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.3.1 Informacje i relacje."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.3.1 None",
+        "legend": "Wybierz wynik dla C.10.1.3.1 Informacje i relacje",
         "noteId": "notes-c-10-1-3-1"
       },
       "evaluationType": "Inspection"
@@ -267,7 +267,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.3.2 None",
+      "text": "C.10.1.3.2 Zrozumiała kolejność",
       "wcag_level": "A"
     },
     {
@@ -293,7 +293,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.3.2 Zrozumiała kolejność. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.3.2 None",
+        "legend": "Wybierz wynik dla C.10.1.3.2 Zrozumiała kolejność",
         "noteId": "notes-c-10-1-3-2"
       },
       "evaluationType": "Inspection"
@@ -301,7 +301,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.3.3 None",
+      "text": "C.10.1.3.3 Właściwości zmysłowe",
       "wcag_level": "A"
     },
     {
@@ -327,7 +327,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.3.3 Właściwości zmysłowe."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.3.3 None",
+        "legend": "Wybierz wynik dla C.10.1.3.3 Właściwości zmysłowe",
         "noteId": "notes-c-10-1-3-3"
       },
       "evaluationType": "Inspection"
@@ -335,7 +335,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.3.4 None",
+      "text": "C.10.1.3.4 Orientacja",
       "wcag_level": "AA"
     },
     {
@@ -361,7 +361,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.3.4 None",
+        "legend": "Wybierz wynik dla C.10.1.3.4 Orientacja",
         "noteId": "notes-c-10-1-3-4"
       },
       "evaluationType": "Inspection"
@@ -369,7 +369,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.3.5 None",
+      "text": "C.10.1.3.5 Określenie pożądanej wartości",
       "wcag_level": "AA"
     },
     {
@@ -395,7 +395,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.3.5 None",
+        "legend": "Wybierz wynik dla C.10.1.3.5 Określenie pożądanej wartości",
         "noteId": "notes-c-10-1-3-5"
       },
       "evaluationType": "Inspection"
@@ -403,12 +403,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.1.4 None"
+      "text": "C.10.1.4 Rozróżnialność"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.4.1 None",
+      "text": "C.10.1.4.1 Użycie koloru",
       "wcag_level": "A"
     },
     {
@@ -434,7 +434,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.1 Użycie koloru. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.4.1 None",
+        "legend": "Wybierz wynik dla C.10.1.4.1 Użycie koloru",
         "noteId": "notes-c-10-1-4-1"
       },
       "evaluationType": "Inspection"
@@ -442,7 +442,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.4.2 None",
+      "text": "C.10.1.4.2 Kontrola odtwarzania dźwięku",
       "wcag_level": "A"
     },
     {
@@ -468,7 +468,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.4.2 None",
+        "legend": "Wybierz wynik dla C.10.1.4.2 Kontrola odtwarzania dźwięku",
         "noteId": "notes-c-10-1-4-2"
       },
       "evaluationType": "Inspection"
@@ -476,7 +476,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.4.3 None",
+      "text": "C.10.1.4.3 Kontrast (minimum)",
       "wcag_level": "AA"
     },
     {
@@ -502,7 +502,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.3 Kontrast (minimum)."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.4.3 None",
+        "legend": "Wybierz wynik dla C.10.1.4.3 Kontrast (minimum)",
         "noteId": "notes-c-10-1-4-3"
       },
       "evaluationType": "Inspection"
@@ -510,7 +510,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.4.4 None",
+      "text": "C.10.1.4.4 Zmiana rozmiaru tekstu",
       "wcag_level": "AA"
     },
     {
@@ -536,7 +536,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.4.4 None",
+        "legend": "Wybierz wynik dla C.10.1.4.4 Zmiana rozmiaru tekstu",
         "noteId": "notes-c-10-1-4-4"
       },
       "evaluationType": "Inspection"
@@ -544,7 +544,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.4.5 None",
+      "text": "C.10.1.4.5 Obrazy tekstu",
       "wcag_level": "AA"
     },
     {
@@ -570,7 +570,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.5 Obrazy tekstu."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.4.5 None",
+        "legend": "Wybierz wynik dla C.10.1.4.5 Obrazy tekstu",
         "noteId": "notes-c-10-1-4-5"
       },
       "evaluationType": "Inspection"
@@ -578,7 +578,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.4.10 None",
+      "text": "C.10.1.4.10 Dopasowanie do ekranu",
       "wcag_level": "AA"
     },
     {
@@ -604,7 +604,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.4.10 None",
+        "legend": "Wybierz wynik dla C.10.1.4.10 Dopasowanie do ekranu",
         "noteId": "notes-c-10-1-4-10"
       },
       "evaluationType": "Inspection"
@@ -612,7 +612,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.4.11 None",
+      "text": "C.10.1.4.11 Kontrast elementów nietekstowych",
       "wcag_level": "AA"
     },
     {
@@ -638,7 +638,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.11 Kontrast elementów nietekstowych."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.4.11 None",
+        "legend": "Wybierz wynik dla C.10.1.4.11 Kontrast elementów nietekstowych",
         "noteId": "notes-c-10-1-4-11"
       },
       "evaluationType": "Inspection"
@@ -646,7 +646,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.4.12 None",
+      "text": "C.10.1.4.12 Odstępy w tekście",
       "wcag_level": "AA"
     },
     {
@@ -672,7 +672,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.12 Odstępy w tekście. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.4.12 None",
+        "legend": "Wybierz wynik dla C.10.1.4.12 Odstępy w tekście",
         "noteId": "notes-c-10-1-4-12"
       },
       "evaluationType": "Inspection"
@@ -680,7 +680,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.4.13 None",
+      "text": "C.10.1.4.13 Treść spod kursora lub fokusu",
       "wcag_level": "AA"
     },
     {
@@ -706,7 +706,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.13 Treść spod kursora lub fokusu."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.4.13 None",
+        "legend": "Wybierz wynik dla C.10.1.4.13 Treść spod kursora lub fokusu",
         "noteId": "notes-c-10-1-4-13"
       },
       "evaluationType": "Inspection"
@@ -714,17 +714,17 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.10.2 None"
+      "text": "C.10.2 Funkcjonalność"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.2.1 None"
+      "text": "C.10.2.1 Dostępność z klawiatury"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.1.1 None",
+      "text": "C.10.2.1.1 Klawiatura",
       "wcag_level": "A"
     },
     {
@@ -750,7 +750,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.1.1 Klawiatura."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.1.1 None",
+        "legend": "Wybierz wynik dla C.10.2.1.1 Klawiatura",
         "noteId": "notes-c-10-2-1-1"
       },
       "evaluationType": "Inspection"
@@ -758,7 +758,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.1.2 None",
+      "text": "C.10.2.1.2 Bez pułapki na klawiaturę",
       "wcag_level": "A"
     },
     {
@@ -784,7 +784,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.1.2 None",
+        "legend": "Wybierz wynik dla C.10.2.1.2 Bez pułapki na klawiaturę",
         "noteId": "notes-c-10-2-1-2"
       },
       "evaluationType": "Inspection"
@@ -792,7 +792,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.1.4 None",
+      "text": "C.10.2.1.4 Jednoznakowe skróty klawiaturowe",
       "wcag_level": "A"
     },
     {
@@ -818,7 +818,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.1.4 Jednoznakowe skróty klawiaturowe."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.1.4 None",
+        "legend": "Wybierz wynik dla C.10.2.1.4 Jednoznakowe skróty klawiaturowe",
         "noteId": "notes-c-10-2-1-4"
       },
       "evaluationType": "Inspection"
@@ -826,12 +826,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.2.2 None"
+      "text": "C.10.2.2 Wystarczający czas"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.2.1 None",
+      "text": "C.10.2.2.1 Dostosowanie czasu",
       "wcag_level": "A"
     },
     {
@@ -857,7 +857,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.2.1 None",
+        "legend": "Wybierz wynik dla C.10.2.2.1 Dostosowanie czasu",
         "noteId": "notes-c-10-2-2-1"
       },
       "evaluationType": "Inspection"
@@ -865,7 +865,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.2.2 None",
+      "text": "C.10.2.2.2 Pauza, zatrzymanie, ukrycie",
       "wcag_level": "A"
     },
     {
@@ -891,7 +891,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.2.2 None",
+        "legend": "Wybierz wynik dla C.10.2.2.2 Pauza, zatrzymanie, ukrycie",
         "noteId": "notes-c-10-2-2-2"
       },
       "evaluationType": "Inspection"
@@ -899,12 +899,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.2.3 None"
+      "text": "C.10.2.3 Ataki padaczki"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.3.1 None",
+      "text": "C.10.2.3.1 Trzy błyski lub wartości poniżej progu",
       "wcag_level": "A"
     },
     {
@@ -930,7 +930,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.3.1 None",
+        "legend": "Wybierz wynik dla C.10.2.3.1 Trzy błyski lub wartości poniżej progu",
         "noteId": "notes-c-10-2-3-1"
       },
       "evaluationType": "Inspection"
@@ -938,12 +938,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.2.4 None"
+      "text": "C.10.2.4 Możliwość nawigacji"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.4.2 None",
+      "text": "C.10.2.4.2 Tytuł dokumentu",
       "wcag_level": "A"
     },
     {
@@ -969,7 +969,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.4.2 None",
+        "legend": "Wybierz wynik dla C.10.2.4.2 Tytuł dokumentu",
         "noteId": "notes-c-10-2-4-2"
       },
       "evaluationType": "Inspection"
@@ -977,7 +977,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.4.3 None",
+      "text": "C.10.2.4.3 Kolejność fokusu",
       "wcag_level": "A"
     },
     {
@@ -1003,7 +1003,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.4.3 None",
+        "legend": "Wybierz wynik dla C.10.2.4.3 Kolejność fokusu",
         "noteId": "notes-c-10-2-4-3"
       },
       "evaluationType": "Inspection"
@@ -1011,7 +1011,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.4.4 None",
+      "text": "C.10.2.4.4 Cel łącza (w kontekście)",
       "wcag_level": "A"
     },
     {
@@ -1037,7 +1037,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.4.4 Cel łącza (w kontekście)."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.4.4 None",
+        "legend": "Wybierz wynik dla C.10.2.4.4 Cel łącza (w kontekście)",
         "noteId": "notes-c-10-2-4-4"
       },
       "evaluationType": "Inspection"
@@ -1045,7 +1045,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.4.6 None",
+      "text": "C.10.2.4.6 Nagłówki i etykiety",
       "wcag_level": "AA"
     },
     {
@@ -1071,7 +1071,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.4.6 Nagłówki i etykiety. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.4.6 None",
+        "legend": "Wybierz wynik dla C.10.2.4.6 Nagłówki i etykiety",
         "noteId": "notes-c-10-2-4-6"
       },
       "evaluationType": "Inspection"
@@ -1079,7 +1079,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.4.7 None",
+      "text": "C.10.2.4.7 Widoczny fokus",
       "wcag_level": "AA"
     },
     {
@@ -1105,7 +1105,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.4.7 Widoczny fokus."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.4.7 None",
+        "legend": "Wybierz wynik dla C.10.2.4.7 Widoczny fokus",
         "noteId": "notes-c-10-2-4-7"
       },
       "evaluationType": "Inspection"
@@ -1113,12 +1113,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.2.5 None"
+      "text": "C.10.2.5 Metody obsługi"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.5.1 None",
+      "text": "C.10.2.5.1 Gesty dotykowe",
       "wcag_level": "A"
     },
     {
@@ -1144,7 +1144,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.5.1 None",
+        "legend": "Wybierz wynik dla C.10.2.5.1 Gesty dotykowe",
         "noteId": "notes-c-10-2-5-1"
       },
       "evaluationType": "Inspection"
@@ -1152,7 +1152,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.5.2 None",
+      "text": "C.10.2.5.2 Rezygnacja ze wskazania",
       "wcag_level": "A"
     },
     {
@@ -1178,7 +1178,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.5.2 None",
+        "legend": "Wybierz wynik dla C.10.2.5.2 Rezygnacja ze wskazania",
         "noteId": "notes-c-10-2-5-2"
       },
       "evaluationType": "Inspection"
@@ -1186,7 +1186,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.5.3 None",
+      "text": "C.10.2.5.3 Etykieta w nazwie",
       "wcag_level": "A"
     },
     {
@@ -1212,7 +1212,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.5.3 Etykieta w nazwie. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.5.3 None",
+        "legend": "Wybierz wynik dla C.10.2.5.3 Etykieta w nazwie",
         "noteId": "notes-c-10-2-5-3"
       },
       "evaluationType": "Inspection"
@@ -1220,7 +1220,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.5.4 None",
+      "text": "C.10.2.5.4 Aktywowanie ruchem",
       "wcag_level": "A"
     },
     {
@@ -1246,7 +1246,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.5.4 Aktywowanie ruchem."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.5.4 None",
+        "legend": "Wybierz wynik dla C.10.2.5.4 Aktywowanie ruchem",
         "noteId": "notes-c-10-2-5-4"
       },
       "evaluationType": "Inspection"
@@ -1254,17 +1254,17 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.10.3 None"
+      "text": "C.10.3 Zrozumiałość"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.3.1 None"
+      "text": "C.10.3.1 Możliwość odczytania"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.3.1.1 None",
+      "text": "C.10.3.1.1 Język dokumentu",
       "wcag_level": "A"
     },
     {
@@ -1290,7 +1290,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.3.1.1 None",
+        "legend": "Wybierz wynik dla C.10.3.1.1 Język dokumentu",
         "noteId": "notes-c-10-3-1-1"
       },
       "evaluationType": "Inspection"
@@ -1298,7 +1298,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.3.1.2 None",
+      "text": "C.10.3.1.2 Język części",
       "wcag_level": "AA"
     },
     {
@@ -1324,7 +1324,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.3.1.2 None",
+        "legend": "Wybierz wynik dla C.10.3.1.2 Język części",
         "noteId": "notes-c-10-3-1-2"
       },
       "evaluationType": "Inspection"
@@ -1332,12 +1332,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.3.2 None"
+      "text": "C.10.3.2 Przewidywalność"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.3.2.1 None",
+      "text": "C.10.3.2.1 Po otrzymaniu fokusu",
       "wcag_level": "A"
     },
     {
@@ -1363,7 +1363,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.3.2.1 None",
+        "legend": "Wybierz wynik dla C.10.3.2.1 Po otrzymaniu fokusu",
         "noteId": "notes-c-10-3-2-1"
       },
       "evaluationType": "Inspection"
@@ -1371,7 +1371,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.3.2.2 None",
+      "text": "C.10.3.2.2 Podczas wprowadzania danych",
       "wcag_level": "A"
     },
     {
@@ -1397,7 +1397,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.2.2 Podczas wprowadzania danych."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.3.2.2 None",
+        "legend": "Wybierz wynik dla C.10.3.2.2 Podczas wprowadzania danych",
         "noteId": "notes-c-10-3-2-2"
       },
       "evaluationType": "Inspection"
@@ -1405,12 +1405,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.3.3 None"
+      "text": "C.10.3.3 Pomoc przy wprowadzaniu informacji"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.3.3.1 None",
+      "text": "C.10.3.3.1 Identyfikacja błędu",
       "wcag_level": "A"
     },
     {
@@ -1436,7 +1436,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.1 Identyfikacja błędu."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.3.3.1 None",
+        "legend": "Wybierz wynik dla C.10.3.3.1 Identyfikacja błędu",
         "noteId": "notes-c-10-3-3-1"
       },
       "evaluationType": "Inspection"
@@ -1444,7 +1444,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.3.3.2 None",
+      "text": "C.10.3.3.2 Etykiety lub instrukcje",
       "wcag_level": "A"
     },
     {
@@ -1470,7 +1470,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.2 Etykiety lub instrukcje. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.3.3.2 None",
+        "legend": "Wybierz wynik dla C.10.3.3.2 Etykiety lub instrukcje",
         "noteId": "notes-c-10-3-3-2"
       },
       "evaluationType": "Inspection"
@@ -1478,7 +1478,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.3.3.3 None",
+      "text": "C.10.3.3.3 Sugestie korekty błędów",
       "wcag_level": "AA"
     },
     {
@@ -1504,7 +1504,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.3 Sugestie korekty błędów."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.3.3.3 None",
+        "legend": "Wybierz wynik dla C.10.3.3.3 Sugestie korekty błędów",
         "noteId": "notes-c-10-3-3-3"
       },
       "evaluationType": "Inspection"
@@ -1512,7 +1512,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.3.3.4 None",
+      "text": "C.10.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
       "wcag_level": "AA"
     },
     {
@@ -1538,7 +1538,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.3.3.4 None",
+        "legend": "Wybierz wynik dla C.10.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
         "noteId": "notes-c-10-3-3-4"
       },
       "evaluationType": "Inspection"
@@ -1546,17 +1546,17 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.10.4 None"
+      "text": "C.10.4 Solidność"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.4.1 None"
+      "text": "C.10.4.1 Kompatybilność"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.4.1.1 None"
+      "text": "C.10.4.1.1 Poprawność kodu"
     },
     {
       "type": "test",
@@ -1581,7 +1581,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.4.1.1 None",
+        "legend": "Wybierz wynik dla C.10.4.1.1 Poprawność kodu",
         "noteId": "notes-c-10-4-1-1"
       },
       "evaluationType": "Inspection"
@@ -1589,7 +1589,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.4.1.2 None"
+      "text": "C.10.4.1.2 Nazwa, rola, wartość"
     },
     {
       "type": "test",
@@ -1614,7 +1614,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.4.1.2 None",
+        "legend": "Wybierz wynik dla C.10.4.1.2 Nazwa, rola, wartość",
         "noteId": "notes-c-10-4-1-2"
       },
       "evaluationType": "Inspection"
@@ -1622,7 +1622,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.4.1.3 None",
+      "text": "C.10.4.1.3 Komunikaty o stanie",
       "wcag_level": "AA"
     },
     {
@@ -1648,7 +1648,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 4.1.3 Komunikaty o stanie."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.4.1.3 None",
+        "legend": "Wybierz wynik dla C.10.4.1.3 Komunikaty o stanie",
         "noteId": "notes-c-10-4-1-3"
       },
       "evaluationType": "Inspection"

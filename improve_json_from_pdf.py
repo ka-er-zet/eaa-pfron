@@ -63,7 +63,7 @@ def parse_pdf_text(text):
             current_clause_id = match.group(1)
             current_test_number = 1  # Reset test counter for new clause
             clauses[current_clause_id] = {
-                'title': match.group(3),
+                'title': match.group(4),
                 'preconditions': [],
                 'procedure': [],
                 'results': [],

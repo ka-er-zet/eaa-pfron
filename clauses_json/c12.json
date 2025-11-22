@@ -5,12 +5,12 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.12.1 None"
+      "text": "C.12.1 Dokumentacja produktu"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.1.1 None"
+      "text": "C.12.1.1 Funkcje dostępności i zgodności"
     },
     {
       "type": "test",
@@ -35,7 +35,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.1.1 None",
+        "legend": "Wybierz wynik dla C.12.1.1 Funkcje dostępności i zgodności",
         "noteId": "notes-c-12-1-1"
       },
       "evaluationType": "Inspection"
@@ -43,7 +43,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.1.2 None"
+      "text": "C.12.1.2 Dostępność dokumentacji"
     },
     {
       "type": "test",
@@ -68,7 +68,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.12.1.2 None",
+        "legend": "Wybierz wynik dla C.12.1.2 Dostępność dokumentacji",
         "noteId": "notes-c-12-1-2"
       },
       "evaluationType": "Inspection"
@@ -76,12 +76,12 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.12.2 None"
+      "text": "C.12.2 Wsparcie techniczne"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.1 None"
+      "text": "C.12.2.1 Postanowienia ogólne"
     },
     {
       "type": "informative",
@@ -90,7 +90,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.2 None"
+      "text": "C.12.2.2 Informacje o funkcjach dostępności i zgodności"
     },
     {
       "type": "test",
@@ -115,7 +115,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.2.2 None",
+        "legend": "Wybierz wynik dla C.12.2.2 Informacje o funkcjach dostępności i zgodności",
         "noteId": "notes-c-12-2-2"
       },
       "evaluationType": "Inspection"
@@ -123,7 +123,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.3 None"
+      "text": "C.12.2.3 Efektywna komunikacja"
     },
     {
       "type": "test",
@@ -148,7 +148,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.2.3 None",
+        "legend": "Wybierz wynik dla C.12.2.3 Efektywna komunikacja",
         "noteId": "notes-c-12-2-3"
       },
       "evaluationType": "Inspection",
@@ -159,7 +159,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.4 None"
+      "text": "C.12.2.4 Dostępność dokumentacji"
     },
     {
       "type": "test",
@@ -184,7 +184,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03) C.13 TIK umożliwiająca dostęp do usługi przekazu informacji lub awaryjnego przekazu informacji"
           }
         ],
-        "legend": "Wybierz wynik dla C.12.2.4 None",
+        "legend": "Wybierz wynik dla C.12.2.4 Dostępność dokumentacji",
         "noteId": "notes-c-12-2-4"
       },
       "evaluationType": "Inspection"

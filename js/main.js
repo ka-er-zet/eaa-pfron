@@ -1,316 +1,380 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const generateBtn = document.getElementById('generate-btn');
-    const auditContainer = document.getElementById('audit-container');
-    const form = document.getElementById('selection-form');
-    const exportOptions = document.getElementById('export-options');
+    lucide.createIcons();
 
-    // Dodaj atrybut, aby ogłaszać zmiany
-    auditContainer.setAttribute('aria-live', 'polite');
+    // State Management
+    const state = {
+        product: '',
+        tests: [], // Flattened list of all tests from selected clauses
+        results: {}, // Key: testId, Value: { status: null, note: '' }
+        currentIdx: 0
+    };
 
-    generateBtn.addEventListener('click', async () => {
-        auditContainer.innerHTML = 'Ładowanie...';
-        const selectedClauses = Array.from(form.querySelectorAll('input[type="checkbox"]:checked'))
-            .map(cb => cb.value);
+    // --- Setup View Logic ---
 
-        if (selectedClauses.length === 0) {
-            auditContainer.innerHTML = '<p>Proszę wybrać przynajmniej jedną klauzulę.</p>';
+    window.toggleScope = function (el, clauseId) {
+        el.classList.toggle('checked');
+        const icon = el.querySelector('i');
+        if (el.classList.contains('checked')) {
+            icon.classList.add('text-primary');
+            icon.style.color = 'var(--primary)';
+        } else {
+            icon.classList.remove('text-primary');
+            icon.style.color = 'var(--muted-color)';
+        }
+    };
+
+    const startBtn = document.getElementById('start-audit-btn');
+    if (startBtn) {
+        startBtn.addEventListener('click', startAudit);
+    }
+
+    async function startAudit() {
+        const nameInput = document.getElementById('product-name');
+        const name = nameInput.value.trim();
+        if (!name) {
+            alert("Proszę podać nazwę produktu.");
+            return;
+        }
+        state.product = name;
+
+        const selectedCards = document.querySelectorAll('.scope-card.checked');
+        if (selectedCards.length === 0) {
+            alert("Proszę wybrać przynajmniej jeden zakres audytu.");
             return;
         }
 
-        auditContainer.innerHTML = ''; // Clear loading message
-        const definition = '<p class="info">We wszystkich poniższych klauzulach skrót <strong>TIK</strong> oznacza <strong>Technologie informacyjno-komunikacyjne</strong>.</p>';
-        auditContainer.innerHTML = definition;
+        const clausesToLoad = Array.from(selectedCards).map(card => card.dataset.clause);
 
-        for (const clause of selectedClauses) {
-            try {
-                const response = await fetch(`clauses_json/${clause}.json`);
-                if (response.ok) {
-                    const clauseData = await response.json();
-                    const clauseHtml = renderClauseFromJson(clauseData);
-                    const section = document.createElement('div');
-                    section.className = 'audit-section';
-                    section.innerHTML = clauseHtml;
-                    auditContainer.appendChild(section);
-                } else {
-                    auditContainer.innerHTML += `<p>Błąd ładowania klauzuli ${clause}.</p>`;
-                }
-            } catch (error) {
-                console.error('Błąd ładowania pliku klauzuli:', error);
-                auditContainer.innerHTML += `<p>Błąd ładowania klauzuli ${clause}.</p>`;
-            }
+        // Show loading state?
+        startBtn.textContent = "Ładowanie...";
+        startBtn.disabled = true;
+
+        try {
+            await loadClauses(clausesToLoad);
+
+            // Switch View
+            document.getElementById('view-setup').classList.add('hidden');
+            document.getElementById('view-audit').classList.remove('hidden');
+            document.getElementById('active-badge').classList.remove('hidden');
+            document.getElementById('app-layout').classList.add('with-sidebar');
+
+            renderNav();
+            renderTest(0);
+        } catch (error) {
+            console.error("Failed to load clauses:", error);
+            alert("Wystąpił błąd podczas ładowania danych audytu.");
+            startBtn.textContent = "Rozpocznij Audyt";
+            startBtn.disabled = false;
         }
+    }
 
-        // Po załadowaniu treści, znajdź pierwszy nagłówek i przenieś na niego fokus
-        const firstHeading = auditContainer.querySelector('h2');
-        if (firstHeading) {
-            firstHeading.setAttribute('tabindex', '-1'); // Umożliwia fokusowanie programowe
-            firstHeading.focus();
+    async function loadClauses(clauses) {
+        state.tests = [];
+        state.results = {};
+
+        for (const clauseId of clauses) {
+            const response = await fetch(`clauses_json/${clauseId}.json`);
+            if (!response.ok) throw new Error(`Failed to load ${clauseId}`);
+            const data = await response.json();
+
+            // Flatten content to find tests
+            processClauseContent(data.content, clauseId);
         }
-        exportOptions.style.display = 'block';
+    }
 
-        afterAuditGenerated();
-    });
+    function processClauseContent(content, clauseId) {
+        let currentHeading = null;
+        let testCounter = 0;
 
-    function renderClauseFromJson(data) {
-        let html = '';
-
-        data.content.forEach((item, index) => {
+        content.forEach(item => {
             if (item.type === 'heading') {
-                const level = item.level || 2;
-                let badge = '';
-                if (item.wcag_level) {
-                    const levelClass = item.wcag_level === 'AA' ? 'poziom-aa' : 'poziom-a';
-                    badge = ` <span class="poziom ${levelClass}">Poziom ${item.wcag_level}</span>`;
-                }
-                html += `<h${level}>${item.text}${badge}</h${level}>`;
-            } else if (item.type === 'informative') {
-                html += `<div class="informative info"><p>${item.text.replace(/\n/g, '<br>')}</p></div>`;
+                currentHeading = item;
             } else if (item.type === 'test') {
-                html += `<div class="audit-item">`;
+                testCounter++;
+                // Generate a unique ID for the test
+                // Try to use the heading text as ID if it looks like a clause number, otherwise generate one
+                let testId = `test-${clauseId}-${state.tests.length}`;
+                let title = "Test";
+                let wcag = "";
 
-                // Preconditions
-                if (item.preconditions && item.preconditions.length > 0) {
-                    html += `<div class="test-details"><h4>Warunki wstępne</h4><ul>`;
-                    item.preconditions.forEach(p => html += `<li>${p}</li>`);
-                    html += `</ul></div>`;
-                }
+                if (currentHeading) {
+                    // Extract C.x.x.x from heading text
+                    const match = currentHeading.text.match(/(C\.\d+(\.\d+)+(\.[a-z])?)/);
+                    if (match) {
+                        testId = match[1];
+                        if (testCounter > 1) {
+                            testId += `#${testCounter}`;
+                        }
+                        title = currentHeading.text; // Full text including number
+                    } else {
+                        title = currentHeading.text;
+                    }
 
-                // Procedure
-                if (item.procedure && item.procedure.length > 0) {
-                    html += `<div class="test-details"><h4>Procedura</h4><ol>`;
-                    item.procedure.forEach(p => html += `<li>${p}</li>`);
-                    html += `</ol></div>`;
-                }
-
-                // Form
-                if (item.form) {
-                    const uniqueName = `result-${Math.random().toString(36).substr(2, 9)}`;
-                    html += `<fieldset class="test-result-user">`;
-                    html += `<legend>${item.form.legend}</legend>`;
-
-                    item.form.inputs.forEach(input => {
-                        html += `<label><input type="radio" name="${uniqueName}" value="${input.value}"> ${input.label}</label><br>`;
-                    });
-                    html += `</fieldset>`;
-                }
-
-                // Notes from JSON (Standard notes)
-                if (item.notes && item.notes.length > 0) {
-                    html += `<div class="info" style="margin-top: 10px; background-color: #fff3cd; border-color: #ffeeba;"><strong>UWAGA:</strong><ul>`;
-                    item.notes.forEach(note => html += `<li>${note}</li>`);
-                    html += `</ul></div>`;
-                }
-
-                // User Notes
-                html += `<div class="test-notes"><label>Uwagi:<textarea placeholder="Wpisz swoje uwagi tutaj..."></textarea></label></div>`;
-
-                html += `</div>`; // end audit-item
-            }
-        });
-        return html;
-    }
-
-    document.body.addEventListener('click', (event) => {
-        if (event.target.id === 'export-json-btn') {
-            const report = generateReportData();
-            downloadJson(report);
-        }
-        if (event.target.id === 'export-odt-btn') {
-            const report = generateReportData();
-            downloadOdt(report);
-        }
-        if (event.target.id === 'export-csv-btn') {
-            const report = generateReportData();
-            downloadCsv(report);
-        }
-    });
-
-    // Funkcja do podsumowania testów
-    function updateAuditSummary() {
-        const summaryDiv = document.getElementById('audit-summary');
-        const auditSections = Array.from(document.querySelectorAll('.audit-section'));
-        let summaryHtml = '';
-        let hasTests = false;
-
-        auditSections.forEach(section => {
-            const sectionTitle = section.querySelector('h2, h3, h4, h5, h6');
-            const allRadioGroups = Array.from(section.querySelectorAll('.audit-item fieldset.test-result-user'));
-            const totalTests = allRadioGroups.length;
-            let completedTests = 0;
-            let passed = 0;
-            let failed = 0;
-            let na = 0;
-            let nt = 0;
-            let score = 0;
-            let maxScore = totalTests;
-
-            allRadioGroups.forEach(fieldset => {
-                const checked = fieldset.querySelector('input[type="radio"]:checked');
-                if (checked) {
-                    completedTests++;
-                    if (checked.value === 'pass') {
-                        score += 1;
-                        passed++;
-                    } else if (checked.value === 'fail') {
-                        score -= 1;
-                        failed++;
-                    } else if (checked.value === 'na') {
-                        na++;
-                    } else if (checked.value === 'nt') {
-                        nt++;
+                    if (currentHeading.wcag_level) {
+                        wcag = currentHeading.wcag_level;
                     }
                 }
-            });
 
-            if (totalTests > 0) {
-                hasTests = true;
-                summaryHtml += `<div style="margin-bottom:1.5em;">
-                    <h3 style=\"margin-bottom:0.2em;\">${sectionTitle ? sectionTitle.textContent : 'Klauzula'}</h3>
-                    Liczba testów do wykonania: <strong>${totalTests}</strong><br>
-                    Liczba testów wykonanych: <strong>${completedTests}</strong><br>
-                    Liczba zaliczonych: <strong>${passed}</strong><br>
-                    Liczba niezaliczonych: <strong>${failed}</strong><br>
-                    Liczba testów z oceną \"nie dotyczy\": <strong>${na}</strong><br>
-                    Liczba testów z oceną \"nietestowalne\": <strong>${nt}</strong><br>
-                    Zdobyta punktacja: <strong>${score} / ${maxScore}</strong>
-                </div>`;
+                const testItem = {
+                    id: testId,
+                    clauseId: clauseId,
+                    title: title,
+                    wcag: wcag,
+                    preconditions: item.preconditions || [],
+                    procedure: item.procedure || [],
+                    form: item.form,
+                    notes: item.notes || []
+                };
+
+                state.tests.push(testItem);
+                state.results[testId] = { status: null, note: '' };
             }
         });
+    }
 
-        if (hasTests) {
-            summaryDiv.style.display = '';
-            summaryDiv.innerHTML = `<h2>Podsumowanie testów:</h2>${summaryHtml}`;
-            document.getElementById('score-explanation').style.display = '';
-        } else {
-            summaryDiv.style.display = 'none';
-            document.getElementById('score-explanation').style.display = 'none';
+    // --- Navigation & Rendering ---
+
+    function renderNav() {
+        const container = document.getElementById('nav-container');
+        container.innerHTML = '';
+        let completed = 0;
+
+        state.tests.forEach((item, idx) => {
+            const res = state.results[item.id].status;
+            const active = idx === state.currentIdx;
+            if (res) completed++;
+
+            let icon = 'circle';
+            let color = 'var(--muted-color)';
+
+            if (res === 'pass') { icon = 'check-circle-2'; color = 'var(--pass-color)'; }
+            if (res === 'fail') { icon = 'x-circle'; color = 'var(--fail-color)'; }
+            if (res === 'na') { icon = 'minus-circle'; color = 'var(--na-color)'; }
+            if (res === 'nt') { icon = 'help-circle'; color = 'var(--nt-color)'; }
+
+            const div = document.createElement('div');
+            div.className = `nav-item ${active ? 'active' : ''}`;
+            div.onclick = () => renderTest(idx);
+            div.innerHTML = `
+                <i data-lucide="${icon}" style="color: ${color}; width: 18px;"></i>
+                <div style="line-height: 1.2; overflow: hidden;">
+                    <span style="font-family: monospace; font-size: 0.75rem; opacity: 0.7;">${item.id}</span>
+                    <div style="font-size: 0.85rem; font-weight: 500; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">${item.title}</div>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+
+        // Update Progress
+        document.getElementById('progress-text').innerText = `${completed}/${state.tests.length}`;
+        document.getElementById('main-progress').value = state.tests.length ? (completed / state.tests.length) * 100 : 0;
+
+        lucide.createIcons();
+
+        // Scroll active item into view
+        const activeItem = container.querySelector('.nav-item.active');
+        if (activeItem) {
+            activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
     }
 
-    // Nasłuchiwanie zmian w audycie
-    function observeAuditRadios() {
-        document.addEventListener('change', function (e) {
-            if (e.target.matches('.audit-item input[type="radio"]')) {
-                updateAuditSummary();
+    window.renderTest = function (idx) {
+        if (idx < 0 || idx >= state.tests.length) return;
+
+        state.currentIdx = idx;
+        const item = state.tests[idx];
+        const res = state.results[item.id];
+        renderNav();
+
+        const container = document.getElementById('test-renderer');
+
+        let preconditionsHtml = '';
+        if (item.preconditions && item.preconditions.length > 0) {
+            preconditionsHtml = `<div class="test-details"><strong>Warunki wstępne:</strong><ul>${item.preconditions.map(p => `<li>${p}</li>`).join('')}</ul></div>`;
+        }
+
+        let procedureHtml = '';
+        if (item.procedure && item.procedure.length > 0) {
+            procedureHtml = `<div class="test-details"><strong>Procedura:</strong><ol>${item.procedure.map(p => `<li>${p}</li>`).join('')}</ol></div>`;
+        }
+
+        let notesHtml = '';
+        if (item.notes && item.notes.length > 0) {
+            notesHtml = `<div class="informative" style="margin-top: 1rem;"><strong>UWAGA:</strong><ul>${item.notes.map(n => `<li>${n}</li>`).join('')}</ul></div>`;
+        }
+
+        let wcagBadge = '';
+        if (item.wcag) {
+            const levelClass = item.wcag === 'AA' ? 'poziom-aa' : 'poziom-a';
+            wcagBadge = `<span class="${levelClass}">Poziom ${item.wcag}</span>`;
+        }
+
+        container.innerHTML = `
+            <div style="margin-bottom: 2rem;">
+                <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem; align-items: center;">
+                    <span class="badge" style="background: var(--primary);">${item.id}</span>
+                    ${wcagBadge}
+                </div>
+                <h2 style="margin: 0; color: white;">${item.title}</h2>
+            </div>
+
+            <article style="border-left: 4px solid var(--primary);">
+                <div style="padding: 1.5rem;">
+                    ${preconditionsHtml}
+                    ${procedureHtml}
+                    ${notesHtml}
+                </div>
+            </article>
+
+            <h5 style="margin-top: 2rem; padding-bottom: 0.5rem; border-bottom: 1px solid #334155; color: var(--muted-color);">Ocena</h5>
+
+            <div class="eval-grid">
+                <div class="eval-btn pass ${res.status === 'pass' ? 'selected' : ''}" onclick="setResult('${item.id}', 'pass')">
+                    <i data-lucide="check" size="28"></i>
+                    <strong>Zaliczone</strong>
+                </div>
+                <div class="eval-btn fail ${res.status === 'fail' ? 'selected' : ''}" onclick="setResult('${item.id}', 'fail')">
+                    <i data-lucide="x" size="28"></i>
+                    <strong>Niezaliczone</strong>
+                </div>
+                <div class="eval-btn na ${res.status === 'na' ? 'selected' : ''}" onclick="setResult('${item.id}', 'na')">
+                    <i data-lucide="minus" size="28"></i>
+                    <strong>Nie dotyczy</strong>
+                </div>
+                <div class="eval-btn nt ${res.status === 'nt' ? 'selected' : ''}" onclick="setResult('${item.id}', 'nt')">
+                    <i data-lucide="help-circle" size="28"></i>
+                    <strong>Nietestowalne</strong>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <label style="color: var(--muted-color);">Uwagi / Obserwacje</label>
+                <textarea rows="4" placeholder="Wpisz swoje uwagi tutaj..." oninput="updateNote('${item.id}', this.value)">${res.note}</textarea>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #334155;">
+                <button class="outline secondary" ${idx === 0 ? 'disabled' : ''} onclick="renderTest(${idx - 1})">
+                    <i data-lucide="arrow-left" style="margin-right: 8px;"></i> Poprzedni
+                </button>
+                ${idx === state.tests.length - 1
+                ? `<button onclick="finishAudit()" style="background: var(--pass-color); border:none;">Zakończ Audyt <i data-lucide="check-circle" style="margin-left: 8px;"></i></button>`
+                : `<button onclick="renderTest(${idx + 1})">Następny <i data-lucide="arrow-right" style="margin-left: 8px;"></i></button>`
             }
+            </div>
+        `;
+        lucide.createIcons();
+    };
+
+    window.setResult = function (id, status) {
+        state.results[id].status = status;
+        renderNav();
+        // Re-render current test to update selection UI
+        renderTest(state.currentIdx);
+    };
+
+    window.updateNote = function (id, val) {
+        state.results[id].note = val;
+    };
+
+    window.finishAudit = function () {
+        document.getElementById('view-audit').classList.add('hidden');
+        document.getElementById('view-setup').classList.add('hidden'); // Explicitly hide setup
+        document.getElementById('app-layout').classList.remove('with-sidebar');
+        document.getElementById('view-summary').classList.remove('hidden');
+
+        // Summary Stats
+        const vals = Object.values(state.results);
+        document.getElementById('summary-product').innerText = state.product;
+        document.getElementById('res-pass').innerText = vals.filter(x => x.status === 'pass').length;
+        document.getElementById('res-fail').innerText = vals.filter(x => x.status === 'fail').length;
+        document.getElementById('res-na').innerText = vals.filter(x => x.status === 'na').length;
+        document.getElementById('res-nt').innerText = vals.filter(x => x.status === 'nt').length;
+
+        lucide.createIcons();
+    };
+
+    window.resetAudit = function () {
+        // Reset State
+        state.product = '';
+        state.tests = [];
+        state.results = {};
+        state.currentIdx = 0;
+
+        // Reset UI Inputs
+        document.getElementById('product-name').value = '';
+        document.querySelectorAll('.scope-card.checked').forEach(el => {
+            el.classList.remove('checked');
+            const icon = el.querySelector('i');
+            icon.classList.remove('text-primary');
+            icon.style.color = 'var(--muted-color)';
         });
-    }
 
-    // Wywołanie po wygenerowaniu audytu
-    function afterAuditGenerated() {
-        updateAuditSummary();
-        observeAuditRadios();
-    }
+        // Reset Views
+        document.getElementById('view-summary').classList.add('hidden');
+        document.getElementById('view-audit').classList.add('hidden');
+        document.getElementById('view-setup').classList.remove('hidden');
+        document.getElementById('active-badge').classList.add('hidden');
+        document.getElementById('app-layout').classList.remove('with-sidebar');
 
-    function getAuditSummaries() {
-        const auditSections = Array.from(document.querySelectorAll('.audit-section'));
-        let summaries = [];
-        auditSections.forEach(section => {
-            const sectionTitle = section.querySelector('h2, h3, h4, h5, h6');
-            const allRadioGroups = Array.from(section.querySelectorAll('.audit-item fieldset.test-result-user'));
-            const totalTests = allRadioGroups.length;
-            let completedTests = 0;
-            let passed = 0;
-            let failed = 0;
-            let na = 0;
-            let nt = 0;
-            let score = 0;
-            let maxScore = totalTests;
-            allRadioGroups.forEach(fieldset => {
-                const checked = fieldset.querySelector('input[type="radio"]:checked');
-                if (checked) {
-                    completedTests++;
-                    if (checked.value === 'pass') {
-                        score += 1;
-                        passed++;
-                    } else if (checked.value === 'fail') {
-                        score -= 1;
-                        failed++;
-                    } else if (checked.value === 'na') {
-                        na++;
-                    } else if (checked.value === 'nt') {
-                        nt++;
-                    }
-                }
-            });
-            if (totalTests > 0) {
-                summaries.push({
-                    title: sectionTitle ? sectionTitle.textContent : 'Klauzula',
-                    totalTests,
-                    completedTests,
-                    passed,
-                    failed,
-                    na,
-                    nt,
-                    score,
-                    maxScore
-                });
-            }
-        });
-        return summaries;
-    }
+        // Reset Sidebar
+        document.getElementById('nav-container').innerHTML = '';
+        document.getElementById('progress-text').innerText = '0/0';
+        document.getElementById('main-progress').value = 0;
 
-    function generateReportData() {
+        // Reset Button
+        const startBtnReset = document.getElementById('start-audit-btn');
+        startBtnReset.textContent = "Rozpocznij Audyt";
+        startBtnReset.disabled = false;
+    };
+
+    // --- Export Functions ---
+
+    document.getElementById('export-json-btn').addEventListener('click', () => {
         const report = {
             title: "Raport z badania zgodności z normą EN 301 549",
+            product: state.product,
             date: new Date().toISOString(),
-            summary: getAuditSummaries(),
-            clauses: []
+            results: state.results,
+            tests: state.tests.map(t => ({
+                id: t.id,
+                title: t.title,
+                result: state.results[t.id].status,
+                note: state.results[t.id].note
+            }))
         };
-
-        const auditItems = auditContainer.querySelectorAll('.audit-item:not(.informative)');
-
-        auditItems.forEach(auditItem => {
-            let previousElement = auditItem.previousElementSibling;
-            let heading = null;
-            while (previousElement) {
-                if (previousElement.matches('h2, h3, h4, h5, h6')) {
-                    heading = previousElement;
-                    break;
-                }
-                previousElement = previousElement.previousElementSibling;
-            }
-
-            if (heading) {
-                const title = heading.textContent.trim();
-                const resultInput = auditItem.querySelector('input[type="radio"]:checked');
-                const notesTextarea = auditItem.querySelector('textarea');
-
-                report.clauses.push({
-                    title: title,
-                    result: resultInput ? resultInput.value : 'not-tested',
-                    notes: notesTextarea ? notesTextarea.value : ''
-                });
-            }
-        });
-
-        return report;
-    }
-
-    function downloadJson(data) {
-        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(report, null, 2));
         const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href", dataStr);
         downloadAnchorNode.setAttribute("download", "raport_eaa.json");
         document.body.appendChild(downloadAnchorNode);
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
-    }
+    });
 
-    function xmlEscape(str) {
-        return str.replace(/[<>&'"]/g, function (c) {
-            switch (c) {
-                case '<': return '&lt;';
-                case '>': return '&gt;';
-                case '&': return '&amp;';
-                case '\'': return '&apos;';
-                case '"': return '&quot;';
-            }
+    document.getElementById('export-csv-btn').addEventListener('click', () => {
+        let csv = `Produkt;${state.product}\nData;${new Date().toLocaleString()}\n\n`;
+        csv += `ID;Tytuł;Wynik;Uwagi\n`;
+
+        state.tests.forEach(t => {
+            const res = state.results[t.id];
+            const title = (t.title || '').replace(/[;\n\r]/g, ' ');
+            const status = (res.status || 'not-tested');
+            const note = (res.note || '').replace(/[;\n\r]/g, ' ');
+            csv += `${t.id};${title};${status};${note}\n`;
         });
-    }
 
-    function downloadOdt(data) {
+        const dataStr = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+        const downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute('href', dataStr);
+        downloadAnchorNode.setAttribute('download', 'raport_eaa.csv');
+        document.body.appendChild(downloadAnchorNode);
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+    });
+
+    document.getElementById('export-odt-btn').addEventListener('click', () => {
         const zip = new JSZip();
+        const reportTitle = `Raport: ${state.product}`;
 
         const stylesXml = `<?xml version="1.0" encoding="UTF-8"?>
 <office:document-styles xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" office:version="1.2">
@@ -322,9 +386,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <style:style style:name="Tbl1" style:family="table">
             <style:table-properties table:border-model="collapsing" />
         </style:style>
-        <style:style style:name="Tbl1.A" style:family="table-column"><style:table-column-properties style:column-width="8cm"/></style:style>
-        <style:style style:name="Tbl1.B" style:family="table-column"><style:table-column-properties style:column-width="3cm"/></style:style>
-        <style:style style:name="Tbl1.C" style:family="table-column"><style:table-column-properties style:column-width="6cm"/></style:style>
+        <style:style style:name="Tbl1.A" style:family="table-column"><style:table-column-properties style:column-width="4cm"/></style:style>
+        <style:style style:name="Tbl1.B" style:family="table-column"><style:table-column-properties style:column-width="8cm"/></style:style>
+        <style:style style:name="Tbl1.C" style:family="table-column"><style:table-column-properties style:column-width="3cm"/></style:style>
+        <style:style style:name="Tbl1.D" style:family="table-column"><style:table-column-properties style:column-width="5cm"/></style:style>
     </office:styles>
 </office:document-styles>`;
 
@@ -332,36 +397,30 @@ document.addEventListener('DOMContentLoaded', () => {
 <office:document-content xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0">
     <office:body>
         <office:text>
-            <text:h text:style-name="T1">${data.title}</text:h>
-            <text:p>Data badania: ${new Date(data.date).toLocaleString('pl-PL')}</text:p>
-            <text:p><text:span text:style-name="T1">Podsumowanie testów:</text:span></text:p>
-            ${data.summary.map(s =>
-            `<text:p><text:span text:style-name="T1">${xmlEscape(s.title)}</text:span></text:p>
-                <text:p>Liczba testów do wykonania: ${s.totalTests}</text:p>
-                <text:p>Liczba testów wykonanych: ${s.completedTests}</text:p>
-                <text:p>Liczba zaliczonych: ${s.passed}</text:p>
-                <text:p>Liczba niezaliczonych: ${s.failed}</text:p>
-                <text:p>Liczba testów z oceną \"nie dotyczy\": ${s.na}</text:p>
-                <text:p>Liczba testów z oceną \"nietestowalne\": ${s.nt}</text:p>
-                <text:p>Zdobyta punktacja: ${s.score} / ${s.maxScore}</text:p>`
-        ).join('')}
+            <text:h text:style-name="T1">${xmlEscape(reportTitle)}</text:h>
+            <text:p>Data badania: ${new Date().toLocaleString('pl-PL')}</text:p>
+            
             <table:table table:name="ReportTable" table:style-name="Tbl1">
                 <table:table-column table:style-name="Tbl1.A"/>
                 <table:table-column table:style-name="Tbl1.B"/>
                 <table:table-column table:style-name="Tbl1.C"/>
+                <table:table-column table:style-name="Tbl1.D"/>
                 <table:table-header-rows>
                     <table:table-row>
-                        <table:table-cell office:value-type="string"><text:p>Klauzula</text:p></table:table-cell>
+                        <table:table-cell office:value-type="string"><text:p>ID</text:p></table:table-cell>
+                        <table:table-cell office:value-type="string"><text:p>Tytuł</text:p></table:table-cell>
                         <table:table-cell office:value-type="string"><text:p>Wynik</text:p></table:table-cell>
                         <table:table-cell office:value-type="string"><text:p>Uwagi</text:p></table:table-cell>
                     </table:table-row>
                 </table:table-header-rows>`;
 
-        data.clauses.forEach(clause => {
+        state.tests.forEach(t => {
+            const res = state.results[t.id];
             contentXml += `<table:table-row>
-                <table:table-cell office:value-type="string"><text:p>${xmlEscape(clause.title)}</text:p></table:table-cell>
-                <table:table-cell office:value-type="string"><text:p>${xmlEscape(clause.result)}</text:p></table:table-cell>
-                <table:table-cell office:value-type="string"><text:p>${xmlEscape(clause.notes)}</text:p></table:table-cell>
+                <table:table-cell office:value-type="string"><text:p>${xmlEscape(t.id)}</text:p></table:table-cell>
+                <table:table-cell office:value-type="string"><text:p>${xmlEscape(t.title)}</text:p></table:table-cell>
+                <table:table-cell office:value-type="string"><text:p>${xmlEscape(res.status || 'brak')}</text:p></table:table-cell>
+                <table:table-cell office:value-type="string"><text:p>${xmlEscape(res.note || '')}</text:p></table:table-cell>
             </table:table-row>`;
         });
 
@@ -390,34 +449,18 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadAnchorNode.click();
             downloadAnchorNode.remove();
         });
-    }
+    });
 
-    function downloadCsv(data) {
-        let csv = `${data.title}\nData: ${data.date}\nPodsumowanie testów:\n`;
-        data.summary.forEach(s => {
-            csv += `${s.title}\n`;
-            csv += `Liczba testów do wykonania: ${s.totalTests}\n`;
-            csv += `Liczba testów wykonanych: ${s.completedTests}\n`;
-            csv += `Liczba zaliczonych: ${s.passed}\n`;
-            csv += `Liczba niezaliczonych: ${s.failed}\n`;
-            csv += `Liczba testów z oceną \"nie dotyczy\": ${s.na}\n`;
-            csv += `Liczba testów z oceną \"nietestowalne\": ${s.nt}\n`;
-            csv += `Zdobyta punktacja: ${s.score} / ${s.maxScore}\n`;
+    function xmlEscape(str) {
+        if (!str) return '';
+        return str.replace(/[<>&'"]/g, function (c) {
+            switch (c) {
+                case '<': return '&lt;';
+                case '>': return '&gt;';
+                case '&': return '&amp;';
+                case '\'': return '&apos;';
+                case '"': return '&quot;';
+            }
         });
-        csv += `Klauzula;Wynik;Uwagi\n`;
-        data.clauses.forEach(clause => {
-            // Zamień średnik i nową linię w polach na spacje, aby nie psuły CSV
-            const title = (clause.title || '').replace(/[;\n\r]/g, ' ');
-            const result = (clause.result || '').replace(/[;\n\r]/g, ' ');
-            const notes = (clause.notes || '').replace(/[;\n\r]/g, ' ');
-            csv += `${title};${result};${notes}\n`;
-        });
-        const dataStr = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
-        const downloadAnchorNode = document.createElement('a');
-        downloadAnchorNode.setAttribute('href', dataStr);
-        downloadAnchorNode.setAttribute('download', 'raport_eaa.csv');
-        document.body.appendChild(downloadAnchorNode);
-        downloadAnchorNode.click();
-        downloadAnchorNode.remove();
     }
 });

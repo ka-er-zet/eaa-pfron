@@ -1,83 +1,466 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Narzędzie wspomagające audyt zgodności z EN 301 549</title>
+    <title>A11y Audit Tool - EN 301 549</title>
+
+    <!-- Pico CSS (Semantic Framework) -->
+    <link rel="stylesheet" href="css/pico.min.css">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/svg+xml" href="favicon-eaa.svg">
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-    <link rel="icon" type="image/png" sizes="256x256" href="icon-256.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+
+    <!-- Lucide Icons -->
+    <script src="js/lucide.min.js"></script>
+    <!-- JSZip for ODT export -->
+    <script src="js/jszip.min.js"></script>
 </head>
+
 <body>
 
-    <main>
-        <h1>Narzędzie wspomagające audytu zgodności z EN 301 549</h1>
-        <form id="selection-form">
-            <fieldset>
-                <legend>Wybierz klauzule do audytu</legend>
-                <label><input type="checkbox" name="clause" value="c5"> Klauzula 5: Wymagania ogólne</label>
-                <label><input type="checkbox" name="clause" value="c6"> Klauzula 6: Technologie informacyjno-komunikacyjne z dwukierunkową komunikacją głosową</label>
-                <label><input type="checkbox" name="clause" value="c7"> Klauzula 7: Technologie informacyjno-komunikacyjne z funkcjami wideo</label>
-                <label><input type="checkbox" name="clause" value="c8"> Klauzula 8: Sprzęt</label>
-                <label><input type="checkbox" name="clause" value="c9"> Klauzula 9: Strony internetowe</label>
-                <label><input type="checkbox" name="clause" value="c10"> Klauzula 10: Dokumenty inne niż internetowe</label>
-                <label><input type="checkbox" name="clause" value="c11"> Klauzula 11: Oprogramowanie</label>
-                <label><input type="checkbox" name="clause" value="c12"> Klauzula 12: Dokumentacja i usługi wsparcia</label>
-                <label><input type="checkbox" name="clause" value="c13"> Klauzula 13: Technologie informacyjno-komunikacyjne zapewniające dostęp do usług przekaźnikowych lub alarmowych</label>
-            </fieldset>
-            <button type="button" id="generate-btn">Generuj formularz audytu</button>
-        </form>
-
-        <div id="audit-container" aria-live="polite"></div>
-
-        <div id="audit-summary" style="display:none; margin: 2em 0; padding: 1em; border: 1px solid #b3d7ff; background: #e7f3fe; border-radius: 6px; font-size: 1.1em;"></div>
-        <!-- Wyjaśnienie punktacji w podsumowaniu testów -->
-        <div id="score-explanation" style="display:none; margin: 0 0 2em 0; color:#333; font-size:1em;">
-            <strong>Wyjaśnienie punktacji:</strong><br>
-            Zaliczone = +1 punkt, niezaliczone = -1 punkt, nie dotyczy = 0 punktów, nietestowalne = 0 punktów. Wynik końcowy to suma punktów za wszystkie testy w danej klauzuli.
+    <!-- Header -->
+    <header class="app-header">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="background: var(--primary); padding: 8px; border-radius: 8px; display: flex;">
+                <i data-lucide="shield-check" color="white"></i>
+            </div>
+            <div>
+                <strong style="display: block; line-height: 1.2;">A11yAudit</strong>
+                <small style="color: var(--muted-color);">EN 301 549</small>
+            </div>
         </div>
-
-        <div id="export-options" style="display:none;">
-            <h2>Eksporuj raport</h2>
-            <button id="export-json-btn" class="secondary-btn">Eksportuj do JSON</button>
-            <button id="export-odt-btn" class="secondary-btn">Eksportuj do ODT</button>
-            <button id="export-csv-btn" class="secondary-btn">Eksportuj do CSV</button>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <span id="active-badge" class="badge hidden"
+                style="background: var(--pass-bg); color: var(--pass-color); border: 1px solid var(--pass-color);">AKTYWNY</span>
+            <button class="outline secondary" style="padding: 0.5rem; border: none; color: var(--muted-color);">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
+    </header>
 
-    </main>
+    <!-- Layout Container -->
+    <div id="app-layout" class="app-layout">
 
-    <footer>
-        <p>
-            Narzędzie oparte na metodologii z Załącznika C normy EN 301 549.<br/>
-            Zawsze należy odnosić się do pełnej treści normy.<br/>
-            <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf" target="_blank">
-                PDF z normą EN 301 549 (otwiera się w nowym oknie)
-            </a>
-        </p>
-        <p style="margin-top: 1em; font-size: 0.95em; color: #555;">
-            Narzędzie objęte jest licencją
-            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pl" target="_blank">
-                Creative Commons Uznanie autorstwa – Na tych samych warunkach 4.0 Międzynarodowa (CC BY-SA 4.0) (otwiera się w nowym oknie)
-            </a>.
-        </p>
-        <p style="margin-top: 1em; font-size: 0.95em; color: #555;">
-            Autor: Marcin Krzanicki &mdash; <a href="https://github.com/ka-er-zet/audyt-eaa" target="_blank">Repozytorium projektu (otwiera się w nowym oknie)</a>
-        </p>
-    </footer>
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <small
+                style="text-transform: uppercase; color: var(--muted-color); letter-spacing: 1px; font-weight: 700; margin-bottom: 1rem;">
+                Lista kontrolna
+            </small>
+            <div id="nav-container" style="flex: 1;">
+                <!-- Nav items generated here -->
+            </div>
+            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #334155; text-align: center;">
+                <small style="color: var(--muted-color);">Postęp: <span id="progress-text">0/0</span></small>
+                <progress id="main-progress" value="0" max="100"
+                    style="height: 4px; margin-top: 0.5rem; --color: var(--primary);"></progress>
+            </div>
+        </aside>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('service-worker.js');
-        });
-      }
-    </script>
+        <!-- Main Content -->
+        <main>
 
-</body>
+            <!-- VIEW 1: SETUP (Centered, Full Width) -->
+            <div id="view-setup" class="setup-container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h1 style="margin-bottom: 0.5rem;">Konfiguracja Audytu</h1>
+                    <p style="color: var(--muted-color);">Wybierz kryteria do oceny dostępności.
+                    </p>
+                </div>
+
+                <article>
+                    <header style="border-bottom: 1px solid #334155;">
+                        <strong>Informacje o produkcie</strong>
+                    </header>
+                    <div style="padding: 2rem;">
+                        <label for="product-name">Nazwa produktu</label>
+                        <input type="text" id="product-name" placeholder="np. Portal Usług Publicznych 2.0"
+                            style="margin-bottom: 2rem;">
+
+                        <label>Zakres audytu</label>
+                        <div class="scope-grid" id="scope-grid">
+                            <!-- Dynamicznie generowane kafelki lub statyczne -->
+                            <div class="scope-card" data-clause="c5" onclick="toggleScope(this, 'c5')">
+                                <i data-lucide="box" style="color: var(--muted-color);"></i>
+                                <div>
+                                    <strong style="display: block;">Wymagania ogólne (Klauzula 5)</strong>
+                                    <small style="color: var(--muted-color);">Funkcjonalność zamknięta.</small>
+                                </div>
+                            </div>
+                            <div class="scope-card" data-clause="c6" onclick="toggleScope(this, 'c6')">
+                                <i data-lucide="message-square" style="color: var(--muted-color);"></i>
+                                <div>
+                                    <strong style="display: block;">TIK z dwukierunkową komunikacją głosową (Klauzula
+                                        6)</strong>
+                                    <small style="color: var(--muted-color);">Połączenia głosowe, wideo.</small>
+                                </div>
+                            </div>
+                            <div class="scope-card" data-clause="c7" onclick="toggleScope(this, 'c7')">
+                                <i data-lucide="video" style="color: var(--muted-color);"></i>
+                                <div>
+                                    <strong style="display: block;">TIK z możliwościami wideo (Klauzula 7)</strong>
+                                    <small style="color: var(--muted-color);">Napisy, audiodeskrypcja.</small>
+                                </div>
+                            </div>
+                            <div class="scope-card" data-clause="c8" onclick="toggleScope(this, 'c8')">
+                                <i data-lucide="cpu" style="color: var(--muted-color);"></i>
+                                <div>
+                                    <strong style="display: block;">Sprzęt (Klauzula 8)</strong>
+                                    <small style="color: var(--muted-color);">Wymagania sprzętowe.</small>
+                                </div>
+                            </div>
+                            <div class="scope-card checked" data-clause="c9" onclick="toggleScope(this, 'c9')">
+                                <i data-lucide="globe" class="text-primary" style="color: var(--primary);"></i>
+                                <div>
+                                    <strong style="display: block;">Strony internetowe (Klauzula 9)</strong>
+                                    <small style="color: var(--muted-color);">Zgodność z WCAG 2.1 poziom AA.</small>
+                                </div>
+                            </div>
+                            <div class="scope-card" data-clause="c10" onclick="toggleScope(this, 'c10')">
+                                <i data-lucide="file-text" style="color: var(--muted-color);"></i>
+                                <div>
+                                    <strong style="display: block;">Dokumenty nietekstowe (Klauzula 10)</strong>
+                                    <small style="color: var(--muted-color);">Dokumenty PDF, Office itp.</small>
+                                </div>
+                            </div>
+                            <div class="scope-card" data-clause="c11" onclick="toggleScope(this, 'c11')">
+                                <i data-lucide="smartphone" style="color: var(--muted-color);"></i>
+                                <div>
+                                    <strong style="display: block;">Oprogramowanie (Klauzula 11)</strong>
+                                    <small style="color: var(--muted-color);">Aplikacje natywne i mobilne.</small>
+                                </div>
+                            </div>
+                            <div class="scope-card" data-clause="c12" onclick="toggleScope(this, 'c12')">
+                                <i data-lucide="book" style="color: var(--muted-color);"></i>
+                                <div>
+                                    <strong style="display: block;">Dokumentacja i usługi wsparcia (Klauzula
+                                        12)</strong>
+                                    <small style="color: var(--muted-color);">Pomoc techniczna, dokumentacja.</small>
+                                </div>
+                            </div>
+                            <div class="scope-card" data-clause="c13" onclick="toggleScope(this, 'c13')">
+                                <i data-lucide="phone-call" style="color: var(--muted-color);"></i>
+                                <div>
+                                    <strong style="display: block;">Przekaźnikowe usługi telekomunikacyjne (Klauzula
+                                        13)</strong>
+                                    <small style="color: var(--muted-color);">Usługi relay.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer style="text-align: right; border-top: 1px solid #334155; padding: 1rem 2rem;">
+                        <button id="start-audit-btn"
+                            style="width: auto; margin-bottom: 0; padding-left: 2rem; padding-right: 2rem;">
+                            Rozpocznij Audyt <i data-lucide="arrow-right" style="margin-left: 8px;"></i>
+                        </button>
+                    </footer>
+                </article>
+            </div>
+
+            <!-- VIEW 2: AUDIT (With Sidebar) -->
+            <div id="view-audit" class="hidden" style="max-width: 900px; margin: 0 auto;">
+                <div id="test-renderer">
+                    <!-- Dynamic Test Content -->
+                </div>
+            </div>
+
+            <!-- VIEW 3: SUMMARY -->
+            <div id="view-summary" class="hidden setup-container" style="text-align: center;">
+                <div
+                    style="width: 80px; height: 80px; background: var(--pass-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+                    <i data-lucide="award" size="48" style="color: var(--pass-color);"></i>
+                </div>
+                <h1>Audyt Zakończony</h1>
+                <p id="summary-product" style="font-size: 1.2rem; color: var(--muted-color); margin-bottom: 3rem;"></p>
+
+                <div class="grid" style="gap: 2rem; margin-bottom: 3rem;">
+                    <article style="margin: 0; border-color: var(--pass-color); text-align: center; padding: 2rem;">
+                        <div id="res-pass"
+                            style="font-size: 3rem; font-weight: 800; color: var(--pass-color); line-height: 1;">0</div>
+                        <small style="text-transform: uppercase; letter-spacing: 1px;">Zaliczone</small>
+                    </article>
+                    <article style="margin: 0; border-color: var(--fail-color); text-align: center; padding: 2rem;">
+                        <div id="res-fail"
+                            style="font-size: 3rem; font-weight: 800; color: var(--fail-color); line-height: 1;">0</div>
+                        <small style="text-transform: uppercase; letter-spacing: 1px;">Niezaliczone</small>
+                    </article>
+                    <article style="margin: 0; text-align: center; padding: 2rem;">
+                        <div id="res-na"
+                            style="font-size: 3rem; font-weight: 800; color: var(--na-color); line-height: 1;">0</div>
+                        <small style="text-transform: uppercase; letter-spacing: 1px;">Nie dotyczy</small>
+                    </article>
+                    <article style="margin: 0; text-align: center; padding: 2rem;">
+                        <div id="res-nt"
+                            style="font-size: 3rem; font-weight: 800; color: var(--nt-color); line-height: 1;">0</div>
+                        <small style="text-transform: uppercase; letter-spacing: 1px;">Nietestowalne</small>
+                    </article>
+                </div>
+
+                <div class="grid">
+                    <button class="secondary outline" id="export-json-btn">
+                        <i data-lucide="download"></i> Pobierz JSON
+                    </button>
+                    <button class="secondary outline" id="export-odt-btn">
+                        <link rel="stylesheet" href="css/pico.min.css">
+                        <!-- Custom Styles -->
+                        <link rel="stylesheet" href="css/style.css">
+
+                        <!-- Lucide Icons -->
+                        <script src="js/lucide.min.js"></script>
+                        <!-- JSZip for ODT export -->
+                        <script src="js/jszip.min.js"></script>
+                        </head>
+
+                        <body>
+
+                            <!-- Header -->
+                            <header class="app-header">
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div
+                                        style="background: var(--primary); padding: 8px; border-radius: 8px; display: flex;">
+                                        <i data-lucide="shield-check" color="white"></i>
+                                    </div>
+                                    <div>
+                                        <strong style="display: block; line-height: 1.2;">A11yAudit</strong>
+                                        <small style="color: var(--muted-color);">EN 301 549</small>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <span id="active-badge" class="badge hidden"
+                                        style="background: var(--pass-bg); color: var(--pass-color); border: 1px solid var(--pass-color);">AKTYWNY</span>
+                                    <button class="outline secondary"
+                                        style="padding: 0.5rem; border: none; color: var(--muted-color);">
+                                        <i data-lucide="menu"></i>
+                                    </button>
+                                </div>
+                            </header>
+
+                            <!-- Layout Container -->
+                            <div id="app-layout" class="app-layout">
+
+                                <!-- Sidebar -->
+                                <aside id="sidebar">
+                                    <small
+                                        style="text-transform: uppercase; color: var(--muted-color); letter-spacing: 1px; font-weight: 700; margin-bottom: 1rem;">
+                                        Lista kontrolna
+                                    </small>
+                                    <div id="nav-container" style="flex: 1;">
+                                        <!-- Nav items generated here -->
+                                    </div>
+                                    <div
+                                        style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #334155; text-align: center;">
+                                        <small style="color: var(--muted-color);">Postęp: <span
+                                                id="progress-text">0/0</span></small>
+                                        <progress id="main-progress" value="0" max="100"
+                                            style="height: 4px; margin-top: 0.5rem; --color: var(--primary);"></progress>
+                                    </div>
+                                </aside>
+
+                                <!-- Main Content -->
+                                <main>
+
+                                    <!-- VIEW 1: SETUP (Centered, Full Width) -->
+                                    <div id="view-setup" class="setup-container">
+                                        <div style="text-align: center; margin-bottom: 3rem;">
+                                            <h1 style="margin-bottom: 0.5rem;">Konfiguracja Audytu</h1>
+                                            <p style="color: var(--muted-color);">Wybierz kryteria do oceny dostępności.
+                                            </p>
+                                        </div>
+
+                                        <article>
+                                            <header style="border-bottom: 1px solid #334155;">
+                                                <strong>Informacje o produkcie</strong>
+                                            </header>
+                                            <div style="padding: 2rem;">
+                                                <label for="product-name">Nazwa produktu</label>
+                                                <input type="text" id="product-name"
+                                                    placeholder="np. Portal Usług Publicznych 2.0"
+                                                    style="margin-bottom: 2rem;">
+
+                                                <label>Zakres audytu</label>
+                                                <div class="scope-grid" id="scope-grid">
+                                                    <!-- Dynamicznie generowane kafelki lub statyczne -->
+                                                    <div class="scope-card" data-clause="c5"
+                                                        onclick="toggleScope(this, 'c5')">
+                                                        <i data-lucide="box" style="color: var(--muted-color);"></i>
+                                                        <div>
+                                                            <strong style="display: block;">Wymagania ogólne (Klauzula
+                                                                5)</strong>
+                                                            <small style="color: var(--muted-color);">Funkcjonalność
+                                                                zamknięta.</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scope-card" data-clause="c6"
+                                                        onclick="toggleScope(this, 'c6')">
+                                                        <i data-lucide="message-square"
+                                                            style="color: var(--muted-color);"></i>
+                                                        <div>
+                                                            <strong style="display: block;">TIK z dwukierunkową
+                                                                komunikacją głosową (Klauzula
+                                                                6)</strong>
+                                                            <small style="color: var(--muted-color);">Połączenia
+                                                                głosowe, wideo.</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scope-card" data-clause="c7"
+                                                        onclick="toggleScope(this, 'c7')">
+                                                        <i data-lucide="video" style="color: var(--muted-color);"></i>
+                                                        <div>
+                                                            <strong style="display: block;">TIK z możliwościami wideo
+                                                                (Klauzula 7)</strong>
+                                                            <small style="color: var(--muted-color);">Napisy,
+                                                                audiodeskrypcja.</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scope-card" data-clause="c8"
+                                                        onclick="toggleScope(this, 'c8')">
+                                                        <i data-lucide="cpu" style="color: var(--muted-color);"></i>
+                                                        <div>
+                                                            <strong style="display: block;">Sprzęt (Klauzula 8)</strong>
+                                                            <small style="color: var(--muted-color);">Wymagania
+                                                                sprzętowe.</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scope-card checked" data-clause="c9"
+                                                        onclick="toggleScope(this, 'c9')">
+                                                        <i data-lucide="globe" class="text-primary"
+                                                            style="color: var(--primary);"></i>
+                                                        <div>
+                                                            <strong style="display: block;">Strony internetowe (Klauzula
+                                                                9)</strong>
+                                                            <small style="color: var(--muted-color);">Zgodność z WCAG
+                                                                2.1 poziom AA.</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scope-card" data-clause="c10"
+                                                        onclick="toggleScope(this, 'c10')">
+                                                        <i data-lucide="file-text"
+                                                            style="color: var(--muted-color);"></i>
+                                                        <div>
+                                                            <strong style="display: block;">Dokumenty nietekstowe
+                                                                (Klauzula 10)</strong>
+                                                            <small style="color: var(--muted-color);">Dokumenty PDF,
+                                                                Office itp.</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scope-card" data-clause="c11"
+                                                        onclick="toggleScope(this, 'c11')">
+                                                        <i data-lucide="smartphone"
+                                                            style="color: var(--muted-color);"></i>
+                                                        <div>
+                                                            <strong style="display: block;">Oprogramowanie (Klauzula
+                                                                11)</strong>
+                                                            <small style="color: var(--muted-color);">Aplikacje natywne
+                                                                i mobilne.</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scope-card" data-clause="c12"
+                                                        onclick="toggleScope(this, 'c12')">
+                                                        <i data-lucide="book" style="color: var(--muted-color);"></i>
+                                                        <div>
+                                                            <strong style="display: block;">Dokumentacja i usługi
+                                                                wsparcia (Klauzula
+                                                                12)</strong>
+                                                            <small style="color: var(--muted-color);">Pomoc techniczna,
+                                                                dokumentacja.</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scope-card" data-clause="c13"
+                                                        onclick="toggleScope(this, 'c13')">
+                                                        <i data-lucide="phone-call"
+                                                            style="color: var(--muted-color);"></i>
+                                                        <div>
+                                                            <strong style="display: block;">Przekaźnikowe usługi
+                                                                telekomunikacyjne (Klauzula
+                                                                13)</strong>
+                                                            <small style="color: var(--muted-color);">Usługi
+                                                                relay.</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <footer
+                                                style="text-align: right; border-top: 1px solid #334155; padding: 1rem 2rem;">
+                                                <button id="start-audit-btn"
+                                                    style="width: auto; margin-bottom: 0; padding-left: 2rem; padding-right: 2rem;">
+                                                    Rozpocznij Audyt <i data-lucide="arrow-right"
+                                                        style="margin-left: 8px;"></i>
+                                                </button>
+                                            </footer>
+                                        </article>
+                                    </div>
+
+                                    <!-- VIEW 2: AUDIT (With Sidebar) -->
+                                    <div id="view-audit" class="hidden" style="max-width: 900px; margin: 0 auto;">
+                                        <div id="test-renderer">
+                                            <!-- Dynamic Test Content -->
+                                        </div>
+                                    </div>
+
+                                    <!-- VIEW 3: SUMMARY -->
+                                    <div id="view-summary" class="hidden setup-container" style="text-align: center;">
+                                        <div
+                                            style="width: 80px; height: 80px; background: var(--pass-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+                                            <i data-lucide="award" size="48" style="color: var(--pass-color);"></i>
+                                        </div>
+                                        <h1>Audyt Zakończony</h1>
+                                        <p id="summary-product"
+                                            style="font-size: 1.2rem; color: var(--muted-color); margin-bottom: 3rem;">
+                                        </p>
+
+                                        <div class="grid" style="gap: 2rem; margin-bottom: 3rem;">
+                                            <article
+                                                style="margin: 0; border-color: var(--pass-color); text-align: center; padding: 2rem;">
+                                                <div id="res-pass"
+                                                    style="font-size: 3rem; font-weight: 800; color: var(--pass-color); line-height: 1;">
+                                                    0</div>
+                                                <small
+                                                    style="text-transform: uppercase; letter-spacing: 1px;">Zaliczone</small>
+                                            </article>
+                                            <article
+                                                style="margin: 0; border-color: var(--fail-color); text-align: center; padding: 2rem;">
+                                                <div id="res-fail"
+                                                    style="font-size: 3rem; font-weight: 800; color: var(--fail-color); line-height: 1;">
+                                                    0</div>
+                                                <small
+                                                    style="text-transform: uppercase; letter-spacing: 1px;">Niezaliczone</small>
+                                            </article>
+                                            <article style="margin: 0; text-align: center; padding: 2rem;">
+                                                <div id="res-na"
+                                                    style="font-size: 3rem; font-weight: 800; color: var(--na-color); line-height: 1;">
+                                                    0</div>
+                                                <small style="text-transform: uppercase; letter-spacing: 1px;">Nie
+                                                    dotyczy</small>
+                                            </article>
+                                            <article style="margin: 0; text-align: center; padding: 2rem;">
+                                                <div id="res-nt"
+                                                    style="font-size: 3rem; font-weight: 800; color: var(--nt-color); line-height: 1;">
+                                                    0</div>
+                                                <small
+                                                    style="text-transform: uppercase; letter-spacing: 1px;">Nietestowalne</small>
+                                            </article>
+                                        </div>
+
+                                        <div class="grid">
+                                            <button class="secondary outline" id="export-json-btn">
+                                                <i data-lucide="download"></i> Pobierz JSON
+                                            </button>
+                                            <button class="secondary outline" id="export-odt-btn">
+                                                <i data-lucide="file-text"></i> Pobierz ODT
+                                            </button>
+                                            <button class="secondary outline" id="export-csv-btn">
+                                                <i data-lucide="table"></i> Pobierz CSV
+                                            </button>
+                                            <button onclick="resetAudit()">Nowy Audyt</button>
+                                        </div>
+                                    </div>
+
+                                </main>
+                            </div>
+
+                            <!-- Application Logic -->
+                            <script src="js/main.js"></script>
+                        </body>
+
 </html>

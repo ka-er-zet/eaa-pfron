@@ -5,7 +5,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.8.1 None"
+      "text": "C.8.1 Postanowienia ogólne"
     },
     {
       "type": "informative",
@@ -14,7 +14,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.1.2 None"
+      "text": "C.8.1.2 Standardowe połączenia"
     },
     {
       "type": "test",
@@ -40,7 +40,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.8.1.2 None",
+        "legend": "Wybierz wynik dla C.8.1.2 Standardowe połączenia",
         "noteId": "notes-c-8-1-2"
       },
       "evaluationType": "Inspection",
@@ -51,7 +51,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.1.3 None"
+      "text": "C.8.1.3 Kolor"
     },
     {
       "type": "test",
@@ -76,7 +76,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.8.1.3 None",
+        "legend": "Wybierz wynik dla C.8.1.3 Kolor",
         "noteId": "notes-c-8-1-3"
       },
       "evaluationType": "Inspection"
@@ -84,17 +84,17 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.8.2 None"
+      "text": "C.8.2 Produkty sprzętowe z wyjściem mowy"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.2.1 None"
+      "text": "C.8.2.1 Wzmocnienie głośności mowy"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.2.1.1 None"
+      "text": "C.8.2.1.1 Zakres głośności mowy"
     },
     {
       "type": "test",
@@ -122,7 +122,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.2.1.1 None",
+        "legend": "Wybierz wynik dla C.8.2.1.1 Zakres głośności mowy",
         "noteId": "notes-c-8-2-1-1"
       },
       "evaluationType": "Inspection based on measurement data"
@@ -130,7 +130,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.2.1.2 None"
+      "text": "C.8.2.1.2 Stopniowa regulacja głośności"
     },
     {
       "type": "test",
@@ -157,7 +157,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.2.1.2 None",
+        "legend": "Wybierz wynik dla C.8.2.1.2 Stopniowa regulacja głośności",
         "noteId": "notes-c-8-2-1-2"
       },
       "evaluationType": "Inspection based on measurement data"
@@ -165,12 +165,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.2.2 None"
+      "text": "C.8.2.2 Sprzężenie magnetyczne"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.2.2.1 None"
+      "text": "C.8.2.2.1 Urządzenia stacjonarne"
     },
     {
       "type": "test",
@@ -195,7 +195,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.8.2.2.1 None",
+        "legend": "Wybierz wynik dla C.8.2.2.1 Urządzenia stacjonarne",
         "noteId": "notes-c-8-2-2-1"
       },
       "evaluationType": "Inspection based on measurement data"
@@ -203,7 +203,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.2.2.2 None"
+      "text": "C.8.2.2.2 Urządzenia do komunikacji bezprzewodowej"
     },
     {
       "type": "test",
@@ -229,7 +229,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.2.2.2 None",
+        "legend": "Wybierz wynik dla C.8.2.2.2 Urządzenia do komunikacji bezprzewodowej",
         "noteId": "notes-c-8-2-2-2"
       },
       "evaluationType": "Inspection based on measurement data"
@@ -237,7 +237,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.8.3 None"
+      "text": "C.8.3 Stacjonarna ICT"
     },
     {
       "type": "informative",
@@ -246,7 +246,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.3.1 None"
+      "text": "C.8.3.1 Dostęp z przodu lub z boku"
     },
     {
       "type": "test",
@@ -272,7 +272,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.1 None",
+        "legend": "Wybierz wynik dla C.8.3.1 Dostęp z przodu lub z boku",
         "noteId": "notes-c-8-3-1"
       },
       "evaluationType": "Inspection"
@@ -280,12 +280,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.3.2 None"
+      "text": "C.8.3.2 Dostęp z przodu"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.3.2.1 None"
+      "text": "C.8.3.2.1 Nieograniczony dostęp z przodu, od góry"
     },
     {
       "type": "test",
@@ -311,7 +311,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.2.1 None",
+        "legend": "Wybierz wynik dla C.8.3.2.1 Nieograniczony dostęp z przodu, od góry",
         "noteId": "notes-c-8-3-2-1"
       },
       "evaluationType": "Inspection and measurement"
@@ -319,7 +319,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.3.2.2 None"
+      "text": "C.8.3.2.2 Nieograniczony dostęp z przodu, od dołu"
     },
     {
       "type": "test",
@@ -345,7 +345,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.2.2 None",
+        "legend": "Wybierz wynik dla C.8.3.2.2 Nieograniczony dostęp z przodu, od dołu",
         "noteId": "notes-c-8-3-2-2"
       },
       "evaluationType": "Inspection and measurement"
@@ -353,12 +353,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.3.3 None"
+      "text": "C.8.3.3 Dostęp z boku"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.3.3.1 None"
+      "text": "C.8.3.3.1 Nieograniczony dostęp z boku, od góry"
     },
     {
       "type": "test",
@@ -384,7 +384,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.3.1 None",
+        "legend": "Wybierz wynik dla C.8.3.3.1 Nieograniczony dostęp z boku, od góry",
         "noteId": "notes-c-8-3-3-1"
       },
       "evaluationType": "Inspection and measurement"
@@ -392,7 +392,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.3.3.2 None"
+      "text": "C.8.3.3.2 Nieograniczony dostęp z boku, od dołu"
     },
     {
       "type": "test",
@@ -418,7 +418,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.3.2 None",
+        "legend": "Wybierz wynik dla C.8.3.3.2 Nieograniczony dostęp z boku, od dołu",
         "noteId": "notes-c-8-3-3-2"
       },
       "evaluationType": "Inspection and measurement"
@@ -426,12 +426,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.3.4 None"
+      "text": "C.8.3.4 Pusta podłoga lub powierzchnia podłoża"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.3.4.1 None"
+      "text": "C.8.3.4.1 Zmiana poziomu"
     },
     {
       "type": "test",
@@ -459,7 +459,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 lub 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.4.1 None",
+        "legend": "Wybierz wynik dla C.8.3.4.1 Zmiana poziomu",
         "noteId": "notes-c-8-3-4-1"
       },
       "evaluationType": "Inspection and measurement"
@@ -467,7 +467,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.3.4.2 None"
+      "text": "C.8.3.4.2 Pusta podłoga lub powierzchnia podłoża"
     },
     {
       "type": "test",
@@ -493,7 +493,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.4.2 None",
+        "legend": "Wybierz wynik dla C.8.3.4.2 Pusta podłoga lub powierzchnia podłoża",
         "noteId": "notes-c-8-3-4-2"
       },
       "evaluationType": "Inspection and measurement"
@@ -501,7 +501,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.3.5 None"
+      "text": "C.8.3.5 Widoczność"
     },
     {
       "type": "test",
@@ -527,7 +527,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.5 None",
+        "legend": "Wybierz wynik dla C.8.3.5 Widoczność",
         "noteId": "notes-c-8-3-5"
       },
       "evaluationType": "Inspection and measurement"
@@ -535,7 +535,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.3.6 None"
+      "text": "C.8.3.6 Instrukcja montażu"
     },
     {
       "type": "test",
@@ -562,7 +562,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.6 None",
+        "legend": "Wybierz wynik dla C.8.3.6 Instrukcja montażu",
         "noteId": "notes-c-8-3-6"
       },
       "evaluationType": "Inspection and measurement"
@@ -570,12 +570,12 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.8.4 None"
+      "text": "C.8.4 Części obsługiwane mechanicznie"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.4.1 None"
+      "text": "C.8.4.1 Klawisze numeryczne"
     },
     {
       "type": "test",
@@ -600,7 +600,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.8.4.1 None",
+        "legend": "Wybierz wynik dla C.8.4.1 Klawisze numeryczne",
         "noteId": "notes-c-8-4-1"
       },
       "evaluationType": "Inspection"
@@ -608,12 +608,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.4.2 None"
+      "text": "C.8.4.2 Obsługa części mechanicznych"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.4.2.1 None"
+      "text": "C.8.4.2.1 Środki obsługi części mechanicznych"
     },
     {
       "type": "test",
@@ -638,7 +638,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.4.2.1 None",
+        "legend": "Wybierz wynik dla C.8.4.2.1 Środki obsługi części mechanicznych",
         "noteId": "notes-c-8-4-2-1"
       },
       "evaluationType": "Inspection"
@@ -646,7 +646,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.4.2.2 None"
+      "text": "C.8.4.2.2 Siła wymagana do obsługi części mechanicznych"
     },
     {
       "type": "test",
@@ -671,7 +671,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.8.4.2.2 None",
+        "legend": "Wybierz wynik dla C.8.4.2.2 Siła wymagana do obsługi części mechanicznych",
         "noteId": "notes-c-8-4-2-2"
       },
       "evaluationType": "Inspection and measurement"
@@ -679,7 +679,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.4.3 None"
+      "text": "C.8.4.3 Klucze, bilety i karty taryfowe"
     },
     {
       "type": "test",
@@ -704,7 +704,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.8.4.3 None",
+        "legend": "Wybierz wynik dla C.8.4.3 Klucze, bilety i karty taryfowe",
         "noteId": "notes-c-8-4-3"
       },
       "evaluationType": "Inspection and measurement"
@@ -712,7 +712,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.8.5 None"
+      "text": "C.8.5 Oznaczenia dotykowe w trybie mowy"
     },
     {
       "type": "test",
@@ -738,7 +738,7 @@
             "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2. C.9 Internet"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.5 None",
+        "legend": "Wybierz wynik dla C.8.5 Oznaczenia dotykowe w trybie mowy",
         "noteId": "notes-c-8-5"
       },
       "evaluationType": "Inspection and measurement"
