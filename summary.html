@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A11y Audit Tool - Podsumowanie</title>
+
+    <!-- Pico CSS (Semantic Framework) -->
+    <link rel="stylesheet" href="css/pico.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Lucide Icons -->
+    <script src="js/lucide.min.js"></script>
+    <!-- JSZip for ODT export -->
+    <script src="js/jszip.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="header-icon-container">
+                <i data-lucide="shield-check" color="white"></i>
+            </div>
+            <div>
+                <strong class="header-title">A11yAudit</strong>
+                <small class="text-muted">Podsumowanie</small>
+            </div>
+        </div>
+        <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()" aria-label="Przełącz motyw">
+            <i id="theme-icon" data-lucide="moon"></i>
+        </button>
+    </header>
+
+    <!-- Layout Container -->
+    <div id="app-layout" class="app-layout">
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- VIEW 3: SUMMARY -->
+            <div id="view-summary" class="setup-container summary-container">
+                <div class="summary-icon-wrapper">
+                    <i data-lucide="award" size="48"></i>
+                </div>
+                <h1>Audyt Zakończony</h1>
+                <p id="summary-product" class="text-muted summary-product-name">
+                </p>
+
+                <div class="grid summary-grid">
+                    <article class="stat-card border-pass">
+                        <div id="res-pass" class="stat-value text-pass">0</div>
+                        <small class="stat-label">Zaliczone</small>
+                    </article>
+                    <article class="stat-card border-fail">
+                        <div id="res-fail" class="stat-value text-fail">0</div>
+                        <small class="stat-label">Niezaliczone</small>
+                    </article>
+                    <article class="stat-card">
+                        <div id="res-na" class="stat-value text-na">0</div>
+                        <small class="stat-label">Nie dotyczy</small>
+                    </article>
+                    <article class="stat-card">
+                        <div id="res-nt" class="stat-value text-nt">0</div>
+                        <small class="stat-label">Nietestowalne</small>
+                    </article>
+                </div>
+
+                <div class="grid">
+                    <button class="secondary outline" id="export-json-btn">
+                        <i data-lucide="download"></i> Pobierz JSON
+                    </button>
+                    <button class="secondary outline" id="export-odt-btn">
+                        <i data-lucide="file-text"></i> Pobierz ODT
+                    </button>
+                    <button class="secondary outline" id="export-csv-btn">
+                        <i data-lucide="table"></i> Pobierz CSV
+                    </button>
+                    <button onclick="resetAudit()">Nowy Audyt</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Application Logic -->
+    <script src="js/utils.js"></script>
+    <script src="js/summary.js"></script>
+</body>
+
+</html>
