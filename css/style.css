@@ -451,3 +451,37 @@ main {
 .text-na {
     color: var(--na-color);
 }
+
+/* --- Scope Fieldset & Checkboxes --- */
+.scope-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Checkbox Logic */
+.scope-checkbox:checked + .scope-card {
+    background: hsla(224, 76%, 48%, 0.1);
+    border-color: var(--primary);
+}
+
+.scope-checkbox:checked + .scope-card i {
+    color: var(--primary);
+}
+
+.scope-checkbox:focus + .scope-card {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}

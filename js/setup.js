@@ -4,22 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clear any previous state when on setup page
     window.utils.clearState();
 
-    // Toggle Scope Logic
-    window.toggleScope = function (el, clauseId) {
-        el.classList.toggle('checked');
-        const isChecked = el.classList.contains('checked');
-        el.setAttribute('aria-pressed', isChecked);
-
-        const icon = el.querySelector('svg');
-        if (isChecked) {
-            icon.classList.add('text-primary');
-            icon.style.color = 'var(--primary)';
-        } else {
-            icon.classList.remove('text-primary');
-            icon.style.color = 'var(--muted-color)';
-        }
-    };
-
     const startBtn = document.getElementById('start-audit-btn');
     if (startBtn) {
         startBtn.addEventListener('click', startAudit);
@@ -33,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const selectedCards = document.querySelectorAll('.scope-card.checked');
-        if (selectedCards.length === 0) {
+        const selectedCheckboxes = document.querySelectorAll('input[name="clauses"]:checked');
+        if (selectedCheckboxes.length === 0) {
             alert("Proszę wybrać przynajmniej jeden zakres audytu.");
             return;
         }
 
-        const clausesToLoad = Array.from(selectedCards).map(card => card.dataset.clause);
+        const clausesToLoad = Array.from(selectedCheckboxes).map(cb => cb.value);
 
         // Initialize State
         const initialState = {
