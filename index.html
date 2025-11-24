@@ -4,205 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A11y Audit Tool - EN 301 549</title>
+    <title>A11y Audit Tool - Konfiguracja</title>
 
     <!-- Pico CSS (Semantic Framework) -->
+    <link rel="stylesheet" href="css/pico.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Lucide Icons -->
+    <script src="js/lucide.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
     <header class="app-header">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-            <div style="background: var(--primary); padding: 8px; border-radius: 8px; display: flex;">
+        <div class="header-content">
+            <div class="header-icon-container">
                 <i data-lucide="shield-check" color="white"></i>
             </div>
             <div>
-                <strong style="display: block; line-height: 1.2;">A11yAudit</strong>
-                <small style="color: var(--muted-color);">EN 301 549</small>
+                <strong class="header-title">A11yAudit</strong>
+                <small class="text-muted">EN 301 549</small>
             </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 1rem;">
-            <span id="active-badge" class="badge hidden"
-                style="background: var(--pass-bg); color: var(--pass-color); border: 1px solid var(--pass-color);">AKTYWNY</span>
-            <button class="outline secondary" style="padding: 0.5rem; border: none; color: var(--muted-color);">
-                <i data-lucide="menu"></i>
-            </button>
-        </div>
+        <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()" aria-label="Przełącz motyw">
+            <i id="theme-icon" data-lucide="moon"></i>
+        </button>
     </header>
 
     <!-- Layout Container -->
     <div id="app-layout" class="app-layout">
-
-        <!-- Sidebar -->
-        <aside id="sidebar">
-            <small
-                style="text-transform: uppercase; color: var(--muted-color); letter-spacing: 1px; font-weight: 700; margin-bottom: 1rem;">
-                Lista kontrolna
-            </small>
-            <div id="nav-container" style="flex: 1;">
-                <!-- Nav items generated here -->
-            </div>
-            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #334155; text-align: center;">
-                <small style="color: var(--muted-color);">Postęp: <span id="progress-text">0/0</span></small>
-                <progress id="main-progress" value="0" max="100"
-                    style="height: 4px; margin-top: 0.5rem; --color: var(--primary);"></progress>
-            </div>
-        </aside>
 
         <!-- Main Content -->
         <main>
 
             <!-- VIEW 1: SETUP (Centered, Full Width) -->
             <div id="view-setup" class="setup-container">
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <h1 style="margin-bottom: 0.5rem;">Konfiguracja Audytu</h1>
-                    <p style="color: var(--muted-color);">Wybierz kryteria do oceny dostępności.
-                    </p>
+                <div class="setup-header">
+                    <h1 class="mb-05">Konfiguracja Audytu</h1>
+                    <p class="text-muted">Wybierz kryteria do oceny dostępności.</p>
                 </div>
 
                 <article>
-                    <header style="border-bottom: 1px solid #334155;">
+                    <header class="section-header">
                         <strong>Informacje o produkcie</strong>
                     </header>
-                    <div style="padding: 2rem;">
+                    <div class="section-content">
                         <label for="product-name">Nazwa produktu</label>
                         <input type="text" id="product-name" placeholder="np. Portal Usług Publicznych 2.0"
-                            style="margin-bottom: 2rem;">
+                            class="mb-2">
 
-                        <label>Zakres audytu</label>
+                        <strong class="mb-05" style="display: block;">Zakres audytu</strong>
                         <div class="scope-grid" id="scope-grid">
-                            <!-- Dynamicznie generowane kafelki lub statyczne -->
-                            <div class="scope-card" data-clause="c5" onclick="toggleScope(this, 'c5')">
-                                <i data-lucide="box" style="color: var(--muted-color);"></i>
+                            <button type="button" class="scope-card" data-clause="c5" onclick="toggleScope(this, 'c5')"
+                                aria-pressed="false">
+                                <i data-lucide="box" class="text-muted"></i>
                                 <div>
                                     <strong style="display: block;">Wymagania ogólne (Klauzula 5)</strong>
-                                    <small style="color: var(--muted-color);">Funkcjonalność zamknięta.</small>
+                                    <small class="text-muted">Funkcjonalność zamknięta.</small>
                                 </div>
-                            </div>
-                            <div class="scope-card" data-clause="c6" onclick="toggleScope(this, 'c6')">
-                                <i data-lucide="message-square" style="color: var(--muted-color);"></i>
+                            </button>
+                            <button type="button" class="scope-card" data-clause="c6" onclick="toggleScope(this, 'c6')"
+                                aria-pressed="false">
+                                <i data-lucide="message-square" class="text-muted"></i>
                                 <div>
                                     <strong style="display: block;">TIK z dwukierunkową komunikacją głosową (Klauzula
                                         6)</strong>
-                                    <small style="color: var(--muted-color);">Połączenia głosowe, wideo.</small>
+                                    <small class="text-muted">Połączenia głosowe, wideo.</small>
                                 </div>
-                            </div>
-                            <div class="scope-card" data-clause="c7" onclick="toggleScope(this, 'c7')">
-                                <i data-lucide="video" style="color: var(--muted-color);"></i>
+                            </button>
+                            <button type="button" class="scope-card" data-clause="c7" onclick="toggleScope(this, 'c7')"
+                                aria-pressed="false">
+                                <i data-lucide="video" class="text-muted"></i>
                                 <div>
                                     <strong style="display: block;">TIK z możliwościami wideo (Klauzula 7)</strong>
-                                    <small style="color: var(--muted-color);">Napisy, audiodeskrypcja.</small>
+                                    <small class="text-muted">Napisy, audiodeskrypcja.</small>
                                 </div>
-                            </div>
-                            <div class="scope-card" data-clause="c8" onclick="toggleScope(this, 'c8')">
-                                <i data-lucide="cpu" style="color: var(--muted-color);"></i>
+                            </button>
+                            <button type="button" class="scope-card" data-clause="c8" onclick="toggleScope(this, 'c8')"
+                                aria-pressed="false">
+                                <i data-lucide="cpu" class="text-muted"></i>
                                 <div>
                                     <strong style="display: block;">Sprzęt (Klauzula 8)</strong>
-                                    <small style="color: var(--muted-color);">Wymagania sprzętowe.</small>
+                                    <small class="text-muted">Wymagania sprzętowe.</small>
                                 </div>
-                            </div>
-                            <div class="scope-card checked" data-clause="c9" onclick="toggleScope(this, 'c9')">
-                                <i data-lucide="globe" class="text-primary" style="color: var(--primary);"></i>
+                            </button>
+                            <button type="button" class="scope-card" data-clause="c9" onclick="toggleScope(this, 'c9')"
+                                aria-pressed="false">
+                                <i data-lucide="globe" class="text-muted"></i>
                                 <div>
                                     <strong style="display: block;">Strony internetowe (Klauzula 9)</strong>
-                                    <small style="color: var(--muted-color);">Zgodność z WCAG 2.1 poziom AA.</small>
+                                    <small class="text-muted">Zgodność z WCAG 2.1 poziom AA.</small>
                                 </div>
-                            </div>
-                            <div class="scope-card" data-clause="c10" onclick="toggleScope(this, 'c10')">
-                                <i data-lucide="file-text" style="color: var(--muted-color);"></i>
+                            </button>
+                            <button type="button" class="scope-card" data-clause="c10"
+                                onclick="toggleScope(this, 'c10')" aria-pressed="false">
+                                <i data-lucide="file-text" class="text-muted"></i>
                                 <div>
-                                    <strong style="display: block;">Dokumenty nietekstowe (Klauzula 10)</strong>
-                                    <small style="color: var(--muted-color);">Dokumenty PDF, Office itp.</small>
+                                    <strong style="display: block;">Dokumenty nieinternetowe (Klauzula 10)</strong>
+                                    <small class="text-muted">Dokumenty PDF, Office itp.</small>
                                 </div>
-                            </div>
-                            <div class="scope-card" data-clause="c11" onclick="toggleScope(this, 'c11')">
-                                <i data-lucide="smartphone" style="color: var(--muted-color);"></i>
+                            </button>
+                            <button type="button" class="scope-card" data-clause="c11"
+                                onclick="toggleScope(this, 'c11')" aria-pressed="false">
+                                <i data-lucide="smartphone" class="text-muted"></i>
                                 <div>
                                     <strong style="display: block;">Oprogramowanie (Klauzula 11)</strong>
-                                    <small style="color: var(--muted-color);">Aplikacje natywne i mobilne.</small>
+                                    <small class="text-muted">Aplikacje natywne i mobilne.</small>
                                 </div>
-                            </div>
-                            <div class="scope-card" data-clause="c12" onclick="toggleScope(this, 'c12')">
-                                <i data-lucide="book" style="color: var(--muted-color);"></i>
+                            </button>
+                            <button type="button" class="scope-card" data-clause="c12"
+                                onclick="toggleScope(this, 'c12')" aria-pressed="false">
+                                <i data-lucide="book" class="text-muted"></i>
                                 <div>
                                     <strong style="display: block;">Dokumentacja i usługi wsparcia (Klauzula
                                         12)</strong>
-                                    <small style="color: var(--muted-color);">Pomoc techniczna, dokumentacja.</small>
+                                    <small class="text-muted">Pomoc techniczna, dokumentacja.</small>
                                 </div>
-                            </div>
-                            <div class="scope-card" data-clause="c13" onclick="toggleScope(this, 'c13')">
-                                <i data-lucide="phone-call" style="color: var(--muted-color);"></i>
+                            </button>
+                            <button type="button" class="scope-card" data-clause="c13"
+                                onclick="toggleScope(this, 'c13')" aria-pressed="false">
+                                <i data-lucide="phone-call" class="text-muted"></i>
                                 <div>
                                     <strong style="display: block;">Przekaźnikowe usługi telekomunikacyjne (Klauzula
                                         13)</strong>
-                                    <small style="color: var(--muted-color);">Usługi relay.</small>
+                                    <small class="text-muted">Usługi relay.</small>
                                 </div>
-                            </div>
+                            </button>
                         </div>
                     </div>
-                    <footer style="text-align: right; border-top: 1px solid #334155; padding: 1rem 2rem;">
-                        <button id="start-audit-btn"
-                            style="width: auto; margin-bottom: 0; padding-left: 2rem; padding-right: 2rem;">
+                    <footer class="card-footer">
+                        <button id="start-audit-btn" class="btn-auto">
                             Rozpocznij Audyt <i data-lucide="arrow-right" style="margin-left: 8px;"></i>
                         </button>
                     </footer>
                 </article>
             </div>
 
-            <!-- VIEW 2: AUDIT (With Sidebar) -->
-            <div id="view-audit" class="hidden" style="max-width: 900px; margin: 0 auto;">
-                <div id="test-renderer">
-                    <!-- Dynamic Test Content -->
-                </div>
-            </div>
-
-            <!-- VIEW 3: SUMMARY -->
-            <div id="view-summary" class="hidden setup-container" style="text-align: center;">
-                <div
-                    style="width: 80px; height: 80px; background: var(--pass-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
-                    <i data-lucide="award" size="48" style="color: var(--pass-color);"></i>
-                </div>
-                <h1>Audyt Zakończony</h1>
-                <p id="summary-product" style="font-size: 1.2rem; color: var(--muted-color); margin-bottom: 3rem;"></p>
-
-                <div class="grid" style="gap: 2rem; margin-bottom: 3rem;">
-                    <article style="margin: 0; border-color: var(--pass-color); text-align: center; padding: 2rem;">
-                        <div id="res-pass"
-                            style="font-size: 3rem; font-weight: 800; color: var(--pass-color); line-height: 1;">0</div>
-                        <small style="text-transform: uppercase; letter-spacing: 1px;">Zaliczone</small>
-                    </article>
-                    <article style="margin: 0; border-color: var(--fail-color); text-align: center; padding: 2rem;">
-                        <div id="res-fail"
-                            style="font-size: 3rem; font-weight: 800; color: var(--fail-color); line-height: 1;">0</div>
-                        <small style="text-transform: uppercase; letter-spacing: 1px;">Niezaliczone</small>
-                    </article>
-                    <article style="margin: 0; text-align: center; padding: 2rem;">
-                        <div id="res-na"
-                            style="font-size: 3rem; font-weight: 800; color: var(--na-color); line-height: 1;">0</div>
-                        <small style="text-transform: uppercase; letter-spacing: 1px;">Nie dotyczy</small>
-                    </article>
-                    <article style="margin: 0; text-align: center; padding: 2rem;">
-                        <div id="res-nt"
-                            style="font-size: 3rem; font-weight: 800; color: var(--nt-color); line-height: 1;">0</div>
-                        <small style="text-transform: uppercase; letter-spacing: 1px;">Nietestowalne</small>
-                    </article>
-                </div>
-
-                <div class="grid">
-                    <button class="secondary outline" id="export-json-btn">
-                        <i data-lucide="download"></i> Pobierz JSON
-                    </button>
-                    <button class="secondary outline" id="export-odt-btn">
-                        <i data-lucide="file-text"></i> Pobierz ODT
-                    </button>
-                    <button class="secondary outline" id="export-csv-btn">
-                        <i data-lucide="table"></i> Pobierz CSV
-                    </button>
-                    <button onclick="location.reload()">Nowy Audyt</button>
-                </div>
-            </div>
-
         </main>
     </div>
 
     <!-- Application Logic -->
-    <script src="js/main.js"></script>
-    </body>
+    <script src="js/utils.js"></script>
+    <script src="js/setup.js"></script>
+</body>
 
 </html>
