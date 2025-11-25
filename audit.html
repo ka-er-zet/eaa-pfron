@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A11y Audit Tool - Audyt</title>
+    <title>Audyt EN 301 549</title>
 
     <!-- Pico CSS (Semantic Framework) -->
     <link rel="stylesheet" href="css/pico.min.css">
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=5">
 
     <!-- Lucide Icons -->
     <script src="js/lucide.min.js"></script>
@@ -20,16 +20,16 @@
     <!-- Header -->
     <header class="app-header">
         <div class="header-content">
-            <div class="header-icon-container">
-                <i data-lucide="shield-check" color="white"></i>
-            </div>
+            <a href="index.html" id="app-logo" class="header-icon-container" aria-label="Strona główna - Powrót do konfiguracji">
+                <i data-lucide="shield-check" color="white" aria-hidden="true"></i>
+            </a>
             <div>
-                <strong class="header-title">A11yAudit</strong>
+                <strong class="header-title">EN 301 549</strong>
                 <small class="text-muted">Audyt w toku</small>
             </div>
         </div>
         <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()" aria-label="Przełącz motyw">
-            <i id="theme-icon" data-lucide="moon"></i>
+            <i id="theme-icon" data-lucide="moon" aria-hidden="true"></i>
         </button>
     </header>
 
@@ -37,16 +37,17 @@
     <div id="app-layout" class="app-layout with-sidebar">
 
         <!-- Sidebar -->
-        <aside id="sidebar">
+        <aside id="sidebar" aria-label="Panel boczny">
+            <a href="#test-renderer" class="skip-nav-link">Pomiń nawigację</a>
             <small class="text-muted sidebar-header">
                 Lista kontrolna
             </small>
-            <div id="nav-container" style="flex: 1;">
+            <nav id="nav-container" aria-label="Lista kontrolna" style="flex: 1;">
                 <!-- Nav items generated here -->
-            </div>
+            </nav>
             <div class="sidebar-footer">
                 <small class="text-muted">Postęp: <span id="progress-text">0/0</span></small>
-                <progress id="main-progress" value="0" max="100" class="progress-bar"></progress>
+                <progress id="main-progress" value="0" max="100" class="progress-bar" aria-label="Postęp audytu"></progress>
             </div>
         </aside>
 
@@ -54,7 +55,7 @@
         <main>
             <!-- VIEW 2: AUDIT (With Sidebar) -->
             <div id="view-audit" style="max-width: 900px; margin: 0 auto;">
-                <div id="test-renderer">
+                <div id="test-renderer" tabindex="-1">
                     <!-- Dynamic Test Content -->
                 </div>
             </div>

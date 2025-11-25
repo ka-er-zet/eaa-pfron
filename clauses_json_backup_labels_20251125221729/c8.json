@@ -28,16 +28,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 lub 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 lub 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 i 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.1.2 Standardowe połączenia",
@@ -64,16 +64,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.1.3 Kolor",
@@ -110,16 +110,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 lub 4: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 lub 4: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria 1 i 4: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 i 4: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.8.2.1.1 Zakres głośności mowy",
@@ -145,16 +145,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.8.2.1.2 Stopniowa regulacja głośności",
@@ -183,16 +183,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 lub 2: prawda i kryterium 3: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 lub 2: prawda i kryterium 3: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2: fałsz lub kryterium 3: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 i 2: fałsz lub kryterium 3: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.2.2.1 Urządzenia stacjonarne",
@@ -217,16 +217,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 lub 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 lub 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 i 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.8.2.2.2 Urządzenia do komunikacji bezprzewodowej",
@@ -260,16 +260,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 lub 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 lub 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 i 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.1 Dostęp z przodu lub z boku",
@@ -299,16 +299,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.2.1 Nieograniczony dostęp z przodu, od góry",
@@ -333,16 +333,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.2.2 Nieograniczony dostęp z przodu, od dołu",
@@ -372,16 +372,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.3.1 Nieograniczony dostęp z boku, od góry",
@@ -406,16 +406,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.3.2 Nieograniczony dostęp z boku, od dołu",
@@ -447,16 +447,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 lub 2 lub 3: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 lub 2 lub 3: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2 i 3: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 i 2 i 3: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 lub 3"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 lub 3"
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.4.1 Zmiana poziomu",
@@ -481,16 +481,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.4.2 Pusta podłoga lub powierzchnia podłoża",
@@ -515,16 +515,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.5 Widoczność",
@@ -550,16 +550,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryteria 1, 2 i 3: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryteria 1, 2 i 3: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria 1 lub 2 lub 3: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 lub 2 lub 3: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.6 Instrukcja montażu",
@@ -588,16 +588,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.4.1 Klawisze numeryczne",
@@ -626,16 +626,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.8.4.2.1 Środki obsługi części mechanicznych",
@@ -659,16 +659,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.4.2.2 Siła wymagana do obsługi części mechanicznych",
@@ -692,16 +692,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.4.3 Klucze, bilety i karty taryfowe",
@@ -726,16 +726,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2. C.9 Internet"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2. C.9 Internet"
           }
         ],
         "legend": "Wybierz wynik dla C.8.5 Oznaczenia dotykowe w trybie mowy",

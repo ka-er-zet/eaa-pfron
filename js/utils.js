@@ -96,6 +96,62 @@ function updateThemeIcon(theme) {
     }
 }
 
+/**
+ * Shows a custom confirmation modal.
+ * @param {string} message The message to display.
+ * @param {string} title The title of the modal.
+ * @param {string} confirmText Text for the confirm button.
+ * @param {string} cancelText Text for the cancel button.
+ * @returns {Promise<boolean>} Promise resolving to true if confirmed, false otherwise.
+ */
+function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierdź", cancelText = "Anuluj") {
+    return new Promise((resolve) => {
+        let dialog = document.getElementById('app-confirm-dialog');
+        if (!dialog) {
+            dialog = document.createElement('dialog');
+            dialog.id = 'app-confirm-dialog';
+            dialog.setAttribute('aria-labelledby', 'dialog-title');
+            dialog.setAttribute('aria-describedby', 'dialog-message');
+            dialog.innerHTML = `
+                <h3 id="dialog-title" style="margin-top: 0;"></h3>
+                <p id="dialog-message"></p>
+                <div class="dialog-actions">
+                    <button id="dialog-cancel" class="outline secondary"></button>
+                    <button id="dialog-confirm"></button>
+                </div>
+            `;
+            document.body.appendChild(dialog);
+        }
+
+        const titleEl = dialog.querySelector('#dialog-title');
+        const msgEl = dialog.querySelector('#dialog-message');
+        const cancelBtn = dialog.querySelector('#dialog-cancel');
+        const confirmBtn = dialog.querySelector('#dialog-confirm');
+
+        titleEl.textContent = title;
+        msgEl.textContent = message;
+        confirmBtn.textContent = confirmText;
+        cancelBtn.textContent = cancelText;
+
+        const close = (result) => {
+            dialog.close();
+            resolve(result);
+        };
+
+        cancelBtn.onclick = () => close(false);
+        confirmBtn.onclick = () => close(true);
+        
+        // Handle ESC
+        dialog.oncancel = (e) => {
+            e.preventDefault();
+            close(false);
+        };
+
+        dialog.showModal();
+        confirmBtn.focus();
+    });
+}
+
 // Expose functions globally
 window.utils = {
     loadState,
@@ -103,7 +159,8 @@ window.utils = {
     clearState,
     xmlEscape,
     initTheme,
-    toggleTheme
+    toggleTheme,
+    confirm: confirmModal
 };
 
 // Initialize theme on load

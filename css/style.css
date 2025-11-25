@@ -2,7 +2,7 @@
 :root {
     /* Global Settings */
     --border-radius: 8px;
-    --nav-width: 280px;
+    --nav-width: 350px;
 
     /* Statusy - Shared */
     --pass-color: hsl(160, 84%, 39%);
@@ -25,6 +25,58 @@
     /* Blue 800 */
     --primary-focus: hsla(224, 76%, 48%, 0.35);
     --primary-inverse: hsl(0, 0%, 100%);
+
+    /* Global Focus Settings */
+    --focus-color: hsl(224, 76%, 48%);
+}
+
+/* Global Focus Style - High Visibility */
+*:focus-visible {
+    outline: 3px solid var(--focus-color) !important;
+    outline-offset: 2px !important;
+    border-radius: 2px; /* Slight rounding for aesthetics */
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -9999px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    z-index: 9999;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px;
+    font-weight: bold;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Skip Nav Link (Inside Sidebar) */
+.skip-nav-link {
+    position: absolute;
+    top: -9999px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.skip-nav-link:focus {
+    position: static;
+    top: auto;
+    display: block;
+    margin-bottom: 1rem;
 }
 
 /* Dark Mode Overrides */
@@ -44,6 +96,9 @@
     /* High Contrast Red for Dark Mode */
     --fail-color: hsl(350, 100%, 79%);
     /* #FF94A6 */
+
+    /* Focus Color for Dark Mode - High Contrast Yellow/Orange */
+    --focus-color: hsl(38, 92%, 60%);
 
     /* Force Override - Must match :root */
     --primary: hsl(224, 76%, 48%);
@@ -68,6 +123,9 @@
     --h3-color: hsl(222, 47%, 11%);
     --muted-color: hsl(215, 25%, 27%);
     /* #334155 - Slate 700 DARKER */
+
+    /* Focus Color for Light Mode - Deep Blue */
+    --focus-color: hsl(224, 76%, 40%);
 
     /* Force Override - Must match :root */
     --primary: hsl(224, 76%, 48%);
@@ -126,6 +184,12 @@ body {
     border-radius: 8px;
     display: flex;
     color: var(--primary-inverse);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.header-icon-container:hover {
+    opacity: 0.9;
 }
 
 .header-title {
@@ -134,9 +198,20 @@ body {
 }
 
 .theme-toggle {
-    padding: 0.5rem;
+    padding: 0;
     border: none;
-    width: auto;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    margin: 0;
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
 }
 
 /* --- Layout --- */
@@ -185,27 +260,228 @@ aside {
     --color: var(--primary);
 }
 
+/* --- Navigation Items (USWDS / GOV.UK Style) --- */
 .nav-item {
     display: flex;
-    align-items: center;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Text left, Icon right */
     gap: 0.75rem;
-    padding: 0.75rem;
-    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem; /* Reduced vertical padding */
     cursor: pointer;
-    transition: all 0.2s;
-    color: var(--muted-color);
-    border: 1px solid transparent;
+    border-left: 4px solid transparent; /* Left border indicator */
+        transition: background-color 0.2s, border-left-color 0.18s ease-in-out;
+    color: inherit; /* Color should be controlled for text elements only */
+    position: relative;
+    
+    /* Force reset of any card styles */
+    border-radius: 0 !important;
+    margin: 0 !important;
+    background: transparent;
+    box-shadow: none !important;
 }
 
 .nav-item:hover {
-    background-color: hsla(0, 0%, 100%, 0.05);
-    color: var(--color);
+    /* Subtle hover: do not change background or text color to avoid "card" look.
+       Keep visual feedback minimal (underline optional). */
+    background-color: transparent !important; /* Avoid large hover cards */
+    text-decoration: none !important;
+     /* show subtle left border on hover */
+    border-left-color: var(--primary-focus) !important;
 }
 
-.nav-item.active {
-    background-color: hsla(224, 76%, 48%, 0.1);
-    border-color: hsla(224, 76%, 48%, 0.3);
-    color: var(--primary);
+/* Override frameworks default link color (Pico) which sets --color to primary on [role=link].
+   For our nav items we always want muted text; icon colors remain inline and shouldn't be affected.
+*/
+.nav-item { /* helper: use anchors or generic .nav-item elements */ }
+
+/* Ensure anchors used for nav don't adopt the global link color */
+a.nav-item, a.nav-item:link, a.nav-item:visited, a.nav-item:active {
+    --color: var(--muted-color) !important;
+    text-decoration: none !important;
+}
+
+a.nav-item:hover, a.nav-item:focus, a.nav-item:active {
+    --color: var(--muted-color) !important;
+    background: transparent !important;
+}
+
+.nav-item.active, a.nav-item.active {
+    /* Only visual indicator is the left border. Avoid changing text color or font weight. */
+    background-color: transparent !important; 
+    border-left-color: var(--primary) !important;
+}
+
+    /* Focus: show left border as a strong indicator while keeping global focus outline for non-nav elements */
+    .nav-item:focus-visible, a.nav-item:focus-visible {
+        outline: none; /* use left border for visual indication */
+        border-left-color: var(--focus-color) !important;
+    }
+
+/* Don't apply global color overrides to all child elements of active items. */
+
+/* Exception for the icon which has its own color logic inline, but we might need to force it if we want strictness, 
+   but usually we want the icon to keep its status color. 
+   The user complained about "blue", which is primary. Status icons are green/red/gray. 
+   So if the icon is blue, it means it's inheriting primary. 
+   But the icon has inline style. 
+   Let's exclude the icon from the wildcard reset if possible, or just reset text wrapper.
+*/
+
+.nav-item.active .nav-text-wrapper,
+.nav-item.active .nav-title,
+.nav-item.active .nav-id,
+a.nav-item.active .nav-text-wrapper,
+a.nav-item.active .nav-title,
+a.nav-item.active .nav-id {
+    color: var(--muted-color) !important; /* Keep text looking the same */
+    font-weight: normal !important; /* avoid extra bolding */
+}
+
+.nav-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    flex-shrink: 0;
+    order: 2; /* Ensure icon is on the right visually if flex order is used, though HTML order is already swapped */
+}
+
+.nav-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1; /* Take available space */
+    text-align: left;
+}
+
+/* Semantic list structure for nav */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list-item {
+    margin: 0;
+}
+
+a.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-id {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--muted-color);
+}
+
+.nav-title {
+    font-size: 0.92rem;
+    line-height: 1.4;
+    white-space: normal;
+    font-weight: 600;
+    text-transform: none; /* do not force uppercase */
+}
+
+/* --- Navigation Headings --- */
+.nav-heading {
+    padding: 0.5rem 1rem 0.25rem 1rem; /* even more compact */
+    color: var(--color);
+    font-size: 0.85rem;
+    font-weight: 600; /* less heavy than 800 */
+    letter-spacing: 0.02em;
+    pointer-events: none; /* headings are structural, not interactive (prevent hover/focus) */
+    border-bottom: 1px solid var(--muted-border-color);
+    margin-bottom: 0.25rem;
+    text-transform: none; /* prevent forcing uppercase */
+}
+
+.nav-heading:hover {
+    background: transparent; /* headings are not interactive, don't show hover */
+}
+
+.nav-heading.active {
+    border-left-color: transparent; /* do not highlight structural container */
+    background: var(--card-sectionning-background-color);
+}
+
+/* Style for heading links inside the nav */
+/* Headings are structural; use a plain text style. */
+.nav-heading-title {
+    display: block;
+    padding: 0.25rem 1rem;
+    color: var(--muted-color);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: default;
+}
+/* Ensure headings never show a browser focus outline (they are not interactive) */
+.nav-heading-title:focus,
+.nav-heading-title:focus-visible {
+    outline: none;
+}
+
+/* Ensure nav-heading links don't adopt the framework's primary link color */
+/* `a.nav-heading-link` removed — headings are structural and not clickable. */
+
+.nav-heading.level-3 {
+    border-bottom: 1px solid var(--muted-border-color);
+    margin-bottom: 0.25rem;
+    color: var(--h1-color);
+    font-size: 0.95rem; /* Slightly larger than level-4, but smaller than default headings */
+    font-weight: 700;
+}
+
+.nav-heading.level-4 {
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+}
+
+.nav-heading.level-5 {
+    padding-left: 1.5rem;
+    text-transform: none;
+    font-size: 0.82rem;
+}
+
+/* Ensure nav heading elements (h3/h4/h5) don't blow up in the sidebar; standardise sizes */
+.nav-heading h3,
+.nav-heading h4,
+.nav-heading h5 {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.1;
+    color: inherit;
+}
+
+/* Tighter font sizing for heading elements to avoid huge, visually overpowering headings */
+.nav-heading.level-3 h3 { font-size: 1rem; }
+.nav-heading.level-4 h4 { font-size: 0.95rem; }
+.nav-heading.level-5 h5 { font-size: 0.9rem; }
+
+/* Make the test title smaller so the content area is less visually overwhelming */
+#test-renderer .test-title {
+    font-size: 1.05rem; /* smaller but still prominent */
+    margin: 0;
+}
+
+/* Section subheading inserted above a test view (matches nav heading label) */
+.section-subheading {
+    font-size: 0.95rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--muted-color);
+    font-weight: 600; /* less bold than 800 */
+    text-transform: none; /* stop forcing uppercase on headings */
+}
+
+/* Give anchored content a scroll margin so deep links are not hidden under the header */
+#test-renderer article[role="region"],
+#test-renderer section[role="region"],
+#test-renderer article[id^="test-"],
+#test-renderer section[id^="test-"] {
+    scroll-margin-top: 4rem; /* adjust according to header height */
 }
 
 /* --- Main Content --- */
@@ -222,15 +498,21 @@ main {
 
 .setup-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .section-header {
     border-bottom: 1px solid var(--muted-color);
 }
 
+.section-header h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
 .section-content {
-    padding: 2rem;
+    padding: 0;
 }
 
 .card-footer {
@@ -249,26 +531,52 @@ main {
 /* --- Scope Grid --- */
 .scope-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
     margin-top: 1rem;
+}
+
+.scope-item {
+    display: flex;
+    flex-direction: column;
 }
 
 .scope-card {
     background: var(--card-background-color);
     border: 1px solid var(--muted-color);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: all 0.2s;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1.25rem;
     width: 100%;
+    height: 100%;
     text-align: left;
     font-family: inherit;
     color: inherit;
     margin: 0;
+}
+
+.scope-card i,
+.scope-card svg {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    stroke-width: 1.5px;
+    color: var(--muted-color);
+    transition: color 0.2s;
+}
+
+.scope-card.checked i,
+.scope-card.checked svg {
+    color: var(--primary);
+}
+
+.scope-card > div {
+    flex: 1;
 }
 
 .scope-card:hover {
@@ -364,16 +672,20 @@ main {
     text-align: center;
 }
 
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
 .mb-05 {
     margin-bottom: 0.5rem;
 }
 
 .mb-2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .mb-3 {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .badge {
@@ -487,6 +799,259 @@ main {
 }
 
 .scope-checkbox:focus + .scope-card {
-    outline: 2px solid var(--primary);
+    outline: 3px solid var(--focus-color);
     outline-offset: 2px;
+}
+
+/* --- Validation Overrides --- */
+
+/* Shared Validation Styles */
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border-color: var(--fail-color) !important;
+    box-shadow: none; /* Reset default shadow */
+}
+
+input[aria-invalid="true"]:focus,
+select[aria-invalid="true"]:focus,
+textarea[aria-invalid="true"]:focus {
+    border-color: var(--fail-color) !important;
+    box-shadow: 0 0 0 2px var(--fail-color) !important; /* Custom focus ring */
+}
+
+/* Light Mode Validation Icon (Dark Red) */
+:root,
+[data-theme="light"] {
+    --icon-invalid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23b8142e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    background-image: var(--icon-invalid) !important;
+}
+
+/* Dark Mode Validation Icon (Pastel Red) */
+[data-theme="dark"] {
+    --icon-invalid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FF94A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
+}
+
+/* --- MODAL (DIALOG) --- */
+dialog {
+    background-color: var(--card-background-color);
+    color: var(--color);
+    border: 1px solid var(--muted-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    width: 100%; /* Ensure it takes width up to max-width */
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    
+    /* Flex Layout for Vertical Stacking */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+}
+
+dialog h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem; /* Add spacing below title */
+    color: var(--h1-color);
+}
+
+dialog p {
+    margin-bottom: 0; /* Let gap handle spacing */
+}
+
+dialog .dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem; /* Reduced margin since we have gap */
+}
+
+dialog button {
+    width: auto;
+    margin-bottom: 0;
+}
+
+/* --- Button Overrides --- */
+/* Improve contrast for secondary outline buttons */
+:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary {
+    color: var(--color); /* Use main text color instead of muted secondary color */
+    border-color: var(--muted-color);
+}
+
+:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:hover,
+:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:focus {
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: transparent;
+}
+
+/* --- Navigation Headings --- */
+.nav-heading {
+    padding: 0.7rem 1rem 0.25rem 1rem;
+    color: var(--muted-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    pointer-events: auto;
+}
+
+
+.nav-heading.active {
+    /* Keep this reserved for when the nav-heading element is active
+       but prefer indicating activity on the inner anchor link instead. */
+    border-left-color: transparent; /* don't apply visual indicator here */
+    background: var(--card-sectionning-background-color);
+}
+
+/* Visual active indicator should be applied to the interactive anchor elements only */
+/* Remove active border-left on nav-heading links (structure should not look active) */
+/* Remove nav-heading-link active rule — no longer used */
+
+.nav-heading.level-3 {
+    border-bottom: 1px solid var(--muted-border-color);
+    margin-bottom: 0.5rem;
+    color: var(--h1-color);
+    font-size: 0.85rem;
+}
+
+.nav-heading.level-4 {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.nav-heading.level-5 {
+    padding-left: 1.5rem;
+    text-transform: none;
+    font-size: 0.8rem;
+}
+
+/* --- Evaluation Criteria --- */
+.evaluation-criteria {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.criteria-option {
+    background: var(--card-background-color);
+    border: 1px solid var(--muted-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.criteria-option:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.criteria-option.selected {
+    border-width: 2px;
+}
+
+.criteria-option.pass.selected {
+    border-color: var(--pass-color);
+    background: var(--pass-bg);
+}
+
+.criteria-option.fail.selected {
+    border-color: var(--fail-color);
+    background: var(--fail-bg);
+}
+
+.criteria-option.na.selected {
+    border-color: var(--na-color);
+    background: var(--na-bg);
+}
+
+.criteria-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+
+.criteria-text {
+    font-size: 0.9rem;
+    color: var(--color);
+    line-height: 1.4;
+}
+
+/* anchor-based hover selectors to ensure only anchors are targeted */
+a.nav-item:hover .nav-text-wrapper,
+a.nav-item:hover .nav-title,
+a.nav-item:hover .nav-id {
+    color: var(--muted-color) !important;
+}
+
+/* Ensure text in nav uses muted color but keep icons untouched */
+.nav-item .nav-text-wrapper,
+.nav-item .nav-title,
+.nav-item .nav-id {
+    color: var(--muted-color);
+}
+
+/* Link role overrides are no longer necessary — anchors are used for nav items. */
+
+/* Hover styles only for text, keep icons and background unaffected */
+/* (Hover coloring already handled above for strong specificity) */
+
+/* --- Evaluation Radio Buttons --- */
+.criteria-option-wrapper,
+.eval-btn-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Focus styles for the label when the hidden radio is focused */
+.criteria-radio:focus + .criteria-option,
+.eval-radio:focus + .eval-btn {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+}
+
+/* Ensure the label behaves like a button */
+.criteria-option,
+.eval-btn {
+    width: 100%;
+    height: 100%;
+}
+
+/* Secondary Outline Button Override for Dark Mode */
+[data-theme="dark"] button.outline.secondary,
+[data-theme="dark"] [role="button"].outline.secondary,
+[data-theme="dark"] input[type="submit"].outline.secondary,
+[data-theme="dark"] input[type="reset"].outline.secondary,
+[data-theme="dark"] input[type="button"].outline.secondary,
+[data-theme="dark"] .outline.secondary {
+    --border-color: #ffffff;
+    --color: #ffffff;
+    --background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+[data-theme="dark"] button.outline.secondary:hover,
+[data-theme="dark"] [role="button"].outline.secondary:hover,
+[data-theme="dark"] input[type="submit"].outline.secondary:hover,
+[data-theme="dark"] input[type="reset"].outline.secondary:hover,
+[data-theme="dark"] input[type="button"].outline.secondary:hover,
+[data-theme="dark"] .outline.secondary:hover {
+    --border-color: var(--primary);
+    --color: var(--primary);
+    --background-color: transparent;
 }

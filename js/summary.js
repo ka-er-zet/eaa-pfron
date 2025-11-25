@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Calculate Stats
     const vals = Object.values(state.results);
-    const passCount = vals.filter(x => x.status === 'pass').length;
-    const failCount = vals.filter(x => x.status === 'fail').length;
-    const naCount = vals.filter(x => x.status === 'na').length;
+    const passCount = vals.filter(x => x.status === 'pass' || x.status === 'Zaliczone').length;
+    const failCount = vals.filter(x => x.status === 'fail' || x.status === 'Niezaliczone').length;
+    const naCount = vals.filter(x => x.status === 'na' || x.status === 'Nie dotyczy').length;
     const ntCount = vals.filter(x => x.status === 'nt').length;
 
     // Render Stats

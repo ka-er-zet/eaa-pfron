@@ -1,12 +1,18 @@
-const CACHE_NAME = 'audyt-eaa-cache-v1';
+const CACHE_NAME = 'audyt-eaa-cache-v7';
 const urlsToCache = [
   '/',
   '/index.html',
+  '/audit.html',
+  '/summary.html',
   '/css/style.css',
-  '/js/main.js',
-  '/favicon-eaa.svg',
+  '/css/pico.min.css',
+  '/js/setup.js',
+  '/js/audit.js',
+  '/js/summary.js',
+  '/js/utils.js',
+  '/js/lucide.min.js',
+  '/js/jszip.min.js',
   '/manifest.webmanifest',
-  // Dodaj inne pliki statyczne jeśli są potrzebne
 ];
 
 self.addEventListener('install', event => {

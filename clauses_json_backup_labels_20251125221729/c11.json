@@ -44,16 +44,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.1.1.1 Treść nietekstowa (obsługiwany odczyt ekranu, funkcjonalność otwarta)",
@@ -83,16 +83,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryteria (1, 2, 3 i 4: prawda); lub (1 i 2: fałsz); lub (1 i 3: fałsz)"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryteria (1, 2, 3 i 4: prawda); lub (1 i 2: fałsz); lub (1 i 3: fałsz)"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria (1: prawda i 2: fałsz); lub (1: prawda i 3: fałsz); lub (1, 2 i 3: prawda oraz 4: fałsz)"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria (1: prawda i 2: fałsz); lub (1: prawda i 3: fałsz); lub (1, 2 i 3: prawda oraz 4: fałsz)"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.1.1.2 Treść nietekstowa (funkcjonalność zamknięta)",
@@ -129,16 +129,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.2.1.1 Tylko audio lub tylko wideo (nagranie – funkcjonalność otwarta)",
@@ -165,16 +165,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.2.1.2.1 Nagrane tylko audio (funkcjonalność zamknięta)",
@@ -202,16 +202,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2, 3 lub 4."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2, 3 lub 4."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.2.1.2.2 Nagrane tylko wideo (funkcjonalność zamknięta)",
@@ -236,16 +236,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie). EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie). EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.2.2 Napisy rozszerzone (nagranie)",
@@ -276,16 +276,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.2.3.1 Audiodeskrypcja lub alternatywa tekstowa dla mediów",
@@ -312,16 +312,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.2.3.2 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie – funkcjonalność",
@@ -346,16 +346,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo). EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo). EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.2.4 Napisy rozszerzone (na żywo)",
@@ -380,16 +380,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.2.5 Audiodeskrypcja (nagranie)",
@@ -425,16 +425,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.3.1.1 Informacje i relacje (funkcjonalność otwarta)",
@@ -474,16 +474,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.3.2.1 Zrozumiała kolejność (funkcjonalność otwarta)",
@@ -517,16 +517,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.3 Właściwości zmysłowe."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.3.3 Właściwości zmysłowe",
@@ -551,16 +551,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.3.4 Orientacja",
@@ -591,16 +591,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.5 Określenie pożądanej wartości. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.3.5.1 Określenie pożądanej wartości (funkcjonalność otwarta)",
@@ -629,16 +629,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium (1 lub 2): prawda i kryterium 3: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium (1 lub 2): prawda i kryterium 3: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria (1 i 2): fałsz lub kryterium 3: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria (1 i 2): fałsz lub kryterium 3: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.3.5.2 Określenie pożądanej wartości (funkcjonalność zamknięta)",
@@ -668,16 +668,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.1 Użycie koloru."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.1 Użycie koloru",
@@ -702,16 +702,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.2 Kontrola odtwarzania dźwięku",
@@ -736,16 +736,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.3 Kontrast (minimum)."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.3 Kontrast (minimum)",
@@ -776,16 +776,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.4.1 Zmiana rozmiaru tekstu (funkcjonalność otwarta)",
@@ -813,16 +813,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.4.2 Zmiana rozmiaru tekstu (funkcjonalność zamknięta)",
@@ -853,16 +853,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.5 Obrazy tekstu."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.5.1 Obrazy tekstu (funkcjonalność otwarta)",
@@ -892,16 +892,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryteria (1, 2, 3 i 4: prawda); lub (1 i 2: fałsz); lub (1 i 3: fałsz)"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryteria (1, 2, 3 i 4: prawda); lub (1 i 2: fałsz); lub (1 i 3: fałsz)"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria (1: prawda i 2: fałsz); lub (1: prawda i 3: fałsz); lub (1, 2 i 3: prawda oraz 4: fałsz)"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria (1: prawda i 2: fałsz); lub (1: prawda i 3: fałsz); lub (1, 2 i 3: prawda oraz 4: fałsz)"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.5.2 Obrazy tekstu (funkcjonalność zamknięta)",
@@ -926,16 +926,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.10 Dopasowanie do ekranu",
@@ -960,16 +960,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.11 Kontrast elementów nietekstowych",
@@ -994,16 +994,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście."
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.12 Odstępy w tekście",
@@ -1028,16 +1028,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.1.4.13 Treść spod kursora lub fokusu",
@@ -1078,16 +1078,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.1 Klawiatura."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.1.1.1 Klawiatura (funkcjonalność otwarta)",
@@ -1113,16 +1113,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.1.1.2 Klawiatura (funkcjonalność zamknięta)",
@@ -1147,16 +1147,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.1.2 Bez pułapki na klawiaturę",
@@ -1187,16 +1187,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiaturowe."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiaturowe."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.1.4.1 Jednoznakowe skróty klawiaturowe (funkcjonalność otwarta)",
@@ -1222,16 +1222,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.1.4.2 Jednoznakowe skróty klawiaturowe (funkcjonalność zamknięta)",
@@ -1261,16 +1261,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.2.1 Dostosowanie czasu",
@@ -1295,16 +1295,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.2.2 Pauza, zatrzymanie, ukrycie",
@@ -1334,16 +1334,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.3.1 Trzy błyski lub wartości poniżej progu",
@@ -1373,16 +1373,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.4.3 Kolejność fokusu",
@@ -1407,16 +1407,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.4.4 Cel łącza (w kontekście)",
@@ -1441,16 +1441,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.4.6 Nagłówki i etykiety",
@@ -1475,16 +1475,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.7 Widoczny fokus."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.4.7 Widoczny fokus",
@@ -1515,16 +1515,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.5.1 Gesty dotykowe",
@@ -1550,16 +1550,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.5.2 Rezygnacja ze wskazania",
@@ -1590,16 +1590,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie."
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.5.3.1 Etykieta w nazwie (funkcjonalność otwarta)",
@@ -1634,16 +1634,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.2.5.4 Aktywowanie ruchem",
@@ -1684,16 +1684,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.3.1.1.1 Język oprogramowania (funkcjonalność otwarta)",
@@ -1724,16 +1724,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2, 3, 4, 5, 6, lub 7."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2, 3, 4, 5, 6, lub 7."
           }
         ],
         "legend": "Wybierz wynik dla C.11.3.1.1.2 Język oprogramowania (funkcjonalność zamknięta)",
@@ -1763,16 +1763,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu."
           }
         ],
         "legend": "Wybierz wynik dla C.11.3.2.1 Po otrzymaniu fokusu",
@@ -1797,16 +1797,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.2 Podczas wprowadzania danych."
           }
         ],
         "legend": "Wybierz wynik dla C.11.3.2.2 Podczas wprowadzania danych",
@@ -1842,16 +1842,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu."
           }
         ],
         "legend": "Wybierz wynik dla C.11.3.3.1.1 Identyfikacja błędu (funkcjonalność otwarta)",
@@ -1880,16 +1880,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1 lub 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2, 3 lub 4."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2, 3 lub 4."
           }
         ],
         "legend": "Wybierz wynik dla C.11.3.3.1.2 Identyfikacja błędu (funkcjonalność zamknięta)",
@@ -1914,16 +1914,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.2 Etykiety lub instrukcje. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.3.3.2 Etykiety lub instrukcje",
@@ -1948,16 +1948,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.3 Sugestie korekty błędów."
           }
         ],
         "legend": "Wybierz wynik dla C.11.3.3.3 Sugestie korekty błędów",
@@ -1982,16 +1982,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.11.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
@@ -2032,16 +2032,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.4.1.1.1 Poprawność kodu (funkcjonalność otwarta)",
@@ -2081,16 +2081,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.4.1.2.1 Nazwa, rola, wartość (funkcjonalność otwarta)",
@@ -2130,16 +2130,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie"
           }
         ],
         "legend": "Wybierz wynik dla C.11.4.1.3.1 Komunikaty o stanie (funkcjonalność otwarta)",
@@ -2177,8 +2177,8 @@
       "form": {
         "inputs": [
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.11.5.1 Funkcjonalność zamknięta",
@@ -2220,16 +2220,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryteria 1, 2, 3, 4 i 5: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryteria 1, 2, 3, 4 i 5: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1 lub 2 lub 3 lub 4 lub 5: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2 lub 3 lub 4 lub 5: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.5.2.5 Informacje o obiekcie",
@@ -2258,16 +2258,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryteria 2, 3, 4 i 5: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryteria 2, 3, 4 i 5: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 2 lub 3 lub 4 lub 5: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2 lub 3 lub 4 lub 5: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.5.2.6 Wiersz, kolumna i nagłówki",
@@ -2296,16 +2296,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.11.6.1 Kontrola funkcji dostępności przez użytkownika",
@@ -2330,16 +2330,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: fałsz lub obydwa kryteria: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: fałsz lub obydwa kryteria: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: prawda oraz kryterium 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: prawda oraz kryterium 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.6.2 Nieprzerwane działanie funkcji dostępności",
@@ -2365,16 +2365,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1, 2 lub 3."
           }
         ],
         "legend": "Wybierz wynik dla C.11.7 Preferencje użytkownika",
@@ -2403,16 +2403,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.8.2 Tworzenie dostępnej treści",
@@ -2440,16 +2440,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda lub kryteria 1 i 2: fałsz lub kryterium 3: prawda lub kryteria 3 i 4: fałsz"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda lub kryteria 1 i 2: fałsz lub kryterium 3: prawda lub kryteria 3 i 4: fałsz"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz oraz kryterium 2: prawda"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz oraz kryterium 2: prawda"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.8.3 Zachowanie informacji o dostępności podczas transformacji",
@@ -2474,16 +2474,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.11.8.4 Wspomaganie naprawy",
@@ -2509,16 +2509,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1 lub 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.11.8.5 Szablony",

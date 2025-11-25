@@ -23,16 +23,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.12.1.1 Funkcje dostępności i zgodności",
@@ -56,16 +56,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.12.1.2 Dostępność dokumentacji",
@@ -103,16 +103,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.12.2.2 Informacje o funkcjach dostępności i zgodności",
@@ -136,16 +136,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.12.2.3 Efektywna komunikacja",
@@ -172,16 +172,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03) C.13 TIK umożliwiająca dostęp do usługi przekazu informacji lub awaryjnego przekazu informacji"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03) C.13 TIK umożliwiająca dostęp do usługi przekazu informacji lub awaryjnego przekazu informacji"
           }
         ],
         "legend": "Wybierz wynik dla C.12.2.4 Dostępność dokumentacji",

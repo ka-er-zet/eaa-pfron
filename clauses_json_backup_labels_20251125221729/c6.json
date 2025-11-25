@@ -18,16 +18,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.6.1 Szerokość pasma sygnału mowy",
@@ -63,20 +63,20 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1"
           },
           {
             "value": "nt",
-            "label": "Nie spełniono warunku wstępnego 3"
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
         "legend": "Wybierz wynik dla C.6.2.1.1 Komunikacja RTT",
@@ -104,16 +104,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.6.2.1.2 Równoczesna komunikacja głosowa i tekstowa",
@@ -148,20 +148,20 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 5: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 5: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 5: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 5: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "Nie spełniono warunku wstępnego 3"
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
         "legend": "Wybierz wynik dla C.6.2.2.1 Wyświetlacz umożliwiający rozróżnianie tekstu",
@@ -194,20 +194,20 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 5: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 5: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 5: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 5: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "Nie spełniono warunku wstępnego 3"
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
         "legend": "Wybierz wynik dla C.6.2.2.2 Możliwe do określenia programowo kierunku nadawania i odbioru",
@@ -238,20 +238,20 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "Nie spełniono warunku wstępnego 3"
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
         "legend": "Wybierz wynik dla C.6.2.2.3 Identyfikacja mówcy",
@@ -281,16 +281,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 3: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 3: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 3: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 3: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.6.2.2.4 Wizualny wskaźnik audio połączonego z RTT",
@@ -324,20 +324,20 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "Nie spełniono warunku wstępnego 3"
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
         "legend": "Wybierz wynik dla C.6.2.3.a Interoperacyjność (a)",
@@ -367,20 +367,20 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda, a jeśli TIK współpracuje z innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , kryterium 2: prawda."
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda, a jeśli TIK współpracuje z innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , kryterium 2: prawda."
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz lub, jeśli TIK współpracuje z innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , kryterium 2: fałsz."
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz lub, jeśli TIK współpracuje z innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , kryterium 2: fałsz."
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "Nie spełniono warunku wstępnego 3"
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
         "legend": "Wybierz wynik dla C.6.2.3.b Interoperacyjność (b)",
@@ -410,20 +410,20 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria 1 lub 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 lub 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "Nie spełniono warunku wstępnego 3"
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3"
           }
         ],
         "legend": "Wybierz wynik dla C.6.2.3.c Interoperacyjność (c)",
@@ -453,20 +453,20 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryteria 1 lub 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryteria 1 lub 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           },
           {
             "value": "nt",
-            "label": "Nie spełniono warunku wstępnego 3 EN 301 549 V3.2.1 (2021-03)"
+            "label": "<strong>Nie do sprawdzenia:</strong> Nie spełniono warunku wstępnego 3 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.6.2.3.d Interoperacyjność (d)",
@@ -491,16 +491,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda i albo kryterium 2: prawda, albo funkcjonalność jest zamknięta"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda i albo kryterium 2: prawda, albo funkcjonalność jest zamknięta"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz lub kryterium 2: fałsz, gdy funkcjonalność nie jest zamknięta"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz lub kryterium 2: fałsz, gdy funkcjonalność nie jest zamknięta"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1."
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.6.3 ID dzwoniącego",
@@ -526,16 +526,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1 i 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1 lub 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1 lub 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.6.4 Alternatywy dla usług głosowych",
@@ -569,16 +569,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.6.5.2 Rozdzielczość",
@@ -603,16 +603,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.6.5.3 Częstotliwość wyświetlania klatek",
@@ -637,16 +637,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 1: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 1: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 1: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
         "legend": "Wybierz wynik dla C.6.5.4 Synchronizacja dźwięku i obrazu",
@@ -673,16 +673,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 3: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 3: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 3: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 3: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.6.5.5 Wizualny wskaźnik audio połączonego z wideo",
@@ -711,16 +711,16 @@
       "form": {
         "inputs": [
           {
-            "value": "Zaliczone",
-            "label": "Kryterium 2: prawda"
+            "value": "pass",
+            "label": "<strong>Zaliczone:</strong> Kryterium 2: prawda"
           },
           {
-            "value": "Niezaliczone",
-            "label": "Kryterium 2: fałsz"
+            "value": "fail",
+            "label": "<strong>Niezaliczone:</strong> Kryterium 2: fałsz"
           },
           {
-            "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+            "value": "na",
+            "label": "<strong>Nie dotyczy:</strong> Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.6.5.6 Identyfikacja mówcy podczas komunikacji za pomocą wideo",

@@ -1,6 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
+    // Handle Home Link Click
+    const homeLink = document.getElementById('app-logo');
+    if (homeLink) {
+        homeLink.addEventListener('click', async (e) => {
+            e.preventDefault(); // Always prevent default navigation first
+
+            const nameInput = document.getElementById('product-name');
+            const selectedCheckboxes = document.querySelectorAll('input[name="clauses"]:checked');
+            
+            // Check if form is dirty
+            const isDirty = (nameInput && nameInput.value.trim() !== '') || (selectedCheckboxes.length > 0);
+
+            if (isDirty) {
+                const stay = await window.utils.confirm(
+                    "Wypełniłeś część formularza. Jeśli go opuścisz, stracisz te informacje. Czy chcesz przejść na stronę główną?",
+                    "Niezapisane zmiany",
+                    "Nie", // Primary button (Confirm) -> Returns true -> Stay
+                    "Tak"  // Secondary button (Cancel) -> Returns false -> Leave
+                );
+                
+                // If user clicked "Tak" (Secondary/Cancel), stay is false.
+                if (!stay) {
+                    window.location.href = 'index.html';
+                }
+            } else {
+                // No changes, safe to reload/navigate
+                window.location.href = 'index.html';
+            }
+        });
+    }
+
     // Clear any previous state when on setup page
     window.utils.clearState();
 
@@ -75,8 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // If name was valid, focus clauses. If name was invalid, we keep focus on name (first error).
             if (!hasError && clausesFieldset) {
                 clausesFieldset.focus();
-                // Scroll to the top of the fieldset to show the error message
-                clausesFieldset.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Scroll to the error message so it is clearly visible
+                if (clausesError) {
+                    clausesError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    clausesFieldset.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             }
             hasError = true;
         }
