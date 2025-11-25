@@ -1,0 +1,17 @@
+# Ignore PDF files
+*.pdf
+
+# Ignore proba directory
+proba/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
