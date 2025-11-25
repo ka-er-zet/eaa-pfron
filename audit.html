@@ -38,17 +38,17 @@
 
         <!-- Sidebar -->
         <aside id="sidebar" aria-label="Panel boczny">
-            <a href="#test-renderer" class="skip-nav-link">Pomiń nawigację</a>
-            <small class="text-muted sidebar-header">
-                Lista kontrolna
-            </small>
-            <nav id="nav-container" aria-label="Lista kontrolna" style="flex: 1;">
+            <div class="sidebar-top-section">
+                <a href="#test-renderer" class="skip-nav-link">Pomiń nawigację</a>
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
+                    <small class="text-muted sidebar-header">Lista kontrolna</small>
+                    <small class="text-muted"><span id="progress-text">0/0</span></small>
+                </div>
+                <progress id="main-progress" value="0" max="100" class="progress-bar" aria-label="Postęp audytu" style="margin-top: 0; width: 100%;"></progress>
+            </div>
+            <nav id="nav-container" aria-label="Lista kontrolna" style="flex: 1; overflow-y: auto; padding: 1rem 0;">
                 <!-- Nav items generated here -->
             </nav>
-            <div class="sidebar-footer">
-                <small class="text-muted">Postęp: <span id="progress-text">0/0</span></small>
-                <progress id="main-progress" value="0" max="100" class="progress-bar" aria-label="Postęp audytu"></progress>
-            </div>
         </aside>
 
         <!-- Main Content -->

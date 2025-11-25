@@ -230,32 +230,35 @@ body {
 aside {
     background-color: var(--card-background-color);
     border-right: 1px solid var(--muted-color);
-    padding: 1.5rem;
+    padding: 0; /* Removed padding to allow full-width scroll */
     display: none;
     flex-direction: column;
-    overflow-y: auto;
+    overflow-y: hidden; /* Prevent main sidebar scroll */
 }
 
 .app-layout.with-sidebar aside {
     display: flex;
 }
 
+.sidebar-top-section {
+    padding: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--muted-color);
+    background-color: var(--card-background-color);
+    z-index: 2;
+}
+
 .sidebar-header {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
-.sidebar-footer {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--muted-color);
-    text-align: center;
-}
+/* Removed .sidebar-footer as it is no longer used */
 
 .progress-bar {
-    height: 4px;
+    height: 6px;
     margin-top: 0.5rem;
     --color: var(--primary);
 }
