@@ -8,8 +8,8 @@
     --pass-color: hsl(160, 84%, 39%);
     /* #10B981 */
     --pass-bg: hsla(160, 84%, 39%, 0.15);
-    --fail-color: hsl(350, 89%, 60%);
-    /* #F43F5E */
+    --fail-color: hsl(350, 80%, 40%);
+    /* #B91C1C - Darker Red for Light Mode */
     --fail-bg: hsla(350, 89%, 60%, 0.15);
     --na-color: hsl(215, 16%, 47%);
     /* #64748B */
@@ -40,6 +40,10 @@
     --h3-color: hsl(210, 40%, 98%);
     --muted-color: hsl(215, 20%, 65%);
     /* Slate 400 */
+
+    /* High Contrast Red for Dark Mode */
+    --fail-color: hsl(350, 100%, 79%);
+    /* #FF94A6 */
 
     /* Force Override - Must match :root */
     --primary: hsl(224, 76%, 48%);
@@ -457,6 +461,7 @@ main {
     border: none;
     padding: 0;
     margin: 0;
+    scroll-margin-top: 2rem; /* Ensure error message is visible when scrolled to */
 }
 
 .visually-hidden {
