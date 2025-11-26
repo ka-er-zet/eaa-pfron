@@ -34,7 +34,8 @@
 *:focus-visible {
     outline: 3px solid var(--focus-color) !important;
     outline-offset: 2px !important;
-    border-radius: 2px; /* Slight rounding for aesthetics */
+    border-radius: 2px;
+    /* Slight rounding for aesthetics */
 }
 
 /* Skip Link */
@@ -230,10 +231,12 @@ body {
 aside {
     background-color: var(--card-background-color);
     border-right: 1px solid var(--muted-color);
-    padding: 0; /* Removed padding to allow full-width scroll */
+    padding: 0;
+    /* Removed padding to allow full-width scroll */
     display: none;
     flex-direction: column;
-    overflow-y: hidden; /* Prevent main sidebar scroll */
+    overflow-y: hidden;
+    /* Prevent main sidebar scroll */
 }
 
 .app-layout.with-sidebar aside {
@@ -266,16 +269,21 @@ aside {
 /* --- Navigation Items (USWDS / GOV.UK Style) --- */
 .nav-item {
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: space-between; /* Text left, Icon right */
+    align-items: center;
+    /* Center vertically */
+    justify-content: space-between;
+    /* Text left, Icon right */
     gap: 0.75rem;
-    padding: 0.5rem 1rem; /* Reduced vertical padding */
+    padding: 0.5rem 1rem;
+    /* Reduced vertical padding */
     cursor: pointer;
-    border-left: 4px solid transparent; /* Left border indicator */
-        transition: background-color 0.2s, border-left-color 0.18s ease-in-out;
-    color: inherit; /* Color should be controlled for text elements only */
+    border-left: 4px solid transparent;
+    /* Left border indicator */
+    transition: background-color 0.2s, border-left-color 0.18s ease-in-out;
+    color: inherit;
+    /* Color should be controlled for text elements only */
     position: relative;
-    
+
     /* Force reset of any card styles */
     border-radius: 0 !important;
     margin: 0 !important;
@@ -286,39 +294,50 @@ aside {
 .nav-item:hover {
     /* Subtle hover: do not change background or text color to avoid "card" look.
        Keep visual feedback minimal (underline optional). */
-    background-color: transparent !important; /* Avoid large hover cards */
+    background-color: transparent !important;
+    /* Avoid large hover cards */
     text-decoration: none !important;
-     /* show subtle left border on hover */
+    /* show subtle left border on hover */
     border-left-color: var(--primary-focus) !important;
 }
 
 /* Override frameworks default link color (Pico) which sets --color to primary on [role=link].
    For our nav items we always want muted text; icon colors remain inline and shouldn't be affected.
 */
-.nav-item { /* helper: use anchors or generic .nav-item elements */ }
+.nav-item {
+    /* helper: use anchors or generic .nav-item elements */
+}
 
 /* Ensure anchors used for nav don't adopt the global link color */
-a.nav-item, a.nav-item:link, a.nav-item:visited, a.nav-item:active {
+a.nav-item,
+a.nav-item:link,
+a.nav-item:visited,
+a.nav-item:active {
     --color: var(--muted-color) !important;
     text-decoration: none !important;
 }
 
-a.nav-item:hover, a.nav-item:focus, a.nav-item:active {
+a.nav-item:hover,
+a.nav-item:focus,
+a.nav-item:active {
     --color: var(--muted-color) !important;
     background: transparent !important;
 }
 
-.nav-item.active, a.nav-item.active {
+.nav-item.active,
+a.nav-item.active {
     /* Only visual indicator is the left border. Avoid changing text color or font weight. */
-    background-color: transparent !important; 
+    background-color: transparent !important;
     border-left-color: var(--primary) !important;
 }
 
-    /* Focus: show left border as a strong indicator while keeping global focus outline for non-nav elements */
-    .nav-item:focus-visible, a.nav-item:focus-visible {
-        outline: none; /* use left border for visual indication */
-        border-left-color: var(--focus-color) !important;
-    }
+/* Focus: show left border as a strong indicator while keeping global focus outline for non-nav elements */
+.nav-item:focus-visible,
+a.nav-item:focus-visible {
+    outline: none;
+    /* use left border for visual indication */
+    border-left-color: var(--focus-color) !important;
+}
 
 /* Don't apply global color overrides to all child elements of active items. */
 
@@ -336,8 +355,10 @@ a.nav-item:hover, a.nav-item:focus, a.nav-item:active {
 a.nav-item.active .nav-text-wrapper,
 a.nav-item.active .nav-title,
 a.nav-item.active .nav-id {
-    color: var(--muted-color) !important; /* Keep text looking the same */
-    font-weight: normal !important; /* avoid extra bolding */
+    color: var(--muted-color) !important;
+    /* Keep text looking the same */
+    font-weight: normal !important;
+    /* avoid extra bolding */
 }
 
 .nav-icon-wrapper {
@@ -346,14 +367,16 @@ a.nav-item.active .nav-id {
     justify-content: center;
     width: 20px;
     flex-shrink: 0;
-    order: 2; /* Ensure icon is on the right visually if flex order is used, though HTML order is already swapped */
+    order: 2;
+    /* Ensure icon is on the right visually if flex order is used, though HTML order is already swapped */
 }
 
 .nav-text-wrapper {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    flex: 1; /* Take available space */
+    flex: 1;
+    /* Take available space */
     text-align: left;
 }
 
@@ -386,28 +409,35 @@ a.nav-item {
     line-height: 1.4;
     white-space: normal;
     font-weight: 600;
-    text-transform: none; /* do not force uppercase */
+    text-transform: none;
+    /* do not force uppercase */
 }
 
 /* --- Navigation Headings --- */
 .nav-heading {
-    padding: 0.5rem 1rem 0.25rem 1rem; /* even more compact */
+    padding: 0.5rem 1rem 0.25rem 1rem;
+    /* even more compact */
     color: var(--color);
     font-size: 0.85rem;
-    font-weight: 600; /* less heavy than 800 */
+    font-weight: 600;
+    /* less heavy than 800 */
     letter-spacing: 0.02em;
-    pointer-events: none; /* headings are structural, not interactive (prevent hover/focus) */
+    pointer-events: none;
+    /* headings are structural, not interactive (prevent hover/focus) */
     border-bottom: 1px solid var(--muted-border-color);
     margin-bottom: 0.25rem;
-    text-transform: none; /* prevent forcing uppercase */
+    text-transform: none;
+    /* prevent forcing uppercase */
 }
 
 .nav-heading:hover {
-    background: transparent; /* headings are not interactive, don't show hover */
+    background: transparent;
+    /* headings are not interactive, don't show hover */
 }
 
 .nav-heading.active {
-    border-left-color: transparent; /* do not highlight structural container */
+    border-left-color: transparent;
+    /* do not highlight structural container */
     background: var(--card-sectionning-background-color);
 }
 
@@ -421,6 +451,7 @@ a.nav-item {
     text-decoration: none;
     cursor: default;
 }
+
 /* Ensure headings never show a browser focus outline (they are not interactive) */
 .nav-heading-title:focus,
 .nav-heading-title:focus-visible {
@@ -434,7 +465,8 @@ a.nav-item {
     border-bottom: 1px solid var(--muted-border-color);
     margin-bottom: 0.25rem;
     color: var(--h1-color);
-    font-size: 0.95rem; /* Slightly larger than level-4, but smaller than default headings */
+    font-size: 0.95rem;
+    /* Slightly larger than level-4, but smaller than default headings */
     font-weight: 700;
 }
 
@@ -460,13 +492,22 @@ a.nav-item {
 }
 
 /* Tighter font sizing for heading elements to avoid huge, visually overpowering headings */
-.nav-heading.level-3 h3 { font-size: 1rem; }
-.nav-heading.level-4 h4 { font-size: 0.95rem; }
-.nav-heading.level-5 h5 { font-size: 0.9rem; }
+.nav-heading.level-3 h3 {
+    font-size: 1rem;
+}
+
+.nav-heading.level-4 h4 {
+    font-size: 0.95rem;
+}
+
+.nav-heading.level-5 h5 {
+    font-size: 0.9rem;
+}
 
 /* Make the test title smaller so the content area is less visually overwhelming */
 #test-renderer .test-title {
-    font-size: 1.05rem; /* smaller but still prominent */
+    font-size: 1.05rem;
+    /* smaller but still prominent */
     margin: 0;
 }
 
@@ -475,8 +516,10 @@ a.nav-item {
     font-size: 0.95rem;
     margin: 0 0 0.5rem 0;
     color: var(--muted-color);
-    font-weight: 600; /* less bold than 800 */
-    text-transform: none; /* stop forcing uppercase on headings */
+    font-weight: 600;
+    /* less bold than 800 */
+    text-transform: none;
+    /* stop forcing uppercase on headings */
 }
 
 /* Give anchored content a scroll margin so deep links are not hidden under the header */
@@ -484,7 +527,8 @@ a.nav-item {
 #test-renderer section[role="region"],
 #test-renderer article[id^="test-"],
 #test-renderer section[id^="test-"] {
-    scroll-margin-top: 4rem; /* adjust according to header height */
+    scroll-margin-top: 4rem;
+    /* adjust according to header height */
 }
 
 /* --- Main Content --- */
@@ -536,7 +580,6 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.75rem;
-    margin-top: 1rem;
 }
 
 .scope-item {
@@ -558,63 +601,14 @@ main {
     width: 100%;
     height: 100%;
     text-align: left;
-    font-family: inherit;
-    color: inherit;
-    margin: 0;
-}
-
-.scope-card i,
-.scope-card svg {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-    stroke-width: 1.5px;
-    color: var(--muted-color);
-    transition: color 0.2s;
-}
-
-.scope-card.checked i,
-.scope-card.checked svg {
-    color: var(--primary);
-}
-
-.scope-card > div {
-    flex: 1;
-}
-
-.scope-card:hover {
-    border-color: var(--primary);
-    transform: translateY(-2px);
-}
-
-.scope-card.checked {
-    background: hsla(224, 76%, 48%, 0.1);
-    border-color: var(--primary);
-}
-
-/* --- Test Renderer --- */
-.test-details ul,
-.test-details ol {
-    padding-left: 1.5rem;
-    color: var(--muted-color);
-}
-
-.informative {
-    background: hsla(38, 92%, 50%, 0.1);
-    border: 1px solid hsla(38, 92%, 50%, 0.3);
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    color: hsl(46, 96%, 65%);
-    /* #FCD34D */
-    font-size: 0.9rem;
-}
-
-/* --- Evaluation Grid --- */
-.eval-grid {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-top: 1rem;
+}
+
+/* Smaller top spacing for the first item in the scope grid so it sits closer to the section header */
+.scope-grid > .scope-item:first-child .scope-card {
+    margin-top: 0.25rem;
 }
 
 .eval-btn {
@@ -776,7 +770,8 @@ main {
     border: none;
     padding: 0;
     margin: 0;
-    scroll-margin-top: 2rem; /* Ensure error message is visible when scrolled to */
+    scroll-margin-top: 2rem;
+    /* Ensure error message is visible when scrolled to */
 }
 
 .visually-hidden {
@@ -792,16 +787,16 @@ main {
 }
 
 /* Checkbox Logic */
-.scope-checkbox:checked + .scope-card {
+.scope-checkbox:checked+.scope-card {
     background: hsla(224, 76%, 48%, 0.1);
     border-color: var(--primary);
 }
 
-.scope-checkbox:checked + .scope-card i {
+.scope-checkbox:checked+.scope-card i {
     color: var(--primary);
 }
 
-.scope-checkbox:focus + .scope-card {
+.scope-checkbox:focus+.scope-card {
     outline: 3px solid var(--focus-color);
     outline-offset: 2px;
 }
@@ -813,14 +808,16 @@ input[aria-invalid="true"],
 select[aria-invalid="true"],
 textarea[aria-invalid="true"] {
     border-color: var(--fail-color) !important;
-    box-shadow: none; /* Reset default shadow */
+    box-shadow: none;
+    /* Reset default shadow */
 }
 
 input[aria-invalid="true"]:focus,
 select[aria-invalid="true"]:focus,
 textarea[aria-invalid="true"]:focus {
     border-color: var(--fail-color) !important;
-    box-shadow: 0 0 0 2px var(--fail-color) !important; /* Custom focus ring */
+    box-shadow: 0 0 0 2px var(--fail-color) !important;
+    /* Custom focus ring */
 }
 
 /* Light Mode Validation Icon (Dark Red) */
@@ -847,10 +844,11 @@ dialog {
     border: 1px solid var(--muted-color);
     border-radius: var(--border-radius);
     padding: 2rem;
-    width: 100%; /* Ensure it takes width up to max-width */
+    width: 100%;
+    /* Ensure it takes width up to max-width */
     max-width: 500px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    
+
     /* Flex Layout for Vertical Stacking */
     display: flex;
     flex-direction: column;
@@ -864,19 +862,22 @@ dialog::backdrop {
 
 dialog h3 {
     margin-top: 0;
-    margin-bottom: 0.5rem; /* Add spacing below title */
+    margin-bottom: 0.5rem;
+    /* Add spacing below title */
     color: var(--h1-color);
 }
 
 dialog p {
-    margin-bottom: 0; /* Let gap handle spacing */
+    margin-bottom: 0;
+    /* Let gap handle spacing */
 }
 
 dialog .dialog-actions {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
-    margin-top: 1rem; /* Reduced margin since we have gap */
+    margin-top: 1rem;
+    /* Reduced margin since we have gap */
 }
 
 dialog button {
@@ -887,7 +888,8 @@ dialog button {
 /* --- Button Overrides --- */
 /* Improve contrast for secondary outline buttons */
 :is(button, input[type=submit], input[type=button], [role=button]).outline.secondary {
-    color: var(--color); /* Use main text color instead of muted secondary color */
+    color: var(--color);
+    /* Use main text color instead of muted secondary color */
     border-color: var(--muted-color);
 }
 
@@ -913,7 +915,8 @@ dialog button {
 .nav-heading.active {
     /* Keep this reserved for when the nav-heading element is active
        but prefer indicating activity on the inner anchor link instead. */
-    border-left-color: transparent; /* don't apply visual indicator here */
+    border-left-color: transparent;
+    /* don't apply visual indicator here */
     background: var(--card-sectionning-background-color);
 }
 
@@ -1022,8 +1025,8 @@ a.nav-item:hover .nav-id {
 }
 
 /* Focus styles for the label when the hidden radio is focused */
-.criteria-radio:focus + .criteria-option,
-.eval-radio:focus + .eval-btn {
+.criteria-radio:focus+.criteria-option,
+.eval-radio:focus+.eval-btn {
     outline: 3px solid var(--focus-color);
     outline-offset: 2px;
 }
