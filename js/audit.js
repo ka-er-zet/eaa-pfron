@@ -319,6 +319,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (item.form && item.form.inputs) {
             evaluationHtml = `<fieldset class="evaluation-criteria" style="border: none; padding: 0; margin: 0;">
                 <legend class="visually-hidden">Ocena kryteriów</legend>`;
+            const safeTestId = sanitizeForDomId(item.id);
             item.form.inputs.forEach(input => {
                 let icon = 'circle';
                 let colorClass = '';
@@ -327,11 +328,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (input.value === 'Nie dotyczy' || input.value === 'na') { icon = 'minus'; colorClass = 'na'; }
 
                 const isSelected = res.status === input.value;
-                const inputId = `eval-${item.id}-${input.value}`;
+                const inputId = `eval-${safeTestId}-${sanitizeForDomId(input.value)}`;
 
                 evaluationHtml += `
                     <div class="criteria-option-wrapper">
-                        <input type="radio" id="${inputId}" name="eval-${item.id}" value="${input.value}" 
+                        <input type="radio" id="${inputId}" name="eval-${safeTestId}" value="${input.value}" 
                                class="visually-hidden criteria-radio" 
                                ${isSelected ? 'checked' : ''} 
                                onchange="setResult('${item.id}', '${input.value}')">
@@ -352,41 +353,41 @@ document.addEventListener('DOMContentLoaded', async () => {
             <fieldset class="eval-grid" style="border: none; padding: 0; margin: 1rem 0 0 0;">
                 <legend class="visually-hidden">Ocena wyniku testu</legend>
                 
-                <div class="eval-btn-wrapper">
-                    <input type="radio" id="eval-${item.id}-pass" name="eval-${item.id}" value="Zaliczone" 
+                  <div class="eval-btn-wrapper">
+                      <input type="radio" id="eval-${sanitizeForDomId(item.id)}-pass" name="eval-${sanitizeForDomId(item.id)}" value="Zaliczone" 
                            class="visually-hidden eval-radio" ${res.status === 'Zaliczone' || res.status === 'pass' ? 'checked' : ''}
-                           onchange="setResult('${item.id}', 'Zaliczone')">
-                    <label for="eval-${item.id}-pass" class="eval-btn pass ${res.status === 'Zaliczone' || res.status === 'pass' ? 'selected' : ''}">
+                          onchange="setResult('${item.id}', 'Zaliczone')">
+                      <label for="eval-${sanitizeForDomId(item.id)}-pass" class="eval-btn pass ${res.status === 'Zaliczone' || res.status === 'pass' ? 'selected' : ''}">
                         <i data-lucide="check" size="28" aria-hidden="true"></i>
                         <strong>Zaliczone</strong>
                     </label>
                 </div>
 
                 <div class="eval-btn-wrapper">
-                    <input type="radio" id="eval-${item.id}-fail" name="eval-${item.id}" value="Niezaliczone" 
+                          <input type="radio" id="eval-${sanitizeForDomId(item.id)}-fail" name="eval-${sanitizeForDomId(item.id)}" value="Niezaliczone" 
                            class="visually-hidden eval-radio" ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'checked' : ''}
-                           onchange="setResult('${item.id}', 'Niezaliczone')">
-                    <label for="eval-${item.id}-fail" class="eval-btn fail ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'selected' : ''}">
+                              onchange="setResult('${item.id}', 'Niezaliczone')">
+                          <label for="eval-${sanitizeForDomId(item.id)}-fail" class="eval-btn fail ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'selected' : ''}">
                         <i data-lucide="x" size="28" aria-hidden="true"></i>
                         <strong>Niezaliczone</strong>
                     </label>
                 </div>
 
                 <div class="eval-btn-wrapper">
-                    <input type="radio" id="eval-${item.id}-na" name="eval-${item.id}" value="Nie dotyczy" 
+                          <input type="radio" id="eval-${sanitizeForDomId(item.id)}-na" name="eval-${sanitizeForDomId(item.id)}" value="Nie dotyczy" 
                            class="visually-hidden eval-radio" ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'checked' : ''}
-                           onchange="setResult('${item.id}', 'Nie dotyczy')">
-                    <label for="eval-${item.id}-na" class="eval-btn na ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'selected' : ''}">
+                              onchange="setResult('${item.id}', 'Nie dotyczy')">
+                          <label for="eval-${sanitizeForDomId(item.id)}-na" class="eval-btn na ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'selected' : ''}">
                         <i data-lucide="minus" size="28" aria-hidden="true"></i>
                         <strong>Nie dotyczy</strong>
                     </label>
                 </div>
 
                 <div class="eval-btn-wrapper">
-                    <input type="radio" id="eval-${item.id}-nt" name="eval-${item.id}" value="nt" 
+                          <input type="radio" id="eval-${sanitizeForDomId(item.id)}-nt" name="eval-${sanitizeForDomId(item.id)}" value="nt" 
                            class="visually-hidden eval-radio" ${res.status === 'nt' ? 'checked' : ''}
-                           onchange="setResult('${item.id}', 'nt')">
-                    <label for="eval-${item.id}-nt" class="eval-btn nt ${res.status === 'nt' ? 'selected' : ''}">
+                              onchange="setResult('${item.id}', 'nt')">
+                          <label for="eval-${sanitizeForDomId(item.id)}-nt" class="eval-btn nt ${res.status === 'nt' ? 'selected' : ''}">
                         <i data-lucide="help-circle" size="28" aria-hidden="true"></i>
                         <strong>Nietestowalne</strong>
                     </label>
@@ -427,10 +428,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                         ${evaluationHtml}
 
                         <div style="margin-top: 2rem;">
-                            <label for="note-${item.id}" style="color: var(--muted-color);">Uwagi / Obserwacje</label>
-                            <textarea id="note-${item.id}" rows="4" oninput="updateNote('${item.id}', this.value)">${res.note}</textarea>
+                            <label for="note-${sanitizeForDomId(item.id)}" style="color: var(--muted-color);">Uwagi / Obserwacje</label>
+                            <textarea id="note-${sanitizeForDomId(item.id)}" rows="4" oninput="updateNote('${item.id}', this.value)">${res.note}</textarea>
                         </div>
                     </form>
+                    <div id="audit-status-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
                 </div>
             </article>
 
@@ -474,6 +476,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.setResult = function (id, status) {
         state.results[id].status = status;
         window.utils.saveState(state);
+        // Announce the change for screen readers via an aria-live region
+        const liveRegion = document.getElementById('audit-status-live');
+        if (liveRegion) {
+            liveRegion.innerText = `Wynik testu ${id} ustawiony: ${status}`;
+        }
         renderNav();
         renderTest(state.currentIdx);
     };
