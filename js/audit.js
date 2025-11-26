@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     "Nie", // Primary button (Confirm) -> Returns true -> Stay
                     "Tak"  // Secondary button (Cancel) -> Returns false -> Leave
                 );
-                
+
                 // If user clicked "Tak" (Secondary/Cancel), stay is false.
                 if (!stay) {
                     window.location.href = 'index.html';
@@ -71,9 +71,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             fragContainer.style.overflow = 'hidden';
             document.body.appendChild(fragContainer);
         }
-        
+
         fragContainer.innerHTML = '';
-        
+
         tests.forEach(t => {
             let id;
             if (t.type === 'test') {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             } else if (t.type === 'heading') {
                 id = t.id;
             }
-            
+
             if (id && id !== excludeId) {
                 const el = document.createElement('span');
                 el.id = id;
@@ -126,24 +126,24 @@ document.addEventListener('DOMContentLoaded', async () => {
             let color = 'var(--muted-color)';
             let statusText = 'Do wykonania';
 
-            if (res.status === 'Zaliczone' || res.status === 'pass') { 
-                icon = 'check-circle-2'; 
-                color = 'var(--pass-color)'; 
+            if (res.status === 'Zaliczone' || res.status === 'pass') {
+                icon = 'check-circle-2';
+                color = 'var(--pass-color)';
                 statusText = 'Zaliczone';
             }
-            if (res.status === 'Niezaliczone' || res.status === 'fail') { 
-                icon = 'x-circle'; 
-                color = 'var(--fail-color)'; 
+            if (res.status === 'Niezaliczone' || res.status === 'fail') {
+                icon = 'x-circle';
+                color = 'var(--fail-color)';
                 statusText = 'Niezaliczone';
             }
-            if (res.status === 'Nie dotyczy' || res.status === 'na') { 
-                icon = 'minus-circle'; 
-                color = 'var(--na-color)'; 
+            if (res.status === 'Nie dotyczy' || res.status === 'na') {
+                icon = 'minus-circle';
+                color = 'var(--na-color)';
                 statusText = 'Nie dotyczy';
             }
-            if (res.status === 'nt') { 
-                icon = 'help-circle'; 
-                color = 'var(--nt-color)'; 
+            if (res.status === 'nt') {
+                icon = 'help-circle';
+                color = 'var(--nt-color)';
                 statusText = 'Nietestowalne';
             }
 
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const anchorDomId = `test-${sanitizeForDomId(item.id)}`;
             a.href = `#${anchorDomId}`; // preserves semantics and allows anchors
             a.setAttribute('data-target-id', anchorDomId);
-            
+
             // Clean up title (remove duplicated ID)
             let displayTitle = item.title;
             const baseId = item.id.split('#')[0]; // Remove #1, #2 suffix if present
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             a.setAttribute('aria-label', `Przejdź do testu ${item.id}: ${displayTitle}. Status: ${statusText}`);
             a.setAttribute('aria-controls', anchorDomId);
             if (active) a.setAttribute('aria-current', 'true');
-            
+
             const activate = (e) => {
                 if (e) e.preventDefault();
                 // Update the URL hash to represent the selected test
@@ -280,8 +280,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Restore focus if it was in the nav
         if (previousFocusId) {
-             const newFocus = document.querySelector(`.nav-item[data-test-id="${previousFocusId}"]`);
-             if (newFocus) newFocus.focus();
+            const newFocus = document.querySelector(`.nav-item[data-test-id="${previousFocusId}"]`);
+            if (newFocus) newFocus.focus();
         } else if (previousFocusInputId) {
             // Try to restore focus to the same input ID (e.g. radio button or textarea)
             // We need to wait for the content to be rendered first, but renderTest continues below...
@@ -292,20 +292,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Handle Test View
         const res = state.results[item.id];
-        
+
         let preconditionsHtml = '';
         if (item.preconditions && item.preconditions.length > 0) {
-            preconditionsHtml = `<div class="test-details"><strong>Warunki wstępne:</strong><ol>${item.preconditions.map(p => `<li>${stripNumbering(p)}</li>`).join('')}</ol></div>`;
+            preconditionsHtml = `<div class="test-details"><h2 class="text-muted" style="margin-bottom: 0.5rem;">Warunki wstępne</h2><ol>${item.preconditions.map(p => `<li>${stripNumbering(p)}</li>`).join('')}</ol></div>`;
         }
 
         let procedureHtml = '';
         if (item.procedure && item.procedure.length > 0) {
-            procedureHtml = `<div class="test-details"><strong>Procedura:</strong><ol>${item.procedure.map(p => `<li>${stripNumbering(p)}</li>`).join('')}</ol></div>`;
+            procedureHtml = `<div class="test-details" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">Procedura</h2><ol>${item.procedure.map(p => `<li>${stripNumbering(p)}</li>`).join('')}</ol></div>`;
         }
 
         let notesHtml = '';
         if (item.notes && item.notes.length > 0) {
-            notesHtml = `<div class="informative" style="margin-top: 1rem;"><strong>UWAGA:</strong><ul>${item.notes.map(n => `<li>${n}</li>`).join('')}</ul></div>`;
+            notesHtml = `<div class="informative" style="margin-top: 1.5rem;"><strong>UWAGA:</strong><ul>${item.notes.map(n => `<li>${n}</li>`).join('')}</ul></div>`;
         }
 
         let wcagBadge = '';
@@ -325,10 +325,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (input.value === 'Zaliczone' || input.value === 'pass') { icon = 'check'; colorClass = 'pass'; }
                 if (input.value === 'Niezaliczone' || input.value === 'fail') { icon = 'x'; colorClass = 'fail'; }
                 if (input.value === 'Nie dotyczy' || input.value === 'na') { icon = 'minus'; colorClass = 'na'; }
-                
+
                 const isSelected = res.status === input.value;
                 const inputId = `eval-${item.id}-${input.value}`;
-                
+
                 evaluationHtml += `
                     <div class="criteria-option-wrapper">
                         <input type="radio" id="${inputId}" name="eval-${item.id}" value="${input.value}" 
@@ -409,34 +409,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         container.innerHTML = `
-            <div style="margin-bottom: 2rem;">
-                <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem; align-items: center;">
-                    <span style="color: var(--h1-color); font-weight: bold;">${item.id}</span>
+            <article class="mb-2" tabindex="-1" role="region" aria-labelledby="${anchorDomId}-title" ${!document.getElementById(anchorDomId) ? `id="${anchorDomId}"` : ''}>
+                <header class="section-header">
+                    <span class="audit-card-id">${item.id}</span> 
+                    <h1 style="margin: 0;" id="${anchorDomId}-title">${cleanTitle}</h1>
                     ${wcagBadge}
-                </div>
-                <h1 id="${anchorDomId}-title" style="margin: 0; color: var(--h1-color);">${cleanTitle}</h1>
-            </div>
-            
-            <article tabindex="-1" role="region" aria-labelledby="${anchorDomId}-title" style="border-left: 4px solid var(--primary);" ${!document.getElementById(anchorDomId) ? `id="${anchorDomId}"` : ''}>
-                <div style="padding: 1.5rem;">
+                </header>
+                
+                <div class="section-content" style="padding: 1rem;">
                     ${preconditionsHtml}
                     ${procedureHtml}
                     ${notesHtml}
+
+                    <form onsubmit="return false;" style="margin-top: 2rem;">
+                        <h2 class="text-muted" style="margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--muted-color);">Ocena</h2>
+
+                        ${evaluationHtml}
+
+                        <div style="margin-top: 2rem;">
+                            <label for="note-${item.id}" style="color: var(--muted-color);">Uwagi / Obserwacje</label>
+                            <textarea id="note-${item.id}" rows="4" oninput="updateNote('${item.id}', this.value)">${res.note}</textarea>
+                        </div>
+                    </form>
                 </div>
-
-                <form onsubmit="return false;" style="padding: 0 1.5rem 1.5rem 1.5rem;">
-                    <h2 style="margin-top: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #334155; color: var(--muted-color); font-size: 1.25rem;">Ocena</h2>
-
-                    ${evaluationHtml}
-
-                    <div style="margin-top: 2rem;">
-                        <label for="note-${item.id}" style="color: var(--muted-color);">Uwagi / Obserwacje</label>
-                        <textarea id="note-${item.id}" rows="4" oninput="updateNote('${item.id}', this.value)">${res.note}</textarea>
-                    </div>
-                </form>
             </article>
 
-            <div style="display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #334155; gap: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
                 <button class="outline secondary" ${getPrevTestIndex(idx) === -1 ? 'disabled' : ''} onclick="renderTest(${getPrevTestIndex(idx)})">
                     <i data-lucide="arrow-left" style="margin-right: 8px;" aria-hidden="true"></i> Poprzedni
                 </button>
@@ -464,7 +462,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (mainContainer) {
                 mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
             }
-            
+
             // Set focus to the article for accessibility (without scrolling again)
             const contentEl = document.getElementById(anchorDomId);
             if (contentEl) {
