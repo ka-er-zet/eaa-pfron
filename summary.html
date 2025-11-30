@@ -17,16 +17,16 @@
     <script src="js/jszip.min.js"></script>
 </head>
 
-<body>
+<body class="summary-page">
 
     <!-- Header -->
     <header class="app-header">
         <div class="header-content">
-            <div class="header-icon-container">
+            <a href="index.html" id="app-logo" class="header-icon-container" aria-label="Strona główna">
                 <i data-lucide="shield-check" color="white"></i>
-            </div>
+            </a>
             <div>
-                <strong class="header-title">A11yAudit</strong>
+                <strong class="header-title">EN 301 549</strong>
                 <small class="text-muted">Podsumowanie</small>
             </div>
         </div>
@@ -39,48 +39,122 @@
     <div id="app-layout" class="app-layout">
 
         <!-- Main Content -->
-        <main>
+        <main class="index-main">
 
-            <!-- VIEW 3: SUMMARY -->
-            <div id="view-summary" class="setup-container summary-container">
-                <div class="summary-icon-wrapper">
-                    <i data-lucide="award" size="48"></i>
-                </div>
-                <h1>Audyt Zakończony</h1>
-                <p id="summary-product" class="text-muted summary-product-name">
-                </p>
-
-                <div class="grid summary-grid">
-                    <article class="stat-card border-pass">
-                        <div id="res-pass" class="stat-value text-pass">0</div>
-                        <small class="stat-label">Zaliczone</small>
-                    </article>
-                    <article class="stat-card border-fail">
-                        <div id="res-fail" class="stat-value text-fail">0</div>
-                        <small class="stat-label">Niezaliczone</small>
-                    </article>
-                    <article class="stat-card">
-                        <div id="res-na" class="stat-value text-na">0</div>
-                        <small class="stat-label">Nie dotyczy</small>
-                    </article>
-                    <article class="stat-card">
-                        <div id="res-nt" class="stat-value text-nt">0</div>
-                        <small class="stat-label">Nietestowalne</small>
-                    </article>
+            <div class="container">
+                <!-- Header Section -->
+                <div class="summary-header-section" style="margin-bottom: 1rem;">
+                    <div>
+                        <h1>Raport Końcowy</h1>
+                        <h2 id="summary-product" class="text-muted summary-product-name" style="margin-top: 0.5rem; font-weight: 500;">Ładowanie...</h2>
+                    </div>
                 </div>
 
-                <div class="grid">
-                    <button class="secondary outline" id="export-json-btn">
-                        <i data-lucide="download"></i> Pobierz JSON
-                    </button>
-                    <button class="secondary outline" id="export-odt-btn">
-                        <i data-lucide="file-text"></i> Pobierz ODT
-                    </button>
-                    <button class="secondary outline" id="export-csv-btn">
-                        <i data-lucide="table"></i> Pobierz CSV
-                    </button>
-                    <button onclick="resetAudit()">Nowy Audyt</button>
+                <!-- Verdict Card -->
+                <div id="verdict-card" class="verdict-card">
+                    <div class="verdict-icon-wrapper">
+                        <i id="verdict-icon" data-lucide="shield-alert"></i>
+                    </div>
+                    <div class="verdict-content">
+                        <small class="verdict-label">WYNIK AUDYTU</small>
+                        <h2 id="verdict-title" class="verdict-title">NIEZGODNY (FAILED)</h2>
+                        <p id="verdict-desc" class="verdict-desc">Znaleziono błędy krytyczne.</p>
+                    </div>
                 </div>
+
+                <!-- Szczegóły -->
+                <article class="mb-2">
+                    <header class="section-header">
+                        <h2>Szczegóły</h2>
+                    </header>
+                    <div class="section-content">
+                        <details>
+                            <summary>
+                                <span class="summary-closed">Rozwiń szczegóły</span>
+                                <span class="summary-open">Zwiń szczegóły</span>
+                            </summary>
+                            <!-- Issues List (Fail) -->
+                            <div class="list-section">
+                                <h3 class="list-header fail-header">
+                                    <div class="header-left">
+                                        <i data-lucide="x-circle"></i>
+                                        <span>NIEZALICZONE (<span id="count-fail">0</span>)</span>
+                                    </div>
+                                    <span class="badge-fail">Wymagana poprawa</span>
+                                </h3>
+                                <div id="list-fail" class="issue-list">
+                                    <!-- Items will be injected here -->
+                                </div>
+                            </div>
+
+                            <!-- To Verify List (Notes/Manual) -->
+                            <div class="list-section">
+                                <h3 class="list-header warning-header">
+                                    <div class="header-left">
+                                        <i data-lucide="alert-circle"></i>
+                                        <span>DO WERYFIKACJI (<span id="count-verify">0</span>)</span>
+                                    </div>
+                                </h3>
+                                <div id="list-verify" class="issue-list">
+                                    <!-- Items will be injected here -->
+                                </div>
+                            </div>
+
+                            <!-- Passed / NA List -->
+                            <div class="list-section">
+                                <h3 class="list-header success-header">
+                                    <div class="header-left">
+                                        <i data-lucide="check-circle"></i>
+                                        <span>ZALICZONE / NIE DOTYCZY (<span id="count-pass-na">0</span>)</span>
+                                    </div>
+                                </h3>
+                                <div id="list-pass-na" class="issue-list">
+                                    <!-- Items will be injected here -->
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+
+                <!-- Executive Summary -->
+                <article class="mb-2">
+                    <header class="section-header">
+                        <h2>Komentarz audytorski</h2>
+                    </header>
+                    <div class="section-content">
+                        <label for="executive-summary" style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Treść komentarza</label>
+                        <small id="executive-summary-helper" class="text-muted" style="display: block; margin-bottom: 0.5rem;">
+                            Wpisz tutaj syntezę audytu dla klienta. Np: 'Mimo dużej liczby zaliczonych testów...'
+                        </small>
+                        <textarea id="executive-summary" rows="4" aria-describedby="executive-summary-helper"></textarea>
+                    </div>
+                </article>
+
+                <!-- Export Section -->
+                <article class="mb-2">
+                    <header class="section-header">
+                        <h2>Zapisz raport jako:</h2>
+                    </header>
+                    <div class="section-content grid">
+                        <button class="secondary outline" id="export-json-btn">
+                            <i data-lucide="code"></i> JSON
+                        </button>
+                        <button class="secondary outline" id="export-csv-btn">
+                            <i data-lucide="download"></i> CSV
+                        </button>
+                        <button class="secondary outline" id="export-odt-btn">
+                            <i data-lucide="file-text"></i> ODT
+                        </button>
+                    </div>
+                </article>
+
+                <!-- New Audit -->
+                <div style="margin-top: 2rem; text-align: center;">
+                    <button class="secondary outline" onclick="resetAudit()" style="width: 100%;">
+                        <i data-lucide="refresh-cw"></i> Rozpocznij nowy audyt
+                    </button>
+                </div>
+
             </div>
 
         </main>

@@ -1,6 +1,62 @@
 document.addEventListener('DOMContentLoaded', async () => {
     lucide.createIcons();
 
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const appLayout = document.getElementById('app-layout');
+    const sidebar = document.getElementById('sidebar');
+    
+    if (menuToggle && appLayout && sidebar) {
+        const closeMenu = (returnFocus = true) => {
+            appLayout.classList.remove('mobile-menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            if (returnFocus) {
+                menuToggle.focus();
+            }
+        };
+
+        const openMenu = () => {
+            appLayout.classList.add('mobile-menu-open');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            // Make sidebar programmatically focusable and focus it
+            sidebar.setAttribute('tabindex', '-1');
+            sidebar.focus({ preventScroll: true });
+        };
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            if (isExpanded) {
+                closeMenu(true); // Return focus to toggle when closing via toggle
+            } else {
+                openMenu();
+            }
+        });
+
+        // Close menu when clicking a link in the sidebar
+        sidebar.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A' || e.target.closest('a')) {
+                // Don't return focus to toggle, as user is navigating to content
+                closeMenu(false); 
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (appLayout.classList.contains('mobile-menu-open') && 
+                !sidebar.contains(e.target) && 
+                !menuToggle.contains(e.target)) {
+                closeMenu(false); // Focus stays where user clicked (or body)
+            }
+        });
+
+        // Handle Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && appLayout.classList.contains('mobile-menu-open')) {
+                closeMenu(true); // Return focus to toggle
+            }
+        });
+    }
+
     // Load State immediately to ensure it's available for event listeners
     const state = window.utils.loadState();
 
@@ -91,6 +147,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    // Local map for clause titles (populated by loadClauses)
+    const clauseTitles = {};
+
+    function formatClauseTitle(clauseId, rawTitle) {
+        // Prefer to extract a short label: e.g. from "Audyt Klauzuli 5: Wymagania ogólne"
+        // produce "C.5 wymagania ogólne" (lower-case first char of subtitle)
+        const idNumber = String(clauseId).replace(/^c/i, '').trim();
+        let subtitle = (rawTitle || '').split(':').pop().trim();
+        if (!subtitle || subtitle === rawTitle) {
+            // fallback: remove any leading 'Audyt Klauzuli N:' etc
+            subtitle = rawTitle.replace(/.*:\s*/g, '').trim();
+        }
+        // ensure first char lower-case as requested
+        if (subtitle && subtitle.length > 0) {
+            subtitle = subtitle.charAt(0).toLowerCase() + subtitle.slice(1);
+        }
+        if (!subtitle) subtitle = '';
+        return `C.${idNumber} ${subtitle}`.trim();
+    }
+
     function renderNav() {
         const container = document.getElementById('nav-container');
         if (!container) return;
@@ -102,16 +178,71 @@ document.addEventListener('DOMContentLoaded', async () => {
         let completed = 0;
         let totalTests = 0;
 
+        let lastClauseId = null;
         state.tests.forEach((item, idx) => {
+            // Determine effective clauseId for this item (handle headings without ID)
+            let effectiveClauseId = item.clauseId;
+            if (!effectiveClauseId && item.type === 'heading') {
+                // Look ahead for the next item with a clauseId
+                for (let i = idx + 1; i < state.tests.length; i++) {
+                    if (state.tests[i].clauseId) {
+                        effectiveClauseId = state.tests[i].clauseId;
+                        break;
+                    }
+                }
+            }
+
+            // Insert clause header when we encounter first item of a new clause
+            let clauseHeaderInserted = false;
+            let currentClauseTitle = '';
+            if (effectiveClauseId && effectiveClauseId !== lastClauseId) {
+                lastClauseId = effectiveClauseId;
+                currentClauseTitle = item.clauseTitle || clauseTitles[effectiveClauseId] || effectiveClauseId;
+                const clauseLi = document.createElement('li');
+                clauseLi.className = 'nav-clause';
+                clauseLi.setAttribute('role', 'heading');
+                clauseLi.setAttribute('aria-level', '3');
+                clauseLi.innerText = currentClauseTitle;
+                ul.appendChild(clauseLi);
+                clauseHeaderInserted = true;
+            }
+
             // Handle Headings
             if (item.type === 'heading') {
+                // Smart Filter: Only show headings that have tests in their section (including sub-headings)
+                let hasTestsInSection = false;
+                const currentLevel = item.level || 3;
+                // Find the end of this section: next heading with level <= currentLevel
+                let sectionEndIdx = idx + 1;
+                for (; sectionEndIdx < state.tests.length; sectionEndIdx++) {
+                    const nextItem = state.tests[sectionEndIdx];
+                    if (nextItem.type === 'heading' && (nextItem.level || 3) <= currentLevel) {
+                        break;
+                    }
+                    if (nextItem.type !== 'heading') {
+                        hasTestsInSection = true;
+                        break; // No need to check further
+                    }
+                }
+                if (!hasTestsInSection) {
+                    return; // Skip this heading
+                }
+
+                // Check for duplicate clause title
+                if (clauseHeaderInserted) {
+                    const normClause = String(currentClauseTitle).toLowerCase().replace(/[^a-zpl]/g, '');
+                    const normItem = String(item.title).toLowerCase().replace(/[^a-zpl]/g, '');
+                    // If the heading text is substantially contained in the clause title (or vice versa), skip it
+                    if (normClause.includes(normItem) || normItem.includes(normClause)) {
+                        return;
+                    }
+                }
+
                 const li = document.createElement('li');
-                li.className = `nav-heading level-${item.level || 3}`;
-                // Render heading text as non-interactive element (structure only)
-                const hTag = document.createElement(`h${Math.min(item.level || 3, 6)}`);
-                hTag.className = 'nav-heading-title';
-                hTag.innerText = item.title;
-                li.appendChild(hTag);
+                li.className = 'nav-heading';
+                li.setAttribute('role', 'heading');
+                li.setAttribute('aria-level', item.level || 3);
+                li.innerText = item.title;
                 ul.appendChild(li);
                 return;
             }
@@ -119,6 +250,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Handle Tests
             totalTests++;
             const res = state.results[item.id] || { status: null };
+                        // If this item belongs to a new clause, update tracking so we don't add duplicate
+                        if (item.clauseId && item.clauseId !== lastClauseId) {
+                            lastClauseId = item.clauseId;
+                        }
             const active = idx === state.currentIdx;
             if (res.status) completed++;
 
@@ -174,10 +309,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Update the URL hash to represent the selected test
                 try { history.replaceState(null, '', `#${anchorDomId}`); } catch (err) { location.hash = `#${anchorDomId}`; }
                 renderTest(idx);
-                // Ensure the clicked anchor receives focus after re-render
+                // Scroll to top of page and move focus to the main content area for screen readers
                 setTimeout(() => {
-                    const newEl = document.querySelector(`a.nav-item[data-test-id="${item.id}"]`);
-                    if (newEl) newEl.focus();
+                    const testRenderer = document.getElementById('test-renderer');
+                    if (testRenderer) testRenderer.focus({ preventScroll: true });
+                    
+                    const mainEl = document.querySelector('main');
+                    if (mainEl) {
+                        mainEl.scrollTop = 0;
+                    }
                 }, 0);
             };
 
@@ -305,13 +445,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         let notesHtml = '';
         if (item.notes && item.notes.length > 0) {
-            notesHtml = `<div class="informative" style="margin-top: 1.5rem;"><strong>UWAGA:</strong><ul>${item.notes.map(n => `<li>${n}</li>`).join('')}</ul></div>`;
+            notesHtml = `<div class="informative" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">UWAGA</h2>${item.notes.map(n => `<p>${n}</p>`).join('')}</div>`;
         }
 
         let wcagBadge = '';
         if (item.wcag) {
             const levelClass = item.wcag === 'AA' ? 'poziom-aa' : 'poziom-a';
-            wcagBadge = `<span class="${levelClass}">Poziom ${item.wcag}</span>`;
+            wcagBadge = `<span class="${levelClass}">WCAG Poziom ${item.wcag}</span>`;
         }
 
         // Evaluation Criteria (Form)
@@ -423,7 +563,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     ${notesHtml}
 
                     <form onsubmit="return false;" style="margin-top: 2rem;">
-                        <h2 class="text-muted" style="margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--muted-color);">Ocena</h2>
+                        <h2 class="text-muted" style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--muted-color);">Ocena</h2>
 
                         ${evaluationHtml}
 
@@ -495,7 +635,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         window.location.href = 'summary.html';
     };
 
-    function processClauseContent(content, clauseId) {
+    function processClauseContent(content, clauseId, clauseTitle = null) {
         let currentHeading = null;
         let testCounter = 0;
 
@@ -515,6 +655,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                     level: item.level,
                     wcag: item.wcag_level
                 });
+
+                // Attach clause metadata so we can group items in the nav
+                state.tests[state.tests.length - 1].clauseId = clauseId;
+                state.tests[state.tests.length - 1].clauseTitle = clauseTitle;
 
             } else if (item.type === 'test') {
                 testCounter++;
@@ -558,6 +702,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     state.tests.pop();
                 }
 
+                // Attach clauseTitle directly to tests, so the nav can render them
+                testItem.clauseTitle = clauseTitle;
                 state.tests.push(testItem);
 
                 // Initialize result if not exists
@@ -589,8 +735,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             for (const clauseId of clauses) {
                 const response = await fetch(`clauses_json/${clauseId}.json?v=${new Date().getTime()}`);
                 if (!response.ok) throw new Error(`Failed to load ${clauseId}`);
-                const data = await response.json();
-                processClauseContent(data.content, clauseId);
+                    const data = await response.json();
+                    // Build a brief clause title like 'C.5 Wymagania ogolne'
+                    const rawTitle = data.title || clauseId;
+                    let titleSuffix = rawTitle;
+                    if (rawTitle.indexOf(':') !== -1) {
+                        titleSuffix = rawTitle.split(':').slice(1).join(':').trim();
+                    } else {
+                        // Try to extract suffix after first dash or last space
+                        const parts = rawTitle.split('-');
+                        if (parts.length > 1) titleSuffix = parts.slice(1).join('-').trim();
+                    }
+                    const clauseLabel = clauseId.toUpperCase().replace(/^C?([0-9]+)/, 'C.$1');
+                    clauseTitles[clauseId] = `${clauseLabel} ${titleSuffix}`;
+                    processClauseContent(data.content, clauseId, clauseTitles[clauseId]);
             }
 
             // Save initialized tests to state
@@ -630,6 +788,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    async function loadClauseTitles(clauses) {
+        for (const clauseId of clauses) {
+            if (!clauseTitles[clauseId]) {
+                try {
+                    const response = await fetch(`clauses_json/${clauseId}.json?v=${new Date().getTime()}`);
+                    if (response.ok) {
+                            const data = await response.json();
+                            clauseTitles[clauseId] = formatClauseTitle(clauseId, data.title || clauseId);
+                    } else {
+                        clauseTitles[clauseId] = clauseId;
+                    }
+                } catch (e) {
+                    clauseTitles[clauseId] = clauseId;
+                }
+            }
+        }
+    }
+
     // --- Initialization Logic ---
 
     // State is already loaded at the top
@@ -643,6 +819,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (state.tests.length === 0) {
         await loadClauses(state.clauses);
     } else {
+        // Ensure we have clause titles available even if tests were loaded from saved state
+        await loadClauseTitles(state.clauses);
         ensureFragmentAnchors(state.tests);
         renderNav();
         const initialHash = (window.location.hash || '').replace('#', '');

@@ -17,6 +17,7 @@ function loadState() {
     }
     return {
         product: '',
+        executiveSummary: '', // Executive summary text
         clauses: [], // List of selected clause IDs
         tests: [],   // Flattened list of all tests
         results: {}, // Key: testId, Value: { status: null, note: '' }

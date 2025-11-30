@@ -69,12 +69,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function startAudit() {
         const nameInput = document.getElementById('product-name');
+        const descInput = document.getElementById('product-desc');
+        const auditorInput = document.getElementById('auditor-name');
+        
         const nameError = document.getElementById('product-name-error');
         const clausesError = document.getElementById('clauses-error');
         const clausesHelper = document.getElementById('clauses-helper');
         const clausesFieldset = document.getElementById('clauses-fieldset');
         
         const name = nameInput.value.trim();
+        const desc = descInput ? descInput.value.trim() : '';
+        const auditor = auditorInput ? auditorInput.value.trim() : '';
         
         // Reset errors
         nameInput.removeAttribute('aria-invalid');
@@ -123,6 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initialize State
         const initialState = {
             product: name,
+            productDesc: desc,
+            auditor: auditor,
             clauses: clausesToLoad,
             tests: [],
             results: {},

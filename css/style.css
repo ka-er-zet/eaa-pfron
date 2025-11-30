@@ -28,14 +28,53 @@
 
     /* Global Focus Settings */
     --focus-color: hsl(224, 76%, 48%);
+    --content-x-pad: 2rem; /* horizontal content padding used by header and sidebar */
+
+    /* Minor third typographic scale (1.2) applied to nav elements */
+    --type-base: 0.8rem; /* base size for small nav elements */
+    --minor-third: 1.2; /* Scale multiplier */
+    --type-0: var(--type-base);
+    --type-1: calc(var(--type-0) * var(--minor-third));
+    --type-2: calc(var(--type-1) * var(--minor-third));
+    --type-3: calc(var(--type-2) * var(--minor-third));
+    --type-4: calc(var(--type-3) * var(--minor-third));
+
+    /* Slate Palette (Tailwind-ish) */
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --slate-950: #020617;
+
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --blue-600: #2563eb;
+
+    /* Sidebar Theme Variables */
+    --sidebar-bg: var(--slate-100);
+    --sidebar-border: var(--slate-200);
+    --sidebar-text-primary: var(--slate-900);
+    --sidebar-text-secondary: var(--slate-600);
+    --sidebar-text-tertiary: var(--slate-400);
+    --sidebar-hover-bg: #ffffff;
+    --sidebar-active-bg: #ffffff;
+    --sidebar-active-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --sidebar-active-border: var(--blue-600);
+    --nav-id-color: var(--blue-600);
+    --nav-id-active-color: var(--blue-600);
 }
 
 /* Global Focus Style - High Visibility */
 *:focus-visible {
     outline: 3px solid var(--focus-color) !important;
     outline-offset: 2px !important;
-    border-radius: 2px;
-    /* Slight rounding for aesthetics */
+    border-radius: 2px; /* Slight rounding for aesthetics */
 }
 
 /* Skip Link */
@@ -46,7 +85,7 @@
     transform: translateX(-50%);
     background: var(--primary);
     color: white;
-    padding: 1rem 2rem;
+    padding: 1rem var(--content-x-pad);
     z-index: 9999;
     text-decoration: none;
     border-radius: 0 0 8px 8px;
@@ -89,6 +128,18 @@
     --color: hsl(214, 32%, 91%);
     /* Slate 200 */
     --h1-color: hsl(210, 40%, 98%);
+    
+    /* Sidebar Dark Mode */
+    --sidebar-bg: #111827; /* Slate 900ish */
+    --sidebar-border: var(--slate-800);
+    --sidebar-text-primary: #ffffff;
+    --sidebar-text-secondary: var(--slate-400);
+    --sidebar-text-tertiary: var(--slate-600);
+    --sidebar-hover-bg: rgba(30, 41, 59, 0.5); /* Slate 800/50 */
+    --sidebar-active-bg: var(--slate-800);
+    --sidebar-active-border: var(--blue-500);
+    --nav-id-color: var(--blue-500);
+    --nav-id-active-color: var(--blue-400);
     --h2-color: hsl(210, 40%, 98%);
     --h3-color: hsl(210, 40%, 98%);
     --muted-color: hsl(215, 20%, 65%);
@@ -97,6 +148,9 @@
     /* High Contrast Red for Dark Mode */
     --fail-color: hsl(350, 100%, 79%);
     /* #FF94A6 */
+
+    /* High Contrast Green for Dark Mode */
+    --ins-color: hsl(160, 84%, 50%);
 
     /* Focus Color for Dark Mode - High Contrast Yellow/Orange */
     --focus-color: hsl(38, 92%, 60%);
@@ -166,7 +220,7 @@ body {
 .app-header {
     background-color: var(--card-background-color);
     border-bottom: 1px solid var(--muted-color);
-    padding: 0.75rem 2rem;
+    padding: 0.75rem var(--content-x-pad);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -221,33 +275,77 @@ body {
     grid-template-columns: 1fr;
     height: 100%;
     overflow: hidden;
+    position: relative; /* Ensure absolute positioning works for children */
 }
 
+/* Default (Mobile < 992px): Sidebar hidden, single column */
 .app-layout.with-sidebar {
-    grid-template-columns: var(--nav-width) 1fr;
+    grid-template-columns: 1fr;
 }
 
 /* --- Sidebar --- */
 aside {
-    background-color: var(--card-background-color);
-    border-right: 1px solid var(--muted-color);
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--sidebar-border);
     padding: 0;
-    /* Removed padding to allow full-width scroll */
     display: none;
     flex-direction: column;
     overflow-y: hidden;
-    /* Prevent main sidebar scroll */
 }
 
+/* Mobile: Sidebar remains hidden even with .with-sidebar class */
 .app-layout.with-sidebar aside {
+    display: none;
+}
+
+/* Mobile Menu Toggle Button */
+#menu-toggle {
     display: flex;
+    margin-right: 0.5rem;
+}
+
+/* Mobile Menu Open State */
+.app-layout.mobile-menu-open aside {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+
+/* Desktop / Tablet (>= 992px) */
+@media (min-width: 992px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    .app-layout.with-sidebar {
+        grid-template-columns: 350px 1fr; /* Fixed width */
+    }
+    
+    .app-layout.with-sidebar aside {
+        display: flex; /* Show sidebar */
+        position: static; /* Reset position */
+        width: auto;
+        height: auto;
+        z-index: auto;
+        border-right: 1px solid var(--sidebar-border);
+    }
+}
+
+/* Large Desktop (>= 1200px) */
+@media (min-width: 1200px) {
+    .app-layout.with-sidebar {
+        grid-template-columns: 1fr 3fr; /* 1/4 width for sidebar */
+    }
 }
 
 .sidebar-top-section {
-    padding: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--muted-color);
-    background-color: var(--card-background-color);
+    padding: 1.5rem 2rem 1rem 2rem; /* Align with nav items */
+    border-bottom: 1px solid var(--sidebar-border);
+    background-color: var(--sidebar-bg);
     z-index: 2;
 }
 
@@ -266,242 +364,189 @@ aside {
     --color: var(--primary);
 }
 
-/* --- Navigation Items (USWDS / GOV.UK Style) --- */
+/* --- Navigation Items (Inspiration Style) --- */
 .nav-item {
     display: flex;
-    align-items: center;
-    /* Center vertically */
+    align-items: flex-start; /* Align top for multiline text */
     justify-content: space-between;
-    /* Text left, Icon right */
     gap: 0.75rem;
-    padding: 0.5rem 1rem;
-    /* Reduced vertical padding */
+    padding: 0.5rem 1rem 0.5rem 2rem; /* Adjusted padding */
     cursor: pointer;
-    border-left: 4px solid transparent;
-    /* Left border indicator */
-    transition: background-color 0.2s, border-left-color 0.18s ease-in-out;
-    color: inherit;
-    /* Color should be controlled for text elements only */
     position: relative;
-
-    /* Force reset of any card styles */
-    border-radius: 0 !important;
-    margin: 0 !important;
+    border-radius: 0.5rem; /* rounded-lg */
+    margin-bottom: 0.125rem; /* Reduced margin */
+    transition: all 0.2s ease-in-out;
     background: transparent;
-    box-shadow: none !important;
+    border: none; /* Reset border */
+    width: 100%;
+    text-align: left;
+    color: var(--sidebar-text-secondary);
 }
 
+/* Hover State */
 .nav-item:hover {
-    /* Subtle hover: do not change background or text color to avoid "card" look.
-       Keep visual feedback minimal (underline optional). */
-    background-color: transparent !important;
-    /* Avoid large hover cards */
-    text-decoration: none !important;
-    /* show subtle left border on hover */
-    border-left-color: var(--primary-focus) !important;
-}
-
-/* Override frameworks default link color (Pico) which sets --color to primary on [role=link].
-   For our nav items we always want muted text; icon colors remain inline and shouldn't be affected.
-*/
-.nav-item {
-    /* helper: use anchors or generic .nav-item elements */
-}
-
-/* Ensure anchors used for nav don't adopt the global link color */
-a.nav-item,
-a.nav-item:link,
-a.nav-item:visited,
-a.nav-item:active {
-    --color: var(--muted-color) !important;
+    background-color: var(--sidebar-hover-bg) !important;
+    color: var(--sidebar-text-secondary); /* Keep text color on hover unless active */
     text-decoration: none !important;
 }
 
-a.nav-item:hover,
-a.nav-item:focus,
-a.nav-item:active {
-    --color: var(--muted-color) !important;
-    background: transparent !important;
+.nav-item:hover .nav-id {
+    color: var(--blue-500); /* Slightly darker on hover? */
 }
 
+/* Active State */
 .nav-item.active,
 a.nav-item.active {
-    /* Only visual indicator is the left border. Avoid changing text color or font weight. */
-    background-color: transparent !important;
-    border-left-color: var(--primary) !important;
+    background-color: var(--sidebar-active-bg) !important;
+    box-shadow: var(--sidebar-active-shadow);
+    color: var(--sidebar-text-primary) !important;
 }
 
-/* Focus: show left border as a strong indicator while keeping global focus outline for non-nav elements */
-.nav-item:focus-visible,
-a.nav-item:focus-visible {
-    outline: none;
-    /* use left border for visual indication */
-    border-left-color: var(--focus-color) !important;
+/* Active Indicator Line */
+.nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    bottom: 0.75rem;
+    width: 4px;
+    background-color: var(--sidebar-active-border);
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
 }
 
-/* Don't apply global color overrides to all child elements of active items. */
-
-/* Exception for the icon which has its own color logic inline, but we might need to force it if we want strictness, 
-   but usually we want the icon to keep its status color. 
-   The user complained about "blue", which is primary. Status icons are green/red/gray. 
-   So if the icon is blue, it means it's inheriting primary. 
-   But the icon has inline style. 
-   Let's exclude the icon from the wildcard reset if possible, or just reset text wrapper.
-*/
-
-.nav-item.active .nav-text-wrapper,
-.nav-item.active .nav-title,
-.nav-item.active .nav-id,
-a.nav-item.active .nav-text-wrapper,
-a.nav-item.active .nav-title,
-a.nav-item.active .nav-id {
-    color: var(--muted-color) !important;
-    /* Keep text looking the same */
-    font-weight: normal !important;
-    /* avoid extra bolding */
+/* Typography & Layout */
+.nav-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem; /* gap-0.5 */
+    flex: 1;
+    z-index: 10;
+    min-width: 0; /* Allow flex child to shrink below content size */
+    word-wrap: break-word; /* Ensure long words wrap */
 }
 
+.nav-id {
+    font-family: var(--font-mono, monospace);
+    font-size: var(--type-0); /* 0.8rem ~ 12.8px */
+    line-height: 1;
+    color: var(--nav-id-color);
+    transition: color 0.2s;
+}
+
+.nav-item.active .nav-id {
+    color: var(--nav-id-active-color); /* Active ID color */
+    font-weight: 600;
+}
+
+.nav-title {
+    font-size: var(--type-1); /* ~15.36px */
+    line-height: 1.375; /* leading-snug */
+    font-weight: 500;
+    color: inherit; /* Inherits from nav-item (secondary or primary) */
+    transition: color 0.2s;
+}
+
+.nav-item.active .nav-title {
+    color: var(--sidebar-text-primary);
+}
+
+/* Icon Wrapper */
 .nav-icon-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
-    flex-shrink: 0;
-    order: 2;
-    /* Ensure icon is on the right visually if flex order is used, though HTML order is already swapped */
+    margin-top: 0.375rem; /* Align with text roughly */
+    opacity: 0.8;
+    transition: opacity 0.2s;
 }
 
-.nav-text-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    flex: 1;
-    /* Take available space */
-    text-align: left;
+.nav-item:hover .nav-icon-wrapper {
+    opacity: 1;
 }
+
+/* Reset link styles for nav items */
+a.nav-item,
+a.nav-item:link,
+a.nav-item:visited,
+a.nav-item:active {
+    text-decoration: none !important;
+    color: var(--sidebar-text-secondary);
+}
+
+a.nav-item.active {
+    color: var(--sidebar-text-primary) !important;
+}
+
+/* Focus Styles */
+.nav-item:focus-visible {
+    outline: 2px solid var(--blue-500);
+    outline-offset: -2px;
+}
+
+/* Clause Headers */
+.nav-clause {
+    margin-top: 1rem; /* Reduced top margin */
+    margin-bottom: 0.75rem; /* Further increased bottom margin */
+    padding-left: 0rem; /* px-3 */
+    padding-right: 2rem;
+    border-bottom: 1px solid var(--sidebar-border); /* Same color as sidebar border */
+    
+    /* Typography merged from .nav-clause-title */
+    font-size: var(--type-0); /* 0.8rem */
+    font-weight: 700;
+    text-transform: none;
+    /* letter-spacing: 0.05em; tracking-wider */
+    color: var(--sidebar-text-secondary);
+    font-family: var(--font-mono, monospace);
+}
+
+/* Reduce top margin for the first clause header */
+.nav-clause:first-of-type {
+    margin-top: 0rem;
+}
+
+/* .nav-clause-title removed as it is no longer used */
 
 /* Semantic list structure for nav */
 .nav-list {
     list-style: none;
-    padding: 0;
+    padding: 0rem 0rem 2rem 2.5rem; /* Added bottom padding */
     margin: 0;
 }
 
-.nav-list-item {
-    margin: 0;
+/* Align nav container with main content padding */
+#nav-container {
+    padding: 0 !important; /* Let nav-list handle padding */
+    margin-top: 1rem;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
-a.nav-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
+/* Removed duplicate/conflicting nav styles */
 
-.nav-id {
-    font-family: monospace;
-    font-size: 0.75rem;
-    color: var(--muted-color);
-}
-
-.nav-title {
-    font-size: 0.92rem;
-    line-height: 1.4;
-    white-space: normal;
-    font-weight: 600;
-    text-transform: none;
-    /* do not force uppercase */
-}
-
-/* --- Navigation Headings --- */
+/* --- Navigation Headings (Refactored for Inspiration Style) --- */
 .nav-heading {
-    padding: 0.5rem 1rem 0.25rem 1rem;
-    /* even more compact */
-    color: var(--color);
-    font-size: 0.85rem;
+    padding: 0.5rem 2rem 0.25rem 0.75rem; /* Reduced padding */
+    margin-top: 1.25rem; /* Increased top margin for section separation */
+    margin-bottom: 0.125rem; /* Matches nav-item margin */
+    pointer-events: none; /* Structural only */
+    border: none; /* Remove separator lines */
+
+    /* Typography merged from .nav-heading-title */
+    font-size: var(--type-0); /* 0.8rem - Small like clause headers */
     font-weight: 600;
-    /* less heavy than 800 */
-    letter-spacing: 0.02em;
-    pointer-events: none;
-    /* headings are structural, not interactive (prevent hover/focus) */
-    border-bottom: 1px solid var(--muted-border-color);
-    margin-bottom: 0.25rem;
-    text-transform: none;
-    /* prevent forcing uppercase */
+    color: var(--sidebar-text-secondary); /* Slightly darker than tertiary */
+    text-transform: none; /* Normal case for sub-headings */
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+    font-family: var(--font-mono, monospace); /* Use monospace font */
 }
 
+/* .nav-heading-title removed as it is no longer used */
+
+/* Ensure no hover effects on headings */
 .nav-heading:hover {
     background: transparent;
-    /* headings are not interactive, don't show hover */
-}
-
-.nav-heading.active {
-    border-left-color: transparent;
-    /* do not highlight structural container */
-    background: var(--card-sectionning-background-color);
-}
-
-/* Style for heading links inside the nav */
-/* Headings are structural; use a plain text style. */
-.nav-heading-title {
-    display: block;
-    padding: 0.25rem 1rem;
-    color: var(--muted-color);
-    font-weight: 600;
-    text-decoration: none;
-    cursor: default;
-}
-
-/* Ensure headings never show a browser focus outline (they are not interactive) */
-.nav-heading-title:focus,
-.nav-heading-title:focus-visible {
-    outline: none;
-}
-
-/* Ensure nav-heading links don't adopt the framework's primary link color */
-/* `a.nav-heading-link` removed — headings are structural and not clickable. */
-
-.nav-heading.level-3 {
-    border-bottom: 1px solid var(--muted-border-color);
-    margin-bottom: 0.25rem;
-    color: var(--h1-color);
-    font-size: 0.95rem;
-    /* Slightly larger than level-4, but smaller than default headings */
-    font-weight: 700;
-}
-
-.nav-heading.level-4 {
-    padding-left: 1rem;
-    margin-top: 0.25rem;
-}
-
-.nav-heading.level-5 {
-    padding-left: 1.5rem;
-    text-transform: none;
-    font-size: 0.82rem;
-}
-
-/* Ensure nav heading elements (h3/h4/h5) don't blow up in the sidebar; standardise sizes */
-.nav-heading h3,
-.nav-heading h4,
-.nav-heading h5 {
-    margin: 0;
-    font-weight: 600;
-    line-height: 1.1;
-    color: inherit;
-}
-
-/* Tighter font sizing for heading elements to avoid huge, visually overpowering headings */
-.nav-heading.level-3 h3 {
-    font-size: 1rem;
-}
-
-.nav-heading.level-4 h4 {
-    font-size: 0.95rem;
-}
-
-.nav-heading.level-5 h5 {
-    font-size: 0.9rem;
 }
 
 /* Make the test title smaller so the content area is less visually overwhelming */
@@ -529,6 +574,17 @@ a.nav-item {
 #test-renderer section[id^="test-"] {
     scroll-margin-top: 4rem;
     /* adjust according to header height */
+}
+
+/* Links in test content */
+#test-renderer a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Dark theme link color */
+[data-theme="dark"] #test-renderer a {
+    color: var(--blue-400);
 }
 
 /* --- Main Content --- */
@@ -694,12 +750,15 @@ main {
 }
 
 .poziom-a {
-    background: var(--muted-color);
+    background: var(--secondary);
     color: white;
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 0.8rem;
 }
+
+/* Clause title header shown in nav to separate clauses - REMOVED DUPLICATE */
+/* .nav-clause definition is now at line 433 */
 
 .poziom-aa {
     background: var(--primary);
@@ -728,7 +787,6 @@ main {
 
 .summary-product-name {
     font-size: 1.2rem;
-    margin-bottom: 3rem;
 }
 
 .summary-grid {
@@ -893,54 +951,15 @@ dialog button {
     border-color: var(--muted-color);
 }
 
-:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:hover,
-:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:focus {
+[data-theme="light"] :is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:hover,
+[data-theme="light"] :is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:focus {
     color: var(--primary);
     border-color: var(--primary);
     background-color: transparent;
 }
 
-/* --- Navigation Headings --- */
-.nav-heading {
-    padding: 0.7rem 1rem 0.25rem 1rem;
-    color: var(--muted-color);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: none;
-    letter-spacing: 0.02em;
-    pointer-events: auto;
-}
-
-
-.nav-heading.active {
-    /* Keep this reserved for when the nav-heading element is active
-       but prefer indicating activity on the inner anchor link instead. */
-    border-left-color: transparent;
-    /* don't apply visual indicator here */
-    background: var(--card-sectionning-background-color);
-}
-
-/* Visual active indicator should be applied to the interactive anchor elements only */
-/* Remove active border-left on nav-heading links (structure should not look active) */
-/* Remove nav-heading-link active rule — no longer used */
-
-.nav-heading.level-3 {
-    border-bottom: 1px solid var(--muted-border-color);
-    margin-bottom: 0.5rem;
-    color: var(--h1-color);
-    font-size: 0.85rem;
-}
-
-.nav-heading.level-4 {
-    padding-left: 1rem;
-    margin-top: 0.5rem;
-}
-
-.nav-heading.level-5 {
-    padding-left: 1.5rem;
-    text-transform: none;
-    font-size: 0.8rem;
-}
+/* --- Navigation Headings (Duplicates Removed) --- */
+/* The main definition is now around line 466 */
 
 /* --- Evaluation Criteria --- */
 .evaluation-criteria {
@@ -998,19 +1017,10 @@ dialog button {
     line-height: 1.4;
 }
 
-/* anchor-based hover selectors to ensure only anchors are targeted */
-a.nav-item:hover .nav-text-wrapper,
-a.nav-item:hover .nav-title,
-a.nav-item:hover .nav-id {
-    color: var(--muted-color) !important;
-}
+/* anchor-based hover selectors removed - handled in main block */
 
-/* Ensure text in nav uses muted color but keep icons untouched */
-.nav-item .nav-text-wrapper,
-.nav-item .nav-title,
-.nav-item .nav-id {
-    color: var(--muted-color);
-}
+/* Ensure text in nav uses muted color but keep icons untouched - REMOVED CONFLICTING OVERRIDE */
+/* Colors are now handled by specific .nav-id / .nav-title rules using sidebar variables */
 
 /* Link role overrides are no longer necessary — anchors are used for nav items. */
 
@@ -1057,7 +1067,371 @@ a.nav-item:hover .nav-id {
 [data-theme="dark"] input[type="reset"].outline.secondary:hover,
 [data-theme="dark"] input[type="button"].outline.secondary:hover,
 [data-theme="dark"] .outline.secondary:hover {
-    --border-color: var(--primary);
-    --color: var(--primary);
-    --background-color: transparent;
+    border-color: var(--blue-400);
+    color: var(--blue-400);
+    background-color: transparent;
+}
+
+/* --- Scrollbar Styling --- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--slate-300);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--slate-400);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background-color: var(--slate-700);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--slate-600);
+}
+
+/* --- New Summary Page Styles --- */
+
+/* Page Layout Overrides for Summary */
+body.summary-page {
+    height: auto;
+    overflow-y: auto;
+    display: block;
+}
+
+body.summary-page .app-layout {
+    height: auto;
+    overflow: visible;
+    display: block;
+}
+
+.index-main {
+    padding: 2rem 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.summary-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.summary-header-section h1 {
+    margin-bottom: 0.25rem;
+    font-size: 2rem;
+}
+
+.summary-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Verdict Card */
+.verdict-card {
+    background-color: var(--card-background-color);
+    border: 1px solid var(--muted-border-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.verdict-card.failed {
+    background-color: rgba(198, 40, 40, 0.1); /* Red tint */
+    border: 1px solid var(--del-color);
+}
+
+.verdict-card.passed {
+    background-color: rgba(56, 142, 60, 0.1); /* Green tint */
+    border: 1px solid var(--ins-color);
+}
+
+.verdict-card.in-progress {
+    background-color: rgba(251, 191, 36, 0.1); /* Amber tint */
+    border: 1px solid #fbbf24;
+}
+
+.verdict-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.verdict-card.failed .verdict-icon-wrapper {
+    background-color: rgba(198, 40, 40, 0.2);
+    color: var(--del-color);
+}
+
+.verdict-card.passed .verdict-icon-wrapper {
+    background-color: rgba(56, 142, 60, 0.2);
+    color: var(--ins-color);
+}
+
+.verdict-card.in-progress .verdict-icon-wrapper {
+    background-color: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+}
+[data-theme="light"] .verdict-card.in-progress .verdict-icon-wrapper { color: #d97706; }
+
+.verdict-content {
+    flex: 1;
+}
+
+.verdict-label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.verdict-card.failed .verdict-label { color: var(--del-color); }
+.verdict-card.passed .verdict-label { color: var(--ins-color); }
+.verdict-card.in-progress .verdict-label { color: #fbbf24; }
+[data-theme="light"] .verdict-card.in-progress .verdict-label { color: #d97706; }
+
+.verdict-title {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.verdict-card.failed .verdict-title { color: var(--del-color); }
+.verdict-card.passed .verdict-title { color: var(--ins-color); }
+.verdict-card.in-progress .verdict-title { color: #fbbf24; }
+[data-theme="light"] .verdict-card.in-progress .verdict-title { color: #d97706; }
+
+.verdict-desc {
+    margin: 0.5rem 0 0 0;
+    opacity: 0.9;
+}
+
+.verdict-card.failed .verdict-desc { color: var(--del-color); }
+.verdict-card.passed .verdict-desc { color: var(--ins-color); }
+.verdict-card.in-progress .verdict-desc { color: #fbbf24; }
+[data-theme="light"] .verdict-card.in-progress .verdict-desc { color: #d97706; }
+
+/* Dark mode overrides for better contrast */
+[data-theme="dark"] .verdict-card.failed .verdict-label { color: var(--fail-color); }
+[data-theme="dark"] .verdict-card.failed .verdict-title { color: var(--fail-color); }
+[data-theme="dark"] .verdict-card.failed .verdict-desc { color: var(--fail-color); }
+
+/* List Sections */
+.list-section {
+    margin-bottom: 1.5rem;
+    background-color: var(--card-background-color);
+    border: 1px solid var(--muted-border-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.list-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.list-header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.fail-header {
+    background-color: rgba(198, 40, 40, 0.1);
+    color: var(--del-color);
+    border-bottom: 1px solid rgba(198, 40, 40, 0.2);
+}
+
+.warning-header {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #fbbf24; /* Amber 400 */
+    border-bottom: 1px solid rgba(255, 193, 7, 0.2);
+}
+[data-theme="light"] .warning-header { color: #d97706; } /* Amber 600 for light mode */
+
+.success-header {
+    background-color: rgba(56, 142, 60, 0.1);
+    color: var(--ins-color);
+}
+
+.badge-fail {
+    background-color: rgba(198, 40, 40, 0.2);
+    color: var(--del-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.issue-list {
+    /* padding: 0 1.5rem; */
+}
+
+.issue-item {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--muted-border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+[data-theme="dark"] .issue-item {
+    border-bottom-color: var(--slate-600);
+}
+
+.issue-item:last-child {
+    border-bottom: none;
+}
+
+.issue-id {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--muted-color);
+    margin-right: 0.5rem;
+    display: inline-block;
+    min-width: 5rem;
+    flex-shrink: 0;
+}
+
+.issue-title {
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.issue-text {
+    display: block;
+}
+
+.issue-desc {
+    font-size: 0.9rem;
+    color: var(--del-color);
+    margin-top: 0.25rem;
+}
+
+.issue-note {
+    font-size: 0.9rem;
+    color: var(--muted-color);
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+/* Dark mode overrides for fail section contrast */
+[data-theme="dark"] .fail-header { color: var(--fail-color); }
+[data-theme="dark"] .badge-fail { color: var(--fail-color); }
+[data-theme="dark"] .issue-desc { color: var(--fail-color); }
+
+/* Details marker (chevron) color */
+details summary::-webkit-details-marker {
+    color: inherit;
+}
+
+/* Custom details marker for better control */
+details summary {
+    list-style: none;
+    color: var(--primary) !important;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Chevron using ::after with mask to allow coloring via currentColor */
+details summary::after {
+    content: "";
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: transform 0.2s;
+    opacity: 0.8;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+details summary:hover {
+    color: var(--primary) !important;
+    text-decoration: underline;
+}
+
+details summary:hover::after {
+    opacity: 1;
+}
+
+details[open] summary {
+    color: var(--primary) !important;
+    margin-bottom: 3rem; /* Increased spacing when open */
+    border-bottom: 1px solid var(--muted-border-color);
+    padding-bottom: 1rem;
+}
+
+/* Dark mode for details */
+[data-theme="dark"] details summary {
+    color: var(--blue-400) !important;
+}
+
+[data-theme="dark"] details summary:hover {
+    color: hsl(217, 91%, 75%) !important;
+}
+
+[data-theme="dark"] details[open] summary {
+    color: var(--blue-400) !important;
+}
+
+/* Toggle summary text */
+.summary-open {
+    display: none;
+}
+
+details[open] summary .summary-closed {
+    display: none;
+}
+
+details[open] summary .summary-open {
+    display: inline;
 }
