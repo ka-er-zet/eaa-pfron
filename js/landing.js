@@ -1,6 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
+    // --- PWA Install Logic ---
+    let deferredPrompt;
+    const installContainer = document.getElementById('pwa-install-container');
+    const installBtn = document.getElementById('pwa-install-btn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the mini-infobar from appearing on mobile
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+        // Update UI notify the user they can install the PWA
+        if (installContainer) {
+            installContainer.classList.remove('hidden');
+        }
+    });
+
+    if (installBtn) {
+        installBtn.addEventListener('click', async () => {
+            if (installContainer) {
+                installContainer.classList.add('hidden');
+            }
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`User response to the install prompt: ${outcome}`);
+                deferredPrompt = null;
+            }
+        });
+    }
+
+    window.addEventListener('appinstalled', () => {
+        if (installContainer) {
+            installContainer.classList.add('hidden');
+        }
+        deferredPrompt = null;
+        console.log('PWA was installed');
+    });
+    // -------------------------
+
     const btnLoad = document.getElementById('btn-load-audit');
     const fileInput = document.getElementById('file-input-audit');
 
