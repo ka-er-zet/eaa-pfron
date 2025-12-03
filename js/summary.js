@@ -10,18 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 1. Calculate Stats
+    const stats = window.utils.getAuditStats(state);
     const results = state.results || {};
-    // Filter out headings, only keep actual tests
-    const tests = (state.tests || []).filter(t => t.type === 'test');
     
-    const failedTests = tests.filter(t => results[t.id]?.status === 'fail' || results[t.id]?.status === 'Niezaliczone');
-    const passedTests = tests.filter(t => results[t.id]?.status === 'pass' || results[t.id]?.status === 'Zaliczone');
-    const naTests = tests.filter(t => results[t.id]?.status === 'na' || results[t.id]?.status === 'Nie dotyczy');
-    const ntTests = tests.filter(t => results[t.id]?.status === 'nt' || results[t.id]?.status === 'Nietestowalne' || results[t.id]?.status === 'Nie do sprawdzenia');
-    
-    // "To Verify" = All tests - (Failed + Passed + NA + NT)
-    const processedIds = new Set([...failedTests, ...passedTests, ...naTests, ...ntTests].map(t => t.id));
-    const verifyTests = tests.filter(t => !processedIds.has(t.id));
+    const failedTests = stats.lists.failed;
+    const passedTests = stats.lists.passed;
+    const naTests = stats.lists.na;
+    const ntTests = stats.lists.nt;
+    const verifyTests = stats.lists.verify;
 
     // 2. Render Header
     document.getElementById('summary-product').innerText = state.product || 'Audyt Dostępności';
@@ -211,17 +207,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('export-csv-btn').addEventListener('click', () => {
-        let csv = `Produkt;${state.product}\n`;
+        const stats = window.utils.getAuditStats(state);
+        // Add BOM for Excel compatibility with UTF-8
+        let csv = '\uFEFF';
+        csv += `Produkt;${state.product}\n`;
         if (state.productDesc) csv += `Opis;${state.productDesc.replace(/[\n\r;]/g, ' ')}\n`;
         if (state.auditor) csv += `Audytor;${state.auditor}\n`;
         csv += `Data;${new Date().toLocaleString()}\n`;
-        csv += `Podsumowanie;${(state.executiveSummary || '').replace(/[\n\r;]/g, ' ')}\n\n`;
+        csv += `Wynik audytu;${stats.verdictLabel}\n`;
+        csv += `Statystyki;Zaliczone: ${stats.passed} | Niezaliczone: ${stats.failed} | Nie dotyczy: ${stats.na} | Nietestowalne: ${stats.nt} | Do sprawdzenia: ${stats.toVerify}\n`;
+        csv += `Komentarz audytora;${(state.executiveSummary || '').replace(/[\n\r;]/g, ' ')}\n\n`;
         csv += `ID;Tytuł;Wynik;Uwagi\n`;
 
-        state.tests.forEach(t => {
+        const tests = (state.tests || []).filter(t => t.type === 'test');
+        tests.forEach(t => {
             const res = state.results[t.id] || { status: 'not-tested', note: '' };
             const title = (t.title || '').replace(/[;\n\r]/g, ' ');
-            const status = (res.status || 'not-tested');
+            const status = window.utils.getStatusLabel(res.status);
             const note = (res.note || '').replace(/[;\n\r]/g, ' ');
             csv += `${t.id};${title};${status};${note}\n`;
         });
@@ -241,6 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function exportToODT(state) {
+        const stats = window.utils.getAuditStats(state);
         const zip = new JSZip();
         const reportTitle = `Raport: ${state.product}`;
 
@@ -281,7 +284,9 @@ document.addEventListener('DOMContentLoaded', () => {
             contentXml += `<text:p>Opis: ${window.utils.xmlEscape(state.productDesc)}</text:p>`;
         }
 
-        contentXml += `<text:p>Podsumowanie: ${window.utils.xmlEscape(state.executiveSummary || 'Brak')}</text:p>
+        contentXml += `<text:p>Wynik audytu: ${window.utils.xmlEscape(stats.verdictLabel)}</text:p>`;
+        contentXml += `<text:p>Statystyki: Zaliczone: ${stats.passed}, Niezaliczone: ${stats.failed}, Nie dotyczy: ${stats.na}, Nietestowalne: ${stats.nt}, Do sprawdzenia: ${stats.toVerify}</text:p>`;
+        contentXml += `<text:p>Komentarz audytora: ${window.utils.xmlEscape(state.executiveSummary || 'Brak')}</text:p>
             <text:h text:style-name="H1">Wyniki szczegółowe</text:h>
             <table:table table:name="ReportTable" table:style-name="Tbl1">
                 <table:table-column table:style-name="Tbl1.A"/>
@@ -297,12 +302,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     </table:table-row>
                 </table:table-header-rows>`;
 
-        state.tests.forEach(t => {
+        const tests = (state.tests || []).filter(t => t.type === 'test');
+        tests.forEach(t => {
             const res = state.results[t.id] || { status: 'brak', note: '' };
             contentXml += `<table:table-row>
                 <table:table-cell office:value-type="string"><text:p>${window.utils.xmlEscape(t.id)}</text:p></table:table-cell>
                 <table:table-cell office:value-type="string"><text:p>${window.utils.xmlEscape(t.title)}</text:p></table:table-cell>
-                <table:table-cell office:value-type="string"><text:p>${window.utils.xmlEscape(res.status || 'brak')}</text:p></table:table-cell>
+                <table:table-cell office:value-type="string"><text:p>${window.utils.xmlEscape(window.utils.getStatusLabel(res.status))}</text:p></table:table-cell>
                 <table:table-cell office:value-type="string"><text:p>${window.utils.xmlEscape(res.note || '')}</text:p></table:table-cell>
             </table:table-row>`;
         });

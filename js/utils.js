@@ -213,7 +213,7 @@ function generateEARL(state) {
     };
 
     // Assertions
-    const assertions = state.tests.map(t => {
+    const assertions = state.tests.filter(t => t.type === 'test').map(t => {
         const res = state.results[t.id] || { status: 'not-tested', note: '' };
         
         let outcome = 'earl:untested';
@@ -318,6 +318,61 @@ function parseEARL(earlData) {
 }
 
 /**
+ * Calculates audit statistics and verdict based on state.
+ * @param {Object} state The application state.
+ * @returns {Object} Stats object { total, passed, failed, na, nt, toVerify, verdict, verdictLabel }
+ */
+function getAuditStats(state) {
+    const results = state.results || {};
+    const tests = (state.tests || []).filter(t => t.type === 'test');
+    
+    const failedTests = tests.filter(t => results[t.id]?.status === 'fail' || results[t.id]?.status === 'Niezaliczone');
+    const passedTests = tests.filter(t => results[t.id]?.status === 'pass' || results[t.id]?.status === 'Zaliczone');
+    const naTests = tests.filter(t => results[t.id]?.status === 'na' || results[t.id]?.status === 'Nie dotyczy');
+    const ntTests = tests.filter(t => results[t.id]?.status === 'nt' || results[t.id]?.status === 'Nietestowalne' || results[t.id]?.status === 'Nie do sprawdzenia');
+    
+    // "To Verify" = All tests - (Failed + Passed + NA + NT)
+    const processedIds = new Set([...failedTests, ...passedTests, ...naTests, ...ntTests].map(t => t.id));
+    const verifyTests = tests.filter(t => !processedIds.has(t.id));
+
+    let verdict = 'in-progress';
+    let verdictLabel = 'NIEZAKOŃCZONY';
+
+    if (failedTests.length > 0) {
+        verdict = 'failed';
+        verdictLabel = 'NIEZALICZONY';
+    } else if (verifyTests.length > 0) {
+        verdict = 'in-progress';
+        verdictLabel = 'NIEZAKOŃCZONY';
+    } else {
+        verdict = 'passed';
+        if (passedTests.length === 0 && naTests.length > 0 && ntTests.length === 0) {
+            verdictLabel = 'BRAK NIEZGODNOŚCI';
+        } else {
+            verdictLabel = 'ZALICZONY';
+        }
+    }
+
+    return {
+        total: tests.length,
+        passed: passedTests.length,
+        failed: failedTests.length,
+        na: naTests.length,
+        nt: ntTests.length,
+        toVerify: verifyTests.length,
+        verdict,
+        verdictLabel,
+        lists: {
+            passed: passedTests,
+            failed: failedTests,
+            na: naTests,
+            nt: ntTests,
+            verify: verifyTests
+        }
+    };
+}
+
+/**
  * Fixes orphaned conjunctions in text by adding non-breaking spaces.
  * @param {string} text The text to fix.
  * @returns {string} The fixed text.
@@ -327,6 +382,20 @@ function fixOrphans(text) {
     // Replace space + single letter (a, i, o, u, w, z) + space with space + letter + &nbsp;
     // Case insensitive.
     return text.replace(/(\s|^)([aiouwzAIOWZ])\s+/g, '$1$2&nbsp;');
+}
+
+/**
+ * Returns the Polish label for a given status code.
+ * @param {string} status The status code (pass, fail, na, nt, etc.)
+ * @returns {string} The Polish label.
+ */
+function getStatusLabel(status) {
+    if (!status || status === 'not-tested' || status === 'brak') return 'Nie testowany';
+    if (status === 'pass' || status === 'Zaliczone') return 'Zaliczone';
+    if (status === 'fail' || status === 'Niezaliczone') return 'Niezaliczone';
+    if (status === 'na' || status === 'Nie dotyczy') return 'Nie dotyczy';
+    if (status === 'nt' || status === 'Nietestowalne' || status === 'Nie do sprawdzenia') return 'Nietestowalne';
+    return status;
 }
 
 // Expose functions globally
@@ -340,7 +409,9 @@ window.utils = {
     confirm: confirmModal,
     generateEARL,
     parseEARL,
-    fixOrphans
+    fixOrphans,
+    getAuditStats,
+    getStatusLabel
 };
 
 // Initialize theme on load

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'audyt-eaa-cache-v10';
+const CACHE_NAME = 'audyt-eaa-cache-v12';
 const urlsToCache = [
   './',
   './index.html',
