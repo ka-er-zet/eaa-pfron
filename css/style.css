@@ -667,6 +667,11 @@ main {
     margin-top: 1rem;
 }
 
+.scope-card i,
+.scope-card svg {
+    flex-shrink: 0;
+}
+
 /* Smaller top spacing for the first item in the scope grid so it sits closer to the section header */
 .scope-grid > .scope-item:first-child .scope-card {
     margin-top: 0.25rem;

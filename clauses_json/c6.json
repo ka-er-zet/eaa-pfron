@@ -33,7 +33,7 @@
         "legend": "Wybierz wynik dla C.6.1 Szerokość pasma sygnału mowy",
         "noteId": "notes-c-6-1"
       },
-      "evaluationType": "Measurement (Pomiar)"
+      "evaluationType": "Pomiar"
     },
     {
       "type": "heading",
@@ -82,7 +82,7 @@
         "legend": "Wybierz wynik dla C.6.2.1.1 Komunikacja RTT",
         "noteId": "notes-c-6-2-1-1"
       },
-      "evaluationType": "Inspection",
+      "evaluationType": "Inspekcja",
       "notes": [
         "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
@@ -119,7 +119,7 @@
         "legend": "Wybierz wynik dla C.6.2.1.2 Równoczesna komunikacja głosowa i&nbsp;tekstowa",
         "noteId": "notes-c-6-2-1-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -167,7 +167,7 @@
         "legend": "Wybierz wynik dla C.6.2.2.1 Wyświetlacz umożliwiający rozróżnianie tekstu",
         "noteId": "notes-c-6-2-2-1"
       },
-      "evaluationType": "Inspection",
+      "evaluationType": "Inspekcja",
       "notes": [
         "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
@@ -213,7 +213,7 @@
         "legend": "Wybierz wynik dla C.6.2.2.2 Możliwe do określenia programowo kierunku nadawania i&nbsp;odbioru",
         "noteId": "notes-c-6-2-2-2"
       },
-      "evaluationType": "Inspection",
+      "evaluationType": "Inspekcja",
       "notes": [
         "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
@@ -257,7 +257,7 @@
         "legend": "Wybierz wynik dla C.6.2.2.3 Identyfikacja mówcy",
         "noteId": "notes-c-6-2-2-3"
       },
-      "evaluationType": "Inspection",
+      "evaluationType": "Inspekcja",
       "notes": [
         "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
@@ -296,7 +296,7 @@
         "legend": "Wybierz wynik dla C.6.2.2.4 Wizualny wskaźnik audio połączonego z&nbsp;RTT",
         "noteId": "notes-c-6-2-2-4"
       },
-      "evaluationType": "Inspection",
+      "evaluationType": "Inspekcja",
       "notes": [
         "Zaleca się by wskaźnik migał w&nbsp;czasie rzeczywistym w&nbsp;sposób odzwierciedlający aktywność audio."
       ]
@@ -506,7 +506,7 @@
         "legend": "Wybierz wynik dla C.6.3 ID dzwoniącego",
         "noteId": "notes-c-6-3"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -541,7 +541,7 @@
         "legend": "Wybierz wynik dla C.6.4 Alternatywy dla usług głosowych",
         "noteId": "notes-c-6-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -584,7 +584,7 @@
         "legend": "Wybierz wynik dla C.6.5.2 Rozdzielczość",
         "noteId": "notes-c-6-5-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -618,7 +618,7 @@
         "legend": "Wybierz wynik dla C.6.5.3 Częstotliwość wyświetlania klatek",
         "noteId": "notes-c-6-5-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -652,7 +652,7 @@
         "legend": "Wybierz wynik dla C.6.5.4 Synchronizacja dźwięku i&nbsp;obrazu",
         "noteId": "notes-c-6-5-4"
       },
-      "evaluationType": "Measurement"
+      "evaluationType": "Pomiar"
     },
     {
       "type": "heading",
@@ -688,7 +688,7 @@
         "legend": "Wybierz wynik dla C.6.5.5 Wizualny wskaźnik audio połączonego z&nbsp;wideo",
         "noteId": "notes-c-6-5-5"
       },
-      "evaluationType": "Inspection",
+      "evaluationType": "Inspekcja",
       "notes": [
         "Zaleca się, by wskaźnik migał w&nbsp;czasie rzeczywistym w&nbsp;sposób odzwierciedlający aktywność audio."
       ]
@@ -726,7 +726,7 @@
         "legend": "Wybierz wynik dla C.6.5.6 Identyfikacja mówcy podczas komunikacji za pomocą wideo",
         "noteId": "notes-c-6-5-6"
       },
-      "evaluationType": "Measurement"
+      "evaluationType": "Pomiar"
     },
     {
       "type": "heading",

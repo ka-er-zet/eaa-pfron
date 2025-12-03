@@ -52,7 +52,7 @@
         "legend": "Wybierz wynik dla C.5.1.2.2 Technologia wspomagająca",
         "noteId": "notes-c-5-1-2-2"
       },
-      "evaluationType": "Testing",
+      "evaluationType": "Test",
       "derivations": {
         "sources": "^C\\.5\\.1\\.[3-6]",
         "mode": "strict-pass"
@@ -95,7 +95,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.1 Wyjście audio informacji wizualnych",
         "noteId": "notes-c-5-1-3-1"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -129,7 +129,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.2 Wyjściowy sygnał dźwiękowy zawierający mowę",
         "noteId": "notes-c-5-1-3-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "informative",
@@ -167,7 +167,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.4 Sterowanie przez użytkownika wyjściem mowy",
         "noteId": "notes-c-5-1-3-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -202,7 +202,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.5 Automatyczne przerwanie wyjścia mowy",
         "noteId": "notes-c-5-1-3-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -238,7 +238,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.6 Wyjście mowy dla treści nietekstowej",
         "noteId": "notes-c-5-1-3-6"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -272,7 +272,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.7 Wyjście mowy dla informacji wideo",
         "noteId": "notes-c-5-1-3-7"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -308,7 +308,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.8 Wejście maskowane",
         "noteId": "notes-c-5-1-3-8"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -345,7 +345,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.9 Prywatny dostęp do danych osobowych",
         "noteId": "notes-c-5-1-3-9"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -379,7 +379,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.10 Wyjście audio bez zakłóceń",
         "noteId": "notes-c-5-1-3-10"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -413,7 +413,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.11 Głośność odsłuchiwania treści prywatnych",
         "noteId": "notes-c-5-1-3-11"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -448,7 +448,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.12 Głośność głośnika",
         "noteId": "notes-c-5-1-3-12"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -482,7 +482,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.13 Przywracanie głośności",
         "noteId": "notes-c-5-1-3-13"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -519,7 +519,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.14 Języki mówione",
         "noteId": "notes-c-5-1-3-14"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -554,7 +554,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.15 Niewizualna identyfikacja błędu",
         "noteId": "notes-c-5-1-3-15"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -589,7 +589,7 @@
         "legend": "Wybierz wynik dla C.5.1.3.16 Pokwitowania, bilety i&nbsp;dane wyjściowe transakcji",
         "noteId": "notes-c-5-1-3-16"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -624,7 +624,7 @@
         "legend": "Wybierz wynik dla C.5.1.4 Funkcjonalności uniemożliwiające powiększanie tekstu",
         "noteId": "notes-c-5-1-4"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -657,7 +657,7 @@
         "legend": "Wybierz wynik dla C.5.1.5 Wyjście wizualne dla informacji dźwiękowych",
         "noteId": "notes-c-5-1-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -695,7 +695,7 @@
         "legend": "Wybierz wynik dla C.5.1.6.1 Funkcjonalność zamknięta",
         "noteId": "notes-c-5-1-6-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -729,7 +729,7 @@
         "legend": "Wybierz wynik dla C.5.1.6.2 Fokus",
         "noteId": "notes-c-5-1-6-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -762,7 +762,7 @@
         "legend": "Wybierz wynik dla C.5.1.7 Dostęp bez użycia mowy",
         "noteId": "notes-c-5-1-7"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -795,7 +795,7 @@
         "legend": "Wybierz wynik dla C.5.2 Aktywacja funkcji dostępności",
         "noteId": "notes-c-5-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -828,7 +828,7 @@
         "legend": "Wybierz wynik dla C.5.3 Biometria",
         "noteId": "notes-c-5-3"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "test",
@@ -856,7 +856,7 @@
         "legend": "Wybierz wynik dla Test 2 - Kontrola:",
         "noteId": "notes-c5-3-2"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -892,7 +892,7 @@
         "legend": "Wybierz wynik dla C.5.4 Zachowanie informacji o&nbsp;dostępności podczas konwersji",
         "noteId": "notes-c-5-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -930,7 +930,7 @@
         "legend": "Wybierz wynik dla C.5.5.1 Środki obsługi",
         "noteId": "notes-c-5-5-1"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -964,7 +964,7 @@
         "legend": "Wybierz wynik dla C.5.5.2 Rozpoznawalność części obsługiwanych",
         "noteId": "notes-c-5-5-2"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -1004,7 +1004,7 @@
         "legend": "Wybierz wynik dla C.5.6.1 Status dotyku lub dźwięku",
         "noteId": "notes-c-5-6-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1039,7 +1039,7 @@
         "legend": "Wybierz wynik dla C.5.6.2 Status wizualny",
         "noteId": "notes-c-5-6-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1074,7 +1074,7 @@
         "legend": "Wybierz wynik dla C.5.7 Ponowne wciśnięcie klawisza",
         "noteId": "notes-c-5-7"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -1111,7 +1111,7 @@
         "legend": "Wybierz wynik dla C.5.8 Akceptacja dwukrotnego kliknięcia klawisza",
         "noteId": "notes-c-5-8"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Test"
     },
     {
       "type": "heading",
@@ -1146,7 +1146,7 @@
         "legend": "Wybierz wynik dla C.5.9 Jednoczesne czynności użytkownika",
         "noteId": "notes-c-5-9"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     }
   ]
 }

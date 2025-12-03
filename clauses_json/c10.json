@@ -48,7 +48,7 @@
         "legend": "Wybierz wynik dla C.10.1.1.1 Treść nietekstowa",
         "noteId": "notes-c-10-1-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -87,7 +87,7 @@
         "legend": "Wybierz wynik dla C.10.1.2.1 Tylko audio lub tylko wideo (nagranie)",
         "noteId": "notes-c-10-1-2-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -121,7 +121,7 @@
         "legend": "Wybierz wynik dla C.10.1.2.2 Napisy rozszerzone (nagranie)",
         "noteId": "notes-c-10-1-2-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -155,7 +155,7 @@
         "legend": "Wybierz wynik dla C.10.1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)",
         "noteId": "notes-c-10-1-2-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -189,7 +189,7 @@
         "legend": "Wybierz wynik dla C.10.1.2.4 Napisy rozszerzone (na żywo)",
         "noteId": "notes-c-10-1-2-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -223,7 +223,7 @@
         "legend": "Wybierz wynik dla C.10.1.2.5 Audiodeskrypcja (nagranie)",
         "noteId": "notes-c-10-1-2-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -262,7 +262,7 @@
         "legend": "Wybierz wynik dla C.10.1.3.1 Informacje i&nbsp;relacje",
         "noteId": "notes-c-10-1-3-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -296,7 +296,7 @@
         "legend": "Wybierz wynik dla C.10.1.3.2 Zrozumiała kolejność",
         "noteId": "notes-c-10-1-3-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -330,7 +330,7 @@
         "legend": "Wybierz wynik dla C.10.1.3.3 Właściwości zmysłowe",
         "noteId": "notes-c-10-1-3-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -364,7 +364,7 @@
         "legend": "Wybierz wynik dla C.10.1.3.4 Orientacja",
         "noteId": "notes-c-10-1-3-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -398,7 +398,7 @@
         "legend": "Wybierz wynik dla C.10.1.3.5 Określenie pożądanej wartości",
         "noteId": "notes-c-10-1-3-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -437,7 +437,7 @@
         "legend": "Wybierz wynik dla C.10.1.4.1 Użycie koloru",
         "noteId": "notes-c-10-1-4-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -471,7 +471,7 @@
         "legend": "Wybierz wynik dla C.10.1.4.2 Kontrola odtwarzania dźwięku",
         "noteId": "notes-c-10-1-4-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -505,7 +505,7 @@
         "legend": "Wybierz wynik dla C.10.1.4.3 Kontrast (minimum)",
         "noteId": "notes-c-10-1-4-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -539,7 +539,7 @@
         "legend": "Wybierz wynik dla C.10.1.4.4 Zmiana rozmiaru tekstu",
         "noteId": "notes-c-10-1-4-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -573,7 +573,7 @@
         "legend": "Wybierz wynik dla C.10.1.4.5 Obrazy tekstu",
         "noteId": "notes-c-10-1-4-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -607,7 +607,7 @@
         "legend": "Wybierz wynik dla C.10.1.4.10 Dopasowanie do ekranu",
         "noteId": "notes-c-10-1-4-10"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -641,7 +641,7 @@
         "legend": "Wybierz wynik dla C.10.1.4.11 Kontrast elementów nietekstowych",
         "noteId": "notes-c-10-1-4-11"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -675,7 +675,7 @@
         "legend": "Wybierz wynik dla C.10.1.4.12 Odstępy w&nbsp;tekście",
         "noteId": "notes-c-10-1-4-12"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -709,7 +709,7 @@
         "legend": "Wybierz wynik dla C.10.1.4.13 Treść spod kursora lub fokusu",
         "noteId": "notes-c-10-1-4-13"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -753,7 +753,7 @@
         "legend": "Wybierz wynik dla C.10.2.1.1 Klawiatura",
         "noteId": "notes-c-10-2-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -787,7 +787,7 @@
         "legend": "Wybierz wynik dla C.10.2.1.2 Bez pułapki na klawiaturę",
         "noteId": "notes-c-10-2-1-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -821,7 +821,7 @@
         "legend": "Wybierz wynik dla C.10.2.1.4 Jednoznakowe skróty klawiaturowe",
         "noteId": "notes-c-10-2-1-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -860,7 +860,7 @@
         "legend": "Wybierz wynik dla C.10.2.2.1 Dostosowanie czasu",
         "noteId": "notes-c-10-2-2-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -894,7 +894,7 @@
         "legend": "Wybierz wynik dla C.10.2.2.2 Pauza, zatrzymanie, ukrycie",
         "noteId": "notes-c-10-2-2-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -933,7 +933,7 @@
         "legend": "Wybierz wynik dla C.10.2.3.1 Trzy błyski lub wartości poniżej progu",
         "noteId": "notes-c-10-2-3-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -972,7 +972,7 @@
         "legend": "Wybierz wynik dla C.10.2.4.2 Tytuł dokumentu",
         "noteId": "notes-c-10-2-4-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1006,7 +1006,7 @@
         "legend": "Wybierz wynik dla C.10.2.4.3 Kolejność fokusu",
         "noteId": "notes-c-10-2-4-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1040,7 +1040,7 @@
         "legend": "Wybierz wynik dla C.10.2.4.4 Cel łącza (w kontekście)",
         "noteId": "notes-c-10-2-4-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1074,7 +1074,7 @@
         "legend": "Wybierz wynik dla C.10.2.4.6 Nagłówki i&nbsp;etykiety",
         "noteId": "notes-c-10-2-4-6"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1108,7 +1108,7 @@
         "legend": "Wybierz wynik dla C.10.2.4.7 Widoczny fokus",
         "noteId": "notes-c-10-2-4-7"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1147,7 +1147,7 @@
         "legend": "Wybierz wynik dla C.10.2.5.1 Gesty dotykowe",
         "noteId": "notes-c-10-2-5-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1181,7 +1181,7 @@
         "legend": "Wybierz wynik dla C.10.2.5.2 Rezygnacja ze wskazania",
         "noteId": "notes-c-10-2-5-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1215,7 +1215,7 @@
         "legend": "Wybierz wynik dla C.10.2.5.3 Etykieta w&nbsp;nazwie",
         "noteId": "notes-c-10-2-5-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1249,7 +1249,7 @@
         "legend": "Wybierz wynik dla C.10.2.5.4 Aktywowanie ruchem",
         "noteId": "notes-c-10-2-5-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1293,7 +1293,7 @@
         "legend": "Wybierz wynik dla C.10.3.1.1 Język dokumentu",
         "noteId": "notes-c-10-3-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1327,7 +1327,7 @@
         "legend": "Wybierz wynik dla C.10.3.1.2 Język części",
         "noteId": "notes-c-10-3-1-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1366,7 +1366,7 @@
         "legend": "Wybierz wynik dla C.10.3.2.1 Po otrzymaniu fokusu",
         "noteId": "notes-c-10-3-2-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1400,7 +1400,7 @@
         "legend": "Wybierz wynik dla C.10.3.2.2 Podczas wprowadzania danych",
         "noteId": "notes-c-10-3-2-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1439,7 +1439,7 @@
         "legend": "Wybierz wynik dla C.10.3.3.1 Identyfikacja błędu",
         "noteId": "notes-c-10-3-3-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1473,7 +1473,7 @@
         "legend": "Wybierz wynik dla C.10.3.3.2 Etykiety lub instrukcje",
         "noteId": "notes-c-10-3-3-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1507,7 +1507,7 @@
         "legend": "Wybierz wynik dla C.10.3.3.3 Sugestie korekty błędów",
         "noteId": "notes-c-10-3-3-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1541,7 +1541,7 @@
         "legend": "Wybierz wynik dla C.10.3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)",
         "noteId": "notes-c-10-3-3-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1584,7 +1584,7 @@
         "legend": "Wybierz wynik dla C.10.4.1.1 Poprawność kodu",
         "noteId": "notes-c-10-4-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1617,7 +1617,7 @@
         "legend": "Wybierz wynik dla C.10.4.1.2 Nazwa, rola, wartość",
         "noteId": "notes-c-10-4-1-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1651,7 +1651,7 @@
         "legend": "Wybierz wynik dla C.10.4.1.3 Komunikaty o&nbsp;stanie",
         "noteId": "notes-c-10-4-1-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "informative",

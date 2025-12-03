@@ -28,7 +28,7 @@
         "1. TIK jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.1.1</a> Treść nietekstowa."
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#tresc-nietekstowa\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.1.1</a> Treść nietekstowa."
       ],
       "form": {
         "inputs": [
@@ -48,7 +48,7 @@
         "legend": "Wybierz wynik dla C.9.1.1.1 Treść nietekstowa",
         "noteId": "notes-c-9-1-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -67,7 +67,7 @@
         "1. TIK jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audio-only-and-video-only-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.1</a> Tylko audio lub tylko wideo (nagranie)."
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#tylko-audio-lub-tylko-wideo-nagranie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.1</a> Tylko audio lub tylko wideo (nagranie)."
       ],
       "form": {
         "inputs": [
@@ -87,7 +87,7 @@
         "legend": "Wybierz wynik dla C.9.1.2.1 Tylko audio lub tylko wideo (nagranie)",
         "noteId": "notes-c-9-1-2-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -101,7 +101,7 @@
         "1. TIK jest stroną internetową."
       ],
       "procedure": [
-        "11. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#captions-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.2</a> Napisy rozszerzone (nagranie)."
+        "11. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#napisy-rozszerzone-nagranie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.2</a> Napisy rozszerzone (nagranie)."
       ],
       "form": {
         "inputs": [
@@ -115,13 +115,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie). EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)."
           }
         ],
         "legend": "Wybierz wynik dla C.9.1.2.2 Napisy rozszerzone (nagranie)",
         "noteId": "notes-c-9-1-2-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -155,7 +155,7 @@
         "legend": "Wybierz wynik dla C.9.1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)",
         "noteId": "notes-c-9-1-2-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -189,7 +189,7 @@
         "legend": "Wybierz wynik dla C.9.1.2.4 Napisy rozszerzone (na żywo)",
         "noteId": "notes-c-9-1-2-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -217,13 +217,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie). EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)."
           }
         ],
         "legend": "Wybierz wynik dla C.9.1.2.5 Audiodeskrypcja (nagranie)",
         "noteId": "notes-c-9-1-2-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -262,7 +262,7 @@
         "legend": "Wybierz wynik dla C.9.1.3.1 Informacje i&nbsp;relacje",
         "noteId": "notes-c-9-1-3-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -296,7 +296,7 @@
         "legend": "Wybierz wynik dla C.9.1.3.2 Zrozumiała kolejność",
         "noteId": "notes-c-9-1-3-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -330,7 +330,7 @@
         "legend": "Wybierz wynik dla C.9.1.3.3 Właściwości zmysłowe",
         "noteId": "notes-c-9-1-3-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -358,13 +358,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.4 Orientacja."
           }
         ],
         "legend": "Wybierz wynik dla C.9.1.3.4 Orientacja",
         "noteId": "notes-c-9-1-3-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -398,7 +398,7 @@
         "legend": "Wybierz wynik dla C.9.1.3.5 Określenie pożądanej wartości",
         "noteId": "notes-c-9-1-3-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -437,7 +437,7 @@
         "legend": "Wybierz wynik dla C.9.1.4.1 Użycie koloru",
         "noteId": "notes-c-9-1-4-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -465,13 +465,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.2 Kontrola odtwarzania dźwięku. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.2 Kontrola odtwarzania dźwięku."
           }
         ],
         "legend": "Wybierz wynik dla C.9.1.4.2 Kontrola odtwarzania dźwięku",
         "noteId": "notes-c-9-1-4-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -505,7 +505,7 @@
         "legend": "Wybierz wynik dla C.9.1.4.3 Kontrast (minimum)",
         "noteId": "notes-c-9-1-4-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -540,7 +540,7 @@
         "legend": "Wybierz wynik dla C.9.1.4.4 Zmiana rozmiaru tekstu",
         "noteId": "notes-c-9-1-4-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -574,7 +574,7 @@
         "legend": "Wybierz wynik dla C.9.1.4.5 Obrazy tekstu",
         "noteId": "notes-c-9-1-4-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -608,7 +608,7 @@
         "legend": "Wybierz wynik dla C.9.1.4.10 Dopasowanie do ekranu",
         "noteId": "notes-c-9-1-4-10"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -642,7 +642,7 @@
         "legend": "Wybierz wynik dla C.9.1.4.11 Kontrast elementów nietekstowych",
         "noteId": "notes-c-9-1-4-11"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -676,7 +676,7 @@
         "legend": "Wybierz wynik dla C.9.1.4.12 Odstępy w&nbsp;tekście",
         "noteId": "notes-c-9-1-4-12"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -704,13 +704,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.13 Treść spod kursora."
           }
         ],
         "legend": "Wybierz wynik dla C.9.1.4.13 Treść spod kursora lub fokusu",
         "noteId": "notes-c-9-1-4-13"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -754,7 +754,7 @@
         "legend": "Wybierz wynik dla C.9.2.1.1 Klawiatura",
         "noteId": "notes-c-9-2-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -788,7 +788,7 @@
         "legend": "Wybierz wynik dla C.9.2.1.2 Bez pułapki na klawiaturę",
         "noteId": "notes-c-9-2-1-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -816,13 +816,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiaturowe. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiaturowe."
           }
         ],
         "legend": "Wybierz wynik dla C.9.2.1.4 Jednoznakowe skróty klawiaturowe",
         "noteId": "notes-c-9-2-1-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -861,7 +861,7 @@
         "legend": "Wybierz wynik dla C.9.2.2.1 Dostosowanie czasu",
         "noteId": "notes-c-9-2-2-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -895,7 +895,7 @@
         "legend": "Wybierz wynik dla C.9.2.2.2 Pauza, zatrzymanie, ukrycie",
         "noteId": "notes-c-9-2-2-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -928,13 +928,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.3.1 Trzy błyski lub wartości poniżej progu. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.3.1 Trzy błyski lub wartości poniżej progu."
           }
         ],
         "legend": "Wybierz wynik dla C.9.2.3.1 Trzy błyski lub wartości poniżej progu",
         "noteId": "notes-c-9-2-3-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -973,7 +973,7 @@
         "legend": "Wybierz wynik dla C.9.2.4.1 Możliwość pominięcia bloków",
         "noteId": "notes-c-9-2-4-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1007,7 +1007,7 @@
         "legend": "Wybierz wynik dla C.9.2.4.2 Tytuł strony",
         "noteId": "notes-c-9-2-4-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1041,7 +1041,7 @@
         "legend": "Wybierz wynik dla C.9.2.4.3 Kolejność fokusu",
         "noteId": "notes-c-9-2-4-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1069,13 +1069,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście). EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)."
           }
         ],
         "legend": "Wybierz wynik dla C.9.2.4.4 Cel łącza (w kontekście)",
         "noteId": "notes-c-9-2-4-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1109,7 +1109,7 @@
         "legend": "Wybierz wynik dla C.9.2.4.5 Wiele dróg",
         "noteId": "notes-c-9-2-4-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1143,7 +1143,7 @@
         "legend": "Wybierz wynik dla C.9.2.4.6 Nagłówki i&nbsp;etykiety",
         "noteId": "notes-c-9-2-4-6"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1177,7 +1177,7 @@
         "legend": "Wybierz wynik dla C.9.2.4.7 Widoczny fokus",
         "noteId": "notes-c-9-2-4-7"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1210,13 +1210,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.1 Gesty dotykowe. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.1 Gesty dotykowe."
           }
         ],
         "legend": "Wybierz wynik dla C.9.2.5.1 Gesty dotykowe",
         "noteId": "notes-c-9-2-5-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1250,7 +1250,7 @@
         "legend": "Wybierz wynik dla C.9.2.5.2 Rezygnacja ze wskazania",
         "noteId": "notes-c-9-2-5-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1284,7 +1284,7 @@
         "legend": "Wybierz wynik dla C.9.2.5.3 Etykieta w&nbsp;nazwie",
         "noteId": "notes-c-9-2-5-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1312,13 +1312,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.4 Aktywowanie ruchem."
           }
         ],
         "legend": "Wybierz wynik dla C.9.2.5.4 Aktywowanie ruchem",
         "noteId": "notes-c-9-2-5-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1362,7 +1362,7 @@
         "legend": "Wybierz wynik dla C.9.3.1.1 Język strony",
         "noteId": "notes-c-9-3-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1396,7 +1396,7 @@
         "legend": "Wybierz wynik dla C.9.3.1.2 Język części",
         "noteId": "notes-c-9-3-1-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1429,13 +1429,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu."
           }
         ],
         "legend": "Wybierz wynik dla C.9.3.2.1 Po otrzymaniu fokusu",
         "noteId": "notes-c-9-3-2-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1469,7 +1469,7 @@
         "legend": "Wybierz wynik dla C.9.3.2.2 Podczas wprowadzania danych",
         "noteId": "notes-c-9-3-2-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1503,7 +1503,7 @@
         "legend": "Wybierz wynik dla C.9.3.2.3 Spójna nawigacja",
         "noteId": "notes-c-9-3-2-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1537,7 +1537,7 @@
         "legend": "Wybierz wynik dla C.9.3.2.4 Spójna identyfikacja",
         "noteId": "notes-c-9-3-2-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1570,13 +1570,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 3.3.1 Identyfikacja błędu."
           }
         ],
         "legend": "Wybierz wynik dla C.9.3.3.1 Identyfikacja błędu",
         "noteId": "notes-c-9-3-3-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1610,7 +1610,7 @@
         "legend": "Wybierz wynik dla C.9.3.3.2 Etykiety lub instrukcje",
         "noteId": "notes-c-9-3-3-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1644,7 +1644,7 @@
         "legend": "Wybierz wynik dla C.9.3.3.3 Sugestie korekty błędów",
         "noteId": "notes-c-9-3-3-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1672,13 +1672,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych). EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)."
           }
         ],
         "legend": "Wybierz wynik dla C.9.3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)",
         "noteId": "notes-c-9-3-3-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1722,7 +1722,7 @@
         "legend": "Wybierz wynik dla C.9.4.1.1 Poprawność kodu",
         "noteId": "notes-c-9-4-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1756,7 +1756,7 @@
         "legend": "Wybierz wynik dla C.9.4.1.2 Nazwa, rola, wartość",
         "noteId": "notes-c-9-4-1-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -1784,13 +1784,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o&nbsp;stanie. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o&nbsp;stanie."
           }
         ],
         "legend": "Wybierz wynik dla C.9.4.1.3 Komunikaty o&nbsp;stanie",
         "noteId": "notes-c-9-4-1-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "informative",
@@ -1825,13 +1825,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. C.10 Dokumenty nieinternetowe"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.9.6 Wymagania zgodności WCAG 2.1",
         "noteId": "notes-c-9-6"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     }
   ]
 }

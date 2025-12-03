@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 clauseLi.className = 'nav-clause';
                 clauseLi.setAttribute('role', 'heading');
                 clauseLi.setAttribute('aria-level', '3');
-                clauseLi.innerText = currentClauseTitle;
+                clauseLi.innerHTML = window.utils.fixOrphans(currentClauseTitle);
                 ul.appendChild(clauseLi);
                 clauseHeaderInserted = true;
             }
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 li.className = 'nav-heading';
                 li.setAttribute('role', 'heading');
                 li.setAttribute('aria-level', item.level || 3);
-                li.innerText = item.title;
+                li.innerHTML = window.utils.fixOrphans(item.title);
                 ul.appendChild(li);
                 return;
             }
@@ -332,12 +332,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                 displayTitle = displayTitle.substring(baseId.length).replace(/^[\.\:\-\s]+/, '');
             }
 
+            // Prepare clean title for aria-label (remove HTML entities like &nbsp;)
+            const ariaLabelTitle = displayTitle.replace(/&nbsp;/g, ' ');
+
             // Accessibility & Keyboard Navigation
             // `a` elements are natively operable and focusable
             a.setAttribute('data-test-id', item.id);
-            a.setAttribute('aria-label', `Przejdź do testu ${item.id}: ${displayTitle}. Status: ${statusText}`);
+            a.setAttribute('aria-label', `Przejdź do testu ${item.id}: ${ariaLabelTitle}. Status: ${statusText}`);
             a.setAttribute('aria-controls', anchorDomId);
             if (active) a.setAttribute('aria-current', 'true');
+
+            // Apply orphan fix for visual rendering
+            displayTitle = window.utils.fixOrphans(displayTitle);
 
             const activate = (e) => {
                 if (e) e.preventDefault();
@@ -489,6 +495,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             wcagBadge = `<span class="${levelClass}">WCAG Poziom ${item.wcag}</span>`;
         }
 
+        let evaluationTypeBadge = '';
+        if (item.evaluationType) {
+             evaluationTypeBadge = `<span style="background-color: var(--slate-600); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;">${item.evaluationType}</span>`;
+        }
+
         // Evaluation Criteria (Form)
         let evaluationHtml = '';
         const isDerived = !!item.derivations;
@@ -508,8 +519,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 evaluationHtml += `
                     <div class="derived-status-wrapper" style="margin-bottom: 1rem;">
-                        <div class="eval-btn ${colorClass} selected" style="cursor: default; pointer-events: none; display: inline-flex;">
-                            <i data-lucide="${icon}" size="28" aria-hidden="true"></i>
+                        <div class="eval-btn ${colorClass} selected" style="cursor: default; pointer-events: none; display: inline-flex; flex-direction: row; align-items: center; gap: 0.75rem; padding: 1rem 2rem;">
+                            <i data-lucide="${icon}" size="24" aria-hidden="true"></i>
                             <strong>${label}</strong>
                         </div>
                         <p style="margin-top: 0.5rem; color: var(--muted-color);">Wynik wyliczony automatycznie.</p>
@@ -629,6 +640,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <header class="section-header">
                     <span class="audit-card-id">${item.id}</span> 
                     <h1 style="margin: 0;" id="${anchorDomId}-title">${cleanTitle}</h1>
+                    ${evaluationTypeBadge}
                     ${wcagBadge}
                 </header>
                 
@@ -649,9 +661,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                         ` : (res.status ? `
                         <div style="margin-top: 2rem;">
-                             <label style="color: var(--muted-color);">Automatyczny komentarz</label>
-                             <div class="informative" style="background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color);">
-                                ${res.note ? res.note.replace(/\n/g, '<br>') : 'Brak uwag.'}
+                             <div style="color: var(--muted-color); margin-bottom: 0.125rem; font-weight: bold;">Automatyczny komentarz</div>
+                             <div class="informative" style="background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin-top: 0;">
+                                ${res.note ? res.note.trim().replace(/\n/g, '<br>') : 'Brak uwag.'}
                              </div>
                         </div>
                         ` : '')}
@@ -814,6 +826,38 @@ document.addEventListener('DOMContentLoaded', async () => {
                     else if (statuses.every(s => s === 'Zaliczone' || s === 'pass')) {
                         newStatus = 'Zaliczone';
                     }
+                } else if (test.derivations.mode === 'any-subgroup-pass') {
+                    // Group sources by parent ID (up to last dot)
+                    const groups = {};
+                    sourceTests.forEach(t => {
+                        const parentId = t.id.substring(0, t.id.lastIndexOf('.'));
+                        if (!groups[parentId]) groups[parentId] = [];
+                        groups[parentId].push(t);
+                    });
+
+                    const groupStatuses = Object.values(groups).map(group => {
+                        const gStatuses = group.map(t => state.results[t.id]?.status);
+                        // Strict Pass Logic for Group
+                        if (gStatuses.some(s => s === 'Niezaliczone' || s === 'fail')) return 'Niezaliczone';
+                        if (gStatuses.some(s => s === 'Nie dotyczy' || s === 'na')) return 'Nie dotyczy';
+                        if (gStatuses.some(s => s === 'nt' || s === 'Nie do sprawdzenia')) return 'Nie do sprawdzenia';
+                        if (gStatuses.some(s => !s)) return null; // Pending
+                        if (gStatuses.every(s => s === 'Zaliczone' || s === 'pass')) return 'Zaliczone';
+                        return null;
+                    });
+
+                    // Any Pass Logic for Final Result
+                    if (groupStatuses.some(s => s === 'Zaliczone')) {
+                        newStatus = 'Zaliczone';
+                    } else if (groupStatuses.some(s => s === null)) {
+                        newStatus = null;
+                    } else if (groupStatuses.some(s => s === 'Nie do sprawdzenia')) {
+                        newStatus = 'Nie do sprawdzenia';
+                    } else if (groupStatuses.every(s => s === 'Nie dotyczy')) {
+                        newStatus = 'Nie dotyczy';
+                    } else {
+                        newStatus = 'Niezaliczone';
+                    }
                 }
 
                 // Apply if changed (allowing change to null)
@@ -896,6 +940,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     clauseId: clauseId,
                     title: title,
                     wcag: wcag,
+                    evaluationType: item.evaluationType || null,
                     preconditions: item.preconditions || [],
                     procedure: item.procedure || [],
                     form: item.form,
@@ -908,9 +953,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // This prevents "Heading X" followed immediately by "Test X" in the sidebar.
                 const lastItem = state.tests[state.tests.length - 1];
                 if (lastItem && lastItem.type === 'heading' && lastItem.title === title) {
-                    // Only remove the heading if it is not a main section (Level > 4)
-                    // Level 3 and 4 headings should remain to preserve document structure in the menu
-                    if ((lastItem.level || 3) > 4) {
+                    // Only remove the heading if it is not a main section (Level > 5)
+                    // Level 3, 4 and 5 headings should remain to preserve document structure in the menu
+                    if ((lastItem.level || 3) > 5) {
                         state.tests.pop();
                     } else {
                         // If we keep the heading, we should ensure the test title is slightly different or handled

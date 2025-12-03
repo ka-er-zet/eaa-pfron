@@ -43,7 +43,7 @@
         "legend": "Wybierz wynik dla C.8.1.2 Standardowe połączenia",
         "noteId": "notes-c-8-1-2"
       },
-      "evaluationType": "Inspection",
+      "evaluationType": "Inspekcja",
       "notes": [
         "Połączenia mogą być przewodowe lub bezprzewodowe."
       ]
@@ -56,7 +56,7 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Elementy sprzętowe TIK przekazują informacje wizualne za pomocą kodowania kolorami jako środka wskazującego działanie, prośby o&nbsp;odpowiedź lub w&nbsp;celu wyróżnienia elementu wizualnego."
+        "1. Elementy sprzętowe TIK przekazują informacje wizualne za&nbsp;pomocą kodowania kolorami jako środka do wskazania czynności, wywołania odpowiedzi lub wyróżnienia elementu wizualnego."
       ],
       "procedure": [
         "1. Sprawdź, czy jest dostępna alternatywna forma kodowania wizualnego."
@@ -79,7 +79,7 @@
         "legend": "Wybierz wynik dla C.8.1.3 Kolor",
         "noteId": "notes-c-8-1-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -119,13 +119,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.2.1.1 Zakres głośności mowy",
         "noteId": "notes-c-8-2-1-1"
       },
-      "evaluationType": "Inspection based on measurement data"
+      "evaluationType": "Inspekcja na podstawie danych pomiarowych"
     },
     {
       "type": "heading",
@@ -139,7 +139,7 @@
         "2. Sterowanie głośnością jest stopniowe."
       ],
       "procedure": [
-        "1. Zmierzyć poziom głośności (w dB) sygnału mowy przy najniższym ustawieniu głośności.",
+        "1. Zmierz poziom głośności (w dB) sygnału mowy przy najniższym ustawieniu głośności.",
         "2. Sprawdź, czy jeden krok pośredni zapewnia poziom o&nbsp;12 dB wyższy od najniższego poziomu głośności zmierzonego w&nbsp;kroku 1."
       ],
       "form": {
@@ -160,7 +160,7 @@
         "legend": "Wybierz wynik dla C.8.2.1.2 Stopniowa regulacja głośności",
         "noteId": "notes-c-8-2-1-2"
       },
-      "evaluationType": "Inspection based on measurement data"
+      "evaluationType": "Inspekcja na podstawie danych pomiarowych"
     },
     {
       "type": "heading",
@@ -178,7 +178,10 @@
         "1. Sprzęt TIK to stacjonarne urządzenie komunikacyjne z&nbsp;wyjściem dźwięku, które zazwyczaj jest trzymane przy uchu."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;TIA-1083-A [i.24]. wymagań zdefiniowanych w&nbsp;tej normie."
+        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;normą TIA-1083-A [i.24].",
+        "2. Sprawdź, czy wykonano pomiary zgodnie z ETSI ES 200 381‑1, które potwierdzają spełnienie wymagań tej normy.",
+        "3. Sprawdź, czy TIK jest oznaczony symbolem „T” określonym w ETSI ETS 300 381."
+
       ],
       "form": {
         "inputs": [
@@ -198,7 +201,7 @@
         "legend": "Wybierz wynik dla C.8.2.2.1 Urządzenia stacjonarne",
         "noteId": "notes-c-8-2-2-1"
       },
-      "evaluationType": "Inspection based on measurement data"
+      "evaluationType": "Inspekcja na podstawie danych pomiarowych"
     },
     {
       "type": "heading",
@@ -212,7 +215,7 @@
       ],
       "procedure": [
         "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;ANSI/IEEE C63.19 [i.1].",
-        "2. Sprawdź, czy TIK zapewniają środki sprzężenia magnetycznego z&nbsp;technologiami"
+        "2. Sprawdź, czy TIK zapewniają środki sprzężenia magnetycznego z&nbsp;technologiami wspomagającymi słyszenie, zgodnymi z normą ETSI ES 200 381-2"
       ],
       "form": {
         "inputs": [
@@ -226,18 +229,18 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.2.2.2 Urządzenia do komunikacji bezprzewodowej",
         "noteId": "notes-c-8-2-2-2"
       },
-      "evaluationType": "Inspection based on measurement data"
+      "evaluationType": "Inspekcja na podstawie danych pomiarowych"
     },
     {
       "type": "heading",
       "level": 3,
-      "text": "C.8.3 Stacjonarna ICT"
+      "text": "C.8.3 Stacjonarna TIK"
     },
     {
       "type": "informative",
@@ -275,7 +278,11 @@
         "legend": "Wybierz wynik dla C.8.3.1 Dostęp z&nbsp;przodu lub z&nbsp;boku",
         "noteId": "notes-c-8-3-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja",
+      "derivations": {
+        "sources": "^C\\.8\\.3\\.[2-3]",
+        "mode": "any-subgroup-pass"
+      }
     },
     {
       "type": "heading",
@@ -290,7 +297,7 @@
     {
       "type": "test",
       "preconditions": [
-        "1 TIK jest urządzeniem stacjonarnym.",
+        "1. TIK jest urządzeniem stacjonarnym.",
         "2. Żadna część stacjonarnej TIK nie utrudnia dostępu z&nbsp;przodu."
       ],
       "procedure": [
@@ -314,7 +321,7 @@
         "legend": "Wybierz wynik dla C.8.3.2.1 Nieograniczony dostęp z&nbsp;przodu, od góry",
         "noteId": "notes-c-8-3-2-1"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -342,13 +349,410 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.2.2 Nieograniczony dostęp z&nbsp;przodu, od dołu",
         "noteId": "notes-c-8-3-2-2"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.8.3.2.3 Ograniczony dostęp z przodu"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.2.3.1 Wolna powierzchnia podłogi"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Dostęp do części obsługiwanych jest ograniczony przeszkodą zintegrowaną z urządzeniem."
+      ],
+      "procedure": [
+        "1. Sprawdź czy TIK zapewnia wolną powierzchnię podłogi, która rozciąga się pod elementem utrudniającym dostęp na odległość nie mniejszą niż wymagana głębokość zasięgu nad przeszkodą."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.3.1 Wolna powierzchnia podłogi",
+        "noteId": "notes-c-8-3-2-3-1"
+      },
+      "evaluationType": "Inspekcja"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.2.3.2 Ograniczony (< 510 mm) dostęp z przodu"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Integralna część stacjonarnej TIK tworzy przeszkodę o głębokości mniejszej niż 510 mm (20 cali)."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy dostęp z przodu do wszystkich podstawowych części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad powierzchnią kontaktu z TIK."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.3.2 Ograniczony (< 510 mm) dostęp z przodu",
+        "noteId": "notes-c-8-3-2-3-2"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.2.3.3 Ograniczony (< 635 mm) dostęp z przodu"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Integralna część stacjonarnej TIK tworzy przeszkodę o głębokości mniejszej niż 510 mm (20 cali), ale nie większej niż 635 mm (25 cali)."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy dostęp z przodu do wszystkich podstawowych części obsługiwanych nie znajduje się wyżej niż 1 120 mm (44 cali) nad powierzchnią kontaktu z TIK."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.3.3 Ograniczony (< 635 mm) dostęp z przodu",
+        "noteId": "notes-c-8-3-2-3-3"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.8.3.2.4 Szerokość przestrzeni na kolana i stopy"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Przestrzeń pod przeszkodą zintegrowaną z TIK jest częścią przestrzeni dostępu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy szerokość przestrzeni na kolana jest większa niż 760 mm (30 cali).",
+        "2. Sprawdź, czy szerokość przestrzeni na stopy jest większa niż 760 mm (30 cali)."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1 i 2: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryteria 1 lub 2: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.4 Szerokość przestrzeni na kolana i stopy",
+        "noteId": "notes-c-8-3-2-4"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.8.3.2.5 Przestrzeń na stopy"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.2.5.a Przestrzeń na stopy (a)"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Występuje przeszkoda zintegrowana z urządzeniem TIK.",
+        "3. Pod jakąkolwiek przeszkodą zintegrowaną z urządzeniem TIK znajduje się przestrzeń, która jest mniejsza niż 230 mm (9 cali) nad podłogą."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy przestrzeń na stopy nie znajduje się niżej niż 635 mm (25 cali) pod przeszkodą."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.5.a Przestrzeń na stopy (a)",
+        "noteId": "notes-c-8-3-2-5-a"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.2.5.b Przestrzeń na stopy (b)"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Występuje przeszkoda zintegrowana z urządzeniem TIK.",
+        "3. Pod jakąkolwiek przeszkodą zintegrowaną z urządzeniem TIK znajduje się przestrzeń, która jest mniejsza niż 230 mm (9 cali) nad podłogą."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy przestrzeń na stopy znajduje się niżej niż 430 (17 cali) mm pod przeszkodą i 230 mm (9 cali) nad podłogą."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.5.b Przestrzeń na stopy (b)",
+        "noteId": "notes-c-8-3-2-5-b"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.2.5.c Przestrzeń na stopy (c)"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Występuje przeszkoda zintegrowana z urządzeniem TIK.",
+        "3. Pod jakąkolwiek przeszkodą zintegrowaną z urządzeniem TIK znajduje się przestrzeń, która jest mniejsza niż 230 mm (9 cali) nad podłogą."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy przestrzeń na stopy nie wykracza więcej niż 150 mm (6 cali) poza wszelkie przeszkody znajdujące się na wysokości 230 mm (9 cali) nad podłogą."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.5.c Przestrzeń na stopy (c)",
+        "noteId": "notes-c-8-3-2-5-c"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.8.3.2.6 Przestrzeń na kolana"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.2.6.a Przestrzeń na kolana (a)"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Występuje przeszkoda zintegrowana z urządzeniem TIK.",
+        "3. Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm (9 cali) do 685 mm (25 cali) nad podłogą."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy zapewniona jest przestrzeń na kolana, która sięga co najmniej 635 mm (25 cali) pod przeszkodą na wysokości 230 mm (9 cali) nad podłogą."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.6.a Przestrzeń na kolana (a)",
+        "noteId": "notes-c-8-3-2-6-a"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.2.6.b Przestrzeń na kolana (b)"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Występuje przeszkoda zintegrowana z urządzeniem TIK.",
+        "3. Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm (9 cali) do 685 mm (25 cali) nad podłogą."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy zapewniona jest przestrzeń na kolana, która sięga co najmniej 280 mm (11 cali) pod przeszkodą na wysokości 230 mm (9 cali) nad podłogą."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.6.b Przestrzeń na kolana (b)",
+        "noteId": "notes-c-8-3-2-6-b"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.2.6.c Przestrzeń na kolana (c)"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Występuje przeszkoda zintegrowana z urządzeniem TIK.",
+        "3. Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm (9 cali) do 685 mm (25 cali) nad podłogą."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy zapewniona jest przestrzeń na kolana, która sięga co najmniej 205 mm (9 cali) pod przeszkodą na wysokości 685 mm (25 cali) nad podłogą."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.6.c Przestrzeń na kolana (c)",
+        "noteId": "notes-c-8-3-2-6-c"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.2.6.d Przestrzeń na kolana (d)"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Występuje przeszkoda zintegrowana z urządzeniem TIK.",
+        "3. Przestrzeń na kolana pod przeszkodą znajduje się na wysokości od 230 mm (9 cali) do 685 mm (25 cali) nad podłogą."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy redukcja głębokości przestrzeni jest nie większa niż 25 mm (1 cal) na każde 150 mm (6 cali) wysokości."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.2.6.d Przestrzeń na kolana (d)",
+        "noteId": "notes-c-8-3-2-6-d"
+      },
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -381,13 +785,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.3.1 Nieograniczony dostęp z&nbsp;boku, od góry",
         "noteId": "notes-c-8-3-3-1"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -421,7 +825,80 @@
         "legend": "Wybierz wynik dla C.8.3.3.2 Nieograniczony dostęp z&nbsp;boku, od dołu",
         "noteId": "notes-c-8-3-3-2"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.8.3.3.3 Ograniczony dostęp z&nbsp;boku"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.3.3.1 Ograniczony (< 255 mm) dostęp z&nbsp;boku"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Występuje przeszkoda o głębokości mniejszej lub równej 255 mm (10 cali), która stanowi integralną część TIK."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy dostęp z&nbsp;boku, od góry do co najmniej jednego z&nbsp;każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą w&nbsp;przestrzeni dostępu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.3.3.1 Ograniczony (< 255 mm) dostęp z&nbsp;boku",
+        "noteId": "notes-c-8-3-3-3-1"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.3.3.2 Ograniczony (< 610 mm) dostęp z&nbsp;boku"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Występuje przeszkoda większa niż 255 mm (10 cali) i&nbsp;o głębokości nie większej niż 610 mm (24 cale), stanowiąca integralną część TIK."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy dostęp z&nbsp;boku, od góry do co najmniej jednego z&nbsp;każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 170 mm (46 cali) nad podłogą w&nbsp;przestrzeni dostępu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.3.3.2 Ograniczony (< 610 mm) dostęp z&nbsp;boku",
+        "noteId": "notes-c-8-3-3-3-2"
+      },
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -437,12 +914,13 @@
       "type": "test",
       "preconditions": [
         "1. TIK jest urządzeniem stacjonarnym.",
-        "2. TIK obejmuje swoim obszarem podłogę. 2N2). Poziom podłogi się zmienia."
+        "2. TIK obejmuje swoim obszarem podłogę.",
+        "3. Poziom podłogi się zmienia."
       ],
       "procedure": [
-        "1. Jeżeli zmiana poziomu jest spowodowana podjazdem, sprawdzić, czy nachylenie jest mniejsze niż 1:48.",
-        "2. Jeśli występuje pionowa zmiana poziomu podłogi, sprawdzić, czy jest ona równa 6,4 mm lub mniejsza.",
-        "3. Jeśli występuje pionowa lub nachylona zmiana poziomu podłogi, sprawdzić, czy nachylenie nie jest większe niż 1:2."
+        "1. Jeżeli zmiana poziomu jest spowodowana podjazdem, sprawdź, czy nachylenie jest mniejsze niż 1:48.",
+        "2. Jeśli występuje pionowa zmiana poziomu podłogi, sprawdź, czy jest ona równa 6,4 mm lub mniejsza.",
+        "3. Jeśli występuje pionowa lub nachylona zmiana poziomu podłogi, sprawdź, czy nachylenie nie jest większe niż 1:2."
       ],
       "form": {
         "inputs": [
@@ -462,7 +940,7 @@
         "legend": "Wybierz wynik dla C.8.3.4.1 Zmiana poziomu",
         "noteId": "notes-c-8-3-4-1"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -496,7 +974,118 @@
         "legend": "Wybierz wynik dla C.8.3.4.2 Pusta podłoga lub powierzchnia podłoża",
         "noteId": "notes-c-8-3-4-2"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.8.3.4.3 Podejście"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.4.3.1 Postanowienia ogólne"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym.",
+        "2. Przestrzeń dostępu jest integralną częścią TIK."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy jedna pełna strona przestrzeni jest wolna od przeszkód."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.4.3.1 Postanowienia ogólne",
+        "noteId": "notes-c-8-3-4-3-1"
+      },
+      "evaluationType": "Inspekcja"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.4.3.2 Podejście z&nbsp;przodu"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym, którego integralną część stanowi nisza.",
+        "2. Obszar działania znajduje się wewnątrz niszy.",
+        "3. Głębokość niszy jest większa niż 610 mm.",
+        "4. Dostęp z&nbsp;przodu jest niezbędny."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy szerokość niszy jest większa niż 915 mm."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2, 3 lub 4"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.4.3.2 Podejście z&nbsp;przodu",
+        "noteId": "notes-c-8-3-4-3-2"
+      },
+      "evaluationType": "Inspekcja i pomiar"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "C.8.3.4.3.3 Dostęp równoległy"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest urządzeniem stacjonarnym, którego integralną część stanowi nisza.",
+        "2. Obszar działania znajduje się wewnątrz niszy.",
+        "3. Głębokość niszy jest większa niż 380 mm.",
+        "4. Dostęp równoległy jest możliwy."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy szerokość przestrzeni dostępu jest większa niż 1 525 mm."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2, 3 lub 4"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.8.3.4.3.3 Dostęp równoległy",
+        "noteId": "notes-c-8-3-4-3-3"
+      },
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -524,13 +1113,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.8.3.5 Widoczność",
         "noteId": "notes-c-8-3-5"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -565,7 +1154,7 @@
         "legend": "Wybierz wynik dla C.8.3.6 Instrukcja montażu",
         "noteId": "notes-c-8-3-6"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -603,7 +1192,7 @@
         "legend": "Wybierz wynik dla C.8.4.1 Klawisze numeryczne",
         "noteId": "notes-c-8-4-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -635,13 +1224,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.8.4.2.1 Środki obsługi części mechanicznych",
         "noteId": "notes-c-8-4-2-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -674,7 +1263,7 @@
         "legend": "Wybierz wynik dla C.8.4.2.2 Siła wymagana do obsługi części mechanicznych",
         "noteId": "notes-c-8-4-2-2"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -707,7 +1296,7 @@
         "legend": "Wybierz wynik dla C.8.4.3 Klucze, bilety i&nbsp;karty taryfowe",
         "noteId": "notes-c-8-4-3"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     },
     {
       "type": "heading",
@@ -735,13 +1324,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2. C.9 Internet"
+            "label": "Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
         "legend": "Wybierz wynik dla C.8.5 Oznaczenia dotykowe w&nbsp;trybie mowy",
         "noteId": "notes-c-8-5"
       },
-      "evaluationType": "Inspection and measurement"
+      "evaluationType": "Inspekcja i pomiar"
     }
   ]
 }

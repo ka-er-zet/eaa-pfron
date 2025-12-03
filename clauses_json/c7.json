@@ -35,7 +35,7 @@
         "legend": "Wybierz wynik dla C.7.1.1 Odtwarzanie napisów",
         "noteId": "notes-c-7-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "test",
@@ -64,7 +64,7 @@
         "legend": "Wybierz wynik dla C.7.1.1 Odtwarzanie napisów",
         "noteId": "notes-c-7-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -97,7 +97,7 @@
         "legend": "Wybierz wynik dla C.7.1.2 Synchronizacja napisów",
         "noteId": "notes-c-7-1-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -124,13 +124,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.7.1.3 Zachowanie zasad tworzenia napisów",
         "noteId": "notes-c-7-1-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -164,7 +164,7 @@
         "legend": "Wybierz wynik dla C.7.1.4 Cechy napisów",
         "noteId": "notes-c-7-1-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -198,7 +198,7 @@
         "legend": "Wybierz wynik dla C.7.1.5 Odczytywane napisy",
         "noteId": "notes-c-7-1-5"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -232,13 +232,13 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.7.2.1 Odtwarzanie audiodeskrypcji",
         "noteId": "notes-c-7-2-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -271,7 +271,7 @@
         "legend": "Wybierz wynik dla C.7.2.2 Synchronizacja audiodeskrypcji",
         "noteId": "notes-c-7-2-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -281,7 +281,7 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK konwertuje lub rejestruje wideo z&nbsp;synchronizowanym obrazem."
+        "1. TIK przesyła, przetwarza lub zapisuje wideo zsynchronizowane z&nbspdźwiękiem."
       ],
       "procedure": [
         "1. Sprawdź, czy TIK zachowuje dane audiodeskrypcji w&nbsp;taki sposób, aby można je było odtwarzać zgodnie z&nbsp;Rozdziałami 7.2.1 i&nbsp;7.2.2."
@@ -304,7 +304,7 @@
         "legend": "Wybierz wynik dla C.7.2.3 Zachowywanie audiodeskrypcji",
         "noteId": "notes-c-7-2-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -314,10 +314,10 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK służy przede wszystkim wyświetla materiały wideo i&nbsp;towarzyszący dźwięk."
+        "1. TIK przede wszystkim wyświetla materiały zawierające wideo z&nbsp;towarzyszącą treścią audio"
       ],
       "procedure": [
-        "1. Sprawdź, czy elementy sterujące do aktywacji napisów i&nbsp;audiodeskrypcji są dostępne dla użytkownika na tym samym poziomie interakcji co elementy sterujące głównymi multimediami."
+        "1. Sprawdź, czy elementy sterujące dla włączania napisów i&nbsp;audiodeskrypcji są udostępnione użytkownikowi na&nbsp;tym samym poziomie interakcji co&nbsp;podstawowe elementy sterujące multimediami."
       ],
       "form": {
         "inputs": [
@@ -337,7 +337,7 @@
         "legend": "Wybierz wynik dla C.7.3 Sterowanie napisami i&nbsp;audiodeskrypcją",
         "noteId": "notes-c-7-3"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     }
   ]
 }

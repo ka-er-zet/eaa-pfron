@@ -38,7 +38,7 @@
         "legend": "Wybierz wynik dla C.12.1.1 Funkcje dostępności i&nbsp;zgodności",
         "noteId": "notes-c-12-1-1"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -71,7 +71,7 @@
         "legend": "Wybierz wynik dla C.12.1.2 Dostępność dokumentacji",
         "noteId": "notes-c-12-1-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -118,7 +118,7 @@
         "legend": "Wybierz wynik dla C.12.2.2 Informacje o&nbsp;funkcjach dostępności i&nbsp;zgodności",
         "noteId": "notes-c-12-2-2"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     },
     {
       "type": "heading",
@@ -151,7 +151,7 @@
         "legend": "Wybierz wynik dla C.12.2.3 Efektywna komunikacja",
         "noteId": "notes-c-12-2-3"
       },
-      "evaluationType": "Inspection",
+      "evaluationType": "Inspekcja",
       "notes": [
         "Zapewnienie na dowolnym poziomie wsparcia dla potrzeb komunikacyjnych osób niepełnosprawnych stanowi podstawę tego wymagania. Dostawcy mogą chcieć dostarczyć dalsze informacje na temat pozio- mu wsparcia, który jest zapewniany, aby umożliwić ocenę adekwatności i&nbsp;jakości wsparcia."
       ]
@@ -187,7 +187,7 @@
         "legend": "Wybierz wynik dla C.12.2.4 Dostępność dokumentacji",
         "noteId": "notes-c-12-2-4"
       },
-      "evaluationType": "Inspection"
+      "evaluationType": "Inspekcja"
     }
   ]
 }
