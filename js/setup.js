@@ -67,7 +67,71 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    async function startAudit() {
+    // Handle Ctrl+S to save configuration
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+            saveConfiguration();
+        }
+    });
+
+    function saveConfiguration() {
+        const nameInput = document.getElementById('product-name');
+        const descInput = document.getElementById('product-desc');
+        const auditorInput = document.getElementById('auditor-name');
+        const selectedCheckboxes = document.querySelectorAll('input[name="clauses"]:checked');
+        
+        const name = nameInput.value.trim();
+        const desc = descInput ? descInput.value.trim() : '';
+        const auditor = auditorInput ? auditorInput.value.trim() : '';
+        const clausesToLoad = Array.from(selectedCheckboxes).map(cb => cb.value);
+
+        // Basic validation for save
+        if (!name || clausesToLoad.length === 0) {
+            // Trigger standard validation UI
+            startAudit(true); // Pass true to only validate/show errors
+            return;
+        }
+
+        const initialState = {
+            product: name,
+            productDesc: desc,
+            auditor: auditor,
+            clauses: clausesToLoad,
+            tests: [],
+            results: {},
+            currentIdx: 0
+        };
+
+        // Generate EARL
+        const report = window.utils.generateEARL(initialState);
+        
+        // Download
+        const date = new Date().toISOString().split('T')[0];
+        const safeName = name.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+        const filename = `config_eaa_${safeName}_${date}.json`;
+        
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(report, null, 2));
+        const downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute("href", dataStr);
+        downloadAnchorNode.setAttribute("download", filename);
+        document.body.appendChild(downloadAnchorNode);
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+
+        // Feedback
+        let liveRegion = document.getElementById('a11y-live-region');
+        if (!liveRegion) {
+            liveRegion = document.createElement('div');
+            liveRegion.id = 'a11y-live-region';
+            liveRegion.className = 'visually-hidden';
+            liveRegion.setAttribute('aria-live', 'polite');
+            document.body.appendChild(liveRegion);
+        }
+        liveRegion.innerText = 'Zapisano konfigurację audytu.';
+    }
+
+    async function startAudit(validateOnly = false) {
         const nameInput = document.getElementById('product-name');
         const descInput = document.getElementById('product-desc');
         const auditorInput = document.getElementById('auditor-name');
@@ -121,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hasError = true;
         }
 
-        if (hasError) return;
+        if (hasError || validateOnly) return;
 
         const clausesToLoad = Array.from(selectedCheckboxes).map(cb => cb.value);
 

@@ -60,6 +60,41 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Load State immediately to ensure it's available for event listeners
     const state = window.utils.loadState();
 
+    // Helper to generate filename for state export
+    const getAuditFilename = () => {
+        const date = new Date().toISOString().split('T')[0];
+        const product = (state.product || 'audit').replace(/[^a-z0-9]/gi, '_').toLowerCase();
+        return `audit_earl_${product}_${date}.json`;
+    };
+
+    // Handle Ctrl+S / Cmd+S to save
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+            
+            // 1. Save to localStorage
+            window.utils.saveState(state);
+
+            // 2. Generate EARL Report
+            const earlReport = window.utils.generateEARL(state);
+
+            // 3. Download State as JSON (EARL format)
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(earlReport, null, 2));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", getAuditFilename());
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+            
+            // 4. Accessible Feedback (Screen Reader Only)
+            const liveRegion = document.getElementById('audit-status-live');
+            if (liveRegion) {
+                liveRegion.innerText = 'Zapisano postęp audytu i pobrano plik EARL.';
+            }
+        }
+    });
+
     // Handle Home Link Click
     const homeLink = document.getElementById('app-logo');
     if (homeLink) {
@@ -276,10 +311,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 color = 'var(--na-color)';
                 statusText = 'Nie dotyczy';
             }
-            if (res.status === 'nt') {
+            if (res.status === 'nt' || res.status === 'Nie do sprawdzenia') {
                 icon = 'help-circle';
                 color = 'var(--nt-color)';
-                statusText = 'Nietestowalne';
+                statusText = 'Nie do sprawdzenia';
             }
 
             const li = document.createElement('li');
@@ -456,89 +491,128 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Evaluation Criteria (Form)
         let evaluationHtml = '';
-        if (item.form && item.form.inputs) {
-            evaluationHtml = `<fieldset class="evaluation-criteria" style="border: none; padding: 0; margin: 0;">
-                <legend class="visually-hidden">Ocena kryteriów</legend>`;
-            const safeTestId = sanitizeForDomId(item.id);
-            item.form.inputs.forEach(input => {
+        const isDerived = !!item.derivations;
+
+        if (isDerived) {
+             // Derived Test View
+             const status = res.status;
+             if (status) {
                 let icon = 'circle';
                 let colorClass = '';
-                if (input.value === 'Zaliczone' || input.value === 'pass') { icon = 'check'; colorClass = 'pass'; }
-                if (input.value === 'Niezaliczone' || input.value === 'fail') { icon = 'x'; colorClass = 'fail'; }
-                if (input.value === 'Nie dotyczy' || input.value === 'na') { icon = 'minus'; colorClass = 'na'; }
+                let label = status;
 
-                const isSelected = res.status === input.value;
-                const inputId = `eval-${safeTestId}-${sanitizeForDomId(input.value)}`;
+                if (status === 'Zaliczone' || status === 'pass') { icon = 'check'; colorClass = 'pass'; label = 'Zaliczone'; }
+                else if (status === 'Niezaliczone' || status === 'fail') { icon = 'x'; colorClass = 'fail'; label = 'Niezaliczone'; }
+                else if (status === 'Nie dotyczy' || status === 'na') { icon = 'minus'; colorClass = 'na'; label = 'Nie dotyczy'; }
+                else if (status === 'nt' || status === 'Nie do sprawdzenia') { icon = 'help-circle'; colorClass = 'nt'; label = 'Nie do sprawdzenia'; }
 
                 evaluationHtml += `
-                    <div class="criteria-option-wrapper">
-                        <input type="radio" id="${inputId}" name="eval-${safeTestId}" value="${input.value}" 
-                               class="visually-hidden criteria-radio" 
-                               ${isSelected ? 'checked' : ''} 
-                               onchange="setResult('${item.id}', '${input.value}')">
-                        <label for="${inputId}" class="criteria-option ${colorClass} ${isSelected ? 'selected' : ''}">
-                            <div class="criteria-header">
-                                <i data-lucide="${icon}" aria-hidden="true"></i>
-                                <strong>${input.value.toUpperCase()}</strong>
-                            </div>
-                            <div class="criteria-text">${input.label}</div>
-                        </label>
+                    <div class="derived-status-wrapper" style="margin-bottom: 1rem;">
+                        <div class="eval-btn ${colorClass} selected" style="cursor: default; pointer-events: none; display: inline-flex;">
+                            <i data-lucide="${icon}" size="28" aria-hidden="true"></i>
+                            <strong>${label}</strong>
+                        </div>
+                        <p style="margin-top: 0.5rem; color: var(--muted-color);">Wynik wyliczony automatycznie.</p>
                     </div>
                 `;
-            });
-            evaluationHtml += `</fieldset>`;
+             } else {
+                 evaluationHtml += `
+                    <div class="informative" style="border-left-color: var(--muted-color);">
+                        <p>Wynik tego testu zostanie wyliczony automatycznie po uzupełnieniu powiązanych testów.</p>
+                    </div>
+                 `;
+             }
         } else {
-            // Fallback to old grid if no form data
-            evaluationHtml = `
-            <fieldset class="eval-grid" style="border: none; padding: 0; margin: 1rem 0 0 0;">
-                <legend class="visually-hidden">Ocena wyniku testu</legend>
-                
-                  <div class="eval-btn-wrapper">
-                      <input type="radio" id="eval-${sanitizeForDomId(item.id)}-pass" name="eval-${sanitizeForDomId(item.id)}" value="Zaliczone" 
-                           class="visually-hidden eval-radio" ${res.status === 'Zaliczone' || res.status === 'pass' ? 'checked' : ''}
-                          onchange="setResult('${item.id}', 'Zaliczone')">
-                      <label for="eval-${sanitizeForDomId(item.id)}-pass" class="eval-btn pass ${res.status === 'Zaliczone' || res.status === 'pass' ? 'selected' : ''}">
-                        <i data-lucide="check" size="28" aria-hidden="true"></i>
-                        <strong>Zaliczone</strong>
-                    </label>
-                </div>
+            // Standard Manual Entry
+            const disabledAttr = ''; 
+            const disabledStyle = '';
 
-                <div class="eval-btn-wrapper">
-                          <input type="radio" id="eval-${sanitizeForDomId(item.id)}-fail" name="eval-${sanitizeForDomId(item.id)}" value="Niezaliczone" 
-                           class="visually-hidden eval-radio" ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'checked' : ''}
-                              onchange="setResult('${item.id}', 'Niezaliczone')">
-                          <label for="eval-${sanitizeForDomId(item.id)}-fail" class="eval-btn fail ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'selected' : ''}">
-                        <i data-lucide="x" size="28" aria-hidden="true"></i>
-                        <strong>Niezaliczone</strong>
-                    </label>
-                </div>
+            if (item.form && item.form.inputs) {
+                evaluationHtml += `<fieldset class="evaluation-criteria" style="border: none; padding: 0; margin: 0;">
+                    <legend class="visually-hidden">Ocena kryteriów</legend>`;
+                const safeTestId = sanitizeForDomId(item.id);
+                item.form.inputs.forEach(input => {
+                    let icon = 'circle';
+                    let colorClass = '';
+                    if (input.value === 'Zaliczone' || input.value === 'pass') { icon = 'check'; colorClass = 'pass'; }
+                    if (input.value === 'Niezaliczone' || input.value === 'fail') { icon = 'x'; colorClass = 'fail'; }
+                    if (input.value === 'Nie dotyczy' || input.value === 'na') { icon = 'minus'; colorClass = 'na'; }
+                    if (input.value === 'nt' || input.value === 'Nie do sprawdzenia') { icon = 'help-circle'; colorClass = 'nt'; }
 
-                <div class="eval-btn-wrapper">
-                          <input type="radio" id="eval-${sanitizeForDomId(item.id)}-na" name="eval-${sanitizeForDomId(item.id)}" value="Nie dotyczy" 
-                           class="visually-hidden eval-radio" ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'checked' : ''}
-                              onchange="setResult('${item.id}', 'Nie dotyczy')">
-                          <label for="eval-${sanitizeForDomId(item.id)}-na" class="eval-btn na ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'selected' : ''}">
-                        <i data-lucide="minus" size="28" aria-hidden="true"></i>
-                        <strong>Nie dotyczy</strong>
-                    </label>
-                </div>
+                    const isSelected = res.status === input.value;
+                    const inputId = `eval-${safeTestId}-${sanitizeForDomId(input.value)}`;
 
-                <div class="eval-btn-wrapper">
-                          <input type="radio" id="eval-${sanitizeForDomId(item.id)}-nt" name="eval-${sanitizeForDomId(item.id)}" value="nt" 
-                           class="visually-hidden eval-radio" ${res.status === 'nt' ? 'checked' : ''}
-                              onchange="setResult('${item.id}', 'nt')">
-                          <label for="eval-${sanitizeForDomId(item.id)}-nt" class="eval-btn nt ${res.status === 'nt' ? 'selected' : ''}">
-                        <i data-lucide="help-circle" size="28" aria-hidden="true"></i>
-                        <strong>Nietestowalne</strong>
-                    </label>
-                </div>
-            </fieldset>`;
+                    evaluationHtml += `
+                        <div class="criteria-option-wrapper">
+                            <input type="radio" id="${inputId}" name="eval-${safeTestId}" value="${input.value}" 
+                                   class="visually-hidden criteria-radio" 
+                                   ${isSelected ? 'checked' : ''} 
+                                   onchange="setResult('${item.id}', '${input.value}')">
+                            <label for="${inputId}" class="criteria-option ${colorClass} ${isSelected ? 'selected' : ''}">
+                                <div class="criteria-header">
+                                    <i data-lucide="${icon}" aria-hidden="true"></i>
+                                    <strong>${input.value.toUpperCase()}</strong>
+                                </div>
+                                <div class="criteria-text">${input.label}</div>
+                            </label>
+                        </div>
+                    `;
+                });
+                evaluationHtml += `</fieldset>`;
+            } else {
+                // Fallback to old grid if no form data
+                evaluationHtml += `
+                <fieldset class="eval-grid" style="border: none; padding: 0; margin: 1rem 0 0 0;">
+                    <legend class="visually-hidden">Ocena wyniku testu</legend>
+                    
+                      <div class="eval-btn-wrapper">
+                          <input type="radio" id="eval-${sanitizeForDomId(item.id)}-pass" name="eval-${sanitizeForDomId(item.id)}" value="Zaliczone" 
+                               class="visually-hidden eval-radio" ${res.status === 'Zaliczone' || res.status === 'pass' ? 'checked' : ''}
+                              onchange="setResult('${item.id}', 'Zaliczone')">
+                          <label for="eval-${sanitizeForDomId(item.id)}-pass" class="eval-btn pass ${res.status === 'Zaliczone' || res.status === 'pass' ? 'selected' : ''}">
+                            <i data-lucide="check" size="28" aria-hidden="true"></i>
+                            <strong>Zaliczone</strong>
+                        </label>
+                    </div>
+
+                    <div class="eval-btn-wrapper">
+                              <input type="radio" id="eval-${sanitizeForDomId(item.id)}-fail" name="eval-${sanitizeForDomId(item.id)}" value="Niezaliczone" 
+                               class="visually-hidden eval-radio" ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'checked' : ''}
+                                  onchange="setResult('${item.id}', 'Niezaliczone')">
+                              <label for="eval-${sanitizeForDomId(item.id)}-fail" class="eval-btn fail ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'selected' : ''}">
+                            <i data-lucide="x" size="28" aria-hidden="true"></i>
+                            <strong>Niezaliczone</strong>
+                        </label>
+                    </div>
+
+                    <div class="eval-btn-wrapper">
+                              <input type="radio" id="eval-${sanitizeForDomId(item.id)}-na" name="eval-${sanitizeForDomId(item.id)}" value="Nie dotyczy" 
+                               class="visually-hidden eval-radio" ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'checked' : ''}
+                                  onchange="setResult('${item.id}', 'Nie dotyczy')">
+                              <label for="eval-${sanitizeForDomId(item.id)}-na" class="eval-btn na ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'selected' : ''}">
+                            <i data-lucide="minus" size="28" aria-hidden="true"></i>
+                            <strong>Nie dotyczy</strong>
+                        </label>
+                    </div>
+
+                    <div class="eval-btn-wrapper">
+                              <input type="radio" id="eval-${sanitizeForDomId(item.id)}-nt" name="eval-${sanitizeForDomId(item.id)}" value="Nie do sprawdzenia" 
+                               class="visually-hidden eval-radio" ${res.status === 'nt' || res.status === 'Nie do sprawdzenia' ? 'checked' : ''}
+                                  onchange="setResult('${item.id}', 'Nie do sprawdzenia')">
+                              <label for="eval-${sanitizeForDomId(item.id)}-nt" class="eval-btn nt ${res.status === 'nt' || res.status === 'Nie do sprawdzenia' ? 'selected' : ''}">
+                            <i data-lucide="help-circle" size="28" aria-hidden="true"></i>
+                            <strong>Nie do sprawdzenia</strong>
+                        </label>
+                    </div>
+                </fieldset>`;
+            }
         }
 
         // Build a safe DOM id for the content matching the anchor used in the nav
         const anchorDomId = `test-${sanitizeForDomId(item.id)}`;
 
         // Ensure all other tests have hidden anchors, but remove the anchor for THIS test so we can use the ID on the article
+        // We do this BEFORE updating innerHTML to ensure no duplicate IDs exist even for a microsecond
         ensureFragmentAnchors(state.tests, anchorDomId);
 
         // Clean title for H1 (remove ID if present at start)
@@ -550,7 +624,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         container.innerHTML = `
-            <article class="mb-2" tabindex="-1" role="region" aria-labelledby="${anchorDomId}-title" ${!document.getElementById(anchorDomId) ? `id="${anchorDomId}"` : ''}>
+            <article class="mb-2" tabindex="-1" role="region" aria-labelledby="${anchorDomId}-title" id="${anchorDomId}">
                 <header class="section-header">
                     <span class="audit-card-id">${item.id}</span> 
                     <h1 style="margin: 0;" id="${anchorDomId}-title">${cleanTitle}</h1>
@@ -567,10 +641,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                         ${evaluationHtml}
 
+                        ${!isDerived ? `
                         <div style="margin-top: 2rem;">
                             <label for="note-${sanitizeForDomId(item.id)}" style="color: var(--muted-color);">Uwagi / Obserwacje</label>
                             <textarea id="note-${sanitizeForDomId(item.id)}" rows="4" oninput="updateNote('${item.id}', this.value)">${res.note}</textarea>
                         </div>
+                        ` : (res.status ? `
+                        <div style="margin-top: 2rem;">
+                             <label style="color: var(--muted-color);">Automatyczny komentarz</label>
+                             <div class="informative" style="background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color);">
+                                ${res.note ? res.note.replace(/\n/g, '<br>') : 'Brak uwag.'}
+                             </div>
+                        </div>
+                        ` : '')}
                     </form>
                     <div id="audit-status-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
                 </div>
@@ -615,15 +698,138 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     window.setResult = function (id, status) {
         state.results[id].status = status;
+        
+        // Handle Implications (Forward)
+        const test = state.tests.find(t => t.id === id);
+        if (test && test.implications && test.implications.length > 0) {
+            test.implications.forEach(imp => {
+                if (imp.whenStatus === status) {
+                    let regex;
+                    try {
+                        regex = new RegExp(imp.targetScope);
+                    } catch (e) {
+                        console.error("Invalid regex in implication:", imp.targetScope);
+                        return;
+                    }
+
+                    state.tests.forEach(target => {
+                        if (target.type === 'test' && target.id !== id) {
+                            if (regex.test(target.id)) {
+                                if (!state.results[target.id]) state.results[target.id] = { status: null, note: '' };
+                                
+                                if (imp.setStatus) {
+                                    state.results[target.id].status = imp.setStatus;
+                                }
+                                
+                                if (imp.setNote) {
+                                    const currentNote = state.results[target.id].note || '';
+                                    if (!currentNote.includes(imp.setNote)) {
+                                        state.results[target.id].note = currentNote ? currentNote + '\n' + imp.setNote : imp.setNote;
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        // Handle Derivations (Reverse/Computed)
+        evaluateDerivations();
+
         window.utils.saveState(state);
         // Announce the change for screen readers via an aria-live region
         const liveRegion = document.getElementById('audit-status-live');
         if (liveRegion) {
             liveRegion.innerText = `Wynik testu ${id} ustawiony: ${status}`;
         }
-        renderNav();
+        // renderNav(); // Removed redundant call - renderTest calls it anyway
         renderTest(state.currentIdx);
     };
+
+    function evaluateDerivations() {
+        state.tests.forEach(test => {
+            if (test.derivations) {
+                let regex;
+                try {
+                    regex = new RegExp(test.derivations.sources);
+                } catch (e) {
+                    console.error("Invalid regex in derivations:", test.derivations.sources);
+                    return;
+                }
+
+                const sourceTests = state.tests.filter(t => t.id !== test.id && regex.test(t.id));
+                if (sourceTests.length === 0) return;
+
+                const statuses = sourceTests.map(t => state.results[t.id]?.status);
+                let newStatus = null;
+
+                if (test.derivations.mode === 'worst-case') {
+                    // If any Fail -> Fail
+                    if (statuses.some(s => s === 'Niezaliczone' || s === 'fail')) {
+                        newStatus = 'Niezaliczone';
+                    } 
+                    // If ALL are Pass/NA/NT (and at least one is set) -> Pass
+                    else {
+                        const allFinished = sourceTests.every(t => {
+                            const s = state.results[t.id]?.status;
+                            return s === 'Zaliczone' || s === 'pass' || s === 'Nie dotyczy' || s === 'na' || s === 'nt' || s === 'Nie do sprawdzenia';
+                        });
+
+                        if (allFinished && sourceTests.length > 0) {
+                            // If all are NA -> NA
+                            const allNA = sourceTests.every(t => {
+                                const s = state.results[t.id]?.status;
+                                return s === 'Nie dotyczy' || s === 'na' || s === 'nt' || s === 'Nie do sprawdzenia';
+                            });
+                            
+                            if (allNA) {
+                                newStatus = 'Nie dotyczy';
+                            } else {
+                                newStatus = 'Zaliczone';
+                            }
+                        }
+                    }
+                } else if (test.derivations.mode === 'strict-pass') {
+                    // Priority: Fail > NA > NT > Pending > Pass
+                    
+                    // 1. Any Fail?
+                    if (statuses.some(s => s === 'Niezaliczone' || s === 'fail')) {
+                        newStatus = 'Niezaliczone';
+                    }
+                    // 2. Any NA?
+                    else if (statuses.some(s => s === 'Nie dotyczy' || s === 'na')) {
+                        newStatus = 'Nie dotyczy';
+                    }
+                    // 3. Any NT?
+                    else if (statuses.some(s => s === 'nt' || s === 'Nie do sprawdzenia')) {
+                        newStatus = 'Nie do sprawdzenia';
+                    }
+                    // 4. Any Pending?
+                    else if (statuses.some(s => !s)) {
+                        newStatus = null; // Keep pending
+                    }
+                    // 5. All Pass?
+                    else if (statuses.every(s => s === 'Zaliczone' || s === 'pass')) {
+                        newStatus = 'Zaliczone';
+                    }
+                }
+
+                // Apply if changed (allowing change to null)
+                if (state.results[test.id].status !== newStatus) {
+                    state.results[test.id].status = newStatus;
+                    
+                    // Add note only if we set a status and note isn't there
+                    if (newStatus) {
+                        const autoNote = '[Auto] Wynik wyliczony na podstawie testów składowych.';
+                        if (!state.results[test.id].note || !state.results[test.id].note.includes(autoNote)) {
+                             state.results[test.id].note = (state.results[test.id].note || '') + '\n' + autoNote;
+                        }
+                    }
+                }
+            }
+        });
+    }
 
     window.updateNote = function (id, val) {
         state.results[id].note = val;
@@ -692,14 +898,23 @@ document.addEventListener('DOMContentLoaded', async () => {
                     preconditions: item.preconditions || [],
                     procedure: item.procedure || [],
                     form: item.form,
-                    notes: item.notes || []
+                    notes: item.notes || [],
+                    implications: item.implications || [],
+                    derivations: item.derivations || null
                 };
 
                 // Check for duplication: if the last item was a heading with the same title, remove it.
                 // This prevents "Heading X" followed immediately by "Test X" in the sidebar.
                 const lastItem = state.tests[state.tests.length - 1];
                 if (lastItem && lastItem.type === 'heading' && lastItem.title === title) {
-                    state.tests.pop();
+                    // Only remove the heading if it is not a main section (Level > 4)
+                    // Level 3 and 4 headings should remain to preserve document structure in the menu
+                    if ((lastItem.level || 3) > 4) {
+                        state.tests.pop();
+                    } else {
+                        // If we keep the heading, we should ensure the test title is slightly different or handled
+                        // But for now, keeping both is better than losing the section header.
+                    }
                 }
 
                 // Attach clauseTitle directly to tests, so the nav can render them

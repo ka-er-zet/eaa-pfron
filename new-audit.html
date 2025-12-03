@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfiguracja audytu EN 301 549</title>
+
+    <!-- Pico CSS (Semantic Framework) -->
+    <link rel="stylesheet" href="css/pico.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css?v=10">
+
+    <!-- Lucide Icons -->
+    <script src="js/lucide.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <a href="index.html" id="app-logo" class="header-icon-container"
+                aria-label="Strona główna - Audyt EN 301 549">
+                <i data-lucide="shield-check" color="white" aria-hidden="true"></i>
+            </a>
+            <div>
+                <strong class="header-title">EN 301 549</strong>
+                <small class="text-muted">Przygotowanie audytu</small>
+            </div>
+        </div>
+        <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()" aria-label="Przełącz motyw">
+            <i id="theme-icon" data-lucide="moon" aria-hidden="true"></i>
+        </button>
+    </header>
+
+    <!-- Layout Container -->
+    <div id="app-layout" class="app-layout">
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- VIEW 1: SETUP (Centered, Full Width) -->
+            <div id="view-setup" class="setup-container">
+                <div class="setup-header">
+                    <h1 class="mb-05">Konfiguracja Audytu</h1>
+                </div>
+
+                <form id="audit-setup-form" onsubmit="return false;" novalidate>
+                    <!-- Step 1: Product Info -->
+                    <article class="mb-2">
+                        <header class="section-header">
+                            <h2>1. Przedmiot audytu</h2>
+                        </header>
+                        <div class="section-content">
+                            <div class="mb-2">
+                                <label for="product-name">Nazwa produktu / Systemu</label>
+                                <small id="product-name-helper" class="text-muted"
+                                    style="display: block; margin-bottom: 0.5rem;">
+                                    np. Portal Usług Publicznych 2.0
+                                </small>
+                                <input type="text" id="product-name" name="product-name"
+                                    aria-describedby="product-name-helper" required>
+                                <small id="product-name-error" class="text-fail hidden">Proszę podać nazwę produktu.</small>
+                            </div>
+                            <div class="mb-2">
+                                <label for="product-desc">Opis / Wersja / URL</label>
+                                <small id="product-desc-helper" class="text-muted"
+                                    style="display: block; margin-bottom: 0.5rem;">
+                                    np. v1.2.4, https://example.com
+                                </small>
+                                <input type="text" id="product-desc" name="product-desc"
+                                    aria-describedby="product-desc-helper">
+                            </div>
+                            <div>
+                                <label for="auditor-name">Audytor / Organizacja</label>
+                                <small id="auditor-name-helper" class="text-muted"
+                                    style="display: block; margin-bottom: 0.5rem;">
+                                    Imię i nazwisko lub nazwa firmy przeprowadzającej audyt
+                                </small>
+                                <input type="text" id="auditor-name" name="auditor-name"
+                                    aria-describedby="auditor-name-helper">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Step 2: Scope -->
+                    <article class="mb-2">
+                        <header class="section-header">
+                            <h2>2. Zakres audytu (Klauzule)</h2>
+                            <p id="clauses-helper" class="text-muted text-small mb-0">Zaznacz obszary, które podlegają
+                                ocenie.</p>
+                            <small id="clauses-error" class="text-fail hidden mb-0"
+                                style="display: flex; align-items: center;">
+                                <i data-lucide="alert-circle" style="width: 16px; height: 16px; margin-right: 6px;"></i>
+                                Proszę wybrać przynajmniej jeden zakres audytu.
+                            </small>
+                        </header>
+                        <div class="section-content">
+                            <fieldset class="scope-fieldset" id="clauses-fieldset" tabindex="-1"
+                                aria-describedby="clauses-helper clauses-error">
+                                <legend class="visually-hidden">Wybierz klauzule</legend>
+                                <div class="scope-grid" id="scope-grid">
+                                    <div class="scope-item">
+                                        <input type="checkbox" id="clause-c5" name="clauses" value="c5"
+                                            class="scope-checkbox visually-hidden">
+                                        <label for="clause-c5" class="scope-card">
+                                            <i data-lucide="box" class="text-muted" aria-hidden="true"></i>
+                                            <div>
+                                                <strong style="display: block;">Wymagania ogólne (Klauzula 5)</strong>
+                                                <small class="text-muted">Funkcjonalność zamknięta.</small>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="scope-item">
+                                        <input type="checkbox" id="clause-c6" name="clauses" value="c6"
+                                            class="scope-checkbox visually-hidden">
+                                        <label for="clause-c6" class="scope-card">
+                                            <i data-lucide="message-square" class="text-muted" aria-hidden="true"></i>
+                                            <div>
+                                                <strong style="display: block;">TIK z dwukierunkową komunikacją głosową
+                                                    (Klauzula 6)</strong>
+                                                <small class="text-muted">Połączenia głosowe, wideo.</small>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="scope-item">
+                                        <input type="checkbox" id="clause-c7" name="clauses" value="c7"
+                                            class="scope-checkbox visually-hidden">
+                                        <label for="clause-c7" class="scope-card">
+                                            <i data-lucide="video" class="text-muted" aria-hidden="true"></i>
+                                            <div>
+                                                <strong style="display: block;">TIK z możliwościami wideo (Klauzula
+                                                    7)</strong>
+                                                <small class="text-muted">Napisy, audiodeskrypcja.</small>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="scope-item">
+                                        <input type="checkbox" id="clause-c8" name="clauses" value="c8"
+                                            class="scope-checkbox visually-hidden">
+                                        <label for="clause-c8" class="scope-card">
+                                            <i data-lucide="cpu" class="text-muted" aria-hidden="true"></i>
+                                            <div>
+                                                <strong style="display: block;">Sprzęt (Klauzula 8)</strong>
+                                                <small class="text-muted">Wymagania sprzętowe.</small>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="scope-item">
+                                        <input type="checkbox" id="clause-c9" name="clauses" value="c9"
+                                            class="scope-checkbox visually-hidden">
+                                        <label for="clause-c9" class="scope-card">
+                                            <i data-lucide="globe" class="text-muted" aria-hidden="true"></i>
+                                            <div>
+                                                <strong style="display: block;">Strony internetowe (Klauzula 9)</strong>
+                                                <small class="text-muted">Zgodność z WCAG 2.1 poziom AA.</small>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="scope-item">
+                                        <input type="checkbox" id="clause-c10" name="clauses" value="c10"
+                                            class="scope-checkbox visually-hidden">
+                                        <label for="clause-c10" class="scope-card">
+                                            <i data-lucide="file-text" class="text-muted" aria-hidden="true"></i>
+                                            <div>
+                                                <strong style="display: block;">Dokumenty nieinternetowe (Klauzula
+                                                    10)</strong>
+                                                <small class="text-muted">Dokumenty PDF, Office itp.</small>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="scope-item">
+                                        <input type="checkbox" id="clause-c11" name="clauses" value="c11"
+                                            class="scope-checkbox visually-hidden">
+                                        <label for="clause-c11" class="scope-card">
+                                            <i data-lucide="smartphone" class="text-muted" aria-hidden="true"></i>
+                                            <div>
+                                                <strong style="display: block;">Oprogramowanie (Klauzula 11)</strong>
+                                                <small class="text-muted">Aplikacje natywne i mobilne.</small>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="scope-item">
+                                        <input type="checkbox" id="clause-c12" name="clauses" value="c12"
+                                            class="scope-checkbox visually-hidden">
+                                        <label for="clause-c12" class="scope-card">
+                                            <i data-lucide="book" class="text-muted" aria-hidden="true"></i>
+                                            <div>
+                                                <strong style="display: block;">Dokumentacja i usługi wsparcia (Klauzula
+                                                    12)</strong>
+                                                <small class="text-muted">Pomoc techniczna, dokumentacja.</small>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="scope-item">
+                                        <input type="checkbox" id="clause-c13" name="clauses" value="c13"
+                                            class="scope-checkbox visually-hidden">
+                                        <label for="clause-c13" class="scope-card">
+                                            <i data-lucide="phone-call" class="text-muted" aria-hidden="true"></i>
+                                            <div>
+                                                <strong style="display: block;">Przekaźnikowe usługi telekomunikacyjne
+                                                    (Klauzula 13)</strong>
+                                                <small class="text-muted">Usługi relay.</small>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </article>
+
+                    <!-- Actions -->
+                    <div class="form-actions" style="text-align: right;">
+                        <button type="submit" id="start-audit-btn" class="btn-auto">
+                            Rozpocznij Audyt <i data-lucide="arrow-right" style="margin-left: 8px;"
+                                aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Application Logic -->
+    <script src="js/utils.js"></script>
+    <script src="js/setup.js"></script>
+</body>
+
+</html>

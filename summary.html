@@ -75,13 +75,13 @@
                             </summary>
                             <!-- Issues List (Fail) -->
                             <div class="list-section">
-                                <h3 class="list-header fail-header">
+                                <div class="list-header fail-header">
                                     <div class="header-left">
                                         <i data-lucide="x-circle"></i>
-                                        <span>NIEZALICZONE (<span id="count-fail">0</span>)</span>
+                                        <h3 style="margin: 0; font-size: inherit;">NIEZALICZONE (<span id="count-fail">0</span>)</h3>
                                     </div>
                                     <span class="badge-fail">Wymagana poprawa</span>
-                                </h3>
+                                </div>
                                 <div id="list-fail" class="issue-list">
                                     <!-- Items will be injected here -->
                                 </div>
@@ -89,26 +89,52 @@
 
                             <!-- To Verify List (Notes/Manual) -->
                             <div class="list-section">
-                                <h3 class="list-header warning-header">
+                                <div class="list-header warning-header">
                                     <div class="header-left">
                                         <i data-lucide="alert-circle"></i>
-                                        <span>DO WERYFIKACJI (<span id="count-verify">0</span>)</span>
+                                        <h3 style="margin: 0; font-size: inherit;">DO WERYFIKACJI (<span id="count-verify">0</span>)</h3>
                                     </div>
-                                </h3>
+                                </div>
                                 <div id="list-verify" class="issue-list">
                                     <!-- Items will be injected here -->
                                 </div>
                             </div>
 
-                            <!-- Passed / NA List -->
+                            <!-- NA List -->
                             <div class="list-section">
-                                <h3 class="list-header success-header">
+                                <div class="list-header na-header">
+                                    <div class="header-left">
+                                        <i data-lucide="minus-circle"></i>
+                                        <h3 style="margin: 0; font-size: inherit;">NIE DOTYCZY (<span id="count-na">0</span>)</h3>
+                                    </div>
+                                </div>
+                                <div id="list-na" class="issue-list">
+                                    <!-- Items will be injected here -->
+                                </div>
+                            </div>
+
+                            <!-- NT List -->
+                            <div class="list-section">
+                                <div class="list-header nt-header">
+                                    <div class="header-left">
+                                        <i data-lucide="help-circle"></i>
+                                        <h3 style="margin: 0; font-size: inherit;">NIE DO SPRAWDZENIA (<span id="count-nt">0</span>)</h3>
+                                    </div>
+                                </div>
+                                <div id="list-nt" class="issue-list">
+                                    <!-- Items will be injected here -->
+                                </div>
+                            </div>
+
+                            <!-- Passed List -->
+                            <div class="list-section">
+                                <div class="list-header success-header">
                                     <div class="header-left">
                                         <i data-lucide="check-circle"></i>
-                                        <span>ZALICZONE / NIE DOTYCZY (<span id="count-pass-na">0</span>)</span>
+                                        <h3 style="margin: 0; font-size: inherit;">ZALICZONE (<span id="count-pass">0</span>)</h3>
                                     </div>
-                                </h3>
-                                <div id="list-pass-na" class="issue-list">
+                                </div>
+                                <div id="list-pass" class="issue-list">
                                     <!-- Items will be injected here -->
                                 </div>
                             </div>

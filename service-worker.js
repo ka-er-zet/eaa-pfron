@@ -1,12 +1,14 @@
-const CACHE_NAME = 'audyt-eaa-cache-v9';
+const CACHE_NAME = 'audyt-eaa-cache-v10';
 const urlsToCache = [
   '/',
   '/index.html',
+  '/new-audit.html',
   '/audit.html',
   '/summary.html',
   '/css/style.css',
   '/css/pico.min.css',
   '/js/setup.js',
+  '/js/landing.js',
   '/js/audit.js',
   '/js/summary.js',
   '/js/utils.js',

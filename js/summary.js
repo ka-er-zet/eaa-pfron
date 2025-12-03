@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const failedTests = tests.filter(t => results[t.id]?.status === 'fail' || results[t.id]?.status === 'Niezaliczone');
     const passedTests = tests.filter(t => results[t.id]?.status === 'pass' || results[t.id]?.status === 'Zaliczone');
     const naTests = tests.filter(t => results[t.id]?.status === 'na' || results[t.id]?.status === 'Nie dotyczy');
-    const ntTests = tests.filter(t => results[t.id]?.status === 'nt' || results[t.id]?.status === 'Nietestowalne');
+    const ntTests = tests.filter(t => results[t.id]?.status === 'nt' || results[t.id]?.status === 'Nietestowalne' || results[t.id]?.status === 'Nie do sprawdzenia');
     
     // "To Verify" = All tests - (Failed + Passed + NA + NT)
     const processedIds = new Set([...failedTests, ...passedTests, ...naTests, ...ntTests].map(t => t.id));
@@ -91,12 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // For Passed/NA, show status label
             let statusLabel = '';
-            if (type === 'pass') {
-                let statusText = 'Zaliczone';
-                if (res?.status === 'na' || res?.status === 'Nie dotyczy') statusText = 'Nie dotyczy';
-                if (res?.status === 'nt' || res?.status === 'Nietestowalne') statusText = 'Nietestowalne';
-                statusLabel = `<span style="font-size: 0.75rem; opacity: 0.7;">[${statusText}]</span> `;
-            }
+
 
             // Clean title (remove ID if present at start)
             let displayTitle = t.title;
@@ -121,12 +116,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderList('list-fail', failedTests, 'fail');
     renderList('list-verify', verifyTests, 'verify');
-    renderList('list-pass-na', [...passedTests, ...naTests, ...ntTests], 'pass');
+    renderList('list-na', naTests, 'na');
+    renderList('list-nt', ntTests, 'nt');
+    renderList('list-pass', passedTests, 'pass');
 
     // Update Counts
     document.getElementById('count-fail').innerText = failedTests.length;
     document.getElementById('count-verify').innerText = verifyTests.length;
-    document.getElementById('count-pass-na').innerText = passedTests.length + naTests.length + ntTests.length;
+    document.getElementById('count-na').innerText = naTests.length;
+    document.getElementById('count-nt').innerText = ntTests.length;
+    document.getElementById('count-pass').innerText = passedTests.length;
 
     // 5. Executive Summary
     const summaryText = document.getElementById('executive-summary');
@@ -159,101 +158,48 @@ document.addEventListener('DOMContentLoaded', () => {
         return `raport_eaa_${product}_${date}.${ext}`;
     };
 
+    // Handle Ctrl+S / Cmd+S to save
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+            
+            // 1. Save to localStorage
+            window.utils.saveState(state);
+
+            // 2. Generate EARL Report
+            const report = window.utils.generateEARL(state);
+
+            // 3. Download State as JSON (EARL format)
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(report, null, 2));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", getFilename('json'));
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+            
+            // 4. Accessible Feedback (Screen Reader Only)
+            // We can reuse the live region if it exists in summary.html, or create a temp one.
+            // summary.html doesn't seem to have 'audit-status-live' based on previous reads, let's check.
+            // Actually, I'll just add a simple alert or reuse the toast logic if I hadn't deleted it.
+            // The user asked to REMOVE the toast. So I will only use aria-live if possible.
+            
+            let liveRegion = document.getElementById('a11y-live-region');
+            if (!liveRegion) {
+                liveRegion = document.createElement('div');
+                liveRegion.id = 'a11y-live-region';
+                liveRegion.className = 'visually-hidden';
+                liveRegion.setAttribute('aria-live', 'polite');
+                document.body.appendChild(liveRegion);
+            }
+            liveRegion.innerText = 'Zapisano raport i pobrano plik.';
+        }
+    });
+
     // --- Export Functions ---
 
     document.getElementById('export-json-btn').addEventListener('click', () => {
-        // EARL Context
-        const context = {
-            "earl": "http://www.w3.org/ns/earl#",
-            "dct": "http://purl.org/dc/terms/",
-            "foaf": "http://xmlns.com/foaf/0.1/",
-            "sch": "http://schema.org/",
-            "xsd": "http://www.w3.org/2001/XMLSchema#"
-        };
-
-        // Assertor (The Tool)
-        const assertor = {
-            "@id": "_:assertor",
-            "@type": ["earl:Software", "earl:Assertor"],
-            "dct:title": "A11y Audit Tool",
-            "dct:description": "Narzędzie do audytu dostępności cyfrowej wg EN 301 549",
-            "dct:hasVersion": "1.0.0"
-        };
-
-        // Human Assertor (if provided)
-        let mainAssertor = assertor;
-        if (state.auditor) {
-            const humanAssertor = {
-                "@id": "_:humanAssertor",
-                "@type": ["foaf:Person", "earl:Assertor"],
-                "foaf:name": state.auditor
-            };
-            
-            // Create a compound assertor
-            mainAssertor = {
-                "@id": "_:compoundAssertor",
-                "@type": "earl:Assertor",
-                "earl:mainAssertor": { "@id": "_:humanAssertor" },
-                "dct:description": "Audyt przeprowadzony przez człowieka przy użyciu narzędzia"
-            };
-        }
-
-        // Test Subject (The Product)
-        const testSubject = {
-            "@id": "_:subject",
-            "@type": ["earl:TestSubject", "sch:Product"],
-            "dct:title": state.product || "Nieznany produkt",
-            "dct:description": state.productDesc || '',
-            "dct:date": new Date().toISOString()
-        };
-
-        // Assertions
-        const assertions = state.tests.map(t => {
-            const res = state.results[t.id] || { status: 'not-tested', note: '' };
-            
-            let outcome = 'earl:untested';
-            if (res.status === 'pass' || res.status === 'Zaliczone') outcome = 'earl:passed';
-            else if (res.status === 'fail' || res.status === 'Niezaliczone') outcome = 'earl:failed';
-            else if (res.status === 'na' || res.status === 'Nie dotyczy') outcome = 'earl:inapplicable';
-            else if (res.status === 'nt' || res.status === 'Nietestowalne') outcome = 'earl:cantTell';
-
-            return {
-                "@type": "earl:Assertion",
-                "earl:assertedBy": { "@id": state.auditor ? "_:compoundAssertor" : "_:assertor" },
-                "earl:subject": { "@id": "_:subject" },
-                "earl:test": {
-                    "@type": "earl:TestCriterion",
-                    "dct:title": t.title,
-                    "dct:identifier": t.id
-                },
-                "earl:result": {
-                    "@type": "earl:TestResult",
-                    "earl:outcome": { "@id": outcome },
-                    "dct:description": res.note || '',
-                    "dct:date": new Date().toISOString()
-                },
-                "earl:mode": { "@id": "earl:manual" }
-            };
-        });
-
-        const graph = [assertor, testSubject, ...assertions];
-        if (state.auditor) {
-            graph.unshift({
-                "@id": "_:humanAssertor",
-                "@type": ["foaf:Person", "earl:Assertor"],
-                "foaf:name": state.auditor
-            });
-            graph.unshift(mainAssertor);
-        }
-
-        const report = {
-            "@context": context,
-            "@graph": graph,
-            "dct:title": "Raport z badania zgodności z normą EN 301 549",
-            "dct:date": new Date().toISOString(),
-            "dct:description": state.executiveSummary || ''
-        };
-
+        const report = window.utils.generateEARL(state);
         const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(report, null, 2));
         const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href", dataStr);

@@ -11,12 +11,12 @@
     --fail-color: hsl(350, 80%, 40%);
     /* #B91C1C - Darker Red for Light Mode */
     --fail-bg: hsla(350, 89%, 60%, 0.15);
-    --na-color: hsl(215, 16%, 47%);
-    /* #64748B */
+    --na-color: hsl(215, 25%, 40%);
+    /* #4C5F7A - Darker Slate for Light Mode */
     --na-bg: hsla(215, 16%, 47%, 0.15);
-    --nt-color: hsl(38, 92%, 50%);
-    /* #F59E0B */
-    --nt-bg: hsla(38, 92%, 50%, 0.15);
+    --nt-color: hsl(30, 100%, 25%);
+    /* #804000 - High Contrast Burnt Orange */
+    --nt-bg: hsla(30, 100%, 50%, 0.15);
 
     /* Primary Color - Global Override */
     --primary: hsl(224, 76%, 48%);
@@ -148,6 +148,10 @@
     /* High Contrast Red for Dark Mode */
     --fail-color: hsl(350, 100%, 79%);
     /* #FF94A6 */
+
+    /* High Contrast Amber for Dark Mode */
+    --nt-color: hsl(38, 92%, 50%);
+    /* #F59E0B */
 
     /* High Contrast Green for Dark Mode */
     --ins-color: hsl(160, 84%, 50%);
@@ -590,6 +594,7 @@ a.nav-item.active {
 /* --- Main Content --- */
 main {
     padding: 2rem;
+    padding-bottom: 4rem; /* Added bottom padding */
     overflow-y: auto;
     position: relative;
 }
@@ -787,6 +792,7 @@ main {
 
 .summary-product-name {
     font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
 .summary-grid {
@@ -944,18 +950,28 @@ dialog button {
 }
 
 /* --- Button Overrides --- */
-/* Improve contrast for secondary outline buttons */
+/* Secondary Outline Button Styling */
 :is(button, input[type=submit], input[type=button], [role=button]).outline.secondary {
-    color: var(--color);
-    /* Use main text color instead of muted secondary color */
-    border-color: var(--muted-color);
+    /* Default (Light Mode) Blue */
+    --btn-blue: var(--primary);
+    
+    color: var(--btn-blue);
+    border-color: var(--btn-blue);
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
 }
 
-[data-theme="light"] :is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:hover,
-[data-theme="light"] :is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:focus {
-    color: var(--primary);
-    border-color: var(--primary);
-    background-color: transparent;
+/* Dark Mode Blue Override */
+[data-theme="dark"] :is(button, input[type=submit], input[type=button], [role=button]).outline.secondary {
+    --btn-blue: var(--blue-400);
+}
+
+/* Hover & Focus States */
+:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:hover,
+:is(button, input[type=submit], input[type=button], [role=button]).outline.secondary:focus {
+    background-color: var(--btn-blue);
+    border-color: var(--btn-blue);
+    color: var(--primary-inverse);
 }
 
 /* --- Navigation Headings (Duplicates Removed) --- */
@@ -992,16 +1008,25 @@ dialog button {
 .criteria-option.pass.selected {
     border-color: var(--pass-color);
     background: var(--pass-bg);
+    color: var(--pass-color);
 }
 
 .criteria-option.fail.selected {
     border-color: var(--fail-color);
     background: var(--fail-bg);
+    color: var(--fail-color);
 }
 
 .criteria-option.na.selected {
     border-color: var(--na-color);
     background: var(--na-bg);
+    color: var(--na-color);
+}
+
+.criteria-option.nt.selected {
+    border-color: var(--nt-color);
+    background: var(--nt-bg);
+    color: var(--nt-color);
 }
 
 .criteria-header {
@@ -1048,29 +1073,7 @@ dialog button {
     height: 100%;
 }
 
-/* Secondary Outline Button Override for Dark Mode */
-[data-theme="dark"] button.outline.secondary,
-[data-theme="dark"] [role="button"].outline.secondary,
-[data-theme="dark"] input[type="submit"].outline.secondary,
-[data-theme="dark"] input[type="reset"].outline.secondary,
-[data-theme="dark"] input[type="button"].outline.secondary,
-[data-theme="dark"] .outline.secondary {
-    --border-color: #ffffff;
-    --color: #ffffff;
-    --background-color: transparent;
-    transition: all 0.2s ease-in-out;
-}
-
-[data-theme="dark"] button.outline.secondary:hover,
-[data-theme="dark"] [role="button"].outline.secondary:hover,
-[data-theme="dark"] input[type="submit"].outline.secondary:hover,
-[data-theme="dark"] input[type="reset"].outline.secondary:hover,
-[data-theme="dark"] input[type="button"].outline.secondary:hover,
-[data-theme="dark"] .outline.secondary:hover {
-    border-color: var(--blue-400);
-    color: var(--blue-400);
-    background-color: transparent;
-}
+/* Secondary Outline Button Override for Dark Mode - Handled in Button Overrides section */
 
 /* --- Scrollbar Styling --- */
 ::-webkit-scrollbar {
@@ -1282,8 +1285,21 @@ body.summary-page .app-layout {
 [data-theme="light"] .warning-header { color: #d97706; } /* Amber 600 for light mode */
 
 .success-header {
-    background-color: rgba(56, 142, 60, 0.1);
-    color: var(--ins-color);
+    background-color: var(--pass-bg);
+    color: var(--pass-color);
+    border-bottom: 1px solid var(--pass-bg);
+}
+
+.na-header {
+    background-color: var(--na-bg);
+    color: var(--na-color);
+    border-bottom: 1px solid var(--na-bg);
+}
+
+.nt-header {
+    background-color: var(--nt-bg);
+    color: var(--nt-color);
+    border-bottom: 1px solid var(--nt-bg);
 }
 
 .badge-fail {
@@ -1360,11 +1376,17 @@ details summary::-webkit-details-marker {
 }
 
 /* Custom details marker for better control */
+details {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
 details summary {
     list-style: none;
     color: var(--primary) !important;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     cursor: pointer;
     transition: color 0.2s;
     display: flex;
@@ -1405,7 +1427,7 @@ details summary:hover::after {
 
 details[open] summary {
     color: var(--primary) !important;
-    margin-bottom: 3rem; /* Increased spacing when open */
+    margin-bottom: 1rem;
     border-bottom: 1px solid var(--muted-border-color);
     padding-bottom: 1rem;
 }
@@ -1434,4 +1456,49 @@ details[open] summary .summary-closed {
 
 details[open] summary .summary-open {
     display: inline;
+}
+
+/* --- Landing Page Cards --- */
+.card-action {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-color: var(--card-background-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.card-action header {
+    margin-bottom: 0.5rem;
+}
+
+.card-action h2 {
+    margin-bottom: 0.5rem;
+}
+
+.card-action p {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.card-action footer {
+    margin-top: auto;
+    border-top: 1px solid var(--muted-color);
+    padding-top: 1rem;
+    background: transparent;
+    flex-shrink: 0;
+}
+
+.card-action footer button,
+.card-action footer [role="button"] {
+    margin-bottom: 0;
+}
+
+.btn-full-width {
+    width: 100%;
 }

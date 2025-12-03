@@ -52,7 +52,11 @@
         "legend": "Wybierz wynik dla C.5.1.2.2 Technologia wspomagająca",
         "noteId": "notes-c-5-1-2-2"
       },
-      "evaluationType": "Testing"
+      "evaluationType": "Testing",
+      "derivations": {
+        "sources": "^C\\.5\\.1\\.[3-6]",
+        "mode": "strict-pass"
+      }
     },
     {
       "type": "heading",
@@ -214,7 +218,7 @@
         "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
         "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.",
         "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
-        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanymi w kryterium sukcesu WCAG 2.1 dla wytycznej 1.1.1."
+        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanymi w kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 dla wytycznej 1.1.1</a>."
       ],
       "form": {
         "inputs": [
@@ -228,7 +232,7 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.5.1.3.6 Wyjście mowy dla treści nietekstowej",
@@ -335,7 +339,7 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 3 EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub 3."
           }
         ],
         "legend": "Wybierz wynik dla C.5.1.3.9 Prywatny dostęp do danych osobowych",
@@ -472,7 +476,7 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.5.1.3.13 Przywracanie głośności",
@@ -560,10 +564,12 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK jest zamknięta dla dostępu wizualnego."
+        "1. TIK jest zamknięta dla dostępu wizualnego.",
+        "2. TIK dostarcza jako wynik transakcji samoobsługowej pokwitowania, bilet lub inne dane wyjściowe",
+        "3. Sprawdzane informacje nie są drukowanymi kopiami tras i map."
       ],
       "procedure": [
-        "1. Sprawdź, czy dostarczany wyjście mowy zawiera wszystkie informacje niezbędne do zakończenia lub zweryfikowania transakcji."
+        "1. Sprawdź, czy dostarczane wyjście mowy zawiera wszystkie informacje niezbędne do zakończenia lub zweryfikowania transakcji."
       ],
       "form": {
         "inputs": [
@@ -577,7 +583,7 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3 EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3"
           }
         ],
         "legend": "Wybierz wynik dla C.5.1.3.16 Pokwitowania, bilety i dane wyjściowe transakcji",
@@ -717,7 +723,7 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.5.1.6.2 Fokus",
@@ -836,15 +842,15 @@
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Sprawdzenie 1 jest prawdziwe."
+            "label": "Kryterium 1: prawda"
           },
           {
             "value": "Niezaliczone",
-            "label": "Sprawdzenie 1 jest fałszywe."
+            "label": "Kryterium 1: fałsz"
           },
           {
             "value": "Nie dotyczy",
-            "label": "Warunek wstępny 1 nie jest spełniony."
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla Test 2 - Kontrola:",
@@ -952,7 +958,7 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.5.5.2 Rozpoznawalność części obsługiwanych",
@@ -1062,7 +1068,7 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
         "legend": "Wybierz wynik dla C.5.7 Ponowne wciśnięcie klawisza",
@@ -1134,7 +1140,7 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. C.6 TIK z dwukierunkową komunikacją głosową"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.5.9 Jednoczesne czynności użytkownika",

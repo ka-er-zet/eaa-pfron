@@ -153,6 +153,170 @@ function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierd�
     });
 }
 
+/**
+ * Generates an EARL report from the application state.
+ * @param {Object} state The application state.
+ * @returns {Object} The EARL report object.
+ */
+function generateEARL(state) {
+    const context = {
+        "earl": "http://www.w3.org/ns/earl#",
+        "dct": "http://purl.org/dc/terms/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "sch": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "eaa": "https://github.com/ka-er-zet/eaa-pfron#"
+    };
+
+    // Assertor (The Tool)
+    const assertor = {
+        "@id": "_:assertor",
+        "@type": ["earl:Software", "earl:Assertor"],
+        "dct:title": "A11y Audit Tool",
+        "dct:description": "Narzędzie do audytu dostępności cyfrowej wg EN 301 549",
+        "dct:hasVersion": "1.0.0"
+    };
+
+    // Human Assertor (if provided)
+    let mainAssertor = assertor;
+    if (state.auditor) {
+        const humanAssertor = {
+            "@id": "_:humanAssertor",
+            "@type": ["foaf:Person", "earl:Assertor"],
+            "foaf:name": state.auditor
+        };
+        
+        // Create a compound assertor
+        mainAssertor = {
+            "@id": "_:compoundAssertor",
+            "@type": "earl:Assertor",
+            "earl:mainAssertor": { "@id": "_:humanAssertor" },
+            "dct:description": "Audyt przeprowadzony przez człowieka przy użyciu narzędzia"
+        };
+    }
+
+    // Test Subject (The Product)
+    const testSubject = {
+        "@id": "_:subject",
+        "@type": ["earl:TestSubject", "sch:Product"],
+        "dct:title": state.product || "Nieznany produkt",
+        "dct:description": state.productDesc || '',
+        "dct:date": new Date().toISOString()
+    };
+
+    // App Configuration (Custom extension to preserve state)
+    const appConfig = {
+        "@type": "eaa:Configuration",
+        "eaa:clauses": state.clauses || [],
+        "eaa:currentIdx": state.currentIdx || 0,
+        "eaa:executiveSummary": state.executiveSummary || ''
+    };
+
+    // Assertions
+    const assertions = state.tests.map(t => {
+        const res = state.results[t.id] || { status: 'not-tested', note: '' };
+        
+        let outcome = 'earl:untested';
+        if (res.status === 'pass' || res.status === 'Zaliczone') outcome = 'earl:passed';
+        else if (res.status === 'fail' || res.status === 'Niezaliczone') outcome = 'earl:failed';
+        else if (res.status === 'na' || res.status === 'Nie dotyczy') outcome = 'earl:inapplicable';
+        else if (res.status === 'nt' || res.status === 'Nietestowalne') outcome = 'earl:cantTell';
+
+        return {
+            "@type": "earl:Assertion",
+            "earl:assertedBy": { "@id": state.auditor ? "_:compoundAssertor" : "_:assertor" },
+            "earl:subject": { "@id": "_:subject" },
+            "earl:test": {
+                "@type": "earl:TestCriterion",
+                "dct:title": t.title,
+                "dct:identifier": t.id
+            },
+            "earl:result": {
+                "@type": "earl:TestResult",
+                "earl:outcome": { "@id": outcome },
+                "dct:description": res.note || '',
+                "dct:date": new Date().toISOString()
+            },
+            "earl:mode": { "@id": "earl:manual" }
+        };
+    });
+
+    const graph = [assertor, testSubject, appConfig, ...assertions];
+    if (state.auditor) {
+        graph.unshift({
+            "@id": "_:humanAssertor",
+            "@type": ["foaf:Person", "earl:Assertor"],
+            "foaf:name": state.auditor
+        });
+        graph.unshift(mainAssertor);
+    }
+
+    return {
+        "@context": context,
+        "@graph": graph
+    };
+}
+
+/**
+ * Parses an EARL report back into an application state object.
+ * @param {Object} earlData The EARL report object.
+ * @returns {Object} The reconstructed application state.
+ */
+function parseEARL(earlData) {
+    const graph = earlData['@graph'] || [];
+    
+    // Find Config
+    const config = graph.find(item => item['@type'] === 'eaa:Configuration') || {};
+    
+    // Find Subject
+    const subject = graph.find(item => {
+        const types = Array.isArray(item['@type']) ? item['@type'] : [item['@type']];
+        return types.includes('earl:TestSubject') || types.includes('sch:Product');
+    }) || {};
+
+    // Find Assertor (Human)
+    const human = graph.find(item => {
+        const types = Array.isArray(item['@type']) ? item['@type'] : [item['@type']];
+        return types.includes('foaf:Person');
+    });
+
+    const state = {
+        product: subject['dct:title'] || '',
+        productDesc: subject['dct:description'] || '',
+        auditor: human ? human['foaf:name'] : '',
+        executiveSummary: config['eaa:executiveSummary'] || '',
+        clauses: config['eaa:clauses'] || [],
+        currentIdx: config['eaa:currentIdx'] || 0,
+        tests: [], // Will be re-populated by the app based on clauses
+        results: {}
+    };
+
+    // Parse Assertions
+    graph.forEach(item => {
+        if (item['@type'] === 'earl:Assertion') {
+            const testId = item['earl:test']?.['dct:identifier'];
+            const result = item['earl:result'];
+            
+            if (testId && result) {
+                let status = null;
+                const outcome = result['earl:outcome']?.['@id'] || result['earl:outcome'];
+                
+                if (outcome === 'earl:passed') status = 'pass';
+                else if (outcome === 'earl:failed') status = 'fail';
+                else if (outcome === 'earl:inapplicable') status = 'na';
+                else if (outcome === 'earl:cantTell') status = 'nt';
+                
+                state.results[testId] = {
+                    status: status,
+                    note: result['dct:description'] || ''
+                };
+            }
+        }
+    });
+
+    return state;
+}
+
 // Expose functions globally
 window.utils = {
     loadState,
@@ -161,7 +325,9 @@ window.utils = {
     xmlEscape,
     initTheme,
     toggleTheme,
-    confirm: confirmModal
+    confirm: confirmModal,
+    generateEARL,
+    parseEARL
 };
 
 // Initialize theme on load
