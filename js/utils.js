@@ -317,6 +317,18 @@ function parseEARL(earlData) {
     return state;
 }
 
+/**
+ * Fixes orphaned conjunctions in text by adding non-breaking spaces.
+ * @param {string} text The text to fix.
+ * @returns {string} The fixed text.
+ */
+function fixOrphans(text) {
+    if (!text) return text;
+    // Replace space + single letter (a, i, o, u, w, z) + space with space + letter + &nbsp;
+    // Case insensitive.
+    return text.replace(/(\s|^)([aiouwzAIOWZ])\s+/g, '$1$2&nbsp;');
+}
+
 // Expose functions globally
 window.utils = {
     loadState,
@@ -327,7 +339,8 @@ window.utils = {
     toggleTheme,
     confirm: confirmModal,
     generateEARL,
-    parseEARL
+    parseEARL,
+    fixOrphans
 };
 
 // Initialize theme on load

@@ -470,17 +470,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         let preconditionsHtml = '';
         if (item.preconditions && item.preconditions.length > 0) {
-            preconditionsHtml = `<div class="test-details"><h2 class="text-muted" style="margin-bottom: 0.5rem;">Warunki wstępne</h2><ol>${item.preconditions.map(p => `<li>${stripNumbering(p)}</li>`).join('')}</ol></div>`;
+            preconditionsHtml = `<div class="test-details"><h2 class="text-muted" style="margin-bottom: 0.5rem;">Warunki wstępne</h2><ol>${item.preconditions.map(p => `<li>${window.utils.fixOrphans(stripNumbering(p))}</li>`).join('')}</ol></div>`;
         }
 
         let procedureHtml = '';
         if (item.procedure && item.procedure.length > 0) {
-            procedureHtml = `<div class="test-details" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">Procedura</h2><ol>${item.procedure.map(p => `<li>${stripNumbering(p)}</li>`).join('')}</ol></div>`;
+            procedureHtml = `<div class="test-details" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">Procedura</h2><ol>${item.procedure.map(p => `<li>${window.utils.fixOrphans(stripNumbering(p))}</li>`).join('')}</ol></div>`;
         }
 
         let notesHtml = '';
         if (item.notes && item.notes.length > 0) {
-            notesHtml = `<div class="informative" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">UWAGA</h2>${item.notes.map(n => `<p>${n}</p>`).join('')}</div>`;
+            notesHtml = `<div class="informative" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">UWAGA</h2>${item.notes.map(n => `<p>${window.utils.fixOrphans(n)}</p>`).join('')}</div>`;
         }
 
         let wcagBadge = '';
@@ -622,6 +622,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Remove potential separator like " - " or ": "
             cleanTitle = cleanTitle.replace(/^[:\-\.]+\s*/, '');
         }
+        cleanTitle = window.utils.fixOrphans(cleanTitle);
 
         container.innerHTML = `
             <article class="mb-2" tabindex="-1" role="region" aria-labelledby="${anchorDomId}-title" id="${anchorDomId}">

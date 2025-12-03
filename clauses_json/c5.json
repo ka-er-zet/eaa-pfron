@@ -9,7 +9,7 @@
     },
     {
       "type": "informative",
-      "text": "C.5.1 Funkcjonalność zamknięta\nKlauzula 5.1.1 jest informacyjna i nie zawiera wymagań do testowania.\n"
+      "text": "C.5.1 Funkcjonalność zamknięta\nKlauzula 5.1.1 jest informacyjna i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
@@ -18,7 +18,7 @@
     },
     {
       "type": "informative",
-      "text": "C.5.1.2 Ogólne\nPatrz klauzule C.5.2 do C.13, w zależności od zastosowania. Klauzula informacyjna.\n"
+      "text": "C.5.1.2 Ogólne\nPatrz klauzule C.5.2 do C.13, w&nbsp;zależności od zastosowania. Klauzula informacyjna.\n"
     },
     {
       "type": "heading",
@@ -28,11 +28,11 @@
     {
       "type": "test",
       "preconditions": [
-        "1. W TIK występują funkcjonalności zamknięte."
+        "1. W&nbsp;TIK występują funkcjonalności zamknięte."
       ],
       "procedure": [
-        "1. Określ w TIK funkcjonalności zamknięte.",
-        "2. Sprawdź, czy testy od C.5.1.3 do C.5.1.6 można przeprowadzić bez mocowania lub instalowania jakiejkolwiek technologii wspomagającej z wyjątkiem osobistych zestawów słuchawkowych lub pętli indukcyjnych."
+        "1. Określ w&nbsp;TIK funkcjonalności zamknięte.",
+        "2. Sprawdź, czy testy od C.5.1.3 do C.5.1.6 można przeprowadzić bez mocowania lub instalowania jakiejkolwiek technologii wspomagającej z&nbsp;wyjątkiem osobistych zestawów słuchawkowych lub pętli indukcyjnych."
       ],
       "form": {
         "inputs": [
@@ -71,11 +71,11 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Informacje wizualne są wymagane, aby umożliwić korzystanie z tych funkcji TIK , które są zamknięte dla technologii wspomagających odczyt z ekranu."
+        "1. Informacje wizualne są wymagane, aby umożliwić korzystanie z&nbsp;tych funkcji TIK , które są zamknięte dla technologii wspomagających odczyt z&nbsp;ekranu."
       ],
       "procedure": [
-        "1. Określ w TIK funkcjonalności zamknięte na odczyt z ekranu.",
-        "2. Sprawdź, czy można je wykonać, korzystając z dostępu do wyjścia audio."
+        "1. Określ w&nbsp;TIK funkcjonalności zamknięte na odczyt z&nbsp;ekranu.",
+        "2. Sprawdź, czy można je wykonać, korzystając z&nbsp;dostępu do wyjścia audio."
       ],
       "form": {
         "inputs": [
@@ -108,7 +108,7 @@
         "1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych."
       ],
       "procedure": [
-        "1. Sprawdź, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu zawartego w TIK lub dostarczanego wraz z nią.",
+        "1. Sprawdź, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu zawartego w&nbsp;TIK lub dostarczanego wraz z&nbsp;nią.",
         "2. Sprawdź, czy sygnał dźwiękowy jest dostarczany za pomocą osobistego zestawu słuchawkowego, który można podłączyć poprzez gniazdo audio 3,5 mm lub standardowe połączenie branżowe, bez konieczności korzystania ze wzroku."
       ],
       "form": {
@@ -119,7 +119,7 @@
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2: fałsz"
+            "label": "Kryteria 1 i&nbsp;2: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -133,7 +133,7 @@
     },
     {
       "type": "informative",
-      "text": "Uwagi:\nKlauzula 5.1.3.3 jest informacyjna i nie zawiera wymagań do testowania.\n"
+      "text": "Uwagi:\nKlauzula 5.1.3.3 jest informacyjna i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
@@ -180,7 +180,7 @@
         "1. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych."
       ],
       "procedure": [
-        "1. Określ w TIK funkcjonalności zamknięte.",
+        "1. Określ w&nbsp;TIK funkcjonalności zamknięte.",
         "2. Sprawdź, czy wyjście mowy dla każdej pojedynczej funkcji jest przerywany na skutek działania użytkownika.",
         "3. Sprawdź, czy wyjście ł mowy dla każdej pojedynczej funkcji jest przerywany, gdy rozpoczyna się nowe wyjście mowy."
       ],
@@ -188,7 +188,7 @@
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "kryteria 2 i 3: prawda"
+            "label": "kryteria 2 i&nbsp;3: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -216,19 +216,19 @@
       ],
       "procedure": [
         "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
-        "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.",
+        "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i&nbsp;potrzebna.",
         "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
-        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanymi w kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 dla wytycznej 1.1.1</a>."
+        "4. Sprawdź, czy wyjście mowy jest zgodne z&nbsp;wytycznymi dotyczącymi „tekstu alternatywnego” opisanymi w&nbsp;kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 dla wytycznej 1.1.1</a>."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryteria 1, 2, 3 i 4: prawda; lub 1 i 2: fałsz; lub 1 i 3: fałsz"
+            "label": "Kryteria 1, 2, 3 i&nbsp;4: prawda; lub 1 i&nbsp;2: fałsz; lub 1 i&nbsp;3: fałsz"
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria 1: prawda i 2: fałsz; lub 1: prawda i 3: fałsz; lub 1, 2 i 3: prawda oraz 4: fałsz"
+            "label": "Kryteria 1: prawda i&nbsp;2: fałsz; lub 1: prawda i&nbsp;3: fałsz; lub 1, 2 i&nbsp;3: prawda oraz 4: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -248,11 +248,11 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Nagrane materiały wideo są niezbędne, aby umożliwić korzystanie z zamkniętych funkcji TIK .",
-        "2. Wyjście mowy zapewnia niewizualny dostęp do treści nietekstowej w funkcjonalności zamkniętej."
+        "1. Nagrane materiały wideo są niezbędne, aby umożliwić korzystanie z&nbsp;zamkniętych funkcji TIK .",
+        "2. Wyjście mowy zapewnia niewizualny dostęp do treści nietekstowej w&nbsp;funkcjonalności zamkniętej."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście mowy prezentuje informacje zgodne z napisami do nagranej treści wideo."
+        "1. Sprawdź, czy wyjście mowy prezentuje informacje zgodne z&nbsp;napisami do nagranej treści wideo."
       ],
       "form": {
         "inputs": [
@@ -284,7 +284,7 @@
       "preconditions": [
         "1. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
         "2. Wyświetlane są znaki maskowane.",
-        "3. Nie aktywowano żadnej opcji umożliwiającej korzystanie z nieprywatnego sygnału dźwiękowego."
+        "3. Nie aktywowano żadnej opcji umożliwiającej korzystanie z&nbsp;nieprywatnego sygnału dźwiękowego."
       ],
       "procedure": [
         "1. Sprawdź, czy sygnał dźwiękowy nie jest mówioną wersją wprowadzonych znaków.",
@@ -331,11 +331,11 @@
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryteria 1 i 2 lub 3: prawda"
+            "label": "Kryteria 1 i&nbsp;2 lub 3: prawda"
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria 1 lub 2 i 3: fałsz"
+            "label": "Kryteria 1 lub 2 i&nbsp;3: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -434,7 +434,7 @@
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -493,13 +493,13 @@
       "type": "test",
       "preconditions": [
         "1. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
-        "2. Sygnałem mowy nie są nazwy własne, terminy techniczne, słowa w nieokreślonym języku ani słowa lub zwroty, które stały się częścią żargonu bezpośrednio otaczającego tekstu.",
-        "3. Treść nie jest generowana zewnętrznie i jest kontrolowana przez dostawcę TIK .",
-        "4. Wyświetlane języki można wybrać z zastosowaniem dostępu niewizualny.",
+        "2. Sygnałem mowy nie są nazwy własne, terminy techniczne, słowa w&nbsp;nieokreślonym języku ani słowa lub zwroty, które stały się częścią żargonu bezpośrednio otaczającego tekstu.",
+        "3. Treść nie jest generowana zewnętrznie i&nbsp;jest kontrolowana przez dostawcę TIK .",
+        "4. Wyświetlane języki można wybrać z&nbsp;zastosowaniem dostępu niewizualny.",
         "5. Gdy użytkownik nie wybrał języka mowy, który jest inny niż język wyświetlanej treści."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście mowy jest w tym samym języku co dostarczona wyświetlana treść."
+        "1. Sprawdź, czy wyjście mowy jest w&nbsp;tym samym języku co dostarczona wyświetlana treść."
       ],
       "form": {
         "inputs": [
@@ -540,7 +540,7 @@
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -559,14 +559,14 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.5.1.3.16 Pokwitowania, bilety i dane wyjściowe transakcji"
+      "text": "C.5.1.3.16 Pokwitowania, bilety i&nbsp;dane wyjściowe transakcji"
     },
     {
       "type": "test",
       "preconditions": [
         "1. TIK jest zamknięta dla dostępu wizualnego.",
         "2. TIK dostarcza jako wynik transakcji samoobsługowej pokwitowania, bilet lub inne dane wyjściowe",
-        "3. Sprawdzane informacje nie są drukowanymi kopiami tras i map."
+        "3. Sprawdzane informacje nie są drukowanymi kopiami tras i&nbsp;map."
       ],
       "procedure": [
         "1. Sprawdź, czy dostarczane wyjście mowy zawiera wszystkie informacje niezbędne do zakończenia lub zweryfikowania transakcji."
@@ -586,7 +586,7 @@
             "label": "Nie spełniono warunku wstępnego 1, 2 lub 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.1.3.16 Pokwitowania, bilety i dane wyjściowe transakcji",
+        "legend": "Wybierz wynik dla C.5.1.3.16 Pokwitowania, bilety i&nbsp;dane wyjściowe transakcji",
         "noteId": "notes-c-5-1-3-16"
       },
       "evaluationType": "Testing"
@@ -634,7 +634,7 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Aby umożliwić korzystanie z funkcjonalności zamkniętych TIK , konieczne jest wcześniejsze przygotowanie nagrań sygnału dźwiękowego."
+        "1. Aby umożliwić korzystanie z&nbsp;funkcjonalności zamkniętych TIK , konieczne jest wcześniejsze przygotowanie nagrań sygnału dźwiękowego."
       ],
       "procedure": [
         "1. Sprawdź, czy informacje wizualne odpowiadają nagraniom sygnału dźwiękowego."
@@ -662,7 +662,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.5.1.6 Działanie bez korzystania z klawiatury"
+      "text": "C.5.1.6 Działanie bez korzystania z&nbsp;klawiatury"
     },
     {
       "type": "heading",
@@ -672,7 +672,7 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Funkcjonalność TIK jest zamknięta dla klawiatur i interfejsów klawiatury."
+        "1. Funkcjonalność TIK jest zamknięta dla klawiatur i&nbsp;interfejsów klawiatury."
       ],
       "procedure": [
         "1. Sprawdź, czy wszystkie funkcjonalności można obsługiwać bez użycia wzroku."
@@ -705,11 +705,11 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Funkcjonalność TIK jest zamknięta dla klawiatur i interfejsów klawiatury.",
+        "1. Funkcjonalność TIK jest zamknięta dla klawiatur i&nbsp;interfejsów klawiatury.",
         "2. Fokus może być przeniesiony na element interfejsu użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje możliwość usunięcia fokusu z elementu za pomocą tego samego mechanizmu."
+        "1. Sprawdź, czy istnieje możliwość usunięcia fokusu z&nbsp;elementu za pomocą tego samego mechanizmu."
       ],
       "form": {
         "inputs": [
@@ -739,7 +739,7 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Aby umożliwić korzystanie z funkcjonalności zamkniętych TIK , konieczna jest mowa."
+        "1. Aby umożliwić korzystanie z&nbsp;funkcjonalności zamkniętych TIK , konieczna jest mowa."
       ],
       "procedure": [
         "1. Sprawdź, czy zamknięte funkcje można aktywować za pomocą alternatywnego mechanizmu wprowadzania, który nie wymaga posługiwania się mową."
@@ -775,7 +775,7 @@
         "1. TIK zapewnia udokumentowane funkcje dostępności uwzględniające konkretne potrzeby."
       ],
       "procedure": [
-        "1. Sprawdź, czy można aktywować te funkcje dostępności, nie korzystając z metody, która nie uwzględnia tych potrzeb."
+        "1. Sprawdź, czy można aktywować te funkcje dostępności, nie korzystając z&nbsp;metody, która nie uwzględnia tych potrzeb."
       ],
       "form": {
         "inputs": [
@@ -861,18 +861,18 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.5.4 Zachowanie informacji o dostępności podczas konwersji"
+      "text": "C.5.4 Zachowanie informacji o&nbsp;dostępności podczas konwersji"
     },
     {
       "type": "test",
       "preconditions": [
         "1. Niezastrzeżone informacje dotyczące dostępności są udokumentowane.",
         "2. TIK konwertuje informacje lub komunikację.",
-        "3. Niezastrzeżone informacje dotyczące dostępności mogą być zawarte w formacie docelowym.",
+        "3. Niezastrzeżone informacje dotyczące dostępności mogą być zawarte w&nbsp;formacie docelowym.",
         "4. Niezastrzeżone informacje dotyczące dostępności mogą być obsługiwane przez format docelowy."
       ],
       "procedure": [
-        "1. Sprawdź, czy niezastrzeżone informacje dotyczące dostępności są zachowane po konwersji w TIK informacji lub komunikacji."
+        "1. Sprawdź, czy niezastrzeżone informacje dotyczące dostępności są zachowane po konwersji w&nbsp;TIK informacji lub komunikacji."
       ],
       "form": {
         "inputs": [
@@ -889,7 +889,7 @@
             "label": "Nie spełniono warunku wstępnego 1, 2, 3 lub 4"
           }
         ],
-        "legend": "Wybierz wynik dla C.5.4 Zachowanie informacji o dostępności podczas konwersji",
+        "legend": "Wybierz wynik dla C.5.4 Zachowanie informacji o&nbsp;dostępności podczas konwersji",
         "noteId": "notes-c-5-4"
       },
       "evaluationType": "Inspection"
@@ -943,14 +943,14 @@
         "1. TIK zawiera części obsługiwane."
       ],
       "procedure": [
-        "1. Określ, czy istnieje sposób na rozpoznanie każdej części, którą można obsługiwać w sposób niewizualny.",
-        "2. Sprawdź, czy działanie związane z częścią obsługiwaną nie zostało wykonane z użyciem środków do rozpoznania każdej części obsługiwanej w kroku 1."
+        "1. Określ, czy istnieje sposób na rozpoznanie każdej części, którą można obsługiwać w&nbsp;sposób niewizualny.",
+        "2. Sprawdź, czy działanie związane z&nbsp;częścią obsługiwaną nie zostało wykonane z&nbsp;użyciem środków do rozpoznania każdej części obsługiwanej w&nbsp;kroku 1."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -983,8 +983,8 @@
         "2. Elementy sterujące blokujące lub przełączające są widoczne dla użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje przynajmniej jeden tryb działania, w którym stan wszystkich elementów sterujących blokujących lub przełączających można określić dotykowo, bez aktywowania elementu sterującego.",
-        "2. Sprawdź, czy istnieje przynajmniej jeden tryb działania, w którym stan wszystkich elementów sterujących blokujących lub przełączających można określić dźwiękiem, bez aktywowania elementu sterującego."
+        "1. Sprawdź, czy istnieje przynajmniej jeden tryb działania, w&nbsp;którym stan wszystkich elementów sterujących blokujących lub przełączających można określić dotykowo, bez aktywowania elementu sterującego.",
+        "2. Sprawdź, czy istnieje przynajmniej jeden tryb działania, w&nbsp;którym stan wszystkich elementów sterujących blokujących lub przełączających można określić dźwiękiem, bez aktywowania elementu sterującego."
       ],
       "form": {
         "inputs": [
@@ -994,7 +994,7 @@
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2: fałsz"
+            "label": "Kryteria 1 i&nbsp;2: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -1025,7 +1025,7 @@
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -1060,7 +1060,7 @@
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -1084,14 +1084,14 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK jest wyposażona w klawiaturę lub klawiaturę pomocniczą."
+        "1. TIK jest wyposażona w&nbsp;klawiaturę lub klawiaturę pomocniczą."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje mechanizm umożliwiający regulację opóźnienia po każdym naciśnięciu klawisza, podczas którego dodatkowe naciśnięcie klawisza nie zostanie zaakceptowane, jeśli jest ono identyczne z poprzednim naciśnięciem klawisza.",
+        "1. Sprawdź, czy istnieje mechanizm umożliwiający regulację opóźnienia po każdym naciśnięciu klawisza, podczas którego dodatkowe naciśnięcie klawisza nie zostanie zaakceptowane, jeśli jest ono identyczne z&nbsp;poprzednim naciśnięciem klawisza.",
         "2. Ustawić mechanizm na maksymalną wartość.",
         "3. Nacisnąć dowolny klawisz.",
-        "4. Po 0,5 s nacisnąć ten sam klawisz co w kroku 3.",
-        "5. Sprawdź, czy naciśnięcie w kroku 4 zostało zaakceptowane."
+        "4. Po 0,5 s nacisnąć ten sam klawisz co w&nbsp;kroku 3.",
+        "5. Sprawdź, czy naciśnięcie w&nbsp;kroku 4 zostało zaakceptowane."
       ],
       "form": {
         "inputs": [
@@ -1125,7 +1125,7 @@
       ],
       "procedure": [
         "1. Sprawdź, czy istnieje tryb pracy, który nie wymaga jednoczesnych czynności użytkownika.",
-        "2. Określ w TIK wszystkie funkcje sterowane przez użytkowników.",
+        "2. Określ w&nbsp;TIK wszystkie funkcje sterowane przez użytkowników.",
         "3. Sprawdź, czy każda funkcja, którą można sterować, może być obsługiwana za pomocą pojedynczego działania użytkownika."
       ],
       "form": {

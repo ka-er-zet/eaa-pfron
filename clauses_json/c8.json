@@ -9,7 +9,7 @@
     },
     {
       "type": "informative",
-      "text": "C.8.1 Wymagania ogólne\nKlauzula 8.1.1 jest doradcza i nie zawiera wymagań do testowania.\n"
+      "text": "C.8.1 Wymagania ogólne\nKlauzula 8.1.1 jest doradcza i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
@@ -19,11 +19,11 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia punkty podłączania urządzeń wejściowych i wyjściowych użytkownika."
+        "1. TIK zapewnia punkty podłączania urządzeń wejściowych i&nbsp;wyjściowych użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy jeden typ połączenia jest zgodny z niezastrzeżonym standardem branżowym.",
-        "2. Sprawdź, czy jeden typ połączenia jest zgodny z niezastrzeżonym standardem branżowym po zastosowaniu adapterów dostępnych na rynku."
+        "1. Sprawdź, czy jeden typ połączenia jest zgodny z&nbsp;niezastrzeżonym standardem branżowym.",
+        "2. Sprawdź, czy jeden typ połączenia jest zgodny z&nbsp;niezastrzeżonym standardem branżowym po zastosowaniu adapterów dostępnych na rynku."
       ],
       "form": {
         "inputs": [
@@ -33,7 +33,7 @@
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2: fałsz"
+            "label": "Kryteria 1 i&nbsp;2: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -56,7 +56,7 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Elementy sprzętowe TIK przekazują informacje wizualne za pomocą kodowania kolorami jako środka wskazującego działanie, prośby o odpowiedź lub w celu wyróżnienia elementu wizualnego."
+        "1. Elementy sprzętowe TIK przekazują informacje wizualne za pomocą kodowania kolorami jako środka wskazującego działanie, prośby o&nbsp;odpowiedź lub w&nbsp;celu wyróżnienia elementu wizualnego."
       ],
       "procedure": [
         "1. Sprawdź, czy jest dostępna alternatywna forma kodowania wizualnego."
@@ -84,7 +84,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.8.2 Produkty sprzętowe z wyjściem mowy"
+      "text": "C.8.2 Produkty sprzętowe z&nbsp;wyjściem mowy"
     },
     {
       "type": "heading",
@@ -102,10 +102,10 @@
         "1. Sprzęt TIK ma wyjście mowy."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK ma certyfikat zgodności z ANSI/TIA-4965 [i.2].",
+        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;ANSI/TIA-4965 [i.2].",
         "2. Zmierzyć poziom głośności (w dB) sygnału mowy przy najniższym ustawieniu głośności.",
         "3. Zmierzyć poziom głośności (w dB) sygnału mowy przy najwyższym ustawieniu głośności.",
-        "4. Sprawdź, czy zakres między wartościami 1 i 2 jest równy 18 dB lub większy."
+        "4. Sprawdź, czy zakres między wartościami 1 i&nbsp;2 jest równy 18 dB lub większy."
       ],
       "form": {
         "inputs": [
@@ -115,7 +115,7 @@
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria 1 i 4: fałsz"
+            "label": "Kryteria 1 i&nbsp;4: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -140,7 +140,7 @@
       ],
       "procedure": [
         "1. Zmierzyć poziom głośności (w dB) sygnału mowy przy najniższym ustawieniu głośności.",
-        "2. Sprawdź, czy jeden krok pośredni zapewnia poziom o 12 dB wyższy od najniższego poziomu głośności zmierzonego w kroku 1."
+        "2. Sprawdź, czy jeden krok pośredni zapewnia poziom o&nbsp;12 dB wyższy od najniższego poziomu głośności zmierzonego w&nbsp;kroku 1."
       ],
       "form": {
         "inputs": [
@@ -175,20 +175,20 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Sprzęt TIK to stacjonarne urządzenie komunikacyjne z wyjściem dźwięku, które zazwyczaj jest trzymane przy uchu."
+        "1. Sprzęt TIK to stacjonarne urządzenie komunikacyjne z&nbsp;wyjściem dźwięku, które zazwyczaj jest trzymane przy uchu."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK ma certyfikat zgodności z TIA-1083-A [i.24]. wymagań zdefiniowanych w tej normie."
+        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;TIA-1083-A [i.24]. wymagań zdefiniowanych w&nbsp;tej normie."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 lub 2: prawda i kryterium 3: prawda"
+            "label": "Kryterium 1 lub 2: prawda i&nbsp;kryterium 3: prawda"
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2: fałsz lub kryterium 3: fałsz"
+            "label": "Kryteria 1 i&nbsp;2: fałsz lub kryterium 3: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -208,11 +208,11 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Sprzęt TIK to bezprzewodowe urządzenie komunikacyjne, które zazwyczaj jest umieszczane w uchu."
+        "1. Sprzęt TIK to bezprzewodowe urządzenie komunikacyjne, które zazwyczaj jest umieszczane w&nbsp;uchu."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK ma certyfikat zgodności z ANSI/IEEE C63.19 [i.1].",
-        "2. Sprawdź, czy TIK zapewniają środki sprzężenia magnetycznego z technologiami"
+        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;ANSI/IEEE C63.19 [i.1].",
+        "2. Sprawdź, czy TIK zapewniają środki sprzężenia magnetycznego z&nbsp;technologiami"
       ],
       "form": {
         "inputs": [
@@ -222,7 +222,7 @@
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2: fałsz"
+            "label": "Kryteria 1 i&nbsp;2: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -241,12 +241,12 @@
     },
     {
       "type": "informative",
-      "text": "C.8.3 TIK stacjonarne\nKlauzula 8.3.0 jest doradcza i nie zawiera wymagań do testowania.\n"
+      "text": "C.8.3 TIK stacjonarne\nKlauzula 8.3.0 jest doradcza i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.3.1 Dostęp z przodu lub z boku"
+      "text": "C.8.3.1 Dostęp z&nbsp;przodu lub z&nbsp;boku"
     },
     {
       "type": "test",
@@ -265,14 +265,14 @@
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2: fałsz"
+            "label": "Kryteria 1 i&nbsp;2: fałsz"
           },
           {
             "value": "Nie dotyczy",
             "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.1 Dostęp z przodu lub z boku",
+        "legend": "Wybierz wynik dla C.8.3.1 Dostęp z&nbsp;przodu lub z&nbsp;boku",
         "noteId": "notes-c-8-3-1"
       },
       "evaluationType": "Inspection"
@@ -280,21 +280,21 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.3.2 Dostęp z przodu"
+      "text": "C.8.3.2 Dostęp z&nbsp;przodu"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.3.2.1 Nieograniczony dostęp z przodu, od góry"
+      "text": "C.8.3.2.1 Nieograniczony dostęp z&nbsp;przodu, od góry"
     },
     {
       "type": "test",
       "preconditions": [
         "1 TIK jest urządzeniem stacjonarnym.",
-        "2. Żadna część stacjonarnej TIK nie utrudnia dostępu z przodu."
+        "2. Żadna część stacjonarnej TIK nie utrudnia dostępu z&nbsp;przodu."
       ],
       "procedure": [
-        "1. Sprawdź, czy co najmniej jedna z każdego rodzaju części obsługiwanych jest umieszczona nie wyżej niż 1 200 mm (48 cali) nad podłogą w przestrzeni dostępu."
+        "1. Sprawdź, czy co najmniej jedna z&nbsp;każdego rodzaju części obsługiwanych jest umieszczona nie wyżej niż 1 200 mm (48 cali) nad podłogą w&nbsp;przestrzeni dostępu."
       ],
       "form": {
         "inputs": [
@@ -311,7 +311,7 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.2.1 Nieograniczony dostęp z przodu, od góry",
+        "legend": "Wybierz wynik dla C.8.3.2.1 Nieograniczony dostęp z&nbsp;przodu, od góry",
         "noteId": "notes-c-8-3-2-1"
       },
       "evaluationType": "Inspection and measurement"
@@ -319,16 +319,16 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.3.2.2 Nieograniczony dostęp z przodu, od dołu"
+      "text": "C.8.3.2.2 Nieograniczony dostęp z&nbsp;przodu, od dołu"
     },
     {
       "type": "test",
       "preconditions": [
         "1. TIK jest urządzeniem stacjonarnym.",
-        "2. Żadna część stacjonarnej TIK nie utrudnia dostępu z przodu."
+        "2. Żadna część stacjonarnej TIK nie utrudnia dostępu z&nbsp;przodu."
       ],
       "procedure": [
-        "1. Sprawdź, czy co najmniej jedna z każdego rodzaju części obsługiwanych jest umieszczona nie niżej niż 380 mm (15 cali) nad podłogą w przestrzeni dostępu."
+        "1. Sprawdź, czy co najmniej jedna z&nbsp;każdego rodzaju części obsługiwanych jest umieszczona nie niżej niż 380 mm (15 cali) nad podłogą w&nbsp;przestrzeni dostępu."
       ],
       "form": {
         "inputs": [
@@ -345,7 +345,7 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.2.2 Nieograniczony dostęp z przodu, od dołu",
+        "legend": "Wybierz wynik dla C.8.3.2.2 Nieograniczony dostęp z&nbsp;przodu, od dołu",
         "noteId": "notes-c-8-3-2-2"
       },
       "evaluationType": "Inspection and measurement"
@@ -353,21 +353,21 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.3.3 Dostęp z boku"
+      "text": "C.8.3.3 Dostęp z&nbsp;boku"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.3.3.1 Nieograniczony dostęp z boku, od góry"
+      "text": "C.8.3.3.1 Nieograniczony dostęp z&nbsp;boku, od góry"
     },
     {
       "type": "test",
       "preconditions": [
         "1. TIK jest urządzeniem stacjonarnym.",
-        "2. Dostęp z boku jest nieograniczony lub ograniczony przez element będący integralną częścią stacjonarnej TIK o szerokości mniejszej niż 510 mm (20 cali)."
+        "2. Dostęp z&nbsp;boku jest nieograniczony lub ograniczony przez element będący integralną częścią stacjonarnej TIK o&nbsp;szerokości mniejszej niż 510 mm (20 cali)."
       ],
       "procedure": [
-        "1. Sprawdź, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą w przestrzeni dostępu."
+        "1. Sprawdź, czy dostęp z&nbsp;boku, od góry do co najmniej jednego z&nbsp;każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą w&nbsp;przestrzeni dostępu."
       ],
       "form": {
         "inputs": [
@@ -384,7 +384,7 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2 EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.3.1 Nieograniczony dostęp z boku, od góry",
+        "legend": "Wybierz wynik dla C.8.3.3.1 Nieograniczony dostęp z&nbsp;boku, od góry",
         "noteId": "notes-c-8-3-3-1"
       },
       "evaluationType": "Inspection and measurement"
@@ -392,16 +392,16 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.8.3.3.2 Nieograniczony dostęp z boku, od dołu"
+      "text": "C.8.3.3.2 Nieograniczony dostęp z&nbsp;boku, od dołu"
     },
     {
       "type": "test",
       "preconditions": [
         "1. TIK jest urządzeniem stacjonarnym.",
-        "2. Dostęp z boku jest nieograniczony lub ograniczony przez element będący integralną częścią stacjonarnej TIK o szerokości mniejszej niż 510 mm (20 cali)."
+        "2. Dostęp z&nbsp;boku jest nieograniczony lub ograniczony przez element będący integralną częścią stacjonarnej TIK o&nbsp;szerokości mniejszej niż 510 mm (20 cali)."
       ],
       "procedure": [
-        "1. Sprawdź, czy dostęp z boku, od dołu do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 380 mm (15 cali) nad podłogą w przestrzeni dostępu."
+        "1. Sprawdź, czy dostęp z&nbsp;boku, od dołu do co najmniej jednego z&nbsp;każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 380 mm (15 cali) nad podłogą w&nbsp;przestrzeni dostępu."
       ],
       "form": {
         "inputs": [
@@ -418,7 +418,7 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.3.3.2 Nieograniczony dostęp z boku, od dołu",
+        "legend": "Wybierz wynik dla C.8.3.3.2 Nieograniczony dostęp z&nbsp;boku, od dołu",
         "noteId": "notes-c-8-3-3-2"
       },
       "evaluationType": "Inspection and measurement"
@@ -452,7 +452,7 @@
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria 1 i 2 i 3: fałsz"
+            "label": "Kryteria 1 i&nbsp;2 i&nbsp;3: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -476,7 +476,7 @@
         "2. Obszar działania jest integralną częścią TIK"
       ],
       "procedure": [
-        "1. Sprawdź, czy powierzchnia podłogi ma wymiary wynoszące co najmniej 760 mm wzdłuż jednej krawędzi i 1 220 mm wzdłuż drugiej."
+        "1. Sprawdź, czy powierzchnia podłogi ma wymiary wynoszące co najmniej 760 mm wzdłuż jednej krawędzi i&nbsp;1 220 mm wzdłuż drugiej."
       ],
       "form": {
         "inputs": [
@@ -510,7 +510,7 @@
         "2. Do dyspozycji jest co najmniej jeden wyświetlacz."
       ],
       "procedure": [
-        "1. Sprawdź, czy co najmniej jeden wyświetlacz każdego typu jest umieszczony w taki sposób, aby informacje na nim były czytelne z punktu znajdującego się 1 015 mm (40 cali) nad środkiem podłogi w obszarze roboczym."
+        "1. Sprawdź, czy co najmniej jeden wyświetlacz każdego typu jest umieszczony w&nbsp;taki sposób, aby informacje na nim były czytelne z&nbsp;punktu znajdującego się 1 015 mm (40 cali) nad środkiem podłogi w&nbsp;obszarze roboczym."
       ],
       "form": {
         "inputs": [
@@ -544,14 +544,14 @@
       ],
       "procedure": [
         "1. Sprawdź, czy dostępna jest instrukcja montażu.",
-        "2. Sprawdź, czy w instrukcji podano wskazówki dotyczące sposobu montażu TIK w sposób zapewniający zgodność wymiarów z wymaganiami zawartymi w Rozdziałach od 8.3.2 do 8.3.4.",
-        "3. Sprawdź, czy w instrukcji podano, że zaleca się aby osoby zajmujące się montażem również brały pod uwagę obowiązujące wymagania dotyczące dostępności środowiska zbudowanego, które mają zastosowanie podczas montażu TIK ."
+        "2. Sprawdź, czy w&nbsp;instrukcji podano wskazówki dotyczące sposobu montażu TIK w&nbsp;sposób zapewniający zgodność wymiarów z&nbsp;wymaganiami zawartymi w&nbsp;Rozdziałach od 8.3.2 do 8.3.4.",
+        "3. Sprawdź, czy w&nbsp;instrukcji podano, że zaleca się aby osoby zajmujące się montażem również brały pod uwagę obowiązujące wymagania dotyczące dostępności środowiska zbudowanego, które mają zastosowanie podczas montażu TIK ."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryteria 1, 2 i 3: prawda"
+            "label": "Kryteria 1, 2 i&nbsp;3: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -580,10 +580,10 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK ma fizyczne klawisze numeryczne rozmieszczone w 12-przyciskowym układzie klawiatury telefonicznej."
+        "1. TIK ma fizyczne klawisze numeryczne rozmieszczone w&nbsp;12-przyciskowym układzie klawiatury telefonicznej."
       ],
       "procedure": [
-        "1. Sprawdź, czy klawisz z cyfrą 5 różni się w dotyku od pozostałych klawiszy."
+        "1. Sprawdź, czy klawisz z&nbsp;cyfrą 5 różni się w&nbsp;dotyku od pozostałych klawiszy."
       ],
       "form": {
         "inputs": [
@@ -679,12 +679,12 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.8.4.3 Klucze, bilety i karty taryfowe"
+      "text": "C.8.4.3 Klucze, bilety i&nbsp;karty taryfowe"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK dostarcza klucze, bilety lub karty taryfowe, a ich orientacja jest ważna dla dalszego wykorzystania."
+        "1. TIK dostarcza klucze, bilety lub karty taryfowe, a&nbsp;ich orientacja jest ważna dla dalszego wykorzystania."
       ],
       "procedure": [
         "1. Sprawdź, czy orientację kluczy, biletów lub kart taryfowych można wyczuć dotykiem."
@@ -704,7 +704,7 @@
             "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.8.4.3 Klucze, bilety i karty taryfowe",
+        "legend": "Wybierz wynik dla C.8.4.3 Klucze, bilety i&nbsp;karty taryfowe",
         "noteId": "notes-c-8-4-3"
       },
       "evaluationType": "Inspection and measurement"
@@ -712,7 +712,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.8.5 Oznaczenia dotykowe w trybie mowy"
+      "text": "C.8.5 Oznaczenia dotykowe w&nbsp;trybie mowy"
     },
     {
       "type": "test",
@@ -721,7 +721,7 @@
         "2. Jest dostępne wyjście mowy."
       ],
       "procedure": [
-        "1. Sprawdź, czy jest dostępne wyczuwalne w dotyku wskazanie sposobu rozpoczęcia pracy w trybie mowy."
+        "1. Sprawdź, czy jest dostępne wyczuwalne w&nbsp;dotyku wskazanie sposobu rozpoczęcia pracy w&nbsp;trybie mowy."
       ],
       "form": {
         "inputs": [
@@ -738,7 +738,7 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2. C.9 Internet"
           }
         ],
-        "legend": "Wybierz wynik dla C.8.5 Oznaczenia dotykowe w trybie mowy",
+        "legend": "Wybierz wynik dla C.8.5 Oznaczenia dotykowe w&nbsp;trybie mowy",
         "noteId": "notes-c-8-5"
       },
       "evaluationType": "Inspection and measurement"

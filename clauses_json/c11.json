@@ -9,7 +9,7 @@
     },
     {
       "type": "informative",
-      "text": "Klauzula 11.0 ma charakter wyłącznie doradczy i nie zawiera wymagań do testowania.\n"
+      "text": "Klauzula 11.0 ma charakter wyłącznie doradczy i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
@@ -76,19 +76,19 @@
       ],
       "procedure": [
         "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
-        "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.",
+        "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i&nbsp;potrzebna.",
         "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
-        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w kryterium sukcesu WCAG 2.1 dla wytycznej <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">1.1.1</a> Treść nietekstowa."
+        "4. Sprawdź, czy wyjście mowy jest zgodne z&nbsp;wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w&nbsp;kryterium sukcesu WCAG 2.1 dla wytycznej <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">1.1.1</a> Treść nietekstowa."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryteria (1, 2, 3 i 4: prawda); lub (1 i 2: fałsz); lub (1 i 3: fałsz)"
+            "label": "Kryteria (1, 2, 3 i&nbsp;4: prawda); lub (1 i&nbsp;2: fałsz); lub (1 i&nbsp;3: fałsz)"
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria (1: prawda i 2: fałsz); lub (1: prawda i 3: fałsz); lub (1, 2 i 3: prawda oraz 4: fałsz)"
+            "label": "Kryteria (1: prawda i&nbsp;2: fałsz); lub (1: prawda i&nbsp;3: fałsz); lub (1, 2 i&nbsp;3: prawda oraz 4: fałsz)"
           },
           {
             "value": "Nie dotyczy",
@@ -121,7 +121,7 @@
       "preconditions": [
         "1. TIK jest oprogramowaniem nieinternetowym, który udostępnia interfejs użytkownika.",
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu.",
-        "3. Aby umożliwić korzystanie z funkcjonalności zamkniętych TIK , nie jest konieczne wcześniejsze przygotowanie nagrań informacji dźwiękowej."
+        "3. Aby umożliwić korzystanie z&nbsp;funkcjonalności zamkniętych TIK , nie jest konieczne wcześniejsze przygotowanie nagrań informacji dźwiękowej."
       ],
       "procedure": [
         "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audio-only-and-video-only-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.1</a> Tylko audio lub tylko wideo (nagranie)."
@@ -157,7 +157,7 @@
       "preconditions": [
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
         "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
-        "3. Aby umożliwić korzystanie z funkcjonalności zamkniętych TIK , konieczne jest wcześniejsze przygotowanie nagrań informacji dźwiękowej."
+        "3. Aby umożliwić korzystanie z&nbsp;funkcjonalności zamkniętych TIK , konieczne jest wcześniejsze przygotowanie nagrań informacji dźwiękowej."
       ],
       "procedure": [
         "1. Sprawdź, czy informacje wizualne odpowiadają nagraniom sygnału dźwiękowego."
@@ -193,11 +193,11 @@
       "preconditions": [
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
         "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
-        "3. Nagrane materiały wideo są niezbędne, aby umożliwić korzystanie z zamkniętych funkcji TIK .",
-        "4. Jako dostęp niewizualny do treści nietekstowej w funkcjonalności zamkniętej jest zapewniane wyjście mowy."
+        "3. Nagrane materiały wideo są niezbędne, aby umożliwić korzystanie z&nbsp;zamkniętych funkcji TIK .",
+        "4. Jako dostęp niewizualny do treści nietekstowej w&nbsp;funkcjonalności zamkniętej jest zapewniane wyjście mowy."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście mowy zawiera informacje zgodne z napisami do nagranej treści wideo."
+        "1. Sprawdź, czy wyjście mowy zawiera informacje zgodne z&nbsp;napisami do nagranej treści wideo."
       ],
       "form": {
         "inputs": [
@@ -304,10 +304,10 @@
       "preconditions": [
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
         "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
-        "3. Jako dostęp niewizualny do treści nietekstowej w funkcjonalności zamkniętej jest zapewniane wyjście mowy."
+        "3. Jako dostęp niewizualny do treści nietekstowej w&nbsp;funkcjonalności zamkniętej jest zapewniane wyjście mowy."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście mowy zawiera informacje zgodne z napisami do nagranej treści wideo."
+        "1. Sprawdź, czy wyjście mowy zawiera informacje zgodne z&nbsp;napisami do nagranej treści wideo."
       ],
       "form": {
         "inputs": [
@@ -405,12 +405,12 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.3.1 Informacje i relacje"
+      "text": "C.11.1.3.1 Informacje i&nbsp;relacje"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.3.1.1 Informacje i relacje (funkcjonalność otwarta)",
+      "text": "C.11.1.3.1.1 Informacje i&nbsp;relacje (funkcjonalność otwarta)",
       "wcag_level": "A"
     },
     {
@@ -420,7 +420,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#info-and-relationships\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1</a> Informacje i relacje."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#info-and-relationships\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1</a> Informacje i&nbsp;relacje."
       ],
       "form": {
         "inputs": [
@@ -437,7 +437,7 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.3.1.1 Informacje i relacje (funkcjonalność otwarta)",
+        "legend": "Wybierz wynik dla C.11.1.3.1.1 Informacje i&nbsp;relacje (funkcjonalność otwarta)",
         "noteId": "notes-c-11-1-3-1-1"
       },
       "evaluationType": "Inspection"
@@ -445,11 +445,11 @@
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.1.3.1.2 Informacje i relacje (funkcjonalność zamknięta)"
+      "text": "C.11.1.3.1.2 Informacje i&nbsp;relacje (funkcjonalność zamknięta)"
     },
     {
       "type": "informative",
-      "text": "Klauzula 11.1.3.1.2 ma charakter wyłącznie doradczy i nie zawiera wymagań do testowania.\n"
+      "text": "Klauzula 11.1.3.1.2 ma charakter wyłącznie doradczy i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
@@ -498,7 +498,7 @@
     },
     {
       "type": "informative",
-      "text": "Klauzula 11.1.3.2.2 ma charakter wyłącznie doradczy i nie zawiera wymagań do testowania.\n"
+      "text": "Klauzula 11.1.3.2.2 ma charakter wyłącznie doradczy i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
@@ -622,19 +622,19 @@
         "3. Sygnał dźwiękowy zapewnia niewizualny dostęp do funkcji zamkniętych."
       ],
       "procedure": [
-        "1. Sprawdź, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu zawartego w TIK lub dostarczanego wraz z nią.",
+        "1. Sprawdź, czy sygnał dźwiękowy jest dostarczany za pomocą mechanizmu zawartego w&nbsp;TIK lub dostarczanego wraz z&nbsp;nią.",
         "2. Sprawdź, czy sygnał dźwiękowy jest dostarczany za pomocą osobistego zestawu słuchawkowego, który można podłączyć poprzez gniazdo audio 3,5 mm lub standardowe połączenie branżowe, bez konieczności korzystania ze wzroku.",
-        "3. Sprawdź, czy sygnał dźwiękowy obejmuje elementy z sekcji Przeznaczenie pól danych w komponentach interfejsu użytkowników."
+        "3. Sprawdź, czy sygnał dźwiękowy obejmuje elementy z&nbsp;sekcji Przeznaczenie pól danych w&nbsp;komponentach interfejsu użytkowników."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium (1 lub 2): prawda i kryterium 3: prawda"
+            "label": "Kryterium (1 lub 2): prawda i&nbsp;kryterium 3: prawda"
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria (1 i 2): fałsz lub kryterium 3: fałsz"
+            "label": "Kryteria (1 i&nbsp;2): fałsz lub kryterium 3: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -697,7 +697,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.1"
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.1"
       ],
       "form": {
         "inputs": [
@@ -885,19 +885,19 @@
       ],
       "procedure": [
         "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
-        "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i potrzebna.",
+        "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i&nbsp;potrzebna.",
         "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
-        "4. Sprawdź, czy wyjście mowy jest zgodne z wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w kryterium sukcesu WCAG 2.1 dla wytycznej <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">1.1.1</a> Treść nietekstowa."
+        "4. Sprawdź, czy wyjście mowy jest zgodne z&nbsp;wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w&nbsp;kryterium sukcesu WCAG 2.1 dla wytycznej <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">1.1.1</a> Treść nietekstowa."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryteria (1, 2, 3 i 4: prawda); lub (1 i 2: fałsz); lub (1 i 3: fałsz)"
+            "label": "Kryteria (1, 2, 3 i&nbsp;4: prawda); lub (1 i&nbsp;2: fałsz); lub (1 i&nbsp;3: fałsz)"
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryteria (1: prawda i 2: fałsz); lub (1: prawda i 3: fałsz); lub (1, 2 i 3: prawda oraz 4: fałsz)"
+            "label": "Kryteria (1: prawda i&nbsp;2: fałsz); lub (1: prawda i&nbsp;3: fałsz); lub (1, 2 i&nbsp;3: prawda oraz 4: fałsz)"
           },
           {
             "value": "Nie dotyczy",
@@ -921,7 +921,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.2."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.2."
       ],
       "form": {
         "inputs": [
@@ -980,7 +980,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.1.4.12 Odstępy w tekście",
+      "text": "C.11.1.4.12 Odstępy w&nbsp;tekście",
       "wcag_level": "AA"
     },
     {
@@ -989,7 +989,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym , które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#text-spacing\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12</a> Odstępy w tekście."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#text-spacing\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12</a> Odstępy w&nbsp;tekście."
       ],
       "form": {
         "inputs": [
@@ -1003,10 +1003,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście."
+            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w&nbsp;tekście."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.4.12 Odstępy w tekście",
+        "legend": "Wybierz wynik dla C.11.1.4.12 Odstępy w&nbsp;tekście",
         "noteId": "notes-c-11-1-4-12"
       },
       "evaluationType": "Inspection"
@@ -1053,7 +1053,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.2.1 Dostępność z klawiatury"
+      "text": "C.11.2.1 Dostępność z&nbsp;klawiatury"
     },
     {
       "type": "heading",
@@ -1105,7 +1105,7 @@
       "type": "test",
       "preconditions": [
         "1. TIK jest oprogramowaniem nieinternetowym. Które udostępnia interfejs użytkownika.",
-        "2. Interfejs użytkownika jest zamknięty dla klawiatur i interfejsów klawiatury."
+        "2. Interfejs użytkownika jest zamknięty dla klawiatur i&nbsp;interfejsów klawiatury."
       ],
       "procedure": [
         "1. Sprawdź, czy wszystkie funkcjonalności interfejsu użytkownika można obsługiwać bez użycia wzroku."
@@ -1142,7 +1142,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.3."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.3."
       ],
       "form": {
         "inputs": [
@@ -1214,7 +1214,7 @@
       "type": "test",
       "preconditions": [
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika.",
-        "2. Funkcjonalność TIK jest zamknięta dla klawiatur i interfejsów klawiatury."
+        "2. Funkcjonalność TIK jest zamknięta dla klawiatur i&nbsp;interfejsów klawiatury."
       ],
       "procedure": [
         "1. Sprawdź, czy wszystkie funkcjonalności można obsługiwać bez użycia wzroku."
@@ -1256,7 +1256,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.4."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.4."
       ],
       "form": {
         "inputs": [
@@ -1290,7 +1290,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.5."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.5."
       ],
       "form": {
         "inputs": [
@@ -1329,7 +1329,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.6."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.6."
       ],
       "form": {
         "inputs": [
@@ -1368,7 +1368,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.7."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.7."
       ],
       "form": {
         "inputs": [
@@ -1427,7 +1427,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.4.6 Nagłówki i etykiety",
+      "text": "C.11.2.4.6 Nagłówki i&nbsp;etykiety",
       "wcag_level": "AA"
     },
     {
@@ -1436,7 +1436,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#headings-and-labels\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6</a> Nagłówki i etykiety."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#headings-and-labels\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6</a> Nagłówki i&nbsp;etykiety."
       ],
       "form": {
         "inputs": [
@@ -1450,10 +1450,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety."
+            "label": "Nie spełniono warunku wstępnego 1 lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i&nbsp;etykiety."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.4.6 Nagłówki i etykiety",
+        "legend": "Wybierz wynik dla C.11.2.4.6 Nagłówki i&nbsp;etykiety",
         "noteId": "notes-c-11-2-4-6"
       },
       "evaluationType": "Inspection"
@@ -1510,7 +1510,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.8."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.8."
       ],
       "form": {
         "inputs": [
@@ -1545,7 +1545,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.9."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.9."
       ],
       "form": {
         "inputs": [
@@ -1570,12 +1570,12 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.2.5.3 Etykieta w nazwie"
+      "text": "C.11.2.5.3 Etykieta w&nbsp;nazwie"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.2.5.3.1 Etykieta w nazwie (funkcjonalność otwarta)",
+      "text": "C.11.2.5.3.1 Etykieta w&nbsp;nazwie (funkcjonalność otwarta)",
       "wcag_level": "A"
     },
     {
@@ -1585,7 +1585,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#label-in-name\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3</a> Etykieta w nazwie."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#label-in-name\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3</a> Etykieta w&nbsp;nazwie."
       ],
       "form": {
         "inputs": [
@@ -1599,10 +1599,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie."
+            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w&nbsp;nazwie."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.2.5.3.1 Etykieta w nazwie (funkcjonalność otwarta)",
+        "legend": "Wybierz wynik dla C.11.2.5.3.1 Etykieta w&nbsp;nazwie (funkcjonalność otwarta)",
         "noteId": "notes-c-11-2-5-3-1"
       },
       "evaluationType": "Inspection"
@@ -1610,11 +1610,11 @@
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.2.5.3.2 Etykieta w nazwie (funkcjonalność zamknięta)"
+      "text": "C.11.2.5.3.2 Etykieta w&nbsp;nazwie (funkcjonalność zamknięta)"
     },
     {
       "type": "informative",
-      "text": "Klauzula 11.2.5.3.2 ma charakter wyłącznie informacyjny i nie zawiera wymagań do testowania.\n"
+      "text": "Klauzula 11.2.5.3.2 ma charakter wyłącznie informacyjny i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
@@ -1679,7 +1679,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.10."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.10."
       ],
       "form": {
         "inputs": [
@@ -1710,16 +1710,16 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK jest oprogramowaniem nieinternetowym z interfejsem użytkownika.",
+        "1. TIK jest oprogramowaniem nieinternetowym z&nbsp;interfejsem użytkownika.",
         "2. Interfejs użytkownika jest zamknięty na technologie wspomagające odczyt ekranu.",
         "3. Wyjście mowy zapewnia niewizualny dostęp do funkcji zamkniętych.",
-        "4. Sygnałem mowy nie są nazwy własne, terminy techniczne, słowa w nieokreślonym języku ani słowa lub zwroty, które stały się częścią żargonu bezpośrednio otaczającego tekstu.",
-        "5. Treść nie jest generowana zewnętrznie i jest kontrolowana przez dostawcę TIK .",
-        "6. Wyświetlane języki można wybrać z zastosowaniem dostępu niewizualny.",
+        "4. Sygnałem mowy nie są nazwy własne, terminy techniczne, słowa w&nbsp;nieokreślonym języku ani słowa lub zwroty, które stały się częścią żargonu bezpośrednio otaczającego tekstu.",
+        "5. Treść nie jest generowana zewnętrznie i&nbsp;jest kontrolowana przez dostawcę TIK .",
+        "6. Wyświetlane języki można wybrać z&nbsp;zastosowaniem dostępu niewizualny.",
         "7. Użytkownik nie wybrał języka mowy, który jest inny niż język wyświetlanej treści."
       ],
       "procedure": [
-        "1. Sprawdź, czy wyjście mowy występuje w tym samym języku co dostarczona wyświetlana treść."
+        "1. Sprawdź, czy wyjście mowy występuje w&nbsp;tym samym języku co dostarczona wyświetlana treść."
       ],
       "form": {
         "inputs": [
@@ -1881,7 +1881,7 @@
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -1968,7 +1968,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
+      "text": "C.11.3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)",
       "wcag_level": "AA"
     },
     {
@@ -1977,7 +1977,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.11."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.11."
       ],
       "form": {
         "inputs": [
@@ -1994,7 +1994,7 @@
             "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
+        "legend": "Wybierz wynik dla C.11.3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)",
         "noteId": "notes-c-11-3-3-4"
       },
       "evaluationType": "Inspection"
@@ -2027,7 +2027,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.12."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.12."
       ],
       "form": {
         "inputs": [
@@ -2076,7 +2076,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w Tablicy 11.13."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.13."
       ],
       "form": {
         "inputs": [
@@ -2110,12 +2110,12 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.4.1.3 Komunikaty o stanie"
+      "text": "C.11.4.1.3 Komunikaty o&nbsp;stanie"
     },
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.4.1.3.1 Komunikaty o stanie (funkcjonalność otwarta)",
+      "text": "C.11.4.1.3.1 Komunikaty o&nbsp;stanie (funkcjonalność otwarta)",
       "wcag_level": "A"
     },
     {
@@ -2125,7 +2125,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#status-messages\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3</a> Komunikaty o stanie."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#status-messages\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3</a> Komunikaty o&nbsp;stanie."
       ],
       "form": {
         "inputs": [
@@ -2139,10 +2139,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie"
+            "label": "Nie spełniono warunku wstępnego 1 lub 2, lub oprogramowanie nieinternetowe nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o&nbsp;stanie"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.4.1.3.1 Komunikaty o stanie (funkcjonalność otwarta)",
+        "legend": "Wybierz wynik dla C.11.4.1.3.1 Komunikaty o&nbsp;stanie (funkcjonalność otwarta)",
         "noteId": "notes-c-11-4-1-3-1"
       },
       "evaluationType": "Inspection"
@@ -2150,7 +2150,7 @@
     {
       "type": "heading",
       "level": 6,
-      "text": "C.11.4.1.3.2 Komunikaty o stanie (funkcjonalność zamknięta)"
+      "text": "C.11.4.1.3.2 Komunikaty o&nbsp;stanie (funkcjonalność zamknięta)"
     },
     {
       "type": "informative",
@@ -2159,7 +2159,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.11.5 Współdziałanie z technologią wspomagającą"
+      "text": "C.11.5 Współdziałanie z&nbsp;technologią wspomagającą"
     },
     {
       "type": "heading",
@@ -2169,10 +2169,10 @@
     {
       "type": "test",
       "preconditions": [
-        "1. W oprogramowaniu występuje funkcjonalność zamknięta."
+        "1. W&nbsp;oprogramowaniu występuje funkcjonalność zamknięta."
       ],
       "procedure": [
-        "1. Sprawdź, czy funkcjonalność zamknięta jest zgodna z Rozdziałem 5.1."
+        "1. Sprawdź, czy funkcjonalność zamknięta jest zgodna z&nbsp;Rozdziałem 5.1."
       ],
       "form": {
         "inputs": [
@@ -2198,17 +2198,17 @@
     },
     {
       "type": "informative",
-      "text": "Testy C.11.5.2.1, C.11.5.2.2, C.11.5.2.3 i C.11.5.2.4 dotyczą dokumentacji platformy i tego, jak oprogramowanie (w tym AT) z niej korzysta. Wymagają inspekcji dokumentacji i kodu.\n"
+      "text": "Testy C.11.5.2.1, C.11.5.2.2, C.11.5.2.3 i&nbsp;C.11.5.2.4 dotyczą dokumentacji platformy i&nbsp;tego, jak oprogramowanie (w tym AT) z&nbsp;niej korzysta. Wymagają inspekcji dokumentacji i&nbsp;kodu.\n"
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.5.2.5 Informacje o obiekcie"
+      "text": "C.11.5.2.5 Informacje o&nbsp;obiekcie"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Oceniane jest oprogramowanie z interfejsem użytkownika."
+        "1. Oceniane jest oprogramowanie z&nbsp;interfejsem użytkownika."
       ],
       "procedure": [
         "1. Sprawdź, czy rola elementu interfejsu użytkownika jest możliwa do określenia programowo za pomocą technologii wspomagających.",
@@ -2221,7 +2221,7 @@
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryteria 1, 2, 3, 4 i 5: prawda"
+            "label": "Kryteria 1, 2, 3, 4 i&nbsp;5: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -2232,7 +2232,7 @@
             "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.11.5.2.5 Informacje o obiekcie",
+        "legend": "Wybierz wynik dla C.11.5.2.5 Informacje o&nbsp;obiekcie",
         "noteId": "notes-c-11-5-2-5"
       },
       "evaluationType": "Inspection"
@@ -2240,13 +2240,13 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.5.2.6 Wiersz, kolumna i nagłówki"
+      "text": "C.11.5.2.6 Wiersz, kolumna i&nbsp;nagłówki"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Oceniane jest oprogramowanie z interfejsem użytkownika.",
-        "2. W interfejsie użytkownika znajdują się tabele danych."
+        "1. Oceniane jest oprogramowanie z&nbsp;interfejsem użytkownika.",
+        "2. W&nbsp;interfejsie użytkownika znajdują się tabele danych."
       ],
       "procedure": [
         "1. Wybrać tabelę danych, na której należy wykonać testy.",
@@ -2259,7 +2259,7 @@
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryteria 2, 3, 4 i 5: prawda"
+            "label": "Kryteria 2, 3, 4 i&nbsp;5: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -2270,7 +2270,7 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.5.2.6 Wiersz, kolumna i nagłówki",
+        "legend": "Wybierz wynik dla C.11.5.2.6 Wiersz, kolumna i&nbsp;nagłówki",
         "noteId": "notes-c-11-5-2-6"
       },
       "evaluationType": "Inspection"
@@ -2288,10 +2288,10 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Istnieją funkcje platformy, które są zdefiniowane w dokumentacji platformy jako funkcje dostępności przeznaczone dla użytkowników."
+        "1. Istnieją funkcje platformy, które są zdefiniowane w&nbsp;dokumentacji platformy jako funkcje dostępności przeznaczone dla użytkowników."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieją odpowiednie tryby pracy, w których możliwa jest kontrola użytkowników nad funkcjami platformy zdefiniowanymi w dokumentacji platformy jako funkcje dostępności przeznaczone dla użytkowników."
+        "1. Sprawdź, czy istnieją odpowiednie tryby pracy, w&nbsp;których możliwa jest kontrola użytkowników nad funkcjami platformy zdefiniowanymi w&nbsp;dokumentacji platformy jako funkcje dostępności przeznaczone dla użytkowników."
       ],
       "form": {
         "inputs": [
@@ -2321,10 +2321,10 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Istnieją funkcje platformy, które są zdefiniowane w dokumentacji platformy jako funkcje dostępności."
+        "1. Istnieją funkcje platformy, które są zdefiniowane w&nbsp;dokumentacji platformy jako funkcje dostępności."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie z interfejsem użytkownika przerywa normalne działanie funkcji dostępności platformy.",
+        "1. Sprawdź, czy oprogramowanie z&nbsp;interfejsem użytkownika przerywa normalne działanie funkcji dostępności platformy.",
         "2. Sprawdź, czy to przerwanie zostało wywołane lub zatwierdzone przez użytkownika."
       ],
       "form": {
@@ -2356,11 +2356,11 @@
       "type": "test",
       "preconditions": [
         "1. Oprogramowanie posiada interfejs użytkownika.",
-        "2. Oprogramowanie zapewnia ustawienia języka, koloru, kontrastu, typu i rozmiaru czcionki oraz kursora fokusu, które odpowiadają ustawieniom platformy.",
+        "2. Oprogramowanie zapewnia ustawienia języka, koloru, kontrastu, typu i&nbsp;rozmiaru czcionki oraz kursora fokusu, które odpowiadają ustawieniom platformy.",
         "3. Oprogramowanie nie jest przeznaczone do odizolowania od platform, na których jest oparte."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie zapewnia tryb pracy zgodny z ustawieniami platformy."
+        "1. Sprawdź, czy oprogramowanie zapewnia tryb pracy zgodny z&nbsp;ustawieniami platformy."
       ],
       "form": {
         "inputs": [
@@ -2398,7 +2398,7 @@
         "1. Oprogramowanie jest narzędziem do tworzenia treści."
       ],
       "procedure": [
-        "1. Sprawdź, czy narzędzie do tworzenia treści ma cechy, które umożliwiają i wspomagają produkcję treści zgodnych z Rozdziałami 9 (Internet) i 10 (Dokumenty nieinternetowe)."
+        "1. Sprawdź, czy narzędzie do tworzenia treści ma cechy, które umożliwiają i&nbsp;wspomagają produkcję treści zgodnych z&nbsp;Rozdziałami 9 (Internet) i&nbsp;10 (Dokumenty nieinternetowe)."
       ],
       "form": {
         "inputs": [
@@ -2423,7 +2423,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.11.8.3 Zachowanie informacji o dostępności podczas transformacji"
+      "text": "C.11.8.3 Zachowanie informacji o&nbsp;dostępności podczas transformacji"
     },
     {
       "type": "test",
@@ -2432,16 +2432,16 @@
         "2. Narzędzie do tworzenia treści zapewnia transformacje restrukturyzacyjne lub ponownie kodujące."
       ],
       "procedure": [
-        "1. W przypadku transformacji restrukturyzacyjnej sprawdzić, czy w danych wyjściowych są zachowane informacje o dostępności.",
-        "2. W przypadku transformacji restrukturyzacyjnej sprawdzić, czy technologia treści obsługuje informacje o dostępności dla restrukturyzowanej formy informacji.",
-        "3. W przypadku transformacji ponownie kodujących sprawdzić, czy w danych wyjściowych są zachowane informacje o dostępności.",
-        "4. W przypadku transformacji ponownie kodujących sprawdzić, czy informacje o dostępności są obsługiwane przez technologię ponownie zakodowanych danych wyjściowych."
+        "1. W&nbsp;przypadku transformacji restrukturyzacyjnej sprawdzić, czy w&nbsp;danych wyjściowych są zachowane informacje o&nbsp;dostępności.",
+        "2. W&nbsp;przypadku transformacji restrukturyzacyjnej sprawdzić, czy technologia treści obsługuje informacje o&nbsp;dostępności dla restrukturyzowanej formy informacji.",
+        "3. W&nbsp;przypadku transformacji ponownie kodujących sprawdzić, czy w&nbsp;danych wyjściowych są zachowane informacje o&nbsp;dostępności.",
+        "4. W&nbsp;przypadku transformacji ponownie kodujących sprawdzić, czy informacje o&nbsp;dostępności są obsługiwane przez technologię ponownie zakodowanych danych wyjściowych."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1: prawda lub kryteria 1 i 2: fałsz lub kryterium 3: prawda lub kryteria 3 i 4: fałsz"
+            "label": "Kryterium 1: prawda lub kryteria 1 i&nbsp;2: fałsz lub kryterium 3: prawda lub kryteria 3 i&nbsp;4: fałsz"
           },
           {
             "value": "Niezaliczone",
@@ -2452,7 +2452,7 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.8.3 Zachowanie informacji o dostępności podczas transformacji",
+        "legend": "Wybierz wynik dla C.11.8.3 Zachowanie informacji o&nbsp;dostępności podczas transformacji",
         "noteId": "notes-c-11-8-3"
       },
       "evaluationType": "Inspection and Testing"
@@ -2466,7 +2466,7 @@
       "type": "test",
       "preconditions": [
         "1. Oprogramowanie jest narzędziem do tworzenia treści.",
-        "2. Funkcjonalność sprawdzania dostępności narzędzia do tworzenia treści może wykryć, że zawartość nie spełnia wymagań określonych w Rozdziałach 9 (Internet) lub 10 (Dokumenty nieinternetowe), w zależności od przypadku."
+        "2. Funkcjonalność sprawdzania dostępności narzędzia do tworzenia treści może wykryć, że zawartość nie spełnia wymagań określonych w&nbsp;Rozdziałach 9 (Internet) lub 10 (Dokumenty nieinternetowe), w&nbsp;zależności od przypadku."
       ],
       "procedure": [
         "1. Narzędzie do tworzenia treści proponuje sposób naprawy, jeśli zawartość nie spełnia wymagań Rozdziałów 9 lub 10 (w zależności od przypadku)."
@@ -2503,14 +2503,14 @@
         "2. Narzędzie do tworzenia treści udostępnia szablony."
       ],
       "procedure": [
-        "1. Sprawdź, czy narzędzie do tworzenia treści udostępnia co najmniej jeden szablon, który wspiera tworzenie treści zgodnych z wymaganiami Rozdziałów 9 (Internet) lub 10 (Dokumenty nieinternetowe), w zależności od przypadku.",
-        "2. Sprawdź, czy dostępny jest co najmniej jeden szablon określony w kroku 1 i czy jest on zgodny z Rozdziałami 9 lub 10 (w zależności od przypadku)."
+        "1. Sprawdź, czy narzędzie do tworzenia treści udostępnia co najmniej jeden szablon, który wspiera tworzenie treści zgodnych z&nbsp;wymaganiami Rozdziałów 9 (Internet) lub 10 (Dokumenty nieinternetowe), w&nbsp;zależności od przypadku.",
+        "2. Sprawdź, czy dostępny jest co najmniej jeden szablon określony w&nbsp;kroku 1 i&nbsp;czy jest on zgodny z&nbsp;Rozdziałami 9 lub 10 (w zależności od przypadku)."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -2526,7 +2526,7 @@
       },
       "evaluationType": "Inspection",
       "notes": [
-        "Identyfikacja zgodna z wymaganiami Rozdziałów 9 lub 10 (odpowiednio) opisanymi w kryterium 2 może być opisana słowami „Zgodna z WCAG 2.1” . Jeśli podczas identyfikacji nie można wyraźnie stwierdzić, że wszystkie wymagania określone w Rozdziałach 9 lub 10 (w zależności od przypadku) są spełnione, może być konieczne wykorzystanie szablonu do stworzenia strony internetowej lub dokumentu, a na- stępnie przetestowanie tej strony internetowej lub dokumentu zgodnie z wymaganiami Rozdziałów 9 lub 10 w celu uzyskania całkowitej pewności, że szablon zachowuje się tak, jak jest to wymagane. C.12 Dokumentacja i wsparcie techniczne"
+        "Identyfikacja zgodna z&nbsp;wymaganiami Rozdziałów 9 lub 10 (odpowiednio) opisanymi w&nbsp;kryterium 2 może być opisana słowami „Zgodna z&nbsp;WCAG 2.1” . Jeśli podczas identyfikacji nie można wyraźnie stwierdzić, że wszystkie wymagania określone w&nbsp;Rozdziałach 9 lub 10 (w zależności od przypadku) są spełnione, może być konieczne wykorzystanie szablonu do stworzenia strony internetowej lub dokumentu, a&nbsp;na- stępnie przetestowanie tej strony internetowej lub dokumentu zgodnie z&nbsp;wymaganiami Rozdziałów 9 lub 10 w&nbsp;celu uzyskania całkowitej pewności, że szablon zachowuje się tak, jak jest to wymagane. C.12 Dokumentacja i&nbsp;wsparcie techniczne"
       ]
     }
   ]

@@ -4,7 +4,7 @@
   "content": [
     {
       "type": "informative",
-      "text": "Audyt Klauzuli 10: Dokumenty inne niż internetowe\nKlauzula 10.0 jest doradcza i nie zawiera wymagań do testowania.\n"
+      "text": "Audyt Klauzuli 10: Dokumenty inne niż internetowe\nKlauzula 10.0 jest doradcza i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
@@ -233,7 +233,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.3.1 Informacje i relacje",
+      "text": "C.10.1.3.1 Informacje i&nbsp;relacje",
       "wcag_level": "A"
     },
     {
@@ -242,7 +242,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#info-and-relationships\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1</a> Informacje i relacje."
+        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#info-and-relationships\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1</a> Informacje i&nbsp;relacje."
       ],
       "form": {
         "inputs": [
@@ -256,10 +256,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.3.1 Informacje i relacje."
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.3.1 Informacje i&nbsp;relacje."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.3.1 Informacje i relacje",
+        "legend": "Wybierz wynik dla C.10.1.3.1 Informacje i&nbsp;relacje",
         "noteId": "notes-c-10-1-3-1"
       },
       "evaluationType": "Inspection"
@@ -451,7 +451,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.1."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.1."
       ],
       "form": {
         "inputs": [
@@ -587,7 +587,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.2."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.2."
       ],
       "form": {
         "inputs": [
@@ -646,7 +646,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.1.4.12 Odstępy w tekście",
+      "text": "C.10.1.4.12 Odstępy w&nbsp;tekście",
       "wcag_level": "AA"
     },
     {
@@ -655,7 +655,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#text-spacing\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12</a> Odstępy w tekście."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#text-spacing\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12</a> Odstępy w&nbsp;tekście."
       ],
       "form": {
         "inputs": [
@@ -669,10 +669,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.12 Odstępy w tekście. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.12 Odstępy w&nbsp;tekście. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.1.4.12 Odstępy w tekście",
+        "legend": "Wybierz wynik dla C.10.1.4.12 Odstępy w&nbsp;tekście",
         "noteId": "notes-c-10-1-4-12"
       },
       "evaluationType": "Inspection"
@@ -719,7 +719,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.10.2.1 Dostępność z klawiatury"
+      "text": "C.10.2.1 Dostępność z&nbsp;klawiatury"
     },
     {
       "type": "heading",
@@ -767,7 +767,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.3."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.3."
       ],
       "form": {
         "inputs": [
@@ -840,7 +840,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.4."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.4."
       ],
       "form": {
         "inputs": [
@@ -874,7 +874,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.5."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.5."
       ],
       "form": {
         "inputs": [
@@ -913,7 +913,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.6."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.6."
       ],
       "form": {
         "inputs": [
@@ -952,7 +952,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.7."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.7."
       ],
       "form": {
         "inputs": [
@@ -986,7 +986,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.8."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.8."
       ],
       "form": {
         "inputs": [
@@ -1045,7 +1045,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.4.6 Nagłówki i etykiety",
+      "text": "C.10.2.4.6 Nagłówki i&nbsp;etykiety",
       "wcag_level": "AA"
     },
     {
@@ -1054,7 +1054,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#headings-and-labels\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6</a> Nagłówki i etykiety."
+        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#headings-and-labels\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6</a> Nagłówki i&nbsp;etykiety."
       ],
       "form": {
         "inputs": [
@@ -1068,10 +1068,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.4.6 Nagłówki i etykiety. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.4.6 Nagłówki i&nbsp;etykiety. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.4.6 Nagłówki i etykiety",
+        "legend": "Wybierz wynik dla C.10.2.4.6 Nagłówki i&nbsp;etykiety",
         "noteId": "notes-c-10-2-4-6"
       },
       "evaluationType": "Inspection"
@@ -1127,7 +1127,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.9."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.9."
       ],
       "form": {
         "inputs": [
@@ -1161,7 +1161,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.10."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.10."
       ],
       "form": {
         "inputs": [
@@ -1186,7 +1186,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.2.5.3 Etykieta w nazwie",
+      "text": "C.10.2.5.3 Etykieta w&nbsp;nazwie",
       "wcag_level": "A"
     },
     {
@@ -1195,7 +1195,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#label-in-name\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3</a> Etykieta w nazwie."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#label-in-name\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3</a> Etykieta w&nbsp;nazwie."
       ],
       "form": {
         "inputs": [
@@ -1209,10 +1209,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.5.3 Etykieta w nazwie. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.5.3 Etykieta w&nbsp;nazwie. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.10.2.5.3 Etykieta w nazwie",
+        "legend": "Wybierz wynik dla C.10.2.5.3 Etykieta w&nbsp;nazwie",
         "noteId": "notes-c-10-2-5-3"
       },
       "evaluationType": "Inspection"
@@ -1273,7 +1273,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.11."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.11."
       ],
       "form": {
         "inputs": [
@@ -1307,7 +1307,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.12."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.12."
       ],
       "form": {
         "inputs": [
@@ -1512,7 +1512,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
+      "text": "C.10.3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)",
       "wcag_level": "AA"
     },
     {
@@ -1521,7 +1521,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.13."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.13."
       ],
       "form": {
         "inputs": [
@@ -1538,7 +1538,7 @@
             "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
+        "legend": "Wybierz wynik dla C.10.3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)",
         "noteId": "notes-c-10-3-3-4"
       },
       "evaluationType": "Inspection"
@@ -1564,7 +1564,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.14."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.14."
       ],
       "form": {
         "inputs": [
@@ -1597,7 +1597,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w Tablicy 10.15."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.15."
       ],
       "form": {
         "inputs": [
@@ -1622,7 +1622,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.10.4.1.3 Komunikaty o stanie",
+      "text": "C.10.4.1.3 Komunikaty o&nbsp;stanie",
       "wcag_level": "AA"
     },
     {
@@ -1631,7 +1631,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#status-messages\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3</a> Komunikaty o stanie."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#status-messages\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3</a> Komunikaty o&nbsp;stanie."
       ],
       "form": {
         "inputs": [
@@ -1645,21 +1645,21 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 4.1.3 Komunikaty o stanie."
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 4.1.3 Komunikaty o&nbsp;stanie."
           }
         ],
-        "legend": "Wybierz wynik dla C.10.4.1.3 Komunikaty o stanie",
+        "legend": "Wybierz wynik dla C.10.4.1.3 Komunikaty o&nbsp;stanie",
         "noteId": "notes-c-10-4-1-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "informative",
-      "text": "Uwagi:\nKlauzula 10.5 jest doradcza i nie zawiera wymagań do testowania.\n"
+      "text": "Uwagi:\nKlauzula 10.5 jest doradcza i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "informative",
-      "text": "Klauzula 10.5 jest doradcza i nie zawiera wymagań do testowania.\nKlauzula 10.6 jest doradcza i nie zawiera wymagań do testowania.\n"
+      "text": "Klauzula 10.5 jest doradcza i&nbsp;nie zawiera wymagań do testowania.\nKlauzula 10.6 jest doradcza i&nbsp;nie zawiera wymagań do testowania.\n"
     }
   ]
 }

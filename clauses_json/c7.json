@@ -1,6 +1,6 @@
 {
   "id": "c7",
-  "title": "Audyt Klauzuli 7: TIK z obsługą wideo",
+  "title": "Audyt Klauzuli 7: TIK z&nbsp;obsługą wideo",
   "content": [
     {
       "type": "heading",
@@ -15,7 +15,7 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK wyświetla lub przetwarza wideo z synchronizowanym dźwiękiem.",
+        "1. TIK wyświetla lub przetwarza wideo z&nbsp;synchronizowanym dźwiękiem.",
         "2. Napisy są umieszczane na nagraniu wideo."
       ],
       "procedure": [
@@ -40,7 +40,7 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK wyświetla lub przetwarza wideo z synchronizowanym dźwiękiem.",
+        "1. TIK wyświetla lub przetwarza wideo z&nbsp;synchronizowanym dźwiękiem.",
         "2. Napisy zamknięte są udostępniane jako oddzielna treść."
       ],
       "procedure": [
@@ -77,7 +77,7 @@
         "1. TIK udostępnia mechanizm wyświetlania napisów."
       ],
       "procedure": [
-        "1. Sprawdź, czy mechanizm wyświetlania napisów zachowuje synchronizację między dźwiękiem a odpowiednimi napisami w ciągu jednej dziesiątej sekundy od sygnatury czasowej napisu lub czy zapewnia dostępność napisu dla odtwarzacza w przypadku napisów na żywo."
+        "1. Sprawdź, czy mechanizm wyświetlania napisów zachowuje synchronizację między dźwiękiem a&nbsp;odpowiednimi napisami w&nbsp;ciągu jednej dziesiątej sekundy od sygnatury czasowej napisu lub czy zapewnia dostępność napisu dla odtwarzacza w&nbsp;przypadku napisów na żywo."
       ],
       "form": {
         "inputs": [
@@ -107,10 +107,10 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK konwertuje lub rejestruje wideo z synchronizowanym obrazem."
+        "1. TIK konwertuje lub rejestruje wideo z&nbsp;synchronizowanym obrazem."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK zachowuje dane dotyczące napisów w taki sposób, aby można je było wyświetlić zgodnie z Rozdziałami 7.1.1 i 7.1.2."
+        "1. Sprawdź, czy TIK zachowuje dane dotyczące napisów w&nbsp;taki sposób, aby można je było wyświetlić zgodnie z&nbsp;Rozdziałami 7.1.1 i&nbsp;7.1.2."
       ],
       "form": {
         "inputs": [
@@ -141,7 +141,7 @@
       "type": "test",
       "preconditions": [
         "1. TIK wyświetla napisy.",
-        "2. Testowane napisy są wyświetlane w postaci modyfikowalnych znaków."
+        "2. Testowane napisy są wyświetlane w&nbsp;postaci modyfikowalnych znaków."
       ],
       "procedure": [
         "1. Sprawdź, czy TIK zapewnia użytkownikowi możliwość dostosowania wyświetlanych cech napisów do indywidualnych wymagań."
@@ -174,11 +174,11 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK wyświetla obraz wideo zsynchronizowany z dźwiękiem.",
+        "1. TIK wyświetla obraz wideo zsynchronizowany z&nbsp;dźwiękiem.",
         "2. Treść testowanych napisów możliwa do określenia programowo."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje tryb pracy zapewniający przedstawianie dostępnych napisów w formie mówionej."
+        "1. Sprawdź, czy istnieje tryb pracy zapewniający przedstawianie dostępnych napisów w&nbsp;formie mówionej."
       ],
       "form": {
         "inputs": [
@@ -213,22 +213,22 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK wyświetla obraz wideo zsynchronizowany z dźwiękiem."
+        "1. TIK wyświetla obraz wideo zsynchronizowany z&nbsp;dźwiękiem."
       ],
       "procedure": [
-        "1. Sprawdź, czy istnieje wyraźny i oddzielny mechanizm opisu dźwiękowego.",
-        "2. Sprawdź, czy istnieje mechanizm wyboru i odtwarzania audiodeskrypcji na domyślnym kanale audio.",
-        "3. Sprawdź, czy TIK umożliwia użytkownikowi wybór i odtwarzanie kilku ścieżek dźwiękowych."
+        "1. Sprawdź, czy istnieje wyraźny i&nbsp;oddzielny mechanizm opisu dźwiękowego.",
+        "2. Sprawdź, czy istnieje mechanizm wyboru i&nbsp;odtwarzania audiodeskrypcji na domyślnym kanale audio.",
+        "3. Sprawdź, czy TIK umożliwia użytkownikowi wybór i&nbsp;odtwarzanie kilku ścieżek dźwiękowych."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda lub 1: fałsz i 3: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda lub 1: fałsz i&nbsp;3: prawda"
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryterium 1: prawda i 2: fałsz lub 1: fałsz i 3: fałsz"
+            "label": "Kryterium 1: prawda i&nbsp;2: fałsz lub 1: fałsz i&nbsp;3: fałsz"
           },
           {
             "value": "Nie dotyczy",
@@ -251,7 +251,7 @@
         "1. Jeśli TIK zawiera mechanizm odtwarzania audiodeskrypcji."
       ],
       "procedure": [
-        "1. Sprawdź, czy synchronizacja między treścią audio i wideo a odpowiadającą jej audiodeskrypcją jest zachowana."
+        "1. Sprawdź, czy synchronizacja między treścią audio i&nbsp;wideo a&nbsp;odpowiadającą jej audiodeskrypcją jest zachowana."
       ],
       "form": {
         "inputs": [
@@ -281,10 +281,10 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK konwertuje lub rejestruje wideo z synchronizowanym obrazem."
+        "1. TIK konwertuje lub rejestruje wideo z&nbsp;synchronizowanym obrazem."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK zachowuje dane audiodeskrypcji w taki sposób, aby można je było odtwarzać zgodnie z Rozdziałami 7.2.1 i 7.2.2."
+        "1. Sprawdź, czy TIK zachowuje dane audiodeskrypcji w&nbsp;taki sposób, aby można je było odtwarzać zgodnie z&nbsp;Rozdziałami 7.2.1 i&nbsp;7.2.2."
       ],
       "form": {
         "inputs": [
@@ -309,15 +309,15 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.7.3 Sterowanie napisami i audiodeskrypcją"
+      "text": "C.7.3 Sterowanie napisami i&nbsp;audiodeskrypcją"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK służy przede wszystkim wyświetla materiały wideo i towarzyszący dźwięk."
+        "1. TIK służy przede wszystkim wyświetla materiały wideo i&nbsp;towarzyszący dźwięk."
       ],
       "procedure": [
-        "1. Sprawdź, czy elementy sterujące do aktywacji napisów i audiodeskrypcji są dostępne dla użytkownika na tym samym poziomie interakcji co elementy sterujące głównymi multimediami."
+        "1. Sprawdź, czy elementy sterujące do aktywacji napisów i&nbsp;audiodeskrypcji są dostępne dla użytkownika na tym samym poziomie interakcji co elementy sterujące głównymi multimediami."
       ],
       "form": {
         "inputs": [
@@ -334,7 +334,7 @@
             "label": "Nie spełniono warunku wstępnego 1. C.8 Sprzęt"
           }
         ],
-        "legend": "Wybierz wynik dla C.7.3 Sterowanie napisami i audiodeskrypcją",
+        "legend": "Wybierz wynik dla C.7.3 Sterowanie napisami i&nbsp;audiodeskrypcją",
         "noteId": "notes-c-7-3"
       },
       "evaluationType": "Inspection"

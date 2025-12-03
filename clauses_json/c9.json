@@ -4,7 +4,7 @@
   "content": [
     {
       "type": "informative",
-      "text": "Audyt Klauzuli 9: Strony internetowe (Web)\nKlauzula 9.0 jest informacyjna i nie zawiera wymagań do testowania.\n"
+      "text": "Audyt Klauzuli 9: Strony internetowe (Web)\nKlauzula 9.0 jest informacyjna i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
@@ -233,7 +233,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.3.1 Informacje i relacje",
+      "text": "C.9.1.3.1 Informacje i&nbsp;relacje",
       "wcag_level": "A"
     },
     {
@@ -242,7 +242,7 @@
         "1. TIK jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#info-and-relationships\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1</a> Informacje i relacje."
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#info-and-relationships\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1</a> Informacje i&nbsp;relacje."
       ],
       "form": {
         "inputs": [
@@ -256,10 +256,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.1 Informacje i relacje."
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.3.1 Informacje i&nbsp;relacje."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.3.1 Informacje i relacje",
+        "legend": "Wybierz wynik dla C.9.1.3.1 Informacje i&nbsp;relacje",
         "noteId": "notes-c-9-1-3-1"
       },
       "evaluationType": "Inspection"
@@ -647,7 +647,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.1.4.12 Odstępy w tekście",
+      "text": "C.9.1.4.12 Odstępy w&nbsp;tekście",
       "wcag_level": "AA"
     },
     {
@@ -656,7 +656,7 @@
         "1. TIK jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#text-spacing\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12</a> Odstępy w tekście."
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#text-spacing\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12</a> Odstępy w&nbsp;tekście."
       ],
       "form": {
         "inputs": [
@@ -670,10 +670,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w tekście."
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.4.12 Odstępy w&nbsp;tekście."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.1.4.12 Odstępy w tekście",
+        "legend": "Wybierz wynik dla C.9.1.4.12 Odstępy w&nbsp;tekście",
         "noteId": "notes-c-9-1-4-12"
       },
       "evaluationType": "Inspection"
@@ -720,7 +720,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.9.2.1 Dostępność z klawiatury"
+      "text": "C.9.2.1 Dostępność z&nbsp;klawiatury"
     },
     {
       "type": "heading",
@@ -1114,7 +1114,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.4.6 Nagłówki i etykiety",
+      "text": "C.9.2.4.6 Nagłówki i&nbsp;etykiety",
       "wcag_level": "AA"
     },
     {
@@ -1123,7 +1123,7 @@
         "1. TIK jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#headings-and-labels\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6</a> Nagłówki i etykiety."
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#headings-and-labels\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6</a> Nagłówki i&nbsp;etykiety."
       ],
       "form": {
         "inputs": [
@@ -1137,10 +1137,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i etykiety."
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.4.6 Nagłówki i&nbsp;etykiety."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.4.6 Nagłówki i etykiety",
+        "legend": "Wybierz wynik dla C.9.2.4.6 Nagłówki i&nbsp;etykiety",
         "noteId": "notes-c-9-2-4-6"
       },
       "evaluationType": "Inspection"
@@ -1255,7 +1255,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.2.5.3 Etykieta w nazwie",
+      "text": "C.9.2.5.3 Etykieta w&nbsp;nazwie",
       "wcag_level": "A"
     },
     {
@@ -1264,7 +1264,7 @@
         "1. TIK jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#label-in-name\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3</a> Etykieta w nazwie."
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#label-in-name\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3</a> Etykieta w&nbsp;nazwie."
       ],
       "form": {
         "inputs": [
@@ -1278,10 +1278,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w nazwie."
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 2.5.3 Etykieta w&nbsp;nazwie."
           }
         ],
-        "legend": "Wybierz wynik dla C.9.2.5.3 Etykieta w nazwie",
+        "legend": "Wybierz wynik dla C.9.2.5.3 Etykieta w&nbsp;nazwie",
         "noteId": "notes-c-9-2-5-3"
       },
       "evaluationType": "Inspection"
@@ -1649,7 +1649,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
+      "text": "C.9.3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)",
       "wcag_level": "AA"
     },
     {
@@ -1658,7 +1658,7 @@
         "1. TIK jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#error-prevention-legal-financial-data\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.4</a> Zapobieganie błędom (prawnym, finansowym, w danych)."
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#error-prevention-legal-financial-data\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.4</a> Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)."
       ],
       "form": {
         "inputs": [
@@ -1672,10 +1672,10 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych). EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych). EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)",
+        "legend": "Wybierz wynik dla C.9.3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)",
         "noteId": "notes-c-9-3-3-4"
       },
       "evaluationType": "Inspection"
@@ -1761,7 +1761,7 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.9.4.1.3 Komunikaty o stanie",
+      "text": "C.9.4.1.3 Komunikaty o&nbsp;stanie",
       "wcag_level": "AA"
     },
     {
@@ -1770,7 +1770,7 @@
         "1. TIK jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#status-messages\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3</a> Komunikaty o stanie."
+        "1. Sprawdź, czy strona internetowa spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#status-messages\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3</a> Komunikaty o&nbsp;stanie."
       ],
       "form": {
         "inputs": [
@@ -1784,17 +1784,17 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o stanie. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub strona internetowa nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 4.1.3 Komunikaty o&nbsp;stanie. EN 301 549 V3.2.1 (2021-03)"
           }
         ],
-        "legend": "Wybierz wynik dla C.9.4.1.3 Komunikaty o stanie",
+        "legend": "Wybierz wynik dla C.9.4.1.3 Komunikaty o&nbsp;stanie",
         "noteId": "notes-c-9-4-1-3"
       },
       "evaluationType": "Inspection"
     },
     {
       "type": "informative",
-      "text": "Uwagi:\nKlauzula 9.5 jest informacyjna i nie zawiera wymagań do testowania.\n"
+      "text": "Uwagi:\nKlauzula 9.5 jest informacyjna i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",

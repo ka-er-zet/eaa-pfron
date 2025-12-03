@@ -1,6 +1,6 @@
 {
   "id": "c12",
-  "title": "Audyt Klauzuli 12: Dokumentacja i usługi wsparcia",
+  "title": "Audyt Klauzuli 12: Dokumentacja i&nbsp;usługi wsparcia",
   "content": [
     {
       "type": "heading",
@@ -10,15 +10,15 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.1.1 Funkcje dostępności i zgodności"
+      "text": "C.12.1.1 Funkcje dostępności i&nbsp;zgodności"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Dokumentacja produktu jest dostarczana razem z TIK ."
+        "1. Dokumentacja produktu jest dostarczana razem z&nbsp;TIK ."
       ],
       "procedure": [
-        "1. Sprawdź, czy w dokumentacji produktu dostarczonej razem z TIK znajduje się wykaz funkcji dostępności i kompatybilności TIK oraz objaśnienia dotyczące sposobu korzystania z nich."
+        "1. Sprawdź, czy w&nbsp;dokumentacji produktu dostarczonej razem z&nbsp;TIK znajduje się wykaz funkcji dostępności i&nbsp;kompatybilności TIK oraz objaśnienia dotyczące sposobu korzystania z&nbsp;nich."
       ],
       "form": {
         "inputs": [
@@ -35,7 +35,7 @@
             "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.1.1 Funkcje dostępności i zgodności",
+        "legend": "Wybierz wynik dla C.12.1.1 Funkcje dostępności i&nbsp;zgodności",
         "noteId": "notes-c-12-1-1"
       },
       "evaluationType": "Inspection"
@@ -48,10 +48,10 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Dokumentacja produktu w formacie elektronicznym jest dostarczana razem z TIK ."
+        "1. Dokumentacja produktu w&nbsp;formacie elektronicznym jest dostarczana razem z&nbsp;TIK ."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokumentacja produktu w formacie elektronicznym dostarczona wraz z TIK jest odpowiednio zgodna z wymaganiami Rozdziałów 9 lub 10."
+        "1. Sprawdź, czy dokumentacja produktu w&nbsp;formacie elektronicznym dostarczona wraz z&nbsp;TIK jest odpowiednio zgodna z&nbsp;wymaganiami Rozdziałów 9 lub 10."
       ],
       "form": {
         "inputs": [
@@ -85,20 +85,20 @@
     },
     {
       "type": "informative",
-      "text": "Klauzula 12.2.1 ma charakter wyłącznie informacyjny i nie zawiera wymagań do testowania.\n"
+      "text": "Klauzula 12.2.1 ma charakter wyłącznie informacyjny i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
       "level": 4,
-      "text": "C.12.2.2 Informacje o funkcjach dostępności i zgodności"
+      "text": "C.12.2.2 Informacje o&nbsp;funkcjach dostępności i&nbsp;zgodności"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. Świadczone są usługi wsparcia w zakresie TIK ."
+        "1. Świadczone są usługi wsparcia w&nbsp;zakresie TIK ."
       ],
       "procedure": [
-        "1. Sprawdź, czy usługi wsparcia w zakresie TIK dostarczają informacje o funkcjach dostępności i zgodności dostarczanych razem z dokumentacją produktu."
+        "1. Sprawdź, czy usługi wsparcia w&nbsp;zakresie TIK dostarczają informacje o&nbsp;funkcjach dostępności i&nbsp;zgodności dostarczanych razem z&nbsp;dokumentacją produktu."
       ],
       "form": {
         "inputs": [
@@ -115,7 +115,7 @@
             "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.12.2.2 Informacje o funkcjach dostępności i zgodności",
+        "legend": "Wybierz wynik dla C.12.2.2 Informacje o&nbsp;funkcjach dostępności i&nbsp;zgodności",
         "noteId": "notes-c-12-2-2"
       },
       "evaluationType": "Inspection"
@@ -128,10 +128,10 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Świadczone są usługi wsparcia w zakresie TIK ."
+        "1. Świadczone są usługi wsparcia w&nbsp;zakresie TIK ."
       ],
       "procedure": [
-        "1. Sprawdź, czy usługi wsparcia w zakresie TIK zaspokajają potrzeby komunikacyjne poszczególnych osób z niepełnosprawnościami w sposób bezpośredni lub poprzez punkt pośredni."
+        "1. Sprawdź, czy usługi wsparcia w&nbsp;zakresie TIK zaspokajają potrzeby komunikacyjne poszczególnych osób z&nbsp;niepełnosprawnościami w&nbsp;sposób bezpośredni lub poprzez punkt pośredni."
       ],
       "form": {
         "inputs": [
@@ -153,7 +153,7 @@
       },
       "evaluationType": "Inspection",
       "notes": [
-        "Zapewnienie na dowolnym poziomie wsparcia dla potrzeb komunikacyjnych osób niepełnosprawnych stanowi podstawę tego wymagania. Dostawcy mogą chcieć dostarczyć dalsze informacje na temat pozio- mu wsparcia, który jest zapewniany, aby umożliwić ocenę adekwatności i jakości wsparcia."
+        "Zapewnienie na dowolnym poziomie wsparcia dla potrzeb komunikacyjnych osób niepełnosprawnych stanowi podstawę tego wymagania. Dostawcy mogą chcieć dostarczyć dalsze informacje na temat pozio- mu wsparcia, który jest zapewniany, aby umożliwić ocenę adekwatności i&nbsp;jakości wsparcia."
       ]
     },
     {
@@ -167,7 +167,7 @@
         "1. Dokumentacja jest dostarczana przez serwis obsługi TIK ."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokumentacja produktu w formie elektronicznej dostarczona przez serwis obsługi TIK jest zgodna z wymaganiami odpowiednio Rozdziałów 9 lub 10."
+        "1. Sprawdź, czy dokumentacja produktu w&nbsp;formie elektronicznej dostarczona przez serwis obsługi TIK jest zgodna z&nbsp;wymaganiami odpowiednio Rozdziałów 9 lub 10."
       ],
       "form": {
         "inputs": [

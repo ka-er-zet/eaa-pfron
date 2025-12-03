@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // Remove leading punctuation
             displayTitle = displayTitle.replace(/^[:\.\-]\s*/, '');
+            displayTitle = window.utils.fixOrphans(displayTitle);
 
             el.innerHTML = `
                 <div class="issue-title">

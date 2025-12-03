@@ -1,6 +1,6 @@
 {
   "id": "c6",
-  "title": "Audyt Klauzuli 6: TIK z dwukierunkową komunikacją głosową",
+  "title": "Audyt Klauzuli 6: TIK z&nbsp;dwukierunkową komunikacją głosową",
   "content": [
     {
       "type": "heading",
@@ -13,7 +13,7 @@
         "1. Testowana TIK udostępnia dwukierunkową komunikację głosową."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK może kodować i dekodować dźwięk w zakresie częstotliwości z górną granicą co najmniej 7 000 Hz."
+        "1. Sprawdź, czy TIK może kodować i&nbsp;dekodować dźwięk w&nbsp;zakresie częstotliwości z&nbsp;górną granicą co najmniej 7 000 Hz."
       ],
       "form": {
         "inputs": [
@@ -38,7 +38,7 @@
     {
       "type": "heading",
       "level": 3,
-      "text": "C.6.2 Funkcjonalność tekstu w czasie rzeczywistym (RTT)"
+      "text": "C.6.2 Funkcjonalność tekstu w&nbsp;czasie rzeczywistym (RTT)"
     },
     {
       "type": "heading",
@@ -54,11 +54,11 @@
       "type": "test",
       "preconditions": [
         "1. Testowany system TIK udostępnia dwukierunkową komunikację głosową.",
-        "2. TIK pracuje w trybie umożliwiającym dwukierunkową komunikację głosową.",
+        "2. TIK pracuje w&nbsp;trybie umożliwiającym dwukierunkową komunikację głosową.",
         "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT”."
       ],
       "procedure": [
-        "1. Sprawdź, czy system TIK umożliwia użytkownikowi komunikację RTT z innym „referencyjnym” TIK."
+        "1. Sprawdź, czy system TIK umożliwia użytkownikowi komunikację RTT z&nbsp;innym „referencyjnym” TIK."
       ],
       "form": {
         "inputs": [
@@ -84,13 +84,13 @@
       },
       "evaluationType": "Inspection",
       "notes": [
-        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.1.2 Równoczesna komunikacja głosowa i tekstowa"
+      "text": "C.6.2.1.2 Równoczesna komunikacja głosowa i&nbsp;tekstowa"
     },
     {
       "type": "test",
@@ -99,7 +99,7 @@
         "2. TIK obsługuje dwukierunkową komunikację za pomocą RTT."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK umożliwia jednoczesne korzystanie z połączeń głosowych i RTT przez połączenie jednego użytkownika."
+        "1. Sprawdź, czy TIK umożliwia jednoczesne korzystanie z&nbsp;połączeń głosowych i&nbsp;RTT przez połączenie jednego użytkownika."
       ],
       "form": {
         "inputs": [
@@ -116,7 +116,7 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.1.2 Równoczesna komunikacja głosowa i tekstowa",
+        "legend": "Wybierz wynik dla C.6.2.1.2 Równoczesna komunikacja głosowa i&nbsp;tekstowa",
         "noteId": "notes-c-6-2-1-2"
       },
       "evaluationType": "Inspection"
@@ -134,16 +134,16 @@
     {
       "type": "test",
       "preconditions": [
-        "1. Testowana TIK zapewnia możliwość wysyłania i odbierania komunikacji RTT.",
+        "1. Testowana TIK zapewnia możliwość wysyłania i&nbsp;odbierania komunikacji RTT.",
         "2. TIK obsługuje mechanizmy RTT.",
         "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT”."
       ],
       "procedure": [
         "1. Testowana TIK jest podłączona do „referencyjnego terminala obsługującego RTT”.",
-        "2. Różne elementy TIK są w stanie działania (połączenie jest aktywne, a terminale we właściwym trybie RTT) i dwa terminale komunikują się ze sobą.",
+        "2. Różne elementy TIK są w&nbsp;stanie działania (połączenie jest aktywne, a&nbsp;terminale we właściwym trybie RTT) i&nbsp;dwa terminale komunikują się ze sobą.",
         "3. Testowany system TIK wysyła krótki tekst.",
         "4. „Terminal referencyjny RTT” wysyła krótki tekst.",
-        "5. Sprawdź na testowanej TIK , czy wyświetlany nadawany tekst wizualnie różni się od otrzymanego tekstu i jest od niego oddzielony."
+        "5. Sprawdź na testowanej TIK , czy wyświetlany nadawany tekst wizualnie różni się od otrzymanego tekstu i&nbsp;jest od niego oddzielony."
       ],
       "form": {
         "inputs": [
@@ -169,24 +169,24 @@
       },
       "evaluationType": "Inspection",
       "notes": [
-        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.2.2 Możliwe do określenia programowo kierunku nadawania i odbioru"
+      "text": "C.6.2.2.2 Możliwe do określenia programowo kierunku nadawania i&nbsp;odbioru"
     },
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia możliwość wysyłania i odbierania komunikacji RTT.",
+        "1. TIK zapewnia możliwość wysyłania i&nbsp;odbierania komunikacji RTT.",
         "2. RTT jest funkcjonalnością otwartą.",
         "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT”."
       ],
       "procedure": [
         "1. Testowana TIK jest podłączona do „referencyjnego terminala obsługującego RTT”.",
-        "2. Różne elementy TIK są w stanie działania (połączenie jest aktywne, a terminale we właściwym trybie RTT) i dwa terminale komunikują się ze sobą.",
+        "2. Różne elementy TIK są w&nbsp;stanie działania (połączenie jest aktywne, a&nbsp;terminale we właściwym trybie RTT) i&nbsp;dwa terminale komunikują się ze sobą.",
         "3. Testowany system TIK wysyła krótki tekst.",
         "4. „Terminal referencyjny RTT” wysyła krótki tekst.",
         "5. Sprawdź, czy kierunek nadawania/odbioru przesyłanego tekstu jest możliwy do określenia programowo."
@@ -210,12 +210,12 @@
             "label": "Nie spełniono warunku wstępnego 3"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.2.2 Możliwe do określenia programowo kierunku nadawania i odbioru",
+        "legend": "Wybierz wynik dla C.6.2.2.2 Możliwe do określenia programowo kierunku nadawania i&nbsp;odbioru",
         "noteId": "notes-c-6-2-2-2"
       },
       "evaluationType": "Inspection",
       "notes": [
-        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
     },
     {
@@ -227,13 +227,13 @@
       "type": "test",
       "preconditions": [
         "1. TIK obsługuje RTT.",
-        "2. TIK zapewnia identyfikację mówcy w przypadku komunikacji głosowej.",
+        "2. TIK zapewnia identyfikację mówcy w&nbsp;przypadku komunikacji głosowej.",
         "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT”."
       ],
       "procedure": [
         "1. Testowana TIK jest podłączona do „referencyjnego terminala obsługującego RTT”.",
-        "2. RTT jest wysyłana z „referencyjnego terminala”.",
-        "3. Sprawdź na podstawie obserwacji, czy testowana TIK umożliwia identyfikację mówcy dla tekstu przychodzącego w trybie RTT."
+        "2. RTT jest wysyłana z&nbsp;„referencyjnego terminala”.",
+        "3. Sprawdź na podstawie obserwacji, czy testowana TIK umożliwia identyfikację mówcy dla tekstu przychodzącego w&nbsp;trybie RTT."
       ],
       "form": {
         "inputs": [
@@ -259,13 +259,13 @@
       },
       "evaluationType": "Inspection",
       "notes": [
-        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
     },
     {
       "type": "heading",
       "level": 5,
-      "text": "C.6.2.2.4 Wizualny wskaźnik audio połączonego z RTT"
+      "text": "C.6.2.2.4 Wizualny wskaźnik audio połączonego z&nbsp;RTT"
     },
     {
       "type": "test",
@@ -274,9 +274,9 @@
         "2. TIK obsługuje RTT."
       ],
       "procedure": [
-        "1. Testowana TIK jest połączona z inną TIK zapewniającą dwukierunkową komunikację głosową, która jest zgodna z komunikacją głosową w testowanej TIK.",
+        "1. Testowana TIK jest połączona z&nbsp;inną TIK zapewniającą dwukierunkową komunikację głosową, która jest zgodna z&nbsp;komunikacją głosową w&nbsp;testowanej TIK.",
         "2. Osoba mówi do drugiej TIK.",
-        "3. Sprawdź na podstawie obserwacji, czy istnieje wizualny wskaźnik aktywności audio w czasie rzeczywistym."
+        "3. Sprawdź na podstawie obserwacji, czy istnieje wizualny wskaźnik aktywności audio w&nbsp;czasie rzeczywistym."
       ],
       "form": {
         "inputs": [
@@ -293,12 +293,12 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.2.2.4 Wizualny wskaźnik audio połączonego z RTT",
+        "legend": "Wybierz wynik dla C.6.2.2.4 Wizualny wskaźnik audio połączonego z&nbsp;RTT",
         "noteId": "notes-c-6-2-2-4"
       },
       "evaluationType": "Inspection",
       "notes": [
-        "Zaleca się by wskaźnik migał w czasie rzeczywistym w sposób odzwierciedlający aktywność audio."
+        "Zaleca się by wskaźnik migał w&nbsp;czasie rzeczywistym w&nbsp;sposób odzwierciedlający aktywność audio."
       ]
     },
     {
@@ -319,7 +319,7 @@
         "3. Dostępny jest „referencyjny terminal V.18”."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK współpracuje z publiczną komutowaną siecią telefoniczną (PSTN), z terminalem referencyjnym V.18 podłączonym do PSTN zgodnie z zaleceniem ITU-T V.18 [i.23] lub którymkolwiek z jego załączników dla sygnałów telefonii tekstowej na interfejsie PSTN."
+        "1. Sprawdź, czy TIK współpracuje z&nbsp;publiczną komutowaną siecią telefoniczną (PSTN), z&nbsp;terminalem referencyjnym V.18 podłączonym do PSTN zgodnie z&nbsp;zaleceniem ITU-T V.18 [i.23] lub którymkolwiek z&nbsp;jego załączników dla sygnałów telefonii tekstowej na interfejsie PSTN."
       ],
       "form": {
         "inputs": [
@@ -345,7 +345,7 @@
       },
       "evaluationType": "Test",
       "notes": [
-        "„Referencyjny terminal V.18” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących V.18 w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym referencyjnym terminalu."
+        "„Referencyjny terminal V.18” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących V.18 w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym referencyjnym terminalu."
       ]
     },
     {
@@ -356,23 +356,23 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK obsługuje dwukierunkową komunikację głosową z wykorzystaniem protokołu VOIP z protokołem inicjowania sesji (SIP).",
+        "1. TIK obsługuje dwukierunkową komunikację głosową z&nbsp;wykorzystaniem protokołu VOIP z&nbsp;protokołem inicjowania sesji (SIP).",
         "2. TIK obsługuje dwukierunkową komunikację za pomocą RTT.",
         "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT”."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK współdziała z „referencyjnym terminalem obsługującym komunikację RTT” z wykorzystaniem protokołu VOIP z protokołem inicjowania sesji (SIP) oraz z wykorzystaniem RTT zgodnej z dokumentem IETF RFC 4103 [i.13].",
-        "2. Jeśli TIK współpracuje z innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , należy sprawdzić, czy przestrzega on"
+        "1. Sprawdź, czy TIK współdziała z&nbsp;„referencyjnym terminalem obsługującym komunikację RTT” z&nbsp;wykorzystaniem protokołu VOIP z&nbsp;protokołem inicjowania sesji (SIP) oraz z&nbsp;wykorzystaniem RTT zgodnej z&nbsp;dokumentem IETF RFC 4103 [i.13].",
+        "2. Jeśli TIK współpracuje z&nbsp;innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , należy sprawdzić, czy przestrzega on"
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1: prawda, a jeśli TIK współpracuje z innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , kryterium 2: prawda."
+            "label": "Kryterium 1: prawda, a&nbsp;jeśli TIK współpracuje z&nbsp;innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , kryterium 2: prawda."
           },
           {
             "value": "Niezaliczone",
-            "label": "Kryterium 1: fałsz lub, jeśli TIK współpracuje z innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , kryterium 2: fałsz."
+            "label": "Kryterium 1: fałsz lub, jeśli TIK współpracuje z&nbsp;innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , kryterium 2: fałsz."
           },
           {
             "value": "Nie dotyczy",
@@ -388,7 +388,7 @@
       },
       "evaluationType": "Test",
       "notes": [
-        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
     },
     {
@@ -399,19 +399,19 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK umożliwia dwukierunkową komunikację głosową z wykorzystaniem technologii innych niż PSTN lub protokół VOIP z protokołem inicjowania sesji (SIP).",
+        "1. TIK umożliwia dwukierunkową komunikację głosową z&nbsp;wykorzystaniem technologii innych niż PSTN lub protokół VOIP z&nbsp;protokołem inicjowania sesji (SIP).",
         "2. TIK obsługuje dwukierunkową komunikację za pomocą RTT.",
         "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT” dla danego sposobu komunikacji RTT."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK współdziała z „referencyjnym terminalem obsługującym komunikację RTT” z użyciem odpowiedniej i mającej zastosowanie wspólnej specyfikacji wymiany RTT , która została opublikowana i jest dostępna dla środowiska, w którym będzie działać TIK.",
-        "2. Sprawdź, czy wspólna specyfikacja podana w kryterium 1 obejmuje metodę informowania o utracie lub uszkodzeniu znaków."
+        "1. Sprawdź, czy TIK współdziała z&nbsp;„referencyjnym terminalem obsługującym komunikację RTT” z&nbsp;użyciem odpowiedniej i&nbsp;mającej zastosowanie wspólnej specyfikacji wymiany RTT , która została opublikowana i&nbsp;jest dostępna dla środowiska, w&nbsp;którym będzie działać TIK.",
+        "2. Sprawdź, czy wspólna specyfikacja podana w&nbsp;kryterium 1 obejmuje metodę informowania o&nbsp;utracie lub uszkodzeniu znaków."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -431,7 +431,7 @@
       },
       "evaluationType": "Test",
       "notes": [
-        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w sposób potwierdzający ich funkcjonalność i interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
+        "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
     },
     {
@@ -444,17 +444,17 @@
       "preconditions": [
         "1. TIK obsługuje dwukierunkową komunikację głosową.",
         "2. TIK obsługuje dwukierunkową komunikację za pomocą RTT.",
-        "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT” korzystający z nowego standardu RTT."
+        "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT” korzystający z&nbsp;nowego standardu RTT."
       ],
       "procedure": [
-        "1. Sprawdź, czy testowana TIK współdziała z „referencyjnym terminalem obsługującym komunikację RTT” dla nowego standardu RTT , który został wprowadzony do użytku.",
-        "2. Sprawdź, czy nowy standard RTT jest obsługiwany przez wszystkie inne aktywne TIK , które obsługują komunikację głosową i RTT w tym samym środowisku."
+        "1. Sprawdź, czy testowana TIK współdziała z&nbsp;„referencyjnym terminalem obsługującym komunikację RTT” dla nowego standardu RTT , który został wprowadzony do użytku.",
+        "2. Sprawdź, czy nowy standard RTT jest obsługiwany przez wszystkie inne aktywne TIK , które obsługują komunikację głosową i&nbsp;RTT w&nbsp;tym samym środowisku."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -485,14 +485,14 @@
         "1. TIK udostępnia identyfikację dzwoniącego lub podobne funkcje."
       ],
       "procedure": [
-        "1. Sprawdź, czy informacje dostarczane przez każdą funkcję są dostępne w formie tekstowej.",
+        "1. Sprawdź, czy informacje dostarczane przez każdą funkcję są dostępne w&nbsp;formie tekstowej.",
         "2. Sprawdź, czy informacje dostarczane przez każdą funkcję są możliwe do określenia programowo"
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1: prawda i albo kryterium 2: prawda, albo funkcjonalność jest zamknięta"
+            "label": "Kryterium 1: prawda i&nbsp;albo kryterium 2: prawda, albo funkcjonalność jest zamknięta"
           },
           {
             "value": "Niezaliczone",
@@ -516,18 +516,18 @@
     {
       "type": "test",
       "preconditions": [
-        "1. TIK zapewnia komunikację głosową w czasie rzeczywistym.",
+        "1. TIK zapewnia komunikację głosową w&nbsp;czasie rzeczywistym.",
         "2. TIK udostępnia pocztę głosową, automatyczną sekretarkę lub urządzenie udzielające interaktywnych odpowiedzi głosowych."
       ],
       "procedure": [
         "1. Sprawdź, czy TIK zapewnia użytkownikom środki dostępu do informacji bez używania słuchu czy mowy.",
-        "2. Sprawdź, czy użytkownik może wykonać zadania dostępne w systemie bez używania słuchu czy mowy."
+        "2. Sprawdź, czy użytkownik może wykonać zadania dostępne w&nbsp;systemie bez używania słuchu czy mowy."
       ],
       "form": {
         "inputs": [
           {
             "value": "Zaliczone",
-            "label": "Kryterium 1 i 2: prawda"
+            "label": "Kryterium 1 i&nbsp;2: prawda"
           },
           {
             "value": "Niezaliczone",
@@ -550,7 +550,7 @@
     },
     {
       "type": "informative",
-      "text": "C.6.5 Komunikacja wideo\nKlauzula 6.5.1 jest informacyjna i nie zawiera wymagań do testowania.\n"
+      "text": "C.6.5 Komunikacja wideo\nKlauzula 6.5.1 jest informacyjna i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
       "type": "heading",
@@ -561,7 +561,7 @@
       "type": "test",
       "preconditions": [
         "1. TIK udostępnia dwukierunkową komunikację głosową.",
-        "2. TIK udostępnia funkcjonalność wideo w czasie rzeczywistym."
+        "2. TIK udostępnia funkcjonalność wideo w&nbsp;czasie rzeczywistym."
       ],
       "procedure": [
         "1. Sprawdź, czy rozdzielczość komunikacji wideo jest rozdzielczością QVGA lub lepszą."
@@ -595,7 +595,7 @@
       "type": "test",
       "preconditions": [
         "1. TIK udostępnia dwukierunkową komunikację głosową.",
-        "2. TIK udostępnia funkcjonalność wideo w czasie rzeczywistym."
+        "2. TIK udostępnia funkcjonalność wideo w&nbsp;czasie rzeczywistym."
       ],
       "procedure": [
         "1. Sprawdź, czy częstotliwość odświeżania obrazu komunikacji wideo wynosi co najmniej 20 klatek na sekundę."
@@ -623,16 +623,16 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.4 Synchronizacja dźwięku i obrazu"
+      "text": "C.6.5.4 Synchronizacja dźwięku i&nbsp;obrazu"
     },
     {
       "type": "test",
       "preconditions": [
         "1. TIK udostępnia dwukierunkową komunikację głosową.",
-        "2. TIK udostępnia funkcjonalność wideo w czasie rzeczywistym."
+        "2. TIK udostępnia funkcjonalność wideo w&nbsp;czasie rzeczywistym."
       ],
       "procedure": [
-        "1. Sprawdź, czy różnica w czasie między prezentacją mowy i obrazu wideo dla użytkownika jest nie większa niż 100 ms."
+        "1. Sprawdź, czy różnica w&nbsp;czasie między prezentacją mowy i&nbsp;obrazu wideo dla użytkownika jest nie większa niż 100 ms."
       ],
       "form": {
         "inputs": [
@@ -649,7 +649,7 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.4 Synchronizacja dźwięku i obrazu",
+        "legend": "Wybierz wynik dla C.6.5.4 Synchronizacja dźwięku i&nbsp;obrazu",
         "noteId": "notes-c-6-5-4"
       },
       "evaluationType": "Measurement"
@@ -657,18 +657,18 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.5 Wizualny wskaźnik audio połączonego z wideo"
+      "text": "C.6.5.5 Wizualny wskaźnik audio połączonego z&nbsp;wideo"
     },
     {
       "type": "test",
       "preconditions": [
         "1. TIK zapewnia dwukierunkową komunikację głosową.",
-        "2. TIK udostępnia funkcjonalność wideo w czasie rzeczywistym."
+        "2. TIK udostępnia funkcjonalność wideo w&nbsp;czasie rzeczywistym."
       ],
       "procedure": [
-        "1. Testowana TIK jest połączona z inną TIK zapewniającą dwukierunkową komunikację głosową, która jest zgodna z komunikacją głosową w testowanej TIK.",
+        "1. Testowana TIK jest połączona z&nbsp;inną TIK zapewniającą dwukierunkową komunikację głosową, która jest zgodna z&nbsp;komunikacją głosową w&nbsp;testowanej TIK.",
         "2. Osoba mówi do drugiej TIK.",
-        "3. Sprawdź na podstawie obserwacji, czy istnieje wizualny wskaźnik aktywności audio w czasie rzeczywistym."
+        "3. Sprawdź na podstawie obserwacji, czy istnieje wizualny wskaźnik aktywności audio w&nbsp;czasie rzeczywistym."
       ],
       "form": {
         "inputs": [
@@ -685,12 +685,12 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2"
           }
         ],
-        "legend": "Wybierz wynik dla C.6.5.5 Wizualny wskaźnik audio połączonego z wideo",
+        "legend": "Wybierz wynik dla C.6.5.5 Wizualny wskaźnik audio połączonego z&nbsp;wideo",
         "noteId": "notes-c-6-5-5"
       },
       "evaluationType": "Inspection",
       "notes": [
-        "Zaleca się, by wskaźnik migał w czasie rzeczywistym w sposób odzwierciedlający aktywność audio."
+        "Zaleca się, by wskaźnik migał w&nbsp;czasie rzeczywistym w&nbsp;sposób odzwierciedlający aktywność audio."
       ]
     },
     {
@@ -702,10 +702,10 @@
       "type": "test",
       "preconditions": [
         "1. TIK udostępnia dwukierunkową komunikację głosową.",
-        "2. TIK obsługuje wideo w czasie rzeczywistym."
+        "2. TIK obsługuje wideo w&nbsp;czasie rzeczywistym."
       ],
       "procedure": [
-        "1. Testowana TIK jest podłączona do kompatybilnej TIK obsługującej wideo, a osoba komunikuje się w języku migowym.",
+        "1. Testowana TIK jest podłączona do kompatybilnej TIK obsługującej wideo, a&nbsp;osoba komunikuje się w&nbsp;języku migowym.",
         "2. Sprawdź na podstawie obserwacji, czy testowana TIK umożliwia użytkownikom języka migowego identyfikację mówcy."
       ],
       "form": {
@@ -735,7 +735,7 @@
     },
     {
       "type": "informative",
-      "text": "Klauzula 6.6 jest doradcza i nie zawiera wymagań do testowania.\n"
+      "text": "Klauzula 6.6 jest doradcza i&nbsp;nie zawiera wymagań do testowania.\n"
     }
   ]
 }
