@@ -12,6 +12,10 @@
       "text": "Klauzula 11.0 ma charakter wyłącznie doradczy i&nbsp;nie zawiera wymagań do testowania.\n"
     },
     {
+      "type": "informative",
+      "text": "Jak testować oprogramowanie: Najlepsze praktyki: (1) Zapisz środowisko testowe (OS, wersję aplikacji, technologie wspomagające i wersje), (2) Testuj na kilku platformach i konfiguracjach (desktop/win/mac/linux, mobile Android/iOS), (3) Używaj screen readerów oraz narzędzi inspekcji dostępności (Inspect, Accessibility Inspector, AT-SPI), (4) Dokumentuj kroki oraz oczekiwany i rzeczywisty rezultat, (5) Testuj scenariusze zarówno z otwartą, jak i zamkniętą funkcjonalnością, (6) Przy multimediach weryfikuj transkrypcje, napisy i audiodeskrypcje; przy interfejsach – programową ekspozycję nazw, ról i stanów, (7) Sprawdź dynamiczne zmiany (status, aktualizacje, powiadomienia) oraz (8) Testuj ręcznie i wspomagaj się automatycznymi narzędziami tam, gdzie to możliwe."
+    },
+    {
       "type": "heading",
       "level": 3,
       "text": "C.11.1 Postrzegalność"
@@ -39,7 +43,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.1.1</a> Treść nietekstowa."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#tresc-nietekstowa\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.1.1 Treść nietekstowa</a>."
       ],
       "form": {
         "inputs": [
@@ -56,10 +60,15 @@
             "label": "Nie spełniono warunku wstępnego 1 lub 2."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.1.1.1.1 Treść nietekstowa (obsługiwany odczyt ekranu, funkcjonalność otwarta)",
         "noteId": "notes-c-11-1-1-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Treść nietekstowa:</strong> sprawdź, czy obrazy, ikony i inne elementy nietekstowe mają odpowiednie alternatywy tekstowe lub są oznaczone jako dekoracyjne (przegląd kodu, inspektor dostępności).",
+        "<strong>Test praktyczny:</strong> Przełącz się na technologię wspomagającą (np. NVDA, JAWS, VoiceOver) i przejrzyj elementy nietekstowe; sprawdź, czy odczytane alternatywy są znaczące i przydatne. Upewnij się, że treści dekoracyjne są oznaczone jako dekoracyjne programowo.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.1.1):</strong> Treść nietekstowa ma alternatywny tekst lub inną formę zastępczą, chyba że jest wyłącznie dekoracyjna lub konieczna ze względów funkcjonalnych.",
+        "<strong>Uwaga:</strong> CAPTCHAs aktualnie rzadko występują poza stronami WWW. Jeśli pojawiają się w oprogramowaniu, sprawdź, czy dostępna jest alternatywa (np. audio CAPTCHA, inne metody weryfikacji)."
+      ]
     },
     {
       "type": "heading",
@@ -78,7 +87,7 @@
         "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
         "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i&nbsp;potrzebna.",
         "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
-        "4. Sprawdź, czy wyjście mowy jest zgodne z&nbsp;wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w&nbsp;kryterium sukcesu WCAG 2.1 dla wytycznej <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">1.1.1</a> Treść nietekstowa."
+        "4. Sprawdź, czy wyjście mowy jest zgodne z&nbsp;wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w&nbsp;kryterium sukcesu WCAG 2.1 dla wytycznej <a href=\"https://www.w3.org/Translations/WCAG21-pl/#tresc-nietekstowa\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.1.1 Treść nietekstowa</a>."
       ],
       "form": {
         "inputs": [
@@ -98,7 +107,12 @@
         "legend": "Wybierz wynik dla C.11.1.1.1.2 Treść nietekstowa (funkcjonalność zamknięta)",
         "noteId": "notes-c-11-1-1-1-2"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Treść nietekstowa (funkcjonalność zamknięta):</strong> sprawdź, czy każda treść nietekstowa ma odpowiednią alternatywę (wyjście mowy lub inna możliwość dostępu niewizualnego).",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.1.1):</strong> Treść nietekstowa ma alternatywne przedstawienie, chyba że spełnia definicję treści dekoracyjnej lub jest niezbędna ze względów funkcjonalnych.",
+        "<strong>Uwaga:</strong> Dotyczy treści w funkcjonalności zamkniętej; pamiętaj, że wybory realizacji (m.in. mowa) muszą być zrozumiałe i wierne treści."
+      ]
     },
     {
       "type": "heading",
@@ -124,7 +138,7 @@
         "3. Aby umożliwić korzystanie z&nbsp;funkcjonalności zamkniętych TIK , nie jest konieczne wcześniejsze przygotowanie nagrań informacji dźwiękowej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audio-only-and-video-only-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.1</a> Tylko audio lub tylko wideo (nagranie)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#tylko-audio-lub-tylko-wideo-nagranie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)</a>."
       ],
       "form": {
         "inputs": [
@@ -144,7 +158,12 @@
         "legend": "Wybierz wynik dla C.11.1.2.1.1 Tylko audio lub tylko wideo (nagranie – funkcjonalność otwarta)",
         "noteId": "notes-c-11-1-2-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Tylko audio/wideo (nagranie):</strong> sprawdź, czy nagrane materiały audio lub wideo mają odpowiednie alternatywy (np. transkrypcje dla audio, napisy/wersje z audiodeskrypcją dla wideo).",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1):</strong> Zgodnie z rodzajem treści, nagrania audio i wideo mają odpowiednio transkrypcje, napisy lub audiodeskrypcję, aby zapewnić równoważną alternatywę dla osób korzystających z technologii wspomagających.",
+        "<strong>Uwaga:</strong> Sprawdź metadane, opcje wyłączenia dźwięku i dostęp do napisów/audiodeskrypcji."
+      ]
     },
     {
       "type": "heading",
@@ -180,7 +199,11 @@
         "legend": "Wybierz wynik dla C.11.1.2.1.2.1 Nagrane tylko audio (funkcjonalność zamknięta)",
         "noteId": "notes-c-11-1-2-1-2-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Nagrane tylko audio:</strong> sprawdź, czy istnieje tekstowy odpowiednik (transkrypcja) dla nagrań audio oraz czy metody odsłuchu są poprawnie udostępnione.",
+        "<strong>Uwaga:</strong> Upewnij się, że dokumentacja i metadane wskazują na dostępność transkrypcji i napisów, jeśli mają zastosowanie."
+      ]
     },
     {
       "type": "heading",
@@ -217,7 +240,10 @@
         "legend": "Wybierz wynik dla C.11.1.2.1.2.2 Nagrane tylko wideo (funkcjonalność zamknięta)",
         "noteId": "notes-c-11-1-2-1-2-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Nagrane tylko wideo:</strong> sprawdź, czy istnieją napisy, napisy dla niesłyszących lub alternatywne transkrypcje oraz, jeśli to konieczne, audiodeskrypcje."
+      ]
     },
     {
       "type": "heading",
@@ -231,7 +257,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#captions-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.2</a> Napisy rozszerzone (nagranie)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#napisy-rozszerzone-nagranie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)</a>."
       ],
       "form": {
         "inputs": [
@@ -251,7 +277,12 @@
         "legend": "Wybierz wynik dla C.11.1.2.2 Napisy rozszerzone (nagranie)",
         "noteId": "notes-c-11-1-2-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Napisy rozszerzone (nagranie):</strong> sprawdź, czy napisy są zgodne z nagranym dźwiękiem, synchronizowane i poprawnie pokazywane w czasie odtwarzania.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.2.2):</strong> Napisy powinny być poprawne i zsynchronizowane; dla nagrań live stosować napisy na żywo, dla nagrań dołączone napisy/closed captions.",
+        "<strong>Uwaga:</strong> Sprawdź format i dostępność napisów w odtwarzaczu i w różnych trybach odtwarzania."
+      ]
     },
     {
       "type": "heading",
@@ -271,7 +302,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audio-description-or-media-alternative-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.3</a> Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audiodeskrypcja-lub-alternatywa-tekstowa-dla-mediow-nagranie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)</a>."
       ],
       "form": {
         "inputs": [
@@ -291,7 +322,13 @@
         "legend": "Wybierz wynik dla C.11.1.2.3.1 Audiodeskrypcja lub alternatywa tekstowa dla mediów",
         "noteId": "notes-c-11-1-2-3-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Audiodeskrypcja lub alternatywa tekstowa dla mediów:</strong> sprawdź, czy materiały wideo lub multimedia nagrane, które zawierają istotne treści wizualne, mają oferowaną ścieżkę audiodeskrypcji (AD) lub dokument/tekstowy opis wizualny zapewniający równoważną informację.",
+        "<strong>Test praktyczny:</strong> Odtwórz przykładowe wideo z istotnymi informacjami wizualnymi i sprawdź w ustawieniach odtwarzacza, czy dostępna jest ścieżka AD; jeśli AD nie jest dostępne, sprawdź, czy dostępna jest alternatywna transkrypcja zawierająca opisy wizualne. Potwierdź, że AD/transkrypcja opisuje istotne obrazy, gesty i działania niewerbalne.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.2.3):</strong> Dla nagranych materiałów wizualnych udostępniono ścieżkę audiodeskrypcji lub alternatywny zapis tekstowy, który opisuje kluczowe informacje wizualne; opis jest synchronizowany adekwatnie do treści wideo.",
+        "<strong>Uwaga:</strong> Jeśli materiał nie zawiera istotnych informacji wizualnych, audiodeskrypcja może nie być wymagana; sprawdź dokumentację i przypadki brzegowe."
+      ]
     },
     {
       "type": "heading",
@@ -327,7 +364,12 @@
         "legend": "Wybierz wynik dla C.11.1.2.3.2 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie – funkcjonalność",
         "noteId": "notes-c-11-1-2-3-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Audiodeskrypcja (funkcjonalność zamknięta):</strong> jeśli funkcjonalność jest zamknięta i wyjście mowy jest jedyną metodą niewizualnego dostępu, sprawdź, czy wyjście mowy zawiera opisy wizualne i informacje równoważne audiodeskrypcji lub transkrypcji.",
+        "<strong>Test praktyczny:</strong> Odtwórz przykładowe wideo, upewnij się, że wyjście mowy odtwarza informacje opisowe (np. z syntezatora lub wbudowanego odczytu) i porównaj z tekstową transkrypcją lub napisami rozszerzonymi; potwierdź, że brak wizualnego opisu jest kompensowany przez wyjście mowy.",
+        "<strong>Uwaga:</strong> Przetestuj, czy wyjście mowy można wybrać/aktywować i czy jest zsynchronizowane z treścią; w razie potrzeby sprawdź dostępność w ustawieniach i dokumentacji platformy."
+      ]
     },
     {
       "type": "heading",
@@ -341,7 +383,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#captions-live\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.4</a> Napisy rozszerzone (na żywo)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#napisy-rozszerzone-na-zywo\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)</a>."
       ],
       "form": {
         "inputs": [
@@ -361,7 +403,11 @@
         "legend": "Wybierz wynik dla C.11.1.2.4 Napisy rozszerzone (na żywo)",
         "noteId": "notes-c-11-1-2-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Napisy na żywo:</strong> sprawdź dostępność napisów na żywo dla treści transmitowanej na żywo, ich synchronizację oraz czy można je włączyć lub wyłączyć; ocenić czy są czytelne i właściwie zsynchronizowane z dźwiękiem.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.2.4):</strong> Treści transmitowane na żywo mają dostępne napisy na żywo, które przekazują dialog i istotne informacje dźwiękowe."
+      ]
     },
     {
       "type": "heading",
@@ -375,7 +421,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audio-description-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.5</a> Audiodeskrypcja (nagranie)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audiodeskrypcja-nagranie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)</a>."
       ],
       "form": {
         "inputs": [
@@ -395,7 +441,11 @@
         "legend": "Wybierz wynik dla C.11.1.2.5 Audiodeskrypcja (nagranie)",
         "noteId": "notes-c-11-1-2-5"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Audiodeskrypcja (nagranie):</strong> sprawdź, czy w materiałach wideo dostępna jest audiodeskrypcja lub alternatywnie tekstowa transkrypcja opisu wizualnego; potwierdź, że audiodeskrypcja opisuje istotne treści wizualne.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.2.5):</strong> Nagrania wideo mają audiodeskrypcję lub odpowiednią alternatywę pomagającą użytkownikom niewidzącym zrozumieć treści wizualne."
+      ]
     },
     {
       "type": "heading",
@@ -420,7 +470,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#info-and-relationships\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1</a> Informacje i&nbsp;relacje."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#informacje-i-relacje\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1 Informacje i&nbsp;relacje</a>."
       ],
       "form": {
         "inputs": [
@@ -440,7 +490,11 @@
         "legend": "Wybierz wynik dla C.11.1.3.1.1 Informacje i&nbsp;relacje (funkcjonalność otwarta)",
         "noteId": "notes-c-11-1-3-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Informacje i relacje:</strong> sprawdź, czy znaczenie i relacje między elementami (np. etykiety, nagłówki, tabele, pola formularzy) są jawne i udostępnione programowo; użyj technologii wspomagających, aby upewnić się, że relacje są przekazywane poprawnie.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.3.1):</strong> Informacje i relacje są dostępne programowo, tak aby technologie wspomagające mogły je poprawnie odczytać i przejawić."
+      ]
     },
     {
       "type": "heading",
@@ -469,7 +523,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#meaningful-sequence\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.2</a> Zrozumiała kolejność."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#zrozumiala-kolejnosc\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.2 Zrozumiała kolejność</a>."
       ],
       "form": {
         "inputs": [
@@ -489,7 +543,12 @@
         "legend": "Wybierz wynik dla C.11.1.3.2.1 Zrozumiała kolejność (funkcjonalność otwarta)",
         "noteId": "notes-c-11-1-3-2-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Zrozumiała kolejność:</strong> Przejrzyj interfejs i porównaj wizualną kolejność elementów z kolejnością odczytywaną programowo przez technologię wspomagającą; przeprowadź testy z użyciem screen readera (odczyt struktury) i inspektora dostępności.",
+        "<strong>Test praktyczny:</strong> Użyj narzędzia inspektora (Inspect/UIA, AX Inspector, AT-SPI) aby potwierdzić, że programowa kolejność odzwierciedla układ wizualny, oraz sprawdź, czy fokus porusza się w logicznej kolejności; sprawdź skomplikowane układy (np. kolumny, modalne elm.) oraz czy sekwencja nie zmienia znaczenia.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.3.2):</strong> Informacje przedstawione w sekwencji, odtwarzane programowo lub podczas nawigacji, zachowują logiczne znaczenie i działanie."
+      ]
     },
     {
       "type": "heading",
@@ -512,7 +571,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#sensory-characteristics\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.3</a> Właściwości zmysłowe."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#w-asciwosci-zmys-owe\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.3 Właściwości zmysłowe</a>."
       ],
       "form": {
         "inputs": [
@@ -532,7 +591,12 @@
         "legend": "Wybierz wynik dla C.11.1.3.3 Właściwości zmysłowe",
         "noteId": "notes-c-11-1-3-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Właściwości zmysłowe:</strong> sprawdź, czy instrukcje i informacje nie polegają wyłącznie na cechach zmysłowych (np. kolor, kształt, położenie, dźwięk).",
+        "<strong>Test praktyczny:</strong> Wyłącz elementy sensoryczne (np. wyłącz dźwięk, użyj symulatora daltonizmu i przeglądu bez kolorów, zastosuj odczyt przez screen reader i sprawdź, czy treści są jednoznaczne), upewnij się, że wszystkie informacje przekazywane w sposób sensoryczny mają alternatywy tekstowe lub programowe.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.3.3):</strong> Informacje nie są przekazywane wyłącznie za pomocą charakterystyk zmysłowych lub, jeśli tak się dzieje, dostępne są alternatywne możliwości odczytu."
+      ]
     },
     {
       "type": "heading",
@@ -546,7 +610,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#orientation\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.4</a> Orientacja."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#orientacja\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.4 Orientacja</a>."
       ],
       "form": {
         "inputs": [
@@ -566,7 +630,12 @@
         "legend": "Wybierz wynik dla C.11.1.3.4 Orientacja",
         "noteId": "notes-c-11-1-3-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Orientacja:</strong> sprawdź, czy zawartość i funkcjonalność są dostępne i użyteczne zarówno w orientacji pionowej jak i poziomej (gdy to ma zastosowanie), oraz czy nie ma utraty krytycznych informacji przy zmianie orientacji czy proporcji okna.",
+        "<strong>Test praktyczny:</strong> Obróć urządzenie lub zmień rozmiar okna, testuj w różnych rozdzielczościach i sprawdź zachowanie wszystkich kontrolek, czy są widoczne i funkcjonalne; dla aplikacji skomplikowanych sprawdź przystosowanie widżetów i toolbarów, czy nic nie zakrywa istotnych elementów.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.3.4):</strong> Zawartość i funkcjonalność zachowują sens i dostępność przy zmianie orientacji lub proporcji ekranu, chyba że dwu-wymiarowy układ jest niezbędny."
+      ]
     },
     {
       "type": "heading",
@@ -586,7 +655,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#identify-input-purpose\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.5</a> Określenie pożądanej wartości."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#okreslenie-pozadanej-wartosci\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.5 Określenie pożądanej wartości</a>."
       ],
       "form": {
         "inputs": [
@@ -606,7 +675,12 @@
         "legend": "Wybierz wynik dla C.11.1.3.5.1 Określenie pożądanej wartości (funkcjonalność otwarta)",
         "noteId": "notes-c-11-1-3-5-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Określenie pożądanej wartości:</strong> sprawdź, czy pola formularzy (np. pola adresu, numeru telefonu, e-mail) mają dodatkowe atrybuty określające przeznaczenie pola (np. HTML autocomplete, platformowe inputPurpose), oraz czy te informacje są udostępniane programowo do technologii wspomagających.",
+        "<strong>Test praktyczny:</strong> Użyj inspektora dostępności, aby potwierdzić, że wartości przeznaczenia pól są dostępne oraz sprawdź, czy funkcje autouzupełniania/przechowywania danych są powiązane z odpowiednimi atrybutami semantycznymi; przetestuj z ekranowym odczytem czy dane są odczytywane i interpretowane prawidłowo.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.3.5):</strong> Najważniejsze cele wejściowe są określone i są dostępne programowo, aby ułatwić wypełnianie formularzy i precyzyjne dopasowanie danych przez technologie wspomagające."
+      ]
     },
     {
       "type": "heading",
@@ -644,7 +718,12 @@
         "legend": "Wybierz wynik dla C.11.1.3.5.2 Określenie pożądanej wartości (funkcjonalność zamknięta)",
         "noteId": "notes-c-11-1-3-5-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Sygnał dźwiękowy dla funkcjonalności zamkniętej:</strong> sprawdź, czy dźwięk jest dostarczany przez mechanizm wbudowany w TIK lub dostarczany wraz z nią, oraz czy obejmuje informacje o przeznaczeniu pól danych w komponentach interfejsu.",
+        "<strong>Test praktyczny:</strong> Podłącz osobisty zestaw słuchawkowy przez gniazdo audio 3,5 mm lub standardowe połączenie branżowe, bez korzystania ze wzroku, i potwierdź, że sygnał dźwiękowy zawiera elementy określające przeznaczenie pól danych (np. adres, telefon, e-mail).",
+        "<strong>Uwaga:</strong> Upewnij się, że dźwięk jest dostępny bez konieczności wizualnego interfejsu, zapewniając alternatywny dostęp dla użytkowników niewidomych."
+      ]
     },
     {
       "type": "heading",
@@ -663,7 +742,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#use-of-color\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.1</a> Użycie koloru."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#uzycie-koloru\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.1 Użycie koloru</a>."
       ],
       "form": {
         "inputs": [
@@ -683,7 +762,13 @@
         "legend": "Wybierz wynik dla C.11.1.4.1 Użycie koloru",
         "noteId": "notes-c-11-1-4-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Użycie koloru:</strong> sprawdź, czy kolor nie jest jedynym sposobem przekazywania informacji (np. błędy formularza oznaczone tylko kolorem).",
+        "<strong>Test praktyczny:</strong> Wyłącz kolory (tryb kontrastu lub symulacja odcieni szarości) i potwierdź, że wszystkie informacje i instrukcje pozostają dostępne (za pomocą tekstu, etykiet, ikon lub kształtów).",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.4.1):</strong> Informacje przekazywane za pomocą koloru mają również dodatkowe, niekolorystyczne metody identyfikacji (tekst, ikony, wzór).",
+        "<strong>Uwaga:</strong> Dla dekoracji i elementów logo stosuje się wyjątki; zwróć szczególną uwagę na elementy formularzy i powiadomienia błędów."
+      ]
     },
     {
       "type": "heading",
@@ -697,7 +782,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.1"
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.1"
       ],
       "form": {
         "inputs": [
@@ -717,7 +802,13 @@
         "legend": "Wybierz wynik dla C.11.1.4.2 Kontrola odtwarzania dźwięku",
         "noteId": "notes-c-11-1-4-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kontrola odtwarzania dźwięku:</strong> sprawdź, czy odtwarzane dźwięki z materiałów multimedialnych lub z tła mają możliwość wstrzymania, pauzy, regulacji głośności i są dostępne poprzez interfejs użytkownika; upewnij się, że automatyczne odtwarzanie dźwięku można wyłączyć lub jest wyłączone.",
+        "<strong>Test praktyczny:</strong> Odtwórz przykładowe treści z dźwiękiem, spróbuj zmienić głośność, wyciszyć ścieżkę audio, zatrzymać i wznowić odtwarzanie; sprawdź, czy sterowanie jest programowo dostępne (np. kontrolki w aplikacji i przez technologię wspomagającą).",
+        "<strong>Kryterium sukcesu (Tabela 11.1):</strong> Użytkownik ma dostęp do kontroli dźwięku i może wyłączyć lub zatrzymać odtwarzanie dźwięku, w przypadku gdy jest on rozpraszający lub zbędny dla zrozumienia treści.",
+        "<strong>Uwaga:</strong> W niektórych aplikacjach dźwięk systemowy może wymagać uprawnień lub ustawień systemowych; sprawdź także, czy istnieje możliwość wyłączenia globalnej ścieżki audio."
+      ]
     },
     {
       "type": "heading",
@@ -731,7 +822,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika"
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#contrast-minimum\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.3</a> Kontrast (minimum)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#kontrast-minimum\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.3 Kontrast (minimum)</a>."
       ],
       "form": {
         "inputs": [
@@ -751,7 +842,13 @@
         "legend": "Wybierz wynik dla C.11.1.4.3 Kontrast (minimum)",
         "noteId": "notes-c-11-1-4-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kontrast (minimum):</strong> Użyj specjalistycznych narzędzi do pomiaru współczynnika kontrastu między tekstem a tłem. Wymagany współczynnik to 4.5:1 dla zwykłego tekstu i 3:1 dla dużego tekstu. Narzędzia: Dla Windows: Accessibility Insights lub Inspect.exe (część Windows SDK). Dla macOS: Accessibility Inspector w Xcode. Dla Android/iOS: Narzędzia deweloperskie w Android Studio/Xcode z wtyczkami do kontrastu. Sprawdź kontrast dla wszystkich elementów interfejsu, w tym ikon i przycisków, oraz w różnych stanach (normalny, disabled, hover, focus).",
+        "<strong>Test praktyczny:</strong> Wybierz próbkę tekstu i tła w aplikacji, uruchom wybrane narzędzie, zmierz współczynnik kontrastu i porównaj z wymaganiami. Dla elementów nietekstowych (np. ikony) sprawdź, czy mają znaczenie dla użytkowników i czy spełniają analogiczne wymagania kontrastu lub mają alternatywy.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.4.3):</strong> Kontrast tekstu i tła spełnia minimalne wymagania; dla elementów niestandardowych stosuj analogiczne zasady lub zapewnij alternatywy.",
+        "<strong>Uwaga:</strong> Sprawdź różne stany elementów (disabled, hover, focus), bo kontrast podczas stanu może różnić się od stanu normalnego."
+      ]
     },
     {
       "type": "heading",
@@ -771,7 +868,7 @@
         "2. Oprogramowanie zapewnia obsługę funkcji powiększania dostępnych na platformie lub technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#resize-text\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.4</a> Zmiana rozmiaru tekstu."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#zmiana-rozmiaru-tekstu\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu</a>."
       ],
       "form": {
         "inputs": [
@@ -791,7 +888,12 @@
         "legend": "Wybierz wynik dla C.11.1.4.4.1 Zmiana rozmiaru tekstu (funkcjonalność otwarta)",
         "noteId": "notes-c-11-1-4-4-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Zmiana rozmiaru tekstu:</strong> sprawdź, czy można powiększyć tekst do 200% bez utraty treści lub funkcjonalności; użyj opcji powiększania platformy, powiększenia w aplikacji i testów z powiększeniem przez technologie wspomagające.",
+        "<strong>Test praktyczny:</strong> Powiększ interfejs do 200% i powyżej, sprawdź, czy tekst jest czytelny, przyciski oraz kontrolki pozostają dostępne i funkcjonalne, oraz czy nie występuje konieczność przewijania w dwóch wymiarach w standardowych scenariuszach.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.4.4):</strong> Interfejs umożliwia powiększenie tekstu do co najmniej 200% bez utraty funkcjonalności i informacji."
+      ]
     },
     {
       "type": "heading",
@@ -809,6 +911,10 @@
       "procedure": [
         "1. Zmierzyć wysokość wielkiej litery H.",
         "2. Sprawdź, czy odpowiada ona kątowi co najmniej 0,7 stopnia przy określonej odległości widzenia."
+      ],
+      "detailedChecklist": [
+        "<strong>Zmiana rozmiaru tekstu (funkcjonalność zamknięta):</strong> Zmierzyć wysokość wielkiej litery H i sprawdzić, czy odpowiada ona kątowi co najmniej 0,7 stopnia przy określonej odległości widzenia.",
+        "<strong>Uwaga:</strong> Ponieważ obsługa renderowania tekstu w środowisku zamkniętym może być bardziej ograniczona niż obsługa dostępna w agentach użytkownika dla sieci Web, spełnienie niniejszej klauzuli w środowisku zamkniętym może nałożyć znacznie większy ciężar na autora treści."
       ],
       "form": {
         "inputs": [
@@ -848,7 +954,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#images-of-text\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.5</a> Obrazy tekstu."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#obrazy-tekstu\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.5 Obrazy tekstu</a>."
       ],
       "form": {
         "inputs": [
@@ -868,7 +974,13 @@
         "legend": "Wybierz wynik dla C.11.1.4.5.1 Obrazy tekstu (funkcjonalność otwarta)",
         "noteId": "notes-c-11-1-4-5-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Obrazy tekstu (funkcjonalność otwarta):</strong> sprawdź, czy elementy zawierające tekst używają rzeczywistego tekstu, a nie obrazu tekstu; jeśli użyto obrazu tekstu, sprawdź, czy istnieje równoważna alternatywa tekstowa lub, w przypadku potrzeby, możliwość jego zamiany na tekst.",
+        "<strong>Test praktyczny:</strong> Użyj inspektora interfejsu i narzędzi programowych, aby zidentyfikować miejsca, gdzie tekst jest renderowany jako obraz (np. raster), a następnie potwierdź, że zapewniono alternatywę (tekst w treści lub opis). Sprawdź kontrolki, nagłówki, i fragmenty tekstu krytyczne dla zrozumienia, czy są dostępne w formie tekstowej.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.4.5):</strong> Tekst funkcjonalny nie jest przedstawiony jako obraz tekstu, chyba że jest to konieczne (logotypy, ozdobne czcionki); jeżeli użyto obrazu tekstu, zapewniono jego alternatywny odpowiednik.",
+        "<strong>Uwaga:</strong> Logo i dekoracyjne grafiki z tekstem są wyjątkiem; w przypadku zamkniętych środowisk sprawdź, czy wyjście mowy dostarcza równoważny opis tekstu, jeśli obraz tekstu zawiera informacje istotne dla użytkownika."
+      ]
     },
     {
       "type": "heading",
@@ -887,7 +999,7 @@
         "1. Sprawdź, czy wyjście mowy jest zapewniane jako alternatywa dla treści nietekstowej.",
         "2. Sprawdź, czy treść nietekstowa jest rzeczywiście istotna i&nbsp;potrzebna.",
         "3. Sprawdź, czy treść nietekstowa nie jest wyłącznie używana do formatowania wizualnego.",
-        "4. Sprawdź, czy wyjście mowy jest zgodne z&nbsp;wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w&nbsp;kryterium sukcesu WCAG 2.1 dla wytycznej <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">1.1.1</a> Treść nietekstowa."
+        "4. Sprawdź, czy wyjście mowy jest zgodne z&nbsp;wytycznymi dotyczącymi „tekstu alternatywnego” opisanego w&nbsp;kryterium sukcesu WCAG 2.1 dla wytycznej <a href=\"https://www.w3.org/Translations/WCAG21-pl/#tres-nietekstowa\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.1.1 Treść nietekstowa</a>."
       ],
       "form": {
         "inputs": [
@@ -907,7 +1019,13 @@
         "legend": "Wybierz wynik dla C.11.1.4.5.2 Obrazy tekstu (funkcjonalność zamknięta)",
         "noteId": "notes-c-11-1-4-5-2"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Obrazy tekstu (funkcjonalność zamknięta):</strong> sprawdź, czy w miejscach, gdzie zastosowano obrazy z tekstem, istnieje równoważna alternatywa dostarczana użytkownikom niewizualnym (np. wyjście mowy lub tekstowa transkrypcja).",
+        "<strong>Test praktyczny:</strong> Identyfikuj obrazy zawierające tekst oraz potwierdź przy użyciu dostępnych funkcji platformy lub narzędzi inspektora, że brakujące treści są dostępne poprzez wyjście mowy lub tekst alternatywny; dla zamkniętej funkcjonalności sprawdź, czy wyjście mowy przekazuje tekst z obrazu.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.4.5):</strong> Obrazy tekstu nie zastępują tekstu funkcjonalnego bez zapewnienia jego alternatywy; w aplikacjach zamkniętych wyjście mowy jest równoważne tekstowi w obrazie.",
+        "<strong>Uwaga:</strong> Wyjątki dotyczą logotypów i elementów dekoracyjnych; w sytuacjach, gdzie obraz tekstu jest jedyną opcją, upewnij się, że istnieje alternatywa dostępna programowo."
+      ]
     },
     {
       "type": "heading",
@@ -921,7 +1039,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.2."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.2."
       ],
       "form": {
         "inputs": [
@@ -941,7 +1059,14 @@
         "legend": "Wybierz wynik dla C.11.1.4.10 Dopasowanie do ekranu",
         "noteId": "notes-c-11-1-4-10"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Dopasowanie do ekranu (reflow):</strong> Sprawdź, czy treść może być prezentowana bez utraty informacji lub funkcjonalności oraz bez konieczności przewijania w dwóch wymiarach dla: treści przewijanej pionowo przy szerokości równoważnej 320 pikselom CSS; treści przewijanej poziomo przy wysokości równoważnej 256 pikselom CSS; z wyjątkiem części treści, które wymagają układu dwuwymiarowego ze względu na użycie lub znaczenie.",
+        "<strong>Test praktyczny:</strong> Przetestuj interfejs w różnych rozmiarach okna i przy różnych poziomach powiększenia (np. 200% i 400%); zweryfikuj, czy elementy i funkcje interfejsu pozostają dostępne oraz czy nie występuje poziome i pionowe przewijanie wymuszające utratę funkcjonalności.",
+        "<strong>Kryterium sukcesu (Tabela 11.2):</strong> Treść i funkcjonalność są dostępne i nie wymagają dwuwymiarowego przewijania podczas standardowych scenariuszy dostępu.",
+        "<strong>Uwaga 1:</strong> 320 pikseli CSS jest równoważne początkowej szerokości viewportu 1280 pikseli CSS przy powiększeniu 400%. Dla oprogramowania nieinternetowego zaprojektowanego do przewijania poziomego (np. z tekstem pionowym), 256 pikseli CSS jest równoważne początkowej wysokości viewportu 1024 px przy powiększeniu 400%.",
+        "<strong>Uwaga 2:</strong> Przykłady treści wymagających układu dwuwymiarowego to obrazy, mapy, diagramy, wideo, gry, prezentacje, tabele danych oraz interfejsy, gdzie konieczne jest utrzymanie pasków narzędzi w widoku podczas manipulacji treścią."
+      ]
     },
     {
       "type": "heading",
@@ -955,7 +1080,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-contrast\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.11</a> Kontrast elementów nietekstowych."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#kontrast-elementow-nietekstowych\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych</a>."
       ],
       "form": {
         "inputs": [
@@ -975,7 +1100,13 @@
         "legend": "Wybierz wynik dla C.11.1.4.11 Kontrast elementów nietekstowych",
         "noteId": "notes-c-11-1-4-11"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kontrast elementów nietekstowych:</strong> sprawdź kontrast pomiędzy elementami interfejsu użytkownika (ramki, ikony, obramowania, separatory) i tłem oraz ich kontrast między sobą; użyj narzędzi do mierzenia kontrastu (np. Color Contrast Analyser) i sprawdź stany focus/hover/disabled.",
+        "<strong>Test praktyczny:</strong> Zmierz kontrast kolorów elementów funkcjonalnych, takich jak ikony i obramowania, oraz kontrast pomiędzy elementami istotnymi a ich tłem; sprawdź w różnych motywach (jasny/ciemny) i stanach elementów.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.4.11):</strong> Elementy nietekstowe i ich części mają wystarczający kontrast (min. 3:1) w stosunku do tła lub w odniesieniu do funkcji elementu interfejsu użytkownika.",
+        "<strong>Uwaga:</strong> Dla elementów niewizualnych lub dekoracyjnych, jeśli nie mają znaczenia funkcjonalnego, stosowanie tej zasady nie jest wymagane."
+      ]
     },
     {
       "type": "heading",
@@ -989,7 +1120,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym , które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#text-spacing\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12</a> Odstępy w&nbsp;tekście."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#odstepy-w-tekscie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12 Odstępy w&nbsp;tekście</a>."
       ],
       "form": {
         "inputs": [
@@ -1009,7 +1140,13 @@
         "legend": "Wybierz wynik dla C.11.1.4.12 Odstępy w&nbsp;tekście",
         "noteId": "notes-c-11-1-4-12"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Odstępy w tekście:</strong> sprawdź odstępy pomiędzy znakami, wyrazami i akapitami oraz wysokość linii; upewnij się, że użytkownik może czytać treści nawet po zwiększeniu odstępów ustawionych przez użytkownika lub system.",
+        "<strong>Test praktyczny:</strong> Zwiększ spacje między liniami (line-height), pojedynczymi znakami i wyrazami (np. 1.5–2x) oraz między akapitami i potwierdź, że tekst pozostaje czytelny, nie nakłada się na siebie i zachowuje strukturę logiczną.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.4.12):</strong> Tekst poprawnie reaguje na zmiany odstępów i nie traci znaczenia lub struktury przy zwiększonych odstępach zgodnych z wymaganiami (line-height, letter-spacing, word-spacing).",
+        "<strong>Uwaga:</strong> Sprawdź różne elementy dokumentu (nagłówki, listy, tabele) oraz wpływ na skomplikowane układy (np. przyciski w liniach)."
+      ]
     },
     {
       "type": "heading",
@@ -1023,7 +1160,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#content-on-hover-or-focus\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.13</a> Treść spod kursora lub fokusu."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#tresc-spod-kursora-lub-fokusu\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu</a>."
       ],
       "form": {
         "inputs": [
@@ -1043,7 +1180,13 @@
         "legend": "Wybierz wynik dla C.11.1.4.13 Treść spod kursora lub fokusu",
         "noteId": "notes-c-11-1-4-13"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Treść spod kursora lub fokusu:</strong> sprawdź, czy zawartość pojawiająca się w wyniku najechania kursorem lub uzyskania fokusu jest dostępna także dla użytkowników klawiaturowych oraz czy nie blokuje możliwości interakcji z innymi elementami interfejsu.",
+        "<strong>Test praktyczny:</strong> Użyj klawiatury i kursora, aby wyzwolić tekst odsłaniany na hover/focus; sprawdź, czy jest możliwy do odczytania przez technologię wspomagającą i czy można zamknąć/opuścić treść bez utraty kontekstu.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 1.4.13):</strong> Informacje wyłącznie pojawiające się na hover/focus są dostępne i nie blokują dostępu do innych funkcji; są też dostępne z użyciem klawiatury i narzędzi wspomagających.",
+        "<strong>Uwaga:</strong> Zweryfikuj także dostępność tych treści w usługach asystujących (np. screen reader), sprawdź synchronizację i wywołania dynamiczne."
+      ]
     },
     {
       "type": "heading",
@@ -1073,7 +1216,7 @@
         "2. Oprogramowanie zapewnia obsługę klawiatur lub interfejs klawiatury."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#keyboard\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.1.1</a> Klawiatura."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#klawiatura\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.1.1 Klawiatura</a>."
       ],
       "form": {
         "inputs": [
@@ -1093,7 +1236,13 @@
         "legend": "Wybierz wynik dla C.11.2.1.1.1 Klawiatura (funkcjonalność otwarta)",
         "noteId": "notes-c-11-2-1-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Klawiatura:</strong> sprawdź, czy wszystkie elementy interfejsu i funkcje można obsłużyć przy pomocy samej klawiatury (Tab, Shift+Tab, strzałki, klawisze skrótów).",
+        "<strong>Test praktyczny:</strong> Prowadź kompletne scenariusze użytkownika tylko przy użyciu klawiatury: nawiguj, wypełnij formularz, obsłuż elementy dynamiczne, modalne okna i widgety; upewnij się, że wszystkie funkcje są dostępne i aktywne.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 2.1.1):</strong> Wszystkie funkcje są możliwe do wykonania przy pomocy klawiatury, bez konieczności używania myszy lub wskaźników.",
+        "<strong>Uwaga:</strong> Weź pod uwagę niestandardowe skróty i skróty systemowe; sprawdź też konflikty między skrótami a technologiami pomocniczymi."
+      ]
     },
     {
       "type": "heading",
@@ -1128,7 +1277,12 @@
         "legend": "Wybierz wynik dla C.11.2.1.1.2 Klawiatura (funkcjonalność zamknięta)",
         "noteId": "notes-c-11-2-1-1-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Klawiatura (funkcjonalność zamknięta):</strong> sprawdź, czy funkcje, które są zamknięte dla technologii wspomagających lub platformy, mają alternatywne metody dostępu (np. wyjście mowy, dedykowane przyciski lub komendy), oraz czy oprogramowanie udostępnia odpowiednią dokumentację i możliwości konfiguracji.",
+        "<strong>Test praktyczny:</strong> Sprawdź funkcje zamknięte z użyciem metod dostępnych na platformie (np. wyjście mowy, przyciski sprzętowe); upewnij się, że użytkownik może wykonywać istotne operacje poprzez alternatywne metody, oraz że funkcje są poprawnie opisane w dokumentacji.",
+        "<strong>Uwaga:</strong> Zwróć uwagę, że w zamkniętych systemach może być potrzebna współpraca z dostawcą platformy w celu oceny dostępności."
+      ]
     },
     {
       "type": "heading",
@@ -1142,7 +1296,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.3."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.3."
       ],
       "form": {
         "inputs": [
@@ -1162,7 +1316,14 @@
         "legend": "Wybierz wynik dla C.11.2.1.2 Bez pułapki na klawiaturę",
         "noteId": "notes-c-11-2-1-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Bez pułapki na klawiaturę:</strong> Sprawdź, czy jeśli fokus klawiatury może wejść na komponent oprogramowania przy użyciu interfejsu klawiatury, wówczas fokus można przesunąć z tego komponentu przy użyciu tylko interfejsu klawiatury, oraz jeśli wymaga to więcej niż niezmodyfikowane klawisze strzałek lub tab lub inne standardowe metody wyjścia, użytkownik jest informowany o metodzie przesunięcia fokusa.",
+        "<strong>Test praktyczny:</strong> Przetestuj formularze, modalne okna dialogowe, niestandardowe kontrolki (np. panele, elementy drag-and-drop) oraz zewnętrzne biblioteki UI; zweryfikuj instrukcje, które informują użytkownika, jak opuścić komponent, jeżeli to nie jest naturalne; upewnij się, że istnieje sposoby alternatywne jeśli domyślne nie działają.",
+        "<strong>Kryterium sukcesu (Tabela 11.3):</strong> Jeżeli fokus klawiatury może wejść na komponent oprogramowania przy użyciu interfejsu klawiatury, wówczas fokus można przesunąć z tego komponentu przy użyciu tylko interfejsu klawiatury, oraz jeśli wymaga to więcej niż niezmodyfikowane klawisze strzałek lub tab lub inne standardowe metody wyjścia, użytkownik jest informowany o metodzie przesunięcia fokusa.",
+        "<strong>Uwaga 1:</strong> Ponieważ każda część oprogramowania, która nie spełnia tego kryterium sukcesu, może zakłócić zdolność użytkownika do korzystania z całego oprogramowania, konieczne jest, aby cała treść w oprogramowaniu (niezależnie od tego, czy jest używana do spełniania innych kryteriów sukcesu) spełniała to kryterium sukcesu.",
+        "<strong>Uwaga 2:</strong> Standardowe metody wyjścia mogą się różnić w zależności od platformy. Na przykład, na wielu platformach desktopowych klawisz Escape jest standardową metodą wyjścia."
+      ]
     },
     {
       "type": "heading",
@@ -1202,7 +1363,13 @@
         "legend": "Wybierz wynik dla C.11.2.1.4.1 Jednoznakowe skróty klawiaturowe (funkcjonalność otwarta)",
         "noteId": "notes-c-11-2-1-4-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Jednoznakowe skróty (funkcjonalność otwarta):</strong> sprawdź dokumentację skrótów oraz przetestuj skróty przy użyciu klawiatury; sprawdź, czy skróty składające się z jednego klawisza można wyłączyć lub zmienić, oraz czy użytkownik jest informowany o ich istnieniu i sposobie wyłączenia.",
+        "<strong>Test praktyczny:</strong> Wypróbuj istniejące skróty przy pomocy klawiatury i aplikacji pomocniczych; zmień/włącz/wyłącz skrót (jeżeli to możliwe) i sprawdź, czy funkcje pozostają dostępne; upewnij się, że skróty nie kolidują z systemowymi i diagnostycznymi skrótami technologicznymi.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 2.1.4):</strong> Jednoznakowe skróty można wyłączyć lub zmienić, albo są one absolutnie konieczne i opisane w dokumentacji.",
+        "<strong>Uwaga:</strong> Na platformach wbudowanych skróty zależne od systemu operacyjnego mogą wymagać specjalnych rozwiązań; zwróć uwagę na zgodność z technologiami wspomagającymi."
+      ]
     },
     {
       "type": "heading",
@@ -1238,6 +1405,12 @@
         "noteId": "notes-c-11-2-1-4-2"
       },
       "evaluationType": "Inspekcja"
+      ,
+      "detailedChecklist": [
+        "<strong>Jednoznakowe skróty (funkcjonalność zamknięta):</strong> sprawdź, czy w środowisku zamkniętym dla technologii wspomagających, jednoznakowe skróty mają alternatywne metody dostępu lub są opisane w dokumentacji, aby uniknąć przypadkowych aktywacji.",
+        "<strong>Test praktyczny:</strong> W środowisku zamkniętym, przetestuj skróty przy użyciu dostępnych metod (np. mowa, przyciski sprzętowe); upewnij się, że skróty nie powodują niezamierzonych działań i są dostępne poprzez alternatywy.",
+        "<strong>Uwaga:</strong> W zamkniętych systemach, współpraca z dostawcą platformy może być konieczna dla zapewnienia dostępności skrótów."
+      ]
     },
     {
       "type": "heading",
@@ -1256,7 +1429,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.4."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.4."
       ],
       "form": {
         "inputs": [
@@ -1276,7 +1449,13 @@
         "legend": "Wybierz wynik dla C.11.2.2.1 Dostosowanie czasu",
         "noteId": "notes-c-11-2-2-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Limity czasowe:</strong> sprawdź wszystkie miejsce w oprogramowaniu gdzie narzucone są limity czasowe (np. sesje, formularze, edycja); upewnij się, że użytkownik może wyłączyć limit, dostosować czas (co najmniej 10x dłuższy) lub przedłużyć po ostrzeżeniu (min. 20 s).",
+        "<strong>Test praktyczny:</strong> Potwierdź, że dla każdego limitu czasowego użytkownik ma kontrolę: wyłącz limit, dostosuj czas lub przedłuż po ostrzeżeniu; sprawdź wyjątki dla zdarzeń czasu rzeczywistego lub działań istotnych.",
+        "<strong>Kryterium sukcesu (Tabela 11.4):</strong> Dla każdego limitu czasowego użytkownik może wyłączyć go, dostosować (co najmniej 10x) lub przedłużyć po ostrzeżeniu (min. 20 s), chyba że jest to niepraktyczne (np. realtime).",
+        "<strong>Uwaga:</strong> Zwróć uwagę na wyjątki: zdarzenia czasu rzeczywistego (np. aukcje), gdzie limit jest niezbędny; działania istotne, gdzie przedłużenie unieważnia aktywność; lub limity dłuższe niż 20 godzin. Dokumentuj sytuacje, gdzie limity są wprowadzone przez zewnętrzne polityki."
+      ]
     },
     {
       "type": "heading",
@@ -1290,7 +1469,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.5."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.5."
       ],
       "form": {
         "inputs": [
@@ -1310,7 +1489,17 @@
         "legend": "Wybierz wynik dla C.11.2.2.2 Pauza, zatrzymanie, ukrycie",
         "noteId": "notes-c-11-2-2-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Pauza, zatrzymanie, ukrycie:</strong> sprawdź, czy poruszające się, migające, przewijające lub automatycznie aktualizowane treści da się wstrzymać, zatrzymać lub ukryć; dla treści automatycznie aktualizowanych sprawdź mechanizm kontroli częstotliwości.",
+        "<strong>Test praktyczny:</strong> Sprawdź elementy animowane, przewijające treści oraz automatyczne aktualizacje; potwierdź, że istnieje funkcja pauzy/stop/ukrywania lub ustawienia częstotliwości; dokumentuj wyjątki, gdzie ruch jest niezbędny (np. ładowanie).",
+        "<strong>Kryterium sukcesu (Tabela 11.5):</strong> Dla ruchomych/migających/przewijanych elementów (trwających >5s, równolegle z inną treścią) oraz automatycznie aktualizowanych treści istnieje mechanizm zatrzymania/ukrycia lub kontroli częstotliwości, chyba że ruch/aktualizacja jest niezbędna.",
+        "<strong>Uwaga 1:</strong> Dotyczy całej treści w oprogramowaniu (informacyjnej lub dekoracyjnej), która się porusza, miga, przewija lub aktualizuje automatycznie – każdy element niespełniający może zakłócić użytkowanie całego oprogramowania.",
+        "<strong>Uwaga 2:</strong> Wyjątki dla treści niezbędnych (np. animacje ładowania, gdzie interakcja nie jest możliwa i wskazanie postępu jest ważne).",
+        "<strong>Uwaga 3:</strong> Dla migotania/odblasków patrz <a href=\"https://www.w3.org/Translations/WCAG21-pl/#trzy-b-yski-lub-wartosci-ponizej-progu\" target=\"_blank\">WCAG 2.1 – 2.3.1 Trzy błyski lub wartości poniżej progu</a>.",
+        "<strong>Uwaga 4:</strong> Treści strumieniowane lub okresowo aktualizowane nie muszą zachowywać danych między pauzą a wznowieniem.",
+        "<strong>Uwaga 5:</strong> Dotyczy wszystkich treści, nawet dekoracyjnych, jeśli się aktualizują, migają lub poruszają."
+      ]
     },
     {
       "type": "heading",
@@ -1329,7 +1518,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.6."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.6."
       ],
       "form": {
         "inputs": [
@@ -1349,7 +1538,12 @@
         "legend": "Wybierz wynik dla C.11.2.3.1 Trzy błyski lub wartości poniżej progu",
         "noteId": "notes-c-11-2-3-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Błyski:</strong> sprawdź całą aplikację pod kątem elementów migających/zmieniających jasność; użyj testów obrazu lub narzędzi mierzących częstotliwość błysku.",
+        "<strong>Kryterium sukcesu (Tabela 11.6):</strong> Oprogramowanie nie powinno zawierać treści, które błyskają więcej niż trzy razy w ciągu jednego sekundy lub przekraczają progi ostrzegawcze migotania.",
+        "<strong>Uwaga:</strong> Kryterium dotyczy całego oprogramowania (fragmenty migające mogą wpływać na użyteczność). Zobacz także <a href=\"https://www.w3.org/Translations/WCAG21-pl/#trzy-b-yski-lub-wartosci-ponizej-progu\" target=\"_blank\">WCAG 2.1 – 2.3.1 Trzy błyski lub wartości poniżej progu</a>."
+      ]
     },
     {
       "type": "heading",
@@ -1368,7 +1562,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.7."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.7."
       ],
       "form": {
         "inputs": [
@@ -1388,7 +1582,11 @@
         "legend": "Wybierz wynik dla C.11.2.4.3 Kolejność fokusu",
         "noteId": "notes-c-11-2-4-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kolejność fokusu:</strong> użyj nawigacji klawiaturowej (Tab/Shift+Tab) i sprawdź, czy kolejność fokusu jest logiczna i zachowuje znaczenie oraz pełną funkcjonalność interfejsu; potwierdź, że programowa kolejność odpowiada wizualnej kolejności, jeśli ma znaczenie.",
+        "<strong>Kryterium sukcesu (Tabela 11.7):</strong> Jeśli oprogramowanie obsługuje sekwencyjną nawigację i ta kolejność ma wpływ na znaczenie lub działanie, kolejność fokusu powinna zachowywać znaczenie i funkcjonalność."
+      ]
     },
     {
       "type": "heading",
@@ -1402,7 +1600,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#link-purpose-in-context\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.4</a> Cel łącza (w kontekście)."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#cel-acza-w-kontekscie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)</a>."
       ],
       "form": {
         "inputs": [
@@ -1422,7 +1620,13 @@
         "legend": "Wybierz wynik dla C.11.2.4.4 Cel łącza (w kontekście)",
         "noteId": "notes-c-11-2-4-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Cel łącza (w kontekście):</strong> sprawdź, czy cel łącza (np. przycisku, linku) jest zrozumiały z samego tekstu łącza lub z kontekstu programowego (aria-label, title) oraz kontekstu wizualnego.",
+        "<strong>Test praktyczny:</strong> Przejrzyj łącza bez kontekstu (np. lista linków); upewnij się, że tekst łącza sam w sobie lub z kontekstem wyjaśnia cel; sprawdź z technologią wspomagającą.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 2.4.4):</strong> Cel łącza jest zrozumiały z tekstu łącza lub kontekstu (programowego lub wizualnego).",
+        "<strong>Uwaga:</strong> Jeśli łącze jest niejednoznaczne samo w sobie, kontekst musi wyjaśniać cel."
+      ]
     },
     {
       "type": "heading",
@@ -1436,7 +1640,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#headings-and-labels\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6</a> Nagłówki i&nbsp;etykiety."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#nag-owki-i-etykiety\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6 Nagłówki i&nbsp;etykiety.</a>"
       ],
       "form": {
         "inputs": [
@@ -1456,7 +1660,12 @@
         "legend": "Wybierz wynik dla C.11.2.4.6 Nagłówki i&nbsp;etykiety",
         "noteId": "notes-c-11-2-4-6"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Nagłówki i etykiety:</strong> sprawdź, czy nagłówki opisują temat sekcji, a etykiety pól formularzy są opisowe i jednoznaczne; upewnij się, że etykiety są programowo powiązane z kontrolkami.",
+        "<strong>Test praktyczny:</strong> Przejrzyj nagłówki i etykiety z technologią wspomagającą; sprawdź, czy opisują odpowiednio sekcje/formularze; potwierdź powiązania programowe.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 2.4.6):</strong> Nagłówki i etykiety opisują temat lub cel."
+      ]
     },
     {
       "type": "heading",
@@ -1470,7 +1679,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#focus-visible\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.7</a> Widoczny fokus."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#widoczny-fokus\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.7 Widoczny fokus.</a>"
       ],
       "form": {
         "inputs": [
@@ -1490,6 +1699,12 @@
         "legend": "Wybierz wynik dla C.11.2.4.7 Widoczny fokus",
         "noteId": "notes-c-11-2-4-7"
       },
+        "detailedChecklist": [
+          "<strong>Wskaźnik fokusu:</strong> Przejdź po elementach interaktywnych używając klawiatury (Tab/Shift+Tab, strzałki) i sprawdź, czy aktywny element ma wyraźny wskaźnik fokusu; sprawdź wszystkie stany (focus, hover, active) oraz różne motywy (jasny/ciemny) i skalowanie interfejsu użytkownika.",
+          "<strong>Test praktyczny:</strong> Użyj klawiatury do nawigacji po interfejsie i potwierdź, że wskaźnik fokusu jest zawsze widoczny dla każdego elementu interaktywnego; sprawdź, czy style CSS nie ukrywają fokusu (np. outline: none), oraz czy wskaźnik ma wystarczający kontrast i rozmiar.",
+          "<strong>Kryterium sukcesu (WCAG 2.1 – 2.4.7):</strong> Elementy interaktywne mają widoczny, łatwo wykrywalny wskaźnik fokusu podczas nawigacji klawiaturą.",
+          "<strong>Uwaga:</strong> W przypadku platform, które nadpisują domyślny fokus, upewnij się, że dostawca platformy zapewnia zamienny mechanizm widocznego fokusu; testuj także przy zwiększonym skalowaniu ekranu."
+        ],
       "evaluationType": "Inspekcja"
     },
     {
@@ -1510,7 +1725,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.8."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.8."
       ],
       "form": {
         "inputs": [
@@ -1530,7 +1745,12 @@
         "legend": "Wybierz wynik dla C.11.2.5.1 Gesty dotykowe",
         "noteId": "notes-c-11-2-5-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Gesty dotykowe:</strong> sprawdź, czy wszystkie funkcje wykonywane gestami wielopunktowymi lub ścieżkowymi mają alternatywy ulepszające lub są dostępne przy użyciu jednego wskaźnika bez ścieżkowego gestu, chyba że gest jest niezbędny.",
+        "<strong>Kryterium sukcesu (Tabela 11.8):</strong> Funkcje wykorzystujące gesty wielopunktowe i ścieżkowe muszą mieć możliwość ich uruchamiania także przy użyciu pojedynczego wskaźnika, chyba że gest jest zasadniczym elementem funkcjonalności.",
+        "<strong>Uwaga 1:</strong> To wymaganie dotyczy oprogramowania nieinternetowego, które interpretuje działania wskaźnika (tj. nie dotyczy działań wymaganych do obsługi agenta użytkownika lub technologii wspomagającej)."
+      ]
     },
     {
       "type": "heading",
@@ -1545,7 +1765,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.9."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.9."
       ],
       "form": {
         "inputs": [
@@ -1565,7 +1785,15 @@
         "legend": "Wybierz wynik dla C.11.2.5.2 Rezygnacja ze wskazania",
         "noteId": "notes-c-11-2-5-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Rezygnacja ze wskazania:</strong> sprawdź, czy funkcje uruchamiane przez naciśnięcie wskaźnika można anulować lub cofnąć przed zwolnieniem, oraz czy przypadkowe aktywacje są minimalizowane.",
+        "<strong>Test praktyczny:</strong> Testuj przyciski i kontrolki wskaźnikiem; sprawdź, czy można anulować akcję przed zwolnieniem (np. przeciągnięcie poza element); potwierdź, że nie ma niezamierzonych aktywacji.",
+        "<strong>Kryterium sukcesu (Tabela 11.9):</strong> Funkcje wskaźnika można anulować lub cofnąć, chyba że anulowanie jest niemożliwe (np. zakończenie przeciągania).",
+        "<strong>Dla funkcjonalności obsługiwanej pojedynczym wskaźnikiem, przynajmniej jedno z poniższych jest prawdziwe:</strong> <ul><li>Brak zdarzenia naciśnięcia: Zdarzenie naciśnięcia wskaźnika nie jest używane do wykonania żadnej części funkcji.</li><li>Przerwanie lub cofnięcie: Ukończenie funkcji następuje przy zdarzeniu zwolnienia, oraz dostępny jest mechanizm do przerwania funkcji przed ukończeniem lub cofnięcia funkcji po ukończeniu.</li><li>Odwrócenie zwolnienia: Zdarzenie zwolnienia odwraca każdy wynik poprzedzającego zdarzenia naciśnięcia.</li><li>Istotne: Ukończenie funkcji przy zdarzeniu naciśnięcia jest istotne.</li></ul>",
+        "<strong>Uwaga 1:</strong> Funkcje, które emulują naciśnięcie klawisza klawiatury lub klawiatury numerycznej, są uważane za istotne.",
+        "<strong>Uwaga 2:</strong> To wymaganie dotyczy oprogramowania nieinternetowego, które interpretuje działania wskaźnika (tj. nie dotyczy działań wymaganych do obsługi agenta użytkownika lub technologii wspomagającej)."
+      ]
     },
     {
       "type": "heading",
@@ -1585,7 +1813,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#label-in-name\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3</a> Etykieta w&nbsp;nazwie."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#etykieta-w-nazwie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3 Etykieta w&nbsp;nazwie.</a>"
       ],
       "form": {
         "inputs": [
@@ -1605,7 +1833,12 @@
         "legend": "Wybierz wynik dla C.11.2.5.3.1 Etykieta w&nbsp;nazwie (funkcjonalność otwarta)",
         "noteId": "notes-c-11-2-5-3-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Etykieta w nazwie:</strong> sprawdź, czy widoczny tekst etykiety jest zawarty na początku dostępnej nazwy kontrolki; upewnij się, że dodatkowe informacje (np. ikony) nie zmieniają znaczenia.",
+        "<strong>Test praktyczny:</strong> Użyj inspektora dostępności, aby sprawdzić dostępną nazwę vs. widoczny tekst; potwierdź, że etykieta jest na początku nazwy; testuj z technologią wspomagającą.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 2.5.3):</strong> Widoczny tekst etykiety jest zawarty na początku dostępnej nazwy kontrolki."
+      ]
     },
     {
       "type": "heading",
@@ -1629,7 +1862,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#motion-actuation\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.4</a> Aktywowanie ruchem."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#aktywowanie-ruchem\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.4 Aktywowanie ruchem.</a>"
       ],
       "form": {
         "inputs": [
@@ -1649,7 +1882,12 @@
         "legend": "Wybierz wynik dla C.11.2.5.4 Aktywowanie ruchem",
         "noteId": "notes-c-11-2-5-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Aktywowanie ruchem:</strong> sprawdź, czy funkcje uruchamiane ruchem urządzenia mają alternatywne metody aktywacji; upewnij się, że ruch można wyłączyć lub zmienić w ustawieniach.",
+        "<strong>Test praktyczny:</strong> Testuj na urządzeniu mobilnym; wykonaj ruch (np. przechylenie); sprawdź alternatywy i kontrolę użytkownika; potwierdź brak niezamierzonych aktywacji.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 2.5.4):</strong> Funkcje wykorzystujące aktywację ruchem mają alternatywną metodę lub możliwość wyłączenia."
+      ]
     },
     {
       "type": "heading",
@@ -1679,7 +1917,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.10."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.10."
       ],
       "form": {
         "inputs": [
@@ -1699,7 +1937,13 @@
         "legend": "Wybierz wynik dla C.11.3.1.1.1 Język oprogramowania (funkcjonalność otwarta)",
         "noteId": "notes-c-11-3-1-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Język oprogramowania:</strong> sprawdź, czy język interfejsu użytkownika jest poprawnie określony programowo (np. język systemu lub ustawienia aplikacji); upewnij się, że tekst jest w języku użytkownika.",
+        "<strong>Test praktyczny:</strong> Sprawdź ustawienia języka w aplikacji i systemie; użyj technologii wspomagającej, aby potwierdzić język; przetestuj z różnymi językami.",
+        "<strong>Kryterium sukcesu (Tabela 11.10):</strong> Domyślny język ludzki oprogramowania można określić programowo.",
+        "<strong>Uwaga 1:</strong> W przypadku gdy platformy oprogramowania zapewniają ustawienie \"locale / language\", aplikacje, które używają tego ustawienia i renderują swój interfejs w tym \"locale / language\", spełniałyby to kryterium sukcesu. Aplikacje, które nie używają ustawienia \"locale / language\" platformy, ale zamiast tego używają metody wspomaganej dostępnością do ujawniania ludzkiego języka oprogramowania, również spełniałyby to kryterium sukcesu. Aplikacje zaimplementowane w technologiach, gdzie technologie wspomagające nie mogą określić ludzkiego języka i które nie obsługują ustawienia \"locale / language\" platformy, mogą nie być w stanie spełnić tego kryterium sukcesu w tym locale / language."
+      ]
     },
     {
       "type": "heading",
@@ -1739,7 +1983,10 @@
         "legend": "Wybierz wynik dla C.11.3.1.1.2 Język oprogramowania (funkcjonalność zamknięta)",
         "noteId": "notes-c-11-3-1-1-2"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Język oprogramowania:</strong> Sprawdź, czy wyjście mowy występuje w tym samym języku co wyświetlana treść; sprawdź także, czy wybór języka mowy jest wykonywalny z poziomu interfejsu niewizualnego (jeżeli dotyczy)."
+      ]
     },
     {
       "type": "heading",
@@ -1758,7 +2005,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#on-focus\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.2.1</a> Po otrzymaniu fokusu."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#po-otrzymaniu-fokusu\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu.</a>"
       ],
       "form": {
         "inputs": [
@@ -1778,7 +2025,13 @@
         "legend": "Wybierz wynik dla C.11.3.2.1 Po otrzymaniu fokusu",
         "noteId": "notes-c-11-3-2-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Po otrzymaniu fokusu:</strong> sprawdź, czy po otrzymaniu fokusu przez komponent interfejsu użytkownika (np. przycisk, pole tekstowe) nie następuje automatyczna zmiana kontekstu, taka jak otwarcie nowego okna, zmiana fokusu na inny element, znaczna zmiana treści lub nawigacja do innej strony.",
+        "<strong>Test praktyczny:</strong> Przejdź przez wszystkie interaktywne elementy aplikacji używając klawiatury (Tab); sprawdź, czy fokus nie powoduje nieoczekiwanych zmian; przetestuj z różnymi urządzeniami wejściowymi.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 3.2.1):</strong> Po otrzymaniu fokusu przez dowolny komponent interfejsu użytkownika nie następuje zmiana kontekstu.",
+        "<strong>Uwaga:</strong> <ul><li>Niektóre złożone dokumenty i programy do ich obsługi są zaprojektowane tak, aby oferować różne funkcje przeglądania i edycji w zależności od części dokumentu, z którą użytkownik wchodzi w interakcję.</li><li>Przykład: prezentacja zawierająca wbudowany arkusz kalkulacyjny, gdzie menu i paski narzędzi programu zmieniają się w zależności od tego, czy użytkownik pracuje z treścią prezentacji, czy z arkuszem.</li><li>Jeśli użytkownik używa sposobu innego niż ustawienie fokusu na tej części dokumentu (np. przez wybór z menu lub specjalny gest klawiaturowy), to zmiana kontekstu nie podlega temu kryterium sukcesu, ponieważ nie została wywołana przez zmianę fokusu.</li></ul>"
+      ]
     },
     {
       "type": "heading",
@@ -1792,7 +2045,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#on-input\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.2.2</a> Podczas wprowadzania danych."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#podczas-wprowadzania-danych\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.2.2 Podczas wprowadzania danych.</a>"
       ],
       "form": {
         "inputs": [
@@ -1812,7 +2065,12 @@
         "legend": "Wybierz wynik dla C.11.3.2.2 Podczas wprowadzania danych",
         "noteId": "notes-c-11-3-2-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Podczas wprowadzania danych:</strong> sprawdź, czy zmiana ustawienia komponentu interfejsu użytkownika (np. wybór z listy, wprowadzenie tekstu) nie powoduje automatycznej zmiany kontekstu, takiej jak otwarcie nowego okna lub nawigacja, chyba że użytkownik został wcześniej poinformowany o tym zachowaniu.",
+        "<strong>Test praktyczny:</strong> Wprowadź dane w formularzach i kontrolkach; sprawdź, czy nie następuje nieoczekiwana zmiana kontekstu; upewnij się, że wszelkie ostrzeżenia są obecne przed akcją.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 3.2.2):</strong> Zmiana ustawienia dowolnego komponentu interfejsu użytkownika nie powoduje automatycznie zmiany kontekstu, chyba że użytkownik został wcześniej poinformowany o tym zachowaniu przed użyciem komponentu."
+      ]
     },
     {
       "type": "heading",
@@ -1837,7 +2095,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#error-identification\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.1</a> Identyfikacja błędu."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#identyfikacja-b-edu\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.1 Identyfikacja błędu.</a>"
       ],
       "form": {
         "inputs": [
@@ -1857,7 +2115,12 @@
         "legend": "Wybierz wynik dla C.11.3.3.1.1 Identyfikacja błędu (funkcjonalność otwarta)",
         "noteId": "notes-c-11-3-3-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Identyfikacja błędu:</strong> sprawdź, czy w przypadku automatycznego wykrycia błędu wprowadzania (np. nieprawidłowy format daty, wymagane pole puste) błąd jest jasno zidentyfikowany, a użytkownik otrzymuje tekstowy opis błędu.",
+        "<strong>Test praktyczny:</strong> Wprowadź błędne dane w formularzach; sprawdź, czy błędy są wykrywane i opisane tekstowo; upewnij się, że identyfikacja błędu jest dostępna dla technologii wspomagających.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 3.3.1):</strong> Jeśli błąd wprowadzania zostanie automatycznie wykryty, element, który zawiera błąd, zostaje zidentyfikowany, a błąd zostaje opisany użytkownikowi w tekście."
+      ]
     },
     {
       "type": "heading",
@@ -1895,7 +2158,12 @@
         "legend": "Wybierz wynik dla C.11.3.3.1.2 Identyfikacja błędu (funkcjonalność zamknięta)",
         "noteId": "notes-c-11-3-3-1-2"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Identyfikacja błędu (funkcjonalność zamknięta):</strong> sprawdź, czy w środowisku zamkniętym wyjście mowy wykrywa błędy wprowadzania i opisuje błędne elementy; upewnij się, że komunikaty są zrozumiałe i dostępne poprzez niewizualne metody.",
+        "<strong>Test praktyczny:</strong> Wprowadź błędne dane w zamkniętym interfejsie; sprawdź wyjście mowy pod kątem wykrywania błędów i opisu błędnych elementów; potwierdź zgodność z warunkami wstępnymi.",
+        "<strong>Uwaga:</strong> Dotyczy tylko środowisk zamkniętych z wyjściem mowy; błędy muszą być wykrywane automatycznie."
+      ]
     },
     {
       "type": "heading",
@@ -1909,7 +2177,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#labels-or-instructions\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.2</a> Etykiety lub instrukcje."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#etykiety-lub-instrukcje\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.2 Etykiety lub instrukcje.</a>"
       ],
       "form": {
         "inputs": [
@@ -1929,7 +2197,12 @@
         "legend": "Wybierz wynik dla C.11.3.3.2 Etykiety lub instrukcje",
         "noteId": "notes-c-11-3-3-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Etykiety lub instrukcje:</strong> sprawdź, czy wszystkie pola wprowadzania danych mają etykiety opisujące ich cel; upewnij się, że instrukcje są dostępne dla wymaganych formatów wprowadzania.",
+        "<strong>Test praktyczny:</strong> Przejrzyj wszystkie formularze i pola wprowadzania; sprawdź dostępność etykiet poprzez technologie wspomagające; potwierdź, że instrukcje są jasne i dostępne.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 3.3.2):</strong> Etykiety lub instrukcje są podawane, gdy treść wymaga wprowadzania danych od użytkownika."
+      ]
     },
     {
       "type": "heading",
@@ -1943,7 +2216,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#error-suggestion\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.3</a> Sugestie korekty błędów."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#sugestie-korekty-b-edow\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.3 Sugestie korekty błędów.</a>"
       ],
       "form": {
         "inputs": [
@@ -1963,7 +2236,12 @@
         "legend": "Wybierz wynik dla C.11.3.3.3 Sugestie korekty błędów",
         "noteId": "notes-c-11-3-3-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Sugestie korekty błędów:</strong> sprawdź, czy po wykryciu błędu wprowadzania użytkownik otrzymuje sugestie korekty; upewnij się, że sugestie nie zagrażają bezpieczeństwu ani celowi treści.",
+        "<strong>Test praktyczny:</strong> Wprowadź błędne dane w formularzach; sprawdź, czy pojawiają się sugestie korekty; potwierdź dostępność sugestii poprzez technologie wspomagające.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 3.3.3):</strong> Jeśli błąd wprowadzania zostanie automatycznie wykryty i znane są sugestie korekty, wówczas sugestie te są użytkownikowi dostarczane, chyba że zagrażałoby to bezpieczeństwu lub celowi treści."
+      ]
     },
     {
       "type": "heading",
@@ -1977,7 +2255,7 @@
         "1. TIK jest oprogramowaniem nieinternetowym, które udostępnia interfejs użytkownika."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.11."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.11."
       ],
       "form": {
         "inputs": [
@@ -1997,7 +2275,12 @@
         "legend": "Wybierz wynik dla C.11.3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)",
         "noteId": "notes-c-11-3-3-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Zapobieganie błędom (prawnym, finansowym, w danych):</strong> sprawdź, czy dla działań powodujących zobowiązania prawne, transakcje finansowe, modyfikację/dostęp danych lub przesyłanie odpowiedzi testowych, przynajmniej jedno z poniższych jest prawdziwe: wysyłki są odwracalne; dane są sprawdzane pod kątem błędów z możliwością korekty; dostępny jest mechanizm przeglądu, potwierdzenia i korekty przed finalizacją.",
+        "<strong>Test praktyczny:</strong> Zidentyfikuj funkcje powodujące zobowiązania prawne lub transakcje; przetestuj mechanizmy zapobiegania błędom; sprawdź dostępność opcji cofania, sprawdzania lub potwierdzania poprzez technologie wspomagające.",
+        "<strong>Kryterium sukcesu (Tabela 11.11):</strong> Dla oprogramowania powodującego zobowiązania prawne lub transakcje finansowe, modyfikację danych lub przesyłanie odpowiedzi testowych, przynajmniej jedno z następujących jest prawdziwe: <ul><li>Reversible: Wysyłki są odwracalne.</li><li>Checked: Dane wprowadzone przez użytkownika są sprawdzane pod kątem błędów wprowadzania i użytkownik ma możliwość ich korekty.</li><li>Confirmed: Dostępny jest mechanizm przeglądu, potwierdzenia i korekty informacji przed finalizacją wysyłki.</li></ul>"
+      ]
     },
     {
       "type": "heading",
@@ -2027,7 +2310,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.12."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.12."
       ],
       "form": {
         "inputs": [
@@ -2047,7 +2330,16 @@
         "legend": "Wybierz wynik dla C.11.4.1.1.1 Poprawność kodu (funkcjonalność otwarta)",
         "noteId": "notes-c-11-4-1-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Poprawność kodu:</strong> sprawdź, czy dla oprogramowania używającego języków znaczników, które są dostępne dla technologii wspomagających, elementy mają kompletne tagi startowe i końcowe, są zagnieżdżone zgodnie ze specyfikacjami, nie zawierają duplikatów atrybutów i ID są unikalne, chyba że specyfikacje pozwalają na te cechy.",
+        "<strong>Test praktyczny:</strong> Przeanalizuj kod znaczników używany przez oprogramowanie; sprawdź kompletność tagów, zagnieżdżenie, atrybuty i ID; użyj narzędzi do walidacji kodu; potwierdź dostępność znaczników dla technologii wspomagających.",
+        "<strong>Kryterium sukcesu (Tabela 11.12):</strong> Dla oprogramowania używającego języków znaczników w sposób, że znaczniki są oddzielnie ujawniane i dostępne dla technologii wspomagających oraz funkcji dostępności oprogramowania lub dla agenta użytkownika wybieralnego przez użytkownika, elementy mają kompletne tagi startowe i końcowe, elementy są zagnieżdżone zgodnie z ich specyfikacjami, elementy nie zawierają duplikatów atrybutów i wszelkie ID są unikalne, z wyjątkiem przypadków, gdy specyfikacje pozwalają na te cechy.",
+        "<strong>Uwaga 1:</strong> Tagi startowe i końcowe, którym brakuje krytycznego znaku w ich formowaniu, takiego jak zamykający nawias kątowy lub niedopasowany cudzysłów wartości atrybutu, nie są kompletne.",
+        "<strong>Uwaga 2:</strong> Znaczniki nie zawsze są dostępne dla technologii wspomagających lub dla agentów użytkownika wybieralnych przez użytkownika, takich jak przeglądarki. W takich przypadkach zgodność z tym wymaganiem nie miałaby wpływu na dostępność, tak jak ma dla treści internetowych, gdzie jest ujawniana.",
+        "<strong>Uwaga 3:</strong> Przykłady znaczników, które są oddzielnie ujawniane i dostępne dla technologii wspomagających oraz agentów użytkownika obejmują, ale nie ograniczają się do: dokumentów zakodowanych w HTML, ODF i OOXML. W tych przykładach znaczniki mogą być parsowane całkowicie na dwa sposoby: (a) przez technologie wspomagające, które mogą bezpośrednio otworzyć dokument, (b) przez technologie wspomagające używające API DOM agentów użytkownika dla tych formatów dokumentów.",
+        "<strong>Uwaga 4:</strong> Przykłady znaczników używanych wewnętrznie do trwałości interfejsu użytkownika oprogramowania, które nigdy nie są ujawniane technologii wspomagającej obejmują, ale nie ograniczają się do: XUL i FXML. W tych przykładach technologia wspomagająca wchodzi w interakcję tylko z interfejsem użytkownika generowanego oprogramowania."
+      ]
     },
     {
       "type": "heading",
@@ -2076,7 +2368,7 @@
         "2. Oprogramowanie zapewnia obsługę co najmniej jednej technologii wspomagającej."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 11.13."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 11.13."
       ],
       "form": {
         "inputs": [
@@ -2096,7 +2388,14 @@
         "legend": "Wybierz wynik dla C.11.4.1.2.1 Nazwa, rola, wartość (funkcjonalność otwarta)",
         "noteId": "notes-c-11-4-1-2-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Nazwa, rola, wartość:</strong> sprawdź, czy dla wszystkich komponentów interfejsu użytkownika (w tym elementów formularzy, linków i komponentów generowanych przez skrypty) nazwa i rola mogą być określone programowo; stany, właściwości i wartości, które mogą być ustawiane przez użytkownika, mogą być ustawiane programowo; oraz powiadomienia o zmianach tych elementów są dostępne dla agentów użytkownika, w tym technologii wspomagających.",
+        "<strong>Test praktyczny:</strong> Użyj inspektora dostępności, aby sprawdzić nazwy, role i wartości komponentów; przetestuj ustawianie stanów i właściwości programowo; sprawdź powiadomienia o zmianach poprzez technologie wspomagające; potwierdź interoperacyjność z usługami dostępności platformy.",
+        "<strong>Kryterium sukcesu (Tabela 11.13):</strong> Dla wszystkich komponentów interfejsu użytkownika (w tym, ale nie ograniczając się do: elementów formularzy, linków i komponentów generowanych przez skrypty), nazwa i rola mogą być określone programowo; stany, właściwości i wartości, które mogą być ustawiane przez użytkownika, mogą być ustawiane programowo; oraz powiadomienia o zmianach tych elementów są dostępne dla agentów użytkownika, w tym technologii wspomagających.",
+        "<strong>Uwaga 1:</strong> To kryterium sukcesu jest przede wszystkim dla programistów oprogramowania, którzy rozwijają lub używają niestandardowych komponentów interfejsu użytkownika. Standardowe komponenty interfejsu użytkownika na większości platform obsługujących dostępność już spełniają to kryterium sukcesu, gdy są używane zgodnie ze specyfikacją.",
+        "<strong>Uwaga 2:</strong> Dla zgodności z tym kryterium sukcesu, zwykle najlepszą praktyką dla interfejsów użytkownika oprogramowania jest używanie usług dostępności dostarczanych przez oprogramowanie platformy. Te usługi dostępności umożliwiają interoperacyjność między interfejsami użytkownika oprogramowania a zarówno technologiami wspomagającymi, jak i funkcjami dostępności oprogramowania w standaryzowanych sposób. Większość usług dostępności platformy wykracza poza programowe ujawnianie nazwy i roli oraz programowe ustawianie stanów, właściwości i wartości (oraz powiadamianie o tym samym), i określa dodatkowe informacje, które mogłyby lub powinny być ujawniane i/lub ustawiane (na przykład lista dostępnych działań dla danego komponentu interfejsu użytkownika oraz sposób programowego wykonania jednego z wymienionych działań)."
+      ]
     },
     {
       "type": "heading",
@@ -2125,7 +2424,7 @@
         "2. Oprogramowanie zapewnia wsparcie dla technologii wspomagających odczyt ekranu."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#status-messages\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3</a> Komunikaty o&nbsp;stanie."
+        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#komunikaty-o-stanie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3 Komunikaty o&nbsp;stanie.</a>"
       ],
       "form": {
         "inputs": [
@@ -2145,7 +2444,12 @@
         "legend": "Wybierz wynik dla C.11.4.1.3.1 Komunikaty o&nbsp;stanie (funkcjonalność otwarta)",
         "noteId": "notes-c-11-4-1-3-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Komunikaty o stanie:</strong> sprawdź, czy komunikaty o stanie mogą być programowo określone poprzez rolę lub właściwości, tak aby mogły być prezentowane użytkownikowi przez technologie wspomagające bez otrzymywania fokusu.",
+        "<strong>Test praktyczny:</strong> Wywołaj komunikaty o stanie w aplikacji (np. błędy, potwierdzenia); sprawdź, czy są dostępne dla technologii wspomagających bez fokusu; użyj inspektora dostępności, aby potwierdzić role i właściwości; przetestuj z czytnikami ekranu.",
+        "<strong>Kryterium sukcesu (WCAG 2.1 – 4.1.3):</strong> W treści zaimplementowanej przy użyciu języków znaczników komunikaty o stanie mogą być programowo określone poprzez rolę lub właściwości, tak aby mogły być prezentowane użytkownikowi przez technologie wspomagające bez otrzymywania fokusu."
+      ]
     },
     {
       "type": "heading",
@@ -2194,11 +2498,156 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.5.2.1 Platformowa usługa wsparcia dostępności dla oprogramowania, która"
+      "text": "C.11.5.2.1 Platformowa usługa wsparcia dostępności dla oprogramowania, która udostępnia interfejs użytkownika"
     },
     {
-      "type": "informative",
-      "text": "Testy C.11.5.2.1, C.11.5.2.2, C.11.5.2.3 i&nbsp;C.11.5.2.4 dotyczą dokumentacji platformy i&nbsp;tego, jak oprogramowanie (w tym AT) z&nbsp;niej korzysta. Wymagają inspekcji dokumentacji i&nbsp;kodu.\n"
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie jest oprogramowaniem platformy."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy dokumentacja oprogramowania platformy zawiera informacje o usługach platformy, które mogą być używane przez oprogramowanie udostępniające interfejs użytkownika do współdziałania z technologią wspomagającą."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryteria 1 i 2: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1 lub 2: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.1 Platformowa usługa wsparcia dostępności dla oprogramowania, która udostępnia interfejs użytkownika",
+        "noteId": "notes-c-11-5-2-1"
+      },
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Usługi platformy dla oprogramowania z UI:</strong> sprawdź, czy dokumentacja platformy zawiera informacje o usługach umożliwiających współdziałanie oprogramowania z interfejsem użytkownika z technologią wspomagającą.",
+        "<strong>Test praktyczny:</strong> Przejrzyj dokumentację platformy pod kątem opisów usług dostępności; potwierdź, że informacje są dostępne dla programistów.",
+        "<strong>Uwaga:</strong> Dotyczy tylko oprogramowania platformy."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.2 Platformowa usługa wsparcia dostępności dla technologii wspomagających"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie jest oprogramowaniem platformy."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy dokumentacja oprogramowania platformy zawiera informacje o usługach dostępności platformy, które umożliwiają technologii wspomagającej współdziałanie z oprogramowaniem udostępniającym interfejs użytkownika działającym na oprogramowaniu platformy."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryteria 1 i 2: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1 lub 2: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.2 Platformowa usługa wsparcia dostępności dla technologii wspomagających, która udostępnia interfejs użytkownika",
+        "noteId": "notes-c-11-5-2-2"
+      },
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Usługi platformy dla AT:</strong> sprawdź, czy dokumentacja platformy zawiera informacje o usługach dostępności umożliwiających technologii wspomagającej współdziałanie z oprogramowaniem z UI.",
+        "<strong>Test praktyczny:</strong> Przejrzyj dokumentację platformy; potwierdź opis usług dla AT.",
+        "<strong>Uwaga:</strong> Dotyczy tylko oprogramowania platformy."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.3 Korzystanie z usług dostępności"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy oprogramowanie używa odpowiednich udokumentowanych usług dostępności platformy.",
+        "2. Sprawdź, czy oprogramowanie może spełniać odpowiednie wymagania 11.5.2.5 do 11.5.2.17, używając udokumentowanych usług dostępności platformy.",
+        "3. Sprawdź, czy oprogramowanie może spełniać wymagania 11.5.2.5 do 11.5.2.17, używając udokumentowanych usług dostępności platformy i innych udokumentowanych usług."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryteria 1 i 2: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1 lub 2: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.3 Platformowa usługa wsparcia dostępności dla oprogramowania, które nie udostępnia interfejsu użytkownika",
+        "noteId": "notes-c-11-5-2-3"
+      },
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Korzystanie z usług dostępności:</strong> sprawdź, czy oprogramowanie z UI używa usług dostępności platformy i może spełniać wymagania 11.5.2.5–11.5.2.17.",
+        "<strong>Test praktyczny:</strong> Sprawdź kod oprogramowania pod kątem użycia API dostępności; przetestuj zgodność z wymaganiami przy użyciu usług platformy.",
+        "<strong>Uwaga:</strong> Dotyczy oprogramowania z UI; wymaga sprawdzenia dokumentacji platformy."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.4 Technologia wspomagająca"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. TIK jest technologią wspomagającą."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy technologia wspomagająca używa udokumentowanych usług dostępności platformy."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryteria 1 i 2: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1 lub 2: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.4 Platformowa usługa wsparcia dostępności dla technologii wspomagających, które nie udostępniają interfejsu użytkownika",
+        "noteId": "notes-c-11-5-2-4"
+      },
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Technologia wspomagająca:</strong> sprawdź, czy AT używa udokumentowanych usług dostępności platformy.",
+        "<strong>Test praktyczny:</strong> Sprawdź kod AT pod kątem użycia API dostępności platformy; potwierdź współdziałanie.",
+        "<strong>Uwaga:</strong> Dotyczy tylko technologii wspomagających."
+      ]
     },
     {
       "type": "heading",
@@ -2235,7 +2684,12 @@
         "legend": "Wybierz wynik dla C.11.5.2.5 Informacje o&nbsp;obiekcie",
         "noteId": "notes-c-11-5-2-5"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Informacje o obiekcie:</strong> sprawdź, czy wszystkie kluczowe informacje o elementach interfejsu użytkownika (rola, stan, ograniczenia, nazwa, opis) są dostępne programowo dla technologii wspomagających.",
+        "<strong>Test praktyczny:</strong> Użyj inspektora dostępności lub technologii wspomagających, aby sprawdzić każdą właściwość dla wszystkich interaktywnych elementów; potwierdź, że informacje są ujawniane zgodnie z API dostępności platformy; przetestuj z różnymi czytnikami ekranu.",
+        "<strong>Kryteria:</strong> Rola, stan, ograniczenia, nazwa i opis elementów muszą być możliwe do określenia programowo."
+      ]
     },
     {
       "type": "heading",
@@ -2274,6 +2728,467 @@
         "noteId": "notes-c-11-5-2-6"
       },
       "evaluationType": "Inspekcja"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.7 Wartości"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
+        "2. Istnieją elementy interfejsu użytkownika, które mogą mieć wartości."
+      ],
+      "procedure": [
+        "1. Wybierz element interfejsu użytkownika, który może mieć wartość.",
+        "2. Sprawdź, czy bieżąca wartość jest programowo możliwa do określenia przez technologie wspomagające.",
+        "3. Jeśli element interfejsu użytkownika przekazuje informacje o zakresie wartości, sprawdź, czy minimalna wartość jest programowo możliwa do określenia przez technologie wspomagające.",
+        "4. Jeśli element interfejsu użytkownika przekazuje informacje o zakresie wartości, sprawdź, czy maksymalna wartość jest programowo możliwa do określenia przez technologie wspomagające."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryteria 2, 3 i 4: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 2 lub 3 lub 4: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.7 Wartości",
+        "noteId": "notes-c-11-5-2-7"
+      },
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Wartości:</strong> sprawdź, czy wartości elementów UI (bieżąca, min, max) są dostępne programowo dla technologii wspomagających.",
+        "<strong>Test praktyczny:</strong> Wybierz elementy z wartościami; użyj inspektora dostępności, aby sprawdzić ujawnianie wartości.",
+        "<strong>Kryteria:</strong> Bieżąca wartość oraz zakres (jeśli dotyczy) muszą być determinowalne."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.8 Relacje etykiet"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
+        "2. Istnieją elementy interfejsu użytkownika, które są etykietami innych elementów interfejsu użytkownika."
+      ],
+      "procedure": [
+        "1. Uzyskaj informacje o każdym elemencie interfejsu użytkownika.",
+        "2. Sprawdź, czy informacje elementu interfejsu użytkownika obejmują relację z elementem interfejsu użytkownika, który jest jego etykietą, jeśli bieżący element interfejsu użytkownika ma etykietę, i że ta relacja jest programowo możliwa do określenia przez technologie wspomagające.",
+        "3. Sprawdź, czy informacje elementu interfejsu użytkownika obejmują relację z elementem interfejsu użytkownika, który etykietuje, jeśli bieżący element interfejsu użytkownika jest etykietą, i że ta relacja jest programowo możliwa do określenia przez technologie wspomagające."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 2 lub 3: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryteria 2 i 3: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.8 Relacje etykiet",
+        "noteId": "notes-c-11-5-2-8"
+      },
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Relacje etykiet:</strong> sprawdź, czy relacje między etykietami a elementami są dostępne programowo dla technologii wspomagających.",
+        "<strong>Test praktyczny:</strong> Sprawdź pary etykieta-element; użyj narzędzi dostępności, aby potwierdzić relacje.",
+        "<strong>Kryteria:</strong> Relacje muszą być determinowalne w obu kierunkach."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.9 Relacje rodzic-dziecko"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
+        "2. Istnieją elementy interfejsu użytkownika, które są rodzicami innych elementów interfejsu użytkownika w strukturze hierarchicznej."
+      ],
+      "procedure": [
+        "1. Dla elementów interfejsu użytkownika, które mają rodzica, sprawdź, czy informacje elementu interfejsu użytkownika obejmują relację z elementem interfejsu użytkownika, który jest jego rodzicem.",
+        "2. Sprawdź, czy elementy interfejsu użytkownika, które są rodzicami elementu interfejsu użytkownika wybranego w kryterium 1, obejmują relację z elementami interfejsu użytkownika, które są jego dziećmi w swoich informacjach, i że ta relacja jest programowo możliwa do określenia przez technologie wspomagające.",
+        "3. Dla elementów interfejsu użytkownika, które są rodzicami innych elementów interfejsu użytkownika, sprawdź, czy informacje elementu interfejsu użytkownika obejmują relację z elementami interfejsu użytkownika, które są jego dziećmi, i że ta relacja jest programowo możliwa do określenia przez technologie wspomagające.",
+        "4. Sprawdź, czy elementy interfejsu użytkownika, które są dziećmi elementu interfejsu użytkownika wybranego w kryterium 3, obejmują relację z elementami interfejsu użytkownika, które są jego rodzicami w swoich informacjach, i że ta relacja jest programowo możliwa do określenia przez technologie wspomagające."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1 lub 2: prawda oraz kryterium 3 lub 4: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryteria 1 i 2: fałsz lub kryteria 3 i 4: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.9 Relacje rodzic-dziecko",
+        "noteId": "notes-c-11-5-2-9"
+      },
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Relacje rodzic-dziecko:</strong> sprawdź, czy hierarchiczne relacje w UI są dostępne programowo dla technologii wspomagających.",
+        "<strong>Test praktyczny:</strong> Sprawdź strukturę hierarchiczną; użyj inspektora, aby potwierdzić relacje rodzic-dziecko.",
+        "<strong>Kryteria:</strong> Relacje muszą być determinowalne; wystarczy jeden kierunek.",
+        "<strong>Uwaga:</strong> Wystarczy, że jeden z kierunków relacji jest programowo determinowalny."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.10 Tekst"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
+        "2. Istnieje tekst renderowany na ekranie."
+      ],
+      "procedure": [
+        "1. Dla instancji tekstu renderowanego na ekranie, sprawdź, czy informacje tekstu obejmują jego zawartość tekstową, i że te informacje są programowo możliwe do określenia przez technologie wspomagające.",
+        "2. Dla instancji tekstu renderowanego na ekranie, sprawdź, czy informacje tekstu obejmują jego atrybuty, i że te informacje są programowo możliwe do określenia przez technologie wspomagające.",
+        "3. Dla instancji tekstu renderowanego na ekranie, sprawdź, czy informacje tekstu obejmują jego granicę, i że te informacje są programowo możliwe do określenia przez technologie wspomagające."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryteria 1, 2 i 3: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1 lub 2 lub 3: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.10 Tekst",
+        "noteId": "notes-c-11-5-2-10"
+      },
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Tekst:</strong> sprawdź, czy zawartość, atrybuty i granice tekstu na ekranie są dostępne programowo dla technologii wspomagających.",
+        "<strong>Test praktyczny:</strong> Sprawdź instancje tekstu; użyj narzędzi dostępności, aby potwierdzić ujawnianie treści, atrybutów i granic.",
+        "<strong>Kryteria:</strong> Wszystkie aspekty tekstu muszą być determinowalne."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.11 Lista dostępnych działań"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
+        "2. Istnieją elementy interfejsu użytkownika, które mają działania, które mogą być wykonywane przez użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy informacje elementu interfejsu użytkownika obejmują listę działań, które mogą być wykonywane.",
+        "2. Sprawdź, czy ta lista jest programowo możliwa do określenia przez technologie wspomagające."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryteria 1 i 2: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1 lub 2: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.11 Lista dostępnych działań",
+        "noteId": "notes-c-11-5-2-11"
+      },
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Lista działań:</strong> sprawdź, czy lista dostępnych działań dla elementów UI jest dostępna programowo dla technologii wspomagających.",
+        "<strong>Test praktyczny:</strong> Wybierz elementy z działaniami; sprawdź ujawnianie listy działań.",
+        "<strong>Kryteria:</strong> Lista musi być determinowalna."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.12 Wykonywanie dostępnych działań"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
+        "2. Istnieją elementy interfejsu użytkownika, które mają działania, które mogą być wykonywane przez użytkownika.",
+        "3. Wymagania bezpieczeństwa zezwalają technologii wspomagającej na programowe wykonywanie działań użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy informacje elementu interfejsu użytkownika obejmują listę działań, które mogą być wykonywane przez technologie wspomagające zgodnie z 11.5.2.11.",
+        "2. Sprawdź, czy wszystkie działania na liście mogą być pomyślnie wykonywane przez technologie wspomagające."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryteria 1 i 2: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1 lub 2: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.12 Wykonywanie dostępnych działań",
+        "noteId": "notes-c-11-5-2-12"
+      },
+      "evaluationType": "Inspekcja i testowanie",
+      "detailedChecklist": [
+        "<strong>Wykonywanie działań:</strong> sprawdź, czy technologii wspomagających może programowo wykonywać działania z listy.",
+        "<strong>Test praktyczny:</strong> Przetestuj wykonywanie działań przez technologii wspomagających; potwierdź sukces.",
+        "<strong>Kryteria:</strong> Wszystkie działania muszą być wykonywalne; uwzględnij wymagania bezpieczeństwa."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.13 Śledzenie fokusu i atrybutów wyboru"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
+        "2. Istnieją elementy interfejsu użytkownika, które umożliwiają edycję tekstu."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy informacje elementu interfejsu użytkownika obejmują mechanizmy śledzenia fokusu, punktu wstawiania tekstu i atrybutów wyboru.",
+        "2. Sprawdź, czy te informacje są programowo możliwe do określenia przez technologie wspomagające.",
+        "3. Aktywuj te mechanizmy śledzenia.",
+        "4. Jako użytkownik, użyj funkcji edycję tekstu w ocenianym oprogramowaniu.",
+        "5. Sprawdź, czy śledzenie fokusu, punktu wstawiania tekstu i atrybutów wyboru działa."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryteria 2 i 5: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1 lub 5: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.13 Śledzenie fokusu i atrybutów wyboru",
+        "noteId": "notes-c-11-5-2-13"
+      },
+      "evaluationType": "Inspekcja i testowanie",
+      "detailedChecklist": [
+        "<strong>Śledzenie fokusu i wyboru:</strong> sprawdź, czy mechanizmy śledzenia fokusu, punktu wstawiania i wyboru są dostępne i działają dla technologii wspomagających.",
+        "<strong>Test praktyczny:</strong> Użyj edytora tekstu; aktywuj śledzenie; przetestuj z technologii wspomagających.",
+        "<strong>Kryteria:</strong> Mechanizmy muszą być determinowalne i funkcjonalne."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.14 Modyfikacja fokusu i atrybutów wyboru"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
+        "2. Istnieją elementy interfejsu użytkownika, które mogą otrzymać fokus lub które umożliwiają edycję tekstu.",
+        "3. Wymagania bezpieczeństwa zezwalają oprogramowaniu platformy na programową modyfikację fokusu, punktu wstawiania tekstu i atrybutów wyboru elementów interfejsu użytkownika."
+      ],
+      "procedure": [
+        "1. Dla elementów interfejsu użytkownika, które mogą otrzymać fokus i gdzie fokus może być modyfikowany przez użytkownika bez użycia technologii wspomagającej, sprawdź, czy fokus może być programowo modyfikowany przez technologie wspomagające.",
+        "2. Dla elementów interfejsu użytkownika, które umożliwiają edycję tekstu przez użytkownika bez użycia technologii wspomagającej, sprawdź, czy pozycja punktu wstawiania tekstu może być programowo modyfikowana przez technologie wspomagające.",
+        "3. Dla elementów interfejsu użytkownika, które umożliwiają edycję tekstu, sprawdź, czy atrybuty wyboru mogą być programowo modyfikowane przez technologie wspomagające, gdzie mogą być modyfikowane przez użytkownika bez użycia technologii wspomagającej."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Wszystkie kryteria: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Jakiekolwiek kryterium: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.14 Modyfikacja fokusu i atrybutów wyboru",
+        "noteId": "notes-c-11-5-2-14"
+      },
+      "evaluationType": "Testowanie",
+      "detailedChecklist": [
+        "<strong>Modyfikacja fokusu i wyboru:</strong> sprawdź, czy technologii wspomagających może programowo modyfikować fokus, punkt wstawiania i wybór.",
+        "<strong>Test praktyczny:</strong> Przetestuj modyfikacje przez AT; potwierdź funkcjonalność.",
+        "<strong>Kryteria:</strong> Wszystkie modyfikacje muszą być możliwe; uwzględnij wymagania bezpieczeństwa."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.15 Powiadomienia o zmianach"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika."
+      ],
+      "procedure": [
+        "1. Aktywuj powiadomienia o zmianach w elementach interfejsu użytkownika.",
+        "2. Sprawdź, czy powiadomienia o zmianach w informacjach o obiekcie (rola, stan, granica, nazwa i opis) są wysyłane do technologii wspomagających, jeśli te informacje zmieniają się w interfejsie użytkownika oprogramowania.",
+        "3. Sprawdź, czy powiadomienia o zmianach w wierszach, kolumnach i nagłówkach tabel danych są wysyłane do technologii wspomagających, jeśli te informacje zmieniają się w oprogramowaniu.",
+        "4. Sprawdź, czy powiadomienia o zmianach w wartościach (bieżąca wartość, minimalna wartość i maksymalna wartość) są wysyłane, jeśli te informacje zmieniają się w oprogramowaniu.",
+        "5. Sprawdź, czy powiadomienia o zmianach w relacjach etykiet są wysyłane do technologii wspomagających, jeśli te informacje zmieniają się w oprogramowaniu.",
+        "6. Sprawdź, czy powiadomienia o zmianach w relacjach rodzic-dziecko są wysyłane do technologii wspomagających, jeśli te informacje zmieniają się w oprogramowaniu.",
+        "7. Sprawdź, czy powiadomienia o zmianach w tekście (zawartość tekstowa, atrybuty tekstu i granica tekstu renderowanego na ekranie) są wysyłane do technologii wspomagających, jeśli te informacje zmieniają się w oprogramowaniu.",
+        "8. Sprawdź, czy powiadomienia o zmianach w liście dostępnych działań są wysyłane do technologii wspomagających, jeśli te informacje zmieniają się w oprogramowaniu.",
+        "9. Sprawdź, czy powiadomienia o zmianach w fokusie, punkcie wstawiania tekstu i atrybutach wyboru są wysyłane do technologii wspomagających, jeśli te informacje zmieniają się w oprogramowaniu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryteria 2, 3, 4, 5, 6, 7, 8 i 9: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 2, 3, 4, 5, 6, 7, 8 lub 9: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.15 Powiadomienia o zmianach",
+        "noteId": "notes-c-11-5-2-15"
+      },
+      "evaluationType": "Inspekcja i testowanie",
+      "detailedChecklist": [
+        "<strong>Powiadomienia o zmianach:</strong> sprawdź, czy zmiany w UI są powiadamiane do AT.",
+        "<strong>Test praktyczny:</strong> Aktywuj powiadomienia; wprowadź zmiany; sprawdź wysyłanie powiadomień.",
+        "<strong>Kryteria:</strong> Wszystkie typy zmian muszą być powiadamiane."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.16 Modyfikacje stanów i właściwości"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
+        "2. Istnieją elementy interfejsu użytkownika, których stan lub właściwości mogą być modyfikowane przez użytkownika bez użycia technologii wspomagającej.",
+        "3. Wymagania bezpieczeństwa zezwalają technologii wspomagającej na programową modyfikację stanów i właściwości elementów interfejsu użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy stan elementów interfejsu użytkownika, których stan może być modyfikowany przez użytkownika bez użycia technologii wspomagającej, może być programowo modyfikowany przez technologie wspomagające.",
+        "2. Sprawdź, czy właściwości elementów interfejsu użytkownika, których właściwości mogą być modyfikowane przez użytkownika bez użycia technologii wspomagającej, mogą być programowo modyfikowane przez technologie wspomagające."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Wszystkie kryteria: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Jakiekolwiek kryterium: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.16 Modyfikacje stanów i właściwości",
+        "noteId": "notes-c-11-5-2-16"
+      },
+      "evaluationType": "Testowanie",
+      "detailedChecklist": [
+        "<strong>Modyfikacje stanów i właściwości:</strong> sprawdź, czy AT może programowo modyfikować stany i właściwości UI.",
+        "<strong>Test praktyczny:</strong> Przetestuj modyfikacje przez AT; potwierdź funkcjonalność.",
+        "<strong>Kryteria:</strong> Wszystkie modyfikacje muszą być możliwe; uwzględnij wymagania bezpieczeństwa."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "C.11.5.2.17 Modyfikacje wartości i tekstu"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
+        "2. Istnieją elementy interfejsu użytkownika, których wartości lub tekst mogą być modyfikowane przez użytkownika bez użycia technologii wspomagającej.",
+        "3. Wymagania bezpieczeństwa zezwalają technologii wspomagającej na programową modyfikację wartości i tekstu elementów interfejsu użytkownika."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy wartości elementów interfejsu użytkownika, których wartości mogą być modyfikowane przez użytkownika bez użycia technologii wspomagającej, mogą być modyfikowane przez technologie wspomagające przy użyciu metod wprowadzania platformy.",
+        "2. Sprawdź, czy tekst elementów interfejsu użytkownika, którego tekst może być modyfikowany przez użytkownika bez użycia technologii wspomagającej, może być modyfikowany przez technologie wspomagające przy użyciu metod wprowadzania platformy."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Wszystkie kryteria: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Jakiekolwiek kryterium: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1, 2 lub 3."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.5.2.17 Modyfikacje wartości i tekstu",
+        "noteId": "notes-c-11-5-2-17"
+      },
+      "evaluationType": "Testowanie",
+      "detailedChecklist": [
+        "<strong>Modyfikacje wartości i tekstu:</strong> sprawdź, czy AT może programowo modyfikować wartości i tekst UI przy użyciu metod platformy.",
+        "<strong>Test praktyczny:</strong> Przetestuj modyfikacje przez AT; potwierdź funkcjonalność.",
+        "<strong>Kryteria:</strong> Wszystkie modyfikacje muszą być możliwe; uwzględnij wymagania bezpieczeństwa."
+      ]
     },
     {
       "type": "heading",
