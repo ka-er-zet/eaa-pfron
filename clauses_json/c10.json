@@ -28,7 +28,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-content\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.1.1</a> Treść nietekstowa."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#tresc-nietekstowa\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.1.1 Treść nietekstowa</a>"
       ],
       "form": {
         "inputs": [
@@ -42,13 +42,18 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.1.1 Treści nietekstowe. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.1.1 Treści nietekstowe."
           }
         ],
         "legend": "Wybierz wynik dla C.10.1.1.1 Treść nietekstowa",
         "noteId": "notes-c-10-1-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Tekst alternatywny:</strong> Sprawdź, czy obrazy i grafiki mają zdefiniowany tekst alternatywny we właściwościach obiektu (np. w Word: Formatuj obraz -> Tekst alternatywny; w PDF: Właściwości tagu Figure -> Tekst alternatywny).",
+        "<strong>Elementy dekoracyjne:</strong> Upewnij się, że elementy dekoracyjne są oznaczone jako artefakty (PDF) lub nie mają tekstu alternatywnego, jeśli nie wnoszą treści.",
+        "<strong>Wykresy i diagramy:</strong> Złożone grafiki powinny mieć krótki opis alternatywny oraz odniesienie do pełnego opisu w treści dokumentu."
+      ]
     },
     {
       "type": "heading",
@@ -67,7 +72,7 @@
         "11. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audio-only-and-video-only-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.1</a> Tylko audio lub tylko wideo (nagranie)."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#tylko-audio-lub-tylko-wideo-nagranie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.1 Tylko audio lub tylko wideo (nagranie)</a>"
       ],
       "form": {
         "inputs": [
@@ -87,7 +92,11 @@
         "legend": "Wybierz wynik dla C.10.1.2.1 Tylko audio lub tylko wideo (nagranie)",
         "noteId": "notes-c-10-1-2-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Tylko audio (nagranie):</strong> Sprawdź, czy dla nagrań dźwiękowych (np. podcastów) dostępna jest transkrypcja tekstowa zawierająca wszystkie dialogi i istotne dźwięki.",
+        "<strong>Tylko wideo (nagranie):</strong> Sprawdź, czy dla nagrań wideo bez dźwięku (np. animacji instruktażowych) dostępna jest alternatywa tekstowa lub ścieżka audio opisująca to, co dzieje się na ekranie."
+      ]
     },
     {
       "type": "heading",
@@ -101,7 +110,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#captions-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.2</a> Napisy rozszerzone (nagranie)."
+        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#napisy-rozszerzone-nagranie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.2 Napisy rozszerzone (nagranie)</a>"
       ],
       "form": {
         "inputs": [
@@ -121,7 +130,11 @@
         "legend": "Wybierz wynik dla C.10.1.2.2 Napisy rozszerzone (nagranie)",
         "noteId": "notes-c-10-1-2-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Napisy:</strong> Sprawdź, czy wszystkie nagrania wideo z dźwiękiem (dialogi, istotne odgłosy) posiadają zsynchronizowane napisy dla niesłyszących.",
+        "<strong>Kompletność napisów:</strong> Sprawdź, czy napisy zawierają nie tylko dialogi, ale także informacje o istotnych dźwiękach (np. [muzyka], [śmiech], [dzwonek do drzwi])."
+      ]
     },
     {
       "type": "heading",
@@ -135,7 +148,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audio-description-or-media-alternative-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.3</a> Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audiodeskrypcja-lub-alternatywa-tekstowa-dla-mediow-nagranie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)</a>"
       ],
       "form": {
         "inputs": [
@@ -149,13 +162,16 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie). EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści odpowiadającej kryterium sukcesu WCAG 2.1 – 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)."
           }
         ],
         "legend": "Wybierz wynik dla C.10.1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie)",
         "noteId": "notes-c-10-1-2-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Audiodeskrypcja lub tekst:</strong> Sprawdź, czy nagrania wideo posiadają audiodeskrypcję (dodatkową ścieżkę lektora opisującą obraz) LUB pełną alternatywę tekstową (transkrypcję opisową), która pozwala zrozumieć treść wizualną bez oglądania."
+      ]
     },
     {
       "type": "heading",
@@ -169,7 +185,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#captions-live\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.4</a> Napisy rozszerzone (na żywo)."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#napisy-rozszerzone-na-zywo\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.4 Napisy rozszerzone (na żywo)</a>"
       ],
       "form": {
         "inputs": [
@@ -189,7 +205,10 @@
         "legend": "Wybierz wynik dla C.10.1.2.4 Napisy rozszerzone (na żywo)",
         "noteId": "notes-c-10-1-2-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Napisy na żywo:</strong> Jeśli dokument transmituje wideo na żywo z dźwiękiem, sprawdź, czy dostępne są napisy generowane w czasie rzeczywistym."
+      ]
     },
     {
       "type": "heading",
@@ -203,7 +222,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audio-description-prerecorded\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.5</a> Audiodeskrypcja (nagranie)."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#audiodeskrypcja-nagranie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.2.5 Audiodeskrypcja (nagranie)</a>"
       ],
       "form": {
         "inputs": [
@@ -223,7 +242,10 @@
         "legend": "Wybierz wynik dla C.10.1.2.5 Audiodeskrypcja (nagranie)",
         "noteId": "notes-c-10-1-2-5"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Audiodeskrypcja:</strong> Sprawdź, czy nagrania wideo posiadają audiodeskrypcję, jeśli informacje wizualne są kluczowe i nie wynikają ze ścieżki dźwiękowej (wymagane dla poziomu AA)."
+      ]
     },
     {
       "type": "heading",
@@ -242,7 +264,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#info-and-relationships\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1</a> Informacje i&nbsp;relacje."
+        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#informacje-i-relacje\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.1 Informacje i&nbsp;relacje</a>"
       ],
       "form": {
         "inputs": [
@@ -262,7 +284,12 @@
         "legend": "Wybierz wynik dla C.10.1.3.1 Informacje i&nbsp;relacje",
         "noteId": "notes-c-10-1-3-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Nagłówki:</strong> Sprawdź, czy struktura nagłówków (H1-H6) jest zdefiniowana za pomocą stylów (Word) lub tagów (PDF), a nie tylko wizualnie (pogrubienie, czcionka).",
+        "<strong>Listy:</strong> Upewnij się, że listy są tworzone za pomocą narzędzi do list (tagi L, LI, LBody), a nie ręcznie wpisywanych znaków.",
+        "<strong>Tabele:</strong> Sprawdź, czy tabele mają zdefiniowane nagłówki wierszy i/lub kolumn (tagi TH) i czy struktura tabeli jest logiczna."
+      ]
     },
     {
       "type": "heading",
@@ -276,7 +303,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#meaningful-sequence\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.2</a> Zrozumiała kolejność."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#zrozumia-a-kolejnosc\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.2 Zrozumiała kolejność</a>"
       ],
       "form": {
         "inputs": [
@@ -290,13 +317,17 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.3.2 Zrozumiała kolejność. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.3.2 Zrozumiała kolejność."
           }
         ],
         "legend": "Wybierz wynik dla C.10.1.3.2 Zrozumiała kolejność",
         "noteId": "notes-c-10-1-3-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kolejność odczytu:</strong> Sprawdź w panelu 'Tagi' (PDF) lub 'Kolejność' (Acrobat Pro), czy kolejność elementów w drzewie struktury odpowiada logicznej kolejności czytania dokumentu.",
+        "<strong>Elementy wielokolumnowe:</strong> Upewnij się, że tekst w układzie wielokolumnowym jest odczytywany w poprawnej kolejności (kolumna po kolumnie)."
+      ]
     },
     {
       "type": "heading",
@@ -310,7 +341,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#sensory-characteristics\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.3</a> Właściwości zmysłowe."
+        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#w-asciwosci-zmys-owe\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.3 Właściwości zmysłowe</a>"
       ],
       "form": {
         "inputs": [
@@ -330,7 +361,10 @@
         "legend": "Wybierz wynik dla C.10.1.3.3 Właściwości zmysłowe",
         "noteId": "notes-c-10-1-3-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Właściwości zmysłowe:</strong> Sprawdź, czy instrukcje w dokumencie nie polegają wyłącznie na właściwościach zmysłowych, takich jak kształt, rozmiar, kolor czy lokalizacja (np. unikaj \"zobacz tekst w czerwonej ramce\", użyj \"zobacz tekst w ramce 'Ważne'\")."
+      ]
     },
     {
       "type": "heading",
@@ -344,7 +378,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#orientation\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.4</a> Orientacja."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#orientacja\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.4 Orientacja</a>"
       ],
       "form": {
         "inputs": [
@@ -364,7 +398,10 @@
         "legend": "Wybierz wynik dla C.10.1.3.4 Orientacja",
         "noteId": "notes-c-10-1-3-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Orientacja ekranu:</strong> Sprawdź, czy dokument nie wymusza jednej orientacji ekranu (poziomej lub pionowej), chyba że jest to niezbędne (np. pianino, czek bankowy). Treść powinna być dostępna w obu orientacjach."
+      ]
     },
     {
       "type": "heading",
@@ -378,7 +415,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#identify-input-purpose\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.5</a> Określenie pożądanej wartości."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#okreslenie-pozadanej-wartosci\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.3.5 Określenie pożądanej wartości</a>"
       ],
       "form": {
         "inputs": [
@@ -398,7 +435,10 @@
         "legend": "Wybierz wynik dla C.10.1.3.5 Określenie pożądanej wartości",
         "noteId": "notes-c-10-1-3-5"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Określenie celu pola:</strong> W dokumentach zawierających formularze (np. PDF), sprawdź, czy pola zbierające dane o użytkowniku są jednoznacznie opisane (np. poprzez nazwę pola lub etykietę/tooltip), co pozwala technologiom asystującym na identyfikację ich celu."
+      ]
     },
     {
       "type": "heading",
@@ -417,7 +457,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#use-of-color\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.1</a> Użycie koloru."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#uzycie-koloru\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.1 Użycie koloru</a>"
       ],
       "form": {
         "inputs": [
@@ -431,13 +471,17 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.1 Użycie koloru. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.1 Użycie koloru."
           }
         ],
         "legend": "Wybierz wynik dla C.10.1.4.1 Użycie koloru",
         "noteId": "notes-c-10-1-4-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kolor jako jedyny wyróżnik:</strong> Sprawdź, czy kolor nie jest jedynym sposobem przekazywania informacji (np. błędy w formularzu oznaczone tylko czerwoną ramką). Należy dodać ikonę lub tekst.",
+        "<strong>Linki w tekście:</strong> Sprawdź, czy linki wewnątrz bloków tekstu są wyróżnione czymś więcej niż tylko kolorem (np. podkreśleniem) lub czy mają wystarczający kontrast względem otoczenia (3:1) i tła."
+      ]
     },
     {
       "type": "heading",
@@ -451,7 +495,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.1."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.1."
       ],
       "form": {
         "inputs": [
@@ -471,7 +515,12 @@
         "legend": "Wybierz wynik dla C.10.1.4.2 Kontrola odtwarzania dźwięku",
         "noteId": "notes-c-10-1-4-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kontrola dźwięku:</strong> Jeśli jakikolwiek dźwięk w dokumencie jest odtwarzany automatycznie przez więcej niż 3 sekundy, sprawdź, czy dostępny jest mechanizm pozwalający na wstrzymanie lub zatrzymanie odtwarzania, albo mechanizm kontroli głośności dźwięku niezależny od głośności systemu.",
+        "<strong>Kryterium sukcesu (Tabela 10.1):</strong> Jeśli jakikolwiek dźwięk w dokumencie odtwarza się automatycznie dłużej niż 3 sekundy, musi istnieć sposób, aby go zatrzymać, wstrzymać lub ściszyć (niezależnie od głośności całego urządzenia).",
+        "<strong>Uwaga:</strong> Ponieważ niechciany dźwięk może uniemożliwić korzystanie z dokumentu, zasada ta dotyczy wszystkich treści w dokumencie."
+      ]
     },
     {
       "type": "heading",
@@ -485,7 +534,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#contrast-minimum\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.3</a> Kontrast (minimum)."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#kontrast-minimum\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.3 Kontrast (minimum)</a>"
       ],
       "form": {
         "inputs": [
@@ -505,7 +554,10 @@
         "legend": "Wybierz wynik dla C.10.1.4.3 Kontrast (minimum)",
         "noteId": "notes-c-10-1-4-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kontrast tekstu:</strong> Sprawdź, czy tekst dokumentu zachowuje minimalny kontrast 4.5:1 względem tła. Użyj narzędzia do pobierania kolorów (np. Colour Contrast Analyser), aby zmierzyć wartości w dokumencie."
+      ]
     },
     {
       "type": "heading",
@@ -519,7 +571,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#resize-text\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.4</a> Zmiana rozmiaru tekstu."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#zmiana-rozmiaru-tekstu\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.4 Zmiana rozmiaru tekstu</a>"
       ],
       "form": {
         "inputs": [
@@ -539,7 +591,11 @@
         "legend": "Wybierz wynik dla C.10.1.4.4 Zmiana rozmiaru tekstu",
         "noteId": "notes-c-10-1-4-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Powiększanie tekstu:</strong> Sprawdź, czy tekst w dokumencie można powiększyć do 200% bez utraty treści i funkcjonalności (np. używając opcji powiększenia w przeglądarce PDF lub Word).",
+        "<strong>Skalowanie:</strong> Upewnij się, że przy powiększeniu tekst nie nakłada się na inne elementy i nie jest ucinany."
+      ]
     },
     {
       "type": "heading",
@@ -553,7 +609,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#images-of-text\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.5</a> Obrazy tekstu."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#obrazy-tekstu\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.5 Obrazy tekstu</a>"
       ],
       "form": {
         "inputs": [
@@ -573,7 +629,10 @@
         "legend": "Wybierz wynik dla C.10.1.4.5 Obrazy tekstu",
         "noteId": "notes-c-10-1-4-5"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Tekst jako grafika:</strong> Sprawdź, czy tekst nie jest prezentowany w formie obrazka (chyba że jest to logo lub jest to niezbędne, np. wykres). Należy używać prawdziwego tekstu, aby był skalowalny i dostępny dla czytników."
+      ]
     },
     {
       "type": "heading",
@@ -587,7 +646,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.2."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.2."
       ],
       "form": {
         "inputs": [
@@ -607,7 +666,15 @@
         "legend": "Wybierz wynik dla C.10.1.4.10 Dopasowanie do ekranu",
         "noteId": "notes-c-10-1-4-10"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Dopasowanie do ekranu (Reflow):</strong> Sprawdź, czy treść dokumentu może być prezentowana bez utraty informacji lub funkcjonalności i bez konieczności przewijania w dwóch wymiarach dla:",
+        "- Treści przewijanej pionowo przy szerokości równoważnej 320 pikseli CSS (odpowiada to szerokości 1280 px przy powiększeniu 400%).",
+        "- Treści przewijanej poziomo przy wysokości równoważnej 256 pikseli CSS.",
+        "<strong>Kryterium sukcesu (Tabela 10.2):</strong> Treść dokumentu powinna dać się przeglądać bez utraty informacji i funkcji oraz bez konieczności przewijania w dwóch kierunkach (poziomo i pionowo) jednocześnie. Dotyczy to sytuacji, gdy szerokość widoku wynosi 320 pikseli CSS (dla treści przewijanych pionowo) lub wysokość 256 pikseli CSS (dla treści przewijanych poziomo). Wyjątkiem są treści, które ze swojej natury wymagają układu dwuwymiarowego.",
+        "<strong>Uwaga 1:</strong> 320 pikseli CSS odpowiada szerokości ekranu 1280 pikseli przy powiększeniu 400%.",
+        "<strong>Uwaga 2:</strong> Przykłady treści wymagających układu dwuwymiarowego to: obrazy, mapy, diagramy, wideo, gry, prezentacje, tabele danych oraz interfejsy, gdzie paski narzędzi muszą być widoczne podczas pracy."
+      ]
     },
     {
       "type": "heading",
@@ -621,7 +688,7 @@
         "1. TIK jest dokumentem nieinternetowym, który nie ma stałego rozmiaru powierzchni układu treści, co jest niezbędne do przekazywania informacji."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#non-text-contrast\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.11</a> Kontrast elementów nietekstowych."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#kontrast-elementow-nietekstowych\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.11 Kontrast elementów nietekstowych</a>"
       ],
       "form": {
         "inputs": [
@@ -641,7 +708,10 @@
         "legend": "Wybierz wynik dla C.10.1.4.11 Kontrast elementów nietekstowych",
         "noteId": "notes-c-10-1-4-11"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kontrast elementów nietekstowych:</strong> Sprawdź, czy elementy interfejsu (przyciski, pola formularzy) oraz ważne elementy graficzne (wykresy) mają kontrast co najmniej 3:1 względem sąsiadujących kolorów."
+      ]
     },
     {
       "type": "heading",
@@ -655,7 +725,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#text-spacing\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12</a> Odstępy w&nbsp;tekście."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#odstepy-w-tekscie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.12 Odstępy w&nbsp;tekście</a>"
       ],
       "form": {
         "inputs": [
@@ -669,13 +739,16 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.12 Odstępy w&nbsp;tekście. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 1.4.12 Odstępy w&nbsp;tekście."
           }
         ],
         "legend": "Wybierz wynik dla C.10.1.4.12 Odstępy w&nbsp;tekście",
         "noteId": "notes-c-10-1-4-12"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Odstępy w tekście:</strong> Sprawdź, czy użytkownik może zmienić odstępy w tekście (interlinia, odstępy między akapitami, słowami, literami) bez utraty treści lub funkcjonalności (np. używając skryptozakładki testowej)."
+      ]
     },
     {
       "type": "heading",
@@ -689,7 +762,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#content-on-hover-or-focus\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.13</a> Treść spod kursora lub fokusu."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#tresc-spod-kursora-lub-fokusu\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 1.4.13 Treść spod kursora lub fokusu</a>"
       ],
       "form": {
         "inputs": [
@@ -709,7 +782,10 @@
         "legend": "Wybierz wynik dla C.10.1.4.13 Treść spod kursora lub fokusu",
         "noteId": "notes-c-10-1-4-13"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Treść spod kursora (Hover):</strong> Sprawdź, czy treści pojawiające się po najechaniu myszą (tooltipy, menu) można odrzucić (klawiszem Esc), czy można na nie najechać kursorem bez ich znikania, i czy nie znikają same bez zmiany fokusu."
+      ]
     },
     {
       "type": "heading",
@@ -733,7 +809,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#keyboard\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.1.1</a> Klawiatura."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#klawiatura\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.1.1 Klawiatura</a>"
       ],
       "form": {
         "inputs": [
@@ -753,7 +829,11 @@
         "legend": "Wybierz wynik dla C.10.2.1.1 Klawiatura",
         "noteId": "notes-c-10-2-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Obsługa klawiaturą:</strong> Sprawdź, czy wszystkie elementy interaktywne w dokumencie (np. linki, pola formularzy, przyciski, multimedia) są dostępne i obsługiwalne wyłącznie za pomocą klawiatury.",
+        "<strong>Nawigacja:</strong> Upewnij się, że możesz dotrzeć do każdego elementu interaktywnego używając klawisza Tab i aktywować go (np. Enter lub Spacja), nie używając myszki."
+      ]
     },
     {
       "type": "heading",
@@ -767,7 +847,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.3."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.3."
       ],
       "form": {
         "inputs": [
@@ -787,7 +867,13 @@
         "legend": "Wybierz wynik dla C.10.2.1.2 Bez pułapki na klawiaturę",
         "noteId": "notes-c-10-2-1-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Pułapka na klawiaturę:</strong> Sprawdź, czy fokus nie zostaje uwięziony w żadnym elemencie (np. w odtwarzaczu wideo, oknie modalnym) i czy można z niego wyjść standardowymi klawiszami (np. Tab, Esc).",
+        "<strong>Kryterium sukcesu (Tabela 10.3):</strong> Jeśli można wejść na element za pomocą klawiatury, musi być też możliwe wyjście z niego za pomocą klawiatury. Jeśli wyjście wymaga użycia innych klawiszy niż standardowe (np. strzałki, Tab), użytkownik musi zostać o tym poinformowany.",
+        "<strong>Uwaga 1:</strong> Ponieważ „pułapka na klawiaturę” może uniemożliwić korzystanie z całego dokumentu, zasada ta dotyczy wszystkich treści w dokumencie.",
+        "<strong>Uwaga 2:</strong> Standardowe metody wyjścia zależą od systemu (np. na komputerach często jest to klawisz Esc)."
+      ]
     },
     {
       "type": "heading",
@@ -801,7 +887,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#character-key-shortcuts\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.1.4</a> Jednoznakowe skróty klawiszowe."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#jednoznakowe-skroty-klawiaturowe\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.1.4 Jednoznakowe skróty klawiaturowe</a>"
       ],
       "form": {
         "inputs": [
@@ -821,7 +907,10 @@
         "legend": "Wybierz wynik dla C.10.2.1.4 Jednoznakowe skróty klawiaturowe",
         "noteId": "notes-c-10-2-1-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Skróty jednoliterowe:</strong> Jeśli dokument obsługuje skróty klawiszowe oparte na pojedynczych literach, sprawdź, czy można je wyłączyć lub zmienić, aby uniknąć przypadkowego uruchomienia (np. podczas dyktowania tekstu)."
+      ]
     },
     {
       "type": "heading",
@@ -840,7 +929,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.4."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.4."
       ],
       "form": {
         "inputs": [
@@ -860,7 +949,12 @@
         "legend": "Wybierz wynik dla C.10.2.2.1 Dostosowanie czasu",
         "noteId": "notes-c-10-2-2-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Limity czasowe:</strong> Jeśli w dokumencie występują limity czasowe (np. sesja logowania), sprawdź, czy użytkownik może je wyłączyć, dostosować lub przedłużyć przed upływem czasu.",
+        "<strong>Kryterium sukcesu (Tabela 10.4):</strong> Jeśli dokument narzuca limit czasu, musi zostać spełniony jeden z warunków:<br><ul><li><strong>Wyłączenie:</strong> Użytkownik może wyłączyć limit.</li><li><strong>Dostosowanie:</strong> Użytkownik może wydłużyć limit co najmniej 10-krotnie.</li><li><strong>Wydłużenie:</strong> Użytkownik otrzymuje ostrzeżenie i ma co najmniej 20 sekund na wydłużenie czasu prostą czynnością (np. naciśnięciem spacji).</li></ul><br><strong>Wyjątki:</strong> Nie dotyczy to sytuacji, gdy limit czasu jest niezbędny (np. aukcje na żywo) lub trwa dłużej niż 20 godzin.",
+        "<strong>Uwaga:</strong> Celem jest zapewnienie użytkownikom wystarczającej ilości czasu na wykonanie zadania bez niespodzianek."
+      ]
     },
     {
       "type": "heading",
@@ -874,7 +968,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.5."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.5."
       ],
       "form": {
         "inputs": [
@@ -894,7 +988,12 @@
         "legend": "Wybierz wynik dla C.10.2.2.2 Pauza, zatrzymanie, ukrycie",
         "noteId": "notes-c-10-2-2-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Pauza, zatrzymanie, ukrycie:</strong> Sprawdź, czy ruszające się, migające lub przewijające się automatycznie treści (np. karuzele, tickery) można zatrzymać, zapauzować lub ukryć.",
+        "<strong>Kryterium sukcesu (Tabela 10.5):</strong> Dla treści, które się ruszają, migają, przewijają lub aktualizują automatycznie, muszą być spełnione warunki:<br><ul><li><strong>Ruch, miganie, przewijanie:</strong> Jeśli trwa to dłużej niż 5 sekund i dzieje się automatycznie, użytkownik musi mieć możliwość zatrzymania, wstrzymania lub ukrycia tego elementu.</li><li><strong>Automatyczna aktualizacja:</strong> Jeśli treść aktualizuje się sama, użytkownik musi móc to zatrzymać, ukryć lub zmienić częstotliwość aktualizacji.</li></ul><br><strong>Wyjątki:</strong> Nie dotyczy to sytuacji, gdy ruch lub aktualizacja są kluczowe dla działania (np. pasek postępu ładowania).",
+        "<strong>Uwaga:</strong> Ponieważ ruszające się elementy mogą rozpraszać, zasada ta dotyczy wszystkich treści w dokumencie."
+      ]
     },
     {
       "type": "heading",
@@ -913,7 +1012,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.6."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.6."
       ],
       "form": {
         "inputs": [
@@ -927,13 +1026,18 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.10.2.3.1 Trzy błyski lub wartości poniżej progu",
         "noteId": "notes-c-10-2-3-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Błyski:</strong> Sprawdź, czy dokument nie zawiera elementów błyskających częściej niż 3 razy na sekundę (może to wywołać atak padaczki).",
+        "<strong>Kryterium sukcesu (Tabela 10.6):</strong> Dokument nie może zawierać elementów, które błyskają częściej niż 3 razy na sekundę.",
+        "<strong>Uwaga:</strong> Błyskanie może wywołać atak padaczki, dlatego zasada ta jest bezwzględna dla całego dokumentu."
+      ]
     },
     {
       "type": "heading",
@@ -952,7 +1056,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.7."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.7."
       ],
       "form": {
         "inputs": [
@@ -972,7 +1076,13 @@
         "legend": "Wybierz wynik dla C.10.2.4.2 Tytuł dokumentu",
         "noteId": "notes-c-10-2-4-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Tytuł dokumentu:</strong> Sprawdź we właściwościach pliku (Plik -> Właściwości), czy pole 'Tytuł' jest wypełnione i opisuje zawartość.",
+        "<strong>Wyświetlanie tytułu (PDF):</strong> W plikach PDF sprawdź w ustawieniach początkowych (Właściwości -> Widok początkowy), czy opcja 'Pokaż' jest ustawiona na 'Tytuł dokumentu', a nie 'Nazwa pliku'.",
+        "<strong>Kryterium sukcesu (Tabela 10.7):</strong> Dokumenty muszą mieć tytuły, które opisują ich temat lub cel.",
+        "<strong>Uwaga:</strong> Nazwa pliku może być uznana za wystarczający tytuł, jeśli trafnie opisuje temat lub cel dokumentu."
+      ]
     },
     {
       "type": "heading",
@@ -986,7 +1096,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.8."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.8."
       ],
       "form": {
         "inputs": [
@@ -1006,7 +1116,11 @@
         "legend": "Wybierz wynik dla C.10.2.4.3 Kolejność fokusu",
         "noteId": "notes-c-10-2-4-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kolejność fokusu:</strong> Sprawdź, czy kolejność nawigacji klawiaturą (Tab) jest logiczna i przewidywalna (zazwyczaj od lewej do prawej, od góry do dołu).",
+        "<strong>Kryterium sukcesu (Tabela 10.8):</strong> Jeśli po dokumencie można nawigować sekwencyjnie, a kolejność ta ma znaczenie dla zrozumienia treści lub obsługi, to elementy interaktywne muszą otrzymywać fokus w logicznej kolejności, która zachowuje sens i funkcjonalność."
+      ]
     },
     {
       "type": "heading",
@@ -1020,7 +1134,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#link-purpose-in-context\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.4</a> Cel łącza (w kontekście)."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#cel-acza-w-kontekscie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.4 Cel łącza (w kontekście)</a>"
       ],
       "form": {
         "inputs": [
@@ -1040,7 +1154,10 @@
         "legend": "Wybierz wynik dla C.10.2.4.4 Cel łącza (w kontekście)",
         "noteId": "notes-c-10-2-4-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Cel linku:</strong> Sprawdź, czy treść każdego linku (lub linku wraz z kontekstem) jasno określa, dokąd on prowadzi. Unikaj linków typu \"kliknij tutaj\" bez kontekstu."
+      ]
     },
     {
       "type": "heading",
@@ -1054,7 +1171,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#headings-and-labels\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6</a> Nagłówki i&nbsp;etykiety."
+        "11. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#nag-owki-i-etykiety\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.6 Nagłówki i&nbsp;etykiety</a>"
       ],
       "form": {
         "inputs": [
@@ -1068,13 +1185,16 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.4.6 Nagłówki i&nbsp;etykiety. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.4.6 Nagłówki i&nbsp;etykiety."
           }
         ],
         "legend": "Wybierz wynik dla C.10.2.4.6 Nagłówki i&nbsp;etykiety",
         "noteId": "notes-c-10-2-4-6"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Nagłówki i etykiety:</strong> Sprawdź, czy nagłówki i etykiety jasno opisują temat lub cel sekcji/pola formularza."
+      ]
     },
     {
       "type": "heading",
@@ -1088,7 +1208,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#focus-visible\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.7</a> Widoczny fokus."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#widoczny-fokus\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.4.7 Widoczny fokus</a>"
       ],
       "form": {
         "inputs": [
@@ -1108,7 +1228,10 @@
         "legend": "Wybierz wynik dla C.10.2.4.7 Widoczny fokus",
         "noteId": "notes-c-10-2-4-7"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Widoczny fokus:</strong> Sprawdź, czy każdy element interaktywny ma wyraźnie widoczne obramowanie (fokus) podczas nawigacji klawiaturą."
+      ]
     },
     {
       "type": "heading",
@@ -1127,7 +1250,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.9."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.9."
       ],
       "form": {
         "inputs": [
@@ -1147,7 +1270,12 @@
         "legend": "Wybierz wynik dla C.10.2.5.1 Gesty dotykowe",
         "noteId": "notes-c-10-2-5-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Gesty punktowe:</strong> Sprawdź, czy funkcje wymagające gestów wielopunktowych (np. pinch-to-zoom) lub ścieżkowych można obsłużyć również za pomocą prostego kliknięcia/dotknięcia.",
+        "<strong>Kryterium sukcesu (Tabela 10.9):</strong> Wszystkie funkcje, które używają gestów wielopunktowych (np. szczypanie) lub gestów opartych na ścieżce (np. przeciąganie), muszą być możliwe do obsłużenia za pomocą pojedynczego wskaźnika bez gestu opartego na ścieżce, chyba że gest wielopunktowy lub oparty na ścieżce jest niezbędny.",
+        "<strong>Uwaga:</strong> Wymóg ten dotyczy dokumentów, które interpretują działania wskaźnika (nie dotyczy działań wymaganych do obsługi przeglądarki lub technologii wspomagającej)."
+      ]
     },
     {
       "type": "heading",
@@ -1161,7 +1289,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.10."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.10."
       ],
       "form": {
         "inputs": [
@@ -1181,7 +1309,12 @@
         "legend": "Wybierz wynik dla C.10.2.5.2 Rezygnacja ze wskazania",
         "noteId": "notes-c-10-2-5-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Rezygnacja ze wskazania:</strong> Sprawdź, czy funkcjonalność jest aktywowana przy zwolnieniu wskaźnika (up-event), co pozwala na anulowanie (np. przez przesunięcie kursora poza element). Jeśli aktywacja następuje przy naciśnięciu, upewnij się, że istnieje mechanizm cofnięcia lub zachowanie to jest niezbędne.",
+        "<strong>Kryterium sukcesu (Tabela 10.10):</strong> Dla funkcji obsługiwanych jednym wskaźnikiem (np. myszką, palcem) musi być spełniony jeden z warunków:<br><ul><li><strong>Brak reakcji na wciśnięcie:</strong> Samo wciśnięcie (down-event) nie uruchamia funkcji.</li><li><strong>Anulowanie lub cofnięcie:</strong> Funkcja działa dopiero po puszczeniu (up-event) i można ją anulować (np. odsuwając kursor) lub cofnąć po wykonaniu.</li><li><strong>Odwrócenie:</strong> Puszczenie przycisku cofa to, co zrobiło wciśnięcie.</li><li><strong>Niezbędność:</strong> Reakcja na wciśnięcie jest konieczna (np. emulacja klawiatury, pianino).</li></ul>",
+        "<strong>Uwaga:</strong> Dotyczy to dokumentów interpretujących działania wskaźnika."
+      ]
     },
     {
       "type": "heading",
@@ -1195,7 +1328,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#label-in-name\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3</a> Etykieta w&nbsp;nazwie."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#etykieta-w-nazwie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.3 Etykieta w&nbsp;nazwie</a>"
       ],
       "form": {
         "inputs": [
@@ -1209,13 +1342,16 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.5.3 Etykieta w&nbsp;nazwie. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 2.5.3 Etykieta w&nbsp;nazwie."
           }
         ],
         "legend": "Wybierz wynik dla C.10.2.5.3 Etykieta w&nbsp;nazwie",
         "noteId": "notes-c-10-2-5-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Etykieta w nazwie:</strong> Sprawdź, czy widoczna etykieta tekstowa elementu (np. przycisku) jest zawarta w jego nazwie dostępnej (Accessible Name) dla czytników ekranu."
+      ]
     },
     {
       "type": "heading",
@@ -1229,7 +1365,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#motion-actuation\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.4</a> Aktywowanie ruchem."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#aktywowanie-ruchem\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 2.5.4 Aktywowanie ruchem</a>"
       ],
       "form": {
         "inputs": [
@@ -1249,7 +1385,10 @@
         "legend": "Wybierz wynik dla C.10.2.5.4 Aktywowanie ruchem",
         "noteId": "notes-c-10-2-5-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Aktywowanie ruchem:</strong> Jeśli funkcja jest aktywowana ruchem urządzenia (np. potrząśnięcie), sprawdź, czy można ją wyłączyć lub obsłużyć interfejsem."
+      ]
     },
     {
       "type": "heading",
@@ -1273,7 +1412,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.11."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.11."
       ],
       "form": {
         "inputs": [
@@ -1293,7 +1432,11 @@
         "legend": "Wybierz wynik dla C.10.3.1.1 Język dokumentu",
         "noteId": "notes-c-10-3-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Język dokumentu:</strong> Sprawdź we właściwościach pliku (Plik -> Właściwości -> Zaawansowane), czy główny język dokumentu jest poprawnie ustawiony (np. Polski).",
+        "<strong>Kryterium sukcesu (Tabela 10.11):</strong> Domyślny język każdego dokumentu musi być możliwy do programowego określenia (czyli ustawiony w metadanych pliku)."
+      ]
     },
     {
       "type": "heading",
@@ -1307,7 +1450,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.12."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.12."
       ],
       "form": {
         "inputs": [
@@ -1327,7 +1470,13 @@
         "legend": "Wybierz wynik dla C.10.3.1.2 Język części",
         "noteId": "notes-c-10-3-1-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Język części:</strong> Jeśli w dokumencie występują fragmenty w innym języku, sprawdź w drzewie tagów (PDF), czy odpowiednie elementy (np. Span) mają ustawiony atrybut języka (Lang).",
+        "<strong>Kryterium sukcesu (Tabela 10.12):</strong> Język każdego fragmentu tekstu w dokumencie musi być możliwy do programowego określenia. Wyjątkiem są nazwy własne, terminy techniczne, słowa o nieokreślonym języku oraz zwroty, które weszły do języka potocznego otaczającego tekstu.",
+        "<strong>Uwaga 1:</strong> Niektóre formaty dokumentów mogą nie wspierać oznaczania języka dla fragmentów tekstu – w takim przypadku spełnienie tego kryterium może być niemożliwe.",
+        "<strong>Uwaga 2:</strong> Zazwyczaj zakłada się, że cały tekst jest w głównym języku dokumentu, chyba że zaznaczono inaczej (dziedziczenie)."
+      ]
     },
     {
       "type": "heading",
@@ -1346,7 +1495,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#on-focus\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.2.1</a> Po otrzymaniu fokusu."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#po-otrzymaniu-fokusu\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.2.1 Po otrzymaniu fokusu</a>"
       ],
       "form": {
         "inputs": [
@@ -1360,13 +1509,16 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu."
           }
         ],
         "legend": "Wybierz wynik dla C.10.3.2.1 Po otrzymaniu fokusu",
         "noteId": "notes-c-10-3-2-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Po otrzymaniu fokusu:</strong> Sprawdź, czy otrzymanie fokusu przez element nie powoduje nieoczekiwanej zmiany kontekstu (np. automatycznego wysłania formularza, otwarcia nowego okna)."
+      ]
     },
     {
       "type": "heading",
@@ -1380,7 +1532,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#on-input\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.2.2</a> Podczas wprowadzania danych."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#podczas-wprowadzania-danych\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.2.2 Podczas wprowadzania danych</a>"
       ],
       "form": {
         "inputs": [
@@ -1400,7 +1552,10 @@
         "legend": "Wybierz wynik dla C.10.3.2.2 Podczas wprowadzania danych",
         "noteId": "notes-c-10-3-2-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Podczas wprowadzania danych:</strong> Sprawdź, czy zmiana ustawienia elementu interfejsu (np. wybór z listy) nie powoduje nieoczekiwanej zmiany kontekstu, chyba że użytkownik został o tym uprzedzony."
+      ]
     },
     {
       "type": "heading",
@@ -1419,7 +1574,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#error-identification\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.1</a> Identyfikacja błędu."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#identyfikacja-b-edu\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.1 Identyfikacja błędu</a>"
       ],
       "form": {
         "inputs": [
@@ -1439,7 +1594,10 @@
         "legend": "Wybierz wynik dla C.10.3.3.1 Identyfikacja błędu",
         "noteId": "notes-c-10-3-3-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Identyfikacja błędu:</strong> Sprawdź, czy błędy w formularzu są automatycznie wykrywane, a użytkownik otrzymuje jasną informację tekstową, które pole zawiera błąd i na czym on polega."
+      ]
     },
     {
       "type": "heading",
@@ -1453,7 +1611,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#labels-or-instructions\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.2</a> Etykiety lub instrukcje."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#etykiety-lub-instrukcje\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.2 Etykiety lub instrukcje</a>"
       ],
       "form": {
         "inputs": [
@@ -1467,13 +1625,16 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.2 Etykiety lub instrukcje. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1 lub dokument nieinternetowy nie zawiera treści istotnych dla WCAG 2.1 Kryterium sukcesu 3.3.2 Etykiety lub instrukcje."
           }
         ],
         "legend": "Wybierz wynik dla C.10.3.3.2 Etykiety lub instrukcje",
         "noteId": "notes-c-10-3-3-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Etykiety lub instrukcje:</strong> Sprawdź, czy pola wymagające danych w określonym formacie posiadają odpowiednie instrukcje lub przykłady."
+      ]
     },
     {
       "type": "heading",
@@ -1487,7 +1648,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#error-suggestion\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.3</a> Sugestie korekty błędów."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#sugestie-korekty-b-edow\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 3.3.3 Sugestie korekty błędów</a>"
       ],
       "form": {
         "inputs": [
@@ -1507,7 +1668,10 @@
         "legend": "Wybierz wynik dla C.10.3.3.3 Sugestie korekty błędów",
         "noteId": "notes-c-10-3-3-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Sugestie korekty:</strong> Sprawdź, czy w przypadku błędu system podpowiada poprawną wartość (jeśli jest to możliwe)."
+      ]
     },
     {
       "type": "heading",
@@ -1521,7 +1685,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.13."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.13."
       ],
       "form": {
         "inputs": [
@@ -1541,7 +1705,11 @@
         "legend": "Wybierz wynik dla C.10.3.3.4 Zapobieganie błędom (prawnym, finansowym, w&nbsp;danych)",
         "noteId": "notes-c-10-3-3-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Zapobieganie błędom:</strong> Dla dokumentów prawnych/finansowych: sprawdź, czy użytkownik może zweryfikować, potwierdzić lub cofnąć transakcję przed jej finalizacją.",
+        "<strong>Kryterium sukcesu (Tabela 10.13):</strong> W przypadku dokumentów, które powodują zobowiązania prawne, transakcje finansowe, modyfikację danych lub przesyłanie odpowiedzi testowych, musi być spełniony jeden z warunków:<br><ul><li><strong>Odwracalność:</strong> Przesłanie można cofnąć.</li><li><strong>Sprawdzanie:</strong> Dane są sprawdzane pod kątem błędów, a użytkownik może je poprawić.</li><li><strong>Potwierdzanie:</strong> Dostępny jest mechanizm przeglądania, potwierdzania i poprawiania informacji przed ich ostatecznym wysłaniem.</li></ul>"
+      ]
     },
     {
       "type": "heading",
@@ -1564,7 +1732,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.14."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.14."
       ],
       "form": {
         "inputs": [
@@ -1584,7 +1752,14 @@
         "legend": "Wybierz wynik dla C.10.4.1.1 Poprawność kodu",
         "noteId": "notes-c-10-4-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Poprawność kodu (Parsing):</strong> Sprawdź kod pod kątem błędów składniowych.",
+        "<strong>Kryterium sukcesu (Tabela 10.14):</strong> W przypadku dokumentów używających języków znaczników, w taki sposób, że znaczniki są oddzielnie udostępniane i dostępne dla technologii wspomagających oraz funkcji dostępności oprogramowania lub dla wybranego przez użytkownika klienta użytkownika (chyba że specyfikacje zezwalają na te cechy):<br><br><ul><li>elementy mają kompletne znaczniki początkowe i końcowe,</li><li>elementy są zagnieżdżone zgodnie z ich specyfikacjami,</li><li>elementy nie zawierają zduplikowanych atrybutów,</li><li>wszystkie identyfikatory (ID) są unikalne.</li></ul>",
+        "<strong>Uwaga 1:</strong> Znaczniki początkowe i końcowe, w których brakuje znaku krytycznego w ich tworzeniu, takiego jak zamykający nawias ostry lub niedopasowany cudzysłów wartości atrybutu, nie są kompletne.",
+        "<strong>Uwaga 2:</strong> Znaczniki nie zawsze są dostępne dla technologii wspomagających lub dla wybranych przez użytkownika klientów użytkownika, takich jak przeglądarki. W takich przypadkach zgodność z tym wymogiem nie miałaby wpływu na dostępność, tak jak ma to miejsce w przypadku treści internetowych, gdzie są one udostępniane.",
+        "<strong>Uwaga 3:</strong> Przykłady znaczników, które są oddzielnie udostępniane i dostępne dla technologii wspomagających i klientów użytkownika, obejmują między innymi: dokumenty zakodowane w HTML, ODF i OOXML."
+      ]
     },
     {
       "type": "heading",
@@ -1597,7 +1772,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tablicy 10.15."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu zawarte w&nbsp;Tabeli 10.15."
       ],
       "form": {
         "inputs": [
@@ -1611,13 +1786,20 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.10.4.1.2 Nazwa, rola, wartość",
         "noteId": "notes-c-10-4-1-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Formularze:</strong> Sprawdź, czy pola formularzy w PDF mają zdefiniowane etykiety (Tooltips) i czy są dostępne dla czytników ekranu.",
+        "<strong>Poprawność tagowania:</strong> Upewnij się, że wszystkie istotne treści są objęte odpowiednimi tagami (P, H1, Figure itp.), a elementy nieistotne są oznaczone jako artefakty.",
+        "<strong>Kryterium sukcesu (Tabela 10.15):</strong> Dla wszystkich elementów interfejsu (np. formularze, linki, skrypty) musi być możliwe programowe określenie ich nazwy, roli i wartości. Zmiany tych wartości muszą być zgłaszane technologiom asystującym.",
+        "<strong>Uwaga 1:</strong> To kryterium jest skierowane głównie do programistów tworzących własne komponenty. Standardowe elementy interfejsu zazwyczaj spełniają te wymagania automatycznie.",
+        "<strong>Uwaga 2:</strong> W dokumentach wspierających dostępność, standardowe elementy zazwyczaj działają poprawnie, jeśli są używane zgodnie z zasadami projektowania dla danego formatu."
+      ]
     },
     {
       "type": "heading",
@@ -1631,7 +1813,7 @@
         "1. TIK nie jest stroną internetową."
       ],
       "procedure": [
-        "1. Sprawdź, czy oprogramowanie spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#status-messages\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3</a> Komunikaty o&nbsp;stanie."
+        "1. Sprawdź, czy dokument spełnia kryterium sukcesu <a href=\"https://www.w3.org/Translations/WCAG21-pl/#komunikaty-o-stanie\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1 – 4.1.3 Komunikaty o&nbsp;stanie</a>."
       ],
       "form": {
         "inputs": [
@@ -1651,7 +1833,12 @@
         "legend": "Wybierz wynik dla C.10.4.1.3 Komunikaty o&nbsp;stanie",
         "noteId": "notes-c-10-4-1-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Komunikaty o stanie:</strong> Sprawdź, czy ważne komunikaty pojawiające się na ekranie (np. błędy walidacji formularza, potwierdzenie wysłania) są odczytywane przez czytnik ekranu, nawet jeśli kursor nie jest na nich ustawiony.",
+        "<strong>Wymaganie:</strong> W dokumentach używających języków znaczników, komunikaty o stanie muszą być możliwe do programowego odczytania, tak aby technologie asystujące mogły je przedstawić użytkownikowi bez konieczności przenoszenia na nie fokusu.",
+        "<strong>Uwaga:</strong> Dotyczy to np. sytuacji, gdy po wypełnieniu formularza w PDF pojawia się komunikat o błędzie lub sukcesie."
+      ]
     },
     {
       "type": "informative",

@@ -65,7 +65,7 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03)"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.12.1.2 Dostępność dokumentacji",
@@ -181,7 +181,7 @@
           },
           {
             "value": "Nie dotyczy",
-            "label": "Nie spełniono warunku wstępnego 1. EN 301 549 V3.2.1 (2021-03) C.13 TIK umożliwiająca dostęp do usługi przekazu informacji lub awaryjnego przekazu informacji"
+            "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
         "legend": "Wybierz wynik dla C.12.2.4 Dostępność dokumentacji",

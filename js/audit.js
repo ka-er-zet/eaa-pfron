@@ -489,6 +489,85 @@ document.addEventListener('DOMContentLoaded', async () => {
             notesHtml = `<div class="informative" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">UWAGA</h2>${item.notes.map(n => `<p>${window.utils.fixOrphans(n)}</p>`).join('')}</div>`;
         }
 
+        let detailedChecklistHtml = '';
+        let hasContent = false;
+        if (item.detailedChecklist) {
+            if (Array.isArray(item.detailedChecklist)) {
+                hasContent = item.detailedChecklist.length > 0;
+            } else if (typeof item.detailedChecklist === 'string') {
+                hasContent = item.detailedChecklist.trim().length > 0;
+            }
+        }
+
+        if (hasContent) {
+             let content = '';
+             
+             // Helper to sanitize HTML but allow specific tags
+             const sanitizeAndRestore = (str) => {
+                 if (!str) return '';
+                 
+                 // 0. Protect allowed tags (replace with placeholders)
+                 let protectedStr = str
+                    .replace(/<strong>/g, "___TAG_STRONG___")
+                    .replace(/<\/strong>/g, "___TAG_END_STRONG___")
+                    .replace(/<em>/g, "___TAG_EM___")
+                    .replace(/<\/em>/g, "___TAG_END_EM___")
+                    .replace(/<br>/g, "___TAG_BR___")
+                    .replace(/<ol>/g, "___TAG_OL___")
+                    .replace(/<\/ol>/g, "___TAG_END_OL___")
+                    .replace(/<ul>/g, "___TAG_UL___")
+                    .replace(/<\/ul>/g, "___TAG_END_UL___")
+                    .replace(/<li>/g, "___TAG_LI___")
+                    .replace(/<\/li>/g, "___TAG_END_LI___")
+                    .replace(/<code>/g, "___TAG_CODE___")
+                    .replace(/<\/code>/g, "___TAG_END_CODE___");
+
+                 // 1. Escape all HTML, but preserve existing entities
+                 let escaped = protectedStr
+                    .replace(/&(?![a-zA-Z0-9#]+;)/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+                 
+                 // 2. Restore protected tags
+                 let restored = escaped
+                    .replace(/___TAG_STRONG___/g, "<strong>")
+                    .replace(/___TAG_END_STRONG___/g, "</strong>")
+                    .replace(/___TAG_EM___/g, "<em>")
+                    .replace(/___TAG_END_EM___/g, "</em>")
+                    .replace(/___TAG_BR___/g, "<br>")
+                    .replace(/___TAG_OL___/g, "<ol>")
+                    .replace(/___TAG_END_OL___/g, "</ol>")
+                    .replace(/___TAG_UL___/g, "<ul>")
+                    .replace(/___TAG_END_UL___/g, "</ul>")
+                    .replace(/___TAG_LI___/g, "<li>")
+                    .replace(/___TAG_END_LI___/g, "</li>")
+                    .replace(/___TAG_CODE___/g, "<code>")
+                    .replace(/___TAG_END_CODE___/g, "</code>");
+
+                 // 3. Restore links (special handling for attributes)
+                 return restored
+                    .replace(/&lt;a href=&quot;(.*?)&quot; target=&quot;_blank&quot;&gt;/g, '<a href="$1" target="_blank">')
+                    .replace(/&lt;\/a&gt;/g, "</a>");
+             };
+
+             if (Array.isArray(item.detailedChecklist)) {
+                 content = item.detailedChecklist.map(check => `<div style="margin-bottom: 0.5rem;">${window.utils.fixOrphans(sanitizeAndRestore(check))}</div>`).join('');
+             } else {
+                 content = window.utils.fixOrphans(sanitizeAndRestore(item.detailedChecklist)).replace(/\n/g, '<br>');
+             }
+
+             detailedChecklistHtml = `
+                <details style="margin-top: 1.5rem; border: 1px solid var(--border-color); border-radius: 4px; padding: 0.5rem; background-color: var(--card-bg);">
+                    <summary style="cursor: pointer; font-weight: bold; color: var(--primary-color);">Jak to sprawdzić?</summary>
+                    <div style="margin-top: 1rem; padding-left: 1rem; border-left: 2px solid var(--muted-color);">
+                        ${content}
+                    </div>
+                </details>
+            `;
+        }
+
         let wcagBadge = '';
         if (item.wcag) {
             const levelClass = item.wcag === 'AA' ? 'poziom-aa' : 'poziom-a';
@@ -648,6 +727,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     ${preconditionsHtml}
                     ${procedureHtml}
                     ${notesHtml}
+                    ${detailedChecklistHtml}
 
                     <form onsubmit="return false;" style="margin-top: 2rem;">
                         <h2 class="text-muted" style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--muted-color);">Ocena</h2>
@@ -945,6 +1025,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     procedure: item.procedure || [],
                     form: item.form,
                     notes: item.notes || [],
+                    detailedChecklist: item.detailedChecklist || [],
                     implications: item.implications || [],
                     derivations: item.derivations || null
                 };
@@ -1076,31 +1157,30 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
-    // If tests are empty, load them
-    if (state.tests.length === 0) {
-        await loadClauses(state.clauses);
-    } else {
-        // Ensure we have clause titles available even if tests were loaded from saved state
-        await loadClauseTitles(state.clauses);
-        ensureFragmentAnchors(state.tests);
-        renderNav();
-        const initialHash = (window.location.hash || '').replace('#', '');
-        if (initialHash) {
-            let foundIndex = state.tests.findIndex(t => t.type === 'test' && `test-${sanitizeForDomId(t.id)}` === initialHash);
-            if (foundIndex === -1) {
-                const headingIdx = state.tests.findIndex(t => t.type === 'heading' && t.id === initialHash);
-                if (headingIdx !== -1) {
-                    foundIndex = getNextTestIndex(headingIdx);
-                }
+    // Always reload clauses to ensure we have the latest structure/content (e.g. detailedChecklist)
+    // This preserves state.results but refreshes state.tests from the JSON files.
+    await loadClauses(state.clauses);
+    
+    // Ensure fragment anchors are set up
+    ensureFragmentAnchors(state.tests);
+    renderNav();
+
+    const initialHash = (window.location.hash || '').replace('#', '');
+    if (initialHash) {
+        let foundIndex = state.tests.findIndex(t => t.type === 'test' && `test-${sanitizeForDomId(t.id)}` === initialHash);
+        if (foundIndex === -1) {
+            const headingIdx = state.tests.findIndex(t => t.type === 'heading' && t.id === initialHash);
+            if (headingIdx !== -1) {
+                foundIndex = getNextTestIndex(headingIdx);
             }
-            if (foundIndex !== -1) {
-                renderTest(foundIndex);
-            } else {
-                renderTest(state.currentIdx);
-            }
+        }
+        if (foundIndex !== -1) {
+            renderTest(foundIndex);
         } else {
             renderTest(state.currentIdx);
         }
+    } else {
+        renderTest(state.currentIdx);
     }
 
     // Support back/forward hash navigation
