@@ -38,7 +38,12 @@
         "legend": "Wybierz wynik dla C.12.1.1 Funkcje dostępności i&nbsp;zgodności",
         "noteId": "notes-c-12-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Lista funkcji:</strong> Sprawdź, czy w instrukcji lub pomocy jest rozdział poświęcony dostępności. Może to być np. 'Deklaracja Dostępności' lub strony pomocy.",
+        "<strong>Zakres informacji:</strong> Upewnij się, że opisane są zarówno funkcje wbudowane (np. zmiana kontrastu), jak i zgodność z technologiami asystującymi (np. czytnikami ekranu).",
+        "<strong>Opis użycia:</strong> Sprawdź, czy dokumentacja wyjaśnia, jak włączyć i korzystać z tych funkcji ułatwień."
+      ]
     },
     {
       "type": "heading",
@@ -71,7 +76,12 @@
         "legend": "Wybierz wynik dla C.12.1.2 Dostępność dokumentacji",
         "noteId": "notes-c-12-1-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Wersja dostępna:</strong> Upewnij się, że istnieje przynajmniej jedna wersja dokumentacji, która jest dostępna cyfrowo (zgodna z WCAG). Inne wersje (np. drukowana) nie muszą być dostępne, o ile istnieje ta jedna poprawna.",
+        "<strong>Dokumentacja wbudowana:</strong> Jeśli dokumentacja jest częścią programu (np. system pomocy w aplikacji), ona również musi być dostępna.",
+        "<strong>Formaty alternatywne:</strong> Sprawdź, czy producent oferuje formaty dla specyficznych potrzeb (np. dokumenty w Braille'u lub w tekście łatwym do czytania) – jest to dobra praktyka."
+      ]
     },
     {
       "type": "heading",
@@ -118,7 +128,11 @@
         "legend": "Wybierz wynik dla C.12.2.2 Informacje o&nbsp;funkcjach dostępności i&nbsp;zgodności",
         "noteId": "notes-c-12-2-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Wiedza wsparcia:</strong> Skontaktuj się z pomocą techniczną i zapytaj o funkcje dostępności produktu (zarówno te wbudowane, jak i współpracę z czytnikami ekranu).",
+        "<strong>Udzielanie informacji:</strong> Sprawdź, czy pracownicy wsparcia potrafią wskazać te funkcje w dokumentacji lub wyjaśnić ich działanie."
+      ]
     },
     {
       "type": "heading",
@@ -152,6 +166,10 @@
         "noteId": "notes-c-12-2-3"
       },
       "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kanały kontaktu:</strong> Sprawdź, czy z pomocą techniczną można się skontaktować na różne sposoby (np. telefon, e-mail, czat, formularz).",
+        "<strong>Dostosowanie:</strong> Czy wsparcie jest w stanie obsłużyć osoby o różnych potrzebach (np. osoby niesłyszące, niewidome) bezpośrednio lub przekierowując do odpowiedniej usługi (np. tłumacza migowego)."
+      ],
       "notes": [
         "Zapewnienie na dowolnym poziomie wsparcia dla potrzeb komunikacyjnych osób niepełnosprawnych stanowi podstawę tego wymagania. Dostawcy mogą chcieć dostarczyć dalsze informacje na temat pozio- mu wsparcia, który jest zapewniany, aby umożliwić ocenę adekwatności i&nbsp;jakości wsparcia."
       ]
@@ -187,7 +205,13 @@
         "legend": "Wybierz wynik dla C.12.2.4 Dostępność dokumentacji",
         "noteId": "notes-c-12-2-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Materiały od wsparcia:</strong> Jeśli pomoc techniczna przesyła dodatkowe instrukcje lub dokumenty, sprawdź czy przynajmniej jedna ich wersja jest dostępna cyfrowo (zgodna z WCAG).",
+        "<strong>Dokumentacja wbudowana:</strong> Jeśli wsparcie kieruje do pomocy wbudowanej w system, sprawdź czy ta pomoc jest dostępna.",
+        "<strong>Formaty alternatywne:</strong> Zapytaj, czy w razie potrzeby wsparcie może dostarczyć dokumentację w formatach alternatywnych (np. Braille, tekst łatwy do czytania).",
+        "<strong>Konwersja:</strong> Warto sprawdzić, czy dostarczane dokumenty pozwalają na łatwą konwersję (np. czytniki ekranu radzą sobie z ich strukturą)."
+      ]
     }
   ]
 }

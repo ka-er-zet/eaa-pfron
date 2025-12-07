@@ -47,7 +47,11 @@
         "legend": "Wybierz wynik dla C.13.1.2 Usługi przekazu w&nbsp;trybie tekstowym",
         "noteId": "notes-c-13-1-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Konwersja tekst-mowa:</strong> Sprawdź, czy usługa umożliwia komunikację między osobą piszącą (tekst) a osobą mówiącą (głos), zamieniając tekst na mowę i odwrotnie.",
+        "<strong>Interakcja:</strong> Upewnij się, że konwersja działa w obu kierunkach, umożliwiając płynną rozmowę."
+      ]
     },
     {
       "type": "heading",
@@ -80,7 +84,11 @@
         "legend": "Wybierz wynik dla C.13.1.3 Usługi przekazu w&nbsp;trybie języka migowego",
         "noteId": "notes-c-13-1-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Tłumacz migowy:</strong> Sprawdź, czy usługa zapewnia udział tłumacza (wideo), który przekłada język migowy na mowę i odwrotnie.",
+        "<strong>Jakość wideo:</strong> Upewnij się, że jakość połączenia wideo jest wystarczająca do czytelnego odbioru znaków migowych."
+      ]
     },
     {
       "type": "heading",
@@ -113,7 +121,11 @@
         "legend": "Wybierz wynik dla C.13.1.4 Usługi odczytu z&nbsp;ruchu warg",
         "noteId": "notes-c-13-1-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Wsparcie czytania z ruchu warg:</strong> Sprawdź, czy usługa umożliwia osobie czytającej z ruchu warg komunikację z użytkownikiem telefonu głosowego.",
+        "<strong>Wideo:</strong> Czy usługa zapewnia obraz wideo rozmówcy (lub tłumacza), który wyraźnie artykułuje słowa?"
+      ]
     },
     {
       "type": "heading",
@@ -146,7 +158,11 @@
         "legend": "Wybierz wynik dla C.13.1.5 Usługi telefonii z&nbsp;napisami",
         "noteId": "notes-c-13-1-5"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Napisy na żywo:</strong> Sprawdź, czy podczas rozmowy głosowej wyświetlane są napisy (transkrypcja) tego, co mówi druga osoba.",
+        "<strong>Synchronizacja:</strong> Czy napisy pojawiają się z minimalnym opóźnieniem, pozwalając na płynną rozmowę?"
+      ]
     },
     {
       "type": "heading",
@@ -179,7 +195,11 @@
         "legend": "Wybierz wynik dla C.13.1.6 Usługi przekazu mowy na mowę",
         "noteId": "notes-c-13-1-6"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Asystent mowy:</strong> Sprawdź, czy usługa zapewnia wsparcie operatora, który powtarza lub parafrazuje wypowiedzi osoby z zaburzeniami mowy, aby były zrozumiałe dla rozmówcy.",
+        "<strong>Dostępność:</strong> Czy usługa jest dostępna dla osób z różnymi trudnościami w komunikacji werbalnej?"
+      ]
     },
     {
       "type": "heading",
@@ -213,7 +233,11 @@
         "legend": "Wybierz wynik dla C.13.2 Dostęp do usług przekazu informacji",
         "noteId": "notes-c-13-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Brak blokad:</strong> Sprawdź, czy system telefoniczny/komunikacyjny nie blokuje połączeń z numerami usług przekazu (np. numerami specjalnymi dla osób niesłyszących).",
+        "<strong>Obsługa typów połączeń:</strong> Czy można dzwonić i odbierać połączenia głosowe, wideo lub tekstowe (RTT) z usług przekazu?"
+      ]
     },
     {
       "type": "heading",
@@ -248,6 +272,10 @@
         "noteId": "notes-c-13-3"
       },
       "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Połączenia alarmowe:</strong> Sprawdź, czy system pozwala na połączenie się ze służbami ratunkowymi (np. 112) przy użyciu dostępnych metod (głos, wideo, tekst/RTT).",
+        "<strong>Brak barier:</strong> Upewnij się, że konfiguracja sieci lub urządzenia nie uniemożliwia wezwania pomocy przez osoby korzystające z technologii wspomagających."
+      ],
       "notes": [
         "Definicja podmiotu sektora publicznego odnosi się do dyrektywy w&nbsp;sprawie zamówień publicznych (dyrektywa 2014/24/UE [i.40]) art. 2 ust. 1 pkt 4, który definiuje „podmiot prawa publicznego” jako podmiot, który ma wszystkie poniższe cechy: • został utworzony w&nbsp;konkretnym celu zaspokajania potrzeb w&nbsp;interesie ogólnym, które nie mają charakteru przemysłowego ani handlowego; • ma osobowość prawną oraz • jest finansowany w&nbsp;przeważającej części przez państwo, władze regionalne lub lokalne lub inne podmioty prawa publicznego; bądź jego zarząd podlega nadzorowi ze strony tych władz lub podmiotów; bądź ponad połowa członków jego organu administrującego, zarządzającego lub nadzorczego została wyznaczona przez państwo, władze regionalne lub lokalne, lub przez inne podmioty prawa publicznego. Większość wymagań związanych z&nbsp;dyrektywą (UE) w&nbsp;sprawie dostępności stron internetowych i&nbsp;mobil- nych aplikacji organów sektora publicznego znajduje się w&nbsp;Rozdziałach 9, 10 i&nbsp;11, które dotyczą stron internetowych, dokumentów i&nbsp;oprogramowania. Pełna lista wymagań znajduje się w&nbsp;tablicach zawartych w&nbsp;Załączniku A. Dyrektywa obejmuje również intranety i&nbsp;ekstranety, które mają spełniać wymagania zawarte w&nbsp;Rozdziale 9 dotyczącym treści internetowej oraz w&nbsp;Rozdziale 10 dotyczącym dokumentów. Istnieją różne okresy karencji dla różnych rodzajów treści, a&nbsp;także wyjątki od tego, jakie treści są objęte dyrektywą. Na przykład, dyrektywa nie uwzględnia transmisji wideo na żywo. Oznacza to, że wymaga - nia 9.1.2.4 dla stron internetowych, 10.1.2.4 dla dokumentów i&nbsp;11.1.2.4 dla aplikacji nie mają wpływu na spełnienie wymagań dyrektywy. Należy pamiętać, że dyrektywa zawiera także inne wymagania, np. dotyczące monitorowania i&nbsp;oświadczeń o&nbsp;dostępności. Nie są one ujęte w&nbsp;normie EN 301 549. E.6 Załącznik D: Dodatkowe materiały dotyczące dostępności poznawczej W&nbsp;Załączniku D podano odnośnik do zasobów W3C, które można wykorzystać jako wytyczne w&nbsp;celu poprawy uwzględniania dostępności dla osób z&nbsp;niepełnosprawnościami poznawczymi, językowymi i&nbsp;trudnościami w&nbsp;nauce podczas korzystania z&nbsp;produktów i&nbsp;usług TIK . EN 301 549 V3.2.1 (2021-03) Załącznik F (informacyjny): Historia zmian Wersja Informacje o&nbsp;zmianach 2.1.2 Pierwsza publikacja w&nbsp;formie normy zharmonizowanej. 3.1.1 Zmieniono i&nbsp;rozszerzono wymagania dotyczące tekstu w&nbsp;czasie rzeczywistym (RTT) zawarte w&nbsp;Rozdziale 6.2. 3.1.1 Kryteria sukcesu WCAG 2.1 – AAA, które wcześniej znajdowały się w&nbsp;Załączniku D, są teraz zawarte w&nbsp;Rozdziale 9.5. 3.1.1 Dodano nowy Załącznik D „Dodatkowe materiały dotyczące dostępności poznawczej” . 3.1.1 Dodano nowy Załącznik E „Wskazówki dla użytkowników niniejszego dokumentu” . 3.2.1 Dodano nowy Załącznik F „Historia zmian” (niniejszy załącznik). EN 301 549 V3.2.1 (2021-03) Historia Historia dokumentu V1.1.1 luty 2014 Publikacja V1.1.2 kwiecień 2015 Publikacja V2.1.2 sierpień 2018 Publikacja V3.1.1 listopad 2019 Publikacja"
       ]

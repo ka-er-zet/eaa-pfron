@@ -303,11 +303,6 @@
     },
     {
       "type": "heading",
-      "level": 4,
-      "text": "C.6.2.3 Interoperacyjność"
-    },
-    {
-      "type": "heading",
       "level": 5,
       "text": "C.6.2.3.a Interoperacyjność (a)"
     },
@@ -473,6 +468,50 @@
         "noteId": "notes-c-6-2-3-d"
       },
       "evaluationType": "Test"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.6.2.4 Czas reakcji RTT"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Testowana TIK wykorzystuje funkcjonalność wprowadzania danych RTT.",
+        "2. Testowana TIK jest połączona z urządzeniem lub oprogramowaniem, które może określić moment, w którym testowana TIK przesyła znaki."
+      ],
+      "procedure": [
+        "1. Wprowadź pojedyncze znaki na terminalu poddawanym testowi.",
+        "2. Zanotuj moment, w którym wpis został zarejestrowany lokalnie na terminalu.",
+        "3. Zanotuj moment, w którym ten tekst został przekazany do sieci lub platformy.",
+        "4. Oblicz opóźnienie między czynnością wpisu a transmisją tekstu."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 3: opóźnienie mniejsze lub równe 500 ms"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 3: opóźnienie większe niż 500 ms"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1"
+          },
+          {
+            "value": "Nie do sprawdzenia",
+            "label": "Nie spełniono warunku wstępnego 2"
+          }
+        ],
+        "legend": "Wybierz wynik dla C.6.2.4 Czas reakcji RTT",
+        "noteId": "notes-c-6-2-4"
+      },
+      "evaluationType": "Pomiar",
+      "notes": [
+        "Identyfikowanie momentu wpisu może różnić się w zależności od rodzaju testowanej funkcjonalności RTT, dlatego należy przeanalizować odpowiedni sygnał lokalny lub status transmisji zgodnie z notatką do klauzuli."
+      ]
     },
     {
       "type": "heading",

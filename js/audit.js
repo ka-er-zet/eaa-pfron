@@ -581,7 +581,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Evaluation Criteria (Form)
         let evaluationHtml = '';
-        const isDerived = !!item.derivations;
+        const activeImp = getActiveImplication(item.id);
+        const isDerived = !!item.derivations || !!activeImp;
 
         if (isDerived) {
              // Derived Test View
@@ -792,40 +793,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.setResult = function (id, status) {
         state.results[id].status = status;
         
-        // Handle Implications (Forward)
-        const test = state.tests.find(t => t.id === id);
-        if (test && test.implications && test.implications.length > 0) {
-            test.implications.forEach(imp => {
-                if (imp.whenStatus === status) {
-                    let regex;
-                    try {
-                        regex = new RegExp(imp.targetScope);
-                    } catch (e) {
-                        console.error("Invalid regex in implication:", imp.targetScope);
-                        return;
-                    }
-
-                    state.tests.forEach(target => {
-                        if (target.type === 'test' && target.id !== id) {
-                            if (regex.test(target.id)) {
-                                if (!state.results[target.id]) state.results[target.id] = { status: null, note: '' };
-                                
-                                if (imp.setStatus) {
-                                    state.results[target.id].status = imp.setStatus;
-                                }
-                                
-                                if (imp.setNote) {
-                                    const currentNote = state.results[target.id].note || '';
-                                    if (!currentNote.includes(imp.setNote)) {
-                                        state.results[target.id].note = currentNote ? currentNote + '\n' + imp.setNote : imp.setNote;
-                                    }
-                                }
-                            }
-                        }
-                    });
-                }
-            });
-        }
+        // Handle Implications (Global Re-evaluation)
+        evaluateImplications();
 
         // Handle Derivations (Reverse/Computed)
         evaluateDerivations();
@@ -839,6 +808,82 @@ document.addEventListener('DOMContentLoaded', async () => {
         // renderNav(); // Removed redundant call - renderTest calls it anyway
         renderTest(state.currentIdx);
     };
+
+    function getActiveImplication(testId) {
+        for (const sourceTest of state.tests) {
+            if (sourceTest.implications) {
+                const sourceStatus = state.results[sourceTest.id]?.status;
+                for (const imp of sourceTest.implications) {
+                    if (imp.whenStatus === sourceStatus) {
+                        let regex;
+                        try { regex = new RegExp(imp.targetScope); } catch(e) { continue; }
+                        if (regex.test(testId)) {
+                            return imp;
+                        }
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    function evaluateImplications() {
+        // 1. Identify all active implications
+        const activeImplications = new Map(); // targetId -> implication
+
+        state.tests.forEach(sourceTest => {
+            if (sourceTest.implications) {
+                const sourceStatus = state.results[sourceTest.id]?.status;
+                sourceTest.implications.forEach(imp => {
+                    if (imp.whenStatus === sourceStatus) {
+                        // This implication is active. Find targets.
+                        let regex;
+                        try { regex = new RegExp(imp.targetScope); } catch(e) { return; }
+                        
+                        state.tests.forEach(targetTest => {
+                            if (targetTest.id !== sourceTest.id && regex.test(targetTest.id)) {
+                                activeImplications.set(targetTest.id, imp);
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+        // 2. Apply to targets
+        state.tests.forEach(test => {
+            // Ensure result object exists
+            if (!state.results[test.id]) {
+                state.results[test.id] = { status: null, note: '' };
+            }
+
+            const imp = activeImplications.get(test.id);
+            if (imp) {
+                // Apply implication
+                if (state.results[test.id].status !== imp.setStatus) {
+                    state.results[test.id].status = imp.setStatus;
+                }
+                // Append note if missing
+                const autoNote = imp.setNote;
+                if (autoNote) {
+                     if (!state.results[test.id].note || !state.results[test.id].note.includes(autoNote)) {
+                        state.results[test.id].note = (state.results[test.id].note || '') + '\n' + autoNote;
+                     }
+                }
+            } else {
+                // No active implication.
+                // Check if we should reset.
+                // We reset if the note contains the specific implication text from C.11.5.1.
+                // This is a heuristic to "unlock" tests when the condition is no longer met.
+                const specificNote = "Nie dotyczy, ponieważ funkcjonalność zamknięta jest zgodna z klauzulą 5.1 (zgodnie z wynikiem C.11.5.1).";
+                if (state.results[test.id].note && state.results[test.id].note.includes(specificNote)) {
+                    // It was set by implication. Clear it.
+                    state.results[test.id].status = null;
+                    state.results[test.id].note = state.results[test.id].note.replace(specificNote, '').trim();
+                }
+            }
+        });
+    }
 
     function evaluateDerivations() {
         state.tests.forEach(test => {

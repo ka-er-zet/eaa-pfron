@@ -167,9 +167,13 @@
     },
     {
       "type": "heading",
+      "level": 5,
+      "text": "C.11.1.2.1.2. Tylko audio lub tylko wideo (nagranie – funkcjonalność zamknięta)",
+    },
+    {
+      "type": "heading",
       "level": 6,
-      "text": "C.11.1.2.1.2.1 Nagrane tylko audio (funkcjonalność zamknięta)",
-      "wcag_level": "A"
+      "text": "C.11.1.2.1.2.1 Nagrane tylko audio (funkcjonalność zamknięta)"
     },
     {
       "type": "test",
@@ -2481,6 +2485,14 @@
       "form": {
         "inputs": [
           {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda (nie jest wymagana zgodność oprogramowania z klauzulą 11.5.2)"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz (jest wymagana zgodność oprogramowania z klauzulą 11.5.2)"
+          },
+          {
             "value": "Nie dotyczy",
             "label": "Nie spełniono warunku wstępnego 1."
           }
@@ -2488,7 +2500,20 @@
         "legend": "Wybierz wynik dla C.11.5.1 Funkcjonalność zamknięta",
         "noteId": "notes-c-11-5-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "implications": [
+        {
+          "whenStatus": "Zaliczone",
+          "targetScope": "^C\\.11\\.5\\.2\\..*",
+          "setStatus": "Nie dotyczy",
+          "setNote": "Nie dotyczy, ponieważ funkcjonalność zamknięta jest zgodna z klauzulą 5.1 (zgodnie z wynikiem C.11.5.1)."
+        }
+      ],
+      "detailedChecklist": [
+        "<strong>Funkcjonalność zamknięta:</strong> sprawdź, czy zamknięte funkcje oprogramowania są zgodne z wymaganiami rozdziału 5.1.",
+        "<strong>Test praktyczny:</strong> Przejrzyj funkcjonalności zamknięte; potwierdź zgodność z 5.1.",
+        "<strong>Uwaga:</strong> Jeśli zgodne, nie jest wymagane sprawdzanie klauzul z 11.5.2."
+      ]
     },
     {
       "type": "heading",
@@ -2528,7 +2553,7 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Usługi platformy dla oprogramowania z UI:</strong> sprawdź, czy dokumentacja platformy zawiera informacje o usługach umożliwiających współdziałanie oprogramowania z interfejsem użytkownika z technologią wspomagającą.",
+        "<strong>Usługi platformy dla oprogramowania z interfejsem użytkownika:</strong> sprawdź, czy dokumentacja platformy zawiera informacje o usługach umożliwiających współdziałanie oprogramowania z interfejsem użytkownika z technologią wspomagającą.",
         "<strong>Test praktyczny:</strong> Przejrzyj dokumentację platformy pod kątem opisów usług dostępności; potwierdź, że informacje są dostępne dla programistów.",
         "<strong>Uwaga:</strong> Dotyczy tylko oprogramowania platformy."
       ]
@@ -2566,8 +2591,8 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Usługi platformy dla AT:</strong> sprawdź, czy dokumentacja platformy zawiera informacje o usługach dostępności umożliwiających technologii wspomagającej współdziałanie z oprogramowaniem z UI.",
-        "<strong>Test praktyczny:</strong> Przejrzyj dokumentację platformy; potwierdź opis usług dla AT.",
+        "<strong>Usługi platformy dla technologii asystujących:</strong> sprawdź, czy dokumentacja platformy zawiera informacje o usługach dostępności umożliwiających technologii wspomagającej współdziałanie z oprogramowaniem z interfejsem użytkownika.",
+        "<strong>Test praktyczny:</strong> Przejrzyj dokumentację platformy; potwierdź opis usług dla technologii wspomagających.",
         "<strong>Uwaga:</strong> Dotyczy tylko oprogramowania platformy."
       ]
     },
@@ -2583,8 +2608,8 @@
       ],
       "procedure": [
         "1. Sprawdź, czy oprogramowanie używa odpowiednich udokumentowanych usług dostępności platformy.",
-        "2. Sprawdź, czy oprogramowanie może spełniać odpowiednie wymagania 11.5.2.5 do 11.5.2.17, używając udokumentowanych usług dostępności platformy.",
-        "3. Sprawdź, czy oprogramowanie może spełniać wymagania 11.5.2.5 do 11.5.2.17, używając udokumentowanych usług dostępności platformy i innych udokumentowanych usług."
+        "2. Sprawdź, czy oprogramowanie może spełnić odpowiednie wymagania 11.5.2.5 do 11.5.2.17, używając udokumentowanych usług dostępności platformy.",
+        "3. Sprawdź, czy oprogramowanie może spełnić wymagania 11.5.2.5 do 11.5.2.17, używając udokumentowanych usług dostępności platformy i innych udokumentowanych usług."
       ],
       "form": {
         "inputs": [
@@ -2601,14 +2626,18 @@
             "label": "Nie spełniono warunku wstępnego 1."
           }
         ],
-        "legend": "Wybierz wynik dla C.11.5.2.3 Platformowa usługa wsparcia dostępności dla oprogramowania, które nie udostępnia interfejsu użytkownika",
+        "legend": "Wybierz wynik dla C.11.5.2.3 Korzystanie z usług dostępności",
         "noteId": "notes-c-11-5-2-3"
       },
       "evaluationType": "Inspekcja",
+      "derivations": {
+        "sources": "^C\\.11\\.5\\.2\\.([5-9]|1[0-7])",
+        "mode": "strict-pass"
+      },
       "detailedChecklist": [
-        "<strong>Korzystanie z usług dostępności:</strong> sprawdź, czy oprogramowanie z UI używa usług dostępności platformy i może spełniać wymagania 11.5.2.5–11.5.2.17.",
+        "<strong>Korzystanie z usług dostępności:</strong> sprawdź, czy oprogramowanie z interfejsem użytkownika używa usług dostępności platformy i może spełnić wymagania 11.5.2.5–11.5.2.17.",
         "<strong>Test praktyczny:</strong> Sprawdź kod oprogramowania pod kątem użycia API dostępności; przetestuj zgodność z wymaganiami przy użyciu usług platformy.",
-        "<strong>Uwaga:</strong> Dotyczy oprogramowania z UI; wymaga sprawdzenia dokumentacji platformy."
+        "<strong>Uwaga:</strong> Dotyczy oprogramowania z interfejsem użytkownika; wymaga sprawdzenia dokumentacji platformy."
       ]
     },
     {
@@ -2644,8 +2673,8 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Technologia wspomagająca:</strong> sprawdź, czy AT używa udokumentowanych usług dostępności platformy.",
-        "<strong>Test praktyczny:</strong> Sprawdź kod AT pod kątem użycia API dostępności platformy; potwierdź współdziałanie.",
+        "<strong>Technologia wspomagająca:</strong> sprawdź, czy technologia asystująca używa udokumentowanych usług dostępności platformy.",
+        "<strong>Test praktyczny:</strong> Potwierdź współpracę technologii asystujących z platformą.",
         "<strong>Uwaga:</strong> Dotyczy tylko technologii wspomagających."
       ]
     },
@@ -2766,7 +2795,7 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Wartości:</strong> sprawdź, czy wartości elementów UI (bieżąca, min, max) są dostępne programowo dla technologii wspomagających.",
+        "<strong>Wartości:</strong> sprawdź, czy wartości elementów interfejsu użytkownika (bieżąca, min, max) są dostępne programowo dla technologii wspomagających.",
         "<strong>Test praktyczny:</strong> Wybierz elementy z wartościami; użyj inspektora dostępności, aby sprawdzić ujawnianie wartości.",
         "<strong>Kryteria:</strong> Bieżąca wartość oraz zakres (jeśli dotyczy) muszą być determinowalne."
       ]
@@ -2815,13 +2844,13 @@
     {
       "type": "heading",
       "level": 5,
-      "text": "C.11.5.2.9 Relacje rodzic-dziecko"
+      "text": "C.11.5.2.9 Relacje rodzic-dziecko (nadrzędny-podrzędny)"
     },
     {
       "type": "test",
       "preconditions": [
         "1. Oceniane oprogramowanie udostępnia interfejs użytkownika.",
-        "2. Istnieją elementy interfejsu użytkownika, które są rodzicami innych elementów interfejsu użytkownika w strukturze hierarchicznej."
+        "2. Istnieją elementy interfejsu użytkownika, które są rodzicami (są nadrzędne) innych elementów interfejsu użytkownika w strukturze hierarchicznej."
       ],
       "procedure": [
         "1. Dla elementów interfejsu użytkownika, które mają rodzica, sprawdź, czy informacje elementu interfejsu użytkownika obejmują relację z elementem interfejsu użytkownika, który jest jego rodzicem.",
@@ -2848,8 +2877,11 @@
         "noteId": "notes-c-11-5-2-9"
       },
       "evaluationType": "Inspekcja",
+      "notes": [
+        "Dla tego wymagania wystarczy, że jeden z dwóch kierunków relacji rodzic–dziecko będzie programowo determinowalny. Z tego powodu kontrole są wykonywane parami i wymaganie uznaje się za spełnione, jeśli jeden z członków każdej pary jest prawdziwy."
+      ],
       "detailedChecklist": [
-        "<strong>Relacje rodzic-dziecko:</strong> sprawdź, czy hierarchiczne relacje w UI są dostępne programowo dla technologii wspomagających.",
+        "<strong>Relacje rodzic-dziecko:</strong> sprawdź, czy hierarchiczne relacje w interfejsie użytkownika są dostępne programowo dla technologii wspomagających.",
         "<strong>Test praktyczny:</strong> Sprawdź strukturę hierarchiczną; użyj inspektora, aby potwierdzić relacje rodzic-dziecko.",
         "<strong>Kryteria:</strong> Relacje muszą być determinowalne; wystarczy jeden kierunek.",
         "<strong>Uwaga:</strong> Wystarczy, że jeden z kierunków relacji jest programowo determinowalny."
@@ -2931,7 +2963,7 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Lista działań:</strong> sprawdź, czy lista dostępnych działań dla elementów UI jest dostępna programowo dla technologii wspomagających.",
+        "<strong>Lista działań:</strong> sprawdź, czy lista dostępnych działań dla elementów interfejsu użytkownika jest dostępna programowo dla technologii wspomagających.",
         "<strong>Test praktyczny:</strong> Wybierz elementy z działaniami; sprawdź ujawnianie listy działań.",
         "<strong>Kryteria:</strong> Lista musi być determinowalna."
       ]
@@ -3057,8 +3089,8 @@
       },
       "evaluationType": "Testowanie",
       "detailedChecklist": [
-        "<strong>Modyfikacja fokusu i wyboru:</strong> sprawdź, czy technologii wspomagających może programowo modyfikować fokus, punkt wstawiania i wybór.",
-        "<strong>Test praktyczny:</strong> Przetestuj modyfikacje przez AT; potwierdź funkcjonalność.",
+        "<strong>Modyfikacja fokusu i wyboru:</strong> sprawdź, czy technologia wspomagająca może programowo modyfikować fokus, punkt wstawiania i wybór.",
+        "<strong>Test praktyczny:</strong> Przetestuj modyfikacje przez technologię wspomagającą; potwierdź funkcjonalność.",
         "<strong>Kryteria:</strong> Wszystkie modyfikacje muszą być możliwe; uwzględnij wymagania bezpieczeństwa."
       ]
     },
@@ -3103,9 +3135,9 @@
       },
       "evaluationType": "Inspekcja i testowanie",
       "detailedChecklist": [
-        "<strong>Powiadomienia o zmianach:</strong> sprawdź, czy zmiany w UI są powiadamiane do AT.",
+        "<strong>Powiadomienia o zmianach:</strong> sprawdź, czy zmiany w interfejsie użytkownika są przekazywane do technologii asystujących.",
         "<strong>Test praktyczny:</strong> Aktywuj powiadomienia; wprowadź zmiany; sprawdź wysyłanie powiadomień.",
-        "<strong>Kryteria:</strong> Wszystkie typy zmian muszą być powiadamiane."
+        "<strong>Kryteria:</strong> Wszystkie typy zmian muszą być przekazywane."
       ]
     },
     {
@@ -3144,8 +3176,8 @@
       },
       "evaluationType": "Testowanie",
       "detailedChecklist": [
-        "<strong>Modyfikacje stanów i właściwości:</strong> sprawdź, czy AT może programowo modyfikować stany i właściwości UI.",
-        "<strong>Test praktyczny:</strong> Przetestuj modyfikacje przez AT; potwierdź funkcjonalność.",
+        "<strong>Modyfikacje stanów i właściwości:</strong> sprawdź, czy technologie wspomagające mogą programowo modyfikować stany i właściwości interfejsu użytkownika.",
+        "<strong>Test praktyczny:</strong> Przetestuj modyfikacje przez technologie wspomagające; potwierdź funkcjonalność.",
         "<strong>Kryteria:</strong> Wszystkie modyfikacje muszą być możliwe; uwzględnij wymagania bezpieczeństwa."
       ]
     },
@@ -3185,8 +3217,8 @@
       },
       "evaluationType": "Testowanie",
       "detailedChecklist": [
-        "<strong>Modyfikacje wartości i tekstu:</strong> sprawdź, czy AT może programowo modyfikować wartości i tekst UI przy użyciu metod platformy.",
-        "<strong>Test praktyczny:</strong> Przetestuj modyfikacje przez AT; potwierdź funkcjonalność.",
+        "<strong>Modyfikacje wartości i tekstu:</strong> sprawdź, czy technologie wspomagające mogą programowo modyfikować wartości i tekst interfejsu użytkownika przy użyciu metod platformy.",
+        "<strong>Test praktyczny:</strong> Przetestuj modyfikacje przez technologie wspomagające; potwierdź funkcjonalność.",
         "<strong>Kryteria:</strong> Wszystkie modyfikacje muszą być możliwe; uwzględnij wymagania bezpieczeństwa."
       ]
     },
@@ -3226,7 +3258,12 @@
         "legend": "Wybierz wynik dla C.11.6.1 Kontrola funkcji dostępności przez użytkownika",
         "noteId": "notes-c-11-6-1"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Kontrola użytkownika:</strong> sprawdź, czy użytkownik ma kontrolę nad funkcjami dostępności platformy (np. włączanie/wyłączanie).",
+        "<strong>Test praktyczny:</strong> Spróbuj włączyć/wyłączyć funkcje dostępności; sprawdź, czy oprogramowanie na to pozwala.",
+        "<strong>Kryteria:</strong> Użytkownik musi mieć możliwość kontroli."
+      ]
     },
     {
       "type": "heading",
@@ -3260,7 +3297,12 @@
         "legend": "Wybierz wynik dla C.11.6.2 Nieprzerwane działanie funkcji dostępności",
         "noteId": "notes-c-11-6-2"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Brak zakłóceń:</strong> sprawdź, czy oprogramowanie nie zakłóca działania funkcji dostępności platformy (np. czytnika ekranu, lupy).",
+        "<strong>Test praktyczny:</strong> Uruchom funkcje dostępności; używaj oprogramowania; sprawdź, czy funkcje działają poprawnie.",
+        "<strong>Wyjątek:</strong> Zakłócenie jest dozwolone tylko na wyraźne żądanie użytkownika."
+      ]
     },
     {
       "type": "heading",
@@ -3295,12 +3337,62 @@
         "legend": "Wybierz wynik dla C.11.7 Preferencje użytkownika",
         "noteId": "notes-c-11-7"
       },
-      "evaluationType": "Inspekcja i test"
+      "evaluationType": "Inspekcja i test",
+      "detailedChecklist": [
+        "<strong>Preferencje platformy:</strong> sprawdź, czy oprogramowanie respektuje ustawienia platformy (kolor, kontrast, czcionka, kursor).",
+        "<strong>Test praktyczny:</strong> Zmień ustawienia systemowe (np. wysoki kontrast); sprawdź, czy oprogramowanie się dostosowało.",
+        "<strong>Kryteria:</strong> Oprogramowanie musi dziedziczyć ustawienia systemowe."
+      ]
     },
     {
       "type": "heading",
       "level": 3,
       "text": "C.11.8 Narzędzia do tworzenia treści"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "C.11.8.1 Technologia treści"
+    },
+    {
+      "type": "test",
+      "preconditions": [
+        "1. Oprogramowanie jest narzędziem autorskim.",
+        "2. Format wyjściowy narzędzia autorskiego obsługuje informacje wymagane dla dostępności."
+      ],
+      "procedure": [
+        "1. Sprawdź, czy narzędzie autorskie jest zgodne z 11.8.2 do 11.8.5 w zakresie, w jakim informacje wymagane dla dostępności są obsługiwane przez format używany na wyjściu narzędzia autorskiego."
+      ],
+      "form": {
+        "inputs": [
+          {
+            "value": "Zaliczone",
+            "label": "Kryterium 1: prawda"
+          },
+          {
+            "value": "Niezaliczone",
+            "label": "Kryterium 1: fałsz"
+          },
+          {
+            "value": "Nie dotyczy",
+            "label": "Nie spełniono warunku wstępnego 1 lub 2."
+          }
+        ],
+        "legend": "Wybierz wynik dla C.11.8.1 Technologia treści",
+        "noteId": "notes-c-11-8-1"
+      },
+      "evaluationType": "Inspekcja i testowanie",
+      "derivations": {
+        "sources": "^C\\.11\\.8\\.[2-5]",
+        "mode": "strict-pass"
+      },
+      "notes": [
+        "W przypadku gdy format wyjściowy narzędzia autorskiego nie obsługuje pewnych typów informacji wymaganych dla dostępności, zgodność z wymaganiami odnoszącymi się do tego typu informacji nie jest wymagana."
+      ],
+      "detailedChecklist": [
+        "<strong>Obsługa formatu:</strong> sprawdź, czy format wyjściowy narzędzia pozwala na zapisanie informacji o dostępności.",
+        "<strong>Test praktyczny:</strong> Wygeneruj treść; sprawdź, czy format pliku wspiera tagi, teksty alternatywne itp."
+      ]
     },
     {
       "type": "heading",
@@ -3333,7 +3425,11 @@
         "legend": "Wybierz wynik dla C.11.8.2 Tworzenie dostępnej treści",
         "noteId": "notes-c-11-8-2"
       },
-      "evaluationType": "Inspekcja i test"
+      "evaluationType": "Inspekcja i test",
+      "detailedChecklist": [
+        "<strong>Wsparcie tworzenia:</strong> sprawdź, czy narzędzie umożliwia dodawanie informacji o dostępności (np. pola na tekst alternatywny).",
+        "<strong>Test praktyczny:</strong> Spróbuj stworzyć dostępny dokument; sprawdź, czy narzędzie to ułatwia."
+      ]
     },
     {
       "type": "heading",
@@ -3370,7 +3466,11 @@
         "legend": "Wybierz wynik dla C.11.8.3 Zachowanie informacji o&nbsp;dostępności podczas transformacji",
         "noteId": "notes-c-11-8-3"
       },
-      "evaluationType": "Inspekcja i test"
+      "evaluationType": "Inspekcja i test",
+      "detailedChecklist": [
+        "<strong>Zachowanie informacji:</strong> sprawdź, czy podczas konwersji/zapisu (transformacji) informacje o dostępności nie są tracone.",
+        "<strong>Test praktyczny:</strong> Przekonwertuj dokument dostępny; sprawdź wynik pod kątem utraty danych dostępności."
+      ]
     },
     {
       "type": "heading",
@@ -3404,7 +3504,11 @@
         "legend": "Wybierz wynik dla C.11.8.4 Wspomaganie naprawy",
         "noteId": "notes-c-11-8-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Sugestie naprawy:</strong> sprawdź, czy narzędzie wykrywa błędy dostępności i sugeruje, jak je naprawić.",
+        "<strong>Test praktyczny:</strong> Stwórz treść z błędem; uruchom sprawdzanie; zobacz czy jest sugestia naprawy."
+      ]
     },
     {
       "type": "heading",
@@ -3440,6 +3544,10 @@
         "noteId": "notes-c-11-8-5"
       },
       "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Dostępne szablony:</strong> sprawdź, czy narzędzie oferuje szablony, które są dostępne (np. mają odpowiedni kontrast, strukturę nagłówków).",
+        "<strong>Wybór szablonu:</strong> Spróbuj stworzyć nową treść używając szablonu; sprawdź czy wynikowa treść jest dostępna."
+      ],
       "notes": [
         "Identyfikacja zgodna z&nbsp;wymaganiami Rozdziałów 9 lub 10 (odpowiednio) opisanymi w&nbsp;kryterium 2 może być opisana słowami „Zgodna z&nbsp;WCAG 2.1” . Jeśli podczas identyfikacji nie można wyraźnie stwierdzić, że wszystkie wymagania określone w&nbsp;Rozdziałach 9 lub 10 (w zależności od przypadku) są spełnione, może być konieczne wykorzystanie szablonu do stworzenia strony internetowej lub dokumentu, a&nbsp;na- stępnie przetestowanie tej strony internetowej lub dokumentu zgodnie z&nbsp;wymaganiami Rozdziałów 9 lub 10 w&nbsp;celu uzyskania całkowitej pewności, że szablon zachowuje się tak, jak jest to wymagane. C.12 Dokumentacja i&nbsp;wsparcie techniczne"
       ]
