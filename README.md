@@ -153,6 +153,30 @@ Niektóre klauzule mają dynamiczne elementy, gdzie dostępne opcje zależą od 
 
    - Logika w JS (audit.js) już obsługuje podstawowe warunki wstępne; rozszerz o sprawdzanie `conditional` podczas renderowania, aby dynamicznie ukrywać/pokazywać elementy. Nie trzeba modyfikować JS, jeśli dodasz obsługę w funkcji renderowania.
 
+3. **Implikacje (implications)**: Wynik jednego testu automatycznie ustawia statusy innych testów.
+
+   - **Jak ustawić w JSON**: Dodaj pole `implications` do elementów `content`:
+     ```json
+     {
+       "type": "test",
+       "implications": [
+         {
+           "whenStatus": "Zaliczone",
+           "targetScope": "^C\\.11\\.5\\.2\\..*",
+           "setStatus": "Nie dotyczy",
+           "setNote": "Nie dotyczy, ponieważ funkcjonalność zamknięta jest zgodna z klauzulą 5.1 (zgodnie z wynikiem C.11.5.1)."
+         }
+       ],
+       // ... reszta pól
+     }
+     ```
+     - `whenStatus`: Status tego testu, który wyzwala implikację (np. "Zaliczone").
+     - `targetScope`: Wyrażenie regularne pasujące do ID docelowych testów (np. "^C\.11\.5\.2\..*").
+     - `setStatus`: Status do ustawienia dla pasujących testów (np. "Nie dotyczy").
+     - `setNote`: Opcjonalna notka do dodania do docelowych testów.
+
+   - Przykład: Jeśli test C.11.5.1 jest "Zaliczone", wszystkie testy C.11.5.2.* automatycznie stają się "Nie dotyczy" z odpowiednią notką.
+
 ### Generowanie EARL
 
 Raporty JSON są w formacie EARL (Evaluation and Report Language), standardzie W3C dla raportów dostępności. Funkcja `generateEARL` w `utils.js` konwertuje stan aplikacji na obiekt EARL.
