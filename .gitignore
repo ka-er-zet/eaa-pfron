@@ -31,3 +31,13 @@ clauses/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Additional files to ignore
+clauses_json_backup*/
+clauses_json_pdf/
+*report*.txt
+*report*.html
+discrepancies*
+json_diff*
+menu*
+testowy*
