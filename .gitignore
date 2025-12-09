@@ -1,6 +1,9 @@
 # Ignore PDF files
 *.pdf
 
+# Ignore RTF files
+*.rtf
+
 # Ignore proba directory
 proba/
 
