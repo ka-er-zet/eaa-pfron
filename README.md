@@ -114,7 +114,7 @@ Pliki JSON w `clauses_json/` definiują testy dostępności. Każdy plik odpowia
 
 #### Autowypełnianie klauzul
 
-Niektóre klauzule mają dynamiczne elementy, gdzie dostępne opcje zależą od warunków wstępnych lub innych testów. Obecnie zdefiniowane są trzy przypadki:
+Niektóre klauzule mają dynamiczne elementy, gdzie dostępne opcje zależą od warunków wstępnych lub innych testów. Obecnie zdefiniowane są dwa przypadki:
 
 1. **Testy pochodne (derived tests)**: Wynik testu jest automatycznie wyliczany na podstawie wyników innych testów. Jeśli test ma pole `derivations` (lista ID zależnych testów) lub jest objęty aktywną implikacją (`activeImp`), to:
    - Nie pokazuje formularza wyboru – status jest obliczany automatycznie.
@@ -137,27 +137,7 @@ Niektóre klauzule mają dynamiczne elementy, gdzie dostępne opcje zależą od 
      - `mode`: Tryb obliczania ("strict-pass", "worst-case", "any-subgroup-pass"). W "strict-pass" wynik jest "Zaliczone" tylko jeśli wszystkie zależne są "Zaliczone". Jeśli jakikolwiek zależny jest "Niezaliczone", wynik jest "Niezaliczone".
      - Alternatywnie, użyj `activeImp` dla bardziej złożonych implikacji (np. logicznych warunków).
 
-2. **Testy zależne** (hipotetyczne rozszerzenie): Wybory w wielu testach wpływają na widoczność lub treść jednego z testów. Obecnie niezaimplementowane, ale przygotowane dla przyszłych rozszerzeń.
-
-   - **Jak ustawić w JSON** (przyszłe):
-     ```json
-     {
-       "type": "test",
-       "conditional": {
-         "dependsOn": ["testId1", "testId2"],  // Lista ID testów, od których zależy
-         "condition": "all_passed",  // Warunek: "all_passed", "any_failed", itp.
-         "action": "show"  // Akcja: "show", "hide", "modify_content"
-       },
-       // ... reszta pól
-     }
-     ```
-     - `dependsOn`: Lista ID testów (np. "c6.1.1").
-     - `condition`: "all_passed" (wszystkie zależne muszą być "Zaliczone"), "any_failed" (jakikolwiek "Niezaliczone"), "precondition_not_met" (warunki wstępne nie spełnione).
-     - `action`: "show" (pokaż element), "hide" (ukryj), "modify_content" (zmień treść na podstawie stanu).
-
-   - Obecnie warunki wstępne są wyświetlane statycznie; rozszerzenie wymagałoby modyfikacji JS do dynamicznego ukrywania/pokazywania elementów.
-
-3. **Implikacje (implications)**: Wynik jednego testu automatycznie ustawia statusy innych testów.
+2. **Implikacje (implications)**: Wynik jednego testu automatycznie ustawia statusy innych testów.
 
    - **Jak ustawić w JSON**: Dodaj pole `implications` do elementów `content`:
      ```json
