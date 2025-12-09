@@ -116,11 +116,22 @@ Pliki JSON w `clauses_json/` definiują testy dostępności. Każdy plik odpowia
 
 Niektóre klauzule mają dynamiczne elementy, gdzie dostępne opcje zależą od warunków wstępnych lub innych testów. Obecnie zdefiniowane są dwa przypadki:
 
-1. . **Testy pochodne (derived tests)**: Wynik testu jest automatycznie wyliczany na podstawie wyników innych testów. Jeśli test ma pole `derivations` (lista ID zależnych testów) lub jest objęty aktywną implikacją (`activeImp`), to:
+1. **Testy pochodne (derived tests)**: Wynik testu jest automatycznie wyliczany na podstawie wyników innych testów. Jeśli test ma pole `derivations` (lista ID zależnych testów) lub jest objęty aktywną implikacją (`activeImp`), to:
    - Nie pokazuje formularza wyboru – status jest obliczany automatycznie.
    - Jeśli status już obliczony, wyświetla ikonę i etykietę (np. "Zaliczone" z zieloną ikoną).
    - Jeśli nie, pokazuje komunikat "Wynik tego testu zostanie wyliczony automatycznie po uzupełnieniu powiązanych testów."
    - Przykład: Testy z `derivations: ["c6.1.1", "c6.1.2"]` – jeśli oba zależne są "Zaliczone", ten test automatycznie staje się "Zaliczone".
+
+   - **Jak ustawić w JSON**: Dodaj pola do elementów `content`:
+     ```json
+     {
+       "type": "test",
+       "derivations": ["c6.1.1", "c6.1.2"],  // Lista ID testów, od których zależy wynik
+       // ... reszta pól
+     }
+     ```
+     - `derivations`: Lista ID testów (np. "c6.1.1"). Wynik jest "Zaliczone" tylko jeśli wszystkie zależne są "Zaliczone". Jeśli jakikolwiek zależny jest "Niezaliczone" lub "Nie dotyczy", wynik jest "Niezaliczone".
+     - Alternatywnie, użyj `activeImp` dla bardziej złożonych implikacji (np. logicznych warunków).
 
 2. **Testy zależne**: Wybory w wielu testach wpływają na wynik jednego z testów.
 
