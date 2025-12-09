@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     lucide.createIcons();
 
-    // Mobile Menu Toggle
+    // Przełączanie menu mobilnego
     const menuToggle = document.getElementById('menu-toggle');
     const appLayout = document.getElementById('app-layout');
     const sidebar = document.getElementById('sidebar');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const openMenu = () => {
             appLayout.classList.add('mobile-menu-open');
             menuToggle.setAttribute('aria-expanded', 'true');
-            // Make sidebar programmatically focusable and focus it
+            // Uczyń pasek boczny programowo fokowalnym i skup się na nim
             sidebar.setAttribute('tabindex', '-1');
             sidebar.focus({ preventScroll: true });
         };
@@ -26,59 +26,65 @@ document.addEventListener('DOMContentLoaded', async () => {
         menuToggle.addEventListener('click', () => {
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             if (isExpanded) {
-                closeMenu(true); // Return focus to toggle when closing via toggle
+                closeMenu(true); // Zwróć fokus do przełącznika przy zamykaniu przez przełącznik
             } else {
                 openMenu();
             }
         });
 
-        // Close menu when clicking a link in the sidebar
+        // Zamknij menu przy kliknięciu linku w pasku bocznym
         sidebar.addEventListener('click', (e) => {
             if (e.target.tagName === 'A' || e.target.closest('a')) {
-                // Don't return focus to toggle, as user is navigating to content
+                // Nie zwracaj fokusu do przełącznika, ponieważ użytkownik nawiguje do treści
                 closeMenu(false); 
             }
         });
 
-        // Close menu when clicking outside
+        // Zamknij menu przy kliknięciu na zewnątrz
         document.addEventListener('click', (e) => {
             if (appLayout.classList.contains('mobile-menu-open') && 
                 !sidebar.contains(e.target) && 
                 !menuToggle.contains(e.target)) {
-                closeMenu(false); // Focus stays where user clicked (or body)
+                closeMenu(false); // Fokus zostaje tam, gdzie użytkownik kliknął (lub body)
             }
         });
 
-        // Handle Escape key
+        // Obsługa klawisza Escape
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && appLayout.classList.contains('mobile-menu-open')) {
-                closeMenu(true); // Return focus to toggle
+                closeMenu(true); // Zwróć fokus do przełącznika
             }
         });
     }
 
-    // Load State immediately to ensure it's available for event listeners
+    // Załaduj stan natychmiast, aby był dostępny dla detektorów zdarzeń
     const state = window.utils.loadState();
+    console.log('State loaded:', state);
 
-    // Helper to generate filename for state export
+    // Funkcja pomocnicza do generowania nazwy pliku dla eksportu stanu
     const getAuditFilename = () => {
         const date = new Date().toISOString().split('T')[0];
         const product = (state.product || 'audit').replace(/[^a-z0-9]/gi, '_').toLowerCase();
         return `audit_earl_${product}_${date}.json`;
     };
 
-    // Handle Ctrl+S / Cmd+S to save
+    // Obsługa Ctrl+S / Cmd+S do zapisywania
     document.addEventListener('keydown', (e) => {
         if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            // Nie zapisuj, jeśli fokus na input/textarea
+            if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+                return;
+            }
             e.preventDefault();
+            console.log('Ctrl+S pressed, saving...');
             
-            // 1. Save to localStorage
+            // 1. Zapisz do localStorage
             window.utils.saveState(state);
 
-            // 2. Generate EARL Report
+            // 2. Wygeneruj raport EARL
             const earlReport = window.utils.generateEARL(state);
 
-            // 3. Download State as JSON (EARL format)
+            // 3. Pobierz stan jako JSON (format EARL)
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(earlReport, null, 2));
             const downloadAnchorNode = document.createElement('a');
             downloadAnchorNode.setAttribute("href", dataStr);
@@ -87,7 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             downloadAnchorNode.click();
             downloadAnchorNode.remove();
             
-            // 4. Accessible Feedback (Screen Reader Only)
+            // 4. Dostępna informacja zwrotna (tylko dla czytników ekranu)
             const liveRegion = document.getElementById('audit-status-live');
             if (liveRegion) {
                 liveRegion.innerText = 'Zapisano postęp audytu i pobrano plik EARL.';
@@ -95,13 +101,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Handle Home Link Click
+    // Obsługa kliknięcia linku do strony głównej
     const homeLink = document.getElementById('app-logo');
     if (homeLink) {
         homeLink.addEventListener('click', async (e) => {
-            e.preventDefault(); // Always prevent default navigation first
+            e.preventDefault(); // Zawsze zapobiegaj domyślnej nawigacji najpierw
 
-            // Check if there is any progress
+            // Sprawdź, czy jest jakiś postęp
             const hasProgress = state.tests && state.tests.some(test => {
                 const res = state.results[test.id];
                 return res && (res.status || res.note);
@@ -111,24 +117,24 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const stay = await window.utils.confirm(
                     "Masz niezapisane wyniki. Jeśli wyjdziesz, stracisz je. Czy chcesz przejść na stronę główną?",
                     "Niezapisane zmiany",
-                    "Nie", // Primary button (Confirm) -> Returns true -> Stay
-                    "Tak"  // Secondary button (Cancel) -> Returns false -> Leave
+                    "Nie", // Główny przycisk (Potwierdź) -> Zwraca true -> Zostań
+                    "Tak"  // Drugi przycisk (Anuluj) -> Zwraca false -> Wyjdź
                 );
 
-                // If user clicked "Tak" (Secondary/Cancel), stay is false.
+                // Jeśli użytkownik kliknął "Tak" (Drugi/Anuluj), stay jest false.
                 if (!stay) {
                     window.location.href = 'index.html';
                 }
             } else {
-                // No progress, safe to navigate
+                // Brak postępu, bezpieczna nawigacja
                 window.location.href = 'index.html';
             }
         });
     }
 
-    // --- Function Definitions ---
+    // --- Definicje funkcji ---
 
-    // Skip nav link behavior: focus test content
+    // Zachowanie linku pomijania nawigacji: skupienie na treści testu
     const skipNav = document.querySelector('.skip-nav-link');
     if (skipNav) {
         skipNav.addEventListener('click', (e) => {
@@ -139,7 +145,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function sanitizeForDomId(str) {
-        // Convert any potentially problematic characters into safe ones for DOM ids and URL fragments
+        // Konwertuje potencjalnie problematyczne znaki na bezpieczne dla identyfikatorów DOM i fragmentów URL
         return String(str).replace(/[^a-zA-Z0-9_-]/g, '-');
     }
 
@@ -182,19 +188,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Local map for clause titles (populated by loadClauses)
+    // Lokalna mapa tytułów klauzul (wypełniana przez loadClauses)
     const clauseTitles = {};
 
     function formatClauseTitle(clauseId, rawTitle) {
-        // Prefer to extract a short label: e.g. from "Audyt Klauzuli 5: Wymagania ogólne"
-        // produce "C.5 wymagania ogólne" (lower-case first char of subtitle)
+        // Preferuj wyodrębnienie krótkiej etykiety, np. z "Audyt Klauzuli 5: Wymagania ogólne"
+        // wyprodukuj "C.5 wymagania ogólne" (mała litera pierwszej litery podtytułu)
         const idNumber = String(clauseId).replace(/^c/i, '').trim();
         let subtitle = (rawTitle || '').split(':').pop().trim();
         if (!subtitle || subtitle === rawTitle) {
-            // fallback: remove any leading 'Audyt Klauzuli N:' etc
+            // fallback: usuń wszelkie początkowe 'Audyt Klauzuli N:' itp
             subtitle = rawTitle.replace(/.*:\s*/g, '').trim();
         }
-        // ensure first char lower-case as requested
+        // upewnij się, że pierwsza litera jest mała, jak zażądano
         if (subtitle && subtitle.length > 0) {
             subtitle = subtitle.charAt(0).toLowerCase() + subtitle.slice(1);
         }
@@ -207,7 +213,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!container) return;
 
         container.innerHTML = '';
-        // Create a semantic list for navigation
+        // Utwórz semantyczną listę dla nawigacji
         const ul = document.createElement('ul');
         ul.className = 'nav-list';
         let completed = 0;
@@ -215,10 +221,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         let lastClauseId = null;
         state.tests.forEach((item, idx) => {
-            // Determine effective clauseId for this item (handle headings without ID)
+            // Określ efektywny clauseId dla tego elementu (obsługa nagłówków bez ID)
             let effectiveClauseId = item.clauseId;
             if (!effectiveClauseId && item.type === 'heading') {
-                // Look ahead for the next item with a clauseId
+                // Poszukaj następnego elementu z clauseId
                 for (let i = idx + 1; i < state.tests.length; i++) {
                     if (state.tests[i].clauseId) {
                         effectiveClauseId = state.tests[i].clauseId;
@@ -227,7 +233,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
 
-            // Insert clause header when we encounter first item of a new clause
+            // Wstaw nagłówek klauzuli, gdy napotkasz pierwszy element nowej klauzuli
             let clauseHeaderInserted = false;
             let currentClauseTitle = '';
             if (effectiveClauseId && effectiveClauseId !== lastClauseId) {
@@ -242,12 +248,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 clauseHeaderInserted = true;
             }
 
-            // Handle Headings
+            // Obsługa nagłówków
             if (item.type === 'heading') {
-                // Smart Filter: Only show headings that have tests in their section (including sub-headings)
+                // Inteligentny filtr: pokaż nagłówki tylko wtedy, gdy mają testy w swojej sekcji (w tym pod-nagłówki)
                 let hasTestsInSection = false;
                 const currentLevel = item.level || 3;
-                // Find the end of this section: next heading with level <= currentLevel
+                // Znajdź koniec tej sekcji: następny nagłówek z poziomem <= currentLevel
                 let sectionEndIdx = idx + 1;
                 for (; sectionEndIdx < state.tests.length; sectionEndIdx++) {
                     const nextItem = state.tests[sectionEndIdx];
@@ -256,18 +262,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
                     if (nextItem.type !== 'heading') {
                         hasTestsInSection = true;
-                        break; // No need to check further
+                        break; // Nie ma potrzeby sprawdzać dalej
                     }
                 }
                 if (!hasTestsInSection) {
-                    return; // Skip this heading
+                    return; // Pomiń ten nagłówek
                 }
 
-                // Check for duplicate clause title
+                // Sprawdź duplikat tytułu klauzuli
                 if (clauseHeaderInserted) {
                     const normClause = String(currentClauseTitle).toLowerCase().replace(/[^a-zpl]/g, '');
                     const normItem = String(item.title).toLowerCase().replace(/[^a-zpl]/g, '');
-                    // If the heading text is substantially contained in the clause title (or vice versa), skip it
+                    // Jeśli tekst nagłówka jest zasadniczo zawarty w tytule klauzuli (lub odwrotnie), pomiń go
                     if (normClause.includes(normItem) || normItem.includes(normClause)) {
                         return;
                     }
@@ -282,10 +288,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return;
             }
 
-            // Handle Tests
+            // Obsługa testów
             totalTests++;
             const res = state.results[item.id] || { status: null };
-                        // If this item belongs to a new clause, update tracking so we don't add duplicate
+                        // Jeśli ten element należy do nowej klauzuli, zaktualizuj śledzenie, aby nie dodać duplikatu
                         if (item.clauseId && item.clauseId !== lastClauseId) {
                             lastClauseId = item.clauseId;
                         }
@@ -314,7 +320,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (res.status === 'nt' || res.status === 'Nie do sprawdzenia') {
                 icon = 'help-circle';
                 color = 'var(--nt-color)';
-                statusText = 'Nie do sprawdzenia';
+                statusText = 'Nie testowany';
             }
 
             const li = document.createElement('li');
@@ -342,7 +348,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             a.setAttribute('aria-controls', anchorDomId);
             if (active) a.setAttribute('aria-current', 'true');
 
-            // Apply orphan fix for visual rendering
+            // Zastosuj poprawkę sierot do renderowania wizualnego
             displayTitle = window.utils.fixOrphans(displayTitle);
 
             const activate = (e) => {
@@ -350,7 +356,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Update the URL hash to represent the selected test
                 try { history.replaceState(null, '', `#${anchorDomId}`); } catch (err) { location.hash = `#${anchorDomId}`; }
                 renderTest(idx);
-                // Scroll to top of page and move focus to the main content area for screen readers
+                // Przewiń na górę strony i przenieś fokus do głównego obszaru treści dla czytników ekranu
                 setTimeout(() => {
                     const testRenderer = document.getElementById('test-renderer');
                     if (testRenderer) testRenderer.focus({ preventScroll: true });
@@ -508,19 +514,34 @@ document.addEventListener('DOMContentLoaded', async () => {
                  
                  // 0. Protect allowed tags (replace with placeholders)
                  let protectedStr = str
-                    .replace(/<strong>/g, "___TAG_STRONG___")
-                    .replace(/<\/strong>/g, "___TAG_END_STRONG___")
-                    .replace(/<em>/g, "___TAG_EM___")
-                    .replace(/<\/em>/g, "___TAG_END_EM___")
-                    .replace(/<br>/g, "___TAG_BR___")
-                    .replace(/<ol>/g, "___TAG_OL___")
-                    .replace(/<\/ol>/g, "___TAG_END_OL___")
-                    .replace(/<ul>/g, "___TAG_UL___")
-                    .replace(/<\/ul>/g, "___TAG_END_UL___")
-                    .replace(/<li>/g, "___TAG_LI___")
-                    .replace(/<\/li>/g, "___TAG_END_LI___")
-                    .replace(/<code>/g, "___TAG_CODE___")
-                    .replace(/<\/code>/g, "___TAG_END_CODE___");
+                    .replace(/<strong>/g, "###TAG_STRONG###")
+                    .replace(/<\/strong>/g, "###TAG_END_STRONG###")
+                    .replace(/<em>/g, "###TAG_EM###")
+                    .replace(/<\/em>/g, "###TAG_END_EM###")
+                    .replace(/<br>/g, "###TAG_BR###")
+                    .replace(/<ol>/g, "###TAG_OL###")
+                    .replace(/<\/ol>/g, "###TAG_END_OL###")
+                    .replace(/<ul>/g, "###TAG_UL###")
+                    .replace(/<\/ul>/g, "###TAG_END_UL###")
+                    .replace(/<li>/g, "###TAG_LI###")
+                    .replace(/<\/li>/g, "###TAG_END_LI###")
+                    .replace(/<code>/g, "###TAG_CODE###")
+                    .replace(/<\/code>/g, "###TAG_END_CODE###")
+                    .replace(/<table([^>]*)>/g, "###TAG_TABLE$1###")
+                    .replace(/<\/table>/g, "###TAG_END_TABLE###")
+                    .replace(/<thead>/g, "###TAG_THEAD###")
+                    .replace(/<\/thead>/g, "###TAG_END_THEAD###")
+                    .replace(/<tbody>/g, "###TAG_TBODY###")
+                    .replace(/<\/tbody>/g, "###TAG_END_TBODY###")
+                    .replace(/<tr([^>]*)>/g, "###TAG_TR$1###")
+                    .replace(/<\/tr>/g, "###TAG_END_TR###")
+                    .replace(/<th([^>]*)>/g, "###TAG_TH$1###")
+                    .replace(/<\/th>/g, "###TAG_END_TH###")
+                    .replace(/<td([^>]*)>/g, "###TAG_TD$1###")
+                    .replace(/<\/td>/g, "###TAG_END_TD###")
+                    .replace(/<caption>/g, "###TAG_CAPTION###")
+                    .replace(/<\/caption>/g, "###TAG_END_CAPTION###")
+                    .replace(/<img([^>]*)>/g, "###TAG_IMG$1###");
 
                  // 1. Escape all HTML, but preserve existing entities
                  let escaped = protectedStr
@@ -532,19 +553,34 @@ document.addEventListener('DOMContentLoaded', async () => {
                  
                  // 2. Restore protected tags
                  let restored = escaped
-                    .replace(/___TAG_STRONG___/g, "<strong>")
-                    .replace(/___TAG_END_STRONG___/g, "</strong>")
-                    .replace(/___TAG_EM___/g, "<em>")
-                    .replace(/___TAG_END_EM___/g, "</em>")
-                    .replace(/___TAG_BR___/g, "<br>")
-                    .replace(/___TAG_OL___/g, "<ol>")
-                    .replace(/___TAG_END_OL___/g, "</ol>")
-                    .replace(/___TAG_UL___/g, "<ul>")
-                    .replace(/___TAG_END_UL___/g, "</ul>")
-                    .replace(/___TAG_LI___/g, "<li>")
-                    .replace(/___TAG_END_LI___/g, "</li>")
-                    .replace(/___TAG_CODE___/g, "<code>")
-                    .replace(/___TAG_END_CODE___/g, "</code>");
+                    .replace(/###TAG_STRONG###/g, "<strong>")
+                    .replace(/###TAG_END_STRONG###/g, "</strong>")
+                    .replace(/###TAG_EM###/g, "<em>")
+                    .replace(/###TAG_END_EM###/g, "</em>")
+                    .replace(/###TAG_BR###/g, "<br>")
+                    .replace(/###TAG_OL###/g, "<ol>")
+                    .replace(/###TAG_END_OL###/g, "</ol>")
+                    .replace(/###TAG_UL###/g, "<ul>")
+                    .replace(/###TAG_END_UL###/g, "</ul>")
+                    .replace(/###TAG_LI###/g, "<li>")
+                    .replace(/###TAG_END_LI###/g, "</li>")
+                    .replace(/###TAG_CODE###/g, "<code>")
+                    .replace(/###TAG_END_CODE###/g, "</code>")
+                    .replace(/###TAG_TABLE([^#]*)###/g, (match, attrs) => `<table${attrs.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}>`)
+                    .replace(/###TAG_END_TABLE###/g, "</table>")
+                    .replace(/###TAG_THEAD###/g, "<thead>")
+                    .replace(/###TAG_END_THEAD###/g, "</thead>")
+                    .replace(/###TAG_TBODY###/g, "<tbody>")
+                    .replace(/###TAG_END_TBODY###/g, "</tbody>")
+                    .replace(/###TAG_TR([^#]*)###/g, (match, attrs) => `<tr${attrs.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}>`)
+                    .replace(/###TAG_END_TR###/g, "</tr>")
+                    .replace(/###TAG_TH([^#]*)###/g, (match, attrs) => `<th${attrs.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}>`)
+                    .replace(/###TAG_END_TH###/g, "</th>")
+                    .replace(/###TAG_TD([^#]*)###/g, (match, attrs) => `<td${attrs.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}>`)
+                    .replace(/###TAG_END_TD###/g, "</td>")
+                    .replace(/###TAG_CAPTION###/g, "<caption>")
+                    .replace(/###TAG_END_CAPTION###/g, "</caption>")
+                    .replace(/###TAG_IMG([^#]*)###/g, (match, attrs) => `<img${attrs.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}>`);
 
                  // 3. Restore links (special handling for attributes)
                  return restored

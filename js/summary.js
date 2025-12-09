@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
-    // Load State
+    // Załaduj stan
     const state = window.utils.loadState();
     if (!state.product && state.tests.length === 0) {
         alert("Brak danych audytu. Przekierowanie do strony startowej.");
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // 1. Calculate Stats
+    // 1. Oblicz statystyki
     const stats = window.utils.getAuditStats(state);
     const results = state.results || {};
     
@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const ntTests = stats.lists.nt;
     const verifyTests = stats.lists.verify;
 
-    // 2. Render Header
+    // 2. Renderuj nagłówek
     document.getElementById('summary-product').innerText = state.product || 'Audyt Dostępności';
 
-    // 3. Render Verdict
+    // 3. Renderuj werdykt
     const verdictCard = document.getElementById('verdict-card');
     const verdictTitle = document.getElementById('verdict-title');
     const verdictDesc = document.getElementById('verdict-desc');
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     lucide.createIcons();
 
-    // 4. Render Lists
+    // 4. Renderuj listy
     const renderList = (containerId, items, type) => {
         const container = document.getElementById(containerId);
         if (!container) return;
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('count-nt').innerText = ntTests.length;
     document.getElementById('count-pass').innerText = passedTests.length;
 
-    // 5. Executive Summary
+    // 5. Podsumowanie wykonawcze
     const summaryText = document.getElementById('executive-summary');
     if (state.executiveSummary) {
         summaryText.value = state.executiveSummary;
@@ -160,13 +160,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if ((e.ctrlKey || e.metaKey) && e.key === 's') {
             e.preventDefault();
             
-            // 1. Save to localStorage
+            // 1. Zapisz do localStorage
             window.utils.saveState(state);
 
-            // 2. Generate EARL Report
+            // 2. Generuj raport EARL
             const report = window.utils.generateEARL(state);
 
-            // 3. Download State as JSON (EARL format)
+            // 3. Pobierz stan jako JSON (format EARL)
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(report, null, 2));
             const downloadAnchorNode = document.createElement('a');
             downloadAnchorNode.setAttribute("href", dataStr);
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadAnchorNode.click();
             downloadAnchorNode.remove();
             
-            // 4. Accessible Feedback (Screen Reader Only)
+            // 4. Dostępna informacja zwrotna (tylko dla czytników ekranu)
             // We can reuse the live region if it exists in summary.html, or create a temp one.
             // summary.html doesn't seem to have 'audit-status-live' based on previous reads, let's check.
             // Actually, I'll just add a simple alert or reuse the toast logic if I hadn't deleted it.
@@ -237,12 +237,13 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadAnchorNode.remove();
     });
 
-    // PDF Export (mapped to ODT for now)
+    // ODT Export
     document.getElementById('export-odt-btn').addEventListener('click', () => {
          exportToODT(state);
     });
 
     function exportToODT(state) {
+        console.log('Exporting to ODT with new styles...');
         const stats = window.utils.getAuditStats(state);
         const zip = new JSZip();
         const reportTitle = `Raport: ${state.product}`;
@@ -250,7 +251,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const stylesXml = `<?xml version="1.0" encoding="UTF-8"?>
 <office:document-styles xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" office:version="1.2">
     <office:styles>
-        <style:style style:name="Standard" style:family="paragraph" />
+        <style:style style:name="Standard" style:family="paragraph">
+            <style:text-properties fo:language="pl" fo:country="PL" />
+        </style:style>
         <style:style style:name="T1" style:family="paragraph" style:parent-style-name="Standard">
             <style:text-properties fo:font-size="24pt" fo:font-weight="bold" />
         </style:style>
@@ -258,7 +261,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <style:text-properties fo:font-size="18pt" fo:font-weight="bold" />
         </style:style>
         <style:style style:name="H2" style:family="paragraph" style:parent-style-name="Standard">
-            <style:text-properties fo:font-size="14pt" fo:font-weight="bold" />
+            <style:text-properties fo:font-size="16pt" fo:font-weight="bold" />
+        </style:style>
+        <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Standard">
+            <style:text-properties fo:font-size="12pt" />
+        </style:style>
+        <style:style style:name="H3" style:family="paragraph" style:parent-style-name="Standard">
+            <style:text-properties fo:font-size="12pt" fo:font-weight="bold" />
         </style:style>
         <style:style style:name="Tbl1" style:family="table">
             <style:table-properties table:border-model="collapsing" />
@@ -267,53 +276,96 @@ document.addEventListener('DOMContentLoaded', () => {
         <style:style style:name="Tbl1.B" style:family="table-column"><style:table-column-properties style:column-width="8cm"/></style:style>
         <style:style style:name="Tbl1.C" style:family="table-column"><style:table-column-properties style:column-width="3cm"/></style:style>
         <style:style style:name="Tbl1.D" style:family="table-column"><style:table-column-properties style:column-width="5cm"/></style:style>
+        <style:style style:name="Tbl1.A1" style:family="table-cell">
+            <style:table-cell-properties fo:border="0.5pt solid #000000" fo:padding="0.1cm" fo:background-color="#ffcccc"/>
+            <style:text-properties fo:font-weight="bold"/>
+        </style:style>
+        <style:style style:name="Tbl1.A2" style:family="table-cell">
+            <style:table-cell-properties fo:border="0.5pt solid #000000" fo:padding="0.1cm"/>
+        </style:style>
+        <style:style style:name="Tbl1.Row" style:family="table-row">
+            <style:table-row-properties fo:keep-together="auto" fo:margin-bottom="0.2cm"/>
+        </style:style>
     </office:styles>
+    <office:automatic-styles>
+        <style:page-layout style:name="Mpm1">
+            <style:page-layout-properties fo:page-width="29.7cm" fo:page-height="21cm" style:print-orientation="landscape" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm"/>
+        </style:page-layout>
+    </office:automatic-styles>
+    <office:master-styles>
+        <style:master-page style:name="Standard" style:page-layout-name="Mpm1"/>
+    </office:master-styles>
 </office:document-styles>`;
 
         let contentXml = `<?xml version="1.0" encoding="UTF-8"?>
 <office:document-content xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" office:version="1.2">
     <office:body>
         <office:text>
-            <text:p text:style-name="T1">${window.utils.xmlEscape(reportTitle)}</text:p>
-            <text:p>Data: ${new Date().toLocaleString()}</text:p>`;
+            <text:h text:style-name="H1" text:outline-level="1">Raport</text:h>
+            <text:h text:style-name="H2" text:outline-level="2">${window.utils.xmlEscape(state.product || 'Audyt Dostępności')}</text:h>
+            <text:p></text:p>
+            <text:p text:style-name="P1">Data: ${new Date().toLocaleString()}</text:p>`;
         
         if (state.auditor) {
-            contentXml += `<text:p>Audytor: ${window.utils.xmlEscape(state.auditor)}</text:p>`;
+            contentXml += `<text:p text:style-name="P1">Audytor: ${window.utils.xmlEscape(state.auditor)}</text:p>`;
         }
         if (state.productDesc) {
-            contentXml += `<text:p>Opis: ${window.utils.xmlEscape(state.productDesc)}</text:p>`;
+            contentXml += `<text:p text:style-name="P1">Opis: ${window.utils.xmlEscape(state.productDesc)}</text:p>`;
         }
 
-        contentXml += `<text:p>Wynik audytu: ${window.utils.xmlEscape(stats.verdictLabel)}</text:p>`;
-        contentXml += `<text:p>Statystyki: Zaliczone: ${stats.passed}, Niezaliczone: ${stats.failed}, Nie dotyczy: ${stats.na}, Nietestowalne: ${stats.nt}, Do sprawdzenia: ${stats.toVerify}</text:p>`;
-        contentXml += `<text:p>Komentarz audytora: ${window.utils.xmlEscape(state.executiveSummary || 'Brak')}</text:p>
-            <text:h text:style-name="H1">Wyniki szczegółowe</text:h>
-            <table:table table:name="ReportTable" table:style-name="Tbl1">
+        contentXml += `<text:p></text:p><text:h text:style-name="H2" text:outline-level="2">Audyt ${stats.verdictLabel.toLowerCase()}</text:h>
+            <text:p></text:p>
+            <text:h text:style-name="H3" text:outline-level="3">Komentarz audytora:</text:h>
+            <text:p text:style-name="P1">${window.utils.xmlEscape(state.executiveSummary || 'Brak')}</text:p>
+            <text:p></text:p>
+            <text:h text:style-name="H3" text:outline-level="3">Statystyki</text:h>
+            <text:p></text:p>
+            <text:p text:style-name="P1"> - Zaliczone: ${stats.passed}</text:p>
+            <text:p text:style-name="P1"> - Niezaliczone: ${stats.failed}</text:p>
+            <text:p text:style-name="P1"> - Nie dotyczy: ${stats.na}</text:p>
+            <text:p text:style-name="P1"> - Nietestowalne: ${stats.nt}</text:p>
+            <text:p text:style-name="P1"> - Do sprawdzenia: ${stats.toVerify}</text:p>
+            <text:p></text:p>`;
+
+        const tests = (state.tests || []).filter(t => t.type === 'test');
+
+        // Szczegółowe wyniki po klauzulach
+        for (let i = 5; i <= 13; i++) {
+            const clause = `C.${i}`;
+            const clauseTests = tests.filter(t => t.id.startsWith(clause + '.'));
+            if (clauseTests.length === 0) continue;
+
+            contentXml += `<text:h text:style-name="H3" text:outline-level="3">Klauzula ${clause}</text:h>
+            <text:p></text:p>
+            <table:table table:name="ReportTable${i}" table:style-name="Tbl1">
                 <table:table-column table:style-name="Tbl1.A"/>
                 <table:table-column table:style-name="Tbl1.B"/>
                 <table:table-column table:style-name="Tbl1.C"/>
                 <table:table-column table:style-name="Tbl1.D"/>
                 <table:table-header-rows>
-                    <table:table-row>
-                        <table:table-cell office:value-type="string"><text:p>ID</text:p></table:table-cell>
-                        <table:table-cell office:value-type="string"><text:p>Tytuł</text:p></table:table-cell>
-                        <table:table-cell office:value-type="string"><text:p>Wynik</text:p></table:table-cell>
-                        <table:table-cell office:value-type="string"><text:p>Uwagi</text:p></table:table-cell>
+                    <table:table-row table:style-name="Tbl1.Row">
+                        <table:table-cell table:style-name="Tbl1.A1" office:value-type="string"><text:p>ID</text:p></table:table-cell>
+                        <table:table-cell table:style-name="Tbl1.A1" office:value-type="string"><text:p>Tytuł</text:p></table:table-cell>
+                        <table:table-cell table:style-name="Tbl1.A1" office:value-type="string"><text:p>Wynik</text:p></table:table-cell>
+                        <table:table-cell table:style-name="Tbl1.A1" office:value-type="string"><text:p>Uwagi</text:p></table:table-cell>
                     </table:table-row>
                 </table:table-header-rows>`;
 
-        const tests = (state.tests || []).filter(t => t.type === 'test');
-        tests.forEach(t => {
-            const res = state.results[t.id] || { status: 'brak', note: '' };
-            contentXml += `<table:table-row>
-                <table:table-cell office:value-type="string"><text:p>${window.utils.xmlEscape(t.id)}</text:p></table:table-cell>
-                <table:table-cell office:value-type="string"><text:p>${window.utils.xmlEscape(t.title)}</text:p></table:table-cell>
-                <table:table-cell office:value-type="string"><text:p>${window.utils.xmlEscape(window.utils.getStatusLabel(res.status))}</text:p></table:table-cell>
-                <table:table-cell office:value-type="string"><text:p>${window.utils.xmlEscape(res.note || '')}</text:p></table:table-cell>
-            </table:table-row>`;
-        });
+            clauseTests.forEach(t => {
+                const res = state.results[t.id] || { status: 'brak', note: '' };
+                contentXml += `<table:table-row table:style-name="Tbl1.Row">
+                    <table:table-cell table:style-name="Tbl1.A2" office:value-type="string"><text:p>${window.utils.xmlEscape(t.id)}</text:p></table:table-cell>
+                    <table:table-cell table:style-name="Tbl1.A2" office:value-type="string"><text:p>${window.utils.xmlEscape(t.title.replace(t.id.split('#')[0] + ' ', ''))}</text:p></table:table-cell>
+                    <table:table-cell table:style-name="Tbl1.A2" office:value-type="string"><text:p>${window.utils.xmlEscape(window.utils.getStatusLabel(res.status))}</text:p></table:table-cell>
+                    <table:table-cell table:style-name="Tbl1.A2" office:value-type="string"><text:p>${window.utils.xmlEscape(res.note || '')}</text:p></table:table-cell>
+                </table:table-row>`;
+            });
 
-        contentXml += `</table:table></office:text></office:body></office:document-content>`;
+            contentXml += `</table:table>
+            <text:p></text:p>`;
+        }
+
+        contentXml += `</office:text></office:body></office:document-content>`;
 
         const manifestXml = `<?xml version="1.0" encoding="UTF-8"?>
 <manifest:manifest xmlns:manifest="urn:oasis:names:tc:opendocument:xmlns:manifest:1.0" manifest:version="1.2">

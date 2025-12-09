@@ -1,10 +1,10 @@
-// Utility functions for A11y Audit Tool
+// Funkcje pomocnicze dla Narzędzia Audytowego EAA
 
 const STORAGE_KEY = 'eaa_audit_state';
 
 /**
- * Loads the application state from localStorage.
- * @returns {Object} The saved state or a default initial state.
+ * Ładuje stan aplikacji z localStorage.
+ * @returns {Object} Zapisany stan lub domyślny stan początkowy.
  */
 function loadState() {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -12,34 +12,34 @@ function loadState() {
         try {
             return JSON.parse(saved);
         } catch (e) {
-            console.error("Failed to parse saved state:", e);
+            console.error("Błąd parsowania zapisanego stanu:", e);
         }
     }
     return {
         product: '',
-        executiveSummary: '', // Executive summary text
-        clauses: [], // List of selected clause IDs
-        tests: [],   // Flattened list of all tests
-        results: {}, // Key: testId, Value: { status: null, note: '' }
+        executiveSummary: '', // Tekst podsumowania wykonawczego
+        clauses: [], // Lista wybranych identyfikatorów klauzul
+        tests: [],   // Spłaszczona lista wszystkich testów
+        results: {}, // Klucz: testId, Wartość: { status: null, note: '' }
         currentIdx: 0
     };
 }
 
 /**
- * Saves the application state to localStorage.
- * @param {Object} state The state object to save.
+ * Zapisuje stan aplikacji do localStorage.
+ * @param {Object} state Obiekt stanu do zapisania.
  */
 function saveState(state) {
     try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch (e) {
-        console.error("Failed to save state:", e);
+        console.error("Błąd zapisu stanu:", e);
         alert("Błąd zapisu stanu aplikacji. Sprawdź ustawienia przeglądarki.");
     }
 }
 
 /**
- * Clears the application state from localStorage.
+ * Czyści stan aplikacji z localStorage.
  */
 function clearState() {
     localStorage.removeItem(STORAGE_KEY);
@@ -52,6 +52,8 @@ function clearState() {
  */
 function xmlEscape(str) {
     if (!str) return '';
+    // Zamień spacje niełamliwe na zwykłe spacje
+    str = str.replace(/&nbsp;/g, ' ');
     return str.replace(/[<>&'"]/g, function (c) {
         switch (c) {
             case '<': return '&lt;';
@@ -64,7 +66,7 @@ function xmlEscape(str) {
 }
 
 /**
- * Initializes the theme based on localStorage or system preference.
+ * Inicjalizuje motyw na podstawie localStorage lub preferencji systemu.
  */
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
@@ -75,7 +77,7 @@ function initTheme() {
 }
 
 /**
- * Toggles the theme between light and dark.
+ * Przełącza motyw między jasnym a ciemnym.
  */
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -98,12 +100,12 @@ function updateThemeIcon(theme) {
 }
 
 /**
- * Shows a custom confirmation modal.
- * @param {string} message The message to display.
- * @param {string} title The title of the modal.
- * @param {string} confirmText Text for the confirm button.
- * @param {string} cancelText Text for the cancel button.
- * @returns {Promise<boolean>} Promise resolving to true if confirmed, false otherwise.
+ * Wyświetla niestandardowe okno potwierdzenia.
+ * @param {string} message Wiadomość do wyświetlenia.
+ * @param {string} title Tytuł okna.
+ * @param {string} confirmText Tekst przycisku potwierdzenia.
+ * @param {string} cancelText Tekst przycisku anulowania.
+ * @returns {Promise<boolean>} Promise rozwiązujący się na true jeśli potwierdzone, false w przeciwnym razie.
  */
 function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierdź", cancelText = "Anuluj") {
     return new Promise((resolve) => {
@@ -154,9 +156,9 @@ function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierd�
 }
 
 /**
- * Generates an EARL report from the application state.
- * @param {Object} state The application state.
- * @returns {Object} The EARL report object.
+ * Generuje raport EARL ze stanu aplikacji.
+ * @param {Object} state Stan aplikacji.
+ * @returns {Object} Obiekt raportu EARL.
  */
 function generateEARL(state) {
     const context = {
@@ -168,16 +170,16 @@ function generateEARL(state) {
         "eaa": "https://github.com/ka-er-zet/eaa-pfron#"
     };
 
-    // Assertor (The Tool)
+    // Assertor (Narzędzie)
     const assertor = {
         "@id": "_:assertor",
         "@type": ["earl:Software", "earl:Assertor"],
-        "dct:title": "A11y Audit Tool",
+        "dct:title": "Narzędzie Audytowe EAA",
         "dct:description": "Narzędzie do audytu dostępności cyfrowej wg EN 301 549",
         "dct:hasVersion": "1.0.0"
     };
 
-    // Human Assertor (if provided)
+    // Human Assertor (jeśli podany)
     let mainAssertor = assertor;
     if (state.auditor) {
         const humanAssertor = {
@@ -186,7 +188,7 @@ function generateEARL(state) {
             "foaf:name": state.auditor
         };
         
-        // Create a compound assertor
+        // Utwórz złożony assertor
         mainAssertor = {
             "@id": "_:compoundAssertor",
             "@type": "earl:Assertor",
@@ -195,7 +197,7 @@ function generateEARL(state) {
         };
     }
 
-    // Test Subject (The Product)
+    // Test Subject (Produkt)
     const testSubject = {
         "@id": "_:subject",
         "@type": ["earl:TestSubject", "sch:Product"],
@@ -318,9 +320,9 @@ function parseEARL(earlData) {
 }
 
 /**
- * Calculates audit statistics and verdict based on state.
- * @param {Object} state The application state.
- * @returns {Object} Stats object { total, passed, failed, na, nt, toVerify, verdict, verdictLabel }
+ * Oblicza statystyki audytu i werdykt na podstawie stanu.
+ * @param {Object} state Stan aplikacji.
+ * @returns {Object} Obiekt statystyk { total, passed, failed, na, nt, toVerify, verdict, verdictLabel }
  */
 function getAuditStats(state) {
     const results = state.results || {};
@@ -394,7 +396,7 @@ function getStatusLabel(status) {
     if (status === 'pass' || status === 'Zaliczone') return 'Zaliczone';
     if (status === 'fail' || status === 'Niezaliczone') return 'Niezaliczone';
     if (status === 'na' || status === 'Nie dotyczy') return 'Nie dotyczy';
-    if (status === 'nt' || status === 'Nietestowalne' || status === 'Nie do sprawdzenia') return 'Nietestowalne';
+    if (status === 'nt' || status === 'Nietestowalne' || status === 'Nie do sprawdzenia') return 'Nie testowany';
     return status;
 }
 

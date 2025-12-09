@@ -20,26 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     const data = JSON.parse(json);
                     let state;
 
-                    // Determine format
+                    // Określ format
                     if (data.tests && Array.isArray(data.tests)) {
-                        // Legacy/Internal State Format
+                        // Starszy/Wewnętrzny Format Stanu
                         state = data;
                     } else if (data['@graph'] || data['@context']) {
-                        // EARL Format
+                        // Format EARL
                         state = window.utils.parseEARL(data);
                     } else {
                         throw new Error("Nieznany format pliku.");
                     }
 
-                    // Basic Validation
+                    // Podstawowa walidacja
                     if (!state || typeof state !== 'object') {
                         throw new Error("Nieprawidłowy format danych.");
                     }
 
-                    // Save to localStorage
+                    // Zapisz do localStorage
                     window.utils.saveState(state);
 
-                    // Redirect
+                    // Przekieruj
                     window.location.href = 'audit.html';
 
                 } catch (err) {

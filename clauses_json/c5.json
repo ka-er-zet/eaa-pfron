@@ -56,7 +56,13 @@
       "derivations": {
         "sources": "^C\\.5\\.1\\.[3-6]",
         "mode": "strict-pass"
-      }
+      },
+      "detailedChecklist": [
+        "<strong>Co to jest funkcjonalność zamknięta:</strong> TIK ma funkcjonalność zamkniętą z powodu projektu, polityki lub praktyki. Produkt może być samodzielny – użytkownicy nie mogą dodawać sprzętu lub oprogramowania.",
+        "<strong>Przykłady zamkniętej funkcjonalności:</strong> Komputery bez możliwości instalacji oprogramowania lub zmiany ustawień są funkcjonalnie zamknięte. TIK może być zamknięta w praktyce, nawet jeśli nie była tak zaprojektowana.",
+        "<strong>Uwaga 1:</strong> TIK może zamykać tylko niektóre funkcjonalności. Tylko te zamknięte muszą spełniać wymagania klauzuli 5.1.",
+        "<strong>Uwaga 2:</strong> Wymagania w klauzuli 5 zastępują te z klauzul 5.2–13 dla funkcjonalności zamkniętej. Dotyczy to kompatybilności z technologią wspomagającą lub ustawień dostępności (np. produkty blokujące dostęp do panelu ustawień)."
+      ]
     },
     {
       "type": "heading",
@@ -95,7 +101,16 @@
         "legend": "Wybierz wynik dla C.5.1.3.1 Wyjście audio informacji wizualnych",
         "noteId": "notes-c-5-1-3-1"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Lista informacji wizualnych:</strong> Wypisz wszystkie informacje wizualne wymagane dla funkcji zamkniętych (instrukcje, statusy, komunikaty o błędach, treści nietekstowe).",
+        "<strong>Tryby dostępu niewizualnego:</strong> Sprawdź, że co najmniej jeden tryb dostępu niewizualnego (np. audio, brajl, dotyk) przekazuje tę samą informację.",
+        "<strong>Zachowanie struktury:</strong> Upewnij się, że tryb niewizualny zachowuje strukturę, fokus i relacje, aby użytkownik mógł skorelować go z widocznym ekranem",
+        "<strong>Uruchamianie i zakres:</strong> Opisz, w jaki sposób tryb niewizualny jest uruchamiany i czy obejmuje wszystkie zidentyfikowane elementy.",
+        "<strong>Braki odpowiedników:</strong> Zanotuj wizualne wskazówki, które nadal nie mają odpowiednika w trybie niewizualnym.",
+        "<strong>Uwaga 1:</strong> Dostęp niewizualny może mieć formę audio, w tym mowę, lub formę dotykową, taką jak brajl dla użytkowników głuchoniewidomych.",
+        "<strong>Uwaga 2:</strong> Wizualne informacje potrzebne do umożliwienia korzystania z niektórych funkcji mogą obejmować instrukcje obsługi i orientację, komunikaty transakcyjne, weryfikację danych wejściowych użytkownika, komunikaty o błędach i treści nietekstowe."
+      ]
     },
     {
       "type": "heading",
@@ -129,7 +144,17 @@
         "legend": "Wybierz wynik dla C.5.1.3.2 Wyjściowy sygnał dźwiękowy zawierający mowę",
         "noteId": "notes-c-5-1-3-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Mechanizm wyjścia audio:</strong> Sprawdź, czy wyjście audio dostarczane jest przez mechanizm wbudowany lub przez osobiste słuchawki/standardowe złącze, które można podłączyć bez użycia wzroku.",
+        "<strong>Sposób połączenia:</strong> Opisz sposób połączenia (gniazdo 3,5 mm, standardowe złącze bezprzewodowe, dokowanie) i czy użytkownik może je wykonać samodzielnie.",
+        "<strong>Typ sprzężenia:</strong> Zanotuj, czy mechanizm wykorzystuje głośnik, wbudowane słuchawki, zestaw stereo lub inny sposób dostarczania dźwięku.",
+        "<strong>Pętla indukcyjna:</strong> Jeśli zapewniono pętlę indukcyjną, opisz sposób jej dostępu i dostosowania do użytkownika",
+        "<strong>Ograniczenia dostępu:</strong> Zapisz wszelkie ograniczenia, które uniemożliwiają dostęp do wyjścia audio.",
+        "<strong>Uwaga 1:</strong> Mechanizmy zawarte w TIK lub dostarczane wraz z nią mogą obejmować, ale nie ograniczają się do, głośnika, wbudowanej słuchawki/zestawu słuchawkowego lub innego standardowego urządzenia dźwiękowego.",
+        "<strong>Uwaga 2:</strong> Standardowe połączenie branżowe może być połączeniem bezprzewodowym.",
+        "<strong>Uwaga 3:</strong> Niektórzy użytkownicy mogą skorzystać z zapewnienia pętli indukcyjnej."
+      ]
     },
     {
       "type": "informative",
@@ -167,7 +192,16 @@
         "legend": "Wybierz wynik dla C.5.1.3.4 Sterowanie przez użytkownika wyjściem mowy",
         "noteId": "notes-c-5-1-3-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kontrola wyjścia mowy:</strong> Potwierdź, że wyjście mowy można przerwać i powtórzyć na żądanie, uwzględniając ograniczenia bezpieczeństwa.",
+        "<strong>Test wstrzymania:</strong> Tam, gdzie to możliwe, przetestuj wstrzymanie odtwarzania bez restartu i powtórzenie ostatniego fragmentu.",
+        "<strong>Kontrolki:</strong> Opisz fizyczne lub dotykowe kontrolki, które służą przerwaniu i powtórzeniu komunikatu.",
+        "<strong>Ograniczenia bezpieczeństwa:</strong> Zanotuj polityki lub tryby, które mogą uniemożliwiać przerwanie/ powtórzenie ze względów bezpieczeństwa.",
+        "<strong>Zakres powtórzenia:</strong> Sprawdź, czy powtórzenie obejmuje tylko ostatnią partię treści w zgodzie z najlepszymi praktykami.",
+        "<strong>Uwaga 1:</strong> Najlepszą praktyką jest umożliwienie użytkownikowi wstrzymania wyjścia mowy, a nie tylko jego przerwania.",
+        "<strong>Uwaga 2:</strong> Najlepszą praktyką jest umożliwienie użytkownikowi powtórzenia tylko ostatniej części, zamiast wymagania rozpoczęcia odtwarzania od początku."
+      ]
     },
     {
       "type": "heading",
@@ -202,7 +236,15 @@
         "legend": "Wybierz wynik dla C.5.1.3.5 Automatyczne przerwanie wyjścia mowy",
         "noteId": "notes-c-5-1-3-5"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Automatyczne przerwanie:</strong> Potwierdź, że bieżący komunikat mowy zostaje natychmiast przerwany, gdy użytkownik wykona akcję lub rozpocznie się nowy komunikat.",
+        "<strong>Komunikaty konieczne:</strong> Jeśli istnieją komunikaty, których odsłuchanie jest konieczne (ostrzeżenia), opisz, w jaki sposób system blokuje akcje w zgodzie z klauzulą.",
+        "<strong>Konsystencja przerwania:</strong> Sprawdź, czy przerwanie działa konsekwentnie niezależnie od długości komunikatu i czy nowe audio odtwarza się bez opóźnień.",
+        "<strong>Blokady przerwania:</strong> Zanotuj stany, w których przerwanie jest zablokowane i jak system o tym informuje.",
+        "<strong>Odzyskiwanie kontroli:</strong> Opisz, jak użytkownik odzyskuje kontrolę po przerwaniu.",
+        "<strong>Uwaga:</strong> W przypadkach, gdy konieczne jest, aby użytkownik usłyszał całą wiadomość, np. instrukcję bezpieczeństwa lub ostrzeżenie, TIK może potrzebować zablokować wszystkie działania użytkownika, aby mowa nie została przerwana."
+      ]
     },
     {
       "type": "heading",
@@ -238,7 +280,14 @@
         "legend": "Wybierz wynik dla C.5.1.3.6 Wyjście mowy dla treści nietekstowej",
         "noteId": "notes-c-5-1-3-6"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Potwierdzenie odpowiedników:</strong> Dla każdej treści nietekstowej potwierdź, że mowa zapewnia odpowiednik zgodny z WCAG 2.1 wytyczna 1.1.1.",
+        "<strong>Format opisu:</strong> Opisz, czy to audiodeskrypcja, transkrypt lub inny format i czy przekazuje równoważne znaczenie.",
+        "<strong>Różnicowanie treści:</strong> Upewnij się, że komunikacja głosowa odróżnia elementy dekoracyjne od treści znaczących.",
+        "<strong>Dostęp do nagrania:</strong> Zanotuj, jak użytkownik uruchamia i uzyskuje dostęp do takiego nagrania.",
+        "<strong>Braki i nieścisłości:</strong> Zapisz braki lub nieścisłości w opisie treści nietekstowych."
+      ]
     },
     {
       "type": "heading",
@@ -272,7 +321,15 @@
         "legend": "Wybierz wynik dla C.5.1.3.7 Wyjście mowy dla informacji wideo",
         "noteId": "notes-c-5-1-3-7"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Porównanie zawartości:</strong> Porównaj zawartość materiałów wideo z wyjściem mowy, aby upewnić się, że przekazuje tę samą informację.",
+        "<strong>Format wyjścia:</strong> Opisz, czy wyjście to audiodeskrypcja, transkrypt lub inna forma opowieści słownej.",
+        "<strong>Synchronizacja:</strong> Zweryfikuj synchronizację i kolejność odtwarzania głosu w stosunku do zdarzeń wideo.",
+        "<strong>Dostęp do audio:</strong> Zanotuj sposób uzyskania dostępu do audio (automatycznie, przycisk, menu).",
+        "<strong>Elementy pominięte:</strong> Wymień elementy wideo pominięte w narracji.",
+        "<strong>Uwaga:</strong> Wyjście mowy może mieć formę audiodeskrypcji lub transkryptu treści wideo."
+      ]
     },
     {
       "type": "heading",
@@ -308,7 +365,16 @@
         "legend": "Wybierz wynik dla C.5.1.3.8 Wejście maskowane",
         "noteId": "notes-c-5-1-3-8"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Potwierdzenie maskowania:</strong> Gdy są wyświetlane znaki maskowane, potwierdź, że wyjście audio nie wypowiada wprowadzanych znaków chyba że dane jest prywatne środowisko lub użytkownik wyrazi zgodę.",
+        "<strong>Ostrzeżenie prywatności:</strong> Jeśli system oferuje opcję odsłuchu nie maskowanego, sprawdź, czy pojawia się ostrzeżenie o konsekwencjach prywatności.",
+        "<strong>Mechanizm prywatny:</strong> Opisz, jaki mechanizm prywatnego odsłuchu jest dostępny i jak można go podłączyć bez widu.",
+        "<strong>Utrzymanie maskowania:</strong> Zanotuj, czy maskowanie jest utrzymywane również w innych trybach, by nie naruszać danych wrażliwych.",
+        "<strong>Przypadki naruszeń:</strong> Zapisz przypadki, gdy dane prywatne były wypowiedziane bez wymaganych zabezpieczeń.",
+        "<strong>Uwaga 1:</strong> Znaki maskujące są zwykle wyświetlane ze względów bezpieczeństwa i obejmują, ale nie ograniczają się do, gwiazdek reprezentujących numery identyfikacyjne osób.",
+        "<strong>Uwaga 2:</strong> Wyjście znaków nie maskowanych może być preferowane, gdy używane są funkcje zamknięte, na przykład w prywatności domu użytkownika. Ostrzeżenie podkreślające obawy dotyczące prywatności może być odpowiednie, aby zapewnić, że użytkownik dokonał świadomego wyboru."
+      ]
     },
     {
       "type": "heading",
@@ -345,7 +411,16 @@
         "legend": "Wybierz wynik dla C.5.1.3.9 Prywatny dostęp do danych osobowych",
         "noteId": "notes-c-5-1-3-9"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Wskazanie danych prywatnych:</strong> Wskaż dane prywatne i upewnij się, że są przekazywane wyłącznie przez mechanizm prywatnego odsłuchu dostępny bez wzroku lub inną wybraną przez użytkownika ścieżkę.",
+        "<strong>Połączenie z kanałem prywatnym:</strong> Opisz, jak użytkownik może połączyć się z kanałem prywatnym bez pomocy wzroku.",
+        "<strong>Wyjątki od prywatności:</strong> Jeśli dane wykraczają poza definicję prywatności zgodnie z polityką, zapisz, że klauzula nie ma zastosowania.",
+        "<strong>Ostrzeżenia o ryzyku:</strong> Jeśli użytkownik wybiera tryb nieprywatny (np. w domu), sprawdź, czy system ostrzega przed ryzykiem.",
+        "<strong>Mechanizmy granic prywatności:</strong> Zanotuj mechanizmy wprowadzające granice prywatności, zgodnie z zapisami klauzuli.",
+        "<strong>Uwaga 1:</strong> To wymaganie nie ma zastosowania w przypadkach, gdy dane nie są zdefiniowane jako prywatne zgodnie z obowiązującą polityką prywatności lub gdy nie ma obowiązującej polityki prywatności.",
+        "<strong>Uwaga 2:</strong> Wyjście nieprywatne może być preferowane, gdy używane są funkcje zamknięte, na przykład w prywatności domu użytkownika. Ostrzeżenie podkreślające obawy dotyczące prywatności może być odpowiednie, aby zapewnić, że użytkownik dokonał świadomego wyboru."
+      ]
     },
     {
       "type": "heading",
@@ -379,7 +454,14 @@
         "legend": "Wybierz wynik dla C.5.1.3.10 Wyjście audio bez zakłóceń",
         "noteId": "notes-c-5-1-3-10"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Obserwacja zakłóceń:</strong> Obserwuj, czy żadne inne dźwięki odtwarzane automatycznie przez ponad 3 sekundy nie zakłócają głównego komunikatu.",
+        "<strong>Wyciszanie audio:</strong> Potwierdź, że zakłócające audio można wyciszyć lub wstrzymać bez użycia wzroku.",
+        "<strong>Kluczowe alerty:</strong> Sprawdź, czy kluczowe alerty nadal są słyszalne nawet przy równoległym audio.",
+        "<strong>Źródła dźwięków:</strong> Wymień źródło i czas trwania zakłócających dźwięków.",
+        "<strong>Strategie oddzielania:</strong> Opisz strategie oddzielania kanałów, by utrzymać priorytet głosu dla użytkownika."
+      ]
     },
     {
       "type": "heading",
@@ -413,7 +495,14 @@
         "legend": "Wybierz wynik dla C.5.1.3.11 Głośność odsłuchiwania treści prywatnych",
         "noteId": "notes-c-5-1-3-11"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kontrola głośności:</strong> Dla prywatnego odsłuchu zidentyfikuj niewizualną kontrolę głośności i sprawdź, czy można nią operować bez użycia wzroku.",
+        "<strong>Informacje percepcyjne:</strong> Potwierdź, że kontrolka daje percepcyjne informacje o aktualnym poziomie (np. kliknięcia, wibracje, dźwięki).",
+        "<strong>Mechanizmy regulacji:</strong> Opisz gesty, przyciski lub inne mechanizmy regulacji.",
+        "<strong>Zastosowanie zmian:</strong> Sprawdź, czy zmiana głośności jest stosowana od razu dla bieżącej sesji.",
+        "<strong>Problemy z regulacją:</strong> Zanotuj wszelkie problemy uniemożliwiające podniesienie lub obniżenie poziomu dźwięku."
+      ]
     },
     {
       "type": "heading",
@@ -448,7 +537,15 @@
         "legend": "Wybierz wynik dla C.5.1.3.12 Głośność głośnika",
         "noteId": "notes-c-5-1-3-12"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Regulacja głośności:</strong> Jeśli audio jest dostarczane przez głośniki, potwierdź istnienie możliwej do obsługi bez użycia wzroku regulacji, która umożliwia wzmocnienie do co najmniej 65 dBA.",
+        "<strong>Wskazanie progu:</strong> Opisz, w jaki sposób kontrola wskazuje osiągnięcie progu 65 dBA.",
+        "<strong>Hałas otoczenia:</strong> Zaznacz, gdy hałas otoczenia wymaga większego wzmocnienia niż minimum (uwaga).",
+        "<strong>Metoda pomiaru:</strong> Udokumentuj metodę pomiaru dBA oraz sposób raportowania wartości użytkownikowi.",
+        "<strong>Ograniczenia głośności:</strong> Zanotuj sytuacje, w których nie można osiągnąć wymaganego poziomu głośności.",
+        "<strong>Uwaga:</strong> W hałaśliwych środowiskach 65 dBA może nie być wystarczające."
+      ]
     },
     {
       "type": "heading",
@@ -482,7 +579,15 @@
         "legend": "Wybierz wynik dla C.5.1.3.13 Przywracanie głośności",
         "noteId": "notes-c-5-1-3-13"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Funkcja resetu:</strong> Potwierdź, że po każdym użyciu działa funkcja resetująca głośność do 65 dBA lub mniej, chyba że TIK jest dedykowane jednemu użytkownikowi.",
+        "<strong>Opcja wyłączenia:</strong> Jeśli dostępna jest opcja wyłączenia resetu na potrzeby pojedynczego użytkownika, opisz sposób jej aktywacji.",
+        "<strong>Typ resetu:</strong> Zapisz, czy reset jest automatyczny, czy wymaga aktywacji ręcznej.",
+        "<strong>Test resetu:</strong> Przetestuj reset po ustawieniu maksymalnej głośności, aby upewnić się, że przywraca domyślny próg dźwięku.",
+        "<strong>Wyjątki resetu:</strong> Zanotuj przypadki, gdy reset nie działa z powodu dedykowanego trybu.",
+        "<strong>Uwaga:</strong> TIK może zapewniać funkcję wyłączenia funkcji resetowania głośności, aby umożliwić spełnienie wyjątku dla pojedynczego użytkownika."
+      ]
     },
     {
       "type": "heading",
@@ -519,7 +624,14 @@
         "legend": "Wybierz wynik dla C.5.1.3.14 Języki mówione",
         "noteId": "notes-c-5-1-3-14"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Zgodność języka:</strong> Zweryfikuj, czy wyjście mowy występuje w tym samym języku co prezentowane treści, z wyjątkami wymienionymi w klauzuli.",
+        "<strong>Wyjątki językowe:</strong> Udokumentuj wyjątki dla nazw własnych, terminów technicznych, niezdefiniowanych języków oraz elementów przejętych do otaczającego tekstu.",
+        "<strong>Obsługa zewnętrznych treści:</strong> Jeśli treść pochodzi z zewnętrznego źródła nieobsługiwanego przez syntezator, zapisz obsługiwane języki i braki.",
+        "<strong>Wybór języka:</strong> Potwierdź, że wybór języka jest dostępny przez kanały niewizualne lub że użytkownik może go ręcznie zmienić.",
+        "<strong>Niezgodności językowe:</strong> Zanotuj przypadki, gdy mowa nie odpowiada językowi widocznego tekstu bez uzasadnionej podstawy."
+      ]
     },
     {
       "type": "heading",
@@ -554,7 +666,14 @@
         "legend": "Wybierz wynik dla C.5.1.3.15 Niewizualna identyfikacja błędu",
         "noteId": "notes-c-5-1-3-15"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Identyfikacja błędu:</strong> Podczas wykrycia błędu walidacji, mowa powinna jednoznacznie wskazać i opisać element z błędem.",
+        "<strong>Opis komunikatu:</strong> Zapisz, jak komunikat identyfikuje pole lub kontrolkę bez odniesienia do koloru czy lokalizacji.",
+        "<strong>Czas pojawienia:</strong> Potwierdź, że informacja pojawia się natychmiast po wykryciu błędu.",
+        "<strong>Wskazówki korekty:</strong> Sprawdź, czy komunikat zawiera wskazówki dotyczące korekty lub nawigacji.",
+        "<strong>Braki opisów:</strong> Zanotuj wszelkie stany błędów, które nie są opisane werbalnie."
+      ]
     },
     {
       "type": "heading",
@@ -589,7 +708,15 @@
         "legend": "Wybierz wynik dla C.5.1.3.16 Pokwitowania, bilety i&nbsp;dane wyjściowe transakcji",
         "noteId": "notes-c-5-1-3-16"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Zawartość mowy:</strong> Dla pokwitowań, biletów i innych wyjść transakcyjnych upewnij się, że mowa zawiera wszystkie informacje niezbędne do dokończenia lub weryfikacji transakcji.",
+        "<strong>Niezależność od druku:</strong> Potwierdź, że maszyny biletowe nie wymagają drukowanych rozkładów czy map, jeśli mowa jest dostępna.",
+        "<strong>Element systemu:</strong> Zanotuj, który element systemu TIK udostępnia wyjście mowy (np. samo urządzenie, system zewnętrzny).",
+        "<strong>Uruchamianie mowy:</strong> Opisz sposób uruchamiania mowy (automatycznie, przyciskiem, menu).",
+        "<strong>Brakujące dane:</strong> Wskaż brakujące dane, które powinny być odczytane.",
+        "<strong>Uwaga:</strong> Wyjście mowy może być zapewnione przez dowolny element TIK."
+      ]
     },
     {
       "type": "heading",
@@ -624,7 +751,20 @@
         "legend": "Wybierz wynik dla C.5.1.4 Funkcjonalności uniemożliwiające powiększanie tekstu",
         "noteId": "notes-c-5-1-4"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Opis klauzuli:</strong> Jeśli jakakolwiek funkcjonalność TIK jest zamknięta dla funkcji powiększania tekstu platformy lub technologii wspomagającej, TIK musi zapewnić tryb działania, w którym tekst i obrazy tekstowe niezbędne dla całej funkcjonalności są wyświetlane w taki sposób, że nieakcentowana wielka litera \"H\" obejmuje kąt co najmniej 0,7 stopnia przy odległości widzenia określonej przez dostawcę.",
+        "<strong>Wzór obliczeniowy:</strong> Kąt obejmowany w stopniach można obliczyć ze wzoru: Ψ = (180 × H) / (π × D), gdzie ψ to kąt obejmowany w stopniach, H to wysokość tekstu, D to odległość widzenia, a D i H są wyrażone w tych samych jednostkach.",
+        "<strong>Uwaga 1:</strong> Celem jest zapewnienie trybu działania, w którym tekst jest wystarczająco duży, aby mógł być używany przez większość użytkowników z niskim wzrokiem.",
+        "<strong>Uwaga 2:</strong> Tabela 5.1 i Rysunek 1 ilustrują związek między maksymalną odległością widzenia a minimalną wysokością znaków przy określonym minimalnym kącie obejmowanym.",
+        "<strong>Tabela</strong> <table><caption>Tabela 5.1: Związek między maksymalną projektową odległością widzenia a minimalną wysokością znaków przy granicy kąta obejmowanego</caption><thead><tr><th>Minimalny kąt obejmowany</th><th>Maksymalna projektowa odległość widzenia</th><th>Minimalna wysokość znaków</th></tr></thead><tbody><tr><td rowspan=\"10\">0,7 stopni</td><td>100 mm</td><td>1,2 mm</td></tr><tr><td>200 mm</td><td>2,4 mm</td></tr><tr><td>250 mm</td><td>3,1 mm</td></tr><tr><td>300 mm</td><td>3,7 mm</td></tr><tr><td>350 mm</td><td>4,3 mm</td></tr><tr><td>400 mm</td><td>4,9 mm</td></tr><tr><td>450 mm</td><td>5,5 mm</td></tr><tr><td>500 mm</td><td>6,1 mm</td></tr><tr><td>550 mm</td><td>6,7 mm</td></tr><tr><td>600 mm</td><td>7,3 mm</td></tr></tbody></table>",
+        "<strong>Ilustracja:</strong> <img src=\"/img/5_1_4.png\" alt=\"Wykres wizualizujący tabelę 5.1 - związek między maksymalną odległością widzenia a minimalną wysokością znaków przy kącie obejmowanym 0,7 stopnia\">",
+        "<strong>Pomiar i obliczenie:</strong> Zmierz wysokość wielkiej litery H i obliczyć kąt Ψ=(180×H)/(π×D), by potwierdzić wartość co najmniej 0,7 stopnia.",
+        "<strong>Porównanie z tabelą:</strong> Porównaj wynik z Tabelą 5.1 i Rysunkiem 1, by ustalić minimalny rozmiar przy deklarowanej odległości widzenia.",
+        "<strong>Odległość widzenia:</strong> Zanotuj odległość widzenia określoną przez dostawcę i sposób jej zastosowania w obliczeniu.",
+        "<strong>Wyświetlanie w trybie:</strong> Upewnić się, że tryb działania wyświetla cały wymagany tekst i obrazy tekstowe w obliczonym rozmiarze.",
+        "<strong>Przypadki niezgodności:</strong> Zanotuj przypadki, gdy kąt jest mniejszy niż 0,7 stopnia."
+      ]
     },
     {
       "type": "heading",
@@ -657,7 +797,15 @@
         "legend": "Wybierz wynik dla C.5.1.5 Wyjście wizualne dla informacji dźwiękowych",
         "noteId": "notes-c-5-1-5"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Potwierdzenie równoważności:</strong> Dla każdej potrzebnej informacji dźwiękowej potwierdź istnienie równoważnej informacji wizualnej (napisy, transkrypcja).",
+        "<strong>Zawartość informacji:</strong> Upewnij się, że informacja wizualna oddaje czas, tożsamość nadawcy i kontekst wydarzenia.",
+        "<strong>Synchronizacja:</strong> Opisz synchronizację pomiędzy kanałem audio a wizualnym.",
+        "<strong>Aktywacja:</strong> Zanotuj, czy wizualizacje pojawiają się automatycznie czy wymagają ręcznej aktywacji.",
+        "<strong>Braki:</strong> Wymień elementy audio bez odpowiednika wizualnego lub wymagające uzupełnienia.",
+        "<strong>Uwaga:</strong> Ta informacja wizualna może mieć formę napisów lub transkrypcji tekstowej."
+      ]
     },
     {
       "type": "heading",
@@ -695,7 +843,14 @@
         "legend": "Wybierz wynik dla C.5.1.6.1 Funkcjonalność zamknięta",
         "noteId": "notes-c-5-1-6-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Sprawdzenie obsługi:</strong> Sprawdź, czy wszystkie funkcje zamknięte na klawiatury/interfejsy klawiaturowe da się obsługiwać metodą wspierającą konkretne potrzeby.",
+        "<strong>Wejścia niewizualne:</strong> Udokumentuj wejścia niewizualne (np. dotyk, gesty, polecenia głosowe) umożliwiające korzystanie z funkcji.",
+        "<strong>Skróty klawiaturowe:</strong> Potwierdź, że skróty klawiaturowe nie wymagają patrzenia na ekran.",
+        "<strong>Spójność sterowań:</strong> Zapisz, czy te same sterowania działają spójnie w różnych trybach funkcjonalności.",
+        "<strong>Czynności wymagające wzroku:</strong> Zanotuj czynności nadal wymagające wsparcia wzroku."
+      ]
     },
     {
       "type": "heading",
@@ -729,7 +884,14 @@
         "legend": "Wybierz wynik dla C.5.1.6.2 Fokus",
         "noteId": "notes-c-5-1-6-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Usuwanie fokusu:</strong> Gdy fokus może być przeniesiony na element interfejsu, upewnij się, że ten sam mechanizm pozwala go stamtąd usunąć, zapobiegając pułapkom fokusu.",
+        "<strong>Test ruchu fokusu:</strong> Przetestuj ruch fokusa w obu kierunkach i zanotuj użyty klawisz lub gest.",
+        "<strong>Opuszczenie elementu:</strong> Sprawdź, czy opuszczenie elementu nie wymaga dodatkowego kroku zależnego od wzroku.",
+        "<strong>Pułapki fokusa:</strong> Zanotuj występujące pułapki fokusa lub niespójne zachowanie.",
+        "<strong>Kontekst testowania:</strong> Opisz kontekst testowania (np. modalne okno, formularz)."
+      ]
     },
     {
       "type": "heading",
@@ -762,7 +924,14 @@
         "legend": "Wybierz wynik dla C.5.1.7 Dostęp bez użycia mowy",
         "noteId": "notes-c-5-1-7"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Funkcje wymagające mowy:</strong> Wymień funkcje wymagające mowy i potwierdź, że istnieje alternatywna metoda wprowadzania bez użycia głosu.",
+        "<strong>Uruchomienie alternatywy:</strong> Udokumentuj sposób uruchomienia alternatywy oraz zakres jej działania.",
+        "<strong>Test ścieżki alternatywnej:</strong> Przetestuj ścieżkę alternatywną od początku do końca, by potwierdzić zakończenie zadania.",
+        "<strong>Elementy dostępne tylko głosowo:</strong> Zanotuj elementy nadal dostępne tylko głosowo.",
+        "<strong>Ustawienia domyślne:</strong> Zapisz ustawienia, które domyślnie kierują użytkownika do kanału mówionego."
+      ]
     },
     {
       "type": "heading",
@@ -795,7 +964,14 @@
         "legend": "Wybierz wynik dla C.5.2 Aktywacja funkcji dostępności",
         "noteId": "notes-c-5-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Lista funkcji dostępności:</strong> Zidentyfikuj wszystkie dokumentowane funkcje dostępności i upewnij się, że da się je aktywować metodą wspierającą konkretne potrzeby.",
+        "<strong>Ścieżki aktywacji:</strong> Opisz ścieżki aktywacji (menu, przycisk, skrót, głosowe).",
+        "<strong>Przepływ użytkownika:</strong> Sprawdź, czy aktywacja funkcji dostępności nie przerywa normalnego przepływu pracy użytkownika ani nie wymusza niepożądanych zmian w interakcji.",
+        "<strong>Zależności:</strong> Zapisz zależności od innych technologii lub urządzeń pomocniczych.",
+        "<strong>Informacje dla użytkownika:</strong> Zanotuj, czy system informuje użytkownika, gdy dana funkcja jest potrzebna."
+      ]
     },
     {
       "type": "heading",
@@ -828,7 +1004,16 @@
         "legend": "Wybierz wynik dla C.5.3 Biometria",
         "noteId": "notes-c-5-3"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Wymaganie alternatywy:</strong> Jeśli TIK używa cech biologicznych do identyfikacji, upewnij się, że nie polega wyłącznie na jednej charakterystyce.",
+        "<strong>Dokumentacja alternatywy:</strong> Udokumentuj alternatywę (biometryczna lub nie-biometryczna).",
+        "<strong>Sprawdzenie wymagań:</strong> Potwierdź, że alternatywna metoda spełnia te same wymagania bez wprowadzania barier.",
+        "<strong>Zachowanie przy awarii:</strong> Zanotuj zachowanie systemu, gdy podstawowa biometria zawodzi lub zostanie odrzucona.",
+        "<strong>Testowane cechy:</strong> Zanotuj, które cechy biometryczne zostały przetestowane i dlaczego wybrano daną alternatywę.",
+        "<strong>Uwaga 1:</strong> Alternatywne metody identyfikacji użytkownika lub kontroli TIK mogą być niebiometryczne lub biometryczne.",
+        "<strong>Uwaga 2:</strong> Metody biometryczne oparte na różnych cechach biologicznych zwiększają prawdopodobieństwo, że osoby z niepełnosprawnościami posiadają co najmniej jedną z określonych cech biologicznych. Przykłady różnych cech biologicznych to odciski palców, wzory siatkówki oka, głos i twarz."
+      ]
     },
     {
       "type": "test",
@@ -856,7 +1041,16 @@
         "legend": "Wybierz wynik dla Test 2 - Kontrola:",
         "noteId": "notes-c5-3-2"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Potwierdzenie alternatyw:</strong> Potwierdź, że drugi test wykorzystuje te same alternatywy zgodne z klauzulą 5.3.",
+        "<strong>Funkcje kontrolowane biometrycznie:</strong> Dokumentuj, które funkcje kontroluje biometria i w jaki sposób alternatywa je obejmuje.",
+        "<strong>Brak dodatkowych barier:</strong> Sprawdź, czy alternatywa nie narzuca dodatkowych barier dostępu.",
+        "<strong>Zachowanie przy awarii:</strong> Opisz zachowanie systemu w przypadku braku/odrzucenia wejścia biometrycznego.",
+        "<strong>Ograniczenia:</strong> Zanotuj ograniczenia sprzętowe lub prywatnościowe wpływające na alternatywną metodę.",
+        "<strong>Uwaga 1:</strong> Alternatywne metody identyfikacji użytkownika lub kontroli TIK mogą być niebiometryczne lub biometryczne.",
+        "<strong>Uwaga 2:</strong> Metody biometryczne oparte na różnych cechach biologicznych zwiększają prawdopodobieństwo, że osoby z niepełnosprawnościami posiadają co najmniej jedną z określonych cech biologicznych. Przykłady różnych cech biologicznych to odciski palców, wzory siatkówki oka, głos i twarz."
+      ]
     },
     {
       "type": "heading",
@@ -892,7 +1086,14 @@
         "legend": "Wybierz wynik dla C.5.4 Zachowanie informacji o&nbsp;dostępności podczas konwersji",
         "noteId": "notes-c-5-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Zachowanie informacji:</strong> Upewnij się, że niezastrzeżone informacje o dostępności są zachowywane podczas konwersji informacji lub komunikacji.",
+        "<strong>Formaty i dane:</strong> Udokumentuj format źródłowy, format docelowy oraz przenoszone dane dostępnościowe.",
+        "<strong>Możliwości formatu:</strong> Sprawdź, czy format docelowy może przechować odpowiedniki (tekst alternatywny, napisy, transkrypcje).",
+        "<strong>Weryfikacja wyniku:</strong> Przejrzyj logi lub wynik konwersji, by potwierdzić brak utraty danych.",
+        "<strong>Problemy z formatami:</strong> Zanotuj formaty niedające się udokumentować i sposób radzenia sobie z takimi sytuacjami."
+      ]
     },
     {
       "type": "heading",
@@ -930,7 +1131,14 @@
         "legend": "Wybierz wynik dla C.5.5.1 Środki obsługi",
         "noteId": "notes-c-5-5-1"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Alternatywy dla ruchów:</strong> Jeśli TIK posiada części obsługiwane wymagające chwytu, ściskania lub skręcania nadgarstka, sprawdź, czy są dostępne alternatywy bez tych ruchów.",
+        "<strong>Dokumentacja alternatyw:</strong> Dokumentuj alternatywne środki (np. większe przyciski, gesty, głos).",
+        "<strong>Test alternatywy:</strong> Przetestuj, czy alternatywa rzeczywiście pozwala wykonać tę samą czynność.",
+        "<strong>Wymagania wzrokowe:</strong> Zapisz, czy alternatywa wymaga uprzedniego przygotowania wzrokowego.",
+        "<strong>Cechy konstrukcyjne:</strong> Zanotuj cechy konstrukcyjne redukujące obciążenie nadgarstka."
+      ]
     },
     {
       "type": "heading",
@@ -964,7 +1172,15 @@
         "legend": "Wybierz wynik dla C.5.5.2 Rozpoznawalność części obsługiwanych",
         "noteId": "notes-c-5-5-2"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Rozpoznawalność części:</strong> Dla każdej części obsługiwanej sprawdź, czy użytkownik może ją rozpoznać bez względu na wzrok.",
+        "<strong>Wskazówki niewizualne:</strong> Wymień wskazówki dotykowe, dźwiękowe lub inne, które pozwalają na identyfikację przed wykonaniem działania.",
+        "<strong>Rozpoznanie bez aktywacji:</strong> Potwierdź, że rozpoznanie jest możliwe bez wykonywania funkcji.",
+        "<strong>Procedura obsługi:</strong> Opisz procedurę odnalezienia danej części i jej aktywacji.",
+        "<strong>Części bez wskazówek:</strong> Zanotuj części, które nie mają niewizualnych wskazówek.",
+        "<strong>Uwaga:</strong> Jednym ze sposobów spełnienia tego wymagania jest uczynienie części operacyjnych rozpoznawalnymi dotykiem."
+      ]
     },
     {
       "type": "heading",
@@ -1004,7 +1220,16 @@
         "legend": "Wybierz wynik dla C.5.6.1 Status dotyku lub dźwięku",
         "noteId": "notes-c-5-6-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Stan elementów:</strong> Gdy TIK ma elementy blokujące lub przełączające widoczne dla użytkownika, sprawdź, czy ich stan można określić dotykiem lub dźwiękiem bez aktywowania elementu sterującego.",
+        "<strong>Test w różnych trybach:</strong> Testuj różne tryby działania, by potwierdzić obecność dotykowych oraz dźwiękowych wskazówek.",
+        "<strong>Dokumentacja stanów:</strong> Udokumentuj, jak stan obejmuje kontrolki dwustopniowe lub trzystopniowe (np. Caps Lock, głośność).",
+        "<strong>Niezależność od wzroku:</strong> Upewnij się, że wskazówki nie bazują na kolorze ani podświetleniu.",
+        "<strong>Brakujące wskaźniki:</strong> Zanotuj wskaźniki lub elementy bez wymaganych informacji.",
+        "<strong>Uwaga 1:</strong> Elementy blokujące lub przełączające to te kontrolki, które mogą mieć tylko dwa lub trzy stany i zachowują swój stan podczas użytkowania.",
+        "<strong>Uwaga 2:</strong> Przykładem elementu blokującego lub przełączającego jest klawisz \"Caps Lock\" na większości klawiatur. Innym przykładem jest przycisk głośności w automacie telefonicznym, który można ustawić na normalną, głośną lub bardzo głośną głośność."
+      ]
     },
     {
       "type": "heading",
@@ -1039,7 +1264,16 @@
         "legend": "Wybierz wynik dla C.5.6.2 Status wizualny",
         "noteId": "notes-c-5-6-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Status wizualny:</strong> Gdy status blokady lub przełącznika jest prezentowany w sposób niewizualny, sprawdź, czy ten status można także zobaczyć gdy kontrolka jest pokazana.",
+        "<strong>Opis wskaźnika:</strong> Opisz wizualny wskaźnik (np. dioda) i jego sposób działania.",
+        "<strong>Dostępność wskaźnika:</strong> Potwierdź, że wskaźnik jest zawsze dostępny, gdy kontrolka jest prezentowana.",
+        "<strong>Niezależność od aktywacji:</strong> Sprawdź, czy wskaźnik nie wymaga uruchamiania kontrolki.",
+        "<strong>Brakujące informacje:</strong> Zanotuj przypadki, gdy wizualna informacja jest nieobecna lub trudna do odczytania.",
+        "<strong>Uwaga 1:</strong> Elementy blokujące lub przełączające to te kontrolki, które mogą mieć tylko dwa lub trzy stany i zachowują swój stan podczas użytkowania.",
+        "<strong>Uwaga 2:</strong> Przykładem elementu blokującego lub przełączającego jest klawisz \"Caps Lock\" na większości klawiatur. Przykładem uczynienia statusu kontrolki rozpoznawalnym jest wizualny wskaźnik statusu na klawiaturze."
+      ]
     },
     {
       "type": "heading",
@@ -1074,7 +1308,14 @@
         "legend": "Wybierz wynik dla C.5.7 Ponowne wciśnięcie klawisza",
         "noteId": "notes-c-5-7"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Ustawienia opóźnienia:</strong> Potwierdź, że opóźnienie przed ponownym wciśnięciem klawisza można ustawić na co najmniej 2 sekundy, a tempo powtarzania na 1 znak/2 sekundy.",
+        "<strong>Mechanizmy regulacji:</strong> Udokumentuj mechanizmy lub menu, gdzie można regulować opóźnienie i tempo.",
+        "<strong>Test wartości:</strong> Przetestuj kilka wartości, by zapewnić natychmiastowy efekt działania.",
+        "<strong>Weryfikacja ustawień:</strong> Zapisz wybrane wartości i sposób ich weryfikacji.",
+        "<strong>Ograniczenia:</strong> Zanotuj sytuacje, gdy nie można osiągnąć wymaganych minimalnych nastaw."
+      ]
     },
     {
       "type": "heading",
@@ -1111,7 +1352,14 @@
         "legend": "Wybierz wynik dla C.5.8 Akceptacja dwukrotnego kliknięcia klawisza",
         "noteId": "notes-c-5-8"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Ustawienie opóźnienia:</strong> Sprawdź, czy można ustawić opóźnienie po naciśnięciu klawisza tak, by identyczne powtórzenie w tym czasie nie było akceptowane.",
+        "<strong>Test maksymalnego opóźnienia:</strong> Przy maksymalnym opóźnieniu naciśnij ten sam klawisz dwa razy (0,5 s) i potwierdź, że drugie naciśnięcie jest zaakceptowane dopiero po przekroczeniu opóźnienia.",
+        "<strong>Regulacja i sygnalizacja:</strong> Opisz sposób regulacji opóźnienia i sygnalizacji jego osiągnięcia.",
+        "<strong>Test dla kilku klawiszy:</strong> Przetestuj mechanizm dla kilku klawiszy.",
+        "<strong>Problemy z opóźnieniem:</strong> Zanotuj przypadki, gdy opóźnienie nie działa lub nie można go ustawić."
+      ]
     },
     {
       "type": "heading",
@@ -1146,7 +1394,14 @@
         "legend": "Wybierz wynik dla C.5.9 Jednoczesne czynności użytkownika",
         "noteId": "notes-c-5-9"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Tryby z jednoczesnymi czynnościami:</strong> Wymień tryby wymagające jednoczesnych czynności i potwierdź, że istnieje alternatywny tryb bez takich wymagań.",
+        "<strong>Funkcje i odpowiedniki:</strong> Dokumentuj funkcje obsługiwane przez jednoczesne działania i ich pojedyncze odpowiedniki.",
+        "<strong>Test trybów alternatywnych:</strong> Przetestuj każdy tryb alternatywny, opisując kroki wykonania.",
+        "<strong>Opcje obsługi:</strong> Sprawdź, czy każda funkcja ma opcję obsługi w pojedynczym działaniu lub sekwencji kroków.",
+        "<strong>Funkcje wymagające jednoczesnych działań:</strong> Zanotuj funkcje, które nadal wymagają jednoczesnych działań."
+      ]
     }
   ]
 }

@@ -1,45 +1,45 @@
-/* --- THEME: DEEP SLATE & ACCESSIBLE ORANGE --- */
+/* --- MOTYW: GŁĘBOKI ŁUPKOWY I DOSTĘPNY POMARAŃCZOWY --- */
 :root {
-    /* Global Settings */
+    /* Ustawienia globalne */
     --border-radius: 8px;
     --nav-width: 350px;
 
-    /* Statusy - Shared */
+    /* Statusy - Wspólne */
     --pass-color: hsl(160, 84%, 39%);
     /* #10B981 */
     --pass-bg: hsla(160, 84%, 39%, 0.15);
     --fail-color: hsl(350, 80%, 40%);
-    /* #B91C1C - Darker Red for Light Mode */
+    /* #B91C1C - Ciemniejszy czerwony dla trybu jasnego */
     --fail-bg: hsla(350, 89%, 60%, 0.15);
     --na-color: hsl(215, 25%, 40%);
-    /* #4C5F7A - Darker Slate for Light Mode */
+    /* #4C5F7A - Ciemniejszy łupkowy dla trybu jasnego */
     --na-bg: hsla(215, 16%, 47%, 0.15);
     --nt-color: hsl(30, 100%, 25%);
-    /* #804000 - High Contrast Burnt Orange */
+    /* #804000 - Wysoki kontrast spalonego pomarańczowego */
     --nt-bg: hsla(30, 100%, 50%, 0.15);
 
-    /* Primary Color - Global Override */
+    /* Kolor główny - Globalne nadpisanie */
     --primary: hsl(224, 76%, 48%);
-    /* Blue 700 */
+    /* Niebieski 700 */
     --primary-hover: hsl(224, 76%, 38%);
-    /* Blue 800 */
+    /* Niebieski 800 */
     --primary-focus: hsla(224, 76%, 48%, 0.35);
     --primary-inverse: hsl(0, 0%, 100%);
 
-    /* Global Focus Settings */
+    /* Globalne ustawienia fokusu */
     --focus-color: hsl(224, 76%, 48%);
-    --content-x-pad: 2rem; /* horizontal content padding used by header and sidebar */
+    --content-x-pad: 2rem; /* poziome wypełnienie treści używane przez nagłówek i pasek boczny */
 
-    /* Minor third typographic scale (1.2) applied to nav elements */
-    --type-base: 0.8rem; /* base size for small nav elements */
-    --minor-third: 1.2; /* Scale multiplier */
+    /* Skala typograficzna minor third (1.2) zastosowana do elementów nawigacji */
+    --type-base: 0.8rem; /* rozmiar bazowy dla małych elementów nawigacji */
+    --minor-third: 1.2; /* Mnożnik skali */
     --type-0: var(--type-base);
     --type-1: calc(var(--type-0) * var(--minor-third));
     --type-2: calc(var(--type-1) * var(--minor-third));
     --type-3: calc(var(--type-2) * var(--minor-third));
     --type-4: calc(var(--type-3) * var(--minor-third));
 
-    /* Slate Palette (Tailwind-ish) */
+    /* Paleta łupkowa (Tailwind-ish) */
     --slate-50: #f8fafc;
     --slate-100: #f1f5f9;
     --slate-200: #e2e8f0;
@@ -1315,6 +1315,16 @@ body.summary-page .app-layout {
     font-size: 0.7rem;
     font-weight: 700;
 }
+
+.badge-warning {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #fbbf24;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+[data-theme="light"] .badge-warning { color: #d97706; }
 
 .issue-list {
     /* padding: 0 1.5rem; */

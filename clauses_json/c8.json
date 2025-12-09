@@ -46,6 +46,13 @@
       "evaluationType": "Inspekcja",
       "notes": [
         "Połączenia mogą być przewodowe lub bezprzewodowe."
+      ],
+      "detailedChecklist": [
+        "<strong>Standardowe połączenia:</strong> Sprawdź, czy jeden typ połączenia jest zgodny z niezastrzeżonym standardem branżowym.",
+        "<strong>Połączenia z adapterami:</strong> Sprawdź, czy jeden typ połączenia jest zgodny z niezastrzeżonym standardem branżowym po zastosowaniu adapterów dostępnych na rynku.",
+        "<strong>Uwaga 1:</strong> Celem tego wymagania jest zapewnienie kompatybilności z technologiami wspomagającymi poprzez wymaganie użycia standardowych połączeń w TIK.",
+        "<strong>Uwaga 2:</strong> Słowo połączenie odnosi się zarówno do połączeń fizycznych, jak i bezprzewodowych.",
+        "<strong>Uwaga 3:</strong> Aktualne przykłady niezastrzeżonych standardów branżowych to USB i Bluetooth."
       ]
     },
     {
@@ -79,7 +86,12 @@
         "legend": "Wybierz wynik dla C.8.1.3 Kolor",
         "noteId": "notes-c-8-1-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Kolor:</strong> Sprawdź, czy jest dostępna alternatywna forma kodowania wizualnego.",
+        "<strong>Przykłady alternatyw:</strong> Tekst, symbole, dźwięki lub inne formy wizualne, które nie polegają wyłącznie na kolorze.",
+        "<strong>Sprawdzenie:</strong> Upewnij się, że informacje są dostępne dla użytkowników z zaburzeniami widzenia kolorów."
+      ]
     },
     {
       "type": "heading",
@@ -102,7 +114,7 @@
         "1. Sprzęt TIK ma wyjście mowy."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;ANSI/TIA-4965 [i.2].",
+        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;ANSI/TIA-4965: \"Receive volume control requirements for digital and analogue wireline terminals\".",
         "2. Zmierzyć poziom głośności (w dB) sygnału mowy przy najniższym ustawieniu głośności.",
         "3. Zmierzyć poziom głośności (w dB) sygnału mowy przy najwyższym ustawieniu głośności.",
         "4. Sprawdź, czy zakres między wartościami 1 i&nbsp;2 jest równy 18 dB lub większy."
@@ -125,7 +137,11 @@
         "legend": "Wybierz wynik dla C.8.2.1.1 Zakres głośności mowy",
         "noteId": "notes-c-8-2-1-1"
       },
-      "evaluationType": "Inspekcja na podstawie danych pomiarowych"
+      "evaluationType": "Inspekcja na podstawie danych pomiarowych",
+      "detailedChecklist": [
+        "<strong>Zakres głośności mowy:</strong> Sprawdź, czy TIK zapewnia możliwość dostosowania poziomu wyjścia mowy w zakresie co najmniej 18 dB.",
+        "<strong>Uwaga:</strong> Aparaty stacjonarne i zestawy słuchawkowe spełniające wymagania ANSI/TIA-4965 \"Receive volume control requirements for digital and analogue wireline terminals\" są uznawane za zgodne z tym wymaganiem."
+      ]
     },
     {
       "type": "heading",
@@ -160,7 +176,12 @@
         "legend": "Wybierz wynik dla C.8.2.1.2 Stopniowa regulacja głośności",
         "noteId": "notes-c-8-2-1-2"
       },
-      "evaluationType": "Inspekcja na podstawie danych pomiarowych"
+      "evaluationType": "Inspekcja na podstawie danych pomiarowych",
+      "detailedChecklist": [
+        "<strong>Stopniowa regulacja głośności:</strong> Sprawdź, czy jeden krok pośredni zapewnia poziom o 12 dB wyższy od najniższego poziomu głośności.",
+        "<strong>Jak mierzyć:</strong> Zmierz poziom głośności przy najniższym ustawieniu, następnie sprawdź poziom przy jednym kroku pośrednim.",
+        "<strong>Uwaga:</strong> Zapewnia to stopniowe dostosowanie dla użytkowników z różnymi potrzebami słuchowymi."
+      ]
     },
     {
       "type": "heading",
@@ -178,7 +199,7 @@
         "1. Sprzęt TIK to stacjonarne urządzenie komunikacyjne z&nbsp;wyjściem dźwięku, które zazwyczaj jest trzymane przy uchu."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;normą TIA-1083-A [i.24].",
+        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;normą TIA-1083-A (2010): \"Telecommunications; Telephone Terminal equipment; Handset magnetic measurement procedures and performance requirements\".",
         "2. Sprawdź, czy wykonano pomiary zgodnie z ETSI ES 200 381‑1, które potwierdzają spełnienie wymagań tej normy.",
         "3. Sprawdź, czy TIK jest oznaczony symbolem „T” określonym w ETSI ETS 300 381."
 
@@ -201,7 +222,12 @@
         "legend": "Wybierz wynik dla C.8.2.2.1 Urządzenia stacjonarne",
         "noteId": "notes-c-8-2-2-1"
       },
-      "evaluationType": "Inspekcja na podstawie danych pomiarowych"
+      "evaluationType": "Inspekcja na podstawie danych pomiarowych",
+      "detailedChecklist": [
+        "<strong>Sprzężenie magnetyczne dla urządzeń stacjonarnych:</strong> Sprawdź, czy TIK zapewnia sprzężenie magnetyczne spełniające wymagania ETSI ES 200 381-1 i nosi symbol „T” określony w ETSI ETS 300 381.",
+        "<strong>Uwaga 1:</strong> TIK spełniający wymagania TIA-1083-A (2010): \"Telecommunications; Telephone Terminal equipment; Handset magnetic measurement procedures and performance requirements\" jest uznawany za zgodny z wymaganiami tej klauzuli.",
+        "<strong>Uwaga 2:</strong> Sprzężenie magnetyczne jest również znane jako sprzężenie indukcyjne dla cewki T."
+      ]
     },
     {
       "type": "heading",
@@ -214,7 +240,7 @@
         "1. Sprzęt TIK to bezprzewodowe urządzenie komunikacyjne, które zazwyczaj jest umieszczane w&nbsp;uchu."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;ANSI/IEEE C63.19 [i.1].",
+        "1. Sprawdź, czy TIK ma certyfikat zgodności z&nbsp;ANSI/IEEE C63.19 (2011): \"American National Standard Method of Measurement of Compatibility between Wireless Communication Devices and Hearing Aids\".",
         "2. Sprawdź, czy TIK zapewniają środki sprzężenia magnetycznego z&nbsp;technologiami wspomagającymi słyszenie, zgodnymi z normą ETSI ES 200 381-2"
       ],
       "form": {
@@ -235,7 +261,11 @@
         "legend": "Wybierz wynik dla C.8.2.2.2 Urządzenia do komunikacji bezprzewodowej",
         "noteId": "notes-c-8-2-2-2"
       },
-      "evaluationType": "Inspekcja na podstawie danych pomiarowych"
+      "evaluationType": "Inspekcja na podstawie danych pomiarowych",
+      "detailedChecklist": [
+        "<strong>Sprzężenie magnetyczne dla urządzeń bezprzewodowych:</strong> Sprawdź, czy TIK zapewnia sprzężenie magnetyczne z technologiami wspomagającymi słyszenie, spełniające wymagania ETSI ES 200 381-2.",
+        "<strong>Uwaga:</strong> TIK spełniający wymagania ANSI/IEEE C63.19 (2011): \"American National Standard Method of Measurement of Compatibility between Wireless Communication Devices and Hearing Aids\" jest uznawany za zgodny z wymaganiami tej klauzuli."
+      ]
     },
     {
       "type": "heading",
@@ -282,7 +312,13 @@
       "derivations": {
         "sources": "^C\\.8\\.3\\.[2-3]",
         "mode": "any-subgroup-pass"
-      }
+      },
+      "detailedChecklist": [
+        "<strong>Dostęp z przodu lub z boku:</strong> Sprawdź, czy TIK spełnia wymagania Rozdziału 8.3.2 lub 8.3.3.",
+        "<strong>Uwaga 1:</strong> Nie wyklucza to spełniania obu klauzul.",
+        "<strong>Uwaga 2:</strong> Wymiary podane w klauzulach 407.8.3 i 407.8.2 Section 508 Rehabilitation Act, opublikowane w styczniu 2017 (Section 508 of the United States Rehabilitation Act of 1973, revised 2017), są identyczne z tymi podanymi w klauzulach 8.3.2 i 8.3.3 niniejszego dokumentu.",
+        "<strong>Uwaga 3:</strong> Dostęp fizyczny do stacjonarnej TIK zależy od wymiarów zarówno TIK, jak i środowiska, w którym jest zainstalowana i obsługiwana. Klauzula 8.3 nie dotyczy dostępności środowiska fizycznego zewnętrznego wobec TIK."
+      ]
     },
     {
       "type": "heading",
@@ -321,7 +357,12 @@
         "legend": "Wybierz wynik dla C.8.3.2.1 Nieograniczony dostęp z&nbsp;przodu, od góry",
         "noteId": "notes-c-8-3-2-1"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Nieograniczony dostęp z przodu, od góry:</strong> Sprawdź, czy co najmniej jedna z każdego rodzaju części obsługiwanych jest umieszczona nie wyżej niż 1 220 mm (48 cali) nad podłogą w przestrzeni dostępu.",
+        "<strong>Wyjaśnienie:</strong> Ten wymiar zapewnia dostępność dla użytkowników na wózkach inwalidzkich i osób stojących.",
+        "<strong>Jak mierzyć:</strong> Zmierz od poziomu podłogi do najwyższego punktu części obsługiwanej."
+      ]
     },
     {
       "type": "heading",
@@ -355,7 +396,11 @@
         "legend": "Wybierz wynik dla C.8.3.2.2 Nieograniczony dostęp z&nbsp;przodu, od dołu",
         "noteId": "notes-c-8-3-2-2"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Nieograniczony dostęp z przodu, od dołu:</strong> Sprawdź, czy co najmniej jedna z każdego rodzaju części obsługiwanych jest umieszczona nie niżej niż 380 mm (15 cali) nad podłogą w przestrzeni dostępu.",
+        "<img src=\"img/8_3_2_2.png\" alt=\"Ilustracja nieograniczonego dostępu z przodu, pokazująca wymiary wysokości dla dostępu od góry i od dołu\">"
+      ]
     },
     {
       "type": "heading",
@@ -394,7 +439,11 @@
         "legend": "Wybierz wynik dla C.8.3.2.3.1 Wolna powierzchnia podłogi",
         "noteId": "notes-c-8-3-2-3-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Wolna powierzchnia podłogi:</strong> Sprawdź czy TIK zapewnia wolną powierzchnię podłogi, która rozciąga się pod elementem utrudniającym dostęp na odległość nie mniejszą niż wymagana głębokość zasięgu nad przeszkodą.",
+        "<strong>Uwaga:</strong> Zapewnienie, że będzie nieutrudniony „dostęp do dowolnego rodzaju części obsługiwanych” gwarantuje, że użytkownik będzie mógł uzyskać dostęp do co najmniej jednej z każdego rodzaju części obsługiwanych."
+      ]
     },
     {
       "type": "heading",
@@ -428,7 +477,12 @@
         "legend": "Wybierz wynik dla C.8.3.2.3.2 Ograniczony (< 510 mm) dostęp z przodu",
         "noteId": "notes-c-8-3-2-3-2"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Ograniczony (< 510 mm) dostęp z przodu:</strong> Sprawdź, czy dostęp z przodu do wszystkich podstawowych części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad powierzchnią kontaktu z TIK.",
+        "<strong>Wyjaśnienie:</strong> Dla przeszkód mniejszych niż 510 mm, części obsługiwane mogą być wyżej, ale nie przekraczając 1 220 mm.",
+        "<strong>Jak mierzyć:</strong> Zmierz od powierzchni kontaktu (np. podłogi) do najwyższego punktu części obsługiwanej."
+      ]
     },
     {
       "type": "heading",
@@ -462,7 +516,11 @@
         "legend": "Wybierz wynik dla C.8.3.2.3.3 Ograniczony (< 635 mm) dostęp z przodu",
         "noteId": "notes-c-8-3-2-3-3"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Ograniczony (< 635 mm) dostęp z przodu:</strong> Sprawdź, czy dostęp z przodu do wszystkich podstawowych części obsługiwanych nie znajduje się wyżej niż 1 120 mm (44 cali) nad powierzchnią kontaktu z TIK.",
+        "<img src=\"img/8_3_2_3_3.png\" alt=\"Ilustracja ograniczonego dostępu z przodu, pokazująca wymiary dla przeszkód o głębokości mniejszej niż 510 mm i między 510 a 635 mm\">"
+      ]
     },
     {
       "type": "heading",
@@ -497,7 +555,12 @@
         "legend": "Wybierz wynik dla C.8.3.2.4 Szerokość przestrzeni na kolana i stopy",
         "noteId": "notes-c-8-3-2-4"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Szerokość przestrzeni na kolana i stopy:</strong> Sprawdź, czy szerokość przestrzeni na kolana i stopy jest większa niż 760 mm (30 cali).",
+        "<strong>Wyjaśnienie:</strong> Zapewnia to wystarczającą przestrzeń dla użytkowników na wózkach inwalidzkich.",
+        "<strong>Jak mierzyć:</strong> Zmierz szerokość dostępnej przestrzeni pod urządzeniem."
+      ]
     },
     {
       "type": "heading",
@@ -537,7 +600,11 @@
         "legend": "Wybierz wynik dla C.8.3.2.5.a Przestrzeń na stopy (a)",
         "noteId": "notes-c-8-3-2-5-a"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Przestrzeń na stopy (a):</strong> Sprawdź, czy przestrzeń na stopy rozciąga się maksymalnie 635 mm (25 cali) pod całą przeszkodą.",
+        "<img src=\"img/8_3_2_5.png\" alt=\"Ilustracja przestrzeni na stopy, pokazująca wymiary głębokości i wysokości\">"
+      ]
     },
     {
       "type": "heading",
@@ -572,7 +639,11 @@
         "legend": "Wybierz wynik dla C.8.3.2.5.b Przestrzeń na stopy (b)",
         "noteId": "notes-c-8-3-2-5-b"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Przestrzeń na stopy (b):</strong> Sprawdź, czy przestrzeń na stopy zapewnia miejsce co najmniej 430 mm (17 cali) głębokie i 230 mm (9 cali) nad podłogą pod przeszkodą.",
+        "<img src=\"img/8_3_2_5.png\" alt=\"Ilustracja przestrzeni na stopy, pokazująca wymiary głębokości i wysokości\">"
+      ]
     },
     {
       "type": "heading",
@@ -607,7 +678,11 @@
         "legend": "Wybierz wynik dla C.8.3.2.5.c Przestrzeń na stopy (c)",
         "noteId": "notes-c-8-3-2-5-c"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Przestrzeń na stopy (c):</strong> Sprawdź, czy przestrzeń na stopy nie wykracza więcej niż 150 mm (6 cali) poza wszelkie przeszkody na wysokości 230 mm (9 cali) nad podłogą.",
+        "<img src=\"img/8_3_2_5.png\" alt=\"Ilustracja przestrzeni na stopy, pokazująca wymiary głębokości i wysokości\">"
+      ]
     },
     {
       "type": "heading",
@@ -647,7 +722,11 @@
         "legend": "Wybierz wynik dla C.8.3.2.6.a Przestrzeń na kolana (a)",
         "noteId": "notes-c-8-3-2-6-a"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Przestrzeń na kolana (a):</strong> Sprawdź, czy przestrzeń na kolana rozciąga się nie więcej niż 635 mm (25 cali) pod przeszkodą na wysokości 230 mm (9 cali) nad podłogą.",
+        "<img src=\"img/8_3_2_6.png\" alt=\"Ilustracja przestrzeni na kolana, pokazująca wymiary głębokości i wysokości\">"
+      ]
     },
     {
       "type": "heading",
@@ -682,7 +761,11 @@
         "legend": "Wybierz wynik dla C.8.3.2.6.b Przestrzeń na kolana (b)",
         "noteId": "notes-c-8-3-2-6-b"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Przestrzeń na kolana (b):</strong> Sprawdź, czy przestrzeń na kolana rozciąga się co najmniej 280 mm (11 cali) pod przeszkodą na wysokości 230 mm (9 cali) nad podłogą.",
+        "<img src=\"img/8_3_2_6.png\" alt=\"Ilustracja przestrzeni na kolana, pokazująca wymiary głębokości i wysokości\">"
+      ]
     },
     {
       "type": "heading",
@@ -717,7 +800,11 @@
         "legend": "Wybierz wynik dla C.8.3.2.6.c Przestrzeń na kolana (c)",
         "noteId": "notes-c-8-3-2-6-c"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Przestrzeń na kolana (c):</strong> Sprawdź, czy przestrzeń na kolana rozciąga się co najmniej 205 mm (8 cali) pod przeszkodą na wysokości 685 mm (27 cali) nad podłogą.",
+        "<img src=\"img/8_3_2_6.png\" alt=\"Ilustracja przestrzeni na kolana, pokazująca wymiary głębokości i wysokości\">"
+      ]
     },
     {
       "type": "heading",
@@ -752,7 +839,11 @@
         "legend": "Wybierz wynik dla C.8.3.2.6.d Przestrzeń na kolana (d)",
         "noteId": "notes-c-8-3-2-6-d"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Przestrzeń na kolana (d):</strong> Sprawdź, czy redukcja głębokości przestrzeni jest nie większa niż 25 mm (1 cal) na każde 150 mm (6 cali) wysokości.",
+        "<img src=\"img/8_3_2_6.png\" alt=\"Ilustracja przestrzeni na kolana, pokazująca wymiary głębokości i wysokości\">"
+      ]
     },
     {
       "type": "heading",
@@ -791,7 +882,12 @@
         "legend": "Wybierz wynik dla C.8.3.3.1 Nieograniczony dostęp z&nbsp;boku, od góry",
         "noteId": "notes-c-8-3-3-1"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Nieograniczony dostęp z boku, od góry:</strong> Sprawdź, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą w przestrzeni dostępu.",
+        "<strong>Wyjaśnienie:</strong> Dla dostępu z boku, części mogą być wyżej, ale nie przekraczając 1 220 mm.",
+        "<strong>Jak mierzyć:</strong> Zmierz od poziomu podłogi do najwyższego punktu części obsługiwanej dostępnej z boku."
+      ]
     },
     {
       "type": "heading",
@@ -825,7 +921,11 @@
         "legend": "Wybierz wynik dla C.8.3.3.2 Nieograniczony dostęp z&nbsp;boku, od dołu",
         "noteId": "notes-c-8-3-3-2"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Nieograniczony dostęp z boku, od dołu:</strong> Sprawdź, czy dostęp z boku, od dołu do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się niżej niż 380 mm (15 cali) nad podłogą w przestrzeni dostępu.",
+        "<img src=\"img/8_3_3_2.png\" alt=\"Ilustracja nieograniczonego dostępu z boku, pokazująca wymiary wysokości dla dostępu od góry i od dołu\">"
+      ]
     },
     {
       "type": "heading",
@@ -864,7 +964,12 @@
         "legend": "Wybierz wynik dla C.8.3.3.3.1 Ograniczony (< 255 mm) dostęp z&nbsp;boku",
         "noteId": "notes-c-8-3-3-3-1"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Ograniczony (< 255 mm) dostęp z boku:</strong> Sprawdź, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 220 mm (48 cali) nad podłogą w przestrzeni dostępu.",
+        "<strong>Wyjaśnienie:</strong> Dla przeszkód mniejszych niż 255 mm, części mogą być wyżej, ale nie przekraczając 1 220 mm.",
+        "<strong>Jak mierzyć:</strong> Zmierz od poziomu podłogi do najwyższego punktu części obsługiwanej dostępnej z boku."
+      ]
     },
     {
       "type": "heading",
@@ -898,7 +1003,11 @@
         "legend": "Wybierz wynik dla C.8.3.3.3.2 Ograniczony (< 610 mm) dostęp z&nbsp;boku",
         "noteId": "notes-c-8-3-3-3-2"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Ograniczony (< 610 mm) dostęp z boku:</strong> Sprawdź, czy dostęp z boku, od góry do co najmniej jednego z każdego rodzaju części obsługiwanych nie znajduje się wyżej niż 1 170 mm (46 cali) nad podłogą w przestrzeni dostępu.",
+        "<img src=\"img/8_3_3_3_2.png\" alt=\"Ilustracja ograniczonego dostępu z boku, pokazująca wymiary dla przeszkód o głębokości mniejszej niż 255 mm i między 255 a 610 mm\">"
+      ]
     },
     {
       "type": "heading",
@@ -940,7 +1049,14 @@
         "legend": "Wybierz wynik dla C.8.3.4.1 Zmiana poziomu",
         "noteId": "notes-c-8-3-4-1"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Zmiana poziomu:</strong> Sprawdź, czy zmiana poziomu podłogi jest nachylona z nachyleniem nie większym niż 1:48, lub pionowa ≤ 6,4 mm, lub ≤ 13 mm z nachyleniem ≤ 1:2.",
+        "<img src=\"img/8_3_4_1a.png\" alt=\"Ilustracja pionowej zmiany poziomu\">",
+        "Pionowa zmiana poziomu",
+        "<img src=\"img/8_3_4_1b.png\" alt=\"Ilustracja nachylonej zmiany poziomu\">",
+        "Nachylona zmiana poziomu"
+      ]
     },
     {
       "type": "heading",
@@ -974,7 +1090,11 @@
         "legend": "Wybierz wynik dla C.8.3.4.2 Pusta podłoga lub powierzchnia podłoża",
         "noteId": "notes-c-8-3-4-2"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Pusta podłoga lub powierzchnia podłoża:</strong> Sprawdź, czy powierzchnia podłogi ma wymiary wynoszące co najmniej 760 mm x 1 220 mm.",
+        "<img src=\"img/8_3_4_2.png\" alt=\"Ilustracja pustej podłogi lub powierzchni podłoża, pokazująca minimalne wymiary 760 mm x 1220 mm\">"
+      ]
     },
     {
       "type": "heading",
@@ -1013,7 +1133,12 @@
         "legend": "Wybierz wynik dla C.8.3.4.3.1 Postanowienia ogólne",
         "noteId": "notes-c-8-3-4-3-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Postanowienia ogólne:</strong> Sprawdź, czy jedna pełna strona przestrzeni jest wolna od przeszkód.",
+        "<strong>Wyjaśnienie:</strong> Zapewnia to dostępność dla użytkowników z różnych stron.",
+        "<strong>Jak sprawdzić:</strong> Sprawdź wszystkie strony urządzenia pod kątem przeszkód."
+      ]
     },
     {
       "type": "heading",
@@ -1049,7 +1174,11 @@
         "legend": "Wybierz wynik dla C.8.3.4.3.2 Podejście z&nbsp;przodu",
         "noteId": "notes-c-8-3-4-3-2"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Podejście z przodu:</strong> Sprawdź, czy szerokość niszy jest większa niż 915 mm.",
+        "<img src=\"img/8_3_4_3_2.png\" alt=\"Ilustracja przestrzeni manewrowej w niszy dla podejścia z przodu\">"
+      ]
     },
     {
       "type": "heading",
@@ -1085,7 +1214,11 @@
         "legend": "Wybierz wynik dla C.8.3.4.3.3 Dostęp równoległy",
         "noteId": "notes-c-8-3-4-3-3"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Dostęp równoległy:</strong> Sprawdź, czy szerokość przestrzeni dostępu jest większa niż 1 525 mm.",
+        "<img src=\"img/8_3_4_3_3.png\" alt=\"Ilustracja przestrzeni manewrowej w niszy dla dostępu równoległego\">"
+      ]
     },
     {
       "type": "heading",
@@ -1119,7 +1252,11 @@
         "legend": "Wybierz wynik dla C.8.3.5 Widoczność",
         "noteId": "notes-c-8-3-5"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Widoczność:</strong> Sprawdź, czy co najmniej jeden wyświetlacz każdego typu jest umieszczony w taki sposób, aby informacje na nim były czytelne z punktu znajdującego się 1 015 mm (40 cali) nad środkiem podłogi w obszarze roboczym.",
+        "<strong>Uwaga:</strong> Celem tego wymagania jest zapewnienie, że informacje na ekranie mogą być odczytane przez użytkowników z normalnym wzrokiem i odpowiednimi umiejętnościami językowymi, siedzących na wózku inwalidzkim."
+      ]
     },
     {
       "type": "heading",
@@ -1154,7 +1291,11 @@
         "legend": "Wybierz wynik dla C.8.3.6 Instrukcja montażu",
         "noteId": "notes-c-8-3-6"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Instrukcja montażu:</strong> Sprawdź, czy dostępna jest instrukcja montażu z wskazówkami dotyczącymi zgodności wymiarów z Rozdziałami 8.3.2 do 8.3.5 oraz uwzględnieniem wymagań dostępności środowiska zbudowanego.",
+        "<strong>Uwaga:</strong> Jeśli nie ma takich wymagań, instrukcje powinny wymagać, aby wymiary zainstalowanej TIK były zgodne z klauzulami 8.3.2 do 8.3.5 niniejszego dokumentu."
+      ]
     },
     {
       "type": "heading",
@@ -1192,7 +1333,13 @@
         "legend": "Wybierz wynik dla C.8.4.1 Klawisze numeryczne",
         "noteId": "notes-c-8-4-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Klawisze numeryczne:</strong> Sprawdź, czy klawisz z cyfrą 5 różni się w dotyku od pozostałych klawiszy.",
+        "<strong>Jak sprawdzić:</strong> Przesuń palcem po klawiszach, aby wyczuć różnicę w fakturze lub kształcie klawisza 5.",
+        "<strong>Znaczenie:</strong> Ułatwia nawigację osobom niewidomym lub niedowidzącym.",
+        "<strong>Uwaga:</strong> Rekomendacja ITU-T E.161 (2001): \"Arrangement of digits, letters and symbols on telephones and other devices that can be used for gaining access to a telephone network\". opisuje układ 12-przyciskowej klawiatury telefonicznej i zawiera dalsze szczegóły dotyczące formy znaczników dotykowych."
+      ]
     },
     {
       "type": "heading",
@@ -1230,7 +1377,12 @@
         "legend": "Wybierz wynik dla C.8.4.2.1 Środki obsługi części mechanicznych",
         "noteId": "notes-c-8-4-2-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Środki obsługi części mechanicznych:</strong> Sprawdź, czy istnieje dostępny alternatywny sposób, który nie wymaga zastosowania takich działań.",
+        "<strong>Przykłady alternatyw:</strong> Przyciski naciskane płaską dłonią, ekrany dotykowe, kontrola głosowa lub inne metody nie wymagające chwytania, ściskania lub skręcania nadgarstka.",
+        "<strong>Sprawdzenie dostępności:</strong> Upewnij się, że alternatywa jest równie wygodna i dostępna dla wszystkich użytkowników."
+      ]
     },
     {
       "type": "heading",
@@ -1263,7 +1415,13 @@
         "legend": "Wybierz wynik dla C.8.4.2.2 Siła wymagana do obsługi części mechanicznych",
         "noteId": "notes-c-8-4-2-2"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Siła wymagana do obsługi części mechanicznych:</strong> Sprawdź, czy istnieje alternatywny sposób sterowania wymagający użycia siły mniejszej niż 22,2 N.",
+        "<strong>Uwaga:</strong> ISO 21542:2011 zaleca wartość między 2,5 a 5 niutonów.",
+        "<strong>Przykłady alternatyw:</strong> Przyciski naciskane płaską dłonią, ekrany dotykowe, kontrola głosowa lub inne metody wymagające mniejszej siły.",
+        "<strong>Sprawdzenie dostępności:</strong> Upewnij się, że alternatywa jest dostępna dla użytkowników z ograniczoną siłą mięśniową."
+      ]
     },
     {
       "type": "heading",
@@ -1296,7 +1454,11 @@
         "legend": "Wybierz wynik dla C.8.4.3 Klucze, bilety i&nbsp;karty taryfowe",
         "noteId": "notes-c-8-4-3"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Klucze, bilety i karty taryfowe:</strong> Sprawdź, czy orientację kluczy, biletów lub kart taryfowych można wyczuć dotykiem.",
+        "<strong>Uwaga:</strong> ETSI ETS 300 767 definiuje odpowiednie wskazania dotykowe dla kart plastikowych."
+      ]
     },
     {
       "type": "heading",
@@ -1330,7 +1492,13 @@
         "legend": "Wybierz wynik dla C.8.5 Oznaczenia dotykowe w&nbsp;trybie mowy",
         "noteId": "notes-c-8-5"
       },
-      "evaluationType": "Inspekcja i pomiar"
+      "evaluationType": "Inspekcja i pomiar",
+      "detailedChecklist": [
+        "<strong>Oznaczenia dotykowe w trybie mowy:</strong> Sprawdź, czy jest dostępne wyczuwalne w dotyku wskazanie sposobu rozpoczęcia pracy w trybie mowy.",
+        "<strong>Uwaga:</strong> Wskazanie dotykowe może obejmować instrukcje Braille'a.",
+        "<strong>Przykłady oznaczeń:</strong> Wypukłe symbole, tekst Braille'a, tekstury lub inne wyczuwalne wskazówki na urządzeniu.",
+        "<strong>Sprawdzenie dostępności:</strong> Upewnij się, że oznaczenie jest łatwo wyczuwalne dla użytkowników niewidomych lub słabowidzących."
+      ]
     }
   ]
 }

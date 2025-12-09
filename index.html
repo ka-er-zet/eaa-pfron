@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audyt EN 301 549 - Strona Główna</title>
+    <title>Narzędzie Audytowe EAA - Strona Główna</title>
 
     <!-- Pico CSS (Semantic Framework) -->
     <link rel="stylesheet" href="css/pico.min.css">
@@ -44,14 +44,47 @@
             
             <div class="setup-container">
                 <div class="setup-header">
-                    <h1>Narzędzie wspomagające przeprowadzanie audytów zgodności z&nbsp;normą EN 301 549 V3.2.1 (2021-03).</h1>
-                    <p>
-                        To narzędzie nie wysyła żadnych danych na serwer. Wszystkie informacje są przetwarzane lokalnie w&nbsp;Twojej przeglądarce.
-                    </p>
-                    <p>
-                        <strong>Pamiętaj o&nbsp;regularnym zapisywaniu postępów (pobieraniu pliku JSON).</strong><br>
-                        Aby zapisać pracę, naciśnij <strong>Ctrl+S</strong> (lub Cmd+S). Plik z&nbsp;audytem zostanie pobrany na Twój komputer. Możesz go później wczytać, aby wrócić do pracy.
-                    </p>
+                    <h1>Narzędzie wspomagające audyt EAA (norma EN 301 549 V3.2.1 (2021-03)).</h1>
+                    
+                    <details style="margin-top: 2rem; border: 1px solid var(--muted-color); border-radius: 8px; padding: 1rem;">
+                        <summary style="cursor: pointer; font-weight: bold; color: var(--primary);">
+                            Jak korzystać z narzędzia?
+                        </summary>
+                        <div style="margin-top: 1rem; text-align: left;">
+                            <h3 style="margin-top: 0; margin-bottom: 0.5rem;">Prywatność i bezpieczeństwo</h3>
+                            <p>
+                                To narzędzie nie wysyła żadnych danych na serwer. Wszystkie informacje są przetwarzane lokalnie w&nbsp;Twojej przeglądarce.
+                            </p>
+                            
+                            <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Zapisywanie postępów</h3>
+                            <p>
+                                <strong>Pamiętaj o&nbsp;regularnym zapisywaniu postępów (pobieraniu pliku JSON).</strong><br>
+                                Aby zapisać pracę, naciśnij <strong>Ctrl+S</strong> (lub Cmd+S). Plik z&nbsp;audytem zostanie pobrany na Twój komputer. Możesz go później wczytać, aby wrócić do pracy.
+                            </p>
+                            
+                            <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Jak oceniać wymagania?</h3>
+                            <p>
+                                Dla każdego testu wybierz jedną z&nbsp;ocen:
+                            </p>
+                            <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                                <li><strong>Zaliczone</strong> – wymaganie jest spełnione, produkt działa zgodnie z&nbsp;normą.</li>
+                                <li><strong>Nie dotyczy</strong> – wymaganie nie dotyczy tego produktu (np. funkcja nie jest dostępna).</li>
+                                <li><strong>Nie do sprawdzenia</strong> – wymaganie nie może być sprawdzone z powodu niespełnienia warunków wstępnych.</li>
+                                <li><strong>Niezaliczone</strong> – wymaganie nie jest spełnione, produkt ma błąd dostępności.</li>
+                            </ul>
+                            <p>
+                                Jeśli nie jesteś pewien, wybierz "Nie dotyczy" i&nbsp;dodaj notatkę z&nbsp;uwagami.
+                            </p>
+                            <p>
+                                <strong>Uwaga:</strong> Status "Nie testowany" w podsumowaniu audytu oznacza, że wymaganie nie zostało ocenione. Audyt ma wówczas status "nie zakończony".
+                            </p>
+                            
+                            <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Podsumowanie i generowanie raportów</h3>
+                            <p>
+                                Po zakończeniu audytu przejdź do podsumowania, aby wygenerować raport w&nbsp;jednym z&nbsp;dostępnych formatów: ODT (dokument tekstowy), CSV (arkusz kalkulacyjny) lub JSON (format EARL, standard W3C dla raportów dostępności).
+                            </p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="grid">

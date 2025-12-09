@@ -33,7 +33,12 @@
         "legend": "Wybierz wynik dla C.6.1 Szerokość pasma sygnału mowy",
         "noteId": "notes-c-6-1"
       },
-      "evaluationType": "Pomiar"
+      "evaluationType": "Pomiar",
+      "detailedChecklist": [
+        "<strong>Sprawdzenie zakresu częstotliwości:</strong> Sprawdź, czy TIK może kodować i dekodować dźwięk w zakresie częstotliwości z górną granicą co najmniej 7 000 Hz.",
+        "<strong>Uwaga 1:</strong> Dla celów interoperacyjności szeroko stosuje się obsługę zalecenia ITU-T G.722 (1988): \"Kodowanie dźwięku 7 kHz w 64 kbit/s\".",
+        "<strong>Uwaga 2:</strong> W przypadku negocjacji kodeka czasami stosuje się inne standaryzowane kodeki, takie jak zalecenie ITU-T G.722.2, aby uniknąć transkodowania. Zalecenie ITU-T G.722.2 (2003): \"Szerokopasmowe kodowanie mowy około 16 kbit/s przy użyciu adaptacyjnego szerokopasmowego AMR-WB\"."
+      ]
     },
     {
       "type": "heading",
@@ -83,6 +88,12 @@
         "noteId": "notes-c-6-2-1-1"
       },
       "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Sprawdzenie dostępności RTT:</strong> Sprawdź, czy system TIK umożliwia użytkownikowi komunikację RTT z innym „referencyjnym” TIK.",
+        "<strong>Uwaga 1:</strong> To wymaganie obejmuje produkty, które nie mają fizycznych możliwości wyświetlania lub wprowadzania tekstu, ale mają możliwość połączenia z urządzeniami, które takie możliwości posiadają. Obejmuje również pośrednie TIK między punktami końcowymi komunikacji.",
+        "<strong>Uwaga 2:</strong> Nie ma wymagania dodawania: wyświetlacza sprzętowego, klawiatury sprzętowej lub sprzętu do obsługi możliwości połączenia z wyświetlaczem lub klawiaturą, przewodowo lub bezprzewodowo, jeśli taki sprzęt nie byłby normalnie dostarczany.",
+        "<strong>Uwaga 3:</strong> Dla celów interoperacyjności szeroko stosuje się obsługę zalecenia ITU-T T.140 (1988): \"Recommendation ITU-T T.140 (1988): \"Protocol for multimedia application text conversation\"."
+      ],
       "notes": [
         "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
@@ -119,7 +130,15 @@
         "legend": "Wybierz wynik dla C.6.2.1.2 Równoczesna komunikacja głosowa i&nbsp;tekstowa",
         "noteId": "notes-c-6-2-1-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Sprawdzenie równoczesności:</strong> Sprawdź, czy TIK umożliwia jednoczesne korzystanie z połączeń głosowych i RTT przez połączenie jednego użytkownika.",
+        "<strong>Uwaga 1:</strong> W przypadku komunikacji wielostronnej, takiej jak system konferencyjny, dopuszcza się (ale nie wymaga ani niekoniecznie zaleca), aby RTT był obsługiwany w pojedynczym polu wyświetlania i aby konieczne było „przejmowanie głosu”, aby uniknąć zamieszania (w taki sam sposób, jak przejście głosu jest wymagane dla tych, którzy prezentują/mówią głosem).",
+        "<strong>Uwaga 2:</strong> W przypadku komunikacji wielostronnej najlepszą praktyką jest obsługa podnoszenia ręki dla użytkowników głosowych i RTT w taki sam sposób, aby użytkownicy głosowi i RTT znajdowali się w tej samej kolejce.",
+        "<strong>Uwaga 3:</strong> W systemie konferencji wielostronnej, który ma czat jako jedną z funkcji - RTT (jak głos) byłby zwykle oddzielony od czatu, aby użycie RTT nie zakłócało czatu (tj. ludzie mogą wysyłać wiadomości w polu czatu, podczas gdy osoba prezentuje/mówi z RTT - w taki sam sposób, jak ludzie wysyłają wiadomości za pomocą funkcji czatu, podczas gdy inni mówią głosem). Użytkownicy RTT używają wtedy RTT do prezentowania i używają funkcji Czat do wysyłania wiadomości, podczas gdy inni prezentują (za pośrednictwem Głosu lub RTT).",
+        "<strong>Uwaga 4:</strong> Dostępność głosu i RTT działających jednocześnie (i oddzielnie od czatu) może również pozwolić polu RTT na obsługę napisów tekstowych, gdy ktoś mówi (i dlatego nie jest używany do RTT, ponieważ nie jest to kolej użytkownika RTT do mówienia).",
+        "<strong>Uwaga 5:</strong> Jeśli wymagane jest zarówno oprogramowanie po stronie serwera, jak i lokalne oprogramowanie sprzętowe i oprogramowanie do zapewnienia komunikacji głosowej, gdzie żadna część nie może obsługiwać komunikacji głosowej bez drugiej i są sprzedawane jako jednostka dla funkcji komunikacji głosowej, komponenty lokalne i po stronie serwera są uważane za pojedynczy produkt."
+      ]
     },
     {
       "type": "heading",
@@ -168,6 +187,10 @@
         "noteId": "notes-c-6-2-2-1"
       },
       "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Rozróżnienie tekstu:</strong> Sprawdź na testowanej TIK, czy wyświetlany nadawany tekst wizualnie różni się od otrzymanego tekstu i jest od niego oddzielony.",
+        "<strong>Uwaga:</strong> Możliwość wyboru przez użytkownika wyświetlania tekstu wysyłanego i odbieranego w linii lub oddzielnie, z opcjami wyboru, pozwala użytkownikom wyświetlać RTT w formie, która najlepiej dla nich działa. Pozwoliłoby to użytkownikom Braille'a używać pojedynczego pola i przejmować głos oraz mieć tekst pojawiający się w sekwencyjny sposób, którego mogą potrzebować lub preferować."
+      ],
       "notes": [
         "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
@@ -214,6 +237,10 @@
         "noteId": "notes-c-6-2-2-2"
       },
       "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Określenie kierunku:</strong> Sprawdź, czy kierunek nadawania/odbioru przesyłanego tekstu jest możliwy do określenia programowo.",
+        "<strong>Uwaga:</strong> Umożliwia to czytnikom ekranu rozróżnienie między tekstem przychodzącym a wychodzącym podczas używania funkcjonalności RTT."
+      ],
       "notes": [
         "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
@@ -258,6 +285,10 @@
         "noteId": "notes-c-6-2-2-3"
       },
       "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Identyfikacja mówcy dla RTT:</strong> Sprawdź na podstawie obserwacji, czy testowana TIK umożliwia identyfikację mówcy dla tekstu przychodzącego w trybie RTT.",
+        "<strong>Uwaga:</strong> Jest to konieczne, aby zarówno uczestnicy głosowi, jak i RTT wiedzieli, kto obecnie komunikuje się, czy to w RTT, czy głosem."
+      ],
       "notes": [
         "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
@@ -297,6 +328,11 @@
         "noteId": "notes-c-6-2-2-4"
       },
       "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Wizualny wskaźnik aktywności audio:</strong> Sprawdź na podstawie obserwacji, czy istnieje wizualny wskaźnik aktywności audio w czasie rzeczywistym.",
+        "<strong>Uwaga 1:</strong> Wizualny wskaźnik może być prostą pozycją znaku na wyświetlaczu, która miga włączona i wyłączona, aby odzwierciedlić aktywność audio, lub prezentacja informacji w inny sposób, który może być widoczny dla widzących użytkowników i przekazany użytkownikom głuchoniewidomym używającym wyświetlacza brajlowskiego.",
+        "<strong>Uwaga 2:</strong> Bez tego wskazania osoba, która nie ma możliwości słyszenia, nie wie, kiedy ktoś mówi."
+      ],
       "notes": [
         "Zaleca się by wskaźnik migał w&nbsp;czasie rzeczywistym w&nbsp;sposób odzwierciedlający aktywność audio."
       ]
@@ -314,7 +350,7 @@
         "3. Dostępny jest „referencyjny terminal V.18”."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK współpracuje z&nbsp;publiczną komutowaną siecią telefoniczną (PSTN), z&nbsp;terminalem referencyjnym V.18 podłączonym do PSTN zgodnie z&nbsp;zaleceniem ITU-T V.18 [i.23] lub którymkolwiek z&nbsp;jego załączników dla sygnałów telefonii tekstowej na interfejsie PSTN."
+        "1. Sprawdź, czy TIK współpracuje z&nbsp;publiczną komutowaną siecią telefoniczną (PSTN), z&nbsp;terminalem referencyjnym V.18 podłączonym do PSTN zgodnie z&nbsp;zaleceniem ITU-T V.18 lub którymkolwiek z&nbsp;jego załączników dla sygnałów telefonii tekstowej na interfejsie PSTN."
       ],
       "form": {
         "inputs": [
@@ -339,6 +375,12 @@
         "noteId": "notes-c-6-2-3-a"
       },
       "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Wsparcie technologii RTT:</strong> Sprawdź, czy TIK współpracuje z&nbsp;publiczną komutowaną siecią telefoniczną (PSTN), z&nbsp;terminalem referencyjnym V.18 podłączonym do PSTN zgodnie z&nbsp;zaleceniem ITU-T V.18 (Zalecenie ITU-T V.18 (2000): \"Wymagania operacyjne i współdziałania dla urządzeń DCE pracujących w trybie telefonu tekstowego\") lub którymkolwiek z&nbsp;jego załączników dla sygnałów telefonii tekstowej na interfejsie PSTN.",
+        "<strong>Uwaga 1:</strong> W praktyce nowe standardy są wprowadzane jako alternatywny kodek/protokół, który jest obsługiwany obok istniejącego wspólnego standardu i używany, gdy wszystkie komponenty end-to-end go obsługują, podczas gdy rozwój technologii, w połączeniu z innymi przyczynami, w tym rozwojem społecznym i efektywnością kosztową, może sprawić, że inne staną się przestarzałe.",
+        "<strong>Uwaga 2:</strong> Tam, gdzie do zapewnienia komunikacji głosowej używanych jest wiele technologii, może być potrzebnych wiele mechanizmów interoperacyjności, aby zapewnić, że wszyscy użytkownicy mogą korzystać z RTT.",
+        "<strong>Przykład:</strong> System konferencyjny, który obsługuje komunikację głosową przez połączenie internetowe, może zapewniać RTT przez połączenie internetowe przy użyciu zastrzeżonej metody RTT (opcja c). Jednak niezależnie od tego, czy metoda RTT jest zastrzeżona czy nie zastrzeżona, jeśli system konferencyjny oferuje również komunikację telefoniczną, będzie również potrzebował obsługi opcji a lub b, aby zapewnić, że RTT jest obsługiwany przez połączenie telefoniczne."
+      ],
       "notes": [
         "„Referencyjny terminal V.18” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących V.18 w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym referencyjnym terminalu."
       ]
@@ -356,7 +398,7 @@
         "3. Dostępny jest „referencyjny terminal obsługujący komunikację RTT”."
       ],
       "procedure": [
-        "1. Sprawdź, czy TIK współdziała z&nbsp;„referencyjnym terminalem obsługującym komunikację RTT” z&nbsp;wykorzystaniem protokołu VOIP z&nbsp;protokołem inicjowania sesji (SIP) oraz z&nbsp;wykorzystaniem RTT zgodnej z&nbsp;dokumentem IETF RFC 4103 [i.13].",
+        "1. Sprawdź, czy TIK współdziała z&nbsp;„referencyjnym terminalem obsługującym komunikację RTT” z&nbsp;wykorzystaniem protokołu VOIP z&nbsp;protokołem inicjowania sesji (SIP) oraz z&nbsp;wykorzystaniem RTT zgodnej z&nbsp;dokumentem IETF RFC 4103.",
         "2. Jeśli TIK współpracuje z&nbsp;innymi TIK wykorzystującymi podsystem IP Multimedia (IMS) do wdrożenia VOIP , należy sprawdzić, czy przestrzega on"
       ],
       "form": {
@@ -382,6 +424,12 @@
         "noteId": "notes-c-6-2-3-b"
       },
       "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Wsparcie technologii RTT:</strong> Sprawdź, czy TIK współdziała z&nbsp;„referencyjnym terminalem obsługującym komunikację RTT” z&nbsp;wykorzystaniem protokołu VOIP z&nbsp;protokołem inicjowania sesji (SIP) oraz z&nbsp;wykorzystaniem RTT zgodnej z&nbsp;dokumentem IETF RFC 4103 (2005): \"RTP Payload for Text Conversation\".",
+        "<strong>Uwaga 1:</strong> W praktyce nowe standardy są wprowadzane jako alternatywny kodek/protokół, który jest obsługiwany obok istniejącego wspólnego standardu i używany, gdy wszystkie komponenty end-to-end go obsługują, podczas gdy rozwój technologii, w połączeniu z innymi przyczynami, w tym rozwojem społecznym i efektywnością kosztową, może sprawić, że inne staną się przestarzałe.",
+        "<strong>Uwaga 2:</strong> Tam, gdzie do zapewnienia komunikacji głosowej używanych jest wiele technologii, może być potrzebnych wiele mechanizmów interoperacyjności, aby zapewnić, że wszyscy użytkownicy mogą korzystać z RTT.",
+        "<strong>Przykład:</strong> System konferencyjny, który obsługuje komunikację głosową przez połączenie internetowe, może zapewniać RTT przez połączenie internetowe przy użyciu zastrzeżonej metody RTT (opcja c). Jednak niezależnie od tego, czy metoda RTT jest zastrzeżona czy nie zastrzeżona, jeśli system konferencyjny oferuje również komunikację telefoniczną, będzie również potrzebował obsługi opcji a lub b, aby zapewnić, że RTT jest obsługiwany przez połączenie telefoniczne."
+      ],
       "notes": [
         "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
@@ -425,6 +473,12 @@
         "noteId": "notes-c-6-2-3-c"
       },
       "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Wsparcie technologii RTT:</strong> Sprawdź, czy TIK współdziała z&nbsp;„referencyjnym terminalem obsługującym komunikację RTT” z&nbsp;użyciem odpowiedniej i&nbsp;mającej zastosowanie wspólnej specyfikacji wymiany RTT , która została opublikowana i&nbsp;jest dostępna dla środowiska, w&nbsp;którym będzie działać TIK.",
+        "<strong>Uwaga 1:</strong> W praktyce nowe standardy są wprowadzane jako alternatywny kodek/protokół, który jest obsługiwany obok istniejącego wspólnego standardu i używany, gdy wszystkie komponenty end-to-end go obsługują, podczas gdy rozwój technologii, w połączeniu z innymi przyczynami, w tym rozwojem społecznym i efektywnością kosztową, może sprawić, że inne staną się przestarzałe.",
+        "<strong>Uwaga 2:</strong> Tam, gdzie do zapewnienia komunikacji głosowej używanych jest wiele technologii, może być potrzebnych wiele mechanizmów interoperacyjności, aby zapewnić, że wszyscy użytkownicy mogą korzystać z RTT.",
+        "<strong>Przykład:</strong> System konferencyjny, który obsługuje komunikację głosową przez połączenie internetowe, może zapewniać RTT przez połączenie internetowe przy użyciu zastrzeżonej metody RTT (opcja c). Jednak niezależnie od tego, czy metoda RTT jest zastrzeżona czy nie zastrzeżona, jeśli system konferencyjny oferuje również komunikację telefoniczną, będzie również potrzebował obsługi opcji a lub b, aby zapewnić, że RTT jest obsługiwany przez połączenie telefoniczne."
+      ],
       "notes": [
         "„Referencyjny terminal obsługujący komunikację RTT” to terminal specjalnie zaprojektowany do testowania urządzeń obsługujących komunikację RTT w&nbsp;sposób potwierdzający ich funkcjonalność i&nbsp;interoperacyjność. Takie terminale są zazwyczaj tworzone przez krajowe lub międzynarodowe instytucje normalizacyjne, tak aby wszystkie testy były przeprowadzane na spójnym „referencyjnym terminalu obsługującym komunikację RTT”."
       ]
@@ -467,7 +521,13 @@
         "legend": "Wybierz wynik dla C.6.2.3.d Interoperacyjność (d)",
         "noteId": "notes-c-6-2-3-d"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>Wsparcie technologii RTT:</strong> Sprawdź, czy testowana TIK współdziała z&nbsp;„referencyjnym terminalem obsługującym komunikację RTT” dla nowego standardu RTT , który został wprowadzony do użytku.",
+        "<strong>Uwaga 1:</strong> W praktyce nowe standardy są wprowadzane jako alternatywny kodek/protokół, który jest obsługiwany obok istniejącego wspólnego standardu i używany, gdy wszystkie komponenty end-to-end go obsługują, podczas gdy rozwój technologii, w połączeniu z innymi przyczynami, w tym rozwojem społecznym i efektywnością kosztową, może sprawić, że inne staną się przestarzałe.",
+        "<strong>Uwaga 2:</strong> Tam, gdzie do zapewnienia komunikacji głosowej używanych jest wiele technologii, może być potrzebnych wiele mechanizmów interoperacyjności, aby zapewnić, że wszyscy użytkownicy mogą korzystać z RTT.",
+        "<strong>Przykład:</strong> System konferencyjny, który obsługuje komunikację głosową przez połączenie internetowe, może zapewniać RTT przez połączenie internetowe przy użyciu zastrzeżonej metody RTT (opcja c). Jednak niezależnie od tego, czy metoda RTT jest zastrzeżona czy nie zastrzeżona, jeśli system konferencyjny oferuje również komunikację telefoniczną, będzie również potrzebował obsługi opcji a lub b, aby zapewnić, że RTT jest obsługiwany przez połączenie telefoniczne."
+      ]
     },
     {
       "type": "heading",
@@ -484,7 +544,7 @@
         "1. Wprowadź pojedyncze znaki na terminalu poddawanym testowi.",
         "2. Zanotuj moment, w którym wpis został zarejestrowany lokalnie na terminalu.",
         "3. Zanotuj moment, w którym ten tekst został przekazany do sieci lub platformy.",
-        "4. Oblicz opóźnienie między czynnością wpisu a transmisją tekstu."
+        "4. Zmierz opóźnienie między czynnością wpisu a transmisją tekstu."
       ],
       "form": {
         "inputs": [
@@ -509,6 +569,12 @@
         "noteId": "notes-c-6-2-4"
       },
       "evaluationType": "Pomiar",
+      "detailedChecklist": [
+        "<strong>Czas reakcji RTT:</strong> Oblicz opóźnienie między czynnością wpisu a transmisją tekstu i sprawdź, czy jest mniejsze lub równe 500 ms.",
+        "<strong>Uwaga 1:</strong> Dla wprowadzania znak po znaku, \"najmniejsza niezawodnie złożona jednostka wprowadzania tekstu\" byłaby znakiem. Dla przewidywania słów byłaby słowem. Dla niektórych systemów rozpoznawania głosu - tekst może nie wyjść z oprogramowania rozpoznawania, dopóki nie zostanie wypowiedziane całe słowo (lub fraza). W tym przypadku najmniejsza niezawodnie złożona jednostka wprowadzania tekstu dostępna dla TIK byłaby słowem (lub frazą).",
+        "<strong>Uwaga 2:</strong> Limit 500 ms pozwala na buforowanie znaków na ten okres przed transmisją, więc transmisja znak po znaku nie jest wymagana, chyba że znaki są generowane wolniej niż 1 na 500 ms.",
+        "<strong>Uwaga 3:</strong> Opóźnienie 300 ms lub mniej daje użytkownikowi wrażenie działania w czasie rzeczywistym."
+      ],
       "notes": [
         "Identyfikowanie momentu wpisu może różnić się w zależności od rodzaju testowanej funkcjonalności RTT, dlatego należy przeanalizować odpowiedni sygnał lokalny lub status transmisji zgodnie z notatką do klauzuli."
       ]
@@ -545,7 +611,11 @@
         "legend": "Wybierz wynik dla C.6.3 ID dzwoniącego",
         "noteId": "notes-c-6-3"
       },
-      "evaluationType": "Test"
+      "evaluationType": "Test",
+      "detailedChecklist": [
+        "<strong>ID dzwoniącego:</strong> Sprawdź, czy informacje dostarczane przez każdą funkcję są dostępne w&nbsp;formie tekstowej i możliwe do określenia programowo.",
+        "<strong>Uwaga:</strong> Ma to zapewnić, że informacje są dostępne dla technologii wspomagających."
+      ]
     },
     {
       "type": "heading",
@@ -580,7 +650,12 @@
         "legend": "Wybierz wynik dla C.6.4 Alternatywy dla usług głosowych",
         "noteId": "notes-c-6-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Alternatywy dla usług głosowych:</strong> Sprawdź, czy TIK zapewnia użytkownikom środki dostępu do informacji bez używania słuchu czy mowy i czy użytkownik może wykonać zadania dostępne w&nbsp;systemie bez używania słuchu czy mowy.",
+        "<strong>Uwaga 1:</strong> Zadania, które obejmują zarówno obsługę interfejsu, jak i percepcję informacji, wymagałyby, aby zarówno interfejs, jak i informacje były dostępne bez użycia mowy lub słuchu.",
+        "<strong>Uwaga 2:</strong> Rozwiązania zdolne do obsługi mediów audio, RTT i wideo mogłyby spełnić powyższe wymaganie."
+      ]
     },
     {
       "type": "heading",
@@ -623,7 +698,11 @@
         "legend": "Wybierz wynik dla C.6.5.2 Rozdzielczość",
         "noteId": "notes-c-6-5-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Rozdzielczość wideo:</strong> Sprawdź, czy rozdzielczość komunikacji wideo jest rozdzielczością QVGA lub lepszą. Preferowana to co najmniej VGA.",
+        "<strong>Uwaga:</strong> Ma to zapewnić, że komunikacja za pomocą języka migowego jest skuteczna."
+      ]
     },
     {
       "type": "heading",
@@ -657,7 +736,11 @@
         "legend": "Wybierz wynik dla C.6.5.3 Częstotliwość wyświetlania klatek",
         "noteId": "notes-c-6-5-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Częstotliwość wyświetlania klatek:</strong> Sprawdź, czy częstotliwość odświeżania obrazu komunikacji wideo wynosi co najmniej 20 klatek na sekundę (lub więcej - preferowana wartość to co najmniej 30 klatek na sekundę).",
+        "<strong>Uwaga:</strong> Ma to zapewnić, że komunikacja za pomocą języka migowego jest skuteczna."
+      ]
     },
     {
       "type": "heading",
@@ -691,7 +774,11 @@
         "legend": "Wybierz wynik dla C.6.5.4 Synchronizacja dźwięku i&nbsp;obrazu",
         "noteId": "notes-c-6-5-4"
       },
-      "evaluationType": "Pomiar"
+      "evaluationType": "Pomiar",
+      "detailedChecklist": [
+        "<strong>Synchronizacja dźwięku i&nbsp;obrazu:</strong> Sprawdź, czy różnica w&nbsp;czasie między prezentacją mowy i&nbsp;obrazu wideo dla użytkownika jest nie większa niż 100 ms.",
+        "<strong>Uwaga:</strong> Badania pokazują, że jeśli dźwięk wyprzedza obraz, zrozumiałość cierpi znacznie bardziej niż w odwrotnej sytuacji."
+      ]
     },
     {
       "type": "heading",
@@ -728,6 +815,11 @@
         "noteId": "notes-c-6-5-5"
       },
       "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Wizualny wskaźnik aktywności audio:</strong> Sprawdź na podstawie obserwacji, czy istnieje wizualny wskaźnik aktywności audio w&nbsp;czasie rzeczywistym.",
+        "<strong>Uwaga 1:</strong> Wizualny wskaźnik może być prostą kropką wizualną lub diodą LED, lub innym typem wskaźnika włączony/wyłączony, który miga, aby odzwierciedlić aktywność audio.",
+        "<strong>Uwaga 2:</strong> Bez tego wskazania osoba, która nie ma możliwości słyszenia, nie wie, kiedy ktoś mówi."
+      ],
       "notes": [
         "Zaleca się, by wskaźnik migał w&nbsp;czasie rzeczywistym w&nbsp;sposób odzwierciedlający aktywność audio."
       ]
@@ -735,7 +827,7 @@
     {
       "type": "heading",
       "level": 4,
-      "text": "C.6.5.6 Identyfikacja mówcy podczas komunikacji za pomocą wideo"
+      "text": "C.6.5.6 Identyfikacja mówcy podczas komunikacji za pomocą wideo (język migowy)"
     },
     {
       "type": "test",
@@ -765,7 +857,12 @@
         "legend": "Wybierz wynik dla C.6.5.6 Identyfikacja mówcy podczas komunikacji za pomocą wideo",
         "noteId": "notes-c-6-5-6"
       },
-      "evaluationType": "Pomiar"
+      "evaluationType": "Pomiar",
+      "detailedChecklist": [
+        "<strong>Identyfikacja mówcy podczas wideo:</strong> Sprawdź na podstawie obserwacji, czy testowana TIK umożliwia użytkownikom języka migowego identyfikację mówcy.",
+        "<strong>Uwaga 1:</strong> Identyfikacja mówcy może być w tym samym miejscu co dla użytkowników głosowych w przypadku połączeń wielostronnych.",
+        "<strong>Uwaga 2:</strong> Ten mechanizm może być wyzwalany ręcznie przez użytkownika lub automatycznie, gdzie jest to technicznie osiągalne."
+      ]
     },
     {
       "type": "heading",

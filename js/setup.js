@@ -1,38 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
-    // Handle Home Link Click
+    // Obsługa kliknięcia linku do strony głównej
     const homeLink = document.getElementById('app-logo');
     if (homeLink) {
         homeLink.addEventListener('click', async (e) => {
-            e.preventDefault(); // Always prevent default navigation first
+            e.preventDefault(); // Zawsze zapobiegaj domyślnej nawigacji najpierw
 
             const nameInput = document.getElementById('product-name');
             const selectedCheckboxes = document.querySelectorAll('input[name="clauses"]:checked');
             
-            // Check if form is dirty
+            // Sprawdź, czy formularz jest zmieniony
             const isDirty = (nameInput && nameInput.value.trim() !== '') || (selectedCheckboxes.length > 0);
 
             if (isDirty) {
                 const stay = await window.utils.confirm(
                     "Wypełniłeś część formularza. Jeśli go opuścisz, stracisz te informacje. Czy chcesz przejść na stronę główną?",
                     "Niezapisane zmiany",
-                    "Nie", // Primary button (Confirm) -> Returns true -> Stay
-                    "Tak"  // Secondary button (Cancel) -> Returns false -> Leave
+                    "Nie", // Główny przycisk (Potwierdź) -> Zwraca true -> Zostań
+                    "Tak"  // Drugi przycisk (Anuluj) -> Zwraca false -> Wyjdź
                 );
                 
-                // If user clicked "Tak" (Secondary/Cancel), stay is false.
+                // Jeśli użytkownik kliknął "Tak" (Drugi/Anuluj), stay jest false.
                 if (!stay) {
                     window.location.href = 'index.html';
                 }
             } else {
-                // No changes, safe to reload/navigate
+                // Brak zmian, bezpieczna nawigacja
                 window.location.href = 'index.html';
             }
         });
     }
 
-    // Clear any previous state when on setup page
+    // Wyczyść poprzedni stan przy wejściu na stronę konfiguracji
     window.utils.clearState();
 
     const form = document.getElementById('audit-setup-form');

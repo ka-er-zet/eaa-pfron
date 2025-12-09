@@ -35,7 +35,13 @@
         "legend": "Wybierz wynik dla C.7.1.1 Odtwarzanie napisów",
         "noteId": "notes-c-7-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Odtwarzanie napisów:</strong> Sprawdź, czy istnieje mechanizm wyświetlania napisów.",
+        "<strong>Uwaga 1:</strong> Napisy mogą zawierać informacje o czasie, kolorze i pozycji. Te dane napisów są niezbędne dla użytkowników napisów. Czas jest używany do synchronizacji napisów. Kolor może być używany do identyfikacji mówcy. Pozycja może być używana do unikania zasłaniania ważnych informacji.",
+        "<strong>Uwaga 2:</strong> Jeśli urządzenie Braille'a jest podłączone, TIK powinna zapewnić opcję wyświetlania napisów na urządzeniu Braille'a.",
+        "<strong>Uwaga 3:</strong> Klauzula 7.1.1 odnosi się do możliwości odtwarzacza wyświetlania napisów. Klauzule 9.1.2.2, 10.1.2.2 i 11.1.2.2 odnoszą się do dostarczania napisów w treści."
+      ]
     },
     {
       "type": "test",
@@ -64,7 +70,13 @@
         "legend": "Wybierz wynik dla C.7.1.1 Odtwarzanie napisów",
         "noteId": "notes-c-7-1-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Odtwarzanie napisów:</strong> Sprawdź, czy istnieje mechanizm wyświetlania napisów.",
+        "<strong>Uwaga 1:</strong> Napisy mogą zawierać informacje o czasie, kolorze i pozycji. Te dane napisów są niezbędne dla użytkowników napisów. Czas jest używany do synchronizacji napisów. Kolor może być używany do identyfikacji mówcy. Pozycja może być używana do unikania zasłaniania ważnych informacji.",
+        "<strong>Uwaga 2:</strong> Jeśli urządzenie Braille'a jest podłączone, TIK powinna zapewnić opcję wyświetlania napisów na urządzeniu Braille'a.",
+        "<strong>Uwaga 3:</strong> Klauzula 7.1.1 odnosi się do możliwości odtwarzacza wyświetlania napisów. Klauzule 9.1.2.2, 10.1.2.2 i 11.1.2.2 odnoszą się do dostarczania napisów w treści."
+      ]
     },
     {
       "type": "heading",
@@ -97,7 +109,11 @@
         "legend": "Wybierz wynik dla C.7.1.2 Synchronizacja napisów",
         "noteId": "notes-c-7-1-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Synchronizacja napisów:</strong> Sprawdź, czy mechanizm wyświetlania napisów zachowuje synchronizację między dźwiękiem a odpowiednimi napisami.",
+        "<strong>Uwaga:</strong> Dla napisów w nagranym materiale: w ciągu 100 ms od znacznika czasu napisu. Dla napisów w materiale na żywo: w ciągu 100 ms od dostępności napisu dla odtwarzacza."
+      ]
     },
     {
       "type": "heading",
@@ -130,7 +146,11 @@
         "legend": "Wybierz wynik dla C.7.1.3 Zachowanie zasad tworzenia napisów",
         "noteId": "notes-c-7-1-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Zachowanie zasad tworzenia napisów:</strong> Sprawdź, czy TIK zachowuje dane dotyczące napisów w taki sposób, aby można je było wyświetlić zgodnie z Rozdziałami 7.1.1 i 7.1.2.",
+        "<strong>Uwaga:</strong> Dodatkowe aspekty prezentacyjne tekstu, takie jak pozycja na ekranie, kolory tekstu, styl tekstu i czcionki tekstu, mogą przekazywać znaczenie, na podstawie konwencji regionalnych. Zmiana tych aspektów prezentacyjnych może zmienić znaczenie i powinna być unikana, gdzie to możliwe."
+      ]
     },
     {
       "type": "heading",
@@ -164,7 +184,12 @@
         "legend": "Wybierz wynik dla C.7.1.4 Cechy napisów",
         "noteId": "notes-c-7-1-4"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Cechy napisów:</strong> Sprawdź, czy TIK zapewnia sposób dla użytkownika na dostosowanie wyświetlanych cech napisów do indywidualnych wymagań, z wyjątkiem przypadków, gdy napisy są wyświetlane jako niemodyfikowalne znaki.",
+        "<strong>Uwaga 1:</strong> Definiowanie koloru tła i pierwszego planu napisów, typu czcionki, rozmiaru, przezroczystości tła napisów oraz konturu lub obramowania czcionek może przyczynić się do spełnienia tego wymagania.",
+        "<strong>Uwaga 2:</strong> Napisy, które są obrazami bitmapowymi, są przykładami niemodyfikowalnych znaków."
+      ]
     },
     {
       "type": "heading",
@@ -198,7 +223,14 @@
         "legend": "Wybierz wynik dla C.7.1.5 Odczytywane napisy",
         "noteId": "notes-c-7-1-5"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Odczytywane napisy:</strong> Sprawdź, czy istnieje tryb pracy zapewniający przedstawianie dostępnych napisów w formie mówionej.",
+        "<strong>Uwaga 1:</strong> Możliwość zarządzania zakresem wyjścia głosowego dla odczytywanych napisów niezależnie od ogólnego głosu TIK jest preferowana dla większości użytkowników. Jest to możliwe, gdy plik audio z odczytywanymi napisami jest dostarczany w oddzielnym torze audio i mieszany w urządzeniu użytkownika końcowego.",
+        "<strong>Uwaga 2:</strong> Prezentacja oddzielnego toru audio z odczytywanymi napisami w synchronizacji z wyświetlanymi napisami/tytułami poprawia zrozumiałość napisów.",
+        "<strong>Uwaga 3:</strong> Dostarczanie napisów/tytułów jako oddzielnych strumieni tekstowych ułatwia konwersję odpowiednich tekstów na audio.",
+        "<strong>Uwaga 4:</strong> Napisy, które są obrazami bitmapowymi, są przykładami, gdzie zawartość wyświetlanych napisów nie będzie możliwa do określenia programowo."
+      ]
     },
     {
       "type": "heading",
@@ -238,7 +270,14 @@
         "legend": "Wybierz wynik dla C.7.2.1 Odtwarzanie audiodeskrypcji",
         "noteId": "notes-c-7-2-1"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Odtwarzanie audiodeskrypcji:</strong> Sprawdź, czy istnieje wyraźny i oddzielny mechanizm opisu dźwiękowego.",
+        "<strong>Wybór audiodeskrypcji:</strong> Sprawdź, czy istnieje mechanizm wyboru i odtwarzania audiodeskrypcji na domyślnym kanale audio.",
+        "<strong>Wiele ścieżek dźwiękowych:</strong> Sprawdź, czy TIK umożliwia użytkownikowi wybór i odtwarzanie kilku ścieżek dźwiękowych.",
+        "<strong>Uwaga 1:</strong> W takich przypadkach zawartość wideo może zawierać audiodeskrypcję jako jedną z dostępnych ścieżek dźwiękowych.",
+        "<strong>Uwaga 2:</strong> Audiodeskrypcje w mediach cyfrowych czasami zawierają informacje pozwalające na opisy dłuższe niż przerwy między dialogami. Wsparcie w odtwarzaczach mediów cyfrowych dla tej funkcji „rozszerzonej audiodeskrypcji” jest przydatne, szczególnie dla mediów cyfrowych oglądanych osobiście."
+      ]
     },
     {
       "type": "heading",
@@ -271,7 +310,10 @@
         "legend": "Wybierz wynik dla C.7.2.2 Synchronizacja audiodeskrypcji",
         "noteId": "notes-c-7-2-2"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Synchronizacja audiodeskrypcji:</strong> Sprawdź, czy synchronizacja między treścią audio i wideo a odpowiadającą jej audiodeskrypcją jest zachowana."
+      ]
     },
     {
       "type": "heading",
@@ -304,7 +346,10 @@
         "legend": "Wybierz wynik dla C.7.2.3 Zachowywanie audiodeskrypcji",
         "noteId": "notes-c-7-2-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Zachowywanie audiodeskrypcji:</strong> Sprawdź, czy TIK zachowuje dane audiodeskrypcji w taki sposób, aby można je było odtwarzać zgodnie z Rozdziałami 7.2.1 i 7.2.2."
+      ]
     },
     {
       "type": "heading",
@@ -337,7 +382,13 @@
         "legend": "Wybierz wynik dla C.7.3 Sterowanie napisami i&nbsp;audiodeskrypcją",
         "noteId": "notes-c-7-3"
       },
-      "evaluationType": "Inspekcja"
+      "evaluationType": "Inspekcja",
+      "detailedChecklist": [
+        "<strong>Sterowanie napisami i audiodeskrypcją:</strong> Sprawdź, czy elementy sterujące dla włączania napisów i audiodeskrypcji są udostępnione użytkownikowi na tym samym poziomie interakcji co podstawowe elementy sterujące multimediami.",
+        "<strong>Uwaga 1:</strong> Podstawowe elementy sterujące multimediami to zestaw elementów sterujących, które użytkownik najczęściej używa do kontrolowania mediów.",
+        "<strong>Uwaga 2:</strong> Produkty, które mają ogólny sprzętowy regulator głośności, taki jak telefon, lub laptop, który może być skonfigurowany do wyświetlania wideo przez oprogramowanie, ale nie jest to jego głównym celem, nie potrzebują dedykowanych sprzętowych elementów sterujących dla napisów i opisów; jednak elementy sterujące oprogramowaniem lub sprzętowe elementy sterujące mapowane przez oprogramowanie muszą być na tym samym poziomie interakcji.",
+        "<strong>Uwaga 3:</strong> Najlepszą praktyką dla TIK jest włączenie dodatkowych elementów sterujących umożliwiających użytkownikowi wybór, czy napisy i audiodeskrypcja są włączone domyślnie."
+      ]
     }
   ]
 }

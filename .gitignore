@@ -8,6 +8,19 @@ proba/
 __pycache__/
 *.py[cod]
 *$py.class
+*.py
+temp_*.py
+
+# Debug and temporary files
+debug_*.txt
+*.log
+
+# Reports and tools directories
+reports/
+tools/
+
+# Clauses HTML directory (not used in runtime)
+clauses/
 
 # VS Code
 .vscode/
