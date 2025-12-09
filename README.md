@@ -114,7 +114,7 @@ Pliki JSON w `clauses_json/` definiują testy dostępności. Każdy plik odpowia
 
 #### Autowypełnianie klauzul
 
-Niektóre klauzule mają dynamiczne elementy, gdzie dostępne opcje zależą od warunków wstępnych lub innych testów. Obecnie zdefiniowane są dwa przypadki:
+Niektóre klauzule mają dynamiczne elementy, gdzie dostępne opcje zależą od warunków wstępnych lub innych testów. Obecnie zdefiniowane są trzy przypadki:
 
 1. **Testy pochodne (derived tests)**: Wynik testu jest automatycznie wyliczany na podstawie wyników innych testów. Jeśli test ma pole `derivations` (lista ID zależnych testów) lub jest objęty aktywną implikacją (`activeImp`), to:
    - Nie pokazuje formularza wyboru – status jest obliczany automatycznie.
@@ -126,16 +126,20 @@ Niektóre klauzule mają dynamiczne elementy, gdzie dostępne opcje zależą od 
      ```json
      {
        "type": "test",
-       "derivations": ["c6.1.1", "c6.1.2"],  // Lista ID testów, od których zależy wynik
+       "derivations": {
+         "sources": "^C\\.6\\.1\\.[1-2]",
+         "mode": "strict-pass"
+       },
        // ... reszta pól
      }
      ```
-     - `derivations`: Lista ID testów (np. "c6.1.1"). Wynik jest "Zaliczone" tylko jeśli wszystkie zależne są "Zaliczone". Jeśli jakikolwiek zależny jest "Niezaliczone" lub "Nie dotyczy", wynik jest "Niezaliczone".
+     - `sources`: Wyrażenie regularne pasujące do ID zależnych testów (np. "^C\.6\.1\.[1-2]").
+     - `mode`: Tryb obliczania ("strict-pass", "worst-case", "any-subgroup-pass"). W "strict-pass" wynik jest "Zaliczone" tylko jeśli wszystkie zależne są "Zaliczone". Jeśli jakikolwiek zależny jest "Niezaliczone", wynik jest "Niezaliczone".
      - Alternatywnie, użyj `activeImp` dla bardziej złożonych implikacji (np. logicznych warunków).
 
-2. **Testy zależne**: Wybory w wielu testach wpływają na wynik jednego z testów.
+2. **Testy zależne** (hipotetyczne rozszerzenie): Wybory w wielu testach wpływają na widoczność lub treść jednego z testów. Obecnie niezaimplementowane, ale przygotowane dla przyszłych rozszerzeń.
 
-   - **Jak ustawić w JSON**: Dodaj pola do elementów `content`:
+   - **Jak ustawić w JSON** (przyszłe):
      ```json
      {
        "type": "test",
@@ -151,7 +155,7 @@ Niektóre klauzule mają dynamiczne elementy, gdzie dostępne opcje zależą od 
      - `condition`: "all_passed" (wszystkie zależne muszą być "Zaliczone"), "any_failed" (jakikolwiek "Niezaliczone"), "precondition_not_met" (warunki wstępne nie spełnione).
      - `action`: "show" (pokaż element), "hide" (ukryj), "modify_content" (zmień treść na podstawie stanu).
 
-   - Logika w JS (audit.js) już obsługuje podstawowe warunki wstępne; rozszerz o sprawdzanie `conditional` podczas renderowania, aby dynamicznie ukrywać/pokazywać elementy. Nie trzeba modyfikować JS, jeśli dodasz obsługę w funkcji renderowania.
+   - Obecnie warunki wstępne są wyświetlane statycznie; rozszerzenie wymagałoby modyfikacji JS do dynamicznego ukrywania/pokazywania elementów.
 
 3. **Implikacje (implications)**: Wynik jednego testu automatycznie ustawia statusy innych testów.
 
