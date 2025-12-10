@@ -68,6 +68,9 @@
     --sidebar-active-border: var(--blue-600);
     --nav-id-color: var(--blue-600);
     --nav-id-active-color: var(--blue-600);
+
+    /* Layout Safe Area */
+    --page-bottom-pad: calc(4rem + env(safe-area-inset-bottom));
 }
 
 /* Global Focus Style - High Visibility */
@@ -213,6 +216,7 @@
 body {
     margin: 0;
     height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
     display: grid;
     grid-template-rows: auto 1fr;
     overflow: hidden;
@@ -590,13 +594,13 @@ a.nav-item.active {
 [data-theme="dark"] #test-renderer a {
     color: var(--blue-400);
 }
-
 /* --- Main Content --- */
 main {
     padding: 2rem;
-    padding-bottom: 4rem; /* Added bottom padding */
+    padding-bottom: var(--page-bottom-pad); /* Added bottom padding with safe area */
     overflow-y: auto;
     position: relative;
+}   position: relative;
 }
 
 .setup-container {
@@ -1123,10 +1127,21 @@ body.summary-page .app-layout {
 }
 
 .index-main {
-    padding: 2rem 4rem;
+    padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
     width: 100%;
+}
+
+/* Mobile-specific tweaks: allow summary to use full width and reduce side padding */
+@media (max-width: 768px) {
+    .index-main,
+    .setup-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 .summary-header-section {
@@ -1237,6 +1252,67 @@ body.summary-page .app-layout {
 .verdict-desc {
     margin: 0.5rem 0 0 0;
     opacity: 0.9;
+}
+
+/* Mobile layout adjustments for verdict card - stack content and reduce sizes so text fits */
+@media (max-width: 768px) {
+    .verdict-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    .verdict-icon-wrapper {
+        width: 48px;
+        height: 48px;
+    }
+    .verdict-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+    .verdict-desc {
+        font-size: 0.95rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Place header badges under the section name for small screens */
+    .list-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+    }
+    .list-header h3 {
+        text-align: left;
+        width: 100%;
+    }
+    .list-header .header-left {
+        width: 100%;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    .list-header .badge-fail,
+    .list-header .badge-warning,
+    .list-header .badge-fail,
+    .list-header .badge-warning,
+    .list-header .badge {
+        align-self: flex-start;
+        margin-top: 0;
+    }
+
+    /* Stack clause ID, title and comments vertically inside issue items */
+    .issue-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    .issue-id {
+        min-width: 0;
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+    }
 }
 
 .verdict-card.failed .verdict-desc { color: var(--del-color); }
@@ -1474,6 +1550,10 @@ details[open] summary .summary-open {
 }
 
 /* --- Landing Page Cards --- */
+.setup-container .grid {
+    gap: 2rem;
+}
+
 .card-action {
     height: 100%;
     display: flex;
@@ -1482,7 +1562,7 @@ details[open] summary .summary-open {
     text-align: center;
     background-color: var(--card-background-color);
     border-radius: var(--border-radius);
-    padding: 2rem;
+    /* Padding removed to inherit Pico CSS article padding and fix header alignment */
 }
 
 .card-action header {
