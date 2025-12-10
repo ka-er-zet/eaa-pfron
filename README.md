@@ -45,7 +45,7 @@ Narzędzie jest aplikacją webową działającą lokalnie w przeglądarce. Wymag
 1. **Rozpocznij nowy audyt**: Na stronie głównej kliknij "Nowy Audyt", skonfiguruj produkt i wybierz klauzule.
 2. **Przeprowadź testy**: Przechodź przez testy, oceniaj wymagania i dodawaj notatki.
 3. **Zapisz postęp**: Użyj Ctrl+S (Cmd+S na Mac) do zapisania stanu jako plik JSON.
-4. **Wczytaj audyt**: Na stronie głównej kliknij "Wczytaj Audyt" i wybierz plik JSON.
+4. **Wczytaj audyt**: Na stronie głównej kliknij "Wczytaj audyt" i wybierz plik JSON.
 5. **Generuj raport**: Po zakończeniu przejdź do podsumowania i pobierz raport w wybranym formacie.
 
 ### Oceny wymagań

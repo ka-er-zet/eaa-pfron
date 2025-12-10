@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (res.status === 'nt' || res.status === 'Nie do sprawdzenia') {
                 icon = 'help-circle';
                 color = 'var(--nt-color)';
-                statusText = 'Nie testowany';
+                statusText = 'Nietestowany';
             }
 
             const li = document.createElement('li');

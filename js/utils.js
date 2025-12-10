@@ -392,11 +392,11 @@ function fixOrphans(text) {
  * @returns {string} The Polish label.
  */
 function getStatusLabel(status) {
-    if (!status || status === 'not-tested' || status === 'brak') return 'Nie testowany';
+    if (!status || status === 'not-tested' || status === 'brak') return 'Nietestowany';
     if (status === 'pass' || status === 'Zaliczone') return 'Zaliczone';
     if (status === 'fail' || status === 'Niezaliczone') return 'Niezaliczone';
     if (status === 'na' || status === 'Nie dotyczy') return 'Nie dotyczy';
-    if (status === 'nt' || status === 'Nietestowalne' || status === 'Nie do sprawdzenia') return 'Nie testowany';
+    if (status === 'nt' || status === 'Nietestowalne' || status === 'Nie do sprawdzenia') return 'Nietestowany';
     return status;
 }
 
