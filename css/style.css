@@ -1142,6 +1142,39 @@ body.summary-page .app-layout {
     }
 }
 
+/* Responsive tables inside test/descriptions and content containers */
+#test-renderer table,
+.index-main table,
+.setup-container table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+/* Ensure table can be scrolled horizontally on small screens */
+@media (max-width: 768px) {
+    #test-renderer table,
+    .index-main table,
+    .setup-container table {
+        display: block; /* allow overflow-x */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+        white-space: nowrap; /* preserve table columns horizontally */
+    }
+
+    /* Reduce cell padding on smaller screens */
+    #test-renderer table th,
+    #test-renderer table td,
+    .index-main table th,
+    .index-main table td,
+    .setup-container table th,
+    .setup-container table td {
+        padding: 0.25rem 0.5rem;
+        white-space: normal; /* wrap long content within cells */
+        word-break: break-word;
+    }
+}
+
 .summary-header-section {
     display: flex;
     justify-content: space-between;
