@@ -353,19 +353,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const activate = (e) => {
                 if (e) e.preventDefault();
-                // Update the URL hash to represent the selected test
-                try { history.replaceState(null, '', `#${anchorDomId}`); } catch (err) { location.hash = `#${anchorDomId}`; }
                 renderTest(idx);
-                // Przewiń na górę strony i przenieś fokus do głównego obszaru treści dla czytników ekranu
-                setTimeout(() => {
-                    const testRenderer = document.getElementById('test-renderer');
-                    if (testRenderer) testRenderer.focus({ preventScroll: true });
-                    
-                    const mainEl = document.querySelector('main');
-                    if (mainEl) {
-                        mainEl.scrollTop = 0;
-                    }
-                }, 0);
             };
 
             a.addEventListener('click', activate);
@@ -762,7 +750,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <article class="mb-2" tabindex="-1" role="region" aria-labelledby="${anchorDomId}-title" id="${anchorDomId}">
                 <header class="section-header">
                     <span class="audit-card-id">${item.id}</span> 
-                    <h1 style="margin: 0;" id="${anchorDomId}-title">${cleanTitle}</h1>
+                    <h1 style="margin: 0;" id="${anchorDomId}-title" tabindex="-1">${cleanTitle}</h1>
                     ${evaluationTypeBadge}
                     ${wcagBadge}
                 </header>
@@ -820,16 +808,23 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         } else {
             // Scroll the main container to the very top
-            const mainContainer = document.querySelector('main');
-            if (mainContainer) {
-                mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
-            }
+            // Use setTimeout to ensure layout is recalculated before scrolling
+            setTimeout(() => {
+                const mainContainer = document.querySelector('main');
+                if (mainContainer) {
+                    mainContainer.scrollTop = 0;
+                }
 
-            // Set focus to the article for accessibility (without scrolling again)
-            const contentEl = document.getElementById(anchorDomId);
-            if (contentEl) {
-                contentEl.focus({ preventScroll: true });
-            }
+                // Set focus to the heading for accessibility (better for screen readers)
+                const titleEl = document.getElementById(`${anchorDomId}-title`);
+                if (titleEl) {
+                    titleEl.focus({ preventScroll: true });
+                } else {
+                    // Fallback to article
+                    const contentEl = document.getElementById(anchorDomId);
+                    if (contentEl) contentEl.focus({ preventScroll: true });
+                }
+            }, 150);
         }
     };
 
