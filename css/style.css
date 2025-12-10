@@ -1628,3 +1628,15 @@ details[open] summary .summary-open {
 .btn-full-width {
     width: 100%;
 }
+
+/* Optional wrapper for tables to provide smooth scrolling and hint that table is scrollable */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+    max-width: 100%;
+}
+
+.table-responsive table {
+    width: 100%;
+    border-collapse: collapse;
+}

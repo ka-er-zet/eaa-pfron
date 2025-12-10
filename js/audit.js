@@ -594,6 +594,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                  content = window.utils.fixOrphans(sanitizeAndRestore(item.detailedChecklist)).replace(/\n/g, '<br>');
              }
 
+             // Wrap raw table elements with .table-responsive so scrolling is applied to the wrapper
+             // This prevents layout breakage when tables are wider than the viewport.
+             // We wrap each <table> individually. If a wrapper exists, this will add another wrapper (acceptable).
+             content = content
+                 .replace(/<table([^>]*)>/g, '<div class="table-responsive"><table$1>')
+                 .replace(/<\/table>/g, '</table></div>');
+
              detailedChecklistHtml = `
                 <details style="margin-top: 1.5rem; border: 1px solid var(--border-color); border-radius: 4px; padding: 0.5rem; background-color: var(--card-bg);">
                     <summary style="cursor: pointer; font-weight: bold; color: var(--primary-color);">Jak to sprawdzić?</summary>
