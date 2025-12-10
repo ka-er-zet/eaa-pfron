@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (passedTests.length === 0 && naTests.length > 0 && ntTests.length === 0) {
             verdictTitle.innerText = "BRAK NIEZGODNOŚCI";
-            verdictDesc.innerText = "Wszystkie wymagania oznaczono jako 'Nie dotyczy'.";
+            verdictDesc.innerHTML = "Wszystkie wymagania oznaczono jako <q>Nie dotyczy</q>.";
             verdictIcon.setAttribute('data-lucide', 'check-circle'); // Or 'minus-circle' if preferred
         } else {
             verdictTitle.innerText = "ZALICZONY";

@@ -529,7 +529,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     .replace(/<\/td>/g, "###TAG_END_TD###")
                     .replace(/<caption>/g, "###TAG_CAPTION###")
                     .replace(/<\/caption>/g, "###TAG_END_CAPTION###")
-                    .replace(/<img([^>]*)>/g, "###TAG_IMG$1###");
+                    .replace(/<img([^>]*)>/g, "###TAG_IMG$1###")
+                    .replace(/<q([^>]*)>/g, "###TAG_Q$1###")
+                    .replace(/<\/q>/g, "###TAG_END_Q###");
 
                  // 1. Escape all HTML, but preserve existing entities
                  let escaped = protectedStr
@@ -568,7 +570,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     .replace(/###TAG_END_TD###/g, "</td>")
                     .replace(/###TAG_CAPTION###/g, "<caption>")
                     .replace(/###TAG_END_CAPTION###/g, "</caption>")
-                    .replace(/###TAG_IMG([^#]*)###/g, (match, attrs) => `<img${attrs.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}>`);
+                    .replace(/###TAG_IMG([^#]*)###/g, (match, attrs) => `<img${attrs.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}>`)
+                    .replace(/###TAG_Q([^#]*)###/g, (match, attrs) => `<q${attrs.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}>`)
+                    .replace(/###TAG_END_Q###/g, "</q>");
 
                  // 3. Restore links (special handling for attributes)
                  return restored
