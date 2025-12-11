@@ -48,11 +48,20 @@
         "legend": "Wybierz wynik dla C.10.1.1.1 Treść nietekstowa",
         "noteId": "notes-c-10-1-1-1"
       },
+      "notes": [
+        "<strong>Uwaga 1:</strong> Przykłady dokumentów to listy, arkusze kalkulacyjne, e-maile, książki, zdjęcia, prezentacje i filmy, które otwierasz w odpowiednich programach (np. czytnikach, edytorach, odtwarzaczach).",
+        "<strong>Uwaga 2:</strong> Jeden dokument może składać się z kilku plików, na przykład z materiału wideo i oddzielnego pliku z napisami. Dla użytkownika wygląda to zazwyczaj jak jedna całość.",
+        "<strong>Uwaga 3:</strong> Aby wyświetlić dokument, potrzebujesz programu (np. przeglądarki PDF, odtwarzacza). Wymagania dla tych programów są opisane w Klauzuli 11.",
+        "<strong>Uwaga 4:</strong> Jeśli treść jest częścią oprogramowania (np. ekran pomocy wbudowany w aplikację), stosuje się wymagania z Klauzuli 11.",
+        "<strong>Uwaga 8:</strong> Te wymagania dotyczą także dokumentów zabezpieczonych (hasłem, szyfrowaniem, podpisem cyfrowym), w momencie gdy są one wyświetlane użytkownikowi.",
+        "<strong>Uwaga 9:</strong> Zaleca się dołączanie informacji (metadanych) o dostępności dokumentu – wewnątrz niego lub w osobnym pliku (np. zgodnie ze standardem WebSchemas)."
+      ],
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
         "<strong>Tekst alternatywny:</strong> Upewnij się, że każdy obraz i grafika ma odpowiedni tekst alternatywny zapisany w właściwościach obrazu lub atrybucie alt. Elementy dekoracyjne powinny mieć pusty alt; złożone grafiki (wykresy, diagramy) powinny też mieć skrócony opis alternatywny i odniesienie do pełnego opisu w treści dokumentu",
         "<strong>Elementy dekoracyjne:</strong> Upewnij się, że elementy dekoracyjne są oznaczone jako artefakty (PDF) lub nie mają tekstu alternatywnego, jeśli nie wnoszą treści.",
-        "<strong>Wykresy i diagramy:</strong> Złożone grafiki powinny mieć krótki opis alternatywny oraz odniesienie do pełnego opisu w treści dokumentu."
+        "<strong>Wykresy i diagramy:</strong> Złożone grafiki powinny mieć krótki opis alternatywny oraz odniesienie do pełnego opisu w treści dokumentu.",
+        "<strong>Uwaga:</strong> Mechanizmy CAPTCHA rzadko występują w dokumentach offline, ale jeśli się pojawią, należy stosować do nich te same zasady."
       ]
     },
     {
@@ -95,7 +104,8 @@
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
         "<strong>Tylko audio (nagranie):</strong> Sprawdź, czy dla nagrań dźwiękowych (np. podcastów) dostępna jest transkrypcja tekstowa zawierająca wszystkie dialogi i istotne dźwięki.",
-        "<strong>Tylko wideo (nagranie):</strong> Sprawdź, czy dla nagrań wideo bez dźwięku (np. animacji instruktażowych) dostępna jest alternatywa tekstowa lub ścieżka audio opisująca to, co dzieje się na ekranie."
+        "<strong>Tylko wideo (nagranie):</strong> Sprawdź, czy dla nagrań wideo bez dźwięku (np. animacji instruktażowych) dostępna jest alternatywa tekstowa lub ścieżka audio opisująca to, co dzieje się na ekranie.",
+        "<strong>Uwaga:</strong> Alternatywę można zamieścić bezpośrednio w dokumencie lub udostępnić w osobnej wersji, która spełnia wymagania."
       ]
     },
     {
@@ -133,7 +143,8 @@
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
         "<strong>Napisy:</strong> Sprawdź, czy wszystkie nagrania wideo z dźwiękiem (dialogi, istotne odgłosy) posiadają zsynchronizowane napisy dla niesłyszących.",
-        "<strong>Kompletność napisów:</strong> Sprawdź, czy napisy zawierają nie tylko dialogi, ale także informacje o istotnych dźwiękach (np. [muzyka], [śmiech], [dzwonek do drzwi])."
+        "<strong>Kompletność napisów:</strong> Sprawdź, czy napisy zawierają nie tylko dialogi, ale także informacje o istotnych dźwiękach (np. [muzyka], [śmiech], [dzwonek do drzwi]).",
+        "<strong>Uwaga:</strong> Definicja WCAG 2.1 zauważa, że napisy (captions) są czasem nazywane „napisami dla niesłyszących”. Niezależnie od nazwy, muszą one zapewniać zsynchronizowaną alternatywę tekstową zarówno dla mowy, jak i innych dźwięków (efekty dźwiękowe, muzyka, śmiech, identyfikacja mówcy), które są kluczowe dla zrozumienia treści."
       ]
     },
     {
@@ -170,7 +181,9 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Audiodeskrypcja lub tekst:</strong> Sprawdź, czy nagrania wideo posiadają audiodeskrypcję (dodatkową ścieżkę lektora opisującą obraz) LUB pełną alternatywę tekstową (transkrypcję opisową), która pozwala zrozumieć treść wizualną bez oglądania."
+        "<strong>Audiodeskrypcja lub tekst:</strong> Sprawdź, czy nagrania wideo posiadają audiodeskrypcję (dodatkową ścieżkę lektora opisującą obraz) LUB pełną alternatywę tekstową (transkrypcję opisową), która pozwala zrozumieć treść wizualną bez oglądania.",
+        "<strong>Uwaga 1:</strong> Definicja WCAG 2.1 wskazuje, że audiodeskrypcja jest czasem nazywana „opisem wideo” lub „narracją opisową”.",
+        "<strong>Uwaga 2:</strong> Często wykorzystuje się do tego celu dodatkowe lub alternatywne ścieżki dźwiękowe."
       ]
     },
     {
@@ -207,7 +220,8 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Napisy na żywo:</strong> Jeśli dokument transmituje wideo na żywo z dźwiękiem, sprawdź, czy dostępne są napisy generowane w czasie rzeczywistym."
+        "<strong>Napisy na żywo:</strong> Jeśli dokument transmituje wideo na żywo z dźwiękiem, sprawdź, czy dostępne są napisy generowane w czasie rzeczywistym.",
+        "<strong>Uwaga:</strong> Definicja WCAG 2.1 zauważa, że napisy (captions) są czasem nazywane „napisami dla niesłyszących”. Niezależnie od nazwy, muszą one zapewniać zsynchronizowaną alternatywę tekstową zarówno dla mowy, jak i innych dźwięków (efekty dźwiękowe, muzyka, śmiech, identyfikacja mówcy), które są kluczowe dla zrozumienia treści."
       ]
     },
     {
@@ -244,7 +258,9 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Audiodeskrypcja:</strong> Sprawdź, czy nagrania wideo posiadają audiodeskrypcję, jeśli informacje wizualne są kluczowe i nie wynikają ze ścieżki dźwiękowej (wymagane dla poziomu AA)."
+        "<strong>Audiodeskrypcja:</strong> Sprawdź, czy nagrania wideo posiadają audiodeskrypcję, jeśli informacje wizualne są kluczowe i nie wynikają ze ścieżki dźwiękowej (wymagane dla poziomu AA).",
+        "<strong>Uwaga 1:</strong> Definicja WCAG 2.1 wskazuje, że audiodeskrypcja jest czasem nazywana „opisem wideo” lub „narracją opisową”.",
+        "<strong>Uwaga 2:</strong> Często wykorzystuje się do tego celu dodatkowe lub alternatywne ścieżki dźwiękowe."
       ]
     },
     {
@@ -288,7 +304,8 @@
       "detailedChecklist": [
         "<strong>Nagłówki:</strong> Sprawdź, czy nagłówki są zdefiniowane semantycznie w strukturze dokumentu (np. H1–H6, style nagłówków, tagi), a nie tylko ustawione wizualnie; poprawna semantyka poprawia czytelność dla czytników ekranu i ułatwia nawigację.",
         "<strong>Listy:</strong> Upewnij się, że listy (wypunktowane i numerowane) są tworzone za pomocą funkcji edytora lub stylów list, a nie przez ręczne wstawianie znaków — dzięki temu zachowana zostaje struktura semantyczna i ułatwiona obsługa przez technologie asystujące.",
-        "<strong>Tabele:</strong> Sprawdź, czy tabele mają wyraźnie oznaczone nagłówki wierszy i/lub kolumn (np. ustawiony nagłówek wiersza/kolumny) oraz logiczną strukturę tabeli, zamiast używania wizualnego układu bez oznaczeń strukturalnych."
+        "<strong>Tabele:</strong> Sprawdź, czy tabele mają wyraźnie oznaczone nagłówki wierszy i/lub kolumn (np. ustawiony nagłówek wiersza/kolumny) oraz logiczną strukturę tabeli, zamiast używania wizualnego układu bez oznaczeń strukturalnych.",
+        "<strong>Uwaga:</strong> W przypadku dokumentów zawierających niestandardowe typy ról strukturalnych, dobrą praktyką jest mapowanie ich na standardowe typy struktur jako rozwiązanie awaryjne dla czytnika."
       ]
     },
     {
@@ -519,7 +536,7 @@
       "detailedChecklist": [
         "<strong>Kontrola dźwięku:</strong> Jeśli jakikolwiek dźwięk w dokumencie jest odtwarzany automatycznie przez więcej niż 3 sekundy, sprawdź, czy dostępny jest mechanizm pozwalający na wstrzymanie lub zatrzymanie odtwarzania, albo mechanizm kontroli głośności dźwięku niezależny od głośności systemu.",
         "<strong>Kryterium sukcesu (Tabela 10.1):</strong> Jeśli jakikolwiek dźwięk w dokumencie odtwarza się automatycznie dłużej niż 3 sekundy, musi istnieć sposób, aby go zatrzymać, wstrzymać lub ściszyć (niezależnie od głośności całego urządzenia).",
-        "<strong>Uwaga:</strong> Ponieważ niechciany dźwięk może uniemożliwić korzystanie z dokumentu, zasada ta dotyczy wszystkich treści w dokumencie."
+        "<strong>Uwaga:</strong> Ponieważ jakakolwiek część dokumentu niespełniająca tego kryterium sukcesu może zakłócać zdolność użytkownika do korzystania z całego dokumentu, cała zawartość dokumentu (niezależnie od tego, czy jest używana do spełnienia innych kryteriów sukcesu) musi spełniać to kryterium."
       ]
     },
     {
@@ -594,7 +611,10 @@
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
         "<strong>Powiększanie tekstu:</strong> Sprawdź, czy tekst w dokumencie można powiększyć do 200% bez utraty treści i funkcjonalności (np. używając opcji powiększenia w przeglądarce PDF lub edytorze tekstu).",
-        "<strong>Skalowanie:</strong> Upewnij się, że przy powiększeniu tekst nie nakłada się na inne elementy i nie jest ucinany."
+        "<strong>Skalowanie:</strong> Upewnij się, że przy powiększeniu tekst nie nakłada się na inne elementy i nie jest ucinany.",
+        "<strong>Uwaga 1:</strong> Treści, dla których istnieją odtwarzacze oprogramowania, przeglądarki lub edytory z funkcją powiększania do 200 procent, automatycznie spełniają to kryterium sukcesu, gdy są używane z takimi odtwarzaczami, chyba że treść nie będzie działać z powiększeniem.",
+        "<strong>Uwaga 2:</strong> To kryterium sukcesu dotyczy możliwości powiększenia tekstu na ekranie co najmniej do 200% bez konieczności używania technologii asystujących. Oznacza to, że aplikacja zapewnia pewne środki do powiększania tekstu o 200% (zoom lub inne) bez utraty treści lub funkcjonalności, albo że aplikacja współpracuje z funkcjami platformy, które spełniają to wymaganie.",
+        "<strong>Uwaga 3:</strong> Dobrą praktyką jest używanie tylko takich czcionek, które pozwalają na skalowanie bez utraty jakości (np. prezentacja pikselowa). Dotyczy to w szczególności czcionek wbudowanych."
       ]
     },
     {
@@ -991,8 +1011,11 @@
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
         "<strong>Pauza, zatrzymanie, ukrycie:</strong> Sprawdź, czy ruszające się, migające lub przewijające się automatycznie treści (np. karuzele, tickery) można zatrzymać, zapauzować lub ukryć.",
-        "<strong>Kryterium sukcesu (Tabela 10.5):</strong> Dla treści, które się ruszają, migają, przewijają lub aktualizują automatycznie, muszą być spełnione warunki:<br><ul><li><strong>Ruch, miganie, przewijanie:</strong> Jeśli trwa to dłużej niż 5 sekund i dzieje się automatycznie, użytkownik musi mieć możliwość zatrzymania, wstrzymania lub ukrycia tego elementu.</li><li><strong>Automatyczna aktualizacja:</strong> Jeśli treść aktualizuje się sama, użytkownik musi móc to zatrzymać, ukryć lub zmienić częstotliwość aktualizacji.</li></ul><br><strong>Wyjątki:</strong> Nie dotyczy to sytuacji, gdy ruch lub aktualizacja są kluczowe dla działania (np. pasek postępu ładowania).",
-        "<strong>Uwaga:</strong> Ponieważ ruszające się elementy mogą rozpraszać, zasada ta dotyczy wszystkich treści w dokumencie."
+        "<strong>Kryterium sukcesu (Tabela 10.5):</strong> Dla informacji poruszających się, migających, przewijających się lub aktualizujących się automatycznie, spełnione są wszystkie poniższe warunki:<br><ul><li><strong>Ruch, miganie, przewijanie:</strong> Dla każdej takiej treści, która (1) uruchamia się automatycznie, (2) trwa dłużej niż 5 sekund i (3) jest prezentowana równolegle z innymi treściami, istnieje mechanizm pozwalający użytkownikowi na jej wstrzymanie, zatrzymanie lub ukrycie, chyba że jest ona częścią aktywności, w której jest niezbędna.</li><li><strong>Automatyczna aktualizacja:</strong> Dla każdej automatycznie aktualizowanej treści, która (1) uruchamia się automatycznie i (2) jest prezentowana równolegle z innymi treściami, istnieje mechanizm pozwalający użytkownikowi na wstrzymanie, zatrzymanie, ukrycie lub kontrolę częstotliwości aktualizacji, chyba że aktualizacja jest niezbędna.</li></ul>",
+        "<strong>Uwaga 1:</strong> Wymagania dotyczące migotania lub błysków opisano w WCAG 2.1, wytyczna 2.3.",
+        "<strong>Uwaga 2:</strong> Ponieważ jakakolwiek część dokumentu niespełniająca tego kryterium może zakłócać zdolność użytkownika do korzystania z całego dokumentu, cała zawartość dokumentu (niezależnie od tego, czy jest używana do spełnienia innych kryteriów sukcesu) musi spełniać to kryterium.",
+        "<strong>Uwaga 3:</strong> Treści aktualizowane okresowo przez oprogramowanie lub przesyłane strumieniowo nie muszą zachowywać informacji wygenerowanych w trakcie pauzy, jeśli nie jest to technicznie możliwe lub mogłoby wprowadzać w błąd.",
+        "<strong>Uwaga 4:</strong> Animacja będąca częścią fazy ładowania (preload) może być uznana za niezbędną, jeśli w tym czasie nie jest możliwa interakcja, a brak wskaźnika postępu mógłby zmylić użytkownika (sugerując awarię)."
       ]
     },
     {
@@ -1078,8 +1101,8 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Tytuł dokumentu:</strong> Sprawdź we właściwościach pliku (Plik -> Właściwości), czy pole 'Tytuł' jest wypełnione i opisuje zawartość.",
-        "<strong>Wyświetlanie tytułu (PDF):</strong> W plikach PDF sprawdź w ustawieniach początkowych (Właściwości -> Widok początkowy), czy opcja 'Pokaż' jest ustawiona na 'Tytuł dokumentu', a nie 'Nazwa pliku'.",
+        "<strong>Tytuł dokumentu:</strong> Sprawdź we właściwościach pliku, czy pole 'Tytuł' jest wypełnione i opisuje zawartość.",
+        "<strong>Wyświetlanie tytułu (PDF):</strong> W plikach PDF sprawdź w ustawieniach, czy opcja 'Pokaż' jest ustawiona na 'Tytuł dokumentu', a nie 'Nazwa pliku'.",
         "<strong>Kryterium sukcesu (Tabela 10.7):</strong> Dokumenty muszą mieć tytuły, które opisują ich temat lub cel.",
         "<strong>Uwaga:</strong> Nazwa pliku może być uznana za wystarczający tytuł, jeśli trafnie opisuje temat lub cel dokumentu."
       ]
@@ -1434,7 +1457,7 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Język dokumentu:</strong> Sprawdź we właściwościach pliku (Plik -> Właściwości -> Zaawansowane), czy główny język dokumentu jest poprawnie ustawiony (np. Polski).",
+        "<strong>Język dokumentu:</strong> Sprawdź we właściwościach pliku, czy główny język dokumentu jest poprawnie ustawiony (np. Polski).",
         "<strong>Kryterium sukcesu (Tabela 10.11):</strong> Domyślny język każdego dokumentu musi być możliwy do programowego określenia (czyli ustawiony w metadanych pliku)."
       ]
     },
@@ -1517,7 +1540,8 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Po otrzymaniu fokusu:</strong> Sprawdź, czy otrzymanie fokusu przez element nie powoduje nieoczekiwanej zmiany kontekstu (np. automatycznego wysłania formularza, otwarcia nowego okna)."
+        "<strong>Po otrzymaniu fokusu:</strong> Sprawdź, czy otrzymanie fokusu przez element nie powoduje nieoczekiwanej zmiany kontekstu (np. automatycznego wysłania formularza, otwarcia nowego okna).",
+        "<strong>Uwaga:</strong> Niektóre dokumenty złożone i ich programy obsługujące są zaprojektowane tak, aby zapewniać znacznie różniące się funkcje przeglądania i edycji w zależności od tego, z którą częścią dokumentu złożonego użytkownik wchodzi w interakcję (np. prezentacja zawierająca osadzony arkusz kalkulacyjny, gdzie menu i paski narzędzi zmieniają się w zależności od tego, czy użytkownik pracuje z treścią prezentacji, czy arkusza). Jeśli użytkownik korzysta z mechanizmu innego niż umieszczenie fokusu na tej części dokumentu (np. poprzez wybór z menu lub specjalny gest klawiaturowy), wynikająca z tego zmiana kontekstu nie podlega temu kryterium sukcesu, ponieważ nie została spowodowana zmianą fokusu."
       ]
     },
     {

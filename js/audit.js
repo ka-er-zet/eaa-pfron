@@ -484,14 +484,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             preconditionsHtml = `<div class="test-details"><h2 class="text-muted" style="margin-bottom: 0.5rem;">Warunki wstępne</h2><ol>${item.preconditions.map(p => `<li>${window.utils.fixOrphans(stripNumbering(p))}</li>`).join('')}</ol></div>`;
         }
 
+        let notesHtml = '';
+        if (item.notes && item.notes.length > 0) {
+            notesHtml = `<div class="informative" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">Uwagi</h2>${item.notes.map(n => `<p>${window.utils.fixOrphans(n)}</p>`).join('')}</div>`;
+        }
+
         let procedureHtml = '';
         if (item.procedure && item.procedure.length > 0) {
             procedureHtml = `<div class="test-details" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">Procedura</h2><ol>${item.procedure.map(p => `<li>${window.utils.fixOrphans(stripNumbering(p))}</li>`).join('')}</ol></div>`;
-        }
-
-        let notesHtml = '';
-        if (item.notes && item.notes.length > 0) {
-            notesHtml = `<div class="informative" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">UWAGA</h2>${item.notes.map(n => `<p>${window.utils.fixOrphans(n)}</p>`).join('')}</div>`;
         }
 
         let detailedChecklistHtml = '';
