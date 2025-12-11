@@ -39,9 +39,15 @@
                 <small class="text-muted">Podsumowanie</small>
             </div>
         </div>
-        <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()" aria-label="Przełącz motyw">
-            <i id="theme-icon" data-lucide="moon"></i>
-        </button>
+        <div class="header-actions">
+            <button class="outline secondary theme-toggle" id="btn-save-audit" aria-label="Zapisz audyt">
+                <i data-lucide="save" aria-hidden="true"></i>
+            </button>
+            <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()"
+                aria-label="Przełącz motyw">
+                <i id="theme-icon" data-lucide="moon"></i>
+            </button>
+        </div>
     </header>
 
     <!-- Layout Container -->
@@ -55,7 +61,8 @@
                 <div class="summary-header-section" style="margin-bottom: 1rem;">
                     <div>
                         <h1>Raport Końcowy</h1>
-                        <h2 id="summary-product" class="text-muted summary-product-name" style="margin-top: 0.5rem; font-weight: 500;">Ładowanie...</h2>
+                        <h2 id="summary-product" class="text-muted summary-product-name"
+                            style="margin-top: 0.5rem; font-weight: 500;">Ładowanie...</h2>
                     </div>
                 </div>
 
@@ -87,7 +94,8 @@
                                 <div class="list-header fail-header">
                                     <div class="header-left">
                                         <i data-lucide="x-circle"></i>
-                                        <h3 style="margin: 0; font-size: inherit;">NIEZALICZONE (<span id="count-fail">0</span>)</h3>
+                                        <h3 style="margin: 0; font-size: inherit;">NIEZALICZONE (<span
+                                                id="count-fail">0</span>)</h3>
                                     </div>
                                     <span class="badge-fail">Wymagana poprawa</span>
                                 </div>
@@ -101,7 +109,8 @@
                                 <div class="list-header warning-header">
                                     <div class="header-left">
                                         <i data-lucide="alert-circle"></i>
-                                        <h3 style="margin: 0; font-size: inherit;">NIETESTOWANE (<span id="count-verify">0</span>)</h3>
+                                        <h3 style="margin: 0; font-size: inherit;">NIETESTOWANE (<span
+                                                id="count-verify">0</span>)</h3>
                                     </div>
                                     <span class="badge-warning">Wymagana ocena</span>
                                 </div>
@@ -115,7 +124,8 @@
                                 <div class="list-header na-header">
                                     <div class="header-left">
                                         <i data-lucide="minus-circle"></i>
-                                        <h3 style="margin: 0; font-size: inherit;">NIE DOTYCZY (<span id="count-na">0</span>)</h3>
+                                        <h3 style="margin: 0; font-size: inherit;">NIE DOTYCZY (<span
+                                                id="count-na">0</span>)</h3>
                                     </div>
                                 </div>
                                 <div id="list-na" class="issue-list">
@@ -128,7 +138,8 @@
                                 <div class="list-header nt-header">
                                     <div class="header-left">
                                         <i data-lucide="help-circle"></i>
-                                        <h3 style="margin: 0; font-size: inherit;">NIE DO SPRAWDZENIA (<span id="count-nt">0</span>)</h3>
+                                        <h3 style="margin: 0; font-size: inherit;">NIE DO SPRAWDZENIA (<span
+                                                id="count-nt">0</span>)</h3>
                                     </div>
                                 </div>
                                 <div id="list-nt" class="issue-list">
@@ -141,7 +152,8 @@
                                 <div class="list-header success-header">
                                     <div class="header-left">
                                         <i data-lucide="check-circle"></i>
-                                        <h3 style="margin: 0; font-size: inherit;">ZALICZONE (<span id="count-pass">0</span>)</h3>
+                                        <h3 style="margin: 0; font-size: inherit;">ZALICZONE (<span
+                                                id="count-pass">0</span>)</h3>
                                     </div>
                                 </div>
                                 <div id="list-pass" class="issue-list">
@@ -158,11 +170,14 @@
                         <h2>Komentarz audytorski</h2>
                     </header>
                     <div class="section-content">
-                        <label for="executive-summary" style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Treść komentarza</label>
-                        <small id="executive-summary-helper" class="text-muted" style="display: block; margin-bottom: 0.5rem;">
+                        <label for="executive-summary"
+                            style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Treść komentarza</label>
+                        <small id="executive-summary-helper" class="text-muted"
+                            style="display: block; margin-bottom: 0.5rem;">
                             Wpisz tutaj syntezę audytu dla klienta. Np: 'Mimo dużej liczby zaliczonych testów...'
                         </small>
-                        <textarea id="executive-summary" rows="4" aria-describedby="executive-summary-helper"></textarea>
+                        <textarea id="executive-summary" rows="4"
+                            aria-describedby="executive-summary-helper"></textarea>
                     </div>
                 </article>
 

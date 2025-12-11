@@ -38,9 +38,15 @@
                 <small class="text-muted">Przygotowanie audytu</small>
             </div>
         </div>
-        <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()" aria-label="Przełącz motyw">
-            <i id="theme-icon" data-lucide="moon" aria-hidden="true"></i>
-        </button>
+        <div class="header-actions">
+            <button class="outline secondary theme-toggle" id="btn-save-audit" aria-label="Zapisz konfigurację">
+                <i data-lucide="save" aria-hidden="true"></i>
+            </button>
+            <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()"
+                aria-label="Przełącz motyw">
+                <i id="theme-icon" data-lucide="moon" aria-hidden="true"></i>
+            </button>
+        </div>
     </header>
 
     <!-- Layout Container -->
@@ -70,7 +76,8 @@
                                 </small>
                                 <input type="text" id="product-name" name="product-name"
                                     aria-describedby="product-name-helper" required>
-                                <small id="product-name-error" class="text-fail hidden">Proszę podać nazwę produktu.</small>
+                                <small id="product-name-error" class="text-fail hidden">Proszę podać nazwę
+                                    produktu.</small>
                             </div>
                             <div class="mb-2">
                                 <label for="product-desc">Opis / Wersja / URL</label>
@@ -117,7 +124,9 @@
                                             <i data-lucide="box" class="text-muted" aria-hidden="true"></i>
                                             <div>
                                                 <strong style="display: block;">Wymagania ogólne (Klauzula 5)</strong>
-                                                <small class="text-muted">Podstawowa dostępność każdej funkcji ICT: obsługa klawiaturą, czytelne etykiety, brak pułapek na&nbsp;fokusie, przewidywalne zachowanie.</small>
+                                                <small class="text-muted">Podstawowa dostępność każdej funkcji ICT:
+                                                    obsługa klawiaturą, czytelne etykiety, brak pułapek na&nbsp;fokusie,
+                                                    przewidywalne zachowanie.</small>
                                             </div>
                                         </label>
                                     </div>
@@ -128,9 +137,13 @@
                                         <label for="clause-c6" class="scope-card">
                                             <i data-lucide="message-square" class="text-muted" aria-hidden="true"></i>
                                             <div>
-                                                <strong style="display: block;">TIK z&nbsp;dwukierunkową komunikacją głosową
+                                                <strong style="display: block;">TIK z&nbsp;dwukierunkową komunikacją
+                                                    głosową
                                                     (Klauzula 6)</strong>
-                                                <small class="text-muted">Połączenia głosowe i Real Time Text (RTT): dostępność rozmów telefonicznych/VoIP, tekst w&nbsp;czasie rzeczywistym, alternatywy dla usług opartych wyłącznie na&nbsp;mowie.</small>
+                                                <small class="text-muted">Połączenia głosowe i Real Time Text (RTT):
+                                                    dostępność rozmów telefonicznych/VoIP, tekst w&nbsp;czasie
+                                                    rzeczywistym, alternatywy dla usług opartych wyłącznie
+                                                    na&nbsp;mowie.</small>
                                             </div>
                                         </label>
                                     </div>
@@ -143,7 +156,9 @@
                                             <div>
                                                 <strong style="display: block;">TIK z&nbsp;możliwościami wideo (Klauzula
                                                     7)</strong>
-                                                <small class="text-muted">Wideo z dźwiękiem: napisy, audiodeskrypcja, dodatkowe ścieżki audio i&nbsp;dostępne sterowanie odtwarzaczem.</small>
+                                                <small class="text-muted">Wideo z dźwiękiem: napisy, audiodeskrypcja,
+                                                    dodatkowe ścieżki audio i&nbsp;dostępne sterowanie
+                                                    odtwarzaczem.</small>
                                             </div>
                                         </label>
                                     </div>
@@ -155,7 +170,9 @@
                                             <i data-lucide="cpu" class="text-muted" aria-hidden="true"></i>
                                             <div>
                                                 <strong style="display: block;">Sprzęt (Klauzula 8)</strong>
-                                                <small class="text-muted">Elementy fizyczne: przyciski, porty, wskaźniki; obsługa przy ograniczonej sile, brak informacji przekazywanych tylko kolorem lub dźwiękiem.</small>
+                                                <small class="text-muted">Elementy fizyczne: przyciski, porty,
+                                                    wskaźniki; obsługa przy ograniczonej sile, brak informacji
+                                                    przekazywanych tylko kolorem lub dźwiękiem.</small>
                                             </div>
                                         </label>
                                     </div>
@@ -167,7 +184,9 @@
                                             <i data-lucide="globe" class="text-muted" aria-hidden="true"></i>
                                             <div>
                                                 <strong style="display: block;">Strony internetowe (Klauzula 9)</strong>
-                                                <small class="text-muted">Serwisy WWW: zgodność z WCAG 2.1 AA, w&nbsp;tym alternatywy tekstowe, kontrast, nawigacja, formularze.</small>
+                                                <small class="text-muted">Serwisy WWW: zgodność z WCAG 2.1 AA,
+                                                    w&nbsp;tym alternatywy tekstowe, kontrast, nawigacja,
+                                                    formularze.</small>
                                             </div>
                                         </label>
                                     </div>
@@ -180,7 +199,9 @@
                                             <div>
                                                 <strong style="display: block;">Dokumenty nieinternetowe (Klauzula
                                                     10)</strong>
-                                                <small class="text-muted">Pliki typu PDF, DOCX, prezentacje: poprawna struktura, opisy grafik, dostępna kolejność odczytu – na poziomie wymagań jak dla web.</small>
+                                                <small class="text-muted">Pliki typu PDF, DOCX, prezentacje: poprawna
+                                                    struktura, opisy grafik, dostępna kolejność odczytu – na poziomie
+                                                    wymagań jak dla web.</small>
                                             </div>
                                         </label>
                                     </div>
@@ -192,7 +213,9 @@
                                             <i data-lucide="smartphone" class="text-muted" aria-hidden="true"></i>
                                             <div>
                                                 <strong style="display: block;">Oprogramowanie (Klauzula 11)</strong>
-                                                <small class="text-muted">Aplikacje desktop i&nbsp;mobile: poprawne API dostępności, obsługa klawiaturą, komunikaty o&nbsp;stanie i&nbsp;błędach dla czytników ekranu.</small>
+                                                <small class="text-muted">Aplikacje desktop i&nbsp;mobile: poprawne API
+                                                    dostępności, obsługa klawiaturą, komunikaty o&nbsp;stanie
+                                                    i&nbsp;błędach dla czytników ekranu.</small>
                                             </div>
                                         </label>
                                     </div>
@@ -203,9 +226,12 @@
                                         <label for="clause-c12" class="scope-card">
                                             <i data-lucide="book" class="text-muted" aria-hidden="true"></i>
                                             <div>
-                                                <strong style="display: block;">Dokumentacja i&nbsp;usługi wsparcia (Klauzula
+                                                <strong style="display: block;">Dokumentacja i&nbsp;usługi wsparcia
+                                                    (Klauzula
                                                     12)</strong>
-                                                <small class="text-muted">Instrukcje, pomoc online, helpdesk: opis funkcji dostępności, dostępne formaty dokumentów i&nbsp;możliwość komunikacji dostosowanej do użytkownika.</small>
+                                                <small class="text-muted">Instrukcje, pomoc online, helpdesk: opis
+                                                    funkcji dostępności, dostępne formaty dokumentów i&nbsp;możliwość
+                                                    komunikacji dostosowanej do użytkownika.</small>
                                             </div>
                                         </label>
                                     </div>
@@ -216,9 +242,12 @@
                                         <label for="clause-c13" class="scope-card">
                                             <i data-lucide="phone-call" class="text-muted" aria-hidden="true"></i>
                                             <div>
-                                                <strong style="display: block;">TIK zapewniający dostęp do usług relay lub alarmowych
+                                                <strong style="display: block;">TIK zapewniający dostęp do usług relay
+                                                    lub alarmowych
                                                     (Klauzula 13)</strong>
-                                                <small class="text-muted">Usługi pośredniczące (tekst, język migowy, napisy telefoniczne) i&nbsp;połączenia alarmowe: brak blokowania dostępu, wsparcie różnych form komunikacji.</small>
+                                                <small class="text-muted">Usługi pośredniczące (tekst, język migowy,
+                                                    napisy telefoniczne) i&nbsp;połączenia alarmowe: brak blokowania
+                                                    dostępu, wsparcie różnych form komunikacji.</small>
                                             </div>
                                         </label>
                                     </div>

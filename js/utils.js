@@ -114,7 +114,7 @@ function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierd�
             dialog = document.createElement('dialog');
             dialog.id = 'app-confirm-dialog';
             dialog.setAttribute('aria-labelledby', 'dialog-title');
-            dialog.setAttribute('aria-describedby', 'dialog-message');
+            // aria-describedby removed to prevent repetitive reading on child focus in VoiceOver
             dialog.innerHTML = `
                 <h3 id="dialog-title" style="margin-top: 0;"></h3>
                 <p id="dialog-message"></p>
@@ -143,7 +143,7 @@ function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierd�
 
         cancelBtn.onclick = () => close(false);
         confirmBtn.onclick = () => close(true);
-        
+
         // Handle ESC
         dialog.oncancel = (e) => {
             e.preventDefault();
@@ -187,7 +187,7 @@ function generateEARL(state) {
             "@type": ["foaf:Person", "earl:Assertor"],
             "foaf:name": state.auditor
         };
-        
+
         // Utwórz złożony assertor
         mainAssertor = {
             "@id": "_:compoundAssertor",
@@ -217,7 +217,7 @@ function generateEARL(state) {
     // Assertions
     const assertions = state.tests.filter(t => t.type === 'test').map(t => {
         const res = state.results[t.id] || { status: 'not-tested', note: '' };
-        
+
         let outcome = 'earl:untested';
         if (res.status === 'pass' || res.status === 'Zaliczone') outcome = 'earl:passed';
         else if (res.status === 'fail' || res.status === 'Niezaliczone') outcome = 'earl:failed';
@@ -266,10 +266,10 @@ function generateEARL(state) {
  */
 function parseEARL(earlData) {
     const graph = earlData['@graph'] || [];
-    
+
     // Find Config
     const config = graph.find(item => item['@type'] === 'eaa:Configuration') || {};
-    
+
     // Find Subject
     const subject = graph.find(item => {
         const types = Array.isArray(item['@type']) ? item['@type'] : [item['@type']];
@@ -298,16 +298,16 @@ function parseEARL(earlData) {
         if (item['@type'] === 'earl:Assertion') {
             const testId = item['earl:test']?.['dct:identifier'];
             const result = item['earl:result'];
-            
+
             if (testId && result) {
                 let status = null;
                 const outcome = result['earl:outcome']?.['@id'] || result['earl:outcome'];
-                
+
                 if (outcome === 'earl:passed') status = 'pass';
                 else if (outcome === 'earl:failed') status = 'fail';
                 else if (outcome === 'earl:inapplicable') status = 'na';
                 else if (outcome === 'earl:cantTell') status = 'nt';
-                
+
                 state.results[testId] = {
                     status: status,
                     note: result['dct:description'] || ''
@@ -327,12 +327,12 @@ function parseEARL(earlData) {
 function getAuditStats(state) {
     const results = state.results || {};
     const tests = (state.tests || []).filter(t => t.type === 'test');
-    
+
     const failedTests = tests.filter(t => results[t.id]?.status === 'fail' || results[t.id]?.status === 'Niezaliczone');
     const passedTests = tests.filter(t => results[t.id]?.status === 'pass' || results[t.id]?.status === 'Zaliczone');
     const naTests = tests.filter(t => results[t.id]?.status === 'na' || results[t.id]?.status === 'Nie dotyczy');
     const ntTests = tests.filter(t => results[t.id]?.status === 'nt' || results[t.id]?.status === 'Nietestowalne' || results[t.id]?.status === 'Nie do sprawdzenia');
-    
+
     // "To Verify" = All tests - (Failed + Passed + NA + NT)
     const processedIds = new Set([...failedTests, ...passedTests, ...naTests, ...ntTests].map(t => t.id));
     const verifyTests = tests.filter(t => !processedIds.has(t.id));
@@ -400,6 +400,55 @@ function getStatusLabel(status) {
     return status;
 }
 
+/**
+ * Generuje nazwę pliku dla raportu.
+ * @param {string} product Nazwa produktu
+ * @param {string} ext Rozszerzenie pliku (bez kropki)
+ * @param {string} prefix Prefiks nazwy pliku (domyślnie 'raport_eaa_')
+ * @returns {string} Nazwa pliku
+ */
+function getFilename(product, ext, prefix = 'raport_eaa_') {
+    const date = new Date().toISOString().split('T')[0];
+    const safeProduct = (product || 'produkt').replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    return `${prefix}${safeProduct}_${date}.${ext}`;
+}
+
+/**
+ * Zapisuje stan i pobiera plik JSON z audytem (format EARL).
+ * @param {Object} state Stan aplikacji
+ * @param {boolean} isDraft Czy jest to wersja robocza (dodaje prefiks 'draft_')
+ */
+function downloadAudit(state, isDraft = true) {
+    // 1. Zapisz do localStorage
+    saveState(state);
+
+    // 2. Generuj raport EARL
+    const report = generateEARL(state);
+
+    // 3. Pobierz stan jako JSON (format EARL)
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(report, null, 2));
+    const downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href", dataStr);
+
+    const prefix = isDraft ? 'draft_raport_eaa_' : 'raport_eaa_';
+    downloadAnchorNode.setAttribute("download", getFilename(state.product, 'json', prefix));
+
+    document.body.appendChild(downloadAnchorNode);
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+
+    // 4. Feedback dla czytników ekranu
+    let liveRegion = document.getElementById('a11y-live-region');
+    if (!liveRegion) {
+        liveRegion = document.createElement('div');
+        liveRegion.id = 'a11y-live-region';
+        liveRegion.className = 'visually-hidden';
+        liveRegion.setAttribute('aria-live', 'polite');
+        document.body.appendChild(liveRegion);
+    }
+    liveRegion.innerText = 'Zapisano raport i pobrano plik.';
+}
+
 // Expose functions globally
 window.utils = {
     loadState,
@@ -413,13 +462,16 @@ window.utils = {
     parseEARL,
     fixOrphans,
     getAuditStats,
-    getStatusLabel
+    fixOrphans,
+    getAuditStats,
+    getStatusLabel,
+    downloadAudit
 };
 
 // Initialize theme on load
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
-    
+
     // Register Service Worker
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')

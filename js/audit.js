@@ -1296,4 +1296,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             renderTest(foundIndex);
         }
     });
+
+    // Handle Ctrl+S / Cmd+S to save
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+            window.utils.downloadAudit(state, true); // Draft save
+        }
+    });
+
+    // Handle Save Button
+    const saveBtn = document.getElementById('btn-save-audit');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+            window.utils.downloadAudit(state, true); // Draft save
+        });
+    }
 });

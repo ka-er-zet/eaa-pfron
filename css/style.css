@@ -248,6 +248,12 @@ body {
     gap: 1rem;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .header-icon-container {
     background: var(--primary);
     padding: 8px;
@@ -808,6 +814,25 @@ main {
 
 .btn-full-width {
     width: 100%;
+}
+
+/* --- Dialog --- */
+#app-confirm-dialog {
+    text-align: center;
+    max-width: 500px;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+#app-confirm-dialog h3 {
+    margin-bottom: 1rem;
+}
+
+#app-confirm-dialog .dialog-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 /* --- Utilities --- */

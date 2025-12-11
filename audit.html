@@ -42,9 +42,15 @@
                 <small class="text-muted">Audyt w&nbsp;toku</small>
             </div>
         </div>
-        <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()" aria-label="Przełącz motyw">
-            <i id="theme-icon" data-lucide="moon" aria-hidden="true"></i>
-        </button>
+        <div class="header-actions">
+            <button class="outline secondary theme-toggle" id="btn-save-audit" aria-label="Zapisz audyt">
+                <i data-lucide="save" aria-hidden="true"></i>
+            </button>
+            <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()"
+                aria-label="Przełącz motyw">
+                <i id="theme-icon" data-lucide="moon" aria-hidden="true"></i>
+            </button>
+        </div>
     </header>
 
     <!-- Layout Container -->
@@ -54,7 +60,8 @@
         <aside id="sidebar" aria-label="Panel boczny">
             <div class="sidebar-top-section">
                 <a href="#test-renderer" class="skip-nav-link">Pomiń nawigację</a>
-                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
                     <small class="text-muted sidebar-header">Postęp</small>
                     <small class="text-muted"><span id="progress-text">0/0</span></small>
                 </div>

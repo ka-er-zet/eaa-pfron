@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Oblicz statystyki
     const stats = window.utils.getAuditStats(state);
     const results = state.results || {};
-    
+
     const failedTests = stats.lists.failed;
     const passedTests = stats.lists.passed;
     const naTests = stats.lists.na;
@@ -44,14 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
         verdictIcon.setAttribute('data-lucide', 'clock');
     } else {
         verdictCard.classList.add('passed');
-        
+
         if (passedTests.length === 0 && naTests.length > 0 && ntTests.length === 0) {
             verdictTitle.innerText = "BRAK NIEZGODNOŚCI";
             verdictDesc.innerHTML = "Wszystkie wymagania oznaczono jako <q>Nie dotyczy</q>.";
             verdictIcon.setAttribute('data-lucide', 'check-circle'); // Or 'minus-circle' if preferred
         } else {
             verdictTitle.innerText = "ZALICZONY";
-            
+
             if (naTests.length > 0 || ntTests.length > 0) {
                 let desc = `Spełnione wymagania: ${passedTests.length}`;
                 if (naTests.length > 0) desc += `<br>Oznaczone jako nie dotyczy: ${naTests.length}`;
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 verdictDesc.innerText = "Wszystkie wymagania zostały spełnione.";
             }
-            
+
             verdictIcon.setAttribute('data-lucide', 'check-circle');
         }
     }
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById(containerId);
         if (!container) return;
         container.innerHTML = '';
-        
+
         if (items.length === 0) {
             container.innerHTML = '<div class="issue-item" style="color: var(--muted-color); font-style: italic;">Brak elementów w tej sekcji.</div>';
             return;
@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
             el.className = 'issue-item';
             const res = results[t.id];
             const note = res?.note ? `<div class="issue-note">${res.note}</div>` : '';
-            
+
             let desc = '';
-            
+
             // For Passed/NA, show status label
             let statusLabel = '';
 
@@ -148,39 +148,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Helper to generate filename
-    const getFilename = (ext) => {
-        const date = new Date().toISOString().split('T')[0];
-        const product = (state.product || 'produkt').replace(/[^a-z0-9]/gi, '_').toLowerCase();
-        return `raport_eaa_${product}_${date}.${ext}`;
-    };
+    // Helper to generate filename (Removed - using window.utils.getFilename in utils.js)
 
     // Handle Ctrl+S / Cmd+S to save
     document.addEventListener('keydown', (e) => {
         if ((e.ctrlKey || e.metaKey) && e.key === 's') {
             e.preventDefault();
-            
-            // 1. Zapisz do localStorage
-            window.utils.saveState(state);
+            window.utils.downloadAudit(state);
 
-            // 2. Generuj raport EARL
-            const report = window.utils.generateEARL(state);
-
-            // 3. Pobierz stan jako JSON (format EARL)
-            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(report, null, 2));
-            const downloadAnchorNode = document.createElement('a');
-            downloadAnchorNode.setAttribute("href", dataStr);
-            downloadAnchorNode.setAttribute("download", getFilename('json'));
-            document.body.appendChild(downloadAnchorNode);
-            downloadAnchorNode.click();
-            downloadAnchorNode.remove();
-            
-            // 4. Dostępna informacja zwrotna (tylko dla czytników ekranu)
-            // We can reuse the live region if it exists in summary.html, or create a temp one.
-            // summary.html doesn't seem to have 'audit-status-live' based on previous reads, let's check.
-            // Actually, I'll just add a simple alert or reuse the toast logic if I hadn't deleted it.
-            // The user asked to REMOVE the toast. So I will only use aria-live if possible.
-            
+            // Dostępna informacja zwrotna
             let liveRegion = document.getElementById('a11y-live-region');
             if (!liveRegion) {
                 liveRegion = document.createElement('div');
@@ -196,15 +172,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Export Functions ---
 
     document.getElementById('export-json-btn').addEventListener('click', () => {
-        const report = window.utils.generateEARL(state);
-        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(report, null, 2));
-        const downloadAnchorNode = document.createElement('a');
-        downloadAnchorNode.setAttribute("href", dataStr);
-        downloadAnchorNode.setAttribute("download", getFilename('json'));
-        document.body.appendChild(downloadAnchorNode);
-        downloadAnchorNode.click();
-        downloadAnchorNode.remove();
+        window.utils.downloadAudit(state, false); // Final export (no draft_ prefix)
     });
+
+
+
+    // Save Button Handler
+    const saveBtn = document.getElementById('btn-save-audit');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+            window.utils.downloadAudit(state, true); // Draft save
+        });
+    }
 
     document.getElementById('export-csv-btn').addEventListener('click', () => {
         const stats = window.utils.getAuditStats(state);
@@ -239,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ODT Export
     document.getElementById('export-odt-btn').addEventListener('click', () => {
-         exportToODT(state);
+        exportToODT(state);
     });
 
     function exportToODT(state) {
@@ -305,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <text:h text:style-name="H2" text:outline-level="2">${window.utils.xmlEscape(state.product || 'Audyt Dostępności')}</text:h>
             <text:p></text:p>
             <text:p text:style-name="P1">Data: ${new Date().toLocaleString()}</text:p>`;
-        
+
         if (state.auditor) {
             contentXml += `<text:p text:style-name="P1">Audytor: ${window.utils.xmlEscape(state.auditor)}</text:p>`;
         }
