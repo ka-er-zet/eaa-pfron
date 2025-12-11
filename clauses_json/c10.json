@@ -50,7 +50,7 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Tekst alternatywny:</strong> Sprawdź, czy obrazy i grafiki mają zdefiniowany tekst alternatywny we właściwościach obiektu (np. w Word: Formatuj obraz -> Tekst alternatywny; w PDF: Właściwości tagu Figure -> Tekst alternatywny).",
+        "<strong>Tekst alternatywny:</strong> Upewnij się, że każdy obraz i grafika ma odpowiedni tekst alternatywny zapisany w właściwościach obrazu lub atrybucie alt. Elementy dekoracyjne powinny mieć pusty alt; złożone grafiki (wykresy, diagramy) powinny też mieć skrócony opis alternatywny i odniesienie do pełnego opisu w treści dokumentu",
         "<strong>Elementy dekoracyjne:</strong> Upewnij się, że elementy dekoracyjne są oznaczone jako artefakty (PDF) lub nie mają tekstu alternatywnego, jeśli nie wnoszą treści.",
         "<strong>Wykresy i diagramy:</strong> Złożone grafiki powinny mieć krótki opis alternatywny oraz odniesienie do pełnego opisu w treści dokumentu."
       ]
@@ -286,9 +286,9 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Nagłówki:</strong> Sprawdź, czy struktura nagłówków (H1-H6) jest zdefiniowana za pomocą stylów (Word) lub tagów (PDF), a nie tylko wizualnie (pogrubienie, czcionka).",
-        "<strong>Listy:</strong> Upewnij się, że listy są tworzone za pomocą narzędzi do list (tagi L, LI, LBody), a nie ręcznie wpisywanych znaków.",
-        "<strong>Tabele:</strong> Sprawdź, czy tabele mają zdefiniowane nagłówki wierszy i/lub kolumn (tagi TH) i czy struktura tabeli jest logiczna."
+        "<strong>Nagłówki:</strong> Sprawdź, czy nagłówki są zdefiniowane semantycznie w strukturze dokumentu (np. H1–H6, style nagłówków, tagi), a nie tylko ustawione wizualnie; poprawna semantyka poprawia czytelność dla czytników ekranu i ułatwia nawigację.",
+        "<strong>Listy:</strong> Upewnij się, że listy (wypunktowane i numerowane) są tworzone za pomocą funkcji edytora lub stylów list, a nie przez ręczne wstawianie znaków — dzięki temu zachowana zostaje struktura semantyczna i ułatwiona obsługa przez technologie asystujące.",
+        "<strong>Tabele:</strong> Sprawdź, czy tabele mają wyraźnie oznaczone nagłówki wierszy i/lub kolumn (np. ustawiony nagłówek wiersza/kolumny) oraz logiczną strukturę tabeli, zamiast używania wizualnego układu bez oznaczeń strukturalnych."
       ]
     },
     {
@@ -593,7 +593,7 @@
       },
       "evaluationType": "Inspekcja",
       "detailedChecklist": [
-        "<strong>Powiększanie tekstu:</strong> Sprawdź, czy tekst w dokumencie można powiększyć do 200% bez utraty treści i funkcjonalności (np. używając opcji powiększenia w przeglądarce PDF lub Word).",
+        "<strong>Powiększanie tekstu:</strong> Sprawdź, czy tekst w dokumencie można powiększyć do 200% bez utraty treści i funkcjonalności (np. używając opcji powiększenia w przeglądarce PDF lub edytorze tekstu).",
         "<strong>Skalowanie:</strong> Upewnij się, że przy powiększeniu tekst nie nakłada się na inne elementy i nie jest ucinany."
       ]
     },
