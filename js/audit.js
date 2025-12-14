@@ -602,7 +602,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             // We wrap each <table> individually. If a wrapper exists, this will add another wrapper (acceptable).
             content = content
                 .replace(/<table([^>]*)>/g, '<div class="table-responsive"><table$1>')
-                .replace(/<\/table>/g, '</table></div>');
+                .replace(/<\/table>/g, '</table></div>')
+                // Downgrade H2 to H3 to maintain correct heading hierarchy
+                .replace(/<h2\b([^>]*)>/g, '<h3$1>')
+                .replace(/<\/h2>/g, '</h3>');
 
             detailedChecklistHtml = `
                 <details style="margin-top: 1.5rem; border: 1px solid var(--border-color); border-radius: 4px; padding: 0.5rem; background-color: var(--card-bg);">
@@ -624,6 +627,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (item.evaluationType) {
             evaluationTypeBadge = `<span style="background-color: var(--slate-600); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;">${item.evaluationType}</span>`;
         }
+
+        // Clean title for H1 (remove ID if present at start)
+        let cleanTitle = item.title;
+        if (cleanTitle.startsWith(item.id)) {
+            cleanTitle = cleanTitle.substring(item.id.length).trim();
+            // Remove potential separator like " - " or ": "
+            cleanTitle = cleanTitle.replace(/^[:\-\.]+\s*/, '');
+        }
+        cleanTitle = window.utils.fixOrphans(cleanTitle);
 
         // Evaluation Criteria (Form)
         let evaluationHtml = '';
@@ -666,7 +678,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (item.form && item.form.inputs) {
                 evaluationHtml += `<fieldset class="evaluation-criteria" style="border: none; padding: 0; margin: 0;">
-                    <legend class="visually-hidden">Ocena kryteriów</legend>`;
+                    <legend class="visually-hidden">Test ${item.id}: ${cleanTitle}</legend>`;
                 const safeTestId = sanitizeForDomId(item.id);
                 item.form.inputs.forEach(input => {
                     let icon = 'circle';
@@ -700,7 +712,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Fallback to old grid if no form data
                 evaluationHtml += `
                 <fieldset class="eval-grid" style="border: none; padding: 0; margin: 1rem 0 0 0;">
-                    <legend class="visually-hidden">Ocena wyniku testu</legend>
+                    <legend class="visually-hidden">Ocena wyniku testu ${item.id}: ${cleanTitle}</legend>
                     
                       <div class="eval-btn-wrapper">
                           <input type="radio" id="eval-${sanitizeForDomId(item.id)}-pass" name="eval-${sanitizeForDomId(item.id)}" value="Zaliczone" 
@@ -752,14 +764,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         // We do this BEFORE updating innerHTML to ensure no duplicate IDs exist even for a microsecond
         ensureFragmentAnchors(state.tests, anchorDomId);
 
-        // Clean title for H1 (remove ID if present at start)
-        let cleanTitle = item.title;
-        if (cleanTitle.startsWith(item.id)) {
-            cleanTitle = cleanTitle.substring(item.id.length).trim();
-            // Remove potential separator like " - " or ": "
-            cleanTitle = cleanTitle.replace(/^[:\-\.]+\s*/, '');
+        const prevIdx = getPrevTestIndex(idx);
+        const nextIdx = getNextTestIndex(idx);
+        
+        let prevLabel = 'Poprzedni test';
+        if (prevIdx !== -1) {
+            const t = state.tests[prevIdx];
+            const safeTitle = t.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
+            prevLabel = safeTitle.startsWith(t.id) 
+                ? `Poprzedni test: ${safeTitle}` 
+                : `Poprzedni test: ${t.id} ${safeTitle}`;
         }
-        cleanTitle = window.utils.fixOrphans(cleanTitle);
+
+        let nextLabel = 'Następny test';
+        if (nextIdx !== -1) {
+            const t = state.tests[nextIdx];
+            const safeTitle = t.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
+            nextLabel = safeTitle.startsWith(t.id) 
+                ? `Następny test: ${safeTitle}` 
+                : `Następny test: ${t.id} ${safeTitle}`;
+        }
 
         container.innerHTML = `
             <article class="mb-2" tabindex="-1" aria-labelledby="${anchorDomId}-title" id="${anchorDomId}">
@@ -800,12 +824,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             </article>
 
             <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
-                <button class="outline secondary" ${getPrevTestIndex(idx) === -1 ? 'disabled' : ''} onclick="renderTest(${getPrevTestIndex(idx)})">
+                <button class="outline secondary" ${prevIdx === -1 ? 'disabled' : ''} onclick="renderTest(${prevIdx})" aria-label="${prevLabel}">
                     <i data-lucide="arrow-left" style="margin-right: 8px;" aria-hidden="true"></i> Poprzedni
                 </button>
-                ${getNextTestIndex(idx) === -1
+                ${nextIdx === -1
                 ? `<button onclick="finishAudit()" style="background: var(--pass-color); border:none;">Zakończ Audyt <i data-lucide="check-circle" style="margin-left: 8px;" aria-hidden="true"></i></button>`
-                : `<button onclick="renderTest(${getNextTestIndex(idx)})">Następny <i data-lucide="arrow-right" style="margin-left: 8px;" aria-hidden="true"></i></button>`
+                : `<button onclick="renderTest(${nextIdx})" aria-label="${nextLabel}">Następny <i data-lucide="arrow-right" style="margin-left: 8px;" aria-hidden="true"></i></button>`
             }
             </div>
         `;

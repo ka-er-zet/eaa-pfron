@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Narzędzie Audytowe EAA - Podsumowanie</title>
+    <title>Raport zgodności z EAA - Podsumowanie</title>
 
     <!-- Pico CSS (Semantic Framework) -->
     <link rel="stylesheet" href="css/pico.min.css">
@@ -35,8 +35,8 @@
                 <i data-lucide="shield-check" color="white"></i>
             </a>
             <div>
-                <strong class="header-title">EN 301 549</strong>
-                <small class="text-muted">Podsumowanie</small>
+                <strong class="header-title">EAA-CR</strong>
+                <small class="text-muted">Wynik audytu</small>
             </div>
         </div>
         <div class="header-actions">
@@ -187,13 +187,13 @@
                         <h2>Zapisz raport jako:</h2>
                     </header>
                     <div class="section-content grid">
-                        <button class="secondary outline" id="export-json-btn">
+                        <button class="secondary outline" id="export-json-btn" aria-label="Zapisz raport jako JSON">
                             <i data-lucide="code"></i> JSON
                         </button>
-                        <button class="secondary outline" id="export-csv-btn">
+                        <button class="secondary outline" id="export-csv-btn" aria-label="Zapisz raport jako CSV">
                             <i data-lucide="download"></i> CSV
                         </button>
-                        <button class="secondary outline" id="export-odt-btn">
+                        <button class="secondary outline" id="export-odt-btn" aria-label="Zapisz raport jako ODT">
                             <i data-lucide="file-text"></i> ODT
                         </button>
                     </div>
