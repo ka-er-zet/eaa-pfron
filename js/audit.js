@@ -608,8 +608,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 .replace(/<\/h2>/g, '</h3>');
 
             detailedChecklistHtml = `
-                <details style="margin-top: 1.5rem; border: 1px solid var(--border-color); border-radius: 4px; padding: 0.5rem; background-color: var(--card-bg);">
-                    <summary style="cursor: pointer; font-weight: bold; color: var(--primary-color);">Jak to sprawdzić?</summary>
+                <details style="margin-top: 1.5rem; padding: 0.5rem; background-color: var(--card-background-color);">
+                    <summary style="cursor: pointer;">
+                        <h2 style="display: inline; margin: 0; color: inherit;">Jak to sprawdzić?</h2>
+                    </summary>
                     <div style="margin-top: 1rem; padding-left: 1rem; border-left: 2px solid var(--muted-color);">
                         ${content}
                     </div>
