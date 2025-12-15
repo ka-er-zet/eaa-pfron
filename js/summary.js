@@ -144,7 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
             M.reset.newAuditBody,
             M.reset.newAuditTitle,
             M.reset.confirmYes,
-            M.reset.confirmNo
+            M.navigation.confirmStay,
+            'cancel'
         );
         if (confirmed) {
             // User confirmed starting a new audit: clear state and return to home
@@ -382,8 +383,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 M.reset.newAuditBody,
                 M.reset.newAuditTitle,
                 M.reset.confirmYes,
-                M.reset.confirmNo
+                M.navigation.confirmStay,
+                'cancel'
             );
+            console.log('resetAudit: confirm returned ->', confirmed);
             if (confirmed) {
                 window.utils.clearState();
                 window.location.href = 'index.html';

@@ -153,8 +153,14 @@ function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierd≈
             resolve(result);
         };
 
-        cancelBtn.onclick = () => close(false);
-        confirmBtn.onclick = () => close(true);
+        cancelBtn.onclick = () => {
+            console.log('confirmModal: cancelBtn clicked -> resolving false');
+            close(false);
+        };
+        confirmBtn.onclick = () => {
+            console.log('confirmModal: confirmBtn clicked -> resolving true');
+            close(true);
+        };
 
         // Handle ESC
         dialog.oncancel = (e) => {
@@ -164,11 +170,17 @@ function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierd≈
 
         const actions = dialog.querySelector('.dialog-actions');
         if (focusOn === 'cancel') {
-            // Place the cancel button on the right (primary position) and focus it
+            // Place the cancel button on the right and make it the primary (focused) action
             actions.classList.add('reverse-buttons');
+            // Swap visual styling: make cancel primary, confirm secondary
+            cancelBtn.classList.remove('outline','secondary');
+            confirmBtn.classList.add('outline','secondary');
             cancelBtn.focus();
         } else {
             actions.classList.remove('reverse-buttons');
+            // Ensure default styling: confirm is primary
+            confirmBtn.classList.remove('outline','secondary');
+            cancelBtn.classList.add('outline','secondary');
             confirmBtn.focus();
         }
 
