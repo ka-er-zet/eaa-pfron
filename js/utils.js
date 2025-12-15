@@ -400,6 +400,29 @@ function getStatusLabel(status) {
     return status;
 }
 
+// Ensure skip links move focus programmatically for keyboard users
+document.addEventListener('click', function (e) {
+    const target = e.target;
+    if (target && target.classList && target.classList.contains('skip-link')) {
+        e.preventDefault();
+        const href = target.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+        const id = href.slice(1);
+        const el = document.getElementById(id);
+        if (el) {
+            // Ensure element can be focused
+            if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+            el.focus();
+            // Update location hash without scrolling if possible
+            if (history.replaceState) {
+                history.replaceState(null, '', '#' + id);
+            } else {
+                window.location.hash = id;
+            }
+        }
+    }
+}, false);
+
 /**
  * Generuje nazwę pliku dla raportu.
  * @param {string} product Nazwa produktu
