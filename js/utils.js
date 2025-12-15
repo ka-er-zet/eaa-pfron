@@ -65,6 +65,10 @@ function xmlEscape(str) {
     });
 }
 
+// App version for cache-busting verification
+window.EAA_APP_VERSION = 'v13';
+console.log('EAA App Version:', window.EAA_APP_VERSION);
+
 /**
  * Inicjalizuje motyw na podstawie localStorage lub preferencji systemu.
  */
