@@ -836,6 +836,10 @@ main {
     margin-top: 1.5rem;
 }
 
+#app-confirm-dialog .dialog-actions.reverse-buttons {
+    flex-direction: row-reverse;
+}
+
 /* --- Utilities --- */
 .hidden {
     display: none !important;

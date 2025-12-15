@@ -111,7 +111,15 @@ function updateThemeIcon(theme) {
  * @param {string} cancelText Tekst przycisku anulowania.
  * @returns {Promise<boolean>} Promise rozwiązujący się na true jeśli potwierdzone, false w przeciwnym razie.
  */
-function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierdź", cancelText = "Anuluj") {
+/**
+ * Wyświetla niestandardowe okno potwierdzenia.
+ * @param {string} message Treść wiadomości
+ * @param {string} title Tytuł dialogu
+ * @param {string} confirmText Tekst przycisku potwierdzenia (wykona akcję)
+ * @param {string} cancelText Tekst przycisku anulowania (anuluje akcję)
+ * @param {string} focusOn Which button should be focused and placed on the right by default: 'confirm' or 'cancel'
+ */
+function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierdź", cancelText = "Anuluj", focusOn = 'confirm') {
     return new Promise((resolve) => {
         let dialog = document.getElementById('app-confirm-dialog');
         if (!dialog) {
@@ -154,8 +162,17 @@ function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierd�
             close(false);
         };
 
+        const actions = dialog.querySelector('.dialog-actions');
+        if (focusOn === 'cancel') {
+            // Place the cancel button on the right (primary position) and focus it
+            actions.classList.add('reverse-buttons');
+            cancelBtn.focus();
+        } else {
+            actions.classList.remove('reverse-buttons');
+            confirmBtn.focus();
+        }
+
         dialog.showModal();
-        confirmBtn.focus();
     });
 }
 
