@@ -386,7 +386,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 M.navigation.confirmStay,
                 'cancel'
             );
-            console.log('resetAudit: confirm returned ->', confirmed);
             if (confirmed) {
                 window.utils.clearState();
                 window.location.href = 'index.html';

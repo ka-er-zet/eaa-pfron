@@ -67,7 +67,6 @@ function xmlEscape(str) {
 
 // App version for cache-busting verification
 window.EAA_APP_VERSION = 'v13';
-console.log('EAA App Version:', window.EAA_APP_VERSION);
 
 /**
  * Inicjalizuje motyw na podstawie localStorage lub preferencji systemu.
@@ -153,14 +152,8 @@ function confirmModal(message, title = "Potwierdzenie", confirmText = "PotwierdÅ
             resolve(result);
         };
 
-        cancelBtn.onclick = () => {
-            console.log('confirmModal: cancelBtn clicked -> resolving false');
-            close(false);
-        };
-        confirmBtn.onclick = () => {
-            console.log('confirmModal: confirmBtn clicked -> resolving true');
-            close(true);
-        };
+        cancelBtn.onclick = () => close(false);
+        confirmBtn.onclick = () => close(true);
 
         // Handle ESC
         dialog.oncancel = (e) => {
@@ -531,9 +524,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register Service Worker
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
-            .then(registration => {
-                console.log('Service Worker registered with scope:', registration.scope);
-            })
             .catch(error => {
                 console.error('Service Worker registration failed:', error);
             });
