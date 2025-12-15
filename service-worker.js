@@ -13,6 +13,8 @@ const urlsToCache = [
   './js/audit.js?v=13',
   './js/summary.js?v=13',
   './js/utils.js?v=13',
+  './js/messages.pl.js?v=13',
+  './js/messages.en.js?v=13',
   './js/lucide.min.js',
   './js/jszip.min.js',
   './manifest.webmanifest',

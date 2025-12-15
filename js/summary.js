@@ -140,13 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // New Audit Button
     window.resetAudit = async function () {
-        const stay = await window.utils.confirm(
-            "Czy na pewno chcesz rozpocząć nowy audyt? Wszystkie niezapisane dane zostaną utracone.",
-            "Nowy Audyt",
-            "Nie",
-            "Tak"
+        const confirmed = await window.utils.confirm(
+            M.reset.newAuditBody,
+            M.reset.newAuditTitle,
+            M.reset.confirmYes,
+            M.reset.confirmNo
         );
-        if (!stay) {
+        if (confirmed) {
+            // User confirmed starting a new audit: clear state and return to home
             window.utils.clearState();
             window.location.href = 'index.html';
         }
@@ -377,13 +378,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (homeLink) {
         homeLink.addEventListener('click', async (e) => {
             e.preventDefault();
-            window.utils.confirm(
-    M.reset.newAuditBody,
-    M.reset.newAuditTitle,
-    M.reset.confirmNo,
-    M.reset.confirmYes
-);
-            if (!stay) {
+            const confirmed = await window.utils.confirm(
+                M.reset.newAuditBody,
+                M.reset.newAuditTitle,
+                M.reset.confirmYes,
+                M.reset.confirmNo
+            );
+            if (confirmed) {
                 window.utils.clearState();
                 window.location.href = 'index.html';
             }
