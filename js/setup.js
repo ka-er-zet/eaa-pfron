@@ -1,3 +1,8 @@
+import { MESSAGES_PL as M } from './messages.pl.js';
+// docelowo: const M = window.i18n.getMessages();
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
@@ -15,11 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (isDirty) {
                 const stay = await window.utils.confirm(
-                    "Wypełniłeś część formularza. Jeśli go opuścisz, stracisz te informacje. Czy chcesz przejść na stronę główną?",
-                    "Niezapisane zmiany",
-                    "Nie", // Główny przycisk (Potwierdź) -> Zwraca true -> Zostań
-                    "Tak"  // Drugi przycisk (Anuluj) -> Zwraca false -> Wyjdź
+                    M.navigation.unsavedChangesBody,
+                    M.navigation.unsavedChangesTitle,
+                    M.navigation.confirmStay,
+                    M.navigation.confirmLeave
                 );
+
 
                 // Jeśli użytkownik kliknął "Tak" (Drugi/Anuluj), stay jest false.
                 if (!stay) {

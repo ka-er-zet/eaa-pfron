@@ -1,3 +1,7 @@
+import { MESSAGES_PL as M } from './messages.pl.js';
+// docelowo: const M = window.i18n.getMessages();
+
+
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
@@ -20,36 +24,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     const data = JSON.parse(json);
                     let state;
 
-                    // Określ format
                     if (data.tests && Array.isArray(data.tests)) {
-                        // Starszy/Wewnętrzny Format Stanu
                         state = data;
                     } else if (data['@graph'] || data['@context']) {
-                        // Format EARL
                         state = window.utils.parseEARL(data);
                     } else {
-                        throw new Error("Nieznany format pliku.");
+                        throw new Error(M.fileLoad.unknownFormat);
                     }
 
-                    // Podstawowa walidacja
                     if (!state || typeof state !== 'object') {
-                        throw new Error("Nieprawidłowy format danych.");
+                        throw new Error(M.fileLoad.invalidData);
                     }
 
-                    // Zapisz do localStorage
                     window.utils.saveState(state);
-
-                    // Przekieruj
                     window.location.href = 'audit.html';
 
                 } catch (err) {
                     console.error(err);
-                    alert("Błąd podczas wczytywania pliku:\n" + err.message);
+                    alert(
+                        `${M.fileLoad.loadError}\n${err.message}`
+                    );
                 }
             };
             reader.readAsText(file);
-            
-            // Reset input so same file can be selected again if needed
             fileInput.value = '';
         });
     }

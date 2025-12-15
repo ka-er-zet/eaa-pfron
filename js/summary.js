@@ -1,10 +1,14 @@
+import { MESSAGES_PL as M } from './messages.pl.js';
+// docelowo: const M = window.i18n.getMessages();
+
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
     // Załaduj stan
     const state = window.utils.loadState();
     if (!state.product && state.tests.length === 0) {
-        alert("Brak danych audytu. Przekierowanie do strony startowej.");
+        alert(M.summary.noAuditData);
+
         window.location.href = 'index.html';
         return;
     }
@@ -33,24 +37,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (failedTests.length > 0) {
         verdictCard.classList.add('failed');
-        verdictTitle.innerText = "NIEZALICZONY";
+        verdictTitle.innerText = M.summary.verdictFailed;
         verdictDesc.innerHTML = `Niespełnione wymagania: ${failedTests.length}<br>Wymagania nieocenione: ${verifyTests.length}`;
         verdictIcon.setAttribute('data-lucide', 'shield-alert');
     } else if (verifyTests.length > 0) {
         // Warning / In Progress
         verdictCard.classList.add('in-progress');
-        verdictTitle.innerText = "NIEZAKOŃCZONY";
+        verdictTitle.innerText = M.summary.verdictInProgress;
         verdictDesc.innerText = `Pozostało ${verifyTests.length} testów do sprawdzenia`;
         verdictIcon.setAttribute('data-lucide', 'clock');
     } else {
         verdictCard.classList.add('passed');
 
         if (passedTests.length === 0 && naTests.length > 0 && ntTests.length === 0) {
-            verdictTitle.innerText = "BRAK NIEZGODNOŚCI";
+            verdictTitle.innerText = M.summary.verdictNoNonconformities;
             verdictDesc.innerHTML = "Wszystkie wymagania oznaczono jako <q>Nie dotyczy</q>.";
             verdictIcon.setAttribute('data-lucide', 'check-circle'); // Or 'minus-circle' if preferred
         } else {
-            verdictTitle.innerText = "ZALICZONY";
+            verdictTitle.innerText = M.summary.verdictPassed;
 
             if (naTests.length > 0 || ntTests.length > 0) {
                 let desc = `Spełnione wymagania: ${passedTests.length}`;
@@ -165,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 liveRegion.setAttribute('aria-live', 'polite');
                 document.body.appendChild(liveRegion);
             }
-            liveRegion.innerText = 'Zapisano raport i pobrano plik.';
+            liveRegion.innerText = M.export.saveReportSuccess;
         }
     });
 
@@ -373,12 +377,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (homeLink) {
         homeLink.addEventListener('click', async (e) => {
             e.preventDefault();
-            const stay = await window.utils.confirm(
-                "Czy na pewno chcesz wrócić do strony głównej? Wszystkie niezapisane dane (w tym raport) zostaną utracone.",
-                "Powrót do strony głównej",
-                "Nie",
-                "Tak"
-            );
+            window.utils.confirm(
+    M.reset.newAuditBody,
+    M.reset.newAuditTitle,
+    M.reset.confirmNo,
+    M.reset.confirmYes
+);
             if (!stay) {
                 window.utils.clearState();
                 window.location.href = 'index.html';

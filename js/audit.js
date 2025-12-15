@@ -1,3 +1,7 @@
+import { MESSAGES_PL as M } from './messages.pl.js';
+// docelowo: const M = window.i18n.getMessages();
+
+
 document.addEventListener('DOMContentLoaded', async () => {
     lucide.createIcons();
 
@@ -96,7 +100,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // 4. Dostępna informacja zwrotna (tylko dla czytników ekranu)
             const liveRegion = document.getElementById('audit-status-live');
             if (liveRegion) {
-                liveRegion.innerText = 'Zapisano postęp audytu i pobrano plik EARL.';
+                liveRegion.innerText = M.audit.saveProgressSuccess;
             }
         }
     });
@@ -115,11 +119,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (hasProgress) {
                 const stay = await window.utils.confirm(
-                    "Masz niezapisane wyniki. Jeśli wyjdziesz, stracisz je. Czy chcesz przejść na stronę główną?",
-                    "Niezapisane zmiany",
-                    "Nie", // Główny przycisk (Potwierdź) -> Zwraca true -> Zostań
-                    "Tak"  // Drugi przycisk (Anuluj) -> Zwraca false -> Wyjdź
+                    M.audit.leaveWithUnsavedChanges,
+                    M.common.unsavedChangesTitle,
+                    M.common.stay,
+                    M.common.leave
                 );
+
 
                 // Jeśli użytkownik kliknął "Tak" (Drugi/Anuluj), stay jest false.
                 if (!stay) {
@@ -663,7 +668,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <i data-lucide="${icon}" size="24" aria-hidden="true"></i>
                             <strong>${label}</strong>
                         </div>
-                        <p style="margin-top: 0.5rem; color: var(--muted-color);">Wynik wyliczony automatycznie.</p>
+                        <p style="margin-top: 0.5rem; color: var(--muted-color);">${M.audit.derivedResultInfo}</p>
                     </div>
                 `;
             } else {
@@ -768,13 +773,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const prevIdx = getPrevTestIndex(idx);
         const nextIdx = getNextTestIndex(idx);
-        
+
         let prevLabel = 'Poprzedni test';
         if (prevIdx !== -1) {
             const t = state.tests[prevIdx];
             const safeTitle = t.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
-            prevLabel = safeTitle.startsWith(t.id) 
-                ? `Poprzedni test: ${safeTitle}` 
+            prevLabel = safeTitle.startsWith(t.id)
+                ? `Poprzedni test: ${safeTitle}`
                 : `Poprzedni test: ${t.id} ${safeTitle}`;
         }
 
@@ -782,8 +787,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (nextIdx !== -1) {
             const t = state.tests[nextIdx];
             const safeTitle = t.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
-            nextLabel = safeTitle.startsWith(t.id) 
-                ? `Następny test: ${safeTitle}` 
+            nextLabel = safeTitle.startsWith(t.id)
+                ? `Następny test: ${safeTitle}`
                 : `Następny test: ${t.id} ${safeTitle}`;
         }
 
@@ -816,7 +821,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <div style="margin-top: 2rem;">
                              <div style="color: var(--muted-color); margin-bottom: 0.125rem; font-weight: bold;">Automatyczny komentarz</div>
                              <div class="informative" style="background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin-top: 0;">
-                                ${res.note ? res.note.trim().replace(/\n/g, '<br>') : 'Brak uwag.'}
+                                ${res.note
+                    ? res.note.trim().replace(/\n/g, '<br>')
+                    : M.audit.noNotes}
                              </div>
                         </div>
                         ` : '')}
@@ -882,7 +889,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Announce the change for screen readers via an aria-live region
         const liveRegion = document.getElementById('audit-status-live');
         if (liveRegion) {
-            liveRegion.innerText = `Wynik testu ${id} ustawiony: ${status}`;
+            liveRegion.innerText = M.audit.testResultSet
+                .replace('{testId}', id)
+                .replace('{status}', status);
         }
         // renderNav(); // Removed redundant call - renderTest calls it anyway
         renderTest(state.currentIdx);
@@ -1070,7 +1079,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     // Add note only if we set a status and note isn't there
                     if (newStatus) {
-                        const autoNote = '[Auto] Wynik wyliczony na podstawie testów składowych.';
+                        const autoNote = M.audit.autoNote;
                         if (!state.results[test.id].note || !state.results[test.id].note.includes(autoNote)) {
                             state.results[test.id].note = (state.results[test.id].note || '') + '\n' + autoNote;
                         }
@@ -1276,7 +1285,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // State is already loaded at the top
     if (!state.product || state.clauses.length === 0) {
-        alert("Brak konfiguracji audytu. Przekierowanie do strony startowej.");
+        alert(M.setup.missingConfiguration);
         window.location.href = 'index.html';
         return;
     }
