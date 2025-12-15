@@ -1,15 +1,16 @@
-const CACHE_NAME = 'audyt-eaa-cache-v12';
+const CACHE_NAME = 'audyt-eaa-cache-v13';
+// Use explicit versioned assets where available to avoid serving stale files
 const urlsToCache = [
   './',
   './index.html',
   './new-audit.html',
   './audit.html',
   './summary.html',
-  './css/style.css',
+  './css/style.css?v=10',
   './css/pico.min.css',
   './js/setup.js',
   './js/landing.js',
-  './js/audit.js',
+  './js/audit.js?v=4',
   './js/summary.js',
   './js/utils.js',
   './js/lucide.min.js',
@@ -18,6 +19,8 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', event => {
+  // Activate new service worker immediately
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
@@ -33,6 +36,8 @@ self.addEventListener('activate', event => {
       );
     })
   );
+  // Take control of uncontrolled clients as soon as this SW activates
+  self.clients.claim();
 });
 
 self.addEventListener('fetch', event => {
