@@ -1,65 +1,155 @@
+// Load localized messages dynamically; fall back to global i18n or minimal defaults
+let M;
+// docelowo: const M = window.i18n.getMessages();
+
+
 document.addEventListener('DOMContentLoaded', async () => {
     lucide.createIcons();
 
-    // Przełączanie menu mobilnego
-    const menuToggle = document.getElementById('menu-toggle');
-    const appLayout = document.getElementById('app-layout');
-    const sidebar = document.getElementById('sidebar');
+    // Show a quick loading overlay immediately to give feedback before any async work
+    let loadingOverlay = document.getElementById('eaa-loading-overlay');
+    if (!loadingOverlay) {
+        loadingOverlay = document.createElement('div');
+        loadingOverlay.id = 'eaa-loading-overlay';
+        loadingOverlay.style.position = 'fixed';
+        loadingOverlay.style.top = '0';
+        loadingOverlay.style.left = '0';
+        loadingOverlay.style.width = '100%';
+        loadingOverlay.style.height = '100%';
+        loadingOverlay.style.background = 'rgba(15, 23, 42, 0.9)';
+        loadingOverlay.style.display = 'flex';
+        loadingOverlay.style.alignItems = 'center';
+        loadingOverlay.style.justifyContent = 'center';
+        loadingOverlay.style.zIndex = '9999';
+        loadingOverlay.innerHTML = '<h2 style="color: white;">Ładowanie danych...</h2>';
+        document.body.appendChild(loadingOverlay);
+    }
 
-    if (menuToggle && appLayout && sidebar) {
-        const closeMenu = (returnFocus = true) => {
-            appLayout.classList.remove('mobile-menu-open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            if (returnFocus) {
-                menuToggle.focus();
+    // Try dynamic import first to avoid "import statement outside a module" errors
+    try {
+        const msgs = await import('./messages-pl.js');
+        M = msgs.MESSAGES_PL;
+        // Update overlay text if we have a translated string
+        if (loadingOverlay) loadingOverlay.innerHTML = '<h2 style="color: white;">' + ((M && M.app && M.app.loadingData) || 'Ładowanie danych...') + '</h2>';
+    } catch (err) {
+        console.warn('Could not dynamically import messages-pl.js, falling back to global i18n or defaults', err);
+        M = window.i18n?.getMessages?.() || {
+            navigation: {
+                goToHomeQuestion: "Czy przejść do strony startowej?",
+                unsavedChangesTitle: "Niezapisane zmiany",
+                confirmStay: "Pozostań",
             }
         };
+    }
 
-        const openMenu = () => {
-            appLayout.classList.add('mobile-menu-open');
-            menuToggle.setAttribute('aria-expanded', 'true');
-            // Uczyń pasek boczny programowo fokowalnym i skup się na nim
-            sidebar.setAttribute('tabindex', '-1');
-            sidebar.focus({ preventScroll: true });
-        };
+    // Apply any data-i18n attributes on the audit page using shared helper
+    try {
+        if (window.utils && typeof window.utils.applyDataI18n === 'function') {
+            window.utils.applyDataI18n(M, document);
+            if (location.search.includes('i18n-check') && typeof window.utils.checkDataI18n === 'function') {
+                window.utils.checkDataI18n(M, document);
+            }
+        }
+    } catch (e) {
+        console.warn('Failed to apply data-i18n on audit page', e);
+    }
 
-        menuToggle.addEventListener('click', () => {
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            if (isExpanded) {
-                closeMenu(true); // Zwróć fokus do przełącznika przy zamykaniu przez przełącznik
-            } else {
-                openMenu();
+
+        // Przełączanie menu mobilnego
+        const menuToggle = document.getElementById('menu-toggle');
+        const appLayout = document.getElementById('app-layout');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuToggle && appLayout && sidebar) {
+            const closeMenu = (returnFocus = true) => {
+                appLayout.classList.remove('mobile-menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                if (returnFocus) {
+                    menuToggle.focus();
+                }
+            };
+
+            const openMenu = () => {
+                appLayout.classList.add('mobile-menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+                // Uczyń pasek boczny programowo fokowalnym i skup się na nim
+                sidebar.setAttribute('tabindex', '-1');
+                sidebar.focus({ preventScroll: true });
+            };
+
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    closeMenu(true); // Zwróć fokus do przełącznika przy zamykaniu przez przełącznik
+                } else {
+                    openMenu();
+                }
+            });
+
+            // Zamknij menu przy kliknięciu linku w pasku bocznym
+            sidebar.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A' || e.target.closest('a')) {
+                    // Nie zwracaj fokusu do przełącznika, ponieważ użytkownik nawiguje do treści
+                    closeMenu(false);
+                }
+            });
+
+            // Zamknij menu przy kliknięciu na zewnątrz
+            document.addEventListener('click', (e) => {
+                if (appLayout.classList.contains('mobile-menu-open') &&
+                    !sidebar.contains(e.target) &&
+                    !menuToggle.contains(e.target)) {
+                    closeMenu(false); // Fokus zostaje tam, gdzie użytkownik kliknął (lub body)
+                }
+            });
+
+            // Obsługa klawisza Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && appLayout.classList.contains('mobile-menu-open')) {
+                    closeMenu(true); // Zwróć fokus do przełącznika
+                }
+            });
+        }
+
+    // Set header button titles (localized)
+    try {
+        // Only target the actual theme toggle buttons (have onclick toggleTheme)
+        document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
+            el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
+            if (!el.querySelector('.theme-helper')) {
+                const span = document.createElement('span');
+                span.className = 'sr-only theme-helper';
+                span.textContent = M.navigation.themeModeHelp || 'Tryb jasny/ciemny';
+                el.appendChild(span);
             }
         });
 
-        // Zamknij menu przy kliknięciu linku w pasku bocznym
-        sidebar.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A' || e.target.closest('a')) {
-                // Nie zwracaj fokusu do przełącznika, ponieważ użytkownik nawiguje do treści
-                closeMenu(false);
-            }
-        });
+        const saveBtnLocal = document.getElementById('btn-save-audit');
+        if (saveBtnLocal) saveBtnLocal.title = M.navigation.saveAudit || saveBtnLocal.title || 'Zapisz';
 
-        // Zamknij menu przy kliknięciu na zewnątrz
-        document.addEventListener('click', (e) => {
-            if (appLayout.classList.contains('mobile-menu-open') &&
-                !sidebar.contains(e.target) &&
-                !menuToggle.contains(e.target)) {
-                closeMenu(false); // Fokus zostaje tam, gdzie użytkownik kliknął (lub body)
-            }
-        });
+        const appLogoLocal = document.getElementById('app-logo');
+        if (appLogoLocal) appLogoLocal.setAttribute('aria-label', M.navigation.home || appLogoLocal.getAttribute('aria-label') || 'Strona główna');
 
-        // Obsługa klawisza Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && appLayout.classList.contains('mobile-menu-open')) {
-                closeMenu(true); // Zwróć fokus do przełącznika
-            }
-        });
+        const menuToggleLocal = document.getElementById('menu-toggle');
+        if (menuToggleLocal) menuToggleLocal.title = M.navigation.menu || menuToggleLocal.title || 'Menu';
+    } catch (e) {
+        console.warn('Failed to set header titles', e);
     }
 
     // Załaduj stan natychmiast, aby był dostępny dla detektorów zdarzeń
     const state = window.utils.loadState();
     console.log('State loaded:', state);
+
+    // Edit config button (header)
+    const editBtn = document.getElementById('btn-edit-config');
+    if (editBtn) {
+        editBtn.title = M.navigation.editConfig || editBtn.title || 'Edytuj konfigurację';
+        editBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            sessionStorage.setItem('editing-audit', 'true');
+            window.location.href = 'new-audit.html';
+        });
+    }
 
     // Funkcja pomocnicza do generowania nazwy pliku dla eksportu stanu
     const getAuditFilename = () => {
@@ -96,7 +186,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // 4. Dostępna informacja zwrotna (tylko dla czytników ekranu)
             const liveRegion = document.getElementById('audit-status-live');
             if (liveRegion) {
-                liveRegion.innerText = 'Zapisano postęp audytu i pobrano plik EARL.';
+                liveRegion.innerText = M.audit.saveProgressSuccess;
             }
         }
     });
@@ -104,29 +194,38 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Obsługa kliknięcia linku do strony głównej
     const homeLink = document.getElementById('app-logo');
     if (homeLink) {
+        // Append an sr-only helper describing the action
+        // Only add a visible helper if there isn't already an accessible name
+        if (!homeLink.querySelector('.nav-helper') && !homeLink.hasAttribute('aria-label') && !homeLink.hasAttribute('aria-labelledby')) {
+            const span = document.createElement('span');
+            span.className = 'sr-only nav-helper';
+            span.textContent = M.navigation.homeHelp || 'Przejdź do strony głównej';
+            // Ensure no inline style makes it visible accidentally
+            span.style.cssText = '';
+            homeLink.appendChild(span);
+        }
         homeLink.addEventListener('click', async (e) => {
             e.preventDefault(); // Zawsze zapobiegaj domyślnej nawigacji najpierw
 
-            // Sprawdź, czy jest jakiś postęp
-            const hasProgress = state.tests && state.tests.some(test => {
+            // Sprawdź, czy jest jakiś postęp w bieżącej sesji LUB czy istnieje zapisany stan, który może zostać nadpisany
+            const persisted = window.utils.loadState();
+            const hasPersistedProgress = Object.values(persisted.results || {}).some(r => r && (r.status || r.note));
+
+            const hasProgress = hasPersistedProgress || (state.tests && state.tests.some(test => {
                 const res = state.results[test.id];
                 return res && (res.status || res.note);
-            });
+            }));
 
-            if (hasProgress) {
-                const stay = await window.utils.confirm(
-                    "Masz niezapisane wyniki. Jeśli wyjdziesz, stracisz je. Czy chcesz przejść na stronę główną?",
-                    "Niezapisane zmiany",
-                    "Nie", // Główny przycisk (Potwierdź) -> Zwraca true -> Zostań
-                    "Tak"  // Drugi przycisk (Anuluj) -> Zwraca false -> Wyjdź
-                );
+                    // ALWAYS ask before leaving the Audit page to avoid accidental loss of any previously saved data
+            const confirmed = await window.utils.confirm(
+                `${M.navigation.returnToHomeBody}\n\n${M.navigation.goToHomeQuestion}`,
+                M.navigation.returnToHomeTitle,
+                M.navigation.confirmLeave,
+                M.navigation.confirmStay,
+                'cancel'
+            );
 
-                // Jeśli użytkownik kliknął "Tak" (Drugi/Anuluj), stay jest false.
-                if (!stay) {
-                    window.location.href = 'index.html';
-                }
-            } else {
-                // Brak postępu, bezpieczna nawigacja
+            if (confirmed) {
                 window.location.href = 'index.html';
             }
         });
@@ -182,7 +281,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (id && id !== excludeId) {
                 const el = document.createElement('span');
                 el.id = id;
-                el.className = 'fragment-anchor visually-hidden';
+                el.className = 'fragment-anchor sr-only';
                 fragContainer.appendChild(el);
             }
         });
@@ -663,7 +762,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <i data-lucide="${icon}" size="24" aria-hidden="true"></i>
                             <strong>${label}</strong>
                         </div>
-                        <p style="margin-top: 0.5rem; color: var(--muted-color);">Wynik wyliczony automatycznie.</p>
+                        <p style="margin-top: 0.5rem; color: var(--muted-color);">${M.audit.derivedResultInfo}</p>
                     </div>
                 `;
             } else {
@@ -680,7 +779,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (item.form && item.form.inputs) {
                 evaluationHtml += `<fieldset class="evaluation-criteria" style="border: none; padding: 0; margin: 0;">
-                    <legend class="visually-hidden">Test ${item.id}: ${cleanTitle}</legend>`;
+                    <legend class="sr-only">Test ${item.id}: ${cleanTitle}</legend>`;
                 const safeTestId = sanitizeForDomId(item.id);
                 item.form.inputs.forEach(input => {
                     let icon = 'circle';
@@ -696,7 +795,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     evaluationHtml += `
                         <div class="criteria-option-wrapper">
                             <input type="radio" id="${inputId}" name="eval-${safeTestId}" value="${input.value}" 
-                                   class="visually-hidden criteria-radio" 
+                                   class="sr-only criteria-radio" 
                                    ${isSelected ? 'checked' : ''} 
                                    onchange="setResult('${item.id}', '${input.value}')">
                             <label for="${inputId}" class="criteria-option ${colorClass} ${isSelected ? 'selected' : ''}">
@@ -714,11 +813,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Fallback to old grid if no form data
                 evaluationHtml += `
                 <fieldset class="eval-grid" style="border: none; padding: 0; margin: 1rem 0 0 0;">
-                    <legend class="visually-hidden">Ocena wyniku testu ${item.id}: ${cleanTitle}</legend>
+                    <legend class="sr-only">Ocena wyniku testu ${item.id}: ${cleanTitle}</legend>
                     
                       <div class="eval-btn-wrapper">
                           <input type="radio" id="eval-${sanitizeForDomId(item.id)}-pass" name="eval-${sanitizeForDomId(item.id)}" value="Zaliczone" 
-                               class="visually-hidden eval-radio" ${res.status === 'Zaliczone' || res.status === 'pass' ? 'checked' : ''}
+                               class="sr-only eval-radio" ${res.status === 'Zaliczone' || res.status === 'pass' ? 'checked' : ''}
                               onchange="setResult('${item.id}', 'Zaliczone')">
                           <label for="eval-${sanitizeForDomId(item.id)}-pass" class="eval-btn pass ${res.status === 'Zaliczone' || res.status === 'pass' ? 'selected' : ''}">
                             <i data-lucide="check" size="28" aria-hidden="true"></i>
@@ -728,7 +827,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     <div class="eval-btn-wrapper">
                               <input type="radio" id="eval-${sanitizeForDomId(item.id)}-fail" name="eval-${sanitizeForDomId(item.id)}" value="Niezaliczone" 
-                               class="visually-hidden eval-radio" ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'checked' : ''}
+                               class="sr-only eval-radio" ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'checked' : ''}
                                   onchange="setResult('${item.id}', 'Niezaliczone')">
                               <label for="eval-${sanitizeForDomId(item.id)}-fail" class="eval-btn fail ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'selected' : ''}">
                             <i data-lucide="x" size="28" aria-hidden="true"></i>
@@ -738,7 +837,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     <div class="eval-btn-wrapper">
                               <input type="radio" id="eval-${sanitizeForDomId(item.id)}-na" name="eval-${sanitizeForDomId(item.id)}" value="Nie dotyczy" 
-                               class="visually-hidden eval-radio" ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'checked' : ''}
+                               class="sr-only eval-radio" ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'checked' : ''}
                                   onchange="setResult('${item.id}', 'Nie dotyczy')">
                               <label for="eval-${sanitizeForDomId(item.id)}-na" class="eval-btn na ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'selected' : ''}">
                             <i data-lucide="minus" size="28" aria-hidden="true"></i>
@@ -748,7 +847,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     <div class="eval-btn-wrapper">
                               <input type="radio" id="eval-${sanitizeForDomId(item.id)}-nt" name="eval-${sanitizeForDomId(item.id)}" value="Nie do sprawdzenia" 
-                               class="visually-hidden eval-radio" ${res.status === 'nt' || res.status === 'Nie do sprawdzenia' ? 'checked' : ''}
+                               class="sr-only eval-radio" ${res.status === 'nt' || res.status === 'Nie do sprawdzenia' ? 'checked' : ''}
                                   onchange="setResult('${item.id}', 'Nie do sprawdzenia')">
                               <label for="eval-${sanitizeForDomId(item.id)}-nt" class="eval-btn nt ${res.status === 'nt' || res.status === 'Nie do sprawdzenia' ? 'selected' : ''}">
                             <i data-lucide="help-circle" size="28" aria-hidden="true"></i>
@@ -768,13 +867,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const prevIdx = getPrevTestIndex(idx);
         const nextIdx = getNextTestIndex(idx);
-        
+
         let prevLabel = 'Poprzedni test';
         if (prevIdx !== -1) {
             const t = state.tests[prevIdx];
             const safeTitle = t.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
-            prevLabel = safeTitle.startsWith(t.id) 
-                ? `Poprzedni test: ${safeTitle}` 
+            prevLabel = safeTitle.startsWith(t.id)
+                ? `Poprzedni test: ${safeTitle}`
                 : `Poprzedni test: ${t.id} ${safeTitle}`;
         }
 
@@ -782,8 +881,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (nextIdx !== -1) {
             const t = state.tests[nextIdx];
             const safeTitle = t.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
-            nextLabel = safeTitle.startsWith(t.id) 
-                ? `Następny test: ${safeTitle}` 
+            nextLabel = safeTitle.startsWith(t.id)
+                ? `Następny test: ${safeTitle}`
                 : `Następny test: ${t.id} ${safeTitle}`;
         }
 
@@ -816,12 +915,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <div style="margin-top: 2rem;">
                              <div style="color: var(--muted-color); margin-bottom: 0.125rem; font-weight: bold;">Automatyczny komentarz</div>
                              <div class="informative" style="background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin-top: 0;">
-                                ${res.note ? res.note.trim().replace(/\n/g, '<br>') : 'Brak uwag.'}
+                                ${res.note
+                    ? res.note.trim().replace(/\n/g, '<br>')
+                    : M.audit.noNotes}
                              </div>
                         </div>
                         ` : '')}
                     </form>
-                    <div id="audit-status-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
                 </div>
             </article>
 
@@ -882,7 +982,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Announce the change for screen readers via an aria-live region
         const liveRegion = document.getElementById('audit-status-live');
         if (liveRegion) {
-            liveRegion.innerText = `Wynik testu ${id} ustawiony: ${status}`;
+            liveRegion.innerText = M.audit.testResultSet
+                .replace('{testId}', id)
+                .replace('{status}', status);
         }
         // renderNav(); // Removed redundant call - renderTest calls it anyway
         renderTest(state.currentIdx);
@@ -1070,7 +1172,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     // Add note only if we set a status and note isn't there
                     if (newStatus) {
-                        const autoNote = '[Auto] Wynik wyliczony na podstawie testów składowych.';
+                        const autoNote = M.audit.autoNote;
                         if (!state.results[test.id].note || !state.results[test.id].note.includes(autoNote)) {
                             state.results[test.id].note = (state.results[test.id].note || '') + '\n' + autoNote;
                         }
@@ -1183,19 +1285,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function loadClauses(clauses) {
         state.tests = [];
 
-        const loadingOverlay = document.createElement('div');
-        loadingOverlay.style.position = 'fixed';
-        loadingOverlay.style.top = '0';
-        loadingOverlay.style.left = '0';
-        loadingOverlay.style.width = '100%';
-        loadingOverlay.style.height = '100%';
-        loadingOverlay.style.background = 'rgba(15, 23, 42, 0.9)';
-        loadingOverlay.style.display = 'flex';
-        loadingOverlay.style.alignItems = 'center';
-        loadingOverlay.style.justifyContent = 'center';
-        loadingOverlay.style.zIndex = '9999';
-        loadingOverlay.innerHTML = '<h2 style="color: white;">Ładowanie danych...</h2>';
-        document.body.appendChild(loadingOverlay);
+        // Reuse the overlay created earlier (if present) so feedback appears immediately
+        let loadingOverlay = document.getElementById('eaa-loading-overlay');
+        if (!loadingOverlay) {
+            loadingOverlay = document.createElement('div');
+            loadingOverlay.id = 'eaa-loading-overlay';
+            loadingOverlay.style.position = 'fixed';
+            loadingOverlay.style.top = '0';
+            loadingOverlay.style.left = '0';
+            loadingOverlay.style.width = '100%';
+            loadingOverlay.style.height = '100%';
+            loadingOverlay.style.background = 'rgba(15, 23, 42, 0.9)';
+            loadingOverlay.style.display = 'flex';
+            loadingOverlay.style.alignItems = 'center';
+            loadingOverlay.style.justifyContent = 'center';
+            loadingOverlay.style.zIndex = '9999';
+            document.body.appendChild(loadingOverlay);
+        }
+        // Ensure text is localized when possible
+        loadingOverlay.innerHTML = `<h2 style="color: white;">${M?.app?.loadingData || 'Ładowanie danych...'}</h2>`;
 
         try {
             for (const clauseId of clauses) {
@@ -1276,7 +1384,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // State is already loaded at the top
     if (!state.product || state.clauses.length === 0) {
-        alert("Brak konfiguracji audytu. Przekierowanie do strony startowej.");
+        alert(M.setup.missingConfiguration);
         window.location.href = 'index.html';
         return;
     }

@@ -1,10 +1,26 @@
+import { MESSAGES_PL as M } from './messages-pl.js';
+// docelowo: const M = window.i18n.getMessages();
+
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
+
+    // Apply localization from data-i18n attributes
+    try {
+        if (window.utils && typeof window.utils.applyDataI18n === 'function') {
+            window.utils.applyDataI18n(M, document);
+            if (location.search.includes('i18n-check') && typeof window.utils.checkDataI18n === 'function') {
+                window.utils.checkDataI18n(M, document);
+            }
+        }
+    } catch (e) {
+        console.warn('Failed to apply data-i18n on summary page', e);
+    }
 
     // Załaduj stan
     const state = window.utils.loadState();
     if (!state.product && state.tests.length === 0) {
-        alert("Brak danych audytu. Przekierowanie do strony startowej.");
+        alert(M.summary.noAuditData);
+
         window.location.href = 'index.html';
         return;
     }
@@ -33,24 +49,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (failedTests.length > 0) {
         verdictCard.classList.add('failed');
-        verdictTitle.innerText = "NIEZALICZONY";
+        verdictTitle.innerText = M.summary.verdictFailed;
         verdictDesc.innerHTML = `Niespełnione wymagania: ${failedTests.length}<br>Wymagania nieocenione: ${verifyTests.length}`;
         verdictIcon.setAttribute('data-lucide', 'shield-alert');
     } else if (verifyTests.length > 0) {
         // Warning / In Progress
         verdictCard.classList.add('in-progress');
-        verdictTitle.innerText = "NIEZAKOŃCZONY";
+        verdictTitle.innerText = M.summary.verdictInProgress;
         verdictDesc.innerText = `Pozostało ${verifyTests.length} testów do sprawdzenia`;
         verdictIcon.setAttribute('data-lucide', 'clock');
     } else {
         verdictCard.classList.add('passed');
 
         if (passedTests.length === 0 && naTests.length > 0 && ntTests.length === 0) {
-            verdictTitle.innerText = "BRAK NIEZGODNOŚCI";
+            verdictTitle.innerText = M.summary.verdictNoNonconformities;
             verdictDesc.innerHTML = "Wszystkie wymagania oznaczono jako <q>Nie dotyczy</q>.";
             verdictIcon.setAttribute('data-lucide', 'check-circle'); // Or 'minus-circle' if preferred
         } else {
-            verdictTitle.innerText = "ZALICZONY";
+            verdictTitle.innerText = M.summary.verdictPassed;
 
             if (naTests.length > 0 || ntTests.length > 0) {
                 let desc = `Spełnione wymagania: ${passedTests.length}`;
@@ -136,13 +152,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // New Audit Button
     window.resetAudit = async function () {
-        const stay = await window.utils.confirm(
-            "Czy na pewno chcesz rozpocząć nowy audyt? Wszystkie niezapisane dane zostaną utracone.",
-            "Nowy Audyt",
-            "Nie",
-            "Tak"
+        const confirmed = await window.utils.confirm(
+            M.reset.newAuditBody,
+            M.reset.newAuditTitle,
+            M.reset.confirmYes,
+            M.navigation.confirmStay,
+            'cancel'
         );
-        if (!stay) {
+        if (confirmed) {
+            // User confirmed starting a new audit: clear state and return to home
             window.utils.clearState();
             window.location.href = 'index.html';
         }
@@ -161,11 +179,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!liveRegion) {
                 liveRegion = document.createElement('div');
                 liveRegion.id = 'a11y-live-region';
-                liveRegion.className = 'visually-hidden';
+                liveRegion.className = 'sr-only';
                 liveRegion.setAttribute('aria-live', 'polite');
                 document.body.appendChild(liveRegion);
             }
-            liveRegion.innerText = 'Zapisano raport i pobrano plik.';
+            liveRegion.innerText = M.export.saveReportSuccess;
         }
     });
 
@@ -180,10 +198,90 @@ document.addEventListener('DOMContentLoaded', () => {
     // Save Button Handler
     const saveBtn = document.getElementById('btn-save-audit');
     if (saveBtn) {
+        saveBtn.title = M.navigation.saveAudit || saveBtn.title || 'Zapisz audyt';
         saveBtn.addEventListener('click', () => {
             window.utils.downloadAudit(state, true); // Draft save
         });
     }
+
+    // Helper used by navigation functions to sanitize test IDs for fragment links
+    function sanitizeForDomId(str) {
+        return String(str).replace(/[^a-zA-Z0-9_-]/g, '-');
+    }
+
+    // Edit responses button (takes user back to audit view)
+    const editResponsesBtn = document.getElementById('btn-edit-responses');
+    if (editResponsesBtn) {
+        editResponsesBtn.title = M.navigation.editResponses || editResponsesBtn.title || 'Edytuj odpowiedzi';
+        if (!editResponsesBtn.querySelector('.nav-helper')) {
+            const span = document.createElement('span');
+            span.className = 'sr-only nav-helper';
+            span.textContent = M.navigation.editResponsesHelp || 'Przejdź do edycji odpowiedzi audytu';
+            // Ensure no inline style makes it visible accidentally
+            span.style.cssText = '';
+            editResponsesBtn.appendChild(span);
+        }
+        editResponsesBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Navigate to the first clause's first test (if possible)
+            const firstTest = (state.tests || []).find(t => t.clauseId) || (state.tests && state.tests[0]);
+            const fragment = (firstTest && firstTest.id) ? `#test-${sanitizeForDomId(firstTest.id)}` : '';
+            window.location.href = `audit.html${fragment}`;
+        });
+    }
+
+    // Bottom edit responses button (under verdict card) — same behavior and accessibility helper
+    const editResponsesBottom = document.getElementById('btn-edit-responses-bottom');
+    if (editResponsesBottom) {
+        if (!editResponsesBottom.querySelector('.nav-helper')) {
+            const span = document.createElement('span');
+            span.className = 'sr-only nav-helper';
+            span.textContent = M.navigation.editResponsesHelp || 'Przejdź do edycji odpowiedzi audytu';
+            // Ensure no inline style makes it visible accidentally
+            span.style.cssText = '';
+            editResponsesBottom.appendChild(span);
+        }
+        editResponsesBottom.addEventListener('click', (e) => {
+            e.preventDefault();
+            const firstTest = (state.tests || []).find(t => t.clauseId) || (state.tests && state.tests[0]);
+            const fragment = (firstTest && firstTest.id) ? `#test-${sanitizeForDomId(firstTest.id)}` : '';
+            window.location.href = `audit.html${fragment}`;
+        });
+    }
+
+    // Edit config button
+    const editBtn = document.getElementById('btn-edit-config');
+    if (editBtn) {
+        editBtn.title = M.navigation.editConfig || editBtn.title || 'Edytuj konfigurację';
+        if (!editBtn.querySelector('.nav-helper')) {
+            const span = document.createElement('span');
+            span.className = 'sr-only nav-helper';
+            span.textContent = M.navigation.editConfigHelp || 'Edytuj konfigurację audytu';
+            // Ensure no inline style makes it visible accidentally
+            span.style.cssText = '';
+            editBtn.appendChild(span);
+        }
+        editBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            sessionStorage.setItem('editing-audit', 'true');
+            window.location.href = 'new-audit.html';
+        });
+    }
+
+    // Theme toggle tooltip — only target actual theme toggles
+    document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
+        el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
+        if (!el.querySelector('.theme-helper')) {
+            const span = document.createElement('span');
+            span.className = 'sr-only theme-helper';
+            span.textContent = M.navigation.themeModeHelp || 'Tryb jasny/ciemny';
+            el.appendChild(span);
+        }
+    });
+
+    // App logo tooltip
+    const appLogo = document.getElementById('app-logo');
+    if (appLogo) appLogo.setAttribute('aria-label', M.navigation.home || appLogo.getAttribute('aria-label') || 'Strona główna');
 
     document.getElementById('export-csv-btn').addEventListener('click', () => {
         const stats = window.utils.getAuditStats(state);
@@ -210,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dataStr = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
         const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute('href', dataStr);
-        downloadAnchorNode.setAttribute('download', getFilename('csv'));
+        downloadAnchorNode.setAttribute('download', window.utils.getFilename(state.product, 'csv'));
         document.body.appendChild(downloadAnchorNode);
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
@@ -361,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
         zip.generateAsync({ type: "blob", mimeType: "application/vnd.oasis.opendocument.text" }).then(function (content) {
             const downloadAnchorNode = document.createElement('a');
             downloadAnchorNode.setAttribute("href", URL.createObjectURL(content));
-            downloadAnchorNode.setAttribute("download", getFilename('odt'));
+            downloadAnchorNode.setAttribute("download", window.utils.getFilename(state.product, 'odt'));
             document.body.appendChild(downloadAnchorNode);
             downloadAnchorNode.click();
             downloadAnchorNode.remove();
@@ -373,13 +471,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (homeLink) {
         homeLink.addEventListener('click', async (e) => {
             e.preventDefault();
-            const stay = await window.utils.confirm(
-                "Czy na pewno chcesz wrócić do strony głównej? Wszystkie niezapisane dane (w tym raport) zostaną utracone.",
-                "Powrót do strony głównej",
-                "Nie",
-                "Tak"
+            const confirmed = await window.utils.confirm(
+                M.reset.newAuditBody,
+                M.reset.newAuditTitle,
+                M.reset.confirmYes,
+                M.navigation.confirmStay,
+                'cancel'
             );
-            if (!stay) {
+            if (confirmed) {
                 window.utils.clearState();
                 window.location.href = 'index.html';
             }

@@ -219,16 +219,18 @@
     --primary-inverse: hsl(0, 0%, 100%);
 }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
-    height: 100vh;
     height: 100dvh;
-    /* Dynamic viewport height for mobile browsers */
-    display: grid;
-    grid-template-rows: auto 1fr;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-color);
     color: var(--color);
+    overflow: hidden;
 }
 
 /* --- Header --- */
@@ -255,11 +257,57 @@ body {
 }
 
 .header-icon-container {
-    background: var(--primary);
-    padding: 8px;
-    border-radius: 8px;
-    display: flex;
+    background: transparent; /* removed blue background so logo sits on page background */
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: var(--primary-inverse);
+}
+
+/* App logo SVG sizing - fill container */
+.header-icon-container .app-logo-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
+/* Footer styling - non-sticky, top separator */
+.app-footer {
+    border-top: 1px solid var(--muted-color);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    background: transparent;
+}
+
+.app-footer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.app-footer svg.acr {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    /* Default icon color (can be overridden by theming) */
+    color: var(--primary);
+}
+
+[data-theme="dark"] .app-footer svg.acr {
+    color: var(--blue-400);
+}
+
+.app-footer svg.acr .fill-color-icon-svg {
+    fill: currentColor;
+    display: flex;
+    /* color: var(--primary-inverse); Removed to allow inheritance of var(--primary) from parent */
     text-decoration: none;
     transition: opacity 0.2s ease;
 }
@@ -294,7 +342,8 @@ body {
 .app-layout {
     display: grid;
     grid-template-columns: 1fr;
-    height: 100%;
+    flex: 1;
+    min-height: 0;
     overflow: hidden;
     position: relative;
     /* Ensure absolute positioning works for children */
@@ -313,6 +362,7 @@ aside {
     display: none;
     flex-direction: column;
     overflow-y: hidden;
+    min-height: 0;
 }
 
 /* Mobile: Sidebar remains hidden even with .with-sidebar class */
@@ -345,6 +395,7 @@ aside {
 
     .app-layout.with-sidebar {
         grid-template-columns: 350px 1fr;
+        grid-template-rows: 100%;
         /* Fixed width */
     }
 
@@ -354,7 +405,7 @@ aside {
         position: static;
         /* Reset position */
         width: auto;
-        height: auto;
+        height: 100%;
         z-index: auto;
         border-right: 1px solid var(--sidebar-border);
     }
@@ -578,6 +629,9 @@ a.nav-item.active {
     margin-top: 1rem;
     overflow-x: hidden;
     /* Prevent horizontal scrollbar */
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
 }
 
 /* Removed duplicate/conflicting nav styles */
@@ -661,6 +715,7 @@ main {
     /* Added bottom padding with safe area */
     overflow-y: auto;
     position: relative;
+    min-height: 0;
 }
 
 /* .setup-container single definition removed, unified with .index-main below */
@@ -786,18 +841,28 @@ main {
 
 /* Button-like Link Utility */
 .btn-primary {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     background-color: var(--primary);
     color: var(--primary-inverse);
     border: 1px solid var(--primary);
     padding: 0.75rem 2rem;
+    min-height: 2.5rem;
     border-radius: var(--border-radius);
-    text-decoration: none !important;
-    text-align: center;
+    /* Make link behave visually like a button */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    line-height: 1;
+    white-space: nowrap;
+    min-height: 2.5rem; /* match button visual height */
     cursor: pointer;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-    line-height: normal;
-    /* Reset line-height if needed */
+    line-height: 1;
+    white-space: nowrap; /* prevent wrapping which increases height */
 }
 
 .btn-primary:hover {
@@ -815,6 +880,8 @@ main {
 
 .btn-full-width {
     width: 100%;
+    font-size: 1rem;
+    line-height: var(--line-height);
 }
 
 /* --- Dialog --- */
@@ -834,6 +901,10 @@ main {
     justify-content: center;
     gap: 1rem;
     margin-top: 1.5rem;
+}
+
+#app-confirm-dialog .dialog-actions.reverse-buttons {
+    flex-direction: row-reverse;
 }
 
 /* --- Utilities --- */
@@ -957,16 +1028,18 @@ main {
     /* Ensure error message is visible when scrolled to */
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+.visually-hidden, .sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    /* Ensure nav-helper stays hidden even if inline styles are present */
+    /* Standard sr-only alias added for consistency with common patterns */
 }
 
 /* Checkbox Logic */
@@ -1234,13 +1307,17 @@ dialog button {
 /* --- New Summary Page Styles --- */
 
 /* Page Layout Overrides for Summary */
-body.summary-page {
+body.summary-page,
+body.landing-page,
+body.setup-page {
     height: auto;
     overflow-y: auto;
     display: block;
 }
 
-body.summary-page .app-layout {
+body.summary-page .app-layout,
+body.landing-page .app-layout,
+body.setup-page .app-layout {
     height: auto;
     overflow: visible;
     display: block;
@@ -1626,10 +1703,6 @@ body.summary-page .app-layout {
     color: #d97706;
 }
 
-.issue-list {
-    /* padding: 0 1.5rem; */
-}
-
 .issue-item {
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--muted-border-color);
@@ -1755,6 +1828,63 @@ details[open] summary {
     padding-bottom: 1rem;
 }
 
+/* Specific layout for the landing page help summary: center text and chevron close to the title */
+#how-to-summary {
+    /* Use inline-flex so the summary can be centered with margin:auto and keep internal flex alignment */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem; /* bring chevron very close to the title */
+    width: auto; /* don't stretch to 100% */
+    margin: 0.5rem auto 0; /* center the whole summary block horizontally */
+}
+
+#how-to-summary .help-title {
+    margin: 0; /* remove extra margin from the H2 so it centers nicely */
+    display: inline;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* Inherit color from the summary element so theme-specific colors apply */
+    color: inherit;
+    line-height: 1.2; /* ensure vertical rhythm for centering */
+}
+
+#how-to-summary::after {
+    /* Use the same masked chevron as the global details rule but larger and centered */
+    margin-top: 8px;;
+    display: inline-block !important;
+    float: none !important;
+    width: 1.5rem !important; /* increased size */
+    height: 1.5rem !important; /* increased size */
+    margin-inline-start: 0.25rem !important; /* small gap next to the text */
+    vertical-align: middle !important;
+    align-self: center !important;
+    order: 2; /* ensure it sits right after the content */
+
+    /* Keep color in sync with the summary text */
+    background-color: currentColor;
+
+    /* Use the same SVG mask so stroke and shape are preserved */
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
+    opacity: 0.98;
+    transition: transform 0.18s cubic-bezier(.2,.9,.2,1), opacity 0.12s;
+    transform: rotate(-90deg) translateY(0); /* start rotated and aligned */
+}
+
+/* Ensure the rotation on open/close matches other details */
+details[open] #how-to-summary::after {
+    transform: rotate(0deg);
+}
+
+
 /* Dark mode for details */
 [data-theme="dark"] details summary {
     color: var(--blue-400) !important;
@@ -1776,6 +1906,32 @@ details[open] summary {
 details[open] summary .summary-closed {
     display: none;
 }
+
+/* Help content links should use the same color rules as other links */
+#help-content a,
+#help-content a:visited {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+#help-content a:hover,
+#help-content a:focus {
+    color: var(--primary);
+    text-decoration: underline;
+    outline-offset: 2px;
+}
+
+/* Dark mode: use the same blue accent used for details summaries */
+[data-theme="dark"] #help-content a,
+[data-theme="dark"] #help-content a:visited {
+    color: var(--blue-400);
+}
+
+[data-theme="dark"] #help-content a:hover,
+[data-theme="dark"] #help-content a:focus {
+    color: hsl(217, 91%, 75%);
+}
+
 
 details[open] summary .summary-open {
     display: inline;
@@ -1824,10 +1980,6 @@ details[open] summary .summary-open {
 .card-action footer button,
 .card-action footer [role="button"] {
     margin-bottom: 0;
-}
-
-.btn-full-width {
-    width: 100%;
 }
 
 /* Optional wrapper for tables to provide smooth scrolling and hint that table is scrollable */

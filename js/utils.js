@@ -65,6 +65,9 @@ function xmlEscape(str) {
     });
 }
 
+// App version for cache-busting verification
+window.EAA_APP_VERSION = 'v13';
+
 /**
  * Inicjalizuje motyw na podstawie localStorage lub preferencji systemu.
  */
@@ -107,13 +110,22 @@ function updateThemeIcon(theme) {
  * @param {string} cancelText Tekst przycisku anulowania.
  * @returns {Promise<boolean>} Promise rozwiązujący się na true jeśli potwierdzone, false w przeciwnym razie.
  */
-function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierdź", cancelText = "Anuluj") {
+/**
+ * Wyświetla niestandardowe okno potwierdzenia.
+ * @param {string} message Treść wiadomości
+ * @param {string} title Tytuł dialogu
+ * @param {string} confirmText Tekst przycisku potwierdzenia (wykona akcję)
+ * @param {string} cancelText Tekst przycisku anulowania (anuluje akcję)
+ * @param {string} focusOn Which button should be focused and placed on the right by default: 'confirm' or 'cancel'
+ */
+function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierdź", cancelText = "Anuluj", focusOn = 'confirm') {
     return new Promise((resolve) => {
         let dialog = document.getElementById('app-confirm-dialog');
         if (!dialog) {
             dialog = document.createElement('dialog');
             dialog.id = 'app-confirm-dialog';
             dialog.setAttribute('aria-labelledby', 'dialog-title');
+            dialog.setAttribute('aria-modal', 'true');
             // aria-describedby removed to prevent repetitive reading on child focus in VoiceOver
             dialog.innerHTML = `
                 <h3 id="dialog-title" style="margin-top: 0;"></h3>
@@ -150,9 +162,94 @@ function confirmModal(message, title = "Potwierdzenie", confirmText = "Potwierd�
             close(false);
         };
 
+        const actions = dialog.querySelector('.dialog-actions');
+        if (focusOn === 'cancel') {
+            // Place the cancel button on the right and make it the primary (focused) action
+            actions.classList.add('reverse-buttons');
+            // Swap visual styling: make cancel primary, confirm secondary
+            cancelBtn.classList.remove('outline','secondary');
+            confirmBtn.classList.add('outline','secondary');
+            cancelBtn.focus();
+        } else {
+            actions.classList.remove('reverse-buttons');
+            // Ensure default styling: confirm is primary
+            confirmBtn.classList.remove('outline','secondary');
+            cancelBtn.classList.add('outline','secondary');
+            confirmBtn.focus();
+        }
+
         dialog.showModal();
-        confirmBtn.focus();
     });
+}
+
+/**
+ * Wyświetla prosty dialog informacyjny z przyciskiem OK.
+ * @param {string} message Treść wiadomości
+ * @param {string} [title] Tytuł dialogu
+ * @returns {Promise<void>} Promise rozwiązujący się po zamknięciu dialogu
+ */
+async function alertModal(message, title = 'Informacja') {
+    return new Promise((resolve) => {
+        let dialog = document.getElementById('app-alert-dialog');
+        if (!dialog) {
+            dialog = document.createElement('dialog');
+            dialog.id = 'app-alert-dialog';
+            dialog.setAttribute('aria-labelledby', 'alert-dialog-title');
+            dialog.setAttribute('aria-modal', 'true');
+            dialog.innerHTML = `
+                <h3 id="alert-dialog-title" style="margin-top:0;"></h3>
+                <p id="alert-dialog-message"></p>
+                <div class="dialog-actions">
+                    <button id="alert-ok"></button>
+                </div>
+            `;
+            document.body.appendChild(dialog);
+        }
+
+        const titleEl = dialog.querySelector('#alert-dialog-title');
+        const msgEl = dialog.querySelector('#alert-dialog-message');
+        const okBtn = dialog.querySelector('#alert-ok');
+
+        titleEl.textContent = title;
+        msgEl.textContent = message;
+        okBtn.textContent = 'OK';
+
+        const close = () => {
+            dialog.close();
+            resolve();
+        };
+
+        okBtn.onclick = close;
+
+        dialog.oncancel = (e) => {
+            e.preventDefault();
+            close();
+        };
+
+        // Focus the OK button by default
+        okBtn.focus();
+
+        dialog.showModal();
+    });
+}
+
+/**
+ * Aktualizuje komunikat o stanie w regionie aria-live.
+ * @param {string} message Treść komunikatu
+ * @param {number} [duration] Czas wyświetlania w ms (0 = na stałe)
+ */
+function setStatusMessage(message, duration = 5000) {
+    const statusEl = document.getElementById('status-message');
+    if (statusEl) {
+        statusEl.textContent = message;
+        if (duration > 0) {
+            setTimeout(() => {
+                if (statusEl.textContent === message) {
+                    statusEl.textContent = '';
+                }
+            }, duration);
+        }
+    }
 }
 
 /**
@@ -400,6 +497,29 @@ function getStatusLabel(status) {
     return status;
 }
 
+// Ensure skip links move focus programmatically for keyboard users
+document.addEventListener('click', function (e) {
+    const target = e.target;
+    if (target && target.classList && target.classList.contains('skip-link')) {
+        e.preventDefault();
+        const href = target.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+        const id = href.slice(1);
+        const el = document.getElementById(id);
+        if (el) {
+            // Ensure element can be focused
+            if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+            el.focus();
+            // Update location hash without scrolling if possible
+            if (history.replaceState) {
+                history.replaceState(null, '', '#' + id);
+            } else {
+                window.location.hash = id;
+            }
+        }
+    }
+}, false);
+
 /**
  * Generuje nazwę pliku dla raportu.
  * @param {string} product Nazwa produktu
@@ -442,12 +562,121 @@ function downloadAudit(state, isDraft = true) {
     if (!liveRegion) {
         liveRegion = document.createElement('div');
         liveRegion.id = 'a11y-live-region';
-        liveRegion.className = 'visually-hidden';
+        liveRegion.className = 'sr-only';
         liveRegion.setAttribute('aria-live', 'polite');
         document.body.appendChild(liveRegion);
     }
     liveRegion.innerText = 'Zapisano raport i pobrano plik.';
 }
+
+// Data-i18n helper (messages object + optional root element)
+function getMessageByKey(messages, key) {
+    if (!messages || !key) return undefined;
+
+    const tryKey = (k) => {
+        const parts = k.split('.');
+        let cur = messages;
+        for (const p of parts) {
+            if (!cur || !(p in cur)) return undefined;
+            cur = cur[p];
+        }
+        return cur;
+    };
+
+    // Try the exact key first
+    let val = tryKey(key);
+    if (typeof val !== 'undefined') return val;
+
+    // Aliases mapping to support gradual unification (backwards compatibility)
+    const aliasPairs = [
+        ['fileLoad.', 'error.load.'],
+        ['error.load.', 'fileLoad.']
+    ];
+
+    for (const [from, to] of aliasPairs) {
+        if (key.startsWith(from)) {
+            const alt = to + key.slice(from.length);
+            val = tryKey(alt);
+            if (typeof val !== 'undefined') return val;
+        }
+    }
+
+    return undefined;
+}
+
+function applyDataI18n(messages, root = document) {
+    if (!messages) return;
+    // Elements with data-i18n
+    root.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = getMessageByKey(messages, key);
+        if (typeof val === 'undefined') return;
+        if (typeof val === 'string' && /<[^>]+>/.test(val)) {
+            el.innerHTML = val;
+        } else {
+            el.textContent = val;
+        }
+    });
+    // Hrefs
+    root.querySelectorAll('a[data-i18n-href]').forEach(a => {
+        const hrefKey = a.getAttribute('data-i18n-href');
+        const hrefVal = getMessageByKey(messages, hrefKey);
+        if (hrefVal) a.setAttribute('href', hrefVal);
+    });
+
+    // Titles
+    root.querySelectorAll('[data-i18n-title]').forEach(el => {
+        const key = el.getAttribute('data-i18n-title');
+        const val = getMessageByKey(messages, key);
+        if (val) el.setAttribute('title', val);
+    });
+
+    // ARIA labels
+    root.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        const key = el.getAttribute('data-i18n-aria');
+        const val = getMessageByKey(messages, key);
+        if (val) el.setAttribute('aria-label', val);
+    });
+
+    // Placeholders
+    root.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        const val = getMessageByKey(messages, key);
+        if (val) el.setAttribute('placeholder', val);
+    });
+}
+
+/**
+ * Dev-time check for unresolved data-i18n keys.
+ * Usage: append ?i18n-check to the page URL to enable when loading the page.
+ * Returns an array of missing entries (empty if none).
+ */
+function checkDataI18n(messages, root = document) {
+    const missing = [];
+    const checkAttr = (attr) => {
+        root.querySelectorAll('[' + attr + ']').forEach(el => {
+            const key = el.getAttribute(attr);
+            if (!key) return;
+            const val = getMessageByKey(messages, key);
+            if (typeof val === 'undefined') {
+                missing.push({ attribute: attr, key, tag: el.tagName.toLowerCase(), snippet: el.outerHTML.slice(0, 200) });
+            }
+        });
+    };
+
+    ['data-i18n', 'data-i18n-href', 'data-i18n-title', 'data-i18n-aria', 'data-i18n-placeholder'].forEach(checkAttr);
+
+    if (missing.length) {
+        console.group('%cI18N: unresolved data-i18n keys', 'color: #d97706; font-weight: bold;');
+        missing.forEach(m => console.warn(`Missing key "${m.key}" for ${m.attribute} on <${m.tag}>`, m.snippet));
+        console.table(missing.map(m => ({ key: m.key, attribute: m.attribute, tag: m.tag })));
+        console.groupEnd();
+    } else {
+        console.info('I18N: all data-i18n keys resolved on this page');
+    }
+
+    return missing;
+} 
 
 // Expose functions globally
 window.utils = {
@@ -458,15 +687,74 @@ window.utils = {
     initTheme,
     toggleTheme,
     confirm: confirmModal,
+    alert: alertModal,
+    setStatusMessage,
     generateEARL,
     parseEARL,
     fixOrphans,
     getAuditStats,
-    fixOrphans,
-    getAuditStats,
     getStatusLabel,
-    downloadAudit
+    getFilename,
+    downloadAudit,
+    applyDataI18n,
+    getMessageByKey,
+    checkDataI18n,
+    protectAssistiveHelpers
 };
+
+/**
+ * Ensure sr-only / visually-hidden / nav-helper elements cannot be made visible via inline styles
+ * Attaches MutationObservers to clear any inline 'style' attribute written to these elements
+ */
+function protectAssistiveHelpers(root = document) {
+    const protectElement = (el) => {
+        if (!(el instanceof Element)) return;
+        if (!el.classList) return;
+        if (!el.classList.contains('sr-only') && !el.classList.contains('visually-hidden') && !el.classList.contains('nav-helper')) return;
+        // clear any existing inline styles
+        el.style.cssText = '';
+        // Attach observer only once
+        if (el.__srProtected) return;
+        try {
+            const mo = new MutationObserver((mutations) => {
+                for (const m of mutations) {
+                    if (m.type === 'attributes' && m.attributeName === 'style') {
+                        if (el.getAttribute('style')) {
+                            el.style.cssText = '';
+                        }
+                    }
+                }
+            });
+            mo.observe(el, { attributes: true, attributeFilter: ['style'] });
+            el.__srProtected = true;
+            el.__srProtectedMo = mo;
+        } catch (e) {
+            // ignore environments without MutationObserver
+            console.warn('protectAssistiveHelpers: could not observe element', e);
+        }
+    };
+
+    try {
+        // Protect existing elements
+        (root.querySelectorAll('.sr-only, .visually-hidden, .nav-helper') || []).forEach(protectElement);
+
+        // Observe additions to the DOM under root and protect new elements
+        const rootObserver = new MutationObserver((mutations) => {
+            mutations.forEach(m => {
+                if (m.type === 'childList' && m.addedNodes && m.addedNodes.length) {
+                    m.addedNodes.forEach(node => {
+                        if (!(node instanceof Element)) return;
+                        protectElement(node);
+                        (node.querySelectorAll && node.querySelectorAll('.sr-only, .visually-hidden, .nav-helper') || []).forEach(protectElement);
+                    });
+                }
+            });
+        });
+        rootObserver.observe(root, { childList: true, subtree: true });
+    } catch (e) {
+        console.warn('protectAssistiveHelpers failed to setup observers:', e);
+    }
+}
 
 // Initialize theme on load
 document.addEventListener('DOMContentLoaded', () => {
@@ -475,11 +763,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register Service Worker
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
-            .then(registration => {
-                console.log('Service Worker registered with scope:', registration.scope);
-            })
             .catch(error => {
                 console.error('Service Worker registration failed:', error);
             });
+    }
+
+    // Harden assistive helper elements to prevent accidental inline-style reveals
+    try {
+        protectAssistiveHelpers(document);
+    } catch (e) {
+        console.warn('protectAssistiveHelpers invocation failed', e);
     }
 });
