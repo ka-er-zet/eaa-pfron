@@ -23,10 +23,20 @@ export const MESSAGES_PL = {
 
     skipToContent: "Pomiń nawigację",
 
+    // Header / Navbar tooltips
+    home: "Strona główna",
+    saveAudit: "Zapisz audyt",
+    saveConfig: "Zapisz konfigurację",
+    editConfig: "Edytuj konfigurację",
+    editResponses: "Edytuj odpowiedzi",
+    toggleTheme: "Przełącz motyw",
+    backToTests: "Powrót do testów",
+
     returnToHomeTitle: "Powrót do strony startowej",
     returnToHomeBody:
       "Powrót do strony startowej spowoduje utratę niezapisanych danych."
   },
+
 
   /* ---------- Konfiguracja audytu ---------- */
   setup: {
@@ -36,7 +46,14 @@ export const MESSAGES_PL = {
     incompleteForm:
       "Uzupełnij nazwę badanej aplikacji oraz wybierz co najmniej jedną klauzulę.",
 
-    auditSavedDraft: "Zapisano konfigurację audytu jako wersję roboczą."
+    auditSavedDraft: "Zapisano konfigurację audytu jako wersję roboczą.",
+
+    // Edit & clause removal confirmation
+    removeClausesTitle: "Usuwanie klauzul",
+    removeClausesBody: "Usunięcie tej klauzuli spowoduje trwałą utratę odpowiedzi dla {count}. Nie będzie można ich przywrócić. Czy kontynuować?",
+    removeClausesConfirm: "Usuń",
+    removeClausesCancel: "Anuluj",
+    removedClausesNotice: "Dane zostały trwale usunięte i nie można ich przywrócić." 
   },
 
   /* ---------- Audyt / testy ---------- */

@@ -37,7 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
 
                     window.utils.saveState(state);
-                    window.location.href = 'audit.html';
+                    // Indicate we loaded an audit file so the setup page can prefill the form
+                    sessionStorage.setItem('loaded-audit', 'true');
+                    // Mark that this navigation originates from an actual file load (used to announce success to screen readers)
+                    sessionStorage.setItem('loaded-audit-success', 'true');
+                    window.location.href = 'new-audit.html';
 
                 } catch (err) {
                     console.error(err);
@@ -49,5 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
             reader.readAsText(file);
             fileInput.value = '';
         });
+    }
+
+    // Localize header button titles
+    try {
+        // Only theme buttons
+        document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
+            el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
+        });
+
+        const loadBtn = document.getElementById('btn-load-audit');
+        if (loadBtn) loadBtn.title = M.navigation.home || loadBtn.title || 'Wczytaj audyt';
+
+        const appIcon = document.querySelector('.header-icon-container');
+        if (appIcon) appIcon.title = M.navigation.home || appIcon.title || 'Strona główna';
+    } catch (e) {
+        console.warn('Failed to set header titles on landing page', e);
     }
 });

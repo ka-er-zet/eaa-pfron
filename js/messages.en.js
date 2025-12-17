@@ -25,7 +25,16 @@ export const MESSAGES_EN = {
     returnToHomeBody:
       "Returning to the start page will result in loss of unsaved data."
     ,
-    skipToContent: "Skip navigation"
+    skipToContent: "Skip navigation",
+
+    // Header / Navbar tooltips
+    home: "Home",
+    saveAudit: "Save audit",
+    saveConfig: "Save configuration",
+    editConfig: "Edit configuration",
+    editResponses: "Edit responses",
+    toggleTheme: "Toggle theme",
+    backToTests: "Back to tests"
   },
 
   /* ---------- Audit setup ---------- */
@@ -37,7 +46,15 @@ export const MESSAGES_EN = {
       "Enter the product name and select at least one clause.",
 
     auditSavedDraft:
-      "Audit configuration has been saved as a draft."
+      "Audit configuration has been saved as a draft.",
+
+    // Edit & clause removal confirmation
+    editingAuditNotice: "Loaded saved audit — you can edit configuration.",
+    removeClausesTitle: "Remove clauses",
+    removeClausesBody: "Removing this clause will permanently delete responses for {count} tests. They cannot be restored. Continue?",
+    removeClausesConfirm: "Remove",
+    removeClausesCancel: "Cancel",
+    removedClausesNotice: "Data was permanently deleted and cannot be restored." 
   },
 
   /* ---------- Audit / tests ---------- */

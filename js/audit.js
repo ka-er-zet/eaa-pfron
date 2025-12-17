@@ -1,69 +1,150 @@
-import { MESSAGES_PL as M } from './messages.pl.js';
+// Load localized messages dynamically; fall back to global i18n or minimal defaults
+let M;
 // docelowo: const M = window.i18n.getMessages();
 
 
 document.addEventListener('DOMContentLoaded', async () => {
     lucide.createIcons();
 
-    // Przełączanie menu mobilnego
-    const menuToggle = document.getElementById('menu-toggle');
-    const appLayout = document.getElementById('app-layout');
-    const sidebar = document.getElementById('sidebar');
+    // Show a quick loading overlay immediately to give feedback before any async work
+    let loadingOverlay = document.getElementById('eaa-loading-overlay');
+    if (!loadingOverlay) {
+        loadingOverlay = document.createElement('div');
+        loadingOverlay.id = 'eaa-loading-overlay';
+        loadingOverlay.style.position = 'fixed';
+        loadingOverlay.style.top = '0';
+        loadingOverlay.style.left = '0';
+        loadingOverlay.style.width = '100%';
+        loadingOverlay.style.height = '100%';
+        loadingOverlay.style.background = 'rgba(15, 23, 42, 0.9)';
+        loadingOverlay.style.display = 'flex';
+        loadingOverlay.style.alignItems = 'center';
+        loadingOverlay.style.justifyContent = 'center';
+        loadingOverlay.style.zIndex = '9999';
+        loadingOverlay.innerHTML = '<h2 style="color: white;">Ładowanie danych...</h2>';
+        document.body.appendChild(loadingOverlay);
+    }
 
-    if (menuToggle && appLayout && sidebar) {
-        const closeMenu = (returnFocus = true) => {
-            appLayout.classList.remove('mobile-menu-open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            if (returnFocus) {
-                menuToggle.focus();
-            }
+    // Try dynamic import first to avoid "import statement outside a module" errors
+    try {
+        const msgs = await import('./messages.pl.js');
+        M = msgs.MESSAGES_PL;
+        // Update overlay text if we have a translated string
+        if (loadingOverlay) loadingOverlay.innerHTML = '<h2 style="color: white;">' + ((M && M.app && M.app.loadingData) || 'Ładowanie danych...') + '</h2>';
+    } catch (err) {
+        console.warn('Could not dynamically import messages.pl.js, falling back to global i18n or defaults', err);
+        M = window.i18n?.getMessages?.() || {
+            navigation: {
+                goToHomeQuestion: "Czy przejść do strony startowej?",
+                unsavedChangesTitle: "Niezapisane zmiany",
+                confirmStay: "Pozostań",
+                confirmLeave: "Opuść ekran",
+                skipToContent: "Pomiń nawigację",
+                home: "Strona główna",
+                saveAudit: "Zapisz audyt",
+                saveConfig: "Zapisz konfigurację",
+                toggleTheme: "Przełącz motyw",
+                backToTests: "Powrót do testów",
+                returnToHomeTitle: "Powrót do strony startowej",
+                returnToHomeBody: "Powrót do strony startowej spowoduje utratę niezapisanych danych."
+            },
+            audit: {
+                saveProgressSuccess: "Zapisano postęp audytu i pobrano plik raportu."
+            },
+            app: { loadingData: "Ładowanie danych…" }
         };
+    }
 
-        const openMenu = () => {
-            appLayout.classList.add('mobile-menu-open');
-            menuToggle.setAttribute('aria-expanded', 'true');
-            // Uczyń pasek boczny programowo fokowalnym i skup się na nim
-            sidebar.setAttribute('tabindex', '-1');
-            sidebar.focus({ preventScroll: true });
-        };
 
-        menuToggle.addEventListener('click', () => {
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            if (isExpanded) {
-                closeMenu(true); // Zwróć fokus do przełącznika przy zamykaniu przez przełącznik
-            } else {
-                openMenu();
-            }
+        // Przełączanie menu mobilnego
+        const menuToggle = document.getElementById('menu-toggle');
+        const appLayout = document.getElementById('app-layout');
+        const sidebar = document.getElementById('sidebar');
+
+        if (menuToggle && appLayout && sidebar) {
+            const closeMenu = (returnFocus = true) => {
+                appLayout.classList.remove('mobile-menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                if (returnFocus) {
+                    menuToggle.focus();
+                }
+            };
+
+            const openMenu = () => {
+                appLayout.classList.add('mobile-menu-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+                // Uczyń pasek boczny programowo fokowalnym i skup się na nim
+                sidebar.setAttribute('tabindex', '-1');
+                sidebar.focus({ preventScroll: true });
+            };
+
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    closeMenu(true); // Zwróć fokus do przełącznika przy zamykaniu przez przełącznik
+                } else {
+                    openMenu();
+                }
+            });
+
+            // Zamknij menu przy kliknięciu linku w pasku bocznym
+            sidebar.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A' || e.target.closest('a')) {
+                    // Nie zwracaj fokusu do przełącznika, ponieważ użytkownik nawiguje do treści
+                    closeMenu(false);
+                }
+            });
+
+            // Zamknij menu przy kliknięciu na zewnątrz
+            document.addEventListener('click', (e) => {
+                if (appLayout.classList.contains('mobile-menu-open') &&
+                    !sidebar.contains(e.target) &&
+                    !menuToggle.contains(e.target)) {
+                    closeMenu(false); // Fokus zostaje tam, gdzie użytkownik kliknął (lub body)
+                }
+            });
+
+            // Obsługa klawisza Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && appLayout.classList.contains('mobile-menu-open')) {
+                    closeMenu(true); // Zwróć fokus do przełącznika
+                }
+            });
+        }
+
+    // Set header button titles (localized)
+    try {
+        // Only target the actual theme toggle buttons (have onclick toggleTheme)
+        document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
+            el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
         });
 
-        // Zamknij menu przy kliknięciu linku w pasku bocznym
-        sidebar.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A' || e.target.closest('a')) {
-                // Nie zwracaj fokusu do przełącznika, ponieważ użytkownik nawiguje do treści
-                closeMenu(false);
-            }
-        });
+        const saveBtnLocal = document.getElementById('btn-save-audit');
+        if (saveBtnLocal) saveBtnLocal.title = M.navigation.saveAudit || saveBtnLocal.title || 'Zapisz';
 
-        // Zamknij menu przy kliknięciu na zewnątrz
-        document.addEventListener('click', (e) => {
-            if (appLayout.classList.contains('mobile-menu-open') &&
-                !sidebar.contains(e.target) &&
-                !menuToggle.contains(e.target)) {
-                closeMenu(false); // Fokus zostaje tam, gdzie użytkownik kliknął (lub body)
-            }
-        });
+        const appLogoLocal = document.getElementById('app-logo');
+        if (appLogoLocal) appLogoLocal.title = M.navigation.home || appLogoLocal.title || 'Strona główna';
 
-        // Obsługa klawisza Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && appLayout.classList.contains('mobile-menu-open')) {
-                closeMenu(true); // Zwróć fokus do przełącznika
-            }
-        });
+        const menuToggleLocal = document.getElementById('menu-toggle');
+        if (menuToggleLocal) menuToggleLocal.title = M.navigation.menu || menuToggleLocal.title || 'Menu';
+    } catch (e) {
+        console.warn('Failed to set header titles', e);
     }
 
     // Załaduj stan natychmiast, aby był dostępny dla detektorów zdarzeń
     const state = window.utils.loadState();
     console.log('State loaded:', state);
+
+    // Edit config button (header)
+    const editBtn = document.getElementById('btn-edit-config');
+    if (editBtn) {
+        editBtn.title = M.navigation.editConfig || editBtn.title || 'Edytuj konfigurację';
+        editBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            sessionStorage.setItem('editing-audit', 'true');
+            window.location.href = 'new-audit.html';
+        });
+    }
 
     // Funkcja pomocnicza do generowania nazwy pliku dla eksportu stanu
     const getAuditFilename = () => {
@@ -111,27 +192,25 @@ document.addEventListener('DOMContentLoaded', async () => {
         homeLink.addEventListener('click', async (e) => {
             e.preventDefault(); // Zawsze zapobiegaj domyślnej nawigacji najpierw
 
-            // Sprawdź, czy jest jakiś postęp
-            const hasProgress = state.tests && state.tests.some(test => {
+            // Sprawdź, czy jest jakiś postęp w bieżącej sesji LUB czy istnieje zapisany stan, który może zostać nadpisany
+            const persisted = window.utils.loadState();
+            const hasPersistedProgress = Object.values(persisted.results || {}).some(r => r && (r.status || r.note));
+
+            const hasProgress = hasPersistedProgress || (state.tests && state.tests.some(test => {
                 const res = state.results[test.id];
                 return res && (res.status || res.note);
-            });
+            }));
 
-            if (hasProgress) {
-                const stay = await window.utils.confirm(
-                    M.audit.leaveWithUnsavedChanges,
-                    M.common.unsavedChangesTitle,
-                    M.common.stay,
-                    M.common.leave
-                );
+                    // ALWAYS ask before leaving the Audit page to avoid accidental loss of any previously saved data
+            const confirmed = await window.utils.confirm(
+                `${M.navigation.returnToHomeBody}\n\n${M.navigation.goToHomeQuestion}`,
+                M.navigation.returnToHomeTitle,
+                M.navigation.confirmLeave,
+                M.navigation.confirmStay,
+                'cancel'
+            );
 
-
-                // Jeśli użytkownik kliknął "Tak" (Drugi/Anuluj), stay jest false.
-                if (!stay) {
-                    window.location.href = 'index.html';
-                }
-            } else {
-                // Brak postępu, bezpieczna nawigacja
+            if (confirmed) {
                 window.location.href = 'index.html';
             }
         });
@@ -1192,19 +1271,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function loadClauses(clauses) {
         state.tests = [];
 
-        const loadingOverlay = document.createElement('div');
-        loadingOverlay.style.position = 'fixed';
-        loadingOverlay.style.top = '0';
-        loadingOverlay.style.left = '0';
-        loadingOverlay.style.width = '100%';
-        loadingOverlay.style.height = '100%';
-        loadingOverlay.style.background = 'rgba(15, 23, 42, 0.9)';
-        loadingOverlay.style.display = 'flex';
-        loadingOverlay.style.alignItems = 'center';
-        loadingOverlay.style.justifyContent = 'center';
-        loadingOverlay.style.zIndex = '9999';
-        loadingOverlay.innerHTML = '<h2 style="color: white;">Ładowanie danych...</h2>';
-        document.body.appendChild(loadingOverlay);
+        // Reuse the overlay created earlier (if present) so feedback appears immediately
+        let loadingOverlay = document.getElementById('eaa-loading-overlay');
+        if (!loadingOverlay) {
+            loadingOverlay = document.createElement('div');
+            loadingOverlay.id = 'eaa-loading-overlay';
+            loadingOverlay.style.position = 'fixed';
+            loadingOverlay.style.top = '0';
+            loadingOverlay.style.left = '0';
+            loadingOverlay.style.width = '100%';
+            loadingOverlay.style.height = '100%';
+            loadingOverlay.style.background = 'rgba(15, 23, 42, 0.9)';
+            loadingOverlay.style.display = 'flex';
+            loadingOverlay.style.alignItems = 'center';
+            loadingOverlay.style.justifyContent = 'center';
+            loadingOverlay.style.zIndex = '9999';
+            document.body.appendChild(loadingOverlay);
+        }
+        // Ensure text is localized when possible
+        loadingOverlay.innerHTML = `<h2 style="color: white;">${M?.app?.loadingData || 'Ładowanie danych...'}</h2>`;
 
         try {
             for (const clauseId of clauses) {

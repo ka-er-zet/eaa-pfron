@@ -24,8 +24,19 @@ self.addEventListener('install', event => {
   // Activate new service worker immediately
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME).then(async (cache) => {
+      // Attempt to pre-cache assets but don't fail the install if some fail
+      await Promise.all(urlsToCache.map(async (url) => {
+        try {
+          const res = await fetch(url);
+          if (!res || !res.ok) throw new Error(`Bad response for ${url}: ${res && res.status}`);
+          await cache.put(url, res);
+        } catch (err) {
+          console.warn('Service Worker: could not cache', url, err);
+          // continue without rejecting the whole install
+        }
+      }));
+    })
   );
 });
 
@@ -44,7 +55,24 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request)
-      .then(response => response || fetch(event.request))
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) return cachedResponse;
+
+      return fetch(event.request).then(response => {
+        // If response is invalid, throw to trigger fallback
+        if (!response || response.status >= 400) {
+          throw new Error('Network response was not ok');
+        }
+        return response;
+      }).catch(err => {
+        console.warn('Service Worker fetch failed:', event.request.url, err);
+        // For navigations, return cached index.html if available
+        if (event.request.mode === 'navigate') {
+          return caches.match('./index.html');
+        }
+        // Generic fallback for other requests
+        return new Response('Network error', { status: 504, statusText: 'Gateway Timeout' });
+      });
+    })
   );
 });

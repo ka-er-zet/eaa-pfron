@@ -786,18 +786,28 @@ main {
 
 /* Button-like Link Utility */
 .btn-primary {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     background-color: var(--primary);
     color: var(--primary-inverse);
     border: 1px solid var(--primary);
     padding: 0.75rem 2rem;
+    min-height: 2.5rem;
     border-radius: var(--border-radius);
-    text-decoration: none !important;
-    text-align: center;
+    /* Make link behave visually like a button */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    line-height: 1;
+    white-space: nowrap;
+    min-height: 2.5rem; /* match button visual height */
     cursor: pointer;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-    line-height: normal;
-    /* Reset line-height if needed */
+    line-height: 1;
+    white-space: nowrap; /* prevent wrapping which increases height */
 }
 
 .btn-primary:hover {
@@ -815,6 +825,8 @@ main {
 
 .btn-full-width {
     width: 100%;
+    font-size: 1rem;
+    line-height: var(--line-height);
 }
 
 /* --- Dialog --- */
@@ -1828,10 +1840,6 @@ details[open] summary .summary-open {
 .card-action footer button,
 .card-action footer [role="button"] {
     margin-bottom: 0;
-}
-
-.btn-full-width {
-    width: 100%;
 }
 
 /* Optional wrapper for tables to provide smooth scrolling and hint that table is scrollable */

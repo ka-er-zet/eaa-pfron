@@ -31,12 +31,12 @@
     <!-- Header -->
     <header class="app-header">
         <div class="header-content">
-            <button id="menu-toggle" class="outline secondary theme-toggle" aria-label="Menu" aria-expanded="false"
+            <button id="menu-toggle" class="outline secondary theme-toggle" aria-label="Menu" title="Menu" aria-expanded="false"
                 aria-controls="sidebar">
                 <i data-lucide="menu" aria-hidden="true"></i>
             </button>
             <a href="index.html" id="app-logo" class="header-icon-container"
-                aria-label="Strona główna - Powrót do konfiguracji">
+                aria-label="Strona główna - Powrót do konfiguracji" title="Strona główna - Powrót do konfiguracji">
                 <i data-lucide="shield-check" color="white" aria-hidden="true"></i>
             </a>
             <div>
@@ -45,11 +45,14 @@
             </div>
         </div>
         <div class="header-actions">
-            <button class="outline secondary theme-toggle" id="btn-save-audit" aria-label="Zapisz audyt">
+            <button class="outline secondary theme-toggle" id="btn-edit-config" aria-label="Ustawienia audytu" title="Ustawienia audytu">
+                <i data-lucide="settings" aria-hidden="true"></i>
+            </button>
+            <button class="outline secondary theme-toggle" id="btn-save-audit" aria-label="Zapisz audyt" title="Zapisz audyt">
                 <i data-lucide="save" aria-hidden="true"></i>
             </button>
             <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()"
-                aria-label="Przełącz motyw">
+                aria-label="Przełącz motyw" title="Przełącz motyw">
                 <i id="theme-icon" data-lucide="moon" aria-hidden="true"></i>
             </button>
         </div>
@@ -88,7 +91,7 @@
 
     <!-- Application Logic -->
     <script src="js/utils.js?v=13"></script>
-    <script src="js/audit.js?v=13"></script>
+    <script type="module" src="js/audit.js?v=13"></script>
 </body>
 
 </html>

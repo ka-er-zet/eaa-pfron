@@ -186,10 +186,67 @@ document.addEventListener('DOMContentLoaded', () => {
     // Save Button Handler
     const saveBtn = document.getElementById('btn-save-audit');
     if (saveBtn) {
+        saveBtn.title = M.navigation.saveAudit || saveBtn.title || 'Zapisz audyt';
         saveBtn.addEventListener('click', () => {
             window.utils.downloadAudit(state, true); // Draft save
         });
     }
+
+    // Back-to-tests button (preserves browser back behavior; falls back to audit page)
+    const backBtn = document.getElementById('btn-back-tests');
+    function sanitizeForDomId(str) {
+        return String(str).replace(/[^a-zA-Z0-9_-]/g, '-');
+    }
+    if (backBtn) {
+        backBtn.title = M.navigation.backToTests || backBtn.title || 'Powrót do testów';
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Prefer native history back so browser back button behavior is preserved
+            if (window.history.length > 1) {
+                window.history.back();
+                return;
+            }
+            // Fallback: navigate to audit page and, if possible, to the current test fragment
+            const idx = (typeof state.currentIdx === 'number') ? state.currentIdx : 0;
+            const t = state.tests && state.tests[idx];
+            const fragment = (t && t.id) ? `#test-${sanitizeForDomId(t.id)}` : '';
+            window.location.href = `audit.html${fragment}`;
+        });
+    }
+
+    // Edit responses button (takes user back to audit view)
+    const editResponsesBtn = document.getElementById('btn-edit-responses');
+    if (editResponsesBtn) {
+        editResponsesBtn.title = M.navigation.editResponses || editResponsesBtn.title || 'Edytuj odpowiedzi';
+        editResponsesBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Navigate to audit; try to preserve hash to currentIdx if available
+            const idx = (typeof state.currentIdx === 'number') ? state.currentIdx : 0;
+            const t = state.tests && state.tests[idx];
+            const fragment = (t && t.id) ? `#test-${sanitizeForDomId(t.id)}` : '';
+            window.location.href = `audit.html${fragment}`;
+        });
+    }
+
+    // Edit config button
+    const editBtn = document.getElementById('btn-edit-config');
+    if (editBtn) {
+        editBtn.title = M.navigation.editConfig || editBtn.title || 'Edytuj konfigurację';
+        editBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            sessionStorage.setItem('editing-audit', 'true');
+            window.location.href = 'new-audit.html';
+        });
+    }
+
+    // Theme toggle tooltip — only target actual theme toggles
+    document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
+        el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
+    });
+
+    // App logo tooltip
+    const appLogo = document.getElementById('app-logo');
+    if (appLogo) appLogo.title = M.navigation.home || appLogo.title || 'Strona główna';
 
     document.getElementById('export-csv-btn').addEventListener('click', () => {
         const stats = window.utils.getAuditStats(state);
