@@ -27,32 +27,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Try dynamic import first to avoid "import statement outside a module" errors
     try {
-        const msgs = await import('./messages.pl.js');
+        const msgs = await import('./messages-pl.js');
         M = msgs.MESSAGES_PL;
         // Update overlay text if we have a translated string
         if (loadingOverlay) loadingOverlay.innerHTML = '<h2 style="color: white;">' + ((M && M.app && M.app.loadingData) || 'Ładowanie danych...') + '</h2>';
     } catch (err) {
-        console.warn('Could not dynamically import messages.pl.js, falling back to global i18n or defaults', err);
+        console.warn('Could not dynamically import messages-pl.js, falling back to global i18n or defaults', err);
         M = window.i18n?.getMessages?.() || {
             navigation: {
                 goToHomeQuestion: "Czy przejść do strony startowej?",
                 unsavedChangesTitle: "Niezapisane zmiany",
                 confirmStay: "Pozostań",
-                confirmLeave: "Opuść ekran",
-                skipToContent: "Pomiń nawigację",
-                home: "Strona główna",
-                saveAudit: "Zapisz audyt",
-                saveConfig: "Zapisz konfigurację",
-                toggleTheme: "Przełącz motyw",
-                backToTests: "Powrót do testów",
-                returnToHomeTitle: "Powrót do strony startowej",
-                returnToHomeBody: "Powrót do strony startowej spowoduje utratę niezapisanych danych."
-            },
-            audit: {
-                saveProgressSuccess: "Zapisano postęp audytu i pobrano plik raportu."
-            },
-            app: { loadingData: "Ładowanie danych…" }
+            }
         };
+    }
+
+    // Apply any data-i18n attributes on the audit page using shared helper
+    try {
+        if (window.utils && typeof window.utils.applyDataI18n === 'function') {
+            window.utils.applyDataI18n(M, document);
+            if (location.search.includes('i18n-check') && typeof window.utils.checkDataI18n === 'function') {
+                window.utils.checkDataI18n(M, document);
+            }
+        }
+    } catch (e) {
+        console.warn('Failed to apply data-i18n on audit page', e);
     }
 
 
@@ -117,13 +116,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Only target the actual theme toggle buttons (have onclick toggleTheme)
         document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
             el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
+            if (!el.querySelector('.theme-helper')) {
+                const span = document.createElement('span');
+                span.className = 'sr-only theme-helper';
+                span.textContent = M.navigation.themeModeHelp || 'Tryb jasny/ciemny';
+                el.appendChild(span);
+            }
         });
 
         const saveBtnLocal = document.getElementById('btn-save-audit');
         if (saveBtnLocal) saveBtnLocal.title = M.navigation.saveAudit || saveBtnLocal.title || 'Zapisz';
 
         const appLogoLocal = document.getElementById('app-logo');
-        if (appLogoLocal) appLogoLocal.title = M.navigation.home || appLogoLocal.title || 'Strona główna';
+        if (appLogoLocal) appLogoLocal.setAttribute('aria-label', M.navigation.home || appLogoLocal.getAttribute('aria-label') || 'Strona główna');
 
         const menuToggleLocal = document.getElementById('menu-toggle');
         if (menuToggleLocal) menuToggleLocal.title = M.navigation.menu || menuToggleLocal.title || 'Menu';
@@ -189,6 +194,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Obsługa kliknięcia linku do strony głównej
     const homeLink = document.getElementById('app-logo');
     if (homeLink) {
+        // Append an sr-only helper describing the action
+        // Only add a visible helper if there isn't already an accessible name
+        if (!homeLink.querySelector('.nav-helper') && !homeLink.hasAttribute('aria-label') && !homeLink.hasAttribute('aria-labelledby')) {
+            const span = document.createElement('span');
+            span.className = 'sr-only nav-helper';
+            span.textContent = M.navigation.homeHelp || 'Przejdź do strony głównej';
+            // Ensure no inline style makes it visible accidentally
+            span.style.cssText = '';
+            homeLink.appendChild(span);
+        }
         homeLink.addEventListener('click', async (e) => {
             e.preventDefault(); // Zawsze zapobiegaj domyślnej nawigacji najpierw
 
@@ -266,7 +281,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (id && id !== excludeId) {
                 const el = document.createElement('span');
                 el.id = id;
-                el.className = 'fragment-anchor visually-hidden';
+                el.className = 'fragment-anchor sr-only';
                 fragContainer.appendChild(el);
             }
         });
@@ -764,7 +779,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (item.form && item.form.inputs) {
                 evaluationHtml += `<fieldset class="evaluation-criteria" style="border: none; padding: 0; margin: 0;">
-                    <legend class="visually-hidden">Test ${item.id}: ${cleanTitle}</legend>`;
+                    <legend class="sr-only">Test ${item.id}: ${cleanTitle}</legend>`;
                 const safeTestId = sanitizeForDomId(item.id);
                 item.form.inputs.forEach(input => {
                     let icon = 'circle';
@@ -780,7 +795,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     evaluationHtml += `
                         <div class="criteria-option-wrapper">
                             <input type="radio" id="${inputId}" name="eval-${safeTestId}" value="${input.value}" 
-                                   class="visually-hidden criteria-radio" 
+                                   class="sr-only criteria-radio" 
                                    ${isSelected ? 'checked' : ''} 
                                    onchange="setResult('${item.id}', '${input.value}')">
                             <label for="${inputId}" class="criteria-option ${colorClass} ${isSelected ? 'selected' : ''}">
@@ -798,11 +813,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Fallback to old grid if no form data
                 evaluationHtml += `
                 <fieldset class="eval-grid" style="border: none; padding: 0; margin: 1rem 0 0 0;">
-                    <legend class="visually-hidden">Ocena wyniku testu ${item.id}: ${cleanTitle}</legend>
+                    <legend class="sr-only">Ocena wyniku testu ${item.id}: ${cleanTitle}</legend>
                     
                       <div class="eval-btn-wrapper">
                           <input type="radio" id="eval-${sanitizeForDomId(item.id)}-pass" name="eval-${sanitizeForDomId(item.id)}" value="Zaliczone" 
-                               class="visually-hidden eval-radio" ${res.status === 'Zaliczone' || res.status === 'pass' ? 'checked' : ''}
+                               class="sr-only eval-radio" ${res.status === 'Zaliczone' || res.status === 'pass' ? 'checked' : ''}
                               onchange="setResult('${item.id}', 'Zaliczone')">
                           <label for="eval-${sanitizeForDomId(item.id)}-pass" class="eval-btn pass ${res.status === 'Zaliczone' || res.status === 'pass' ? 'selected' : ''}">
                             <i data-lucide="check" size="28" aria-hidden="true"></i>
@@ -812,7 +827,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     <div class="eval-btn-wrapper">
                               <input type="radio" id="eval-${sanitizeForDomId(item.id)}-fail" name="eval-${sanitizeForDomId(item.id)}" value="Niezaliczone" 
-                               class="visually-hidden eval-radio" ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'checked' : ''}
+                               class="sr-only eval-radio" ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'checked' : ''}
                                   onchange="setResult('${item.id}', 'Niezaliczone')">
                               <label for="eval-${sanitizeForDomId(item.id)}-fail" class="eval-btn fail ${res.status === 'Niezaliczone' || res.status === 'fail' ? 'selected' : ''}">
                             <i data-lucide="x" size="28" aria-hidden="true"></i>
@@ -822,7 +837,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     <div class="eval-btn-wrapper">
                               <input type="radio" id="eval-${sanitizeForDomId(item.id)}-na" name="eval-${sanitizeForDomId(item.id)}" value="Nie dotyczy" 
-                               class="visually-hidden eval-radio" ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'checked' : ''}
+                               class="sr-only eval-radio" ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'checked' : ''}
                                   onchange="setResult('${item.id}', 'Nie dotyczy')">
                               <label for="eval-${sanitizeForDomId(item.id)}-na" class="eval-btn na ${res.status === 'Nie dotyczy' || res.status === 'na' ? 'selected' : ''}">
                             <i data-lucide="minus" size="28" aria-hidden="true"></i>
@@ -832,7 +847,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     <div class="eval-btn-wrapper">
                               <input type="radio" id="eval-${sanitizeForDomId(item.id)}-nt" name="eval-${sanitizeForDomId(item.id)}" value="Nie do sprawdzenia" 
-                               class="visually-hidden eval-radio" ${res.status === 'nt' || res.status === 'Nie do sprawdzenia' ? 'checked' : ''}
+                               class="sr-only eval-radio" ${res.status === 'nt' || res.status === 'Nie do sprawdzenia' ? 'checked' : ''}
                                   onchange="setResult('${item.id}', 'Nie do sprawdzenia')">
                               <label for="eval-${sanitizeForDomId(item.id)}-nt" class="eval-btn nt ${res.status === 'nt' || res.status === 'Nie do sprawdzenia' ? 'selected' : ''}">
                             <i data-lucide="help-circle" size="28" aria-hidden="true"></i>
@@ -907,7 +922,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                         ` : '')}
                     </form>
-                    <div id="audit-status-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
                 </div>
             </article>
 

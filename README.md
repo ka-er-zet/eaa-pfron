@@ -59,6 +59,19 @@ Narzędzie jest aplikacją webową działającą lokalnie w przeglądarce. Wymag
 
 ### Modyfikacja plików JSON (klauzule)
 
+#### Narzędzia developerskie — i18n checker
+Dodano proste narzędzie do lokalnego sprawdzania pokrycia kluczy lokalizacyjnych.
+
+- Lokalizacja skryptu: `tools/i18n-check.js`
+- Uruchomienie: `node tools/i18n-check.js` (wyjście non-zero przy brakujących kluczach)
+- Opcje: `--no-exit` (nie ustawia kodu wyjścia), `--html-dir=.` (ustaw katalog do skanowania), `--msgs=js/messages.pl.js,js/messages.en.js` (lista plików słowników)
+
+Używaj tego narzędzia przed commitami/PR by znaleźć brakujące klucze `data-i18n`.
+
+Uwaga na konwencję kluczy: wprowadziliśmy aliasy dla niektórych nazw (np. `fileLoad.*` ↔ `error.load.*`) aby ułatwić stopniową unifikację komunikatów. Narzędzie i runtime spróbują rozwiązać brakujące klucze przez zmapowanie prefiksów; jednak zalecane jest ujednolicenie i wykorzystanie nowego namespace `error.load.*` gdy dodajesz nowe komunikaty. W ramach migracji dodaliśmy też odpowiedniki kluczy `load`, `loadSuccess` i `loadError` pod `error.load.*`, więc nowe implementacje powinny używać `error.load.*` bez obawy o brakujące tłumaczenia.
+
+### Tworzenie i aktualizacja klauzul
+
 Pliki JSON w `clauses_json/` definiują testy dostępności. Każdy plik odpowiada jednej klauzuli (np. `c5.json` dla klauzuli 5).
 
 #### Struktura pliku JSON

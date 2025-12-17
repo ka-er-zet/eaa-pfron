@@ -1,10 +1,22 @@
-import { MESSAGES_PL as M } from './messages.pl.js';
+import { MESSAGES_PL as M } from './messages-pl.js';
 // docelowo: const M = window.i18n.getMessages();
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
+
+    // Apply localization from data-i18n attributes
+    try {
+        if (window.utils && typeof window.utils.applyDataI18n === 'function') {
+            window.utils.applyDataI18n(M, document);
+            if (location.search.includes('i18n-check') && typeof window.utils.checkDataI18n === 'function') {
+                window.utils.checkDataI18n(M, document);
+            }
+        }
+    } catch (e) {
+        console.warn('Failed to apply data-i18n on setup page', e);
+    }
 
     // Obsługa kliknięcia linku do strony głównej
     const homeLink = document.getElementById('app-logo');
@@ -178,6 +190,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         window.utils.saveState(loaded);
 
+                        // Ensure that any results loaded from EARL that don't have matching test items
+                        // are represented in `loaded.tests` so the UI can detect affected tests.
+                        const existingTestIds = new Set((loaded.tests || []).map(t => t.id));
+                        const orphanResultIds = Object.keys(loaded.results || {}).filter(id => !existingTestIds.has(id));
+                        if (orphanResultIds.length > 0) {
+                            orphanResultIds.forEach(rid => {
+                                // Try to infer clauseId from result id
+                                let inferredClause = null;
+                                const m = rid.match(/^test-(c[0-9]+)-/i);
+                                if (m && m[1]) {
+                                    inferredClause = m[1].toLowerCase();
+                                }
+
+                                if (!inferredClause) {
+                                    const matchC = rid.match(/(C\.\d+)/i);
+                                    if (matchC && matchC[1]) {
+                                        const num = matchC[1].replace('C.', '');
+                                        inferredClause = `c${num}`;
+                                    }
+                                }
+
+                                if (inferredClause) {
+                                    loaded.tests.push({ type: 'test', id: rid, clauseId: inferredClause, title: rid, wcag: '' });
+                                }
+                            });
+                            // Save again after adding inferred tests
+                            window.utils.saveState(loaded);
+                        }
+
                         // Re-enable checkboxes and announce completion for screen reader users
                         clauseCheckboxes.forEach(cb => cb.disabled = false);
                         if (clausesFieldsetEl) clausesFieldsetEl.removeAttribute('aria-busy');
@@ -244,6 +285,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const saveBtn = document.getElementById('btn-save-audit');
     if (saveBtn) {
         saveBtn.title = M.navigation.saveConfig || saveBtn.title || 'Zapisz konfigurację';
+        if (!saveBtn.querySelector('.nav-helper')) {
+            const span = document.createElement('span');
+            span.className = 'sr-only nav-helper';
+            span.textContent = M.navigation.saveConfigHelp || 'Zapisz konfigurację audytu';
+            // Ensure no inline style makes it visible accidentally
+            span.style.cssText = '';
+            saveBtn.appendChild(span);
+        }
         saveBtn.addEventListener('click', (e) => {
             e.preventDefault();
             saveConfiguration();
@@ -253,11 +302,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Theme toggle tooltip — target only buttons that call toggleTheme (avoid overwriting other actions)
     document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
         el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
+        if (!el.querySelector('.theme-helper')) {
+            const span = document.createElement('span');
+            span.className = 'sr-only theme-helper';
+            span.textContent = M.navigation.themeModeHelp || 'Tryb jasny/ciemny';
+            el.appendChild(span);
+        }
     });
 
     // App logo tooltip
     const appLogo = document.getElementById('app-logo');
-    if (appLogo) appLogo.title = M.navigation.home || appLogo.title || 'Strona główna';
+    if (appLogo) appLogo.setAttribute('aria-label', M.navigation.home || appLogo.getAttribute('aria-label') || 'Strona główna');
 
     // Helper to announce important a11y changes to screen readers
     function ensureLiveRegion(text) {
@@ -265,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!liveRegion) {
             liveRegion = document.createElement('div');
             liveRegion.id = 'a11y-live-region';
-            liveRegion.className = 'visually-hidden';
+            liveRegion.className = 'sr-only';
             liveRegion.setAttribute('aria-live', 'polite');
             document.body.appendChild(liveRegion);
         }
@@ -361,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         const loadedSuccess = sessionStorage.getItem('loaded-audit-success');
         if (loadedSuccess) {
-            ensureLiveRegion(M.fileLoad && M.fileLoad.loadSuccess ? M.fileLoad.loadSuccess : 'Plik audytu został poprawnie wczytany.');
+            ensureLiveRegion(M.error.load && M.error.load.loadSuccess ? M.error.load.loadSuccess : 'Plik audytu został poprawnie wczytany.');
             sessionStorage.removeItem('loaded-audit-success');
         }
     } catch (e) {
@@ -463,6 +518,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Generate and download using shared utility (as draft)
         window.utils.downloadAudit(initialState, true);
+        ensureLiveRegion(M.setup.saveSuccess || 'Konfiguracja zapisana pomyślnie.');
     }
 
     async function startAudit(validateOnly = false) {
@@ -492,7 +548,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!name) {
             nameInput.setAttribute('aria-invalid', 'true');
             nameInput.setAttribute('aria-describedby', 'product-name-helper product-name-error');
-            if (nameError) nameError.classList.remove('hidden');
+            if (nameError) {
+                nameError.classList.remove('hidden');
+                lucide.createIcons(); // Render the alert icon
+            }
             nameInput.focus();
             hasError = true;
         }
@@ -507,13 +566,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // If name was valid, focus clauses. If name was invalid, we keep focus on name (first error).
-            if (!hasError && clausesFieldset) {
-                clausesFieldset.focus();
+            if (!hasError) {
+                const firstCheckbox = document.getElementById('clause-c5');
+                if (firstCheckbox) {
+                    firstCheckbox.focus();
+                }
                 // Scroll to the error message so it is clearly visible
                 if (clausesError) {
                     clausesError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                } else {
-                    clausesFieldset.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else if (firstCheckbox) {
+                    firstCheckbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             }
             hasError = true;

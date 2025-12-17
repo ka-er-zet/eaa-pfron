@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raport zgodności z EAA - Audyt</title>
+    <title data-i18n="audit.pageTitle">Raport zgodności z EAA - Audyt</title>
 
     <!-- Pico CSS (Semantic Framework) -->
     <link rel="stylesheet" href="css/pico.min.css">
@@ -26,54 +26,54 @@
 
 <body>
 
-    <a href="#main-content" class="skip-link">Pomiń nawigację</a>
+    <a href="#main-content" class="skip-link" data-i18n="home.skipLink">Pomiń nawigację</a>
 
     <!-- Header -->
-    <header class="app-header">
+    <header class="app-header" role="banner">
         <div class="header-content">
             <button id="menu-toggle" class="outline secondary theme-toggle" aria-label="Menu" title="Menu" aria-expanded="false"
-                aria-controls="sidebar">
+                aria-controls="sidebar" data-i18n-title="navigation.menu" data-i18n-aria="navigation.menu">
                 <i data-lucide="menu" aria-hidden="true"></i>
             </button>
             <a href="index.html" id="app-logo" class="header-icon-container"
-                aria-label="Strona główna - Powrót do konfiguracji" title="Strona główna - Powrót do konfiguracji">
-                <i data-lucide="shield-check" color="white" aria-hidden="true"></i>
+                aria-label="Strona główna - Powrót do konfiguracji" data-i18n-aria="navigation.homeHelp">
+                <img src="/img/eaa.svg" class="app-logo-svg" alt="" aria-hidden="true" />
             </a>
             <div>
-                <strong class="header-title">EAA-CR</strong>
-                <small class="text-muted">Audyt w&nbsp;toku</small>
+                <strong class="header-title" data-i18n="home.headerTitle">EAA-CR</strong>
+                <small class="text-muted" data-i18n="audit.headerSubtitle">Audyt w&nbsp;toku</small>
             </div>
         </div>
-        <div class="header-actions">
-            <button class="outline secondary theme-toggle" id="btn-edit-config" aria-label="Ustawienia audytu" title="Ustawienia audytu">
+        <nav class="header-actions" role="navigation" aria-label="Nagłówkowa nawigacja">
+            <button class="outline secondary theme-toggle" id="btn-edit-config" aria-label="Ustawienia audytu" title="Ustawienia audytu" data-i18n-title="navigation.editConfigHelp" data-i18n-aria="navigation.editConfigHelp">
                 <i data-lucide="settings" aria-hidden="true"></i>
             </button>
-            <button class="outline secondary theme-toggle" id="btn-save-audit" aria-label="Zapisz audyt" title="Zapisz audyt">
+            <button class="outline secondary theme-toggle" id="btn-save-audit" aria-label="Zapisz audyt" title="Zapisz audyt" data-i18n-title="navigation.saveAudit" data-i18n-aria="navigation.saveAudit">
                 <i data-lucide="save" aria-hidden="true"></i>
             </button>
             <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()"
-                aria-label="Przełącz motyw" title="Przełącz motyw">
+                aria-label="Przełącz motyw" title="Przełącz motyw" data-i18n-title="navigation.toggleTheme" data-i18n-aria="navigation.toggleTheme">
                 <i id="theme-icon" data-lucide="moon" aria-hidden="true"></i>
             </button>
-        </div>
+        </nav>
     </header>
 
     <!-- Layout Container -->
     <div id="app-layout" class="app-layout with-sidebar">
 
         <!-- Sidebar -->
-        <aside id="sidebar" aria-label="Panel boczny">
+        <aside id="sidebar" aria-label="Panel boczny" data-i18n-aria="audit.sidebarLabel">
             <div class="sidebar-top-section">
                 <a href="#test-renderer" class="skip-nav-link">Pomiń nawigację</a>
                 <div
                     style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
-                    <small class="text-muted sidebar-header">Postęp</small>
-                    <small class="text-muted"><span id="progress-text">0/0</span></small>
+                    <small class="text-muted sidebar-header" data-i18n="audit.progressLabel">Postęp</small>
+                    <small class="text-muted"><span id="progress-text" aria-live="polite">0/0</span></small>
                 </div>
                 <progress id="main-progress" value="0" max="100" class="progress-bar" aria-label="Postęp audytu"
-                    style="margin-top: 0; width: 100%;"></progress>
+                    style="margin-top: 0; width: 100%;" data-i18n-aria="audit.progressLabel"></progress>
             </div>
-            <nav id="nav-container" aria-label="Lista kontrolna" style="flex: 1; overflow-y: auto;">
+            <nav id="nav-container" aria-label="Lista kontrolna" style="flex: 1; overflow-y: auto;" data-i18n-aria="audit.sidebarLabel">
                 <!-- Nav items generated here -->
             </nav>
         </aside>
@@ -85,6 +85,8 @@
                 <div id="test-renderer" tabindex="-1">
                     <!-- Dynamic Test Content -->
                 </div>
+                <!-- Persistent live region for status updates -->
+                <div id="audit-status-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
             </div>
         </main>
     </div>
@@ -92,6 +94,9 @@
     <!-- Application Logic -->
     <script src="js/utils.js?v=13"></script>
     <script type="module" src="js/audit.js?v=13"></script>
+
+    <!-- Global status message for screen readers -->
+    <div id="status-message" role="status" aria-live="polite" class="sr-only"></div>
 </body>
 
 </html>
