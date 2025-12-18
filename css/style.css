@@ -340,10 +340,9 @@ body {
 
 /* Icon button visible labels on hover/focus */
 .icon-label {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%) translateY(-4px);
+    position: fixed; /* keep label relative to viewport to avoid ancestor clipping */
+    top: 0; /* positioned via JS */
+    left: 0; /* positioned via JS */
     background: var(--card-background-color);
     border: 1px solid var(--muted-color);
     color: var(--color);
@@ -354,8 +353,9 @@ body {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    z-index: 999;
+    z-index: 9999;
     transition: opacity 120ms ease, transform 120ms ease, visibility 120ms ease;
+    transform-origin: center top;
 }
 
 button:hover .icon-label,
@@ -363,7 +363,20 @@ button:focus .icon-label,
 button:focus-within .icon-label {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
+}
+
+/* Left or right aligned labels when centering would overflow (kept for compatibility) */
+.icon-label--left {
+    /* left is set dynamically by JS */
+}
+.icon-label--right {
+    /* left is set dynamically by JS */
+}
+
+/* Dark mode: ensure high contrast for icon labels */
+[data-theme="dark"] .icon-label {
+    color: hsl(0, 0%, 100%);
 }
 
 /* On touch devices, show only on focus (no hover) */
