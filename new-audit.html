@@ -40,11 +40,11 @@
             </div>
         </div>
         <nav class="header-actions" role="navigation" aria-label="Nagłówkowa nawigacja">
-            <button class="outline secondary theme-toggle" id="btn-save-audit" data-i18n-title="setup.saveConfig" data-i18n-aria="setup.saveConfig" title="Zapisz konfigurację" aria-label="Zapisz konfigurację">
+            <button class="outline secondary theme-toggle" id="btn-save-audit" data-i18n-aria="navigation.saveAudit">
                 <i data-lucide="save" aria-hidden="true"></i>
             </button>
             <button class="outline secondary theme-toggle" onclick="window.utils.toggleTheme()"
-                aria-label="Przełącz motyw" title="Przełącz motyw" data-i18n-title="navigation.toggleTheme" data-i18n-aria="navigation.toggleTheme">
+                data-i18n-aria="navigation.toggleTheme">
                 <i id="theme-icon" data-lucide="moon" aria-hidden="true"></i>
             </button>
         </nav>
@@ -82,7 +82,7 @@
                                 <input type="text" id="product-name" name="product-name"
                                     aria-describedby="product-name-helper" required aria-required="true">
                                 <small id="product-name-error" class="text-fail hidden" aria-live="assertive" role="alert"
-                                    style="display: flex; align-items: center; margin-top: 0.5rem;">
+                                    style="display: flex; align-items: center; margin-top: 0;">
                                     <i data-lucide="alert-circle" style="width: 16px; height: 16px; margin-right: 6px;" aria-hidden="true"></i>
                                     Proszę podać nazwę produktu.
                                 </small>

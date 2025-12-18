@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Seed Audit State - EAA</title>
+</head>
+<body>
+  <script>
+    // Temporary helper for accessibility scans: seeds localStorage with a minimal audit state
+    (function(){
+      try {
+        const state = {
+          product: 'Test Product for Axe Scan',
+          executiveSummary: '',
+          clauses: ['c5','c6'],
+          tests: [],
+          results: {},
+          currentIdx: 0
+        };
+        localStorage.setItem('eaa_audit_state', JSON.stringify(state));
+        // Small delay to ensure storage is flushed and redirect to audit page
+        setTimeout(() => { location.replace('audit.html'); }, 150);
+      } catch (e) {
+        console.error('Failed to seed state', e);
+        document.body.textContent = 'Failed to seed state: ' + e;
+      }
+    })();
+  </script>
+</body>
+</html>
