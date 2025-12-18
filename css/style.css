@@ -338,6 +338,40 @@ body {
     outline-offset: 2px;
 }
 
+/* Icon button visible labels on hover/focus */
+.icon-label {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    background: var(--card-background-color);
+    border: 1px solid var(--muted-color);
+    color: var(--color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: var(--type-0);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 999;
+    transition: opacity 120ms ease, transform 120ms ease, visibility 120ms ease;
+}
+
+button:hover .icon-label,
+button:focus .icon-label,
+button:focus-within .icon-label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* On touch devices, show only on focus (no hover) */
+@media (hover: none) {
+    button:hover .icon-label { opacity: 0; visibility: hidden; }
+}
+
+
 /* --- Layout --- */
 .app-layout {
     display: grid;

@@ -136,6 +136,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.warn('Failed to set header titles', e);
     }
 
+    // Enhance icon-only buttons with visible labels on hover/focus for affordance
+    (function enhanceIconButtons(){
+        const selectors = ['#menu-toggle', '#btn-save-audit', '#btn-edit-config', 'button[onclick*="toggleTheme"]', '.theme-toggle'];
+        const seen = new Set();
+        selectors.forEach(sel => {
+            document.querySelectorAll(sel).forEach(el => {
+                if (seen.has(el)) return;
+                seen.add(el);
+                // Prefer aria-label or title, fall back to data-i18n-title
+                const label = el.getAttribute('aria-label') || el.title || el.getAttribute('data-i18n-title') || el.getAttribute('data-i18n-aria');
+                if (!label) return;
+                // Avoid duplicating existing labels
+                if (el.querySelector('.icon-label')) return;
+                // Ensure the button is positioned relative for absolute label
+                if (!getComputedStyle(el).position || getComputedStyle(el).position === 'static') {
+                    el.style.position = 'relative';
+                }
+                const span = document.createElement('span');
+                span.className = 'icon-label';
+                span.textContent = label;
+                span.setAttribute('aria-hidden', 'true');
+                el.appendChild(span);
+            });
+        });
+    })();
+
     // Załaduj stan natychmiast, aby był dostępny dla detektorów zdarzeń
     const state = window.utils.loadState();
     console.log('State loaded:', state);
