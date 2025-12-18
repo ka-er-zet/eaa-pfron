@@ -111,56 +111,21 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         }
 
-    // Set header button titles (localized)
+    // Enhance icon-only buttons with visible labels on hover/focus for affordance
     try {
-        // Only target the actual theme toggle buttons (have onclick toggleTheme)
-        document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
-            el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
-            if (!el.querySelector('.theme-helper')) {
-                const span = document.createElement('span');
-                span.className = 'sr-only theme-helper';
-                span.textContent = M.navigation.themeModeHelp || 'Tryb jasny/ciemny';
-                el.appendChild(span);
-            }
-        });
-
-        const saveBtnLocal = document.getElementById('btn-save-audit');
-        if (saveBtnLocal) saveBtnLocal.title = M.navigation.saveAudit || saveBtnLocal.title || 'Zapisz';
-
-        const appLogoLocal = document.getElementById('app-logo');
-        if (appLogoLocal) appLogoLocal.setAttribute('aria-label', M.navigation.home || appLogoLocal.getAttribute('aria-label') || 'Strona główna');
-
-        const menuToggleLocal = document.getElementById('menu-toggle');
-        if (menuToggleLocal) menuToggleLocal.title = M.navigation.menu || menuToggleLocal.title || 'Menu';
+        if (typeof enhanceIconButtons === 'function') enhanceIconButtons();
     } catch (e) {
-        console.warn('Failed to set header titles', e);
+        console.warn('Could not enhance icon buttons', e);
     }
 
-    // Enhance icon-only buttons with visible labels on hover/focus for affordance
-    (function enhanceIconButtons(){
-        const selectors = ['#menu-toggle', '#btn-save-audit', '#btn-edit-config', 'button[onclick*="toggleTheme"]', '.theme-toggle'];
-        const seen = new Set();
-        selectors.forEach(sel => {
-            document.querySelectorAll(sel).forEach(el => {
-                if (seen.has(el)) return;
-                seen.add(el);
-                // Prefer aria-label or title, fall back to data-i18n-title
-                const label = el.getAttribute('aria-label') || el.title || el.getAttribute('data-i18n-title') || el.getAttribute('data-i18n-aria');
-                if (!label) return;
-                // Avoid duplicating existing labels
-                if (el.querySelector('.icon-label')) return;
-                // Ensure the button is positioned relative for absolute label
-                if (!getComputedStyle(el).position || getComputedStyle(el).position === 'static') {
-                    el.style.position = 'relative';
-                }
-                const span = document.createElement('span');
-                span.className = 'icon-label';
-                span.textContent = label;
-                span.setAttribute('aria-hidden', 'true');
-                el.appendChild(span);
-            });
-        });
-    })();
+    // Ensure theme labels include current state (visible and sr-only)
+    try {
+        if (typeof updateThemeToggleButtons === 'function') updateThemeToggleButtons(document.documentElement.getAttribute('data-theme'));
+        // Remove redundant .theme-helper spans from theme toggles
+        document.querySelectorAll('button[onclick*="toggleTheme"] .theme-helper').forEach(span => span.remove());
+    } catch (e) {
+        console.warn('Could not update theme toggle labels with state', e);
+    }
 
     // Załaduj stan natychmiast, aby był dostępny dla detektorów zdarzeń
     const state = window.utils.loadState();
@@ -169,7 +134,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Edit config button (header)
     const editBtn = document.getElementById('btn-edit-config');
     if (editBtn) {
-        editBtn.title = M.navigation.editConfig || editBtn.title || 'Edytuj konfigurację';
         editBtn.addEventListener('click', (e) => {
             e.preventDefault();
             sessionStorage.setItem('editing-audit', 'true');
@@ -220,16 +184,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Obsługa kliknięcia linku do strony głównej
     const homeLink = document.getElementById('app-logo');
     if (homeLink) {
-        // Append an sr-only helper describing the action
-        // Only add a visible helper if there isn't already an accessible name
-        if (!homeLink.querySelector('.nav-helper') && !homeLink.hasAttribute('aria-label') && !homeLink.hasAttribute('aria-labelledby')) {
-            const span = document.createElement('span');
-            span.className = 'sr-only nav-helper';
-            span.textContent = M.navigation.homeHelp || 'Przejdź do strony głównej';
-            // Ensure no inline style makes it visible accidentally
-            span.style.cssText = '';
-            homeLink.appendChild(span);
-        }
         homeLink.addEventListener('click', async (e) => {
             e.preventDefault(); // Zawsze zapobiegaj domyślnej nawigacji najpierw
 
@@ -539,7 +493,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const progressText = document.getElementById('progress-text');
         const mainProgress = document.getElementById('main-progress');
 
-        if (progressText) progressText.innerText = `${completed}/${totalTests}`;
+        if (progressText) progressText.innerText = `${(M && M.audit && M.audit.progressLabel) ? M.audit.progressLabel : 'Postęp'} ${completed}/${totalTests}`;
         if (mainProgress) mainProgress.value = totalTests ? (completed / totalTests) * 100 : 0;
 
         lucide.createIcons();
@@ -1029,6 +983,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         // renderNav(); // Removed redundant call - renderTest calls it anyway
         renderTest(state.currentIdx);
+
+        // Announce progress update
+        const completed = Object.values(state.results).filter(r => r && r.status).length;
+        const totalTests = state.tests.filter(t => t.type === 'test').length;
+        const progressMessage = `${(M && M.audit && M.audit.progressLabel) ? M.audit.progressLabel : 'Postęp'} ${completed}/${totalTests}`;
+        if (liveRegion) {
+            setTimeout(() => {
+                if (liveRegion) liveRegion.innerText = progressMessage;
+            }, 100); // Small delay to ensure previous announcement is read
+        }
     };
 
     function getActiveImplication(testId) {
@@ -1395,7 +1359,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         } catch (error) {
             console.error("Failed to load clauses:", error);
-            alert("Wystąpił błąd podczas ładowania danych audytu.");
+            // Show alert modal for loading error
+            window.utils.alert(
+                "Wystąpił błąd podczas ładowania danych audytu. Spróbuj odświeżyć stronę lub wróć do konfiguracji.",
+                "Błąd ładowania danych"
+            ).then(() => {
+                window.location.href = 'index.html';
+            });
         } finally {
             if (document.body.contains(loadingOverlay)) {
                 document.body.removeChild(loadingOverlay);
@@ -1425,8 +1395,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // State is already loaded at the top
     if (!state.product || state.clauses.length === 0) {
-        alert(M.setup.missingConfiguration);
-        window.location.href = 'index.html';
+        if (typeof window.utils.setStatusMessage === 'function') {
+            window.utils.setStatusMessage(M.setup.missingConfiguration, 5000);
+        }
+        // Show alert modal with navigation option
+        window.utils.alert(
+            M.setup.missingConfiguration,
+            'Błąd konfiguracji'
+        ).then(() => {
+            window.location.href = 'index.html';
+        });
         return;
     }
 

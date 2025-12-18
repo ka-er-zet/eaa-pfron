@@ -5,6 +5,25 @@ import { MESSAGES_PL as M } from './messages-pl.js';
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
+    // Apply localization from data-i18n attributes FIRST
+    try {
+        if (window.utils && typeof window.utils.applyDataI18n === 'function') {
+            window.utils.applyDataI18n(M, document);
+            if (location.search.includes('i18n-check') && typeof window.utils.checkDataI18n === 'function') {
+                window.utils.checkDataI18n(M, document);
+            }
+        }
+    } catch (e) {
+        console.warn('Failed to apply data-i18n on landing page', e);
+    }
+
+    // Enhance icon-only buttons with visible labels on hover/focus AFTER i18n is applied
+    try {
+        if (typeof enhanceIconButtons === 'function') enhanceIconButtons();
+    } catch (e) {
+        console.warn('Could not enhance icon buttons', e);
+    }
+
     const btnLoad = document.getElementById('btn-load-audit');
     const fileInput = document.getElementById('file-input-audit');
     // Prevent accidental re-activation of the file chooser when confirming a file selection
@@ -86,42 +105,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Localize header button titles
     try {
-        // Only theme buttons
-        document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
-            el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
-            if (!el.querySelector('.theme-helper')) {
-                const span = document.createElement('span');
-                span.className = 'sr-only theme-helper';
-                span.textContent = M.navigation.themeModeHelp || 'Tryb jasny/ciemny';
-                el.appendChild(span);
-            }
-        });
-
-        const loadBtn = document.getElementById('btn-load-audit');
-        if (loadBtn) {
-            loadBtn.title = M.navigation.loadAudit || loadBtn.title || 'Wczytaj audyt';
-            if (!loadBtn.querySelector('.nav-helper')) {
-                const span = document.createElement('span');
-                span.className = 'sr-only nav-helper';
-                span.textContent = M.navigation.loadAuditHelp || 'Wczytaj plik audytu';
-                // Ensure no inline style makes it visible accidentally
-                span.style.cssText = '';
-                loadBtn.appendChild(span);
-            }
+        try {
+            if (typeof updateThemeToggleButtons === 'function') updateThemeToggleButtons(document.documentElement.getAttribute('data-theme'));
+            // Remove redundant .theme-helper spans from theme toggles
+            document.querySelectorAll('button[onclick*="toggleTheme"] .theme-helper').forEach(span => span.remove());
+        } catch (e) {
+            console.warn('Could not update theme toggle labels with state', e);
         }
 
         const appIcon = document.querySelector('.header-icon-container');
         if (appIcon) {
             appIcon.setAttribute('aria-label', M.navigation.home || appIcon.getAttribute('aria-label') || 'Strona główna');
-            // Only append helper text if there is no accessible name already
-            if (!appIcon.querySelector('.nav-helper') && !appIcon.hasAttribute('aria-label') && !appIcon.hasAttribute('aria-labelledby')) {
-                const span = document.createElement('span');
-                span.className = 'sr-only nav-helper';
-                span.textContent = M.navigation.homeHelp || 'Przejdź do strony głównej';
-                // Ensure no inline style makes it visible accidentally
-                span.style.cssText = '';
-                appIcon.appendChild(span);
-            }
         }
 
         // Apply data-i18n attributes (use as single source of truth for localized strings)

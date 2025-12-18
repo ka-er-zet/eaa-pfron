@@ -32,6 +32,10 @@ export const MESSAGES_PL = {
     editResponses: "Edytuj odpowiedzi",
     toggleTheme: "Przełącz motyw",
     themeModeHelp: "Tryb jasny/ciemny",
+    themeDark: "Tryb ciemny",
+    themeLight: "Tryb jasny",
+    themeSet: "Ustawiono motyw: {mode}.",
+    toggleTo: "Przełącz na motyw {mode}",
     saveAuditHelp: "Zapisz audyt (zapisz bieżący postęp jako wersję roboczą)",
     saveConfigHelp: "Zapisz konfigurację audytu jako wersję roboczą",
     editConfigHelp: "Edytuj konfigurację audytu",
@@ -50,7 +54,7 @@ export const MESSAGES_PL = {
   /* ---------- Konfiguracja audytu ---------- */
   setup: {
     missingConfiguration:
-      "Brak konfiguracji audytu. Nastąpi przekierowanie do strony startowej.",
+      "Nie znaleziono konfiguracji audytu. Przejdź do strony startowej, aby skonfigurować nowy audyt.",
 
     pageTitle: "Raport zgodności z EAA - Konfiguracja audytu",
     headerSubtitle: "Konfiguracja audytu",
@@ -133,7 +137,7 @@ export const MESSAGES_PL = {
   /* ---------- Podsumowanie / werdykt ---------- */
   summary: {
     noAuditData:
-      "Brak danych audytu. Nastąpi przekierowanie do strony startowej.",
+      "Nie znaleziono danych audytu. Przejdź do strony startowej, aby skonfigurować i przeprowadzić nowy audyt.",
 
     pageTitle: "Raport zgodności z EAA - Podsumowanie",
     reportTitle: "Raport Końcowy",

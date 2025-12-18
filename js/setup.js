@@ -6,7 +6,7 @@ import { MESSAGES_PL as M } from './messages-pl.js';
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
-    // Apply localization from data-i18n attributes
+    // Apply localization from data-i18n attributes FIRST
     try {
         if (window.utils && typeof window.utils.applyDataI18n === 'function') {
             window.utils.applyDataI18n(M, document);
@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     } catch (e) {
         console.warn('Failed to apply data-i18n on setup page', e);
+    }
+
+    // Enhance icon-only buttons with visible labels on hover/focus AFTER i18n is applied
+    try {
+        if (typeof enhanceIconButtons === 'function') enhanceIconButtons();
+    } catch (e) {
+        console.warn('Could not enhance icon buttons', e);
     }
 
     // Obsługa kliknięcia linku do strony głównej
@@ -284,31 +291,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle Save Button
     const saveBtn = document.getElementById('btn-save-audit');
     if (saveBtn) {
-        saveBtn.title = M.navigation.saveConfig || saveBtn.title || 'Zapisz konfigurację';
-        if (!saveBtn.querySelector('.nav-helper')) {
-            const span = document.createElement('span');
-            span.className = 'sr-only nav-helper';
-            span.textContent = M.navigation.saveConfigHelp || 'Zapisz konfigurację audytu';
-            // Ensure no inline style makes it visible accidentally
-            span.style.cssText = '';
-            saveBtn.appendChild(span);
-        }
         saveBtn.addEventListener('click', (e) => {
             e.preventDefault();
             saveConfiguration();
         });
     }
 
-    // Theme toggle tooltip — target only buttons that call toggleTheme (avoid overwriting other actions)
-    document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
-        el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
-        if (!el.querySelector('.theme-helper')) {
-            const span = document.createElement('span');
-            span.className = 'sr-only theme-helper';
-            span.textContent = M.navigation.themeModeHelp || 'Tryb jasny/ciemny';
-            el.appendChild(span);
-        }
-    });
+    // Ensure buttons reflect current theme state (role/aria-checked and sr-only state)
+    try {
+        if (typeof updateThemeToggleButtons === 'function') updateThemeToggleButtons(document.documentElement.getAttribute('data-theme'));
+        // Remove redundant .theme-helper spans from theme toggles
+        document.querySelectorAll('button[onclick*="toggleTheme"] .theme-helper').forEach(span => span.remove());
+    } catch (e) {
+        console.warn('Could not update theme toggle labels with state', e);
+    }
 
     // App logo tooltip
     const appLogo = document.getElementById('app-logo');

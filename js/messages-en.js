@@ -36,6 +36,10 @@ export const MESSAGES_EN = {
     editResponses: "Edit responses",
     toggleTheme: "Toggle theme",
     themeModeHelp: "Light/dark mode",
+    themeDark: "Dark mode",
+    themeLight: "Light mode",
+    themeSet: "Theme set: {mode}.",
+    toggleTo: "Switch to {mode} mode",
     saveAuditHelp: "Save audit (save progress as a draft)",
     saveConfigHelp: "Save audit configuration as a draft",
     editConfigHelp: "Edit audit configuration",
@@ -49,7 +53,7 @@ export const MESSAGES_EN = {
   /* ---------- Audit setup ---------- */
   setup: {
     missingConfiguration:
-      "Audit configuration is missing. You will be redirected to the start page.",
+      "No audit configuration found. Go to the start page to configure a new audit.",
 
     pageTitle: "EAA compliance report - Audit configuration",
     headerSubtitle: "Audit configuration",
@@ -133,7 +137,7 @@ export const MESSAGES_EN = {
   /* ---------- Summary / verdict ---------- */
   summary: {
     noAuditData:
-      "No audit data available. You will be redirected to the start page.",
+      "No audit data found. Go to the start page to configure and conduct a new audit.",
 
     pageTitle: "EAA compliance report - Summary",
     reportTitle: "Final report",

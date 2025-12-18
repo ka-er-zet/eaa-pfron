@@ -4,7 +4,7 @@ import { MESSAGES_PL as M } from './messages-pl.js';
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
-    // Apply localization from data-i18n attributes
+    // Apply localization from data-i18n attributes FIRST
     try {
         if (window.utils && typeof window.utils.applyDataI18n === 'function') {
             window.utils.applyDataI18n(M, document);
@@ -16,12 +16,26 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Failed to apply data-i18n on summary page', e);
     }
 
+    // Enhance icon-only buttons with visible labels on hover/focus AFTER i18n is applied
+    try {
+        if (typeof enhanceIconButtons === 'function') enhanceIconButtons();
+    } catch (e) {
+        console.warn('Could not enhance icon buttons', e);
+    }
+
     // Załaduj stan
     const state = window.utils.loadState();
     if (!state.product && state.tests.length === 0) {
-        alert(M.summary.noAuditData);
-
-        window.location.href = 'index.html';
+        if (typeof window.utils.setStatusMessage === 'function') {
+            window.utils.setStatusMessage(M.summary.noAuditData, 5000);
+        }
+        // Show alert modal with navigation option
+        window.utils.alert(
+            M.summary.noAuditData,
+            'Brak danych audytu'
+        ).then(() => {
+            window.location.href = 'index.html';
+        });
         return;
     }
 
@@ -198,7 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Save Button Handler
     const saveBtn = document.getElementById('btn-save-audit');
     if (saveBtn) {
-        saveBtn.title = M.navigation.saveAudit || saveBtn.title || 'Zapisz audyt';
         saveBtn.addEventListener('click', () => {
             window.utils.downloadAudit(state, true); // Draft save
         });
@@ -212,15 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Edit responses button (takes user back to audit view)
     const editResponsesBtn = document.getElementById('btn-edit-responses');
     if (editResponsesBtn) {
-        editResponsesBtn.title = M.navigation.editResponses || editResponsesBtn.title || 'Edytuj odpowiedzi';
-        if (!editResponsesBtn.querySelector('.nav-helper')) {
-            const span = document.createElement('span');
-            span.className = 'sr-only nav-helper';
-            span.textContent = M.navigation.editResponsesHelp || 'Przejdź do edycji odpowiedzi audytu';
-            // Ensure no inline style makes it visible accidentally
-            span.style.cssText = '';
-            editResponsesBtn.appendChild(span);
-        }
         editResponsesBtn.addEventListener('click', (e) => {
             e.preventDefault();
             // Navigate to the first clause's first test (if possible)
@@ -233,14 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Bottom edit responses button (under verdict card) — same behavior and accessibility helper
     const editResponsesBottom = document.getElementById('btn-edit-responses-bottom');
     if (editResponsesBottom) {
-        if (!editResponsesBottom.querySelector('.nav-helper')) {
-            const span = document.createElement('span');
-            span.className = 'sr-only nav-helper';
-            span.textContent = M.navigation.editResponsesHelp || 'Przejdź do edycji odpowiedzi audytu';
-            // Ensure no inline style makes it visible accidentally
-            span.style.cssText = '';
-            editResponsesBottom.appendChild(span);
-        }
         editResponsesBottom.addEventListener('click', (e) => {
             e.preventDefault();
             const firstTest = (state.tests || []).find(t => t.clauseId) || (state.tests && state.tests[0]);
@@ -252,15 +248,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Edit config button
     const editBtn = document.getElementById('btn-edit-config');
     if (editBtn) {
-        editBtn.title = M.navigation.editConfig || editBtn.title || 'Edytuj konfigurację';
-        if (!editBtn.querySelector('.nav-helper')) {
-            const span = document.createElement('span');
-            span.className = 'sr-only nav-helper';
-            span.textContent = M.navigation.editConfigHelp || 'Edytuj konfigurację audytu';
-            // Ensure no inline style makes it visible accidentally
-            span.style.cssText = '';
-            editBtn.appendChild(span);
-        }
         editBtn.addEventListener('click', (e) => {
             e.preventDefault();
             sessionStorage.setItem('editing-audit', 'true');
@@ -268,16 +255,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Theme toggle tooltip — only target actual theme toggles
-    document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
-        el.title = M.navigation.toggleTheme || el.title || 'Przełącz motyw';
-        if (!el.querySelector('.theme-helper')) {
-            const span = document.createElement('span');
-            span.className = 'sr-only theme-helper';
-            span.textContent = M.navigation.themeModeHelp || 'Tryb jasny/ciemny';
-            el.appendChild(span);
-        }
-    });
+    // Ensure buttons reflect current theme state (role/aria-checked and sr-only state)
+    try {
+        if (typeof updateThemeToggleButtons === 'function') updateThemeToggleButtons(document.documentElement.getAttribute('data-theme'));
+        // Remove redundant .theme-helper spans from theme toggles
+        document.querySelectorAll('button[onclick*="toggleTheme"] .theme-helper').forEach(span => span.remove());
+    } catch (e) {
+        console.warn('Could not update theme toggle labels with state', e);
+    }
 
     // App logo tooltip
     const appLogo = document.getElementById('app-logo');

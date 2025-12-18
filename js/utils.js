@@ -34,7 +34,9 @@ function saveState(state) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch (e) {
         console.error("Błąd zapisu stanu:", e);
-        alert("Błąd zapisu stanu aplikacji. Sprawdź ustawienia przeglądarki.");
+        if (typeof setStatusMessage === 'function') {
+            setStatusMessage("Błąd zapisu stanu aplikacji. Sprawdź ustawienia przeglądarki.", 8000);
+        }
     }
 }
 
@@ -77,6 +79,8 @@ function initTheme() {
     const theme = savedTheme ? savedTheme : (systemDark ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', theme);
     updateThemeIcon(theme);
+    // Ensure theme toggle buttons reflect current state for assistive tech and visible labels
+    if (typeof updateThemeToggleButtons === 'function') updateThemeToggleButtons(theme);
 }
 
 /**
@@ -88,6 +92,13 @@ function toggleTheme() {
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
+    // Update buttons and announce new state to assistive technologies
+    if (typeof updateThemeToggleButtons === 'function') updateThemeToggleButtons(newTheme);
+    const hasM = (typeof M !== 'undefined' && M && M.navigation);
+    const modeText = (newTheme === 'dark') ? (hasM && M.navigation.themeDark ? M.navigation.themeDark : 'Dark') : (hasM && M.navigation.themeLight ? M.navigation.themeLight : 'Light');
+    const msgTemplate = (hasM && M.navigation.themeSet) ? M.navigation.themeSet : 'Theme set: {mode}.';
+    const message = msgTemplate.replace('{mode}', modeText);
+    if (typeof setStatusMessage === 'function') setStatusMessage(message, 4000);
 }
 
 function updateThemeIcon(theme) {
@@ -99,6 +110,160 @@ function updateThemeIcon(theme) {
             icon.setAttribute('data-lucide', 'moon');
         }
         lucide.createIcons();
+    }
+}
+
+/**
+ * Place an icon label so it stays inside the viewport.
+ * Tries to center above the button, but if there's not enough space
+ * it positions left or right accordingly.
+ */
+function placeIconLabel(buttonEl, labelEl) {
+    if (!buttonEl || !labelEl) return;
+    try {
+        // Reset positioning classes/styles
+        labelEl.classList.remove('icon-label--left','icon-label--right');
+        labelEl.style.left = '';
+        labelEl.style.right = '';
+
+        // Force layout so measurements are reliable (label may be hidden initially)
+        void labelEl.offsetWidth;
+
+        const brect = buttonEl.getBoundingClientRect();
+        const labelRect = labelEl.getBoundingClientRect();
+        const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+        const spaceRight = vw - brect.left;
+        const centerLeft = brect.left + (brect.width / 2) - (labelRect.width / 2);
+
+        // Preferred: center above button using absolute pixel coords (works with position:fixed)
+        if (centerLeft >= 8 && (centerLeft + labelRect.width) <= (vw - 8)) {
+            labelEl.style.left = `${centerLeft}px`;
+            labelEl.classList.remove('icon-label--left','icon-label--right');
+        } else if (brect.left < vw / 2) {
+            // Place to the right aligned to button's left edge
+            const leftPx = Math.min(brect.left + 8, vw - labelRect.width - 8);
+            labelEl.style.left = `${leftPx}px`;
+            labelEl.classList.add('icon-label--left');
+        } else {
+            // Place to the left aligned to button's right edge
+            const leftPx = Math.max(brect.right - labelRect.width - 8, 8);
+            labelEl.style.left = `${leftPx}px`;
+            labelEl.classList.add('icon-label--right');
+        }
+
+        // Vertical placement: prefer below button, but move above if it would overflow viewport
+        const viewportH = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        let topPx = brect.bottom + 8;
+        if ((topPx + labelRect.height + 8) > viewportH) {
+            // move above
+            topPx = Math.max(brect.top - labelRect.height - 8, 8);
+        }
+        labelEl.style.top = `${topPx}px`;
+        labelEl.style.transform = 'translateY(0)';
+    } catch (e) {
+        // Ignore measurement errors
+    }
+}
+
+/**
+ * Enhance icon-only buttons with visible labels on hover/focus for affordance.
+ * Adds .icon-label spans that appear on hover/focus, removes redundant aria-label/title.
+ */
+function enhanceIconButtons(){
+    const selectors = ['#menu-toggle', '#btn-save-audit', '#btn-edit-config', 'button[onclick*="toggleTheme"]', '.theme-toggle'];
+    const seen = new Set();
+    selectors.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+            if (seen.has(el)) return;
+            seen.add(el);
+            // Special case: theme toggle buttons should always get icon-label even if they have other helpers
+            const isThemeToggle = el.matches('button[onclick*="toggleTheme"]') || el.classList.contains('theme-toggle');
+            // Skip buttons that already have helper spans (but allow theme toggles)
+            if (!isThemeToggle && el.querySelector('.nav-helper, .sr-only, .visually-hidden')) return;
+            // Prefer aria-label or title, fall back to data-i18n-title
+            const label = el.getAttribute('aria-label') || el.title || el.getAttribute('data-i18n-title');
+            if (!label) return;
+            // Avoid duplicating existing labels
+            if (el.querySelector('.icon-label')) return;
+            // Ensure the button is positioned relative for absolute label
+            if (!getComputedStyle(el).position || getComputedStyle(el).position === 'static') {
+                el.style.position = 'relative';
+            }
+            const span = document.createElement('span');
+            span.className = 'icon-label';
+            span.textContent = label;
+            span.setAttribute('aria-hidden', 'true');
+            el.appendChild(span);
+            // For buttons with visible labels, remove title to avoid browser tooltip (keep aria-label for screen readers)
+            if (el.hasAttribute('title')) {
+                el.removeAttribute('title');
+            }
+
+            // Position label correctly to avoid viewport overflow; do in next tick to allow layout to settle
+            try { setTimeout(() => { placeIconLabel(el, span); }, 0); } catch (e) { /* ignore */ }
+        });
+    });
+}
+
+// Reposition labels on resize to keep them inside viewport
+window.addEventListener('resize', () => {
+    document.querySelectorAll('.icon-label').forEach(label => {
+        const btn = label.parentElement;
+        placeIconLabel(btn, label);
+    });
+});
+
+/**
+ * Update attributes and accessible labels for theme toggle buttons
+ * - role="switch" and aria-checked reflect current state
+ * - update or create a sr-only .theme-state element and aria-describedby
+ * - update visible .icon-label if present to include current state
+ */
+function updateThemeToggleButtons(theme) {
+    try {
+        const hasM = (typeof M !== 'undefined' && M && M.navigation);
+        const lang = document.documentElement.lang || '';
+
+        const localizedName = (t) => {
+            if (hasM) return (t === 'dark') ? (M.navigation.themeDark || 'Dark') : (M.navigation.themeLight || 'Light');
+            if (lang && lang.startsWith('pl')) return (t === 'dark') ? 'Motyw ciemny' : 'Motyw jasny';
+            return (t === 'dark') ? 'Dark mode' : 'Light mode';
+        };
+
+        const localizedMode = (t) => {
+            if (lang && lang.startsWith('pl')) return (t === 'dark') ? 'ciemny' : 'jasny';
+            return (t === 'dark') ? 'dark' : 'light';
+        };
+
+        const stateText = localizedName(theme);
+        const opposite = (theme === 'dark') ? 'light' : 'dark';
+        const oppositeText = localizedMode(opposite);
+
+        // Template for action (what will happen when activated)
+        const actionTemplate = (hasM && M.navigation.toggleTo) ? M.navigation.toggleTo : (lang && lang.startsWith('pl') ? 'Przełącz motyw na {mode}' : 'Toggle theme to {mode}');
+        const actionText = actionTemplate.replace('{mode}', oppositeText);
+
+        document.querySelectorAll('button[onclick*="toggleTheme"]').forEach(el => {
+            el.setAttribute('role', 'switch');
+            el.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
+
+            // Update aria-label to show the action (toggle to opposite)
+            el.setAttribute('aria-label', actionText);
+
+            // Update visible label to show the action (toggle to opposite)
+            const labelEl = el.querySelector('.icon-label');
+            if (labelEl) {
+                labelEl.textContent = actionText;
+                // Remove title to avoid duplicate tooltip when visible label exists
+                if (el.hasAttribute('title')) {
+                    el.removeAttribute('title');
+                }
+                // Position label to stay in viewport
+                placeIconLabel(el, labelEl);
+            }
+        });
+    } catch (e) {
+        console.warn('updateThemeToggleButtons failed', e);
     }
 }
 
