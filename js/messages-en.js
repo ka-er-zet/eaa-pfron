@@ -84,8 +84,21 @@ export const MESSAGES_EN = {
   /* ---------- Audit / tests ---------- */
   audit: {
     auditLoaded: "Audit loaded.",
+    testLoaded: "Loaded test {testId}: {title}.",
     testResultSet:
       "Test result set for {testId}: {status}.",
+    prevTestBase: "Previous test",
+    nextTestBase: "Next test",
+    gotoTest: "Go to test {testId}: {title}. Status: {status}.",
+    prevButton: "Previous",
+    nextButton: "Next",
+    finishAuditButton: "Finish audit",
+    evaluationLabel: "Evaluation",
+    notesLabel: "Notes / Observations",
+    autoCommentTitle: "Automatic comment",
+    notesHeading: "Notes",
+    evalLegend: "Evaluation for test {testId}: {title}"
+    
 
     pageTitle: "EAA Compliance Report - Audit",
     headerSubtitle: "Audit in progress",

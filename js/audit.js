@@ -450,7 +450,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             const ariaLabelTitle = displayTitle.replace(/&nbsp;/g, ' ');
 
             a.setAttribute('data-test-id', item.id);
-            a.setAttribute('aria-label', `Przejdź do testu ${item.id}: ${ariaLabelTitle}. Status: ${statusText}`);
+            const gotoLabel = (M && M.audit && M.audit.gotoTest)
+                ? M.audit.gotoTest.replace('{testId}', item.id).replace('{title}', ariaLabelTitle).replace('{status}', statusText)
+                : `Przejdź do testu ${item.id}: ${ariaLabelTitle}. Status: ${statusText}`;
+            a.setAttribute('aria-label', gotoLabel);
             // aria-controls i aria-current są OK na linkach
             a.setAttribute('aria-controls', anchorDomId);
             if (active) a.setAttribute('aria-current', 'true');
@@ -585,7 +588,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         let notesHtml = '';
         if (item.notes && item.notes.length > 0) {
-            notesHtml = `<div class="informative" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">Uwagi</h2>${item.notes.map(n => `<p>${window.utils.fixOrphans(n)}</p>`).join('')}</div>`;
+            notesHtml = `<div class="informative" style="margin-top: 1.5rem;"><h2 class="text-muted" style="margin-bottom: 0.5rem;">${(M && M.audit && M.audit.notesHeading) ? M.audit.notesHeading : 'Uwagi'}</h2>${item.notes.map(n => `<p>${window.utils.fixOrphans(n)}</p>`).join('')}</div>`;
         }
 
         let procedureHtml = '';
@@ -813,7 +816,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Fallback to old grid if no form data
                 evaluationHtml += `
                 <fieldset class="eval-grid" style="border: none; padding: 0; margin: 1rem 0 0 0;">
-                    <legend class="sr-only">Ocena wyniku testu ${item.id}: ${cleanTitle}</legend>
+                    <legend class="sr-only">${(M && M.audit && M.audit.evalLegend) ? M.audit.evalLegend.replace('{testId}', item.id).replace('{title}', cleanTitle) : `Ocena wyniku testu ${item.id}: ${cleanTitle}`}</legend>
                     
                       <div class="eval-btn-wrapper">
                           <input type="radio" id="eval-${sanitizeForDomId(item.id)}-pass" name="eval-${sanitizeForDomId(item.id)}" value="Zaliczone" 
@@ -868,24 +871,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         const prevIdx = getPrevTestIndex(idx);
         const nextIdx = getNextTestIndex(idx);
 
-        let prevLabel = 'Poprzedni test';
+        let prevLabel = (M && M.audit && M.audit.prevTestBase) ? M.audit.prevTestBase : 'Poprzedni test';
         if (prevIdx !== -1) {
             const t = state.tests[prevIdx];
             const safeTitle = t.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
-            prevLabel = safeTitle.startsWith(t.id)
-                ? `Poprzedni test: ${safeTitle}`
-                : `Poprzedni test: ${t.id} ${safeTitle}`;
+            prevLabel = `${prevLabel}: ${safeTitle.startsWith(t.id) ? safeTitle : `${t.id} ${safeTitle}`}`;
         }
 
-        let nextLabel = 'Następny test';
+        let nextLabel = (M && M.audit && M.audit.nextTestBase) ? M.audit.nextTestBase : 'Następny test';
         if (nextIdx !== -1) {
             const t = state.tests[nextIdx];
             const safeTitle = t.title.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
-            nextLabel = safeTitle.startsWith(t.id)
-                ? `Następny test: ${safeTitle}`
-                : `Następny test: ${t.id} ${safeTitle}`;
+            nextLabel = `${nextLabel}: ${safeTitle.startsWith(t.id) ? safeTitle : `${t.id} ${safeTitle}`}`;
         }
-
         container.innerHTML = `
             <article class="mb-2" tabindex="-1" aria-labelledby="${anchorDomId}-title" id="${anchorDomId}">
                 <header class="section-header">
@@ -902,18 +900,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                     ${detailedChecklistHtml}
 
                     <form onsubmit="return false;" style="margin-top: 2rem;">
-                        <h2 class="text-muted" style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--muted-color);">Ocena</h2>
+                        <h2 class="text-muted" style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--muted-color);">${(M && M.audit && M.audit.evaluationLabel) ? M.audit.evaluationLabel : 'Ocena'}</h2>
 
                         ${evaluationHtml}
 
                         ${!isDerived ? `
                         <div style="margin-top: 2rem;">
-                            <label for="note-${sanitizeForDomId(item.id)}" style="color: var(--muted-color);">Uwagi / Obserwacje</label>
+                            <label for="note-${sanitizeForDomId(item.id)}" style="color: var(--muted-color);">${(M && M.audit && M.audit.notesLabel) ? M.audit.notesLabel : 'Uwagi / Obserwacje'}</label>
                             <textarea id="note-${sanitizeForDomId(item.id)}" rows="4" oninput="updateNote('${item.id}', this.value)">${res.note}</textarea>
                         </div>
                         ` : (res.status ? `
                         <div style="margin-top: 2rem;">
-                             <div style="color: var(--muted-color); margin-bottom: 0.125rem; font-weight: bold;">Automatyczny komentarz</div>
+                             <div style="color: var(--muted-color); margin-bottom: 0.125rem; font-weight: bold;">${(M && M.audit && M.audit.autoCommentTitle) ? M.audit.autoCommentTitle : 'Automatyczny komentarz'}</div>
                              <div class="informative" style="background-color: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-color); margin-top: 0;">
                                 ${res.note
                     ? res.note.trim().replace(/\n/g, '<br>')
@@ -927,15 +925,32 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
                 <button class="outline secondary" ${prevIdx === -1 ? 'disabled' : ''} onclick="renderTest(${prevIdx})" aria-label="${prevLabel}">
-                    <i data-lucide="arrow-left" style="margin-right: 8px;" aria-hidden="true"></i> Poprzedni
+                    <i data-lucide="arrow-left" style="margin-right: 8px;" aria-hidden="true"></i> ${(M && M.audit && M.audit.prevButton) ? M.audit.prevButton : 'Poprzedni'}
                 </button>
                 ${nextIdx === -1
-                ? `<button onclick="finishAudit()" style="background: var(--pass-color); border:none;">Zakończ Audyt <i data-lucide="check-circle" style="margin-left: 8px;" aria-hidden="true"></i></button>`
-                : `<button onclick="renderTest(${nextIdx})" aria-label="${nextLabel}">Następny <i data-lucide="arrow-right" style="margin-left: 8px;" aria-hidden="true"></i></button>`
+                ? `<button onclick="finishAudit()" style="background: var(--pass-color); border:none;">${(M && M.audit && M.audit.finishAuditButton) ? M.audit.finishAuditButton : 'Zakończ Audyt'} <i data-lucide="check-circle" style="margin-left: 8px;" aria-hidden="true"></i></button>`
+                : `<button onclick="renderTest(${nextIdx})" aria-label="${nextLabel}">${(M && M.audit && M.audit.nextButton) ? M.audit.nextButton : 'Następny'} <i data-lucide="arrow-right" style="margin-left: 8px;" aria-hidden="true"></i></button>`
             }
             </div>
         `;
         lucide.createIcons();
+
+        // Announce current test to assistive tech (title + short summary if available)
+        (function() {
+            const liveRegion = document.getElementById('audit-status-live');
+            if (!liveRegion) return;
+
+            const rawSummary = (item.procedure && item.procedure.length) ? item.procedure[0]
+                : (item.preconditions && item.preconditions.length) ? item.preconditions[0] : '';
+            const safeSummary = (rawSummary || '').replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
+            const shortSummary = safeSummary.length > 200 ? safeSummary.slice(0, 197) + '...' : safeSummary;
+
+            const baseAnnouncement = M?.audit?.testLoaded
+                ? M.audit.testLoaded.replace('{testId}', item.id).replace('{title}', cleanTitle)
+                : `Test ${item.id}: ${cleanTitle}`;
+
+            liveRegion.innerText = shortSummary ? baseAnnouncement + ' ' + shortSummary : baseAnnouncement;
+        })();
 
         // Update URL hash to reflect currently viewed test (never create extra history entries)
         try { history.replaceState(null, '', `#${anchorDomId}`); } catch (err) { location.hash = `#${anchorDomId}`; }

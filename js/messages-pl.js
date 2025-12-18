@@ -85,8 +85,20 @@ export const MESSAGES_PL = {
   /* ---------- Audyt / testy ---------- */
   audit: {
     auditLoaded: "Audyt wczytany.",
+    testLoaded: "Wczytano test {testId}: {title}.",
     testResultSet:
       "Ustawiono wynik testu {testId}: {status}.",
+    prevTestBase: "Poprzedni test",
+    nextTestBase: "Następny test",
+    gotoTest: "Przejdź do testu {testId}: {title}. Status: {status}.",
+    prevButton: "Poprzedni",
+    nextButton: "Następny",
+    finishAuditButton: "Zakończ Audyt",
+    evaluationLabel: "Ocena",
+    notesLabel: "Uwagi / Obserwacje",
+    autoCommentTitle: "Automatyczny komentarz",
+    notesHeading: "Uwagi",
+    evalLegend: "Ocena wyniku testu {testId}: {title}",
 
     pageTitle: "Raport zgodności z EAA - Audyt",
     headerSubtitle: "Audyt w toku",
