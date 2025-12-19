@@ -35,7 +35,7 @@ function saveState(state) {
     } catch (e) {
         console.error("Błąd zapisu stanu:", e);
         if (typeof setStatusMessage === 'function') {
-            setStatusMessage("Błąd zapisu stanu aplikacji. Sprawdź ustawienia przeglądarki.", 8000);
+            setStatusMessage((window.M && window.M.utils && window.M.utils.saveError) || "Błąd zapisu stanu aplikacji. Sprawdź ustawienia przeglądarki.", 8000);
         }
     }
 }
@@ -377,7 +377,7 @@ async function alertModal(message, title = 'Informacja') {
 
         titleEl.textContent = title;
         msgEl.textContent = message;
-        okBtn.textContent = 'OK';
+        okBtn.textContent = (window.M && window.M.utils && window.M.utils.ok) || 'OK';
 
         const close = () => {
             dialog.close();
@@ -731,7 +731,7 @@ function downloadAudit(state, isDraft = true) {
         liveRegion.setAttribute('aria-live', 'polite');
         document.body.appendChild(liveRegion);
     }
-    liveRegion.innerText = 'Zapisano raport i pobrano plik.';
+    liveRegion.innerText = (window.M && window.M.utils && window.M.utils.saveSuccess) || 'Zapisano raport i pobrano plik.';
 }
 
 // Data-i18n helper (messages object + optional root element)

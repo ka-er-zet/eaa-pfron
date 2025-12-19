@@ -1,7 +1,7 @@
 {
-  "name": "Audyt EAA",
-  "short_name": "Audyt EAA",
-  "description": "Narzędzie wspomagające audyt zgodności z EN 301 549",
+  "name": "Raport zgodności z EAA",
+  "short_name": "EAA-CR",
+  "description": "Raport zgodności z EAA",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#f5faff",

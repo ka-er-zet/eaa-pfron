@@ -38,7 +38,7 @@
             </a>
             <div>
                 <strong id="header-title" class="header-title" data-i18n="home.headerTitle">EAA-CR</strong>
-                <small id="header-subtitle" class="text-muted" data-i18n="summary.headerSubtitle">Wynik audytu</small>
+                <small id="header-subtitle" class="text-muted" data-i18n="summary.headerSubtitle">Podsumowanie audytu</small>
             </div>
         </div>
         <nav class="header-actions" role="navigation" aria-label="Nagłówkowa nawigacja">
@@ -62,20 +62,18 @@
     <div id="app-layout" class="app-layout">
 
         <!-- Main Content -->
-        <main id="main-content" class="index-main" role="main" tabindex="-1">
+        <main id="main-content" role="main" tabindex="-1">
 
-            <div class="container">
+            <div class="setup-container">
                 <!-- Header Section -->
                 <div class="summary-header-section" style="margin-bottom: 1rem;">
                     <div>
-                        <h1 data-i18n="summary.reportTitle">Raport Końcowy</h1>
-                        <h2 id="summary-product" class="text-muted summary-product-name"
-                            style="margin-top: 0.5rem; font-weight: 500;">Ładowanie...</h2>
+                        <h1 data-i18n="summary.reportTitle">Podsumowanie audytu</h1>
                     </div>
                 </div>
 
                 <!-- Verdict Card -->
-                <div id="verdict-card" class="verdict-card">
+                <div id="verdict-card" class="verdict-card" tabindex="-1">
                     <div class="verdict-icon-wrapper">
                         <i id="verdict-icon" data-lucide="shield-alert" aria-hidden="true"></i>
                     </div>

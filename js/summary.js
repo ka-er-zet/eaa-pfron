@@ -1,5 +1,6 @@
 import { MESSAGES_PL as M } from './messages-pl.js';
 // docelowo: const M = window.i18n.getMessages();
+window.M = M;
 
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show alert modal with navigation option
         window.utils.alert(
             M.summary.noAuditData,
-            'Brak danych audytu'
+            M.summary.noDataTitle || 'Brak danych audytu'
         ).then(() => {
             window.location.href = 'index.html';
         });
@@ -49,8 +50,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const ntTests = stats.lists.nt;
     const verifyTests = stats.lists.verify;
 
+    // Announce audit load status
+    const verdict = failedTests.length > 0 ? (M.summary.statusFailed || 'Niezaliczony') : verifyTests.length > 0 ? (M.summary.statusInProgress || 'Niezakończony') : (M.summary.statusPassed || 'Zaliczony');
+    if (typeof window.utils.setStatusMessage === 'function') {
+        window.utils.setStatusMessage((M.summary.auditLoadedStatus || 'Wczytano audyt. Status: {status}.').replace('{status}', verdict), 5000);
+    }
+
     // 2. Renderuj nagłówek
-    document.getElementById('summary-product').innerText = state.product || 'Audyt Dostępności';
+    // Dodaj szczegóły audytu
+    const detailsContainer = document.createElement('dl');
+    detailsContainer.className = 'audit-info';
+    detailsContainer.innerHTML = `
+        <div class="info-item">
+            <dt>${M.setup.productNameLabel}</dt>
+            <dd>${state.product || (M.summary.notProvided || 'Nie podano')}</dd>
+        </div>
+        <div class="info-item">
+            <dt>${M.setup.productDescLabel}</dt>
+            <dd>${state.productDesc || (M.summary.notProvided || 'Nie podano')}</dd>
+        </div>
+        <div class="info-item">
+            <dt>${M.setup.auditorNameLabel}</dt>
+            <dd>${state.auditor || (M.summary.notProvided || 'Nie podano')}</dd>
+        </div>
+    `;
+    const headerSection = document.querySelector('.summary-header-section h1');
+    headerSection.parentNode.insertBefore(detailsContainer, headerSection.nextSibling);
 
     // 3. Renderuj werdykt
     const verdictCard = document.getElementById('verdict-card');
@@ -64,31 +89,33 @@ document.addEventListener('DOMContentLoaded', () => {
     if (failedTests.length > 0) {
         verdictCard.classList.add('failed');
         verdictTitle.innerText = M.summary.verdictFailed;
-        verdictDesc.innerHTML = `Niespełnione wymagania: ${failedTests.length}<br>Wymagania nieocenione: ${verifyTests.length}`;
+        verdictDesc.innerHTML = (M.summary.verdictDescFailed || 'Niespełnione wymagania: {failed}<br>Wymagania nieocenione: {verify}')
+            .replace('{failed}', failedTests.length)
+            .replace('{verify}', verifyTests.length);
         verdictIcon.setAttribute('data-lucide', 'shield-alert');
     } else if (verifyTests.length > 0) {
         // Warning / In Progress
         verdictCard.classList.add('in-progress');
         verdictTitle.innerText = M.summary.verdictInProgress;
-        verdictDesc.innerText = `Pozostało ${verifyTests.length} testów do sprawdzenia`;
+        verdictDesc.innerText = (M.summary.verdictDescInProgress || 'Do sprawdzenia: {count}').replace('{count}', verifyTests.length);
         verdictIcon.setAttribute('data-lucide', 'clock');
     } else {
         verdictCard.classList.add('passed');
 
         if (passedTests.length === 0 && naTests.length > 0 && ntTests.length === 0) {
             verdictTitle.innerText = M.summary.verdictNoNonconformities;
-            verdictDesc.innerHTML = "Wszystkie wymagania oznaczono jako <q>Nie dotyczy</q>.";
+            verdictDesc.innerHTML = M.summary.verdictAllNA || "Wszystkie wymagania oznaczono jako <q>Nie dotyczy</q>.";
             verdictIcon.setAttribute('data-lucide', 'check-circle'); // Or 'minus-circle' if preferred
         } else {
             verdictTitle.innerText = M.summary.verdictPassed;
 
             if (naTests.length > 0 || ntTests.length > 0) {
-                let desc = `Spełnione wymagania: ${passedTests.length}`;
-                if (naTests.length > 0) desc += `<br>Oznaczone jako nie dotyczy: ${naTests.length}`;
-                if (ntTests.length > 0) desc += `<br>Nietestowalne: ${ntTests.length}`;
+                let desc = (M.summary.verdictPassedCount || 'Spełnione wymagania: {count}').replace('{count}', passedTests.length);
+                if (naTests.length > 0) desc += `<br>${(M.summary.verdictNACount || 'Oznaczone jako nie dotyczy: {count}').replace('{count}', naTests.length)}`;
+                if (ntTests.length > 0) desc += `<br>${(M.summary.verdictNTCount || 'Nietestowalne: {count}').replace('{count}', ntTests.length)}`;
                 verdictDesc.innerHTML = desc;
             } else {
-                verdictDesc.innerText = "Wszystkie wymagania zostały spełnione.";
+                verdictDesc.innerText = M.summary.verdictAllPassed || "Wszystkie wymagania zostały spełnione.";
             }
 
             verdictIcon.setAttribute('data-lucide', 'check-circle');
@@ -98,25 +125,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Renderuj listy
     const renderList = (containerId, items, type) => {
-        const container = document.getElementById(containerId);
+        let container = document.getElementById(containerId);
         if (!container) return;
         container.innerHTML = '';
 
         if (items.length === 0) {
-            container.innerHTML = '<div class="issue-item" style="color: var(--muted-color); font-style: italic;">Brak elementów w tej sekcji.</div>';
+            container.innerHTML = `<li class="issue-item" style="color: var(--muted-color); padding: 1rem 1.5rem;">${M.summary.noItemsInSection || 'Brak elementów w tej sekcji.'}</li>`;
             return;
         }
 
+        // Create ul if not exists
+        if (container.tagName !== 'UL') {
+            const ul = document.createElement('ul');
+            ul.id = containerId;
+            ul.className = container.className;
+            container.parentNode.replaceChild(ul, container);
+            container = ul;
+        }
+
         items.forEach(t => {
-            const el = document.createElement('div');
+            const el = document.createElement('li');
             el.className = 'issue-item';
             const res = results[t.id];
-            const note = res?.note ? `<div class="issue-note">${res.note}</div>` : '';
+            const note = res?.note ? `<div class="issue-note" style="font-style: normal;">${res.note}</div>` : '';
 
             let desc = '';
 
             // For Passed/NA, show status label
             let statusLabel = '';
+            if (type === 'fail') statusLabel = 'Niezaliczony: ';
+            else if (type === 'pass') statusLabel = 'Zaliczony: ';
+            else if (type === 'na') statusLabel = 'Nie dotyczy: ';
+            else if (type === 'nt') statusLabel = 'Nie do sprawdzenia: ';
+            else if (type === 'verify') statusLabel = 'Do sprawdzenia: ';
 
 
             // Clean title (remove ID if present at start)
@@ -130,10 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
             displayTitle = window.utils.fixOrphans(displayTitle);
 
             el.innerHTML = `
-                <div class="issue-title">
+                <header class="issue-title">
                     <span class="issue-id">${t.id}</span>
-                    <span class="issue-text">${statusLabel}${displayTitle}</span>
-                </div>
+                    <span class="issue-status">${statusLabel.slice(0, -2)}</span>
+                </header>
+                <h4 class="issue-title-line2">${displayTitle}</h4>
                 ${desc}
                 ${note}
             `;
@@ -153,6 +195,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('count-na').innerText = naTests.length;
     document.getElementById('count-nt').innerText = ntTests.length;
     document.getElementById('count-pass').innerText = passedTests.length;
+
+    // Announce the verdict and list updates for screen readers
+    let liveRegion = document.getElementById('status-message');
+    if (liveRegion) {
+        const verdictAnnouncement = verdictTitle.innerText + '. ' + verdictDesc.innerText.replace(/<br>/g, '. ').replace(/<[^>]*>/g, '');
+        const listAnnouncement = `Znaleziono ${failedTests.length} niezgodności, ${verifyTests.length} do sprawdzenia, ${passedTests.length} zaliczonych, ${naTests.length} nie dotyczy, ${ntTests.length} nietestowalnych.`;
+        liveRegion.innerText = verdictAnnouncement + ' ' + listAnnouncement;
+    }
 
     // 5. Podsumowanie wykonawcze
     const summaryText = document.getElementById('executive-summary');
@@ -189,15 +239,10 @@ document.addEventListener('DOMContentLoaded', () => {
             window.utils.downloadAudit(state);
 
             // Dostępna informacja zwrotna
-            let liveRegion = document.getElementById('a11y-live-region');
-            if (!liveRegion) {
-                liveRegion = document.createElement('div');
-                liveRegion.id = 'a11y-live-region';
-                liveRegion.className = 'sr-only';
-                liveRegion.setAttribute('aria-live', 'polite');
-                document.body.appendChild(liveRegion);
+            const liveRegion = document.getElementById('status-message');
+            if (liveRegion) {
+                liveRegion.innerText = M.export.saveReportSuccess;
             }
-            liveRegion.innerText = M.export.saveReportSuccess;
         }
     });
 
@@ -227,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (editResponsesBtn) {
         editResponsesBtn.addEventListener('click', (e) => {
             e.preventDefault();
+            sessionStorage.setItem('returning-to-audit', 'true');
             // Navigate to the first clause's first test (if possible)
             const firstTest = (state.tests || []).find(t => t.clauseId) || (state.tests && state.tests[0]);
             const fragment = (firstTest && firstTest.id) ? `#test-${sanitizeForDomId(firstTest.id)}` : '';
@@ -239,6 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (editResponsesBottom) {
         editResponsesBottom.addEventListener('click', (e) => {
             e.preventDefault();
+            sessionStorage.setItem('returning-to-audit', 'true');
             const firstTest = (state.tests || []).find(t => t.clauseId) || (state.tests && state.tests[0]);
             const fragment = (firstTest && firstTest.id) ? `#test-${sanitizeForDomId(firstTest.id)}` : '';
             window.location.href = `audit.html${fragment}`;
@@ -468,5 +515,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'index.html';
             }
         });
+    }
+
+    // Focus on verdict card for accessibility
+    if (verdictCard) {
+        verdictCard.focus();
     }
 });

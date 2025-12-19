@@ -6,6 +6,13 @@
 
 export const MESSAGES_EN = {
 
+  /* ---------- Utils / Global ---------- */
+  utils: {
+    saveError: "Error saving application state. Check browser settings.",
+    saveSuccess: "Report saved and downloaded.",
+    ok: "OK"
+  },
+
   /* ---------- General ---------- */
   app: {
     accessibilityAudit: "Accessibility audit",
@@ -79,10 +86,18 @@ export const MESSAGES_EN = {
 
     // Edit & clause removal confirmation
     removeClausesTitle: "Remove clauses",
-    removeClausesBody: "Removing this clause will permanently delete responses for {count} tests. They cannot be restored. Continue?",
-    removeClausesConfirm: "Remove",
+    removeClausesBody: "Removing this clause will permanently delete responses for {count}. They cannot be restored. Continue?",
+    removeClausesConfirm: "Remove and archive",
     removeClausesCancel: "Cancel",
-    removedClausesNotice: "Data was permanently deleted and cannot be restored." 
+    removedClausesNotice: "Data was permanently deleted and cannot be restored.",
+
+    testWordGenitiveSingular: "test",
+    testWordGenitivePlural: "tests",
+    
+    // Status messages
+    editingConfig: "Editing audit configuration.",
+    loadedAudit: "Audit loaded from file.",
+    testsInitialized: "Audit tests initialized."
   },
 
   /* ---------- Audit / tests ---------- */
@@ -152,7 +167,26 @@ export const MESSAGES_EN = {
     newAuditButton: "Start new audit",
 
     executiveSummaryPlaceholder:
-      "Enter a concise executive summary of the audit results."
+      "Enter a concise executive summary of the audit results.",
+
+    noDataTitle: "No audit data",
+    notProvided: "Not provided",
+    auditLoadedStatus: "Audit loaded. Status: {status}.",
+    verdictDescFailed: "Failed requirements: {failed}<br>Not evaluated: {verify}",
+    verdictDescInProgress: "To be checked: {count}",
+
+    // Verdict status
+    statusFailed: "Failed",
+    statusInProgress: "In progress",
+    statusPassed: "Passed",
+
+    // Verdict descriptions
+    verdictAllNA: "All requirements marked as <q>Not applicable</q>.",
+    verdictAllPassed: "All requirements have been met.",
+    verdictPassedCount: "Met requirements: {count}",
+    verdictNACount: "Marked as not applicable: {count}",
+    verdictNTCount: "Not testable: {count}",
+    noItemsInSection: "No items in this section."
   },
 
   /* ---------- Export ---------- */

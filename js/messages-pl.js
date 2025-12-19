@@ -1,10 +1,17 @@
 /* =========================================================
    messages-pl.js
    Słownik komunikatów – język polski
-   Aplikacja audytowa EN 301 549 / WCAG
+   Raport zgodności z EAA (EN 301 549 / WCAG)
    ========================================================= */
 
 export const MESSAGES_PL = {
+
+  /* ---------- Utils / Global ---------- */
+  utils: {
+    saveError: "Błąd zapisu stanu aplikacji. Sprawdź ustawienia przeglądarki.",
+    saveSuccess: "Zapisano raport i pobrano plik.",
+    ok: "OK"
+  },
 
   /* ---------- Ogólne ---------- */
   app: {
@@ -67,7 +74,7 @@ export const MESSAGES_PL = {
 
     // UI strings
     saveConfig: "Zapisz konfigurację",
-    productNameLabel: "Nazwa produktu / Systemu",
+    productNameLabel: "Nazwa produktu / usługi",
     productNameHelper: "np. Portal Usług Publicznych 2.0",
     productDescLabel: "Opis / Wersja / URL",
     productDescHelper: "np. v1.2.4, https://example.com",
@@ -80,15 +87,25 @@ export const MESSAGES_PL = {
     // Edit & clause removal confirmation
     removeClausesTitle: "Usuwanie klauzul",
     removeClausesBody: "Usunięcie tej klauzuli spowoduje trwałą utratę odpowiedzi dla {count}. Nie będzie można ich przywrócić. Czy kontynuować?",
-    removeClausesConfirm: "Usuń",
+    removeClausesConfirm: "Usuń i archiwizuj",
     removeClausesCancel: "Anuluj",
-    removedClausesNotice: "Dane zostały trwale usunięte i nie można ich przywrócić." 
+    removedClausesNotice: "Dane zostały trwale usunięte i nie można ich przywrócić.",
+    
+    testWordGenitiveSingular: "testu",
+    testWordGenitivePlural: "testów",
+
+    // Status messages
+    editingConfig: "Edycja konfiguracji audytu.",
+    loadedAudit: "Wczytano audyt z pliku.",
+    testsInitialized: "Zainicjalizowano testy audytu."
   },
 
 
   /* ---------- Audyt / testy ---------- */
   audit: {
     auditLoaded: "Audyt wczytany.",
+    clausesLoaded: "Wczytano klauzule audytu.",
+    returnToEdit: "Powrót do edycji odpowiedzi.",
     testLoaded: "Wczytano test {testId}: {title}.",
     testResultSet:
       "Ustawiono wynik testu {testId}: {status}.",
@@ -140,19 +157,38 @@ export const MESSAGES_PL = {
       "Nie znaleziono danych audytu. Przejdź do strony startowej, aby skonfigurować i przeprowadzić nowy audyt.",
 
     pageTitle: "Raport zgodności z EAA - Podsumowanie",
-    reportTitle: "Raport Końcowy",
-    headerSubtitle: "Wynik audytu",
+    reportTitle: "Podsumowanie audytu",
+    headerSubtitle: "Podsumowanie audytu",
 
     verdictFailed: "Niezaliczony",
     verdictPassed: "Zaliczony",
     verdictInProgress: "Niezakończony",
     verdictNoNonconformities: "Brak niezgodności",
 
-    saveAsTitle: "Zapisz raport jako:",
+    saveAsTitle: "Eksport raportu",
     newAuditButton: "Rozpocznij nowy audyt",
 
     executiveSummaryPlaceholder:
-      "Wpisz syntetyczny komentarz podsumowujący wyniki audytu."
+      "Wpisz syntetyczny komentarz podsumowujący wyniki audytu.",
+
+    noDataTitle: "Brak danych audytu",
+    notProvided: "Nie podano",
+    auditLoadedStatus: "Wczytano audyt. Status: {status}.",
+    verdictDescFailed: "Niespełnione wymagania: {failed}<br>Wymagania nieocenione: {verify}",
+    verdictDescInProgress: "Do sprawdzenia: {count}",
+
+    // Verdict status
+    statusFailed: "Niezaliczony",
+    statusInProgress: "Niezakończony",
+    statusPassed: "Zaliczony",
+
+    // Verdict descriptions
+    verdictAllNA: "Wszystkie wymagania oznaczono jako <q>Nie dotyczy</q>.",
+    verdictAllPassed: "Wszystkie wymagania zostały spełnione.",
+    verdictPassedCount: "Spełnione wymagania: {count}",
+    verdictNACount: "Oznaczone jako nie dotyczy: {count}",
+    verdictNTCount: "Nietestowalne: {count}",
+    noItemsInSection: "Brak elementów w tej sekcji."
   },
 
   /* ---------- Eksport ---------- */
@@ -238,7 +274,7 @@ export const MESSAGES_PL = {
   home: {
     skipLink: "Pomiń nawigację",
     headerTitle: "EAA-CR",
-    headerSubtitle: "Narzędzie raportowania",
+    headerSubtitle: "Raport zgodności z EAA",
     pageTitle: "Raport zgodności z EAA (EAA-CR)",
     newAudit: {
       title: "Nowy audyt",

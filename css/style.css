@@ -1460,6 +1460,7 @@ body.setup-page .app-layout {
     margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .verdict-card.failed {
@@ -1542,7 +1543,7 @@ body.setup-page .app-layout {
 .verdict-title {
     margin: 0;
     font-size: 1.75rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.2;
 }
 
@@ -1671,6 +1672,7 @@ body.setup-page .app-layout {
     border: 1px solid var(--muted-border-color);
     border-radius: 0.5rem;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .list-header {
@@ -1750,6 +1752,11 @@ body.setup-page .app-layout {
     color: #d97706;
 }
 
+.issue-list {
+    padding: 0;
+    list-style: none;
+}
+
 .issue-item {
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--muted-border-color);
@@ -1766,14 +1773,45 @@ body.setup-page .app-layout {
     border-bottom: none;
 }
 
+.audit-info {
+    margin-top: 1rem;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.info-item {
+    display: contents;
+}
+
+.audit-info dt {
+    color: var(--muted-color);
+}
+
+.audit-info dd {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
 .issue-id {
     font-family: var(--font-mono);
     font-size: 0.8rem;
     color: var(--muted-color);
-    margin-right: 0.5rem;
     display: inline-block;
-    min-width: 5rem;
     flex-shrink: 0;
+    margin-right: 0.5rem;
+}
+
+.issue-status {
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+.issue-title-line2 {
+    margin: 0;
 }
 
 .issue-title {

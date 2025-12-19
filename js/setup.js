@@ -1,5 +1,6 @@
 import { MESSAGES_PL as M } from './messages-pl.js';
 // docelowo: const M = window.i18n.getMessages();
+window.M = M;
 
 
 
@@ -24,6 +25,37 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (e) {
         console.warn('Could not enhance icon buttons', e);
     }
+
+    // Ensure clause cards are fully visible when focused (keyboard navigation)
+    const clauseCheckboxes = document.querySelectorAll('input[name="clauses"]');
+    clauseCheckboxes.forEach(cb => {
+        cb.addEventListener('focus', () => {
+            const scopeItem = cb.closest('.scope-item');
+            if (scopeItem) {
+                // Use setTimeout to let the browser's default scroll-to-focused-element finish,
+                // then adjust to ensure the whole card is visible with margin.
+                setTimeout(() => {
+                    const rect = scopeItem.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    const margin = 80; // Margin from top/bottom
+
+                    // Only apply bottom adjustment if element fits in viewport (to avoid hiding top)
+                    if (rect.height < windowHeight) {
+                        if (rect.bottom > windowHeight - margin) {
+                            window.scrollBy({ top: rect.bottom - windowHeight + margin, behavior: 'smooth' });
+                        } else if (rect.top < margin) {
+                            window.scrollBy({ top: rect.top - margin, behavior: 'smooth' });
+                        }
+                    } else {
+                        // If tall, just ensure top is visible (checkbox location)
+                        if (rect.top < margin) {
+                            window.scrollBy({ top: rect.top - margin, behavior: 'smooth' });
+                        }
+                    }
+                }, 50);
+            }
+        });
+    });
 
     // Obsługa kliknięcia linku do strony głównej
     const homeLink = document.getElementById('app-logo');
@@ -229,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Re-enable checkboxes and announce completion for screen reader users
                         clauseCheckboxes.forEach(cb => cb.disabled = false);
                         if (clausesFieldsetEl) clausesFieldsetEl.removeAttribute('aria-busy');
-                        ensureLiveRegion('Zainicjalizowano testy audytu.');
+                        ensureLiveRegion(M.setup.testsInitialized || 'Zainicjalizowano testy audytu.');
                     } catch (err) {
                         console.error('Error while populating tests for loaded audit:', err);
                     }
@@ -238,6 +270,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Move focus to the product name so user can verify/adjust
             if (nameInput) nameInput.focus();
+
+            // Announce context to screen readers
+            if (typeof window.utils.setStatusMessage === 'function') {
+                if (editingFlag) {
+                    window.utils.setStatusMessage(M.setup.editingConfig || "Edycja konfiguracji audytu.", 5000);
+                } else if (loadedFlag) {
+                    window.utils.setStatusMessage(M.setup.loadedAudit || "Wczytano audyt z pliku.", 5000);
+                }
+            }
         }
         // Remove the flags so a normal navigation to setup behaves as usual
         sessionStorage.removeItem('loaded-audit');
@@ -326,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Polish-specific pluralization helper for 'test' in genitive after "dla"
     function pluralizeTests(n) {
         // Use genitive singular for 1, genitive plural otherwise
-        return n === 1 ? 'testu' : 'testów';
+        return n === 1 ? (M.setup.testWordGenitiveSingular || 'testu') : (M.setup.testWordGenitivePlural || 'testów');
     }
 
     // Handle clause checkbox immediate archive/restore behavior
@@ -461,7 +502,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (cb) cb.checked = true;
                         });
                         const first = document.querySelector(`input[name="clauses"][value="${removedClauses[0]}"]`);
-                        if (first) first.focus();
+                        if (first) {
+                            first.focus();
+                        }
                         return;
                     }
 

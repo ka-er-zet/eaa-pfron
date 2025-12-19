@@ -1,5 +1,6 @@
 import { MESSAGES_PL as M } from './messages-pl.js';
 // docelowo: const M = window.i18n.getMessages();
+window.M = M;
 
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         loadingOverlay.style.alignItems = 'center';
         loadingOverlay.style.justifyContent = 'center';
         loadingOverlay.style.zIndex = '9999';
-        loadingOverlay.innerHTML = '<h2 style="color: white;">Ładowanie danych...</h2>';
+        loadingOverlay.innerHTML = '<h2 style="color: white;">' + ((M && M.app && M.app.loadingData) || 'Ładowanie danych...') + '</h2>';
         document.body.appendChild(loadingOverlay);
     }
 
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         const msgs = await import('./messages-pl.js');
         M = msgs.MESSAGES_PL;
+        window.M = M;
         // Update overlay text if we have a translated string
         if (loadingOverlay) loadingOverlay.innerHTML = '<h2 style="color: white;">' + ((M && M.app && M.app.loadingData) || 'Ładowanie danych...') + '</h2>';
     } catch (err) {
@@ -774,19 +775,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     const isSelected = res.status === input.value;
                     const inputId = `eval-${safeTestId}-${sanitizeForDomId(input.value)}`;
+                    const labelId = `${inputId}-label`;
+                    const descId = `${inputId}-desc`;
 
                     evaluationHtml += `
                         <div class="criteria-option-wrapper">
                             <input type="radio" id="${inputId}" name="eval-${safeTestId}" value="${input.value}" 
                                    class="sr-only criteria-radio" 
                                    ${isSelected ? 'checked' : ''} 
-                                   onchange="setResult('${item.id}', '${input.value}')">
+                                   onchange="setResult('${item.id}', '${input.value}')"
+                                   aria-labelledby="${labelId}"
+                                   aria-describedby="${descId}">
                             <label for="${inputId}" class="criteria-option ${colorClass} ${isSelected ? 'selected' : ''}">
-                                <div class="criteria-header">
+                                <div class="criteria-header" id="${labelId}">
                                     <i data-lucide="${icon}" aria-hidden="true"></i>
                                     <strong>${input.value.toUpperCase()}</strong>
                                 </div>
-                                <div class="criteria-text">${input.label}</div>
+                                <div class="criteria-text" id="${descId}">${input.label}</div>
                             </label>
                         </div>
                     `;
@@ -1411,6 +1416,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Always reload clauses to ensure we have the latest structure/content (e.g. detailedChecklist)
     // This preserves state.results but refreshes state.tests from the JSON files.
     await loadClauses(state.clauses);
+
+    // Announce to screen readers that clauses have been loaded
+    if (typeof window.utils.setStatusMessage === 'function') {
+        const returning = sessionStorage.getItem('returning-to-audit');
+        if (returning) {
+            window.utils.setStatusMessage((M && M.audit && M.audit.returnToEdit) ? M.audit.returnToEdit : "Powrót do edycji odpowiedzi.", 5000);
+            sessionStorage.removeItem('returning-to-audit');
+        } else {
+            window.utils.setStatusMessage((M && M.audit && M.audit.clausesLoaded) ? M.audit.clausesLoaded : "Wczytano klauzule audytu.", 5000);
+        }
+    }
 
     // Ensure fragment anchors are set up
     ensureFragmentAnchors(state.tests);

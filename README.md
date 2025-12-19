@@ -1,6 +1,6 @@
-# Narzędzie Audytowe EAA
+# Raport zgodności z EAA
 
-Narzędzie wspomagające audyt dostępności cyfrowej zgodnie z normą EN 301 549 V3.2.1 (2021-03). Aplikacja webowa umożliwiająca przeprowadzanie audytów dostępności, generowanie raportów w formatach ODT, CSV i JSON (EARL), oraz zarządzanie stanem audytu lokalnie w przeglądarce.
+Raport zgodności z EAA - narzędzie wspomagające audyt dostępności cyfrowej zgodnie z normą EN 301 549 V3.2.1 (2021-03). Aplikacja webowa umożliwiająca przeprowadzanie audytów dostępności, generowanie raportów w formatach ODT, CSV i JSON (EARL), oraz zarządzanie stanem audytu lokalnie w przeglądarce.
 
 ## Funkcje
 
