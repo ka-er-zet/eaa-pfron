@@ -142,43 +142,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Funkcja pomocnicza do generowania nazwy pliku dla eksportu stanu
-    const getAuditFilename = () => {
-        const date = new Date().toISOString().split('T')[0];
-        const product = (state.product || 'audit').replace(/[^a-z0-9]/gi, '_').toLowerCase();
-        return `audit_earl_${product}_${date}.json`;
-    };
 
-    // Obsługa Ctrl+S / Cmd+S do zapisywania
+
+    // Handle Ctrl+S / Cmd+S to save
+    let isDownloading = false;
     document.addEventListener('keydown', (e) => {
         if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-            // Nie zapisuj, jeśli fokus na input/textarea
-            if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
-                return;
-            }
             e.preventDefault();
-            console.log('Ctrl+S pressed, saving...');
-
-            // 1. Zapisz do localStorage
-            window.utils.saveState(state);
-
-            // 2. Wygeneruj raport EARL
-            const earlReport = window.utils.generateEARL(state);
-
-            // 3. Pobierz stan jako JSON (format EARL)
-            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(earlReport, null, 2));
-            const downloadAnchorNode = document.createElement('a');
-            downloadAnchorNode.setAttribute("href", dataStr);
-            downloadAnchorNode.setAttribute("download", getAuditFilename());
-            document.body.appendChild(downloadAnchorNode);
-            downloadAnchorNode.click();
-            downloadAnchorNode.remove();
-
-            // 4. Dostępna informacja zwrotna (tylko dla czytników ekranu)
-            const liveRegion = document.getElementById('audit-status-live');
-            if (liveRegion) {
-                liveRegion.innerText = M.audit.saveProgressSuccess;
-            }
+            if (isDownloading) return;
+            isDownloading = true;
+            window.utils.downloadAudit(state, true); // Draft save
+            setTimeout(() => isDownloading = false, 1000); // Reset after 1s
         }
     });
 
@@ -207,6 +181,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             );
 
             if (confirmed) {
+                window.utils.saveState({}); // Clear audit state
                 window.location.href = 'index.html';
             }
         });
@@ -1466,19 +1441,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Handle Ctrl+S / Cmd+S to save
-    document.addEventListener('keydown', (e) => {
-        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-            e.preventDefault();
-            window.utils.downloadAudit(state, true); // Draft save
-        }
-    });
 
-    // Handle Save Button
     const saveBtn = document.getElementById('btn-save-audit');
     if (saveBtn) {
         saveBtn.addEventListener('click', () => {
+            console.log('Save button clicked');
+            if (isDownloading) {
+                console.log('Download already in progress');
+                return;
+            }
+            isDownloading = true;
+            console.log('Starting download from button');
             window.utils.downloadAudit(state, true); // Draft save
+            setTimeout(() => {
+                isDownloading = false;
+                console.log('Download flag reset');
+            }, 1000); // Reset after 1s
         });
     }
 });

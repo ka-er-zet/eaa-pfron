@@ -9,7 +9,7 @@
     <!-- Pico CSS (Semantic Framework) -->
     <link rel="stylesheet" href="css/pico.min.css">
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="css/style.css?v=14">
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.webmanifest">
@@ -99,16 +99,16 @@
                     <div class="section-content">
                         <details>
                             <summary>
-                                <span class="summary-closed">Rozwiń szczegóły</span>
-                                <span class="summary-open">Zwiń szczegóły</span>
+                                <h3 class="summary-closed">Rozwiń szczegóły</h3>
+                                <h3 class="summary-open">Zwiń szczegóły</h3>
                             </summary>
                             <!-- Issues List (Fail) -->
                             <div class="list-section">
                                 <div class="list-header fail-header">
                                     <div class="header-left">
                                         <i data-lucide="x-circle" aria-hidden="true"></i>
-                                        <h3 style="margin: 0; font-size: inherit;">NIEZALICZONE (<span
-                                                id="count-fail">0</span>)</h3>
+                                        <h4 style="margin: 0; font-size: inherit;">NIEZALICZONE (<span
+                                                id="count-fail">0</span>)</h4>
                                     </div>
                                     <span class="badge-fail">Wymagana poprawa</span>
                                 </div>
@@ -122,8 +122,8 @@
                                 <div class="list-header warning-header">
                                     <div class="header-left">
                                         <i data-lucide="alert-circle" aria-hidden="true"></i>
-                                        <h3 style="margin: 0; font-size: inherit;">NIETESTOWANE (<span
-                                                id="count-verify">0</span>)</h3>
+                                        <h4 style="margin: 0; font-size: inherit;">NIETESTOWANE (<span
+                                                id="count-verify">0</span>)</h4>
                                     </div>
                                     <span class="badge-warning">Wymagana ocena</span>
                                 </div>
@@ -137,8 +137,8 @@
                                 <div class="list-header na-header">
                                     <div class="header-left">
                                         <i data-lucide="minus-circle" aria-hidden="true"></i>
-                                        <h3 style="margin: 0; font-size: inherit;">NIE DOTYCZY (<span
-                                                id="count-na">0</span>)</h3>
+                                        <h4 style="margin: 0; font-size: inherit;">NIE DOTYCZY (<span
+                                                id="count-na">0</span>)</h4>
                                     </div>
                                 </div>
                                 <div id="list-na" class="issue-list">
@@ -151,8 +151,8 @@
                                 <div class="list-header nt-header">
                                     <div class="header-left">
                                         <i data-lucide="help-circle" aria-hidden="true"></i>
-                                        <h3 style="margin: 0; font-size: inherit;">NIE DO SPRAWDZENIA (<span
-                                                id="count-nt">0</span>)</h3>
+                                        <h4 style="margin: 0; font-size: inherit;">NIE DO SPRAWDZENIA (<span
+                                                id="count-nt">0</span>)</h4>
                                     </div>
                                 </div>
                                 <div id="list-nt" class="issue-list">
@@ -165,8 +165,8 @@
                                 <div class="list-header success-header">
                                     <div class="header-left">
                                         <i data-lucide="check-circle" aria-hidden="true"></i>
-                                        <h3 style="margin: 0; font-size: inherit;">ZALICZONE (<span
-                                                id="count-pass">0</span>)</h3>
+                                        <h4 style="margin: 0; font-size: inherit;">ZALICZONE (<span
+                                                id="count-pass">0</span>)</h4>
                                     </div>
                                 </div>
                                 <div id="list-pass" class="issue-list">
@@ -233,8 +233,8 @@
     </footer>
 
     <!-- Application Logic -->
-    <script src="js/utils.js?v=13"></script>
-    <script type="module" src="js/summary.js?v=13"></script>
+    <script src="js/utils.js?v=14"></script>
+    <script type="module" src="js/summary.js?v=14"></script>
 
     <!-- Global status message for screen readers -->
     <div id="status-message" role="status" aria-live="polite" class="sr-only"></div>

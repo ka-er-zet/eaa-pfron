@@ -4,11 +4,15 @@ Raport zgodności z EAA - narzędzie wspomagające audyt dostępności cyfrowej 
 
 ## Funkcje
 
-- **Konfiguracja audytu**: Wybór produktu i klauzul do sprawdzenia.
+- **Konfiguracja audytu**: Wybór produktu i klauzul do sprawdzenia z obsługą profili produktów/usług.
+- **Profile produktów/usług**: Automatyczne zaznaczanie klauzul na podstawie wybranego profilu (np. strona internetowa, aplikacja mobilna).
 - **Przeprowadzanie testów**: Interaktywne testowanie wymagań dostępności z opcjami ocen (Zaliczone, Nie dotyczy, Nie do sprawdzenia, Niezaliczone).
+- **Dostępność (WCAG 2.1 AA)**: Narzędzie jest dostępne z klawiatury, obsługuje czytniki ekranowe, ma odpowiednie kontrasty i nawigację.
+- **PWA (Progressive Web App)**: Działa offline, może być zainstalowane jako aplikacja natywna, automatyczne aktualizacje.
+- **Responsywność**: Dostosowuje się do różnych rozmiarów ekranów i urządzeń.
+- **Zarządzanie stanem**: Zapisywanie i wczytywanie postępów audytu lokalnie w przeglądarce z bezpiecznymi zmianami.
 - **Generowanie raportów**: Eksport wyników do formatów ODT (dokument tekstowy), CSV (arkusz kalkulacyjny) i JSON (format EARL zgodny ze standardem W3C).
-- **Zarządzanie stanem**: Zapisywanie i wczytywanie postępów audytu lokalnie w przeglądarce.
-- **Dostępność**: Narzędzie jest dostępne z klawiatury, obsługuje motywy jasny/ciemny.
+- **Motywy**: Obsługa motywów jasnego i ciemnego.
 
 ## Instalacja i uruchomienie
 
@@ -27,18 +31,21 @@ Narzędzie jest aplikacją webową działającą lokalnie w przeglądarce. Wymag
 ## Struktura projektu
 
 - `index.html`: Strona główna aplikacji.
-- `new-audit.html`: Strona konfiguracji nowego audytu.
+- `new-audit.html`: Strona konfiguracji nowego audytu z obsługą profili.
 - `audit.html`: Główna strona przeprowadzania audytu.
 - `summary.html`: Strona podsumowania i eksportu raportów.
 - `js/`: Skrypty JavaScript:
-  - `utils.js`: Funkcje pomocnicze (zarządzanie stanem, generowanie EARL, XML escaping).
+  - `utils.js`: Funkcje pomocnicze (zarządzanie stanem, generowanie EARL, XML escaping, dostępność).
   - `landing.js`: Logika strony głównej (wczytywanie plików).
-  - `setup.js`: Konfiguracja nowego audytu.
+  - `setup.js`: Konfiguracja nowego audytu z profilami i synchronizacją.
   - `audit.js`: Logika audytu i nawigacji.
-  - `summary.js`: Renderowanie podsumowania i eksport.
+  - `summary.js`: Renderowanie podsumowania i eksport z komunikatami dostępności.
+  - `messages-pl.js`: Słownik tłumaczeń (polski).
+  - `service-worker.js`: Service Worker dla PWA.
 - `css/`: Style CSS (`style.css`, `pico.min.css`).
 - `clauses_json/`: Pliki JSON z definicjami klauzul i testów dostępności.
 - `img/`, `js/`: Zasoby statyczne (ikony, biblioteki).
+- `manifest.webmanifest`: Manifest PWA.
 
 ## Jak używać (dla użytkowników)
 
@@ -47,6 +54,33 @@ Narzędzie jest aplikacją webową działającą lokalnie w przeglądarce. Wymag
 3. **Zapisz postęp**: Użyj Ctrl+S (Cmd+S na Mac) do zapisania stanu jako plik JSON.
 4. **Wczytaj audyt**: Na stronie głównej kliknij "Wczytaj audyt" i wybierz plik JSON.
 5. **Generuj raport**: Po zakończeniu przejdź do podsumowania i pobierz raport w wybranym formacie.
+
+### Funkcje dostępności
+
+Aplikacja jest zgodna z WCAG 2.1 AA i zawiera następujące funkcje dostępności:
+
+- **Nawigacja klawiaturowa**: Wszystkie elementy interaktywne są dostępne z klawiatury.
+- **Czytniki ekranowe**: Komunikaty statusu są ogłaszane przez regiony `aria-live`.
+- **Odpowiednie kontrasty**: Kolory spełniają wymagania kontrastu WCAG.
+- **Hierarchia nagłówków**: Poprawna struktura nagłówków dla lepszej nawigacji.
+- **Focus management**: Logiczne przemieszczanie fokusu między elementami.
+- **Alternatywy tekstowe**: Wszystkie ikony mają etykiety `aria-label`.
+
+### Progressive Web App (PWA)
+
+Aplikacja może działać jako PWA:
+
+- **Instalacja**: W przeglądarkach obsługujących PWA można zainstalować aplikację na urządzeniu.
+- **Tryb offline**: Podstawowe funkcje działają bez połączenia internetowego.
+- **Automatyczne aktualizacje**: Service Worker aktualizuje aplikację w tle.
+- **Responsywność**: Dostosowuje się do ekranów mobilnych i desktopowych.
+
+### Bezpieczeństwo i zarządzanie stanem
+
+- **Lokalne przechowywanie**: Wszystkie dane są przechowywane lokalnie w przeglądarce (localStorage).
+- **Potwierdzenia zmian**: Bezpieczne usuwanie klauzul z potwierdzeniami, aby uniknąć utraty danych.
+- **Czyszczenie stanu**: Automatyczne czyszczenie danych przy rozpoczynaniu nowego audytu.
+- **Synchronizacja**: Poprawna synchronizacja stanów przy ładowaniu istniejących audytów.
 
 ### Oceny wymagań
 
@@ -58,17 +92,6 @@ Narzędzie jest aplikacją webową działającą lokalnie w przeglądarce. Wymag
 ## Dla deweloperów i utrzymujących
 
 ### Modyfikacja plików JSON (klauzule)
-
-#### Narzędzia developerskie — i18n checker
-Dodano proste narzędzie do lokalnego sprawdzania pokrycia kluczy lokalizacyjnych.
-
-- Lokalizacja skryptu: `tools/i18n-check.js`
-- Uruchomienie: `node tools/i18n-check.js` (wyjście non-zero przy brakujących kluczach)
-- Opcje: `--no-exit` (nie ustawia kodu wyjścia), `--html-dir=.` (ustaw katalog do skanowania), `--msgs=js/messages.pl.js,js/messages.en.js` (lista plików słowników)
-
-Używaj tego narzędzia przed commitami/PR by znaleźć brakujące klucze `data-i18n`.
-
-Uwaga na konwencję kluczy: wprowadziliśmy aliasy dla niektórych nazw (np. `fileLoad.*` ↔ `error.load.*`) aby ułatwić stopniową unifikację komunikatów. Narzędzie i runtime spróbują rozwiązać brakujące klucze przez zmapowanie prefiksów; jednak zalecane jest ujednolicenie i wykorzystanie nowego namespace `error.load.*` gdy dodajesz nowe komunikaty. W ramach migracji dodaliśmy też odpowiedniki kluczy `load`, `loadSuccess` i `loadError` pod `error.load.*`, więc nowe implementacje powinny używać `error.load.*` bez obawy o brakujące tłumaczenia.
 
 ### Tworzenie i aktualizacja klauzul
 
@@ -186,8 +209,11 @@ Raporty JSON są w formacie EARL (Evaluation and Report Language), standardzie W
 ### Aktualizacje i utrzymanie
 
 - **Aktualizacja treści klauzul**: Edytuj pliki JSON w `clauses_json/`.
+- **Dodawanie profili**: Dodaj nowe profile w `setup.js` i tłumaczeniach.
+- **Dostępność**: Testuj z czytnikami ekranowymi i narzędziami do testowania dostępności.
+- **PWA**: Aktualizuj `manifest.webmanifest` i `service-worker.js` przy zmianach.
 - **Dodawanie funkcji**: Modyfikuj pliki JS, dodając komentarze w języku polskim wyjaśniające nowe komponenty.
-- **Testowanie**: Uruchom aplikację lokalnie, przetestuj wszystkie ścieżki (nowy audyt, wczytywanie, eksport).
+- **Testowanie**: Uruchom aplikację lokalnie, przetestuj wszystkie ścieżki (nowy audyt, wczytywanie, eksport, dostępność).
 - **Wersjonowanie**: Aktualizuj wersję w `utils.js` (dct:hasVersion).
 
 ## Licencja

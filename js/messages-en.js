@@ -10,7 +10,8 @@ export const MESSAGES_EN = {
   utils: {
     saveError: "Error saving application state. Check browser settings.",
     saveSuccess: "Report saved and downloaded.",
-    ok: "OK"
+    ok: "OK",
+    updateAvailable: "A new version of the application is available. Refresh the page to apply it."
   },
 
   /* ---------- General ---------- */
@@ -87,7 +88,7 @@ export const MESSAGES_EN = {
     // Edit & clause removal confirmation
     removeClausesTitle: "Remove clauses",
     removeClausesBody: "Removing this clause will permanently delete responses for {count}. They cannot be restored. Continue?",
-    removeClausesConfirm: "Remove and archive",
+    removeClausesConfirm: "Remove",
     removeClausesCancel: "Cancel",
     removedClausesNotice: "Data was permanently deleted and cannot be restored.",
 
@@ -97,7 +98,10 @@ export const MESSAGES_EN = {
     // Status messages
     editingConfig: "Editing audit configuration.",
     loadedAudit: "Audit loaded from file.",
-    testsInitialized: "Audit tests initialized."
+    testsInitialized: "Audit tests initialized.",
+
+    profileTitle: "2. Product / Service Profile",
+    profileIntro: "Choose a profile to automatically select related clauses. You can also set or change clauses manually in the 'Audit scope' section."
   },
 
   /* ---------- Audit / tests ---------- */
@@ -116,8 +120,7 @@ export const MESSAGES_EN = {
     notesLabel: "Notes / Observations",
     autoCommentTitle: "Automatic comment",
     notesHeading: "Notes",
-    evalLegend: "Evaluation for test {testId}: {title}"
-    
+    evalLegend: "Evaluation for test {testId}: {title}",
 
     pageTitle: "EAA Compliance Report - Audit",
     headerSubtitle: "Audit in progress",
@@ -293,6 +296,11 @@ export const MESSAGES_EN = {
       "Starting a new audit will result in loss of unsaved data.",
     confirmNo: "Cancel",
     confirmYes: "Start new audit"
+  },
+
+  /* ---------- Profile produktów/usług (UI) ---------- */
+  profile: {
+    title: "Available profiles"
   }
 
 };

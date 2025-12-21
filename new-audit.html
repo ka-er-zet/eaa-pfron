@@ -9,7 +9,7 @@
     <!-- Pico CSS (Semantic Framework) -->
     <link rel="stylesheet" href="css/pico.min.css">
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="css/style.css?v=14">
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.webmanifest">
@@ -105,6 +105,30 @@
                                 <input type="text" id="auditor-name" name="auditor-name"
                                     aria-describedby="auditor-name-helper">
                             </div>
+                        </div>
+                    </article>
+
+                    <!-- Profile selection (button only) -->
+                    <article class="mb-2" id="profile-selection-article">
+                        <header class="section-header">
+                            <h2 data-i18n="setup.profileTitle">Profil produktu / usługi</h2>
+                        </header>
+                        <div class="section-content">
+                            <p data-i18n="setup.profileIntro">Wybierz profil, by automatycznie zaznaczyć klauzule, lub wybierz je ręcznie.</p>
+                            <details role="region" aria-labelledby="profile-summary">
+                                <summary id="profile-summary">
+                                    <h3 class="help-title" data-i18n="profile.title">Dostępne profile</h3>
+                                </summary>
+                                <div style="margin-top: 1rem; padding-left: 1rem; border-left: 2px solid var(--muted-color); text-align: left;">
+                                    <fieldset id="profile-fieldset">
+                                        <legend class="sr-only">Wybierz profil</legend>
+                                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                            <!-- Profiles will be loaded here -->
+                                        </div>
+                                    </fieldset>
+                                    <div id="profile-status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+                                </div>
+                            </details>
                         </div>
                     </article>
 
@@ -261,6 +285,7 @@
                                     </div>
                                 </div>
                             </fieldset>
+                            <div id="clauses-status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
                         </div>
                     </article>
 
@@ -286,8 +311,8 @@
     </footer>
 
     <!-- Application Logic -->
-    <script src="js/utils.js?v=13"></script>
-    <script type="module" src="js/setup.js?v=13"></script>
+    <script src="js/utils.js?v=14"></script>
+    <script type="module" src="js/setup.js?v=14"></script>
 
     <!-- Global status message for screen readers -->
     <div id="status-message" role="status" aria-live="polite" class="sr-only"></div>

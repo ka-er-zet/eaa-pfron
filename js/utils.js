@@ -71,6 +71,21 @@ function xmlEscape(str) {
 window.EAA_APP_VERSION = 'v13';
 
 /**
+ * Shows a prompt to refresh the page when a new version is available.
+ */
+function showUpdatePrompt() {
+    const statusMessage = document.getElementById('status-message');
+    if (statusMessage) {
+        const message = window.M ? window.M.utils.updateAvailable : 'A new version of the application is available. Refresh the page to apply it.';
+        statusMessage.textContent = message;
+        // Auto-refresh after 3 seconds
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
+    }
+}
+
+/**
  * Inicjalizuje motyw na podstawie localStorage lub preferencji systemu.
  */
 function initTheme() {
@@ -473,7 +488,8 @@ function generateEARL(state) {
         "@type": "eaa:Configuration",
         "eaa:clauses": state.clauses || [],
         "eaa:currentIdx": state.currentIdx || 0,
-        "eaa:executiveSummary": state.executiveSummary || ''
+        "eaa:executiveSummary": state.executiveSummary || '',
+        "eaa:selectedProfile": state.selectedProfile || 'none'
     };
 
     // Assertions
@@ -551,6 +567,7 @@ function parseEARL(earlData) {
         executiveSummary: config['eaa:executiveSummary'] || '',
         clauses: config['eaa:clauses'] || [],
         currentIdx: config['eaa:currentIdx'] || 0,
+        selectedProfile: config['eaa:selectedProfile'] || 'none',
         tests: [], // Will be re-populated by the app based on clauses
         results: {}
     };
@@ -928,6 +945,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register Service Worker
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
+            .then(registration => {
+                // Check for updates
+                registration.addEventListener('updatefound', () => {
+                    const newWorker = registration.installing;
+                    if (newWorker) {
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                // New version available, show update prompt
+                                showUpdatePrompt();
+                            }
+                        });
+                    }
+                });
+            })
             .catch(error => {
                 console.error('Service Worker registration failed:', error);
             });

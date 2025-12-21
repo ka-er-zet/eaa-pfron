@@ -3,28 +3,16 @@ import { MESSAGES_PL as M } from './messages-pl.js';
 window.M = M;
 
 let profilesData = null;
-let previousProfileBeforeChange = null;
-let previousProfileClauses = [];
-let isLoadingAudit = false;
-
-// Polish-specific pluralization helper for 'test' in genitive after "dla"
-function pluralizeTests(n) {
-    // Use genitive singular for 1, genitive plural otherwise
-    return n === 1 ? (M.setup.testWordGenitiveSingular || 'testu') : (M.setup.testWordGenitivePlural || 'testów');
-}
 
 // Handle profile selection to auto-select clauses
-async function handleProfileChange(e) {
+function handleProfileChange(e) {
     if (e.target.name !== 'profile') return;
     const selectedValue = e.target.value;
-    const previousSelected = previousProfileBeforeChange || null;
-    previousProfileBeforeChange = null;
     const clauseCheckboxes = document.querySelectorAll('input[name="clauses"]');
     
-    // Temporarily set the new profile to calculate changes
-    let newCheckedClauses = [];
     if (selectedValue === 'none') {
-        // No clauses checked
+        clauseCheckboxes.forEach(cb => cb.checked = false);
+        updateProfileStatus('Wybrano: Brak profilu / Wybór ręczny');
     } else {
         // Find the item with matching name
         let selectedClauses = [];
@@ -47,179 +35,25 @@ async function handleProfileChange(e) {
                 }
             }
         }
-        newCheckedClauses = selectedClauses;
-    }
-    
-    // Check which clauses would be removed
-    const currentChecked = Array.from(clauseCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
-    const removedClauses = currentChecked.filter(c => !newCheckedClauses.includes(c));
-    
-    // If removing clauses with answers, confirm
-    if (removedClauses.length > 0) {
-        const state = window.utils.loadState();
-        if (state && Array.isArray(state.tests) && state.tests.length > 0) {
-            const affected = state.tests.filter(t => removedClauses.includes(t.clauseId) && state.results && state.results[t.id] && (state.results[t.id].status || state.results[t.id].note));
-            if (affected && affected.length > 0) {
-                const testsPhrase = `${affected.length} ${pluralizeTests(affected.length)}`;
-                const message = (M.setup.removeClausesBody || 'Zmiana profilu spowoduje utratę odpowiedzi dla {count}. Czy kontynuować?').replace('{count}', testsPhrase);
-                const confirmed = await window.utils.confirm(
-                    message,
-                    M.setup.removeClausesTitle || 'Zmiana profilu',
-                    M.setup.removeClausesConfirm || 'Zmień profil',
-                    M.setup.removeClausesCancel || 'Anuluj',
-                    'cancel'
-                );
-                if (!confirmed) {
-                    // Revert to previous profile
-                    if (previousSelected) {
-                        const prevRadio = document.querySelector(`input[name="profile"][value="${previousSelected}"]`);
-                        if (prevRadio) prevRadio.checked = true;
-                    }
-                    return;
-                }
-            }
-        }
-    }
-    
-    // Apply the changes
-    if (selectedValue === 'none') {
-        clauseCheckboxes.forEach(cb => cb.checked = false);
-        updateProfileStatus('Wybrano: Brak profilu / Wybór ręczny');
-    } else {
         // Check the corresponding clauses
         clauseCheckboxes.forEach(cb => {
-            cb.checked = newCheckedClauses.includes(cb.value);
+            cb.checked = selectedClauses.includes(cb.value);
         });
         
-        // Also set additional clauses checkboxes: c12 always checked, c13 only if in profile
-        const additionalClauses = ['c12', 'c13'];
-        additionalClauses.forEach(clause => {
-            const additionalCb = document.querySelector(`input[name="additional_clauses"][value="${clause}"]`);
-            if (additionalCb) {
-                if (clause === 'c12') {
-                    additionalCb.checked = true; // c12 is always required
-                    // Also set main checkbox
-                    const mainCb = document.getElementById(`clause-${clause}`);
-                    if (mainCb) mainCb.checked = true;
-                } else {
-                    additionalCb.checked = newCheckedClauses.includes(clause);
-                    // Also set main checkbox if in profile
-                    if (newCheckedClauses.includes(clause)) {
-                        const mainCb = document.getElementById(`clause-${clause}`);
-                        if (mainCb) mainCb.checked = true;
-                    }
-                }
-            }
-        });
-        
-        // Remember which clauses were set by this profile
-        previousProfileClauses = [...newCheckedClauses];
-        
-        // Sync additional checkboxes
-        const c12Additional = document.querySelector('input[name="additional_clauses"][value="c12"]');
-        if (c12Additional) c12Additional.checked = true;
-        const c13Additional = document.querySelector('input[name="additional_clauses"][value="c13"]');
-        if (c13Additional) {
-            c13Additional.checked = newCheckedClauses.includes('c13');
-            c13Additional.closest('label').style.display = newCheckedClauses.includes('c13') ? 'none' : 'block';
-        }
-        
-        updateProfileStatus(`Wybrano profil: ${selectedValue}. Zaznaczono klauzule: ${newCheckedClauses.join(', ')}`);
+        updateProfileStatus(`Wybrano profil: ${selectedValue}. Zaznaczono klauzule: ${selectedClauses.join(', ')}`);
     }
     
-    // Save the selected profile to localStorage
-    const existing = window.utils.loadState() || {};
-    existing.selectedProfile = selectedValue;
-    window.utils.saveState(existing);
+    // After setting profile clauses, apply additional clauses
+    applyAdditionalClauses();
 }
 
 // Handle additional clauses checkboxes
-async function handleAdditionalClauses(e) {
+function handleAdditionalClauses(e) {
     if (e.target.name !== 'additional_clauses') return;
-    if (isLoadingAudit) return; // Skip during audit loading
-
     const clause = e.target.value;
     const cb = document.getElementById(`clause-${clause}`);
-    if (!cb) return;
-
-    const state = window.utils.loadState();
-    if (!state) return;
-
-    // If checking the additional clause -> attempt to restore archived data if present
-    if (e.target.checked) {
-        if (state._archived && state._archived[clause]) {
-            const archived = state._archived[clause];
-            state.results = state.results || {};
-            Object.assign(state.results, archived.results || {});
-            delete state._archived[clause];
-            if (!Array.isArray(state.clauses)) state.clauses = [];
-            if (!state.clauses.includes(clause)) state.clauses.push(clause);
-            window.utils.saveState(state);
-            ensureLiveRegion(window.M?.setup?.removedClausesNotice || 'Dane zostały przywrócone.');
-        } else {
-            // Normal add
-            if (!Array.isArray(state.clauses)) state.clauses = [];
-            if (!state.clauses.includes(clause)) {
-                state.clauses.push(clause);
-                window.utils.saveState(state);
-            }
-        }
-        cb.checked = true;
-    } else {
-        // If unchecking -> check if there are answers to archive
-        const affected = (state.tests || []).filter(t => t.clauseId === clause && state.results && state.results[t.id] && (state.results[t.id].status || state.results[t.id].note));
-        if (!affected || affected.length === 0) {
-            // Safe to remove without confirmation
-            state.clauses = (state.clauses || []).filter(c => c !== clause);
-            window.utils.saveState(state);
-            cb.checked = false;
-        } else {
-            // Confirm archiving
-            const testsPhrase = `${affected.length} ${pluralizeTests(affected.length)}`;
-            const message = (window.M?.setup?.removeClausesBody || 'Usunięcie tej klauzuli spowoduje trwałą utratę odpowiedzi dla {count}. Czy kontynuować?').replace('{count}', testsPhrase);
-            const confirmed = await window.utils.confirm(
-                message,
-                window.M?.setup?.removeClausesTitle || 'Usuwanie klauzul',
-                window.M?.setup?.removeClausesConfirm || 'Usuń',
-                window.M?.setup?.removeClausesCancel || 'Anuluj',
-                'cancel'
-            );
-
-            if (!confirmed) {
-                // Revert checkbox
-                e.target.checked = true;
-                return;
-            }
-
-            // Permanently remove
-            affected.forEach(t => {
-                if (state.results && state.results[t.id]) {
-                    delete state.results[t.id];
-                }
-            });
-            state.tests = (state.tests || []).filter(t => t.clauseId !== clause);
-            state.clauses = (state.clauses || []).filter(c => c !== clause);
-            window.utils.saveState(state);
-            cb.checked = false;
-            ensureLiveRegion(window.M?.setup?.removedClausesNotice || 'Dane z tej klauzuli zostały trwale usunięte.');
-        }
-    }
-
-    // Additional logic for profile switching
-    const currentProfile = document.querySelector('input[name="profile"]:checked')?.value;
-    const profileRequiresClause = currentProfile && profilesData && 
-        (profilesData.products.some(p => p.id === currentProfile && p.clauses.includes(clause)) ||
-         profilesData.services.some(s => s.id === currentProfile && s.clauses.includes(clause)));
-    if (clause === 'c12' || clause === 'c13') {
-        if (!e.target.checked && profileRequiresClause) {
-            // Unchecking a clause required by profile -> switch to none
-            const noneRadio = document.querySelector('input[name="profile"][value="none"]');
-            if (noneRadio) {
-                noneRadio.checked = true;
-                updateProfileStatus('Odznaczono klauzulę wymaganą przez profil. Profil ustawiony na ręczny.');
-            }
-        }
-    } else {
+    if (cb) {
+        cb.checked = e.target.checked;
         updateProfileStatus(`Klauzula ${clause} ${e.target.checked ? 'zaznaczona' : 'odznaczona'}`);
     }
 }
@@ -277,59 +111,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Load product/service profiles from JSON
-    const form = document.getElementById('audit-setup-form');
     loadProfiles().then(() => {
+        // After profiles are loaded, restore state if available
+        if (loadedFlag || editingFlag) {
+            const loaded = window.utils.loadState();
+            if (loaded && typeof loaded === 'object') {
+                const nameInput = document.getElementById('product-name');
+                const descInput = document.getElementById('product-desc');
+                const auditorInput = document.getElementById('auditor-name');
 
-    // Handle profile selection to auto-select clauses
-    const profileFieldsetEl = document.getElementById('profile-fieldset');
-    if (profileFieldsetEl) {
-        // Capture previous selection before change occurs
-        profileFieldsetEl.addEventListener('pointerdown', (ev) => {
-            previousProfileBeforeChange = document.querySelector('input[name="profile"]:checked')?.value || null;
-        });
-        profileFieldsetEl.addEventListener('change', handleProfileChange);
-        
-        // Handle additional clauses
-        profileFieldsetEl.addEventListener('change', handleAdditionalClauses);
-    }
-    
-    // Handle manual changes to clauses - switch to manual profile if deviating from profile settings
-    document.getElementById('clauses-fieldset').addEventListener('change', (e) => {
-        if (e.target.name === 'clauses') {
-            // Sync additional checkboxes for c12/c13
-            if (e.target.value === 'c12' || e.target.value === 'c13') {
-                const additionalCb = document.querySelector(`input[name="additional_clauses"][value="${e.target.value}"]`);
-                if (additionalCb) {
-                    additionalCb.checked = e.target.checked;
-                }
-            }
-            
-            const currentChecked = Array.from(document.querySelectorAll('input[name="clauses"]:checked')).map(cb => cb.value);
-            // Check deviation: other clauses must match exactly, c12/c13 only if their state changed from profile
-            const isDeviation = (() => {
-                const otherCurrent = currentChecked.filter(c => !['c12', 'c13'].includes(c));
-                const otherPrevious = previousProfileClauses.filter(c => !['c12', 'c13'].includes(c));
-                if (otherCurrent.length !== otherPrevious.length || 
-                    !otherCurrent.every(c => otherPrevious.includes(c)) || 
-                    !otherPrevious.every(c => otherCurrent.includes(c))) {
-                    return true;
-                }
-                // For c12/c13, deviation only if they were required by profile and now unchecked
-                for (const clause of ['c12', 'c13']) {
-                    const wasInProfile = previousProfileClauses.includes(clause);
-                    const isNowChecked = currentChecked.includes(clause);
-                    if (wasInProfile && !isNowChecked) {
-                        return true;
+                if (nameInput && loaded.product) nameInput.value = loaded.product;
+                if (descInput && loaded.productDesc) descInput.value = loaded.productDesc;
+                if (auditorInput && loaded.auditor) auditorInput.value = loaded.auditor;
+
+                // Set profile
+                if (loaded.profile) {
+                    const profileRadio = document.querySelector(`input[name="profile"][value="${loaded.profile}"]`);
+                    if (profileRadio) {
+                        profileRadio.checked = true;
+                        // Trigger change to apply clauses
+                        profileRadio.dispatchEvent(new Event('change', { bubbles: true }));
                     }
                 }
-                return false;
-            })();
-            if (isDeviation) {
-                const noneRadio = document.querySelector('input[name="profile"][value="none"]');
-                if (noneRadio && !noneRadio.checked) {
-                    noneRadio.checked = true;
-                    updateClausesStatus('Zmieniono klauzule w stosunku do profilu. Profil ustawiony na ręczny.');
+                
+                // Set additional clauses
+                if (loaded.additionalClauses && typeof loaded.additionalClauses === 'object') {
+                    Object.keys(loaded.additionalClauses).forEach(clause => {
+                        const checkbox = document.querySelector(`input[name="additional_clauses"][value="${clause}"]`);
+                        if (checkbox) {
+                            checkbox.checked = loaded.additionalClauses[clause];
+                        }
+                    });
+                    // Apply additional clauses
+                    applyAdditionalClauses();
                 }
+
+                // Pre-check clause checkboxes
+                if (Array.isArray(loaded.clauses)) {
+                    const checkboxes = document.querySelectorAll('input[name="clauses"]');
+                    checkboxes.forEach(cb => {
+                        if (loaded.clauses.includes(cb.value)) cb.checked = true;
+                    });
+                }
+
+                // If we loaded an audit file, ensure tests are populated so removal checks can detect existing answers
+                if ((!Array.isArray(loaded.tests) || loaded.tests.length === 0) && Array.isArray(loaded.clauses) && loaded.clauses.length > 0) {
+                    // Lightweight reproduction of audit's test initialization; runs asynchronously so UI stays responsive
+
+    // Handle profile selection to auto-select clauses
+    document.getElementById('profile-fieldset').addEventListener('change', handleProfileChange);
+    
+    // Handle additional clauses
+    document.getElementById('profile-fieldset').addEventListener('change', handleAdditionalClauses);
+    
+    // Handle manual changes to clauses - switch to manual profile
+    document.getElementById('clauses-fieldset').addEventListener('change', (e) => {
+        if (e.target.name === 'clauses') {
+            const noneRadio = document.querySelector('input[name="profile"][value="none"]');
+            if (noneRadio) {
+                noneRadio.checked = true;
+                updateClausesStatus('Ręcznie zmieniono klauzule. Profil ustawiony na ręczny.');
             }
         }
     });
@@ -386,9 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     'cancel'
                 );
 
-                // If the user confirmed (chose "Leave"), clear state and navigate to the home page.
+                // If the user confirmed (chose "Leave"), navigate to the home page.
                 if (confirmed) {
-                    window.utils.saveState({}); // Clear audit state
                     window.location.href = 'index.html';
                 }
             } else {
@@ -398,9 +238,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // If we arrived after loading a saved audit or via Edit → pre-fill the setup form from saved state
-    const loadedFlag = sessionStorage.getItem('loaded-audit');
-    const editingFlag = sessionStorage.getItem('editing-audit');
     if (loadedFlag || editingFlag) {
         const loaded = window.utils.loadState();
         if (loaded && typeof loaded === 'object') {
@@ -418,33 +255,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 checkboxes.forEach(cb => {
                     if (loaded.clauses.includes(cb.value)) cb.checked = true;
                 });
-            }
-
-            // Set selected profile
-            if (loaded.selectedProfile) {
-                const profileRadio = document.querySelector(`input[name="profile"][value="${loaded.selectedProfile}"]`);
-                if (profileRadio) {
-                    profileRadio.checked = true;
-                    // Trigger profile change to sync checkboxes
-                    handleProfileChange({ target: profileRadio });
-                }
-            }
-
-            // Sync additional checkboxes based on loaded clauses
-            if (Array.isArray(loaded.clauses)) {
-                isLoadingAudit = true;
-                const c12Additional = document.querySelector('input[name="additional_clauses"][value="c12"]');
-                if (c12Additional) c12Additional.checked = loaded.clauses.includes('c12');
-                const c13Additional = document.querySelector('input[name="additional_clauses"][value="c13"]');
-                if (c13Additional) {
-                    c13Additional.checked = loaded.clauses.includes('c13');
-                    // Hide if profile requires it
-                    const profileRequiresC13 = loaded.selectedProfile && profilesData && 
-                        (profilesData.products.some(p => p.id === loaded.selectedProfile && p.clauses.includes('c13')) ||
-                         profilesData.services.some(s => s.id === loaded.selectedProfile && s.clauses.includes('c13')));
-                    c13Additional.closest('label').style.display = profileRequiresC13 ? 'none' : 'block';
-                }
-                isLoadingAudit = false;
             }
 
             // If we loaded an audit file, ensure tests are populated so removal checks can detect existing answers
@@ -617,9 +427,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Remove the flags so a normal navigation to setup behaves as usual
         sessionStorage.removeItem('loaded-audit');
         sessionStorage.removeItem('editing-audit');
-    }
-    });
 
+
+    } else {
+        window.utils.clearState();
+    }
+
+    const form = document.getElementById('audit-setup-form');
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -695,7 +509,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Polish-specific pluralization helper for 'test' in genitive after "dla"
-    // Moved to top of file
+    function pluralizeTests(n) {
+        // Use genitive singular for 1, genitive plural otherwise
+        return n === 1 ? (M.setup.testWordGenitiveSingular || 'testu') : (M.setup.testWordGenitivePlural || 'testów');
+    }
 
     // Handle clause checkbox immediate archive/restore behavior
     (function attachClauseHandlers() {
@@ -742,12 +559,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Confirm archiving immediately
                 const testsPhrase = `${affected.length} ${pluralizeTests(affected.length)}`;
-                const message = (window.M?.setup?.removeClausesBody || 'Usunięcie tej klauzuli spowoduje utratę odpowiedzi dla {count}. Czy kontynuować?').replace('{count}', testsPhrase);
+                const message = (M.setup.removeClausesBody || 'Usunięcie tej klauzuli spowoduje utratę odpowiedzi dla {count}. Czy kontynuować?').replace('{count}', testsPhrase);
                 const confirmed = await window.utils.confirm(
                     message,
-                    window.M?.setup?.removeClausesTitle || 'Usuwanie klauzul',
-                    window.M?.setup?.removeClausesConfirm || 'Usuń',
-                    window.M?.setup?.removeClausesCancel || 'Anuluj',
+                    M.setup.removeClausesTitle || 'Usuwanie klauzul',
+                    M.setup.removeClausesConfirm || 'Usuń i archiwizuj',
+                    M.setup.removeClausesCancel || 'Anuluj',
                     'cancel'
                 );
 
@@ -813,12 +630,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const affected = existing.tests.filter(t => removedClauses.includes(t.clauseId) && existing.results && existing.results[t.id] && (existing.results[t.id].status || existing.results[t.id].note));
                 if (affected && affected.length > 0) {
                     const testsPhrase = `${affected.length} ${pluralizeTests(affected.length)}`;
-                    const message = (window.M?.setup?.removeClausesBody || 'Usunięcie tej klauzuli spowoduje trwałą utratę odpowiedzi dla {count}. Czy kontynuować?').replace('{count}', testsPhrase);
+                    const message = (M.setup.removeClausesBody || 'Usunięcie tej klauzuli spowoduje trwałą utratę odpowiedzi dla {count}. Czy kontynuować?').replace('{count}', testsPhrase);
                     const confirmed = await window.utils.confirm(
                         message,
-                        window.M?.setup?.removeClausesTitle || 'Usuwanie klauzul',
-                        window.M?.setup?.removeClausesConfirm || 'Usuń',
-                        window.M?.setup?.removeClausesCancel || 'Anuluj',
+                        M.setup.removeClausesTitle || 'Usuwanie klauzul',
+                        M.setup.removeClausesConfirm || 'Usuń i archiwizuj',
+                        M.setup.removeClausesCancel || 'Anuluj',
                         'cancel'
                     );
 
@@ -955,17 +772,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedProfileRadio = document.querySelector('input[name="profile"]:checked');
         const selectedProfile = selectedProfileRadio ? selectedProfileRadio.value : 'none';
 
-        // Initialize State (new audit - clear previous data)
+        // Get additional clauses state
+        const additionalClausesState = {};
+        const additionalCheckboxes = document.querySelectorAll('input[name="additional_clauses"]');
+        additionalCheckboxes.forEach(cb => {
+            additionalClausesState[cb.value] = cb.checked;
+        });
+
+        // Initialize State (preserve any previously loaded results/tests)
+        const existing = window.utils.loadState();
         const initialState = {
             product: name,
             productDesc: desc,
             auditor: auditor,
-            selectedProfile: selectedProfile,
+            profile: selectedProfile,
+            additionalClauses: additionalClausesState,
             clauses: clausesToLoad,
-            tests: [],
-            results: {},
-            currentIdx: 0,
-            executiveSummary: ''
+            tests: (existing && Array.isArray(existing.tests) && existing.tests.length > 0) ? existing.tests : [],
+            results: (existing && existing.results) ? existing.results : {},
+            currentIdx: (existing && typeof existing.currentIdx === 'number') ? existing.currentIdx : 0,
+            executiveSummary: (existing && existing.executiveSummary) ? existing.executiveSummary : ''
         };
 
         // Save to localStorage
@@ -996,7 +822,6 @@ async function loadProfiles() {
         container.appendChild(noneLabel);
         
         // Add profiles from JSON, grouped by category
-        let profileCounter = 0;
         data.products.forEach(category => {
             // Add category header
             const categoryHeader = document.createElement('h4');
@@ -1011,49 +836,14 @@ async function loadProfiles() {
             // Add items in this category
             category.items.forEach(item => {
                 const label = document.createElement('label');
-                label.className = 'profile-item';
                 const input = document.createElement('input');
                 input.type = 'radio';
                 input.name = 'profile';
                 input.value = item.name; // Use name as value
-
-                // Build description of associated clauses and resolve human-readable titles when possible
-                const clauses = Array.isArray(item.clauses) ? item.clauses : [];
-                const clauseLabels = clauses.map(cid => {
-                    try {
-                        const titleEl = document.getElementById(`${cid}-title`);
-                        if (titleEl && titleEl.textContent) {
-                            let titleText = titleEl.textContent.replace(/^C\.\d+[\s:\-]*/i, '').trim();
-                            titleText = titleText.replace(/\s*\(Klauzula\s*\d+\)\s*$/i, '').trim();
-                            titleText = titleText.replace(/\s*Klauzula\s*\d+\s*$/i, '').trim();
-                            return `${cid.toUpperCase()}: ${titleText}`;
-                        }
-                    } catch (e) { /* ignore */ }
-                    return cid.toUpperCase();
-                });
-                const clausesText = clauseLabels.length > 0 ? clauseLabels.join('; ') : '';
-                const desc = clausesText ? `Powiązane klauzule: ${clausesText}` : 'Brak powiązanych klauzul';
-
-                // Use short ID for helper element
-                const helperId = `profile-clauses-${++profileCounter}`;
-
-                // Radio gets accessible name from label text, description from helper
-                input.setAttribute('aria-describedby', helperId);
-
-                const titleSpan = document.createElement('span');
-                titleSpan.className = 'profile-title';
-                titleSpan.textContent = item.name;
                 label.appendChild(input);
-                label.appendChild(titleSpan);
-
-                // Visible helper showing clause descriptions
-                const helper = document.createElement('small');
-                helper.id = helperId;
-                helper.className = 'text-muted text-small clause-helper';
-                helper.textContent = desc;
-                label.appendChild(helper);
-
-                // Layout is handled by CSS (.profile-item uses grid); avoid inline display styles here
+                label.appendChild(document.createTextNode(' ' + item.name));
+                label.style.marginLeft = '1rem';
+                label.style.display = 'block';
                 container.appendChild(label);
             });
         });
@@ -1073,49 +863,14 @@ async function loadProfiles() {
             // Add items in this category
             category.items.forEach(item => {
                 const label = document.createElement('label');
-                label.className = 'profile-item';
                 const input = document.createElement('input');
                 input.type = 'radio';
                 input.name = 'profile';
                 input.value = item.name; // Use name as value
-
-                // Build description of associated clauses and resolve human-readable titles when possible
-                const clauses = Array.isArray(item.clauses) ? item.clauses : [];
-                const clauseLabels = clauses.map(cid => {
-                    try {
-                        const titleEl = document.getElementById(`${cid}-title`);
-                        if (titleEl && titleEl.textContent) {
-                            let titleText = titleEl.textContent.replace(/^C\.\d+[\s:\-]*/i, '').trim();
-                            titleText = titleText.replace(/\s*\(Klauzula\s*\d+\)\s*$/i, '').trim();
-                            titleText = titleText.replace(/\s*Klauzula\s*\d+\s*$/i, '').trim();
-                            return `${cid.toUpperCase()}: ${titleText}`;
-                        }
-                    } catch (e) { /* ignore */ }
-                    return cid.toUpperCase();
-                });
-                const clausesText = clauseLabels.length > 0 ? clauseLabels.join('; ') : '';
-                const desc = clausesText ? `Powiązane klauzule: ${clausesText}` : 'Brak powiązanych klauzul';
-
-                // Use short ID for helper element
-                const helperId = `profile-clauses-${++profileCounter}`;
-
-                // Radio gets accessible name from label text, description from helper
-                input.setAttribute('aria-describedby', helperId);
-
-                const titleSpan = document.createElement('span');
-                titleSpan.className = 'profile-title';
-                titleSpan.textContent = item.name;
                 label.appendChild(input);
-                label.appendChild(titleSpan);
-
-                // Visible helper showing clause descriptions
-                const helper = document.createElement('small');
-                helper.id = helperId;
-                helper.className = 'text-muted text-small clause-helper';
-                helper.textContent = desc;
-                label.appendChild(helper);
-
-                // Layout is handled by CSS (.profile-item uses grid); avoid inline display styles here
+                label.appendChild(document.createTextNode(' ' + item.name));
+                label.style.marginLeft = '1rem';
+                label.style.display = 'block';
                 container.appendChild(label);
             });
         });
@@ -1138,11 +893,12 @@ async function loadProfiles() {
                 input.type = 'checkbox';
                 input.name = 'additional_clauses';
                 input.value = clause.id;
-                if (clause.default_checked && clause.id !== 'c12') {
+                if (clause.default_checked) {
                     input.checked = true;
                 }
                 label.appendChild(input);
                 label.appendChild(document.createTextNode(' ' + clause.question));
+                label.style.marginLeft = '1rem';
                 label.style.display = 'block';
                 container.appendChild(label);
             });

@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Załaduj stan
     const state = window.utils.loadState();
+    console.log('Loaded state:', state); // Debug
     if (!state.product && state.tests.length === 0) {
         if (typeof window.utils.setStatusMessage === 'function') {
             window.utils.setStatusMessage(M.summary.noAuditData, 5000);
@@ -344,6 +345,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(downloadAnchorNode);
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
+
+        // Dostępna informacja zwrotna
+        const liveRegion = document.getElementById('status-message');
+        if (liveRegion) {
+            liveRegion.innerText = M.export.saveReportSuccess;
+        }
     });
 
     // ODT Export
@@ -495,6 +502,12 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.appendChild(downloadAnchorNode);
             downloadAnchorNode.click();
             downloadAnchorNode.remove();
+
+            // Dostępna informacja zwrotna
+            const liveRegion = document.getElementById('status-message');
+            if (liveRegion) {
+                liveRegion.innerText = M.export.saveReportSuccess;
+            }
         });
     }
 

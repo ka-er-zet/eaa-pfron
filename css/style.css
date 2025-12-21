@@ -812,6 +812,36 @@ main {
     position: relative;
 }
 
+/* Profile radios — layout and wrapping for titles and helpers */
+.profile-item {
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    align-items: start;
+}
+
+.profile-item input[type="radio"] {
+    grid-column: 1;
+    margin-top: 0.35rem; /* aligns radio with first line of text */
+}
+
+.profile-item .profile-title {
+    grid-column: 2;
+    min-width: 0; /* allows proper wrapping inside grid */
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.profile-item .clause-helper {
+    grid-column: 2;
+    color: var(--muted-color);
+    white-space: normal;
+    margin-left: 0 !important;
+    display: block;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 .scope-card {
     background: var(--card-background-color);
     border: 1px solid var(--muted-color);
@@ -1878,8 +1908,8 @@ details summary {
 /* Chevron using ::after with mask to allow coloring via currentColor */
 details summary::after {
     content: "";
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.25em;
+    height: 1.25em;
     background-color: currentColor;
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
@@ -1969,6 +1999,60 @@ details[open] #how-to-summary::after {
     transform: rotate(0deg);
 }
 
+/* Specific layout for the profile selection summary: same as how-to-summary */
+#profile-summary {
+    /* Use inline-flex so the summary can be centered with margin:auto and keep internal flex alignment */
+    display: inline-flex;
+    gap: 0.25rem; /* bring chevron very close to the title */
+    margin: 0.5rem auto 0; /* center the whole summary block horizontally */
+    width: 100%;
+}
+
+#profile-summary .help-title {
+    margin: 0; /* remove extra margin from the H3 so it centers nicely */
+    display: inline;
+    font-size: 1.25rem;
+    font-weight: bold;
+    /* Inherit color from the summary element so theme-specific colors apply */
+    color: inherit;
+    line-height: 1.2; /* ensure vertical rhythm for centering */
+}
+
+#profile-summary::after {
+    /* Use the same masked chevron as the global details rule but larger and centered */
+    margin-top: 8px;;
+    display: inline-block !important;
+    float: none !important;
+    width: 1.5rem !important; /* increased size */
+    height: 1.5rem !important; /* increased size */
+    margin-inline-start: 0.25rem !important; /* small gap next to the text */
+    vertical-align: middle !important;
+    align-self: center !important;
+    order: 2; /* ensure it sits right after the content */
+
+    /* Keep color in sync with the summary text */
+    background-color: currentColor;
+
+    /* Use the same SVG mask so stroke and shape are preserved */
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
+    opacity: 0.98;
+    transition: transform 0.18s cubic-bezier(.2,.9,.2,1), opacity 0.12s;
+    transform: rotate(-90deg) translateY(0); /* start rotated and aligned */
+}
+
+/* Ensure the rotation on open/close matches other details */
+details[open] #profile-summary::after {
+    transform: rotate(0deg);
+}
+
 
 /* Dark mode for details */
 [data-theme="dark"] details summary {
@@ -1990,6 +2074,17 @@ details[open] #how-to-summary::after {
 
 details[open] summary .summary-closed {
     display: none;
+}
+
+/* Reset h3 styles for summary toggles */
+h3.summary-closed,
+h3.summary-open {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
 }
 
 /* Help content links should use the same color rules as other links */

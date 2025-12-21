@@ -10,7 +10,8 @@ export const MESSAGES_PL = {
   utils: {
     saveError: "Błąd zapisu stanu aplikacji. Sprawdź ustawienia przeglądarki.",
     saveSuccess: "Zapisano raport i pobrano plik.",
-    ok: "OK"
+    ok: "OK",
+    updateAvailable: "Dostępna jest nowa wersja aplikacji. Odśwież stronę, aby ją zastosować."
   },
 
   /* ---------- Ogólne ---------- */
@@ -80,16 +81,15 @@ export const MESSAGES_PL = {
     productDescHelper: "np. v1.2.4, https://example.com",
     auditorNameLabel: "Audytor / Organizacja",
     auditorNameHelper: "Imię i nazwisko lub nazwa firmy przeprowadzającej audyt",
-    sectionScopeTitle: "Zakres audytu (Klauzule)",
     section1Title: "1. Przedmiot audytu",
     clausesHelper: "Zaznacz obszary, które podlegają ocenie.",
 
     // Edit & clause removal confirmation
     removeClausesTitle: "Usuwanie klauzul",
     removeClausesBody: "Usunięcie tej klauzuli spowoduje trwałą utratę odpowiedzi dla {count}. Nie będzie można ich przywrócić. Czy kontynuować?",
-    removeClausesConfirm: "Usuń i archiwizuj",
+    removeClausesConfirm: "Usuń",
     removeClausesCancel: "Anuluj",
-    removedClausesNotice: "Dane zostały trwale usunięte i nie można ich przywrócić.",
+    removedClausesNotice: "Odpowiedzi zostały usunięte i nie można ich przywrócić.",
     
     testWordGenitiveSingular: "testu",
     testWordGenitivePlural: "testów",
@@ -97,7 +97,10 @@ export const MESSAGES_PL = {
     // Status messages
     editingConfig: "Edycja konfiguracji audytu.",
     loadedAudit: "Wczytano audyt z pliku.",
-    testsInitialized: "Zainicjalizowano testy audytu."
+    testsInitialized: "Zainicjalizowano testy audytu.",
+
+    profileTitle: "2. Profil produktu / usługi",
+    profileIntro: "Wybierz profil, aby automatycznie zaznaczyć powiązane klauzule. Klauzule możesz też ustawić lub zmienić ręcznie w sekcji „Zakres audytu”."
   },
 
 
@@ -295,6 +298,11 @@ export const MESSAGES_PL = {
       "Rozpoczęcie nowego audytu spowoduje utratę niezapisanych danych.",
     confirmNo: "Anuluj",
     confirmYes: "Rozpocznij nowy audyt"
+  },
+
+  /* ---------- Profile produktów/usług (UI) ---------- */
+  profile: {
+    title: "Dostępne profile"
   }
 
 };

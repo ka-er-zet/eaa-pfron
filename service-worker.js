@@ -1,4 +1,4 @@
-const CACHE_NAME = 'audyt-eaa-cache-v13';
+const CACHE_NAME = 'audyt-eaa-cache-v14';
 // Use explicit versioned assets where available to avoid serving stale files
 const urlsToCache = [
   './',
@@ -6,15 +6,15 @@ const urlsToCache = [
   './new-audit.html',
   './audit.html',
   './summary.html',
-  './css/style.css?v=13',
+  './css/style.css?v=14',
   './css/pico.min.css',
-  './js/setup.js?v=13',
-  './js/landing.js?v=13',
-  './js/audit.js?v=13',
-  './js/summary.js?v=13',
-  './js/utils.js?v=13',
-  './js/messages.pl.js?v=13',
-  './js/messages.en.js?v=13',
+  './js/setup.js?v=14',
+  './js/landing.js?v=14',
+  './js/audit.js?v=14',
+  './js/summary.js?v=14',
+  './js/utils.js?v=14',
+  './js/messages.pl.js?v=14',
+
   './js/lucide.min.js',
   './js/jszip.min.js',
   './manifest.webmanifest',
