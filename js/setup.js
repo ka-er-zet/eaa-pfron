@@ -3,6 +3,7 @@ import { MESSAGES_PL as M } from './messages-pl.js';
 window.M = M;
 
 let profilesData = null;
+let clausesConfig = null;
 let previousProfileBeforeChange = null;
 let previousProfileClauses = [];
 let isLoadingAudit = false;
@@ -84,7 +85,8 @@ async function handleProfileChange(e) {
     // Apply the changes
     if (selectedValue === 'none') {
         clauseCheckboxes.forEach(cb => cb.checked = false);
-        updateProfileStatus('Wybrano: Brak profilu / Wybór ręczny');
+        updateProfileStatus(M.setup.profileNoneSelected || 'Wybrano: Brak profilu / Wybór ręczny');
+        ensureLiveRegion(M.setup.profileNoneSelectedLive || 'Wybrano: Brak profilu / Wybór ręczny. Wszystkie klauzule odznaczone.');
     } else {
         // Check the corresponding clauses
         clauseCheckboxes.forEach(cb => {
@@ -124,7 +126,15 @@ async function handleProfileChange(e) {
             c13Additional.closest('label').style.display = newCheckedClauses.includes('c13') ? 'none' : 'block';
         }
         
-        updateProfileStatus(`Wybrano profil: ${selectedValue}. Zaznaczono klauzule: ${newCheckedClauses.join(', ')}`);
+        updateProfileStatus((M.setup.profileSelected || 'Wybrano profil: {profile}. Zaznaczono klauzule: {clauses}').replace('{profile}', selectedValue).replace('{clauses}', newCheckedClauses.join(', ')));
+        
+        // Announce to screen readers
+        const profileName = selectedValue === 'none' ? 'Brak profilu / Wybór ręczny' : selectedValue;
+        const clausesList = newCheckedClauses.length > 0 ? newCheckedClauses.map(cid => {
+            const clause = clausesConfig.find(c => c.id === cid);
+            return clause ? clause.title : cid;
+        }).join(', ') : 'brak';
+        ensureLiveRegion((M.setup.profileSelectedLive || 'Wybrano profil: {profile}. Powiązane klauzule: {clauses}').replace('{profile}', profileName).replace('{clauses}', clausesList));
     }
     
     // Save the selected profile to localStorage
@@ -155,7 +165,7 @@ async function handleAdditionalClauses(e) {
             if (!Array.isArray(state.clauses)) state.clauses = [];
             if (!state.clauses.includes(clause)) state.clauses.push(clause);
             window.utils.saveState(state);
-            ensureLiveRegion(window.M?.setup?.removedClausesNotice || 'Dane zostały przywrócone.');
+            ensureLiveRegion(M.setup.dataRestored || 'Dane zostały przywrócone.');
         } else {
             // Normal add
             if (!Array.isArray(state.clauses)) state.clauses = [];
@@ -216,11 +226,11 @@ async function handleAdditionalClauses(e) {
             const noneRadio = document.querySelector('input[name="profile"][value="none"]');
             if (noneRadio) {
                 noneRadio.checked = true;
-                updateProfileStatus('Odznaczono klauzulę wymaganą przez profil. Profil ustawiony na ręczny.');
+                updateProfileStatus(M.setup.clauseRequiredUnselected || 'Odznaczono klauzulę wymaganą przez profil. Profil ustawiony na ręczny.');
             }
         }
     } else {
-        updateProfileStatus(`Klauzula ${clause} ${e.target.checked ? 'zaznaczona' : 'odznaczona'}`);
+        updateProfileStatus((M.setup.clauseToggled || 'Klauzula {clause} {action}').replace('{clause}', clause).replace('{action}', e.target.checked ? 'zaznaczona' : 'odznaczona'));
     }
 }
 
@@ -276,9 +286,12 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Could not enhance icon buttons', e);
     }
 
-    // Load product/service profiles from JSON
+    // Load clauses configuration and product/service profiles from JSON
     const form = document.getElementById('audit-setup-form');
-    loadProfiles().then(() => {
+    loadClausesConfig().then(() => {
+        // Load profiles after clauses config
+        return loadProfiles();
+    }).then(() => {
 
     // Handle profile selection to auto-select clauses
     const profileFieldsetEl = document.getElementById('profile-fieldset');
@@ -328,9 +341,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const noneRadio = document.querySelector('input[name="profile"][value="none"]');
                 if (noneRadio && !noneRadio.checked) {
                     noneRadio.checked = true;
-                    updateClausesStatus('Zmieniono klauzule w stosunku do profilu. Profil ustawiony na ręczny.');
+                    updateClausesStatus(M.setup.clausesChangedToManual || 'Zmieniono klauzule w stosunku do profilu. Profil ustawiony na ręczny.');
                 }
             }
+            
+            // Update status for screen readers with selected clauses
+            const selectedClauses = Array.from(document.querySelectorAll('input[name="clauses"]:checked')).map(cb => {
+                const titleEl = document.getElementById(`${cb.value}-title`);
+                return titleEl ? titleEl.textContent : cb.value;
+            });
+            const statusMessage = selectedClauses.length > 0 ? (M.setup.selectedClauses || 'Wybrane klauzule: {clauses}').replace('{clauses}', selectedClauses.join(', ')) : (M.setup.noSelectedClauses || 'Brak wybranych klauzul');
+            updateClausesStatus(statusMessage);
         }
     });
     const clauseCheckboxes = document.querySelectorAll('input[name="clauses"]');
@@ -1021,6 +1042,17 @@ async function loadProfiles() {
                 const clauses = Array.isArray(item.clauses) ? item.clauses : [];
                 const clauseLabels = clauses.map(cid => {
                     try {
+                        // Use clausesConfig if available, otherwise fallback to DOM lookup
+                        if (clausesConfig) {
+                            const clause = clausesConfig.find(c => c.id === cid);
+                            if (clause) {
+                                let titleText = clause.title.replace(/^C\.\d+[\s:\-]*/i, '').trim();
+                                titleText = titleText.replace(/\s*\(Klauzula\s*\d+\)\s*$/i, '').trim();
+                                titleText = titleText.replace(/\s*Klauzula\s*\d+\s*$/i, '').trim();
+                                return `${cid.toUpperCase()}: ${titleText}`;
+                            }
+                        }
+                        // Fallback to DOM lookup
                         const titleEl = document.getElementById(`${cid}-title`);
                         if (titleEl && titleEl.textContent) {
                             let titleText = titleEl.textContent.replace(/^C\.\d+[\s:\-]*/i, '').trim();
@@ -1083,6 +1115,17 @@ async function loadProfiles() {
                 const clauses = Array.isArray(item.clauses) ? item.clauses : [];
                 const clauseLabels = clauses.map(cid => {
                     try {
+                        // Use clausesConfig if available, otherwise fallback to DOM lookup
+                        if (clausesConfig) {
+                            const clause = clausesConfig.find(c => c.id === cid);
+                            if (clause) {
+                                let titleText = clause.title.replace(/^C\.\d+[\s:\-]*/i, '').trim();
+                                titleText = titleText.replace(/\s*\(Klauzula\s*\d+\)\s*$/i, '').trim();
+                                titleText = titleText.replace(/\s*Klauzula\s*\d+\s*$/i, '').trim();
+                                return `${cid.toUpperCase()}: ${titleText}`;
+                            }
+                        }
+                        // Fallback to DOM lookup
                         const titleEl = document.getElementById(`${cid}-title`);
                         if (titleEl && titleEl.textContent) {
                             let titleText = titleEl.textContent.replace(/^C\.\d+[\s:\-]*/i, '').trim();
@@ -1159,5 +1202,49 @@ async function loadProfiles() {
                 <label><input type="radio" name="profile" value="aplikacja-mobilna"> Aplikacja mobilna</label>
             `;
         }
+    }
+}
+
+// Load clauses configuration from JSON and generate HTML
+async function loadClausesConfig() {
+    try {
+        const response = await fetch('clauses_json/clauses_config.json');
+        if (!response.ok) throw new Error('Failed to load clauses config');
+        const data = await response.json();
+        clausesConfig = data.clauses;
+
+        // Generate HTML for clauses
+        const container = document.querySelector('#scope-grid');
+        if (!container) return;
+
+        // Clear existing content
+        container.innerHTML = '';
+
+        // Generate clause items
+        data.clauses.forEach(clause => {
+            const scopeItem = document.createElement('div');
+            scopeItem.className = 'scope-item';
+
+            scopeItem.innerHTML = `
+                <input type="checkbox" id="clause-${clause.id}" name="clauses" value="${clause.id}"
+                    class="scope-checkbox sr-only" aria-labelledby="${clause.id}-title" aria-describedby="${clause.id}-desc">
+                <label for="clause-${clause.id}" class="scope-card">
+                    <i data-lucide="${clause.icon}" class="text-muted" aria-hidden="true"></i>
+                    <div>
+                        <strong id="${clause.id}-title" style="display: block;">${clause.title}</strong>
+                        <small id="${clause.id}-desc" class="text-muted">${clause.description}</small>
+                    </div>
+                </label>
+            `;
+
+            container.appendChild(scopeItem);
+        });
+
+        // Re-create icons for dynamically added content
+        lucide.createIcons();
+
+    } catch (error) {
+        console.error('Error loading clauses config:', error);
+        // Fallback: keep existing HTML if JSON fails to load
     }
 }

@@ -99,8 +99,24 @@ export const MESSAGES_PL = {
     loadedAudit: "Wczytano audyt z pliku.",
     testsInitialized: "Zainicjalizowano testy audytu.",
 
+    // Profile selection messages
+    profileNoneSelected: "Wybrano: Brak profilu / Wybór ręczny",
+    profileNoneSelectedLive: "Wybrano: Brak profilu / Wybór ręczny. Wszystkie klauzule odznaczone.",
+    profileSelected: "Wybrano profil: {profile}. Zaznaczono klauzule: {clauses}",
+    profileSelectedLive: "Wybrano profil: {profile}. Powiązane klauzule: {clauses}",
+    dataRestored: "Dane zostały przywrócone.",
+    clauseRequiredUnselected: "Odznaczono klauzulę wymaganą przez profil. Profil ustawiony na ręczny.",
+    clauseToggled: "Klauzula {clause} {action}",
+    clausesChangedToManual: "Zmieniono klauzule w stosunku do profilu. Profil ustawiony na ręczny.",
+    selectedClauses: "Wybrane klauzule: {clauses}",
+    noSelectedClauses: "Brak wybranych klauzul",
+    saveSuccess: "Konfiguracja zapisana pomyślnie.",
+
     profileTitle: "2. Profil produktu / usługi",
-    profileIntro: "Wybierz profil, aby automatycznie zaznaczyć powiązane klauzule. Klauzule możesz też ustawić lub zmienić ręcznie w sekcji „Zakres audytu”."
+    profileIntro: "Wybierz profil, aby automatycznie zaznaczyć powiązane klauzule. Klauzule możesz też ustawić lub zmienić ręcznie w sekcji „Zakres audytu”.",
+    sectionScopeTitle: "3. Zakres audytu (Klauzule)",
+    clausesRequiredError: "Proszę wybrać przynajmniej jeden zakres audytu.",
+    productNameRequiredError: "Proszę podać nazwę produktu."
   },
 
 

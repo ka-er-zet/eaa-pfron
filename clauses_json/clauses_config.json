@@ -1,0 +1,58 @@
+{
+  "clauses": [
+    {
+      "id": "c5",
+      "title": "Wymagania ogólne (Klauzula 5)",
+      "description": "Podstawowa dostępność każdej funkcji ICT: obsługa klawiaturą, czytelne etykiety, brak pułapek na fokusie, przewidywalne zachowanie.",
+      "icon": "box"
+    },
+    {
+      "id": "c6",
+      "title": "TIK z dwukierunkową komunikacją głosową (Klauzula 6)",
+      "description": "Połączenia głosowe i Real Time Text (RTT): dostępność rozmów telefonicznych/VoIP, tekst w czasie rzeczywistym, alternatywy dla usług opartych wyłącznie na mowie.",
+      "icon": "message-square"
+    },
+    {
+      "id": "c7",
+      "title": "TIK z możliwościami wideo (Klauzula 7)",
+      "description": "Wideo z dźwiękiem: napisy, audiodeskrypcja, dodatkowe ścieżki audio i dostępne sterowanie odtwarzaczem.",
+      "icon": "video"
+    },
+    {
+      "id": "c8",
+      "title": "Sprzęt (Klauzula 8)",
+      "description": "Elementy fizyczne: przyciski, porty, wskaźniki; obsługa przy ograniczonej sile, brak informacji przekazywanych tylko kolorem lub dźwiękiem.",
+      "icon": "cpu"
+    },
+    {
+      "id": "c9",
+      "title": "Strony internetowe (Klauzula 9)",
+      "description": "Serwisy WWW: zgodność z WCAG 2.1 AA, w tym alternatywy tekstowe, kontrast, nawigacja, formularze.",
+      "icon": "globe"
+    },
+    {
+      "id": "c10",
+      "title": "Dokumenty nieinternetowe (Klauzula 10)",
+      "description": "Pliki typu PDF, DOCX, prezentacje: poprawna struktura, opisy grafik, dostępna kolejność odczytu – na poziomie wymagań jak dla web.",
+      "icon": "file-text"
+    },
+    {
+      "id": "c11",
+      "title": "Oprogramowanie (Klauzula 11)",
+      "description": "Aplikacje desktop i mobile: poprawne API dostępności, obsługa klawiaturą, komunikaty o stanie i błędach dla czytników ekranu.",
+      "icon": "smartphone"
+    },
+    {
+      "id": "c12",
+      "title": "Dokumentacja i usługi wsparcia (Klauzula 12)",
+      "description": "Instrukcje, pomoc online, helpdesk: opis funkcji dostępności, dostępne formaty dokumentów i możliwość komunikacji dostosowanej do użytkownika.",
+      "icon": "book"
+    },
+    {
+      "id": "c13",
+      "title": "TIK zapewniający dostęp do usług relay lub alarmowych (Klauzula 13)",
+      "description": "Usługi pośredniczące (tekst, język migowy, napisy telefoniczne) i połączenia alarmowe: brak blokowania dostępu, wsparcie różnych form komunikacji.",
+      "icon": "phone-call"
+    }
+  ]
+}

@@ -82,7 +82,7 @@
                                 <input type="text" id="product-name" name="product-name"
                                     aria-describedby="product-name-helper" required aria-required="true">
                                 <small id="product-name-error" class="text-fail hidden" aria-live="assertive" role="alert"
-                                    style="display: flex; align-items: center; margin-top: 0;">
+                                    style="display: flex; align-items: center; margin-top: 0;" data-i18n="setup.productNameRequiredError">
                                     <i data-lucide="alert-circle" style="width: 16px; height: 16px; margin-right: 6px;" aria-hidden="true"></i>
                                     Proszę podać nazwę produktu.
                                 </small>
@@ -135,11 +135,11 @@
                     <!-- Step 2: Scope -->
                     <article class="mb-2">
                         <header class="section-header">
-                            <h2 data-i18n="setup.sectionScopeTitle">2. Zakres audytu (Klauzule)</h2>
+                            <h2 data-i18n="setup.sectionScopeTitle">3. Zakres audytu (klauzule)</h2>
                             <p id="clauses-helper" class="text-muted text-small mb-0" data-i18n="setup.clausesHelper">Zaznacz obszary, które podlegają
                                 ocenie.</p>
                             <small id="clauses-error" class="text-fail hidden mb-0" aria-live="assertive" role="alert"
-                                style="display: flex; align-items: center;">
+                                style="display: flex; align-items: center;" data-i18n="setup.clausesRequiredError">
                                 <i data-lucide="alert-circle" style="width: 16px; height: 16px; margin-right: 6px;" aria-hidden="true"></i>
                                 Proszę wybrać przynajmniej jeden zakres audytu.
                             </small>
@@ -149,140 +149,7 @@
                                 aria-describedby="clauses-helper clauses-error">
                                 <legend class="sr-only">Wybierz klauzule</legend>
                                 <div class="scope-grid" id="scope-grid">
-                                    <div class="scope-item">
-                                        <input type="checkbox" id="clause-c5" name="clauses" value="c5"
-                                            class="scope-checkbox sr-only" aria-labelledby="c5-title" aria-describedby="c5-desc">
-                                        <label for="clause-c5" class="scope-card">
-                                            <i data-lucide="box" class="text-muted" aria-hidden="true"></i>
-                                            <div>
-                                                <strong id="c5-title" style="display: block;">Wymagania ogólne (Klauzula 5)</strong>
-                                                <small id="c5-desc" class="text-muted">Podstawowa dostępność każdej funkcji ICT:
-                                                    obsługa klawiaturą, czytelne etykiety, brak pułapek na&nbsp;fokusie,
-                                                    przewidywalne zachowanie.</small>
-                                            </div>
-                                        </label>
-                                    </div>
-
-                                    <div class="scope-item">
-                                        <input type="checkbox" id="clause-c6" name="clauses" value="c6"
-                                            class="scope-checkbox sr-only" aria-labelledby="c6-title" aria-describedby="c6-desc">
-                                        <label for="clause-c6" class="scope-card">
-                                            <i data-lucide="message-square" class="text-muted" aria-hidden="true"></i>
-                                            <div>
-                                                <strong id="c6-title" style="display: block;">TIK z&nbsp;dwukierunkową komunikacją
-                                                    głosową
-                                                    (Klauzula 6)</strong>
-                                                <small id="c6-desc" class="text-muted">Połączenia głosowe i Real Time Text (RTT):
-                                                    dostępność rozmów telefonicznych/VoIP, tekst w&nbsp;czasie
-                                                    rzeczywistym, alternatywy dla usług opartych wyłącznie
-                                                    na&nbsp;mowie.</small>
-                                            </div>
-                                        </label>
-                                    </div>
-
-                                    <div class="scope-item">
-                                        <input type="checkbox" id="clause-c7" name="clauses" value="c7"
-                                            class="scope-checkbox sr-only" aria-labelledby="c7-title" aria-describedby="c7-desc">
-                                        <label for="clause-c7" class="scope-card">
-                                            <i data-lucide="video" class="text-muted" aria-hidden="true"></i>
-                                            <div>
-                                                <strong id="c7-title" style="display: block;">TIK z&nbsp;możliwościami wideo (Klauzula
-                                                    7)</strong>
-                                                <small id="c7-desc" class="text-muted">Wideo z dźwiękiem: napisy, audiodeskrypcja,
-                                                    dodatkowe ścieżki audio i&nbsp;dostępne sterowanie
-                                                    odtwarzaczem.</small>
-                                            </div>
-                                        </label>
-                                    </div>
-
-                                    <div class="scope-item">
-                                        <input type="checkbox" id="clause-c8" name="clauses" value="c8"
-                                            class="scope-checkbox sr-only" aria-labelledby="c8-title" aria-describedby="c8-desc">
-                                        <label for="clause-c8" class="scope-card">
-                                            <i data-lucide="cpu" class="text-muted" aria-hidden="true"></i>
-                                            <div>
-                                                <strong id="c8-title" style="display: block;">Sprzęt (Klauzula 8)</strong>
-                                                <small id="c8-desc" class="text-muted">Elementy fizyczne: przyciski, porty,
-                                                    wskaźniki; obsługa przy ograniczonej sile, brak informacji
-                                                    przekazywanych tylko kolorem lub dźwiękiem.</small>
-                                            </div>
-                                        </label>
-                                    </div>
-
-                                    <div class="scope-item">
-                                        <input type="checkbox" id="clause-c9" name="clauses" value="c9"
-                                            class="scope-checkbox sr-only" aria-labelledby="c9-title" aria-describedby="c9-desc">
-                                        <label for="clause-c9" class="scope-card">
-                                            <i data-lucide="globe" class="text-muted" aria-hidden="true"></i>
-                                            <div>
-                                                <strong id="c9-title" style="display: block;">Strony internetowe (Klauzula 9)</strong>
-                                                <small id="c9-desc" class="text-muted">Serwisy WWW: zgodność z WCAG 2.1 AA,
-                                                    w&nbsp;tym alternatywy tekstowe, kontrast, nawigacja,
-                                                    formularze.</small>
-                                            </div>
-                                        </label>
-                                    </div>
-
-                                    <div class="scope-item">
-                                        <input type="checkbox" id="clause-c10" name="clauses" value="c10"
-                                            class="scope-checkbox sr-only" aria-labelledby="c10-title" aria-describedby="c10-desc">
-                                        <label for="clause-c10" class="scope-card">
-                                            <i data-lucide="file-text" class="text-muted" aria-hidden="true"></i>
-                                            <div>
-                                                <strong id="c10-title" style="display: block;">Dokumenty nieinternetowe (Klauzula
-                                                    10)</strong>
-                                                <small id="c10-desc" class="text-muted">Pliki typu PDF, DOCX, prezentacje: poprawna
-                                                    struktura, opisy grafik, dostępna kolejność odczytu – na poziomie
-                                                    wymagań jak dla web.</small>
-                                            </div>
-                                        </label>
-                                    </div>
-
-                                    <div class="scope-item">
-                                        <input type="checkbox" id="clause-c11" name="clauses" value="c11"
-                                            class="scope-checkbox sr-only" aria-labelledby="c11-title" aria-describedby="c11-desc">
-                                        <label for="clause-c11" class="scope-card">
-                                            <i data-lucide="smartphone" class="text-muted" aria-hidden="true"></i>
-                                            <div>
-                                                <strong id="c11-title" style="display: block;">Oprogramowanie (Klauzula 11)</strong>
-                                                <small id="c11-desc" class="text-muted">Aplikacje desktop i&nbsp;mobile: poprawne API
-                                                    dostępności, obsługa klawiaturą, komunikaty o&nbsp;stanie
-                                                    i&nbsp;błędach dla czytników ekranu.</small>
-                                            </div>
-                                        </label>
-                                    </div>
-
-                                    <div class="scope-item">
-                                        <input type="checkbox" id="clause-c12" name="clauses" value="c12"
-                                            class="scope-checkbox sr-only" aria-labelledby="c12-title" aria-describedby="c12-desc">
-                                        <label for="clause-c12" class="scope-card">
-                                            <i data-lucide="book" class="text-muted" aria-hidden="true"></i>
-                                            <div>
-                                                <strong id="c12-title" style="display: block;">Dokumentacja i&nbsp;usługi wsparcia
-                                                    (Klauzula
-                                                    12)</strong>
-                                                <small id="c12-desc" class="text-muted">Instrukcje, pomoc online, helpdesk: opis
-                                                    funkcji dostępności, dostępne formaty dokumentów i&nbsp;możliwość
-                                                    komunikacji dostosowanej do użytkownika.</small>
-                                            </div>
-                                        </label>
-                                    </div>
-
-                                    <div class="scope-item">
-                                        <input type="checkbox" id="clause-c13" name="clauses" value="c13"
-                                            class="scope-checkbox sr-only" aria-labelledby="c13-title" aria-describedby="c13-desc">
-                                        <label for="clause-c13" class="scope-card">
-                                            <i data-lucide="phone-call" class="text-muted" aria-hidden="true"></i>
-                                            <div>
-                                                <strong id="c13-title" style="display: block;">TIK zapewniający dostęp do usług relay
-                                                    lub alarmowych
-                                                    (Klauzula 13)</strong>
-                                                <small id="c13-desc" class="text-muted">Usługi pośredniczące (tekst, język migowy,
-                                                    napisy telefoniczne) i&nbsp;połączenia alarmowe: brak blokowania
-                                                    dostępu, wsparcie różnych form komunikacji.</small>
-                                            </div>
-                                        </label>
-                                    </div>
+                                    <!-- Clauses will be loaded dynamically from clauses_config.json -->
                                 </div>
                             </fieldset>
                             <div id="clauses-status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
